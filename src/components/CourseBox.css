@@ -1,0 +1,62 @@
+.course-box {
+  grid-column: span var(--columns);
+  border: 1px solid black;
+}
+
+.course-box.cst {
+  background: #d9ead3;
+}
+
+.course-box.math {
+  background: #fff2cc;
+}
+
+.course-box.ge {
+  background: #fce5cd;
+}
+
+.course-box.elective {
+  background: #ead1dc;
+}
+
+.semester-row {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+}
+
+.curriculum-table {
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.curriculum-table th,
+.curriculum-table td {
+  border: 1px solid black;
+  padding: 0.25rem 0.5rem;
+  white-space: nowrap;
+}
+
+.curriculum-table th {
+  text-align: left;
+  font-weight: normal;
+}
+
+.curriculum-item {
+  text-align: center;
+}
+
+.curriculum-item.cst {
+  background: #d9ead3;
+}
+
+.curriculum-item.math {
+  background: #fff2cc;
+}
+
+.curriculum-item.ge {
+  background: #fce5cd;
+}
+
+.curriculum-item.elective {
+  background: #ead1dc;
+}
