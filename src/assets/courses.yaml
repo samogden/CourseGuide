@@ -1,7 +1,25 @@
 courses:
-  defaults:
-    units: 4
   catalog:
+    MATH 130:
+      name: Precalculus
+      units: 4
+      placeholder: true
+      description: Catalog details are still being added.
+    MATH 151:
+      name: Calculus I
+      units: 4
+      placeholder: true
+      description: Catalog details are still being added.
+    MATH 170:
+      name: Discrete Mathematics
+      units: 4
+      placeholder: true
+      description: Catalog details are still being added.
+    MATH 270:
+      name: Linear Algebra
+      units: 4
+      placeholder: true
+      description: Catalog details are still being added.
     CST 205:
       name: Multimedia Design and Programming
       units: 4
@@ -38,6 +56,16 @@ courses:
           - course: MATH 150
             min_grade: C-
       offered: Fall, Spring
+    CST 271:
+      name: Digital Culture
+      units: 3
+      placeholder: true
+      description: Catalog details are still being added.
+    CST 286:
+      name: Physics of Computing
+      units: 3
+      placeholder: true
+      description: Catalog details are still being added.
     CST 300:
       name: Graduation Writing Assessment for Computing and Design
       units: 3
@@ -332,12 +360,6 @@ courses:
       description: |-
         This course is an introduction to Relational Database Management Systems. Topics covered will include relational database theory and the logical and physical design, implementation, and management of databases. Additional topics will include Entity-Relationship Diagrams, Normalization and an introduction to SQL (Structured Query Language).
       offered: Periodically offered
-    CST 271:
-      name: Digital Culture
-      units: 3
-      description: |-
-        Focuses on the philosophical roots (as evidenced in literature) of contemporary digital culture. From Armageddon to the Matrix; from Frankenstein to Lawnmower man; from the library at Alexandria to the archives of the Internet; the world of the digital intelligentsia owes its vision and mythology to the resonant themes found in literature and philosophy. Explores the essence of humanity that defines the natural world and strives to remake it in a more perfect fashion. General Education: 3B Humanities
-      offered: Fall, Spring
     CST 273:
       name: Cyberdemocracy
       units: 3

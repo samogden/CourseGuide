@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { canonicalCourseId, curriculumPlan, getCourse, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, prerequisiteText, slotLabel } from './Curriculum'
+import { canonicalCourseId, coursesById, curriculumPlan, getCourse, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, prerequisiteText, slotLabel } from './Curriculum'
 
 describe('curriculum data', () => {
   it('normalizes alternate course code spacing', () => {
@@ -29,5 +29,14 @@ describe('curriculum data', () => {
 
   it('uses parentheses to preserve prerequisite alternatives', () => {
     expect(prerequisiteText(getCourse('CST 238')?.prerequisites[0])).toBe('CST 231 (C- or better) and (MATH 130 (C- or better) or MATH 150 (C- or better))')
+  })
+
+  it('resolves every concrete course in the plan from the one catalog', () => {
+    const plannedCourseIds = curriculumPlan.years.flatMap(year => year.terms.flatMap(term => term.slots.flatMap(slot => {
+      if (slot.type === 'course') return [slot.courseId]
+      if (slot.type === 'choice') return slot.alternatives.filter(alternative => /^([A-Z]+)-\d/.test(alternative))
+      return []
+    })))
+    expect(plannedCourseIds.every(courseId => coursesById.has(courseId))).toBe(true)
   })
 })

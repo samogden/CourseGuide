@@ -1,7 +1,6 @@
 import { parse } from 'yaml'
 import { z } from 'zod'
 import catalogText from '../assets/courses.yaml?raw'
-import overridesText from '../assets/course-overrides.yaml?raw'
 import planText from '../assets/scd-curriculum.yaml?raw'
 
 const categorySchema = z.enum([
@@ -26,6 +25,7 @@ const sourceCourseSchema = z.object({
   description: z.string().optional(),
   prereqs: z.array(prerequisiteSchema).optional(),
   prereq_notes: z.array(z.string()).optional(),
+  placeholder: z.boolean().default(false),
 }).passthrough()
 
 const planSlotSchema = z.discriminatedUnion('type', [
@@ -39,10 +39,6 @@ const planSchema = z.object({
     year: z.enum(['freshman', 'sophomore', 'junior', 'senior']),
     terms: z.array(z.object({ term: z.enum(['fall', 'spring']), slots: z.array(planSlotSchema) })),
   })),
-})
-
-const overrideSchema = z.object({
-  courses: z.record(z.string(), z.object({ code: z.string(), name: z.string(), units: z.number(), description: z.string().optional(), prereqs: z.array(prerequisiteSchema).optional() })),
 })
 
 export type Category = z.infer<typeof categorySchema>
@@ -68,7 +64,6 @@ export function canonicalCourseId(value: string): string {
 }
 
 const parsedCatalog = z.object({ courses: z.object({ catalog: z.record(z.string(), sourceCourseSchema) }) }).parse(parse(catalogText))
-const parsedOverrides = overrideSchema.parse(parse(overridesText))
 
 const catalogEntries: Course[] = Object.entries(parsedCatalog.courses.catalog).map(([code, course]) => {
   const id = canonicalCourseId(code)
@@ -82,24 +77,12 @@ const catalogEntries: Course[] = Object.entries(parsedCatalog.courses.catalog).m
     description: course.description,
     prerequisites: course.prereqs ?? [],
     prerequisiteNotes: course.prereq_notes ?? [],
-    placeholder: false,
+    placeholder: course.placeholder,
   }
 })
 
-const placeholderEntries: Course[] = Object.entries(parsedOverrides.courses).map(([id, course]) => ({
-  id: canonicalCourseId(id),
-  code: course.code,
-  aliases: [course.code, course.code.replace(' ', '')],
-  name: course.name,
-  units: course.units,
-  description: course.description,
-  prerequisites: course.prereqs ?? [],
-  prerequisiteNotes: [],
-  placeholder: true,
-}))
-
 export const curriculumPlan: CurriculumPlan = planSchema.parse(parse(planText))
-export const coursesById = new Map([...catalogEntries, ...placeholderEntries].map(course => [course.id, course]))
+export const coursesById = new Map(catalogEntries.map(course => [course.id, course]))
 
 export function getCourse(value: string): Course | undefined {
   return coursesById.get(canonicalCourseId(value))
