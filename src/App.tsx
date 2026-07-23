@@ -3,7 +3,7 @@ import './App.css'
 import { useState } from 'react';
 
 
-
+/*
 import { Course, CourseChoice, CourseRequirement, allCourses } from './models/CurriculumItems'
 import { Curriculum, Semester } from './models/Curriculum';
 import { CurriculumItemBox, CurriculumView, CourseModal } from './components/CourseBox'
@@ -95,7 +95,7 @@ function Modal({ onClose, children }) {
   );
 }
 
-function App() {
+function App2() {
 
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
 
@@ -127,6 +127,19 @@ function App() {
         )
       }
     </main >
+  )
+}
+  */
+
+import { overall_plan } from './models/Curriculum';
+
+function App() {
+  console.log("Starting...")
+
+  return (
+    <main>
+      Hello!
+    </main>
   )
 }
 

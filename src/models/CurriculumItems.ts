@@ -1,24 +1,32 @@
-import { parse } from "yaml"
-import coursesText from "../assets/courses.yaml?raw"
 
-interface CurriculumItem {
+class CurriculumItem {
   title: string;
-  credits: number;
-  styleName: string
+  credits: number
+
+  constructor(title: string, credits: number) {
+    this.title = title;
+    this.credits = credits;
+  }
 }
 
-const departments = [
-  "CST",
-  "MATH",
-  "GE",
-  "ELECTIVE"
-] as const;
-type DepartmentPrefix = typeof departments[number];
+class Course extends CurriculumItem { };
 
-type RequirementKind =
-  | "ge"
-  | "elective"
-  | "prerequisite";
+class GeneralEducation extends CurriculumItem { };
+
+class Option extends CurriculumItem {
+  options: CurriculumItem[];
+  constructor(title: string, options: CurriculumItem[]) {
+    const credits: number = options.length > 0 ? Math.max(...options.map(c => c.credits)) : 0
+    super(title, credits);
+    this.options = options;
+  }
+}
+
+class Elective extends CurriculumItem { };
+
+export { CurriculumItem, Course, Option, GeneralEducation, Elective };
+
+/*
 
 interface AbstractCourse extends CurriculumItem { };
 
@@ -110,26 +118,27 @@ class CourseChoice implements CurriculumItem {
 /*
  Loading up data from the yaml files
 */
-interface CourseData {
-  name: string;
-  units: number;
-  description?: string;
-  prereqs?: [{
 
-  }];
-}
+// import { parse } from "yaml"
+// import coursesText from "../assets/courses.yaml?raw"
 
-const catalog = (parse(coursesText) as {
-  courses: {
-    catalog: Record<string, CourseData>;
-  };
-}).courses.catalog;
+// interface CourseData {
+//   name: string;
+//   units: number;
+//   description?: string;
+// }
 
-const allCourses: Record<string, Course> = Object.fromEntries(
-  Object.entries(catalog).map(
-    ([code, data]) => [code, Course.fromObject(code, data)]
-  )
-);
+// const catalog = (parse(coursesText) as {
+//   courses: {
+//     catalog: Record<string, CourseData>;
+//   };
+// }).courses.catalog;
+
+// const allCourses: Record<string, Course> = Object.fromEntries(
+//   Object.entries(catalog).map(
+//     ([code, data]) => [code, Course.fromObject(code, data)]
+//   )
+// );
 
 // for (const course of Object.values(allCourses)) {
 //   for (const prereq_name of Object.values(course.raw_prereqs)) {
@@ -145,6 +154,7 @@ const allCourses: Record<string, Course> = Object.fromEntries(
 // }
 /* end loading */
 
-export type { CurriculumItem };
-export { Course, CourseRequirement, CourseChoice };
-export { allCourses };
+
+// export type { CurriculumItem };
+// export { Course, CourseRequirement, CourseChoice };
+// export { allCourses };

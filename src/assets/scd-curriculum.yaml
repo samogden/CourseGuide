@@ -1,0 +1,41 @@
+- year: freshman
+  fall:
+    - CST 231
+    - GE Area 1 Lower Division # FYS
+    - MATH 130
+    - CST 286
+  spring:
+    - CST 238
+    - MATH 170 # Discrete
+    - GE Area 2 Lower Division # Math 150
+    - CST 271
+- year: sophomore
+  fall:
+    - CST 237
+    - Math 151 | Math 270
+    - GE Area 4 Lower Division
+    - GE Area 6 Lower Division
+  spring:
+    - World Culture | Language
+- year: junior
+  fall:
+    - CST 334
+    - CST 338
+    - CST 349
+    - Elective Pre-req
+  spring:
+    - CST 370
+    - CST 300
+    - Elective Pre-req
+    - Elective
+- year: senior
+  fall:
+    - Elective
+    - Elective
+    - Elective
+    - GE Area 3 Upper Division
+  spring:
+    - CST 499 # Capstone
+    - CST 462s
+    - GE Area 2 | GE Area 5
+    - GE Area 4 Upper Division
