@@ -116,13 +116,62 @@ export function progressKey(slot: PlanSlot): string {
 }
 
 export function prerequisiteText(prerequisite: unknown): string {
+  return formatPrerequisite(prerequisite)
+}
+
+function formatPrerequisite(prerequisite: unknown, parentOperator?: 'and' | 'or'): string {
   if (!prerequisite || typeof prerequisite !== 'object') return 'Prerequisite details unavailable.'
   const value = prerequisite as { course?: string; min_grade?: string; all_of?: unknown[]; any_of?: unknown[] }
   if (value.course) {
     const course = getCourse(value.course)
     return `${course?.code ?? value.course}${value.min_grade ? ` (${value.min_grade} or better)` : ''}`
   }
-  if (value.all_of) return value.all_of.map(prerequisiteText).join(' and ')
-  if (value.any_of) return value.any_of.map(prerequisiteText).join(' or ')
+  if (value.all_of) return formatGroup(value.all_of, 'and', parentOperator)
+  if (value.any_of) return formatGroup(value.any_of, 'or', parentOperator)
   return 'Prerequisite details unavailable.'
+}
+
+function formatGroup(prerequisites: unknown[], operator: 'and' | 'or', parentOperator?: 'and' | 'or'): string {
+  const text = prerequisites.map(prerequisite => formatPrerequisite(prerequisite, operator)).join(` ${operator} `)
+  return parentOperator && parentOperator !== operator ? `(${text})` : text
+}
+
+export function prerequisitesMet(prerequisites: unknown[], completedCourseIds: Set<string>): boolean {
+  return prerequisites.every(prerequisiteMet)
+
+  function prerequisiteMet(prerequisite: unknown): boolean {
+    if (!prerequisite || typeof prerequisite !== 'object') return false
+    const value = prerequisite as { course?: string; all_of?: unknown[]; any_of?: unknown[] }
+    if (value.course) return completedCourseIds.has(canonicalCourseId(value.course))
+    if (value.all_of) return value.all_of.every(prerequisiteMet)
+    if (value.any_of) return value.any_of.some(prerequisiteMet)
+    return false
+  }
+}
+
+export function prerequisiteCount(prerequisites: unknown[]): number {
+  return prerequisites.reduce<number>((count, prerequisite) => count + countPrerequisiteCourses(prerequisite), 0)
+}
+
+export function prerequisiteCourseIds(prerequisites: unknown[]): Set<string> {
+  const ids = new Set<string>()
+  for (const prerequisite of prerequisites) collectPrerequisiteCourseIds(prerequisite, ids)
+  return ids
+}
+
+function collectPrerequisiteCourseIds(prerequisite: unknown, ids: Set<string>) {
+  if (!prerequisite || typeof prerequisite !== 'object') return
+  const value = prerequisite as { course?: string; all_of?: unknown[]; any_of?: unknown[] }
+  if (value.course) ids.add(canonicalCourseId(value.course))
+  if (value.all_of) value.all_of.forEach(item => collectPrerequisiteCourseIds(item, ids))
+  if (value.any_of) value.any_of.forEach(item => collectPrerequisiteCourseIds(item, ids))
+}
+
+function countPrerequisiteCourses(prerequisite: unknown): number {
+  if (!prerequisite || typeof prerequisite !== 'object') return 0
+  const value = prerequisite as { course?: string; all_of?: unknown[]; any_of?: unknown[] }
+  if (value.course) return 1
+  if (value.all_of) return value.all_of.reduce<number>((count, item) => count + countPrerequisiteCourses(item), 0)
+  if (value.any_of) return value.any_of.reduce<number>((count, item) => count + countPrerequisiteCourses(item), 0)
+  return 0
 }

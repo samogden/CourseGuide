@@ -3,23 +3,26 @@ import type { PlanSlot } from '../models/Curriculum'
 import { getCourse, prerequisiteText, slotLabel } from '../models/Curriculum'
 import './CourseBox.css'
 
-export function CourseCell({ slot, completed, onSelect }: { slot: PlanSlot; completed: boolean; onSelect: () => void }) {
+export function CourseCell({ slot, completed, suggestion, highPriority, onSelect }: { slot: PlanSlot; completed: boolean; suggestion: 'standard' | 'stretch' | null; highPriority: boolean; onSelect: () => void }) {
   return (
     <button
-      className={`course-cell category-${slot.category}${completed ? ' is-completed' : ''}`}
+      className={`course-cell category-${slot.category}${completed ? ' is-completed' : ''}${suggestion ? ` is-suggested is-${suggestion}` : ''}${highPriority ? ' is-high-priority' : ''}`}
       style={{ gridColumn: `span ${slot.credits}` }}
       onClick={onSelect}
       type="button"
     >
+      {highPriority && <span className="course-status priority-status">High priority</span>}
+      {suggestion && <span className="course-status">{suggestion === 'stretch' ? '16+ credits' : 'Suggested next'}</span>}
       <span>{slotLabel(slot)}</span>
       <span className="course-cell-credits">{slot.credits} credits</span>
     </button>
   )
 }
 
-export function CourseModal({ slot, completed, onClose, onCompletedChange }: {
+export function CourseModal({ slot, completed, prerequisitesMet, onClose, onCompletedChange }: {
   slot: PlanSlot
   completed: boolean
+  prerequisitesMet?: boolean
   onClose: () => void
   onCompletedChange: (completed: boolean) => void
 }) {
@@ -47,6 +50,7 @@ export function CourseModal({ slot, completed, onClose, onCompletedChange }: {
             <p className="course-name">{course.name}</p>
             <p>{course.description ?? 'Course details are coming soon.'}</p>
             {course.prerequisites.length > 0 && <><h3>Prerequisites</h3><ul>{course.prerequisites.map((prerequisite, index) => <li key={index}>{prerequisiteText(prerequisite)}</li>)}</ul></>}
+            {course.prerequisites.length > 0 && !completed && <p className={prerequisitesMet ? 'prerequisite-status is-met' : 'prerequisite-status is-unmet'}>{prerequisitesMet ? 'Prerequisites met — this course is available to take.' : 'Prerequisites are not yet met.'}</p>}
             {course.prerequisiteNotes.length > 0 && <ul>{course.prerequisiteNotes.map(note => <li key={note}>{note}</li>)}</ul>}
             {course.placeholder && <p className="placeholder-note">Catalog details for this course are still being added.</p>}
           </>
