@@ -69,6 +69,9 @@ export type Category = z.infer<typeof categorySchema>
 export type PlanSlot = z.infer<typeof planSlotSchema>
 export type CurriculumPlan = z.infer<typeof planSchema>
 export type Programs = z.infer<typeof programsSchema>
+export type Requirement = z.infer<typeof requirementSchema>
+export type Program = Programs['programs'][string]
+export type Concentration = Program['concentrations'][string]
 
 export interface Course {
   id: string
@@ -120,6 +123,34 @@ for (const courseId of programCourseIds) {
   if (!coursesById.has(courseId)) throw new Error(`Program requirement references unknown course: ${courseId}`)
 }
 
+export function getProgram(programId: string): Program | undefined {
+  return programs.programs[programId]
+}
+
+export function getConcentration(programId: string, concentrationId: string | null | undefined): Concentration | undefined {
+  if (!concentrationId) return undefined
+  return programs.programs[programId]?.concentrations[concentrationId]
+}
+
+export function activeProgramRequirements(programId: string, concentrationId: string | null | undefined): Requirement[] {
+  const program = getProgram(programId)
+  if (!program) return []
+  const concentration = getConcentration(programId, concentrationId)
+  return concentration ? [...program.requirements, ...concentration.requirements] : [...program.requirements]
+}
+
+export function requirementCourseIds(requirement: Requirement): string[] {
+  return requirement.courseIds.map(canonicalCourseId)
+}
+
+export function directRequirementCourseIds(requirements: Requirement[]): Set<string> {
+  return new Set(requirements.filter(requirement => requirement.completion.kind === 'all').flatMap(requirementCourseIds))
+}
+
+export function candidateCourseIds(requirements: Requirement[]): Set<string> {
+  return new Set(requirements.flatMap(requirementCourseIds))
+}
+
 export function getCourse(value: string): Course | undefined {
   return coursesById.get(canonicalCourseId(value))
 }
@@ -155,7 +186,7 @@ function formatGroup(prerequisites: unknown[], operator: 'and' | 'or', parentOpe
   return parentOperator && parentOperator !== operator ? `(${text})` : text
 }
 
-export function prerequisitesMet(prerequisites: unknown[], completedCourseIds: Set<string>): boolean {
+export function prerequisitesMet(prerequisites: unknown[], completedCourseIds: ReadonlySet<string>): boolean {
   return prerequisites.every(prerequisiteMet)
 
   function prerequisiteMet(prerequisite: unknown): boolean {

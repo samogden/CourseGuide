@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import { CourseCell, CourseModal } from './components/CourseBox'
-import { curriculumPlan, getCourse, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, progressKey, type PlanSlot } from './models/Curriculum'
+import { curriculumPlan, getCourse, prerequisitesMet, progressKey, programs, type PlanSlot } from './models/Curriculum'
+import { buildSuggestedSchedule } from './models/Scheduling'
 
 const progressStorageKey = 'courseguide-completed-v1'
+const concentrationStorageKey = 'courseguide-concentration-v1'
+const activeProgramId = 'bs-computer-science'
 
 function readCompleted(): Set<string> {
   try {
@@ -14,13 +17,27 @@ function readCompleted(): Set<string> {
   }
 }
 
+function readConcentration(): string | null {
+  try {
+    const value: unknown = JSON.parse(localStorage.getItem(concentrationStorageKey) ?? 'null')
+    return typeof value === 'string' ? value : null
+  } catch {
+    return null
+  }
+}
+
 function App() {
   const [selectedSlot, setSelectedSlot] = useState<PlanSlot | null>(null)
   const [completed, setCompleted] = useState<Set<string>>(() => readCompleted())
+  const [selectedConcentration, setSelectedConcentration] = useState<string | null>(() => readConcentration())
 
   useEffect(() => {
     localStorage.setItem(progressStorageKey, JSON.stringify([...completed]))
   }, [completed])
+
+  useEffect(() => {
+    localStorage.setItem(concentrationStorageKey, JSON.stringify(selectedConcentration))
+  }, [selectedConcentration])
 
   const updateCompletion = (slot: PlanSlot, isCompleted: boolean) => {
     const key = progressKey(slot)
@@ -36,37 +53,47 @@ function App() {
     if (window.confirm('Reset all saved course progress on this device?')) setCompleted(new Set())
   }
 
+  const activeProgram = programs.programs[activeProgramId]
+  const activeConcentrationId = selectedConcentration && activeProgram.concentrations[selectedConcentration] ? selectedConcentration : null
+  const suggestedSchedule = buildSuggestedSchedule(curriculumPlan, completed, {
+    programId: activeProgramId,
+    concentrationId: activeConcentrationId,
+  })
   const completedCourseIds = new Set([...completed]
     .filter(key => key.startsWith('course:'))
     .map(key => key.slice('course:'.length)))
-  const isCourseReady = (slot: PlanSlot) => slot.type !== 'course' || prerequisitesMet(getCourse(slot.courseId)?.prerequisites ?? [], completedCourseIds)
-  const plannedCourses = curriculumPlan.years.flatMap((year, yearIndex) => year.terms.flatMap((term, termIndex) => term.slots
-    .filter((slot): slot is Extract<PlanSlot, { type: 'course' }> => slot.type === 'course')
-    .map(slot => ({ courseId: slot.courseId, order: yearIndex * 10 + termIndex }))))
-  const isHighPriority = (slot: PlanSlot) => slot.type === 'course' && plannedCourses.some(course => course.order > plannedCourses.find(item => item.courseId === slot.courseId)!.order && prerequisiteCourseIds(getCourse(course.courseId)?.prerequisites ?? []).has(slot.courseId))
-  const suggestedSchedule = new Map<string, 'standard' | 'stretch'>()
-  let suggestedCredits = 0
-  const candidates = curriculumPlan.years.flatMap((year, yearIndex) => year.terms.flatMap((term, termIndex) => term.slots.map((slot, slotIndex) => ({
-    slot,
-    priority: yearIndex * 10 + termIndex,
-    slotIndex,
-    prerequisiteCount: slot.type === 'course' ? prerequisiteCount(getCourse(slot.courseId)?.prerequisites ?? []) : 0,
-  })))).filter(candidate => !completed.has(progressKey(candidate.slot)) && isCourseReady(candidate.slot))
+  const selectedSuggestion = selectedSlot ? suggestedSchedule.suggestions.get(progressKey(selectedSlot)) ?? null : null
+  const resolvedCourseId = selectedSuggestion?.courseId ?? (selectedSlot?.type === 'course' ? selectedSlot.courseId : null)
+  const selectedPrerequisitesMet = resolvedCourseId ? prerequisitesMet(getCourse(resolvedCourseId)?.prerequisites ?? [], completedCourseIds) : selectedSlot ? suggestedSchedule.isCourseReady(selectedSlot) : undefined
 
-  candidates.sort((left, right) => left.priority - right.priority || right.prerequisiteCount - left.prerequisiteCount || left.slotIndex - right.slotIndex)
-  for (const candidate of candidates) {
-    if (suggestedCredits + candidate.slot.credits > 18) continue
-    suggestedCredits += candidate.slot.credits
-    suggestedSchedule.set(progressKey(candidate.slot), suggestedCredits >= 16 ? 'stretch' : 'standard')
+  const resetPath = () => {
+    if (window.confirm('Reset the selected concentration for this device?')) setSelectedConcentration(null)
   }
 
   return (
     <main className="planner">
       <header className="planner-header">
         <div><p className="eyebrow">Computer Science</p><h1>Curriculum planner</h1><p>Explore the suggested course sequence and mark completed coursework.</p></div>
-        <button className="reset-button" type="button" onClick={resetProgress}>Reset progress</button>
+        <div className="header-actions">
+          <button className="reset-button" type="button" onClick={resetPath}>Reset path</button>
+          <button className="reset-button" type="button" onClick={resetProgress}>Reset progress</button>
+        </div>
       </header>
-      {suggestedSchedule.size > 0 && <section className="next-term" aria-live="polite"><strong>Suggested next schedule:</strong> {suggestedCredits} credits. Courses are selected by year, term, then prerequisite priority. Green courses unlock later planned courses; red courses are optional stretch additions that bring the total to 16–18 credits.</section>}
+      <section className="path-picker" aria-label="Program concentration">
+        <span className="legend-title">Path</span>
+        <button className={`path-button${activeConcentrationId === null ? ' is-selected' : ''}`} type="button" onClick={() => setSelectedConcentration(null)}>No concentration</button>
+        {Object.entries(activeProgram.concentrations).map(([concentrationId, concentration]) => (
+          <button
+            key={concentrationId}
+            className={`path-button${activeConcentrationId === concentrationId ? ' is-selected' : ''}`}
+            type="button"
+            onClick={() => setSelectedConcentration(concentrationId)}
+          >
+            {concentration.title}
+          </button>
+        ))}
+      </section>
+      {suggestedSchedule.suggestions.size > 0 && <section className="next-term" aria-live="polite"><strong>Suggested next schedule:</strong> {suggestedSchedule.credits} credits. Courses are selected by year, term, then prerequisite priority. Green courses unlock later planned courses; red courses are optional stretch additions that bring the total to 16–18 credits.</section>}
       <section className="legend" aria-label="Course category legend">
         <span className="legend-title">Course groups</span>
         <span className="category-cst">CST</span><span className="category-math">Math</span><span className="category-ge-lower">Lower-division GE</span><span className="category-ge-upper">Upper-division GE</span><span className="category-elective-prereq">Elective pre-req</span><span className="category-elective">Elective</span>
@@ -87,8 +114,8 @@ function App() {
                   <div className="credit-grid" role="cell">
                     {term.slots.map(slot => {
                       const isCompleted = completed.has(progressKey(slot))
-                      const suggestion = suggestedSchedule.get(progressKey(slot)) ?? null
-                      return <CourseCell key={progressKey(slot)} slot={slot} completed={isCompleted} suggestion={suggestion} highPriority={suggestion === 'standard' && isHighPriority(slot) && !isCompleted} onSelect={() => setSelectedSlot(slot)} />
+                      const suggestion = suggestedSchedule.suggestions.get(progressKey(slot)) ?? null
+                      return <CourseCell key={progressKey(slot)} slot={slot} completed={isCompleted} suggestion={suggestion} highPriority={suggestedSchedule.isHighPriority(slot) && !isCompleted} onSelect={() => setSelectedSlot(slot)} />
                     })}
                   </div>
                 </div>
@@ -97,7 +124,7 @@ function App() {
           ))}
         </div>
       </div>
-      {selectedSlot && <CourseModal slot={selectedSlot} completed={completed.has(progressKey(selectedSlot))} prerequisitesMet={isCourseReady(selectedSlot)} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => updateCompletion(selectedSlot, isCompleted)} />}
+      {selectedSlot && <CourseModal slot={selectedSlot} resolvedCourseId={resolvedCourseId} completed={completed.has(progressKey(selectedSlot))} prerequisitesMet={selectedPrerequisitesMet} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => updateCompletion(selectedSlot, isCompleted)} />}
     </main>
   )
 }

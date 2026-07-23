@@ -26,10 +26,10 @@ describe('planner', () => {
     expect(localStorage.getItem('courseguide-completed-v1')).toBe('[]')
   })
 
-  it('shows a stretch course without marking it high priority', () => {
+  it('shows a high-priority course without marking it as stretch', () => {
     render(<App />)
     const math170 = screen.getByRole('button', { name: /MATH 170/i })
-    expect(math170).toHaveClass('is-suggested', 'is-stretch')
-    expect(math170).not.toHaveClass('is-high-priority')
+    expect(math170).toHaveClass('is-suggested', 'is-standard')
+    expect(math170).toHaveClass('is-high-priority')
   })
 })
