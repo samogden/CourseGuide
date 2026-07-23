@@ -13,8 +13,9 @@ describe('planner', () => {
     render(<App />)
     fireEvent.click(screen.getAllByRole('button', { name: /CST 231/i })[0])
     expect(screen.getByRole('dialog')).toHaveTextContent('Problem Solving/Programming')
-    fireEvent.click(screen.getByLabelText(/mark as taken/i))
+    fireEvent.click(screen.getByRole('button', { name: /mark as taken/i }))
     expect(localStorage.getItem('courseguide-completed-v1')).toContain('course:CST-231')
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
   })
 
   it('resets saved progress after confirmation', () => {

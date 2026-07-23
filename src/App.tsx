@@ -49,16 +49,23 @@ function App() {
       <p className="scroll-hint">Scroll horizontally to see the complete 18-credit grid on smaller screens.</p>
       <div className="curriculum-scroll">
         <div className="curriculum-grid" role="table" aria-label="Suggested curriculum plan">
-          <div className="grid-header" role="row"><span>Year</span><span>Term</span><span className="credit-heading">Suggested credits</span></div>
-          {curriculumPlan.years.flatMap(year => year.terms.map((term, index) => (
-            <div className="term-row" role="row" key={`${year.year}-${term.term}`}>
-              <div className="year-label" role="rowheader">{index === 0 ? year.year : ''}</div>
-              <div className="term-label" role="rowheader">{term.term}</div>
-              <div className="credit-grid" role="cell">
-                {term.slots.map(slot => <CourseCell key={progressKey(slot)} slot={slot} completed={completed.has(progressKey(slot))} onSelect={() => setSelectedSlot(slot)} />)}
-              </div>
+          <div className="grid-header" role="row">
+            <span>Year</span><span>Term</span>
+            <div className="credit-heading"><strong>Suggested credits</strong><div className="credit-numbers" aria-label="Credit positions">{Array.from({ length: 18 }, (_, index) => <span key={index}>{index + 1}</span>)}</div></div>
+          </div>
+          {curriculumPlan.years.map(year => (
+            <div className="year-group" role="rowgroup" key={year.year}>
+              <div className="year-label" role="rowheader">{year.year}</div>
+              {year.terms.map(term => (
+                <div className="term-row" role="row" key={`${year.year}-${term.term}`}>
+                  <div className="term-label" role="rowheader">{term.term}</div>
+                  <div className="credit-grid" role="cell">
+                    {term.slots.map(slot => <CourseCell key={progressKey(slot)} slot={slot} completed={completed.has(progressKey(slot))} onSelect={() => setSelectedSlot(slot)} />)}
+                  </div>
+                </div>
+              ))}
             </div>
-          )))}
+          ))}
         </div>
       </div>
       {selectedSlot && <CourseModal slot={selectedSlot} completed={completed.has(progressKey(selectedSlot))} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => updateCompletion(selectedSlot, isCompleted)} />}

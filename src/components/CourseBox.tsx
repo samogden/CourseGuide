@@ -52,7 +52,12 @@ export function CourseModal({ slot, completed, onClose, onCompletedChange }: {
           </>
         ) : <p>{slot.type === 'course' ? 'Course details are coming soon.' : slot.guidance}</p>}
         {slot.type === 'choice' && <p><strong>Alternatives:</strong> {slotLabel(slot)}</p>}
-        <label className="taken-control"><input type="checkbox" checked={completed} onChange={event => onCompletedChange(event.target.checked)} /> Mark as taken</label>
+        <button className="taken-control" type="button" onClick={() => {
+          onCompletedChange(!completed)
+          onClose()
+        }}>
+          {completed ? 'Mark as untaken' : 'Mark as taken'}
+        </button>
       </section>
     </div>
   )
