@@ -1,144 +1,67 @@
+import { useEffect, useState } from 'react'
 import './App.css'
+import { CourseCell, CourseModal } from './components/CourseBox'
+import { curriculumPlan, progressKey, type PlanSlot } from './models/Curriculum'
 
-import { useState } from 'react';
+const progressStorageKey = 'courseguide-completed-v1'
 
-
-/*
-import { Course, CourseChoice, CourseRequirement, allCourses } from './models/CurriculumItems'
-import { Curriculum, Semester } from './models/Curriculum';
-import { CurriculumItemBox, CurriculumView, CourseModal } from './components/CourseBox'
-
-function App1() {
-
-  const curriculum = new Curriculum([
-    new Semester("Freshman Fall", [
-      new Course("CST 231", 4),
-      new Course("MATH 130", 4),
-      new Course("GE 1", 3),
-      new Course("GE 5", 4),
-    ]),
-    new Semester("Freshman Spring", [
-      new Course("CST 238", 4),
-      new Course("MATH 170", 4),
-      new Course("MATH 150", 4),
-      new Course("CST 217", 3),
-    ]),
-
-    new Semester("Sophmore Fall", [
-      new Course("CST 237", 4),
-      new Course("MATH 151", 4),
-      new Course("GE 4", 3),
-      new Course("GE 6", 3),
-    ]),
-    new Semester("Sophmore Spring", [
-      new Course("GE 00", 3),
-    ]),
-
-    new Semester("Junior Fall", [
-      new CourseChoice(
-        "CST 370 / CST 334",
-        4,
-        ["CST 370", "CST 334"]
-      ),
-      new Course("CST 338", 4),
-      new Course("CST 349", 2),
-      new CourseRequirement(
-        "Upper-level prerequisite",
-        4,
-        "prerequisite"
-      )
-    ]),
-    new Semester("Junior Spring", [
-      new Course("CST 370", 4),
-      new Course("CST 300", 4),
-      new Course("CST 998", 4),
-      new Course("CST 999", 4),
-    ]),
-
-    new Semester("Senior Fall", [
-      new CourseRequirement("CS elective", 4, "elective"),
-      new CourseRequirement("CS elective", 4, "elective"),
-      new CourseRequirement("CS elective", 2, "elective"),
-      new CourseRequirement("GE Area 3", 4, "ge")
-    ]),
-    new Semester("Senior Spring", [
-      new Course("CST 499", 4),
-      new Course("CST 462", 4),
-      new Course("GE 2", 4),
-      new Course("GE 4", 4),
-    ]),
-
-
-
-  ])
-
-  return (
-    <main>
-      <h1>Curriculum Plan</h1>
-      <CurriculumView curriculum={curriculum} />
-    </main>
-  );
+function readCompleted(): Set<string> {
+  try {
+    const value: unknown = JSON.parse(localStorage.getItem(progressStorageKey) ?? '[]')
+    return new Set(Array.isArray(value) && value.every(item => typeof item === 'string') ? value : [])
+  } catch {
+    return new Set()
+  }
 }
-
-function Modal({ onClose, children }) {
-  if (!open) return null;
-
-  return (
-    <div className="backdrop" onClick={onClose}>
-      <div
-        className="modal"
-        onClick={(e) => e.stopPropagation()}
-      >
-        {children}
-      </div>
-    </div>
-  );
-}
-
-function App2() {
-
-  const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
-
-  console.log(allCourses)
-  return (
-    <main>
-      <div>
-        {
-          Object.entries(allCourses)
-            .map(([code, course]) => (
-              <CurriculumItemBox
-                item={course}
-                onClick={() => setSelectedCourse(course)}
-              />
-            ))
-        }
-      </div>
-
-      {
-        selectedCourse
-        &&
-        (
-          <Modal open={true} onClose={() => setSelectedCourse(null)}>
-            <CourseModal course={selectedCourse} onClose={() => setSelectedCourse(null)} />
-            <button onClick={() => setSelectedCourse(null)}>
-              Close
-            </button>
-          </Modal>
-        )
-      }
-    </main >
-  )
-}
-  */
-
-import { overall_plan } from './models/Curriculum';
 
 function App() {
-  console.log("Starting...")
+  const [selectedSlot, setSelectedSlot] = useState<PlanSlot | null>(null)
+  const [completed, setCompleted] = useState<Set<string>>(() => readCompleted())
+
+  useEffect(() => {
+    localStorage.setItem(progressStorageKey, JSON.stringify([...completed]))
+  }, [completed])
+
+  const updateCompletion = (slot: PlanSlot, isCompleted: boolean) => {
+    const key = progressKey(slot)
+    setCompleted(current => {
+      const next = new Set(current)
+      if (isCompleted) next.add(key)
+      else next.delete(key)
+      return next
+    })
+  }
+
+  const resetProgress = () => {
+    if (window.confirm('Reset all saved course progress on this device?')) setCompleted(new Set())
+  }
 
   return (
-    <main>
-      Hello!
+    <main className="planner">
+      <header className="planner-header">
+        <div><p className="eyebrow">Computer Science</p><h1>Curriculum planner</h1><p>Explore the suggested course sequence and mark completed coursework.</p></div>
+        <button className="reset-button" type="button" onClick={resetProgress}>Reset progress</button>
+      </header>
+      <section className="legend" aria-label="Course category legend">
+        <span className="legend-title">Course groups</span>
+        <span className="category-cst">CST</span><span className="category-math">Math</span><span className="category-ge-lower">Lower-division GE</span><span className="category-ge-upper">Upper-division GE</span><span className="category-elective-prereq">Elective pre-req</span><span className="category-elective">Elective</span>
+      </section>
+      <p className="scroll-hint">Scroll horizontally to see the complete 18-credit grid on smaller screens.</p>
+      <div className="curriculum-scroll">
+        <div className="curriculum-grid" role="table" aria-label="Suggested curriculum plan">
+          <div className="grid-header" role="row"><span>Year</span><span>Term</span><span className="credit-heading">Suggested credits</span></div>
+          {curriculumPlan.years.flatMap(year => year.terms.map((term, index) => (
+            <div className="term-row" role="row" key={`${year.year}-${term.term}`}>
+              <div className="year-label" role="rowheader">{index === 0 ? year.year : ''}</div>
+              <div className="term-label" role="rowheader">{term.term}</div>
+              <div className="credit-grid" role="cell">
+                {term.slots.map(slot => <CourseCell key={progressKey(slot)} slot={slot} completed={completed.has(progressKey(slot))} onSelect={() => setSelectedSlot(slot)} />)}
+              </div>
+            </div>
+          )))}
+        </div>
+      </div>
+      {selectedSlot && <CourseModal slot={selectedSlot} completed={completed.has(progressKey(selectedSlot))} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => updateCompletion(selectedSlot, isCompleted)} />}
     </main>
   )
 }

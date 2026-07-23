@@ -1,41 +1,171 @@
-- year: freshman
-  fall:
-    - CST 231
-    - GE Area 1 Lower Division # FYS
-    - MATH 130
-    - CST 286
-  spring:
-    - CST 238
-    - MATH 170 # Discrete
-    - GE Area 2 Lower Division # Math 150
-    - CST 271
-- year: sophomore
-  fall:
-    - CST 237
-    - Math 151 | Math 270
-    - GE Area 4 Lower Division
-    - GE Area 6 Lower Division
-  spring:
-    - World Culture | Language
-- year: junior
-  fall:
-    - CST 334
-    - CST 338
-    - CST 349
-    - Elective Pre-req
-  spring:
-    - CST 370
-    - CST 300
-    - Elective Pre-req
-    - Elective
-- year: senior
-  fall:
-    - Elective
-    - Elective
-    - Elective
-    - GE Area 3 Upper Division
-  spring:
-    - CST 499 # Capstone
-    - CST 462s
-    - GE Area 2 | GE Area 5
-    - GE Area 4 Upper Division
+years:
+  - year: freshman
+    terms:
+      - term: fall
+        slots:
+          - type: course
+            courseId: CST-231
+            credits: 4
+            category: cst
+          - type: requirement
+            slotId: ge-1-lower-division
+            label: GE Area 1 Lower Division
+            credits: 3
+            category: ge-lower
+            guidance: First-Year Seminar fulfills this lower-division general education area.
+          - type: course
+            courseId: MATH-130
+            credits: 4
+            category: math
+          - type: course
+            courseId: CST-286
+            credits: 3
+            category: ge-lower
+      - term: spring
+        slots:
+          - type: course
+            courseId: CST-238
+            credits: 4
+            category: cst
+          - type: course
+            courseId: MATH-170
+            credits: 4
+            category: math
+          - type: requirement
+            slotId: ge-2-lower-division
+            label: GE Area 2 Lower Division
+            credits: 3
+            category: ge-lower
+            guidance: Complete a lower-division GE Area 2 course, such as MATH 150.
+          - type: course
+            courseId: CST-271
+            credits: 3
+            category: ge-lower
+  - year: sophomore
+    terms:
+      - term: fall
+        slots:
+          - type: course
+            courseId: CST-237
+            credits: 4
+            category: cst
+          - type: choice
+            slotId: math-foundation-choice
+            alternatives: [MATH-151, MATH-270]
+            credits: 4
+            category: math
+            guidance: Choose one mathematics foundation course.
+          - type: requirement
+            slotId: ge-4-lower-division
+            label: GE Area 4 Lower Division
+            credits: 3
+            category: ge-lower
+            guidance: Complete a lower-division GE Area 4 course.
+          - type: requirement
+            slotId: ge-6-lower-division
+            label: GE Area 6 Lower Division
+            credits: 3
+            category: ge-lower
+            guidance: Complete a lower-division GE Area 6 course.
+      - term: spring
+        slots:
+          - type: choice
+            slotId: world-culture-or-language
+            alternatives: [World Culture, Language]
+            credits: 3
+            category: ge-lower
+            guidance: Choose either the World Culture or Language requirement.
+  - year: junior
+    terms:
+      - term: fall
+        slots:
+          - type: course
+            courseId: CST-334
+            credits: 4
+            category: cst
+          - type: course
+            courseId: CST-338
+            credits: 4
+            category: cst
+          - type: course
+            courseId: CST-349
+            credits: 2
+            category: cst
+          - type: requirement
+            slotId: junior-fall-elective-prerequisite
+            label: Elective Pre-req
+            credits: 4
+            category: elective-prereq
+            guidance: Choose an upper-division course needed before a later elective pathway course.
+      - term: spring
+        slots:
+          - type: course
+            courseId: CST-370
+            credits: 4
+            category: cst
+          - type: course
+            courseId: CST-300
+            credits: 3
+            category: cst
+          - type: requirement
+            slotId: junior-spring-elective-prerequisite
+            label: Elective Pre-req
+            credits: 4
+            category: elective-prereq
+            guidance: Choose an upper-division course needed before a later elective pathway course.
+          - type: requirement
+            slotId: junior-spring-elective
+            label: Elective
+            credits: 4
+            category: elective
+            guidance: Complete an elective appropriate to your future concentration.
+  - year: senior
+    terms:
+      - term: fall
+        slots:
+          - type: requirement
+            slotId: senior-fall-elective-1
+            label: Elective
+            credits: 4
+            category: elective
+            guidance: Complete an upper-division elective.
+          - type: requirement
+            slotId: senior-fall-elective-2
+            label: Elective
+            credits: 4
+            category: elective
+            guidance: Complete an upper-division elective.
+          - type: requirement
+            slotId: senior-fall-elective-3
+            label: Elective
+            credits: 4
+            category: elective
+            guidance: Complete an upper-division elective.
+          - type: requirement
+            slotId: ge-3-upper-division
+            label: GE Area 3 Upper Division
+            credits: 3
+            category: ge-upper
+            guidance: Complete an upper-division GE Area 3 course.
+      - term: spring
+        slots:
+          - type: course
+            courseId: CST-499
+            credits: 4
+            category: cst
+          - type: course
+            courseId: CST-462S
+            credits: 3
+            category: cst
+          - type: choice
+            slotId: ge-2-or-ge-5-upper-division
+            alternatives: [GE Area 2, GE Area 5]
+            credits: 3
+            category: ge-upper
+            guidance: Choose an upper-division course in GE Area 2 or GE Area 5.
+          - type: requirement
+            slotId: ge-4-upper-division
+            label: GE Area 4 Upper Division
+            credits: 3
+            category: ge-upper
+            guidance: Complete an upper-division GE Area 4 course.

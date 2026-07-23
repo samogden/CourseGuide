@@ -1,0 +1,25 @@
+courses:
+  MATH-130:
+    code: MATH 130
+    name: Precalculus
+    units: 4
+  CST-286:
+    code: CST 286
+    name: Physics of Computing
+    units: 3
+  MATH-170:
+    code: MATH 170
+    name: Discrete Mathematics
+    units: 4
+  CST-271:
+    code: CST 271
+    name: Digital Culture
+    units: 3
+  MATH-151:
+    code: MATH 151
+    name: Calculus I
+    units: 4
+  MATH-270:
+    code: MATH 270
+    name: Linear Algebra
+    units: 4

@@ -1,123 +1,128 @@
+import { parse } from 'yaml'
+import { z } from 'zod'
+import catalogText from '../assets/courses.yaml?raw'
+import overridesText from '../assets/course-overrides.yaml?raw'
+import planText from '../assets/scd-curriculum.yaml?raw'
 
-class CurriculumItem {
-  title: string;
-  credits: number
+const categorySchema = z.enum([
+  'cst',
+  'math',
+  'ge-lower',
+  'ge-upper',
+  'elective-prereq',
+  'elective',
+])
 
-  constructor(title: string, credits: number) {
-    this.title = title;
-    this.credits = credits;
-  }
+const prerequisiteSchema: z.ZodType<unknown> = z.lazy(() => z.object({
+  course: z.string().optional(),
+  min_grade: z.string().optional(),
+  all_of: z.array(prerequisiteSchema).optional(),
+  any_of: z.array(prerequisiteSchema).optional(),
+}).passthrough())
+
+const sourceCourseSchema = z.object({
+  name: z.string(),
+  units: z.union([z.number(), z.string()]),
+  description: z.string().optional(),
+  prereqs: z.array(prerequisiteSchema).optional(),
+  prereq_notes: z.array(z.string()).optional(),
+}).passthrough()
+
+const planSlotSchema = z.discriminatedUnion('type', [
+  z.object({ type: z.literal('course'), courseId: z.string(), credits: z.number().positive(), category: categorySchema }),
+  z.object({ type: z.literal('requirement'), slotId: z.string(), label: z.string(), credits: z.number().positive(), category: categorySchema, guidance: z.string() }),
+  z.object({ type: z.literal('choice'), slotId: z.string(), alternatives: z.array(z.string()).min(2), credits: z.number().positive(), category: categorySchema, guidance: z.string() }),
+])
+
+const planSchema = z.object({
+  years: z.array(z.object({
+    year: z.enum(['freshman', 'sophomore', 'junior', 'senior']),
+    terms: z.array(z.object({ term: z.enum(['fall', 'spring']), slots: z.array(planSlotSchema) })),
+  })),
+})
+
+const overrideSchema = z.object({
+  courses: z.record(z.string(), z.object({ code: z.string(), name: z.string(), units: z.number(), description: z.string().optional(), prereqs: z.array(prerequisiteSchema).optional() })),
+})
+
+export type Category = z.infer<typeof categorySchema>
+export type PlanSlot = z.infer<typeof planSlotSchema>
+export type CurriculumPlan = z.infer<typeof planSchema>
+
+export interface Course {
+  id: string
+  code: string
+  aliases: string[]
+  name: string
+  units: number
+  description?: string
+  prerequisites: unknown[]
+  prerequisiteNotes: string[]
+  placeholder: boolean
 }
 
-class Course extends CurriculumItem { };
-
-class GeneralEducation extends CurriculumItem { };
-
-class Option extends CurriculumItem {
-  options: CurriculumItem[];
-  constructor(title: string, options: CurriculumItem[]) {
-    const credits: number = options.length > 0 ? Math.max(...options.map(c => c.credits)) : 0
-    super(title, credits);
-    this.options = options;
-  }
+export function canonicalCourseId(value: string): string {
+  const compact = value.trim().toUpperCase().replace(/[\s-]+/g, '')
+  const match = compact.match(/^([A-Z]+)(\d+)([A-Z]*)$/)
+  return match ? `${match[1]}-${match[2]}${match[3]}` : compact
 }
 
-class Elective extends CurriculumItem { };
+const parsedCatalog = z.object({ courses: z.object({ catalog: z.record(z.string(), sourceCourseSchema) }) }).parse(parse(catalogText))
+const parsedOverrides = overrideSchema.parse(parse(overridesText))
 
-
-export const DegreeYear = {
-  Freshman: "freshman",
-  Sophomore: "sophomore",
-  Junior: "junior",
-  Senior: "senior",
-} as const;
-export type DegreeYear = typeof DegreeYear[keyof typeof DegreeYear];
-
-export const Term = {
-  Fall: "fall",
-  Spring: "spring",
-} as const;
-export type Term = typeof Term[keyof typeof Term];
-
-export class SemesterPlan {
-  degreeYear: DegreeYear;
-  term: Term;
-  courses: CurriculumItem[];
-
-  constructor(
-    degreeYear: DegreeYear,
-    term: Term,
-    courses: CurriculumItem[]
-  ) {
-    this.degreeYear = degreeYear;
-    this.term = term;
-    this.courses = courses;
+const catalogEntries: Course[] = Object.entries(parsedCatalog.courses.catalog).map(([code, course]) => {
+  const id = canonicalCourseId(code)
+  const units = typeof course.units === 'number' ? course.units : Number.parseInt(course.units, 10)
+  return {
+    id,
+    code,
+    aliases: [code, code.replace(' ', '')],
+    name: course.name,
+    units,
+    description: course.description,
+    prerequisites: course.prereqs ?? [],
+    prerequisiteNotes: course.prereq_notes ?? [],
+    placeholder: false,
   }
+})
+
+const placeholderEntries: Course[] = Object.entries(parsedOverrides.courses).map(([id, course]) => ({
+  id: canonicalCourseId(id),
+  code: course.code,
+  aliases: [course.code, course.code.replace(' ', '')],
+  name: course.name,
+  units: course.units,
+  description: course.description,
+  prerequisites: course.prereqs ?? [],
+  prerequisiteNotes: [],
+  placeholder: true,
+}))
+
+export const curriculumPlan: CurriculumPlan = planSchema.parse(parse(planText))
+export const coursesById = new Map([...catalogEntries, ...placeholderEntries].map(course => [course.id, course]))
+
+export function getCourse(value: string): Course | undefined {
+  return coursesById.get(canonicalCourseId(value))
 }
 
-export class DegreePlan {
-  semesters: Map<[DegreeYear, Term], SemesterPlan>;
-  constructor(semesters: Map<[DegreeYear, Term], SemesterPlan>) {
-    this.semesters = semesters
-  }
+export function slotLabel(slot: PlanSlot): string {
+  if (slot.type === 'course') return getCourse(slot.courseId)?.code ?? slot.courseId
+  if (slot.type === 'choice') return slot.alternatives.map(alternative => getCourse(alternative)?.code ?? alternative).join(' or ')
+  return slot.label
 }
 
-
-import { parse } from "yaml"
-import curriculum_plan_text from "../assets/scd-curriculum.yaml?raw"
-
-interface CurriculumData {
-  years: {
-    year: DegreeYear;
-    fall: string[];
-    spring: string[];
-  }
+export function progressKey(slot: PlanSlot): string {
+  return slot.type === 'course' ? `course:${slot.courseId}` : `slot:${slot.slotId}`
 }
 
-const overall_plan = parse(curriculum_plan_text) as CurriculumData
-console.log(overall_plan)
-
-const degree_plan: DegreePlan = new DegreePlan(
-  overall_plan.years
-)
-
-export { overall_plan }
-
-/*
- Loading up data from the yaml files
-*/
-
-// import { parse } from "yaml"
-// import coursesText from "../assets/courses.yaml?raw"
-
-// interface CourseData {
-//   name: string;
-//   units: number;
-//   description?: string;
-// }
-
-// const catalog = (parse(coursesText) as {
-//   courses: {
-//     catalog: Record<string, CourseData>;
-//   };
-// }).courses.catalog;
-
-// const allCourses: Record<string, Course> = Object.fromEntries(
-//   Object.entries(catalog).map(
-//     ([code, data]) => [code, Course.fromObject(code, data)]
-//   )
-// );
-
-// for (const course of Object.values(allCourses)) {
-//   for (const prereq_name of Object.values(course.raw_prereqs)) {
-//     console.log("preque_name: " + prereq_name)
-//     if (Object.keys(allCourses).includes(prereq_name)) {
-//       // Then the pre-req already exists and we can just pull it out
-//       course.prerequisites.push(allCourses[prereq_name])
-//     } else {
-//       // Then we'll have to make a dummy pre-req
-//       course.prerequisites.push(new DummyCourse(prereq_name, 3))
-//     }
-//   }
-// }
-/* end loading */
+export function prerequisiteText(prerequisite: unknown): string {
+  if (!prerequisite || typeof prerequisite !== 'object') return 'Prerequisite details unavailable.'
+  const value = prerequisite as { course?: string; min_grade?: string; all_of?: unknown[]; any_of?: unknown[] }
+  if (value.course) {
+    const course = getCourse(value.course)
+    return `${course?.code ?? value.course}${value.min_grade ? ` (${value.min_grade} or better)` : ''}`
+  }
+  if (value.all_of) return value.all_of.map(prerequisiteText).join(' and ')
+  if (value.any_of) return value.any_of.map(prerequisiteText).join(' or ')
+  return 'Prerequisite details unavailable.'
+}
