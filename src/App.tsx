@@ -66,7 +66,7 @@ function App() {
         <div><p className="eyebrow">Computer Science</p><h1>Curriculum planner</h1><p>Explore the suggested course sequence and mark completed coursework.</p></div>
         <button className="reset-button" type="button" onClick={resetProgress}>Reset progress</button>
       </header>
-      {suggestedSchedule.size > 0 && <section className="next-term" aria-live="polite"><strong>Suggested next schedule:</strong> {suggestedCredits} credits. Green courses unlock later planned courses; blue courses keep the load at 15 credits or fewer; red courses bring it to 16–18 credits.</section>}
+      {suggestedSchedule.size > 0 && <section className="next-term" aria-live="polite"><strong>Suggested next schedule:</strong> {suggestedCredits} credits. Courses are selected by year, term, then prerequisite priority. Green courses unlock later planned courses; red courses are optional stretch additions that bring the total to 16–18 credits.</section>}
       <section className="legend" aria-label="Course category legend">
         <span className="legend-title">Course groups</span>
         <span className="category-cst">CST</span><span className="category-math">Math</span><span className="category-ge-lower">Lower-division GE</span><span className="category-ge-upper">Upper-division GE</span><span className="category-elective-prereq">Elective pre-req</span><span className="category-elective">Elective</span>
@@ -88,7 +88,7 @@ function App() {
                     {term.slots.map(slot => {
                       const isCompleted = completed.has(progressKey(slot))
                       const suggestion = suggestedSchedule.get(progressKey(slot)) ?? null
-                      return <CourseCell key={progressKey(slot)} slot={slot} completed={isCompleted} suggestion={suggestion} highPriority={Boolean(suggestion) && isHighPriority(slot) && !isCompleted} onSelect={() => setSelectedSlot(slot)} />
+                      return <CourseCell key={progressKey(slot)} slot={slot} completed={isCompleted} suggestion={suggestion} highPriority={suggestion === 'standard' && isHighPriority(slot) && !isCompleted} onSelect={() => setSelectedSlot(slot)} />
                     })}
                   </div>
                 </div>

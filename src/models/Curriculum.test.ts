@@ -39,4 +39,9 @@ describe('curriculum data', () => {
     })))
     expect(plannedCourseIds.every(courseId => coursesById.has(courseId))).toBe(true)
   })
+
+  it('preserves active and inactive teaching status in the unified catalog', () => {
+    expect(getCourse('CST 231')?.teachingStatus).toBe('active')
+    expect(getCourse('CST 201')?.teachingStatus).toBe('inactive')
+  })
 })

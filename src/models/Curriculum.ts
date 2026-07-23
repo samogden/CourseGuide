@@ -2,31 +2,32 @@ import { parse } from 'yaml'
 import { z } from 'zod'
 import catalogText from '../assets/courses.yaml?raw'
 import planText from '../assets/scd-curriculum.yaml?raw'
+import programsText from '../assets/programs.yaml?raw'
 
-const categorySchema = z.enum([
-  'cst',
-  'math',
-  'ge-lower',
-  'ge-upper',
-  'elective-prereq',
-  'elective',
-])
+const categorySchema = z.enum(['cst', 'math', 'ge-lower', 'ge-upper', 'elective-prereq', 'elective'])
 
 const prerequisiteSchema: z.ZodType<unknown> = z.lazy(() => z.object({
-  course: z.string().optional(),
-  min_grade: z.string().optional(),
-  all_of: z.array(prerequisiteSchema).optional(),
-  any_of: z.array(prerequisiteSchema).optional(),
-}).passthrough())
+  courseId: z.string().optional(),
+  minimumGrade: z.string().optional(),
+  allOf: z.array(prerequisiteSchema).optional(),
+  anyOf: z.array(prerequisiteSchema).optional(),
+}).strict())
 
-const sourceCourseSchema = z.object({
-  name: z.string(),
-  units: z.union([z.number(), z.string()]),
+const courseSchema = z.object({
+  code: z.string(),
+  title: z.string(),
+  teachingStatus: z.enum(['active', 'inactive']),
+  credits: z.object({ minimum: z.number().positive(), maximum: z.number().positive() }).strict().refine(value => value.minimum <= value.maximum),
   description: z.string().optional(),
-  prereqs: z.array(prerequisiteSchema).optional(),
-  prereq_notes: z.array(z.string()).optional(),
+  offered: z.union([
+    z.object({ terms: z.array(z.enum(['fall', 'spring'])).min(1) }).strict(),
+    z.object({ availability: z.literal('periodic') }).strict(),
+  ]).optional(),
+  prerequisites: z.array(prerequisiteSchema).optional(),
+  corequisites: z.array(prerequisiteSchema).optional(),
+  prerequisiteNotes: z.array(z.string()).optional(),
   placeholder: z.boolean().default(false),
-}).passthrough()
+}).strict()
 
 const planSlotSchema = z.discriminatedUnion('type', [
   z.object({ type: z.literal('course'), courseId: z.string(), credits: z.number().positive(), category: categorySchema }),
@@ -35,15 +36,39 @@ const planSlotSchema = z.discriminatedUnion('type', [
 ])
 
 const planSchema = z.object({
+  schemaVersion: z.literal(1),
   years: z.array(z.object({
     year: z.enum(['freshman', 'sophomore', 'junior', 'senior']),
     terms: z.array(z.object({ term: z.enum(['fall', 'spring']), slots: z.array(planSlotSchema) })),
   })),
-})
+}).strict()
+
+const completionSchema = z.discriminatedUnion('kind', [
+  z.object({ kind: z.literal('all') }).strict(),
+  z.object({ kind: z.literal('choose'), count: z.number().int().positive() }).strict(),
+  z.object({ kind: z.literal('minimumCredits'), credits: z.number().positive() }).strict(),
+])
+
+const requirementSchema = z.object({
+  id: z.string(),
+  completion: completionSchema,
+  minimumGrade: z.string().optional(),
+  courseIds: z.array(z.string()).min(1),
+}).strict()
+
+const programsSchema = z.object({
+  schemaVersion: z.literal(1),
+  programs: z.record(z.string(), z.object({
+    title: z.string(),
+    requirements: z.array(requirementSchema),
+    concentrations: z.record(z.string(), z.object({ title: z.string(), requirements: z.array(requirementSchema) }).strict()),
+  }).strict()),
+}).strict()
 
 export type Category = z.infer<typeof categorySchema>
 export type PlanSlot = z.infer<typeof planSlotSchema>
 export type CurriculumPlan = z.infer<typeof planSchema>
+export type Programs = z.infer<typeof programsSchema>
 
 export interface Course {
   id: string
@@ -51,6 +76,7 @@ export interface Course {
   aliases: string[]
   name: string
   units: number
+  teachingStatus: 'active' | 'inactive'
   description?: string
   prerequisites: unknown[]
   prerequisiteNotes: string[]
@@ -63,26 +89,36 @@ export function canonicalCourseId(value: string): string {
   return match ? `${match[1]}-${match[2]}${match[3]}` : compact
 }
 
-const parsedCatalog = z.object({ courses: z.object({ catalog: z.record(z.string(), sourceCourseSchema) }) }).parse(parse(catalogText))
+const parsedCatalog = z.object({ schemaVersion: z.literal(1), courses: z.record(z.string(), courseSchema) }).strict().parse(parse(catalogText))
+export const curriculumPlan: CurriculumPlan = planSchema.parse(parse(planText))
+export const programs: Programs = programsSchema.parse(parse(programsText))
 
-const catalogEntries: Course[] = Object.entries(parsedCatalog.courses.catalog).map(([code, course]) => {
-  const id = canonicalCourseId(code)
-  const units = typeof course.units === 'number' ? course.units : Number.parseInt(course.units, 10)
+const catalogEntries: Course[] = Object.entries(parsedCatalog.courses).map(([id, course]) => {
+  if (id !== canonicalCourseId(id)) throw new Error(`Course catalog ID must be canonical: ${id}`)
   return {
     id,
-    code,
-    aliases: [code, code.replace(' ', '')],
-    name: course.name,
-    units,
+    code: course.code,
+    aliases: [course.code, course.code.replace(' ', '')],
+    name: course.title,
+    units: course.credits.minimum,
+    teachingStatus: course.teachingStatus,
     description: course.description,
-    prerequisites: course.prereqs ?? [],
-    prerequisiteNotes: course.prereq_notes ?? [],
+    prerequisites: course.prerequisites ?? [],
+    prerequisiteNotes: course.prerequisiteNotes ?? [],
     placeholder: course.placeholder,
   }
 })
 
-export const curriculumPlan: CurriculumPlan = planSchema.parse(parse(planText))
 export const coursesById = new Map(catalogEntries.map(course => [course.id, course]))
+
+const programCourseIds = Object.values(programs.programs).flatMap(program => [
+  ...program.requirements.flatMap(requirement => requirement.courseIds),
+  ...Object.values(program.concentrations).flatMap(concentration => concentration.requirements.flatMap(requirement => requirement.courseIds)),
+])
+
+for (const courseId of programCourseIds) {
+  if (!coursesById.has(courseId)) throw new Error(`Program requirement references unknown course: ${courseId}`)
+}
 
 export function getCourse(value: string): Course | undefined {
   return coursesById.get(canonicalCourseId(value))
@@ -104,13 +140,13 @@ export function prerequisiteText(prerequisite: unknown): string {
 
 function formatPrerequisite(prerequisite: unknown, parentOperator?: 'and' | 'or'): string {
   if (!prerequisite || typeof prerequisite !== 'object') return 'Prerequisite details unavailable.'
-  const value = prerequisite as { course?: string; min_grade?: string; all_of?: unknown[]; any_of?: unknown[] }
-  if (value.course) {
-    const course = getCourse(value.course)
-    return `${course?.code ?? value.course}${value.min_grade ? ` (${value.min_grade} or better)` : ''}`
+  const value = prerequisite as { courseId?: string; minimumGrade?: string; allOf?: unknown[]; anyOf?: unknown[] }
+  if (value.courseId) {
+    const course = getCourse(value.courseId)
+    return `${course?.code ?? value.courseId}${value.minimumGrade ? ` (${value.minimumGrade} or better)` : ''}`
   }
-  if (value.all_of) return formatGroup(value.all_of, 'and', parentOperator)
-  if (value.any_of) return formatGroup(value.any_of, 'or', parentOperator)
+  if (value.allOf) return formatGroup(value.allOf, 'and', parentOperator)
+  if (value.anyOf) return formatGroup(value.anyOf, 'or', parentOperator)
   return 'Prerequisite details unavailable.'
 }
 
@@ -124,16 +160,25 @@ export function prerequisitesMet(prerequisites: unknown[], completedCourseIds: S
 
   function prerequisiteMet(prerequisite: unknown): boolean {
     if (!prerequisite || typeof prerequisite !== 'object') return false
-    const value = prerequisite as { course?: string; all_of?: unknown[]; any_of?: unknown[] }
-    if (value.course) return completedCourseIds.has(canonicalCourseId(value.course))
-    if (value.all_of) return value.all_of.every(prerequisiteMet)
-    if (value.any_of) return value.any_of.some(prerequisiteMet)
+    const value = prerequisite as { courseId?: string; allOf?: unknown[]; anyOf?: unknown[] }
+    if (value.courseId) return completedCourseIds.has(canonicalCourseId(value.courseId))
+    if (value.allOf) return value.allOf.every(prerequisiteMet)
+    if (value.anyOf) return value.anyOf.some(prerequisiteMet)
     return false
   }
 }
 
 export function prerequisiteCount(prerequisites: unknown[]): number {
   return prerequisites.reduce<number>((count, prerequisite) => count + countPrerequisiteCourses(prerequisite), 0)
+}
+
+function countPrerequisiteCourses(prerequisite: unknown): number {
+  if (!prerequisite || typeof prerequisite !== 'object') return 0
+  const value = prerequisite as { courseId?: string; allOf?: unknown[]; anyOf?: unknown[] }
+  if (value.courseId) return 1
+  if (value.allOf) return value.allOf.reduce<number>((count, item) => count + countPrerequisiteCourses(item), 0)
+  if (value.anyOf) return value.anyOf.reduce<number>((count, item) => count + countPrerequisiteCourses(item), 0)
+  return 0
 }
 
 export function prerequisiteCourseIds(prerequisites: unknown[]): Set<string> {
@@ -144,17 +189,8 @@ export function prerequisiteCourseIds(prerequisites: unknown[]): Set<string> {
 
 function collectPrerequisiteCourseIds(prerequisite: unknown, ids: Set<string>) {
   if (!prerequisite || typeof prerequisite !== 'object') return
-  const value = prerequisite as { course?: string; all_of?: unknown[]; any_of?: unknown[] }
-  if (value.course) ids.add(canonicalCourseId(value.course))
-  if (value.all_of) value.all_of.forEach(item => collectPrerequisiteCourseIds(item, ids))
-  if (value.any_of) value.any_of.forEach(item => collectPrerequisiteCourseIds(item, ids))
-}
-
-function countPrerequisiteCourses(prerequisite: unknown): number {
-  if (!prerequisite || typeof prerequisite !== 'object') return 0
-  const value = prerequisite as { course?: string; all_of?: unknown[]; any_of?: unknown[] }
-  if (value.course) return 1
-  if (value.all_of) return value.all_of.reduce<number>((count, item) => count + countPrerequisiteCourses(item), 0)
-  if (value.any_of) return value.any_of.reduce<number>((count, item) => count + countPrerequisiteCourses(item), 0)
-  return 0
+  const value = prerequisite as { courseId?: string; allOf?: unknown[]; anyOf?: unknown[] }
+  if (value.courseId) ids.add(canonicalCourseId(value.courseId))
+  if (value.allOf) value.allOf.forEach(item => collectPrerequisiteCourseIds(item, ids))
+  if (value.anyOf) value.anyOf.forEach(item => collectPrerequisiteCourseIds(item, ids))
 }

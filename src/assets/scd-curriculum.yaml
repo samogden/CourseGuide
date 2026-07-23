@@ -1,3 +1,4 @@
+schemaVersion: 1
 years:
   - year: freshman
     terms:
@@ -51,7 +52,9 @@ years:
             category: cst
           - type: choice
             slotId: math-foundation-choice
-            alternatives: [MATH-151, MATH-270]
+            alternatives:
+              - MATH-151
+              - MATH-270
             credits: 4
             category: math
             guidance: Choose one mathematics foundation course.
@@ -71,7 +74,9 @@ years:
         slots:
           - type: choice
             slotId: world-culture-or-language
-            alternatives: [World Culture, Language]
+            alternatives:
+              - World Culture
+              - Language
             credits: 3
             category: ge-lower
             guidance: Choose either the World Culture or Language requirement.
@@ -159,7 +164,9 @@ years:
             category: cst
           - type: choice
             slotId: ge-2-or-ge-5-upper-division
-            alternatives: [GE Area 2, GE Area 5]
+            alternatives:
+              - GE Area 2
+              - GE Area 5
             credits: 3
             category: ge-upper
             guidance: Choose an upper-division course in GE Area 2 or GE Area 5.
