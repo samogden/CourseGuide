@@ -64,6 +64,7 @@ function App() {
     .map(key => key.slice('course:'.length)))
   const selectedSuggestion = selectedSlot ? suggestedSchedule.suggestions.get(progressKey(selectedSlot)) ?? null : null
   const selectedAssignedCourseId = selectedSlot ? suggestedSchedule.assignments.get(progressKey(selectedSlot)) : undefined
+  const selectedPathOptions = selectedSlot ? suggestedSchedule.pathOptions.get(progressKey(selectedSlot)) : undefined
   const resolvedCourseId = selectedSuggestion?.courseId ?? selectedAssignedCourseId ?? (selectedSlot?.type === 'course' ? selectedSlot.courseId : null)
   const selectedPrerequisitesMet = resolvedCourseId ? prerequisitesMet(getCourse(resolvedCourseId)?.prerequisites ?? [], completedCourseIds) : selectedSlot ? suggestedSchedule.isCourseReady(selectedSlot) : undefined
 
@@ -110,9 +111,10 @@ function App() {
                   <div className="credit-grid" role="cell">
                     {term.slots.map(slot => {
                       const assignedCourseId = suggestedSchedule.assignments.get(progressKey(slot))
+                      const pathOptions = suggestedSchedule.pathOptions.get(progressKey(slot))
                       const isCompleted = completed.has(assignedCourseId ? `course:${assignedCourseId}` : progressKey(slot))
                       const suggestion = suggestedSchedule.suggestions.get(progressKey(slot)) ?? null
-                      return <CourseCell key={progressKey(slot)} slot={slot} assignedCourseId={assignedCourseId} completed={isCompleted} suggestion={suggestion} highPriority={suggestedSchedule.isHighPriority(slot) && !isCompleted} onSelect={() => setSelectedSlot(slot)} />
+                      return <CourseCell key={progressKey(slot)} slot={slot} assignedCourseId={assignedCourseId} pathOptions={pathOptions} completed={isCompleted} suggestion={suggestion} highPriority={suggestedSchedule.isHighPriority(slot) && !isCompleted} onSelect={() => setSelectedSlot(slot)} />
                     })}
                   </div>
                 </div>
@@ -121,7 +123,7 @@ function App() {
           ))}
         </div>
       </div>
-      {selectedSlot && <CourseModal slot={selectedSlot} resolvedCourseId={resolvedCourseId} completed={completed.has(resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(selectedSlot))} prerequisitesMet={selectedPrerequisitesMet} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => updateCompletion(selectedSlot, isCompleted, resolvedCourseId)} />}
+      {selectedSlot && <CourseModal slot={selectedSlot} resolvedCourseId={resolvedCourseId} pathOptions={selectedPathOptions} completed={completed.has(resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(selectedSlot))} prerequisitesMet={selectedPrerequisitesMet} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => updateCompletion(selectedSlot, isCompleted, resolvedCourseId)} />}
     </main>
   )
 }

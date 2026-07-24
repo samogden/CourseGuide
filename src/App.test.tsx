@@ -37,6 +37,10 @@ describe('planner', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Data Science' }))
 
     expect(screen.getByRole('button', { name: /CST 383/i })).toHaveTextContent('Path course')
+    const electiveOption = screen.getAllByRole('button', { name: /Concentration elective option/i })[0]
+    fireEvent.click(electiveOption)
+    expect(screen.getByRole('dialog')).toHaveTextContent('CST 438')
+    expect(screen.queryByRole('button', { name: /mark as taken/i })).not.toBeInTheDocument()
     expect(screen.queryByRole('button', { name: /reset path/i })).not.toBeInTheDocument()
   })
 })

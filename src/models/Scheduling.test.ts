@@ -77,4 +77,18 @@ describe('suggested scheduling', () => {
 
     expect(schedule.assignments.get(progressKey(juniorFallElectivePrerequisite))).toBe('CST-383')
   })
+
+  it('shows concentration elective choices instead of selecting arbitrary electives', () => {
+    const schedule = buildSuggestedSchedule(curriculumPlan, new Set(), {
+      programId: 'bs-computer-science',
+      concentrationId: 'data-science',
+    })
+    const seniorFallElective = curriculumPlan.years[3].terms[0].slots[0]
+
+    expect(schedule.assignments.has(progressKey(seniorFallElective))).toBe(false)
+    expect(schedule.pathOptions.get(progressKey(seniorFallElective))).toEqual({
+      label: 'Concentration elective option',
+      courseIds: ['CST-205', 'CST-311', 'CST-315', 'CST-325', 'CST-326', 'CST-336', 'CST-380', 'CST-438'],
+    })
+  })
 })

@@ -3,14 +3,14 @@ import type { PlanSlot } from '../models/Curriculum'
 import { getCourse, prerequisiteText, slotLabel } from '../models/Curriculum'
 import './CourseBox.css'
 
-import type { ScheduledSuggestion } from '../models/Scheduling'
+import type { PathSlotOptions, ScheduledSuggestion } from '../models/Scheduling'
 
-export function CourseCell({ slot, assignedCourseId, completed, suggestion, highPriority, onSelect }: { slot: PlanSlot; assignedCourseId?: string; completed: boolean; suggestion: ScheduledSuggestion | null; highPriority: boolean; onSelect: () => void }) {
+export function CourseCell({ slot, assignedCourseId, pathOptions, completed, suggestion, highPriority, onSelect }: { slot: PlanSlot; assignedCourseId?: string; pathOptions?: PathSlotOptions; completed: boolean; suggestion: ScheduledSuggestion | null; highPriority: boolean; onSelect: () => void }) {
   const courseId = suggestion?.courseId ?? assignedCourseId
-  const label = courseId && slot.type !== 'course' ? getCourse(courseId)?.code ?? slotLabel(slot) : slotLabel(slot)
+  const label = courseId && slot.type !== 'course' ? getCourse(courseId)?.code ?? slotLabel(slot) : pathOptions?.label ?? slotLabel(slot)
   return (
     <button
-      className={`course-cell category-${slot.category}${completed ? ' is-completed' : ''}${suggestion ? ` is-suggested is-${suggestion.kind}` : ''}${assignedCourseId ? ' is-path-assigned' : ''}${highPriority ? ' is-high-priority' : ''}`}
+      className={`course-cell category-${slot.category}${completed ? ' is-completed' : ''}${suggestion ? ` is-suggested is-${suggestion.kind}` : ''}${assignedCourseId || pathOptions ? ' is-path-assigned' : ''}${highPriority ? ' is-high-priority' : ''}`}
       style={{ gridColumn: `span ${slot.credits}` }}
       onClick={onSelect}
       type="button"
@@ -18,15 +18,17 @@ export function CourseCell({ slot, assignedCourseId, completed, suggestion, high
       {highPriority && <span className="course-status priority-status">High priority</span>}
       {suggestion && <span className="course-status">{suggestion.kind === 'stretch' ? '16+ credits' : 'Suggested next'}</span>}
       {assignedCourseId && !suggestion && <span className="course-status path-status">Path course</span>}
+      {pathOptions && !suggestion && <span className="course-status path-status">Choose from path</span>}
       <span>{label}</span>
       <span className="course-cell-credits">{slot.credits} credits</span>
     </button>
   )
 }
 
-export function CourseModal({ slot, resolvedCourseId, completed, prerequisitesMet, onClose, onCompletedChange }: {
+export function CourseModal({ slot, resolvedCourseId, pathOptions, completed, prerequisitesMet, onClose, onCompletedChange }: {
   slot: PlanSlot
   resolvedCourseId?: string | null
+  pathOptions?: PathSlotOptions
   completed: boolean
   prerequisitesMet?: boolean
   onClose: () => void
@@ -49,7 +51,7 @@ export function CourseModal({ slot, resolvedCourseId, completed, prerequisitesMe
       <section className="course-modal" role="dialog" aria-modal="true" aria-labelledby="course-modal-title" onMouseDown={event => event.stopPropagation()}>
         <button ref={closeButton} className="modal-close" onClick={onClose} type="button" aria-label="Close course details">×</button>
         <p className="modal-kind">{slot.type === 'course' ? 'Course' : slot.type === 'choice' ? 'Choice requirement' : 'Requirement'}</p>
-        <h2 id="course-modal-title">{course?.code ?? slotLabel(slot)}</h2>
+        <h2 id="course-modal-title">{course?.code ?? pathOptions?.label ?? slotLabel(slot)}</h2>
         <p><strong>Credits:</strong> {slot.credits}</p>
         {slot.type !== 'course' && <p className="modal-slot-label"><strong>Requirement:</strong> {slotLabel(slot)}</p>}
         {course ? (
@@ -61,14 +63,20 @@ export function CourseModal({ slot, resolvedCourseId, completed, prerequisitesMe
             {course.prerequisiteNotes.length > 0 && <ul>{course.prerequisiteNotes.map(note => <li key={note}>{note}</li>)}</ul>}
             {course.placeholder && <p className="placeholder-note">Catalog details for this course are still being added.</p>}
           </>
-        ) : <p>{slot.type === 'course' ? 'Course details are coming soon.' : slot.guidance}</p>}
+        ) : <>
+          <p>{pathOptions ? 'Choose one of the following courses for this concentration requirement.' : slot.type === 'course' ? 'Course details are coming soon.' : slot.guidance}</p>
+          {pathOptions && <ul className="path-course-options">{pathOptions.courseIds.map(courseId => {
+            const option = getCourse(courseId)
+            return <li key={courseId}><strong>{option?.code ?? courseId}</strong>{option ? ` — ${option.name}` : ''} ({option?.units ?? slot.credits} credits)</li>
+          })}</ul>}
+        </>}
         {slot.type === 'choice' && <p><strong>Alternatives:</strong> {slotLabel(slot)}</p>}
-        <button className="taken-control" type="button" onClick={() => {
+        {!pathOptions && <button className="taken-control" type="button" onClick={() => {
           onCompletedChange(!completed)
           onClose()
         }}>
           {completed ? 'Mark as untaken' : 'Mark as taken'}
-        </button>
+        </button>}
       </section>
     </div>
   )
