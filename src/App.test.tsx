@@ -32,6 +32,15 @@ describe('planner', () => {
     expect(geArea1).toHaveClass('is-suggested', 'is-standard')
   })
 
+  it('shows the planned-credit breakdown', () => {
+    render(<App />)
+
+    expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('102 planned credits')
+    expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('72 major/core')
+    expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('21 lower-division GE')
+    expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('9 upper-division GE')
+  })
+
   it('fills elective slots when a concentration is selected', () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: 'Data Science' }))

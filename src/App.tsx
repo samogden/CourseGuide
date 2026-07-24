@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import { CourseCell, CourseModal } from './components/CourseBox'
-import { curriculumPlan, getCourse, prerequisitesMet, progressKey, programs, type PlanSlot } from './models/Curriculum'
+import { curriculumPlan, getCourse, prerequisitesMet, progressKey, programs, summarizePlanCredits, type PlanSlot } from './models/Curriculum'
 import { buildSuggestedSchedule } from './models/Scheduling'
 
 const progressStorageKey = 'courseguide-completed-v1'
@@ -54,6 +54,7 @@ function App() {
   }
 
   const activeProgram = programs.programs[activeProgramId]
+  const planCredits = summarizePlanCredits(curriculumPlan)
   const activeConcentrationId = selectedConcentration && activeProgram.concentrations[selectedConcentration] ? selectedConcentration : null
   const suggestedSchedule = buildSuggestedSchedule(curriculumPlan, completed, {
     programId: activeProgramId,
@@ -76,6 +77,12 @@ function App() {
           <button className="reset-button" type="button" onClick={resetProgress}>Reset progress</button>
         </div>
       </header>
+      <section className="credit-summary" aria-label="Curriculum credit summary">
+        <strong>{planCredits.total} planned credits</strong>
+        <span>{planCredits.major} major/core</span>
+        <span>{planCredits.lowerDivisionGeneralEducation} lower-division GE</span>
+        <span>{planCredits.upperDivisionGeneralEducation} upper-division GE</span>
+      </section>
       <section className="path-picker" aria-label="Program concentration">
         <span className="legend-title">Path</span>
         <button className={`path-button${activeConcentrationId === null ? ' is-selected' : ''}`} type="button" onClick={() => setSelectedConcentration(null)}>No concentration</button>

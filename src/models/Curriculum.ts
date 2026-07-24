@@ -88,6 +88,13 @@ export interface Course {
   placeholder: boolean
 }
 
+export interface PlanCreditSummary {
+  total: number
+  major: number
+  lowerDivisionGeneralEducation: number
+  upperDivisionGeneralEducation: number
+}
+
 export function canonicalCourseId(value: string): string {
   const compact = value.trim().toUpperCase().replace(/[\s-]+/g, '')
   const match = compact.match(/^([A-Z]+)(\d+)([A-Z]*)$/)
@@ -171,6 +178,25 @@ export function slotLabel(slot: PlanSlot): string {
   if (slot.type === 'course') return getCourse(slot.courseId)?.code ?? slot.courseId
   if (slot.type === 'choice') return slot.alternatives.map(alternative => getCourse(alternative)?.code ?? alternative).join(' or ')
   return slot.label
+}
+
+export function summarizePlanCredits(plan: CurriculumPlan): PlanCreditSummary {
+  return plan.years.reduce<PlanCreditSummary>((summary, year) => {
+    for (const term of year.terms) {
+      for (const slot of term.slots) {
+        summary.total += slot.credits
+        if (slot.category === 'ge-lower') summary.lowerDivisionGeneralEducation += slot.credits
+        else if (slot.category === 'ge-upper') summary.upperDivisionGeneralEducation += slot.credits
+        else summary.major += slot.credits
+      }
+    }
+    return summary
+  }, {
+    total: 0,
+    major: 0,
+    lowerDivisionGeneralEducation: 0,
+    upperDivisionGeneralEducation: 0,
+  })
 }
 
 export function progressKey(slot: PlanSlot): string {

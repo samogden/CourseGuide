@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { canonicalCourseId, coursesById, curriculumPlan, getCourse, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, prerequisiteText, slotLabel } from './Curriculum'
+import { canonicalCourseId, coursesById, curriculumPlan, getCourse, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, prerequisiteText, slotLabel, summarizePlanCredits, type CurriculumPlan } from './Curriculum'
 
 describe('curriculum data', () => {
   it('normalizes alternate course code spacing', () => {
@@ -43,5 +43,29 @@ describe('curriculum data', () => {
   it('preserves active and inactive teaching status in the unified catalog', () => {
     expect(getCourse('CST 231')?.teachingStatus).toBe('active')
     expect(getCourse('CST 201')?.teachingStatus).toBe('inactive')
+  })
+
+  it('separates major and general-education credits', () => {
+    const plan = {
+      schemaVersion: 1,
+      years: [{
+        year: 'freshman',
+        terms: [{
+          term: 'fall',
+          slots: [
+            { type: 'course', courseId: 'CST-231', credits: 4, category: 'cst' },
+            { type: 'requirement', slotId: 'ge-lower', label: 'Lower GE', credits: 3, category: 'ge-lower', guidance: '' },
+            { type: 'requirement', slotId: 'ge-upper', label: 'Upper GE', credits: 3, category: 'ge-upper', guidance: '' },
+          ],
+        }],
+      }],
+    } as CurriculumPlan
+
+    expect(summarizePlanCredits(plan)).toEqual({
+      total: 10,
+      major: 4,
+      lowerDivisionGeneralEducation: 3,
+      upperDivisionGeneralEducation: 3,
+    })
   })
 })
