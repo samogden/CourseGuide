@@ -51,4 +51,30 @@ describe('suggested scheduling', () => {
     expect(schedule.suggestions.get(progressKey(electivePrereqSlot))?.courseId).toBe('CST-383')
     expect(schedule.suggestions.get(progressKey(electivePrereqSlot))?.kind).toBe('standard')
   })
+
+  it('fills later elective slots differently for each concentration', () => {
+    const dataScience = buildSuggestedSchedule(curriculumPlan, new Set(), {
+      programId: 'bs-computer-science',
+      concentrationId: 'data-science',
+    })
+    const networkSecurity = buildSuggestedSchedule(curriculumPlan, new Set(), {
+      programId: 'bs-computer-science',
+      concentrationId: 'network-security',
+    })
+    const juniorFallElectivePrerequisite = curriculumPlan.years[2].terms[0].slots[3]
+
+    expect(dataScience.assignments.get(progressKey(juniorFallElectivePrerequisite))).toBe('CST-383')
+    expect(networkSecurity.assignments.get(progressKey(juniorFallElectivePrerequisite))).toBe('CST-311')
+  })
+
+  it('keeps a completed path course in its assigned elective slot', () => {
+    const completed = new Set(['course:CST-383'])
+    const schedule = buildSuggestedSchedule(curriculumPlan, completed, {
+      programId: 'bs-computer-science',
+      concentrationId: 'data-science',
+    })
+    const juniorFallElectivePrerequisite = curriculumPlan.years[2].terms[0].slots[3]
+
+    expect(schedule.assignments.get(progressKey(juniorFallElectivePrerequisite))).toBe('CST-383')
+  })
 })

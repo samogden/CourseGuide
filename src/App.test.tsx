@@ -31,4 +31,12 @@ describe('planner', () => {
     const geArea1 = screen.getByRole('button', { name: /GE Area 1 Lower Division/i })
     expect(geArea1).toHaveClass('is-suggested', 'is-standard')
   })
+
+  it('fills elective slots when a concentration is selected', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: 'Data Science' }))
+
+    expect(screen.getByRole('button', { name: /CST 383/i })).toHaveTextContent('Path course')
+    expect(screen.queryByRole('button', { name: /reset path/i })).not.toBeInTheDocument()
+  })
 })

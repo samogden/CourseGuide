@@ -5,17 +5,19 @@ import './CourseBox.css'
 
 import type { ScheduledSuggestion } from '../models/Scheduling'
 
-export function CourseCell({ slot, completed, suggestion, highPriority, onSelect }: { slot: PlanSlot; completed: boolean; suggestion: ScheduledSuggestion | null; highPriority: boolean; onSelect: () => void }) {
-  const label = suggestion?.courseId && slot.type !== 'course' ? getCourse(suggestion.courseId)?.code ?? slotLabel(slot) : slotLabel(slot)
+export function CourseCell({ slot, assignedCourseId, completed, suggestion, highPriority, onSelect }: { slot: PlanSlot; assignedCourseId?: string; completed: boolean; suggestion: ScheduledSuggestion | null; highPriority: boolean; onSelect: () => void }) {
+  const courseId = suggestion?.courseId ?? assignedCourseId
+  const label = courseId && slot.type !== 'course' ? getCourse(courseId)?.code ?? slotLabel(slot) : slotLabel(slot)
   return (
     <button
-      className={`course-cell category-${slot.category}${completed ? ' is-completed' : ''}${suggestion ? ` is-suggested is-${suggestion.kind}` : ''}${highPriority ? ' is-high-priority' : ''}`}
+      className={`course-cell category-${slot.category}${completed ? ' is-completed' : ''}${suggestion ? ` is-suggested is-${suggestion.kind}` : ''}${assignedCourseId ? ' is-path-assigned' : ''}${highPriority ? ' is-high-priority' : ''}`}
       style={{ gridColumn: `span ${slot.credits}` }}
       onClick={onSelect}
       type="button"
     >
       {highPriority && <span className="course-status priority-status">High priority</span>}
       {suggestion && <span className="course-status">{suggestion.kind === 'stretch' ? '16+ credits' : 'Suggested next'}</span>}
+      {assignedCourseId && !suggestion && <span className="course-status path-status">Path course</span>}
       <span>{label}</span>
       <span className="course-cell-credits">{slot.credits} credits</span>
     </button>

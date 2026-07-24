@@ -22,6 +22,7 @@ export interface ScheduledSuggestion {
 export interface SuggestedSchedule {
   credits: number
   suggestions: ReadonlyMap<string, ScheduledSuggestion>
+  assignments: ReadonlyMap<string, string>
   isCourseReady: (slot: PlanSlot) => boolean
   isHighPriority: (slot: PlanSlot) => boolean
 }
@@ -73,10 +74,12 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
   const directRequiredCourseIds = hasConcentration ? directRequirementCourseIds(pathRequirements) : new Set<string>()
   const downstreamGraph = hasConcentration ? buildDownstreamGraph(activeCourseIds) : new Map<string, Set<string>>()
   const rankedPathCourses = hasConcentration ? buildRankedPathCourses(activeCourseIds, explicitPlannedCourseIds, completedCourseIds, directRequiredCourseIds, downstreamGraph) : []
+  const rankedPathAssignmentCourses = hasConcentration ? buildRankedPathCourses(activeCourseIds, explicitPlannedCourseIds, new Set<string>(), directRequiredCourseIds, downstreamGraph) : []
   const generalDownstreamGraph = buildDownstreamGraph(explicitPlannedCourseIds)
   const rankedGeneralCourses = buildRankedPathCourses(explicitPlannedCourseIds, new Set<string>(), completedCourseIds, new Set<string>(), generalDownstreamGraph)
   const rankedPathCourseById = new Map(rankedPathCourses.map((course, index) => [course.courseId, { ...course, rank: index }]))
   const rankedGeneralCourseById = new Map(rankedGeneralCourses.map((course, index) => [course.courseId, { ...course, rank: index }]))
+  const assignments = buildPathAssignments(plan, completedCourseIds, hasConcentration, rankedPathAssignmentCourses)
   const suggestions = new Map<string, ScheduledSuggestion>()
   const selectedEntries: SelectedEntry[] = []
   const usedPathCourseIds = new Set<string>()
@@ -160,7 +163,40 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
     return slot.category === 'elective-prereq' && highPriorityKeys.has(progressKey(slot))
   }
 
-  return { credits, suggestions, isCourseReady, isHighPriority }
+  return { credits, suggestions, assignments, isCourseReady, isHighPriority }
+}
+
+function buildPathAssignments(
+  plan: CurriculumPlan,
+  completedCourseIds: ReadonlySet<string>,
+  hasConcentration: boolean,
+  rankedPathCourses: RankedCourse[],
+): Map<string, string> {
+  const assignments = new Map<string, string>()
+  if (!hasConcentration) return assignments
+
+  const projectedCourseIds = new Set(completedCourseIds)
+  const usedPathCourseIds = new Set<string>()
+
+  for (const year of plan.years) {
+    for (const term of year.terms) {
+      for (const slot of term.slots) {
+        if (slot.type === 'course') {
+          projectedCourseIds.add(slot.courseId)
+          continue
+        }
+
+        if (slot.type !== 'requirement' || (slot.category !== 'elective-prereq' && slot.category !== 'elective')) continue
+        const courseId = pickGenericCourse(slot, projectedCourseIds, rankedPathCourses, usedPathCourseIds)
+        if (!courseId) continue
+        assignments.set(progressKey(slot), courseId)
+        usedPathCourseIds.add(courseId)
+        projectedCourseIds.add(courseId)
+      }
+    }
+  }
+
+  return assignments
 }
 
 function resolvePathRequirements(selection?: ScheduleSelection): Requirement[] {
