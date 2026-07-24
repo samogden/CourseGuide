@@ -29,6 +29,7 @@ export function RegistrationPlanner({ plan, currentTerm, onCurrentTermChange, on
       textAlign: 'center',
       whiteSpace: 'pre-line',
       width: 160,
+      cursor: 'pointer',
     },
   }))
   const futureCourseIds = [...new Set(plan.edges.map(edge => edge.targetCourseId))].sort((left, right) => {
@@ -50,6 +51,7 @@ export function RegistrationPlanner({ plan, currentTerm, onCurrentTermChange, on
         textAlign: 'center',
         whiteSpace: 'pre-line',
         width: 160,
+        cursor: 'pointer',
       },
     }
   })
@@ -59,6 +61,8 @@ export function RegistrationPlanner({ plan, currentTerm, onCurrentTermChange, on
     target: `future:${edge.targetCourseId}`,
     animated: true,
   }))
+  const sourceCourseByNodeId = new Map(orderedCourses.map(course => [`source:${course.courseId ?? course.key}`, course]))
+  const futureSlotByNodeId = new Map(plan.edges.map(edge => [`future:${edge.targetCourseId}`, edge.targetSlot]))
 
   return (
     <section className="registration-planner" aria-label="Registration planner">
@@ -75,17 +79,15 @@ export function RegistrationPlanner({ plan, currentTerm, onCurrentTermChange, on
           </select>
         </label>
       </div>
-      <div className="registration-courses">
-        {orderedCourses.map(course => (
-          <button className={`registration-course${course.kind === 'stretch' ? ' is-stretch' : ''}`} key={course.key} type="button" onClick={() => onCourseSelect(course.slot)}>
-            <span>{course.kind === 'stretch' ? '16+ credits' : 'Suggested now'}</span>
-            <strong>{course.label}</strong>
-            <small>{course.credits} credits</small>
-          </button>
-        ))}
-      </div>
       {plan.edges.length > 0 ? <div className="dependency-graph" aria-label="Courses unlocked by the current plan">
-        <ReactFlow nodes={[...sourceNodes, ...futureNodes]} edges={edges} fitView nodesDraggable={false} nodesConnectable={false} elementsSelectable={false} proOptions={{ hideAttribution: true }}>
+        <ReactFlow nodes={[...sourceNodes, ...futureNodes]} edges={edges} fitView nodesDraggable={false} nodesConnectable={false} elementsSelectable={false} onNodeClick={(_, node) => {
+          const sourceCourse = sourceCourseByNodeId.get(node.id)
+          if (sourceCourse) onCourseSelect(sourceCourse.slot)
+          else {
+            const futureSlot = futureSlotByNodeId.get(node.id)
+            if (futureSlot) onCourseSelect(futureSlot)
+          }
+        }} proOptions={{ hideAttribution: true }}>
           <Background />
           <Controls showInteractive={false} />
         </ReactFlow>
