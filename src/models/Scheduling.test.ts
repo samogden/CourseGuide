@@ -146,6 +146,15 @@ describe('suggested scheduling', () => {
     expect(schedule.courseOptions.get(progressKey(juniorSpringChoice))?.courseIds).toEqual(['CST-370'])
   })
 
+  it('does not suggest a course-choice slot after its selected course is completed', () => {
+    const mathChoice = curriculumPlan.years[1].terms[0].slots[1]
+    const schedule = buildSuggestedSchedule(curriculumPlan, new Set(['course:MATH-151']), {
+      targetCourses: new Map([[progressKey(mathChoice), 'MATH-151']]),
+    })
+
+    expect(schedule.suggestions.has(progressKey(mathChoice))).toBe(false)
+  })
+
   it('connects a registration course to its directly unlocked future course', () => {
     const completed = new Set(['course:CST-231', 'course:MATH-130', 'course:CST-286'])
     const registrationPlan = buildRegistrationPlan(curriculumPlan, completed, { currentTerm: 'fall' })

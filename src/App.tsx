@@ -1,7 +1,7 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
 import './App.css'
 import { CourseCell, CourseModal } from './components/CourseBox'
-import { catalogVersions, curriculumPlan, defaultCatalogVersion, getCourse, prerequisitesMet, progressKey, summarizePlanCredits, type AcademicTerm, type PlanSlot } from './models/Curriculum'
+import { catalogVersions, curriculumPlan, defaultCatalogVersion, getCourse, prerequisitesMet, progressKey, remainingPlanCredits, summarizePlanCredits, type AcademicTerm, type PlanSlot } from './models/Curriculum'
 import { buildRegistrationPlan, buildSuggestedSchedule } from './models/Scheduling'
 
 const progressStorageKey = 'courseguide-completed-v1'
@@ -151,6 +151,9 @@ function App() {
   const selectedCourseOptions = selectedSlot ? suggestedSchedule.courseOptions.get(progressKey(selectedSlot)) : undefined
   const resolvedCourseId = selectedSuggestion?.courseId ?? selectedAssignedCourseId ?? (selectedSlot?.type === 'course' ? selectedSlot.courseId : null)
   const selectedPrerequisitesMet = resolvedCourseId ? prerequisitesMet(getCourse(resolvedCourseId)?.prerequisites ?? [], completedCourseIds) : selectedSlot ? suggestedSchedule.isCourseReady(selectedSlot) : undefined
+  const remainingCredits = remainingPlanCredits(curriculumPlan, completed, suggestedSchedule.assignments)
+  const semestersAtFifteen = Math.ceil(remainingCredits / 15)
+  const semestersAtEighteen = Math.ceil(remainingCredits / 18)
 
   return (
     <main className="planner">
@@ -190,7 +193,7 @@ function App() {
         ))}
       </section>
       {activeView === 'registration' && <Suspense fallback={<p className="planner-loading">Loading registration planner…</p>}><RegistrationPlanner plan={registrationPlan} currentTerm={registrationTerm} onCurrentTermChange={setRegistrationTerm} onCourseSelect={setSelectedSlot} /></Suspense>}
-      {activeView === 'roadmap' && suggestedSchedule.suggestions.size > 0 && <section className="next-term" aria-live="polite"><strong>Suggested schedule:</strong> {suggestedSchedule.credits} credits. Courses are selected by year, term, then prerequisite priority. Later-plan courses are included only when they are available now and their prerequisites are already complete. Green courses unlock later planned courses; red courses are optional stretch additions that bring the total to 16–18 credits.{activeConcentrationId && <> The {activeProgram.concentrations[activeConcentrationId].title} path fills the elective slots shown later in the plan.</>}</section>}
+      {activeView === 'roadmap' && suggestedSchedule.suggestions.size > 0 && <section className="next-term" aria-live="polite"><strong>Suggested schedule:</strong> {suggestedSchedule.credits} credits. <strong>{remainingCredits} planned credits remain</strong> — about {semestersAtFifteen} semesters at 15 credits per term, or {semestersAtEighteen} at 18.</section>}
       <section className="legend" aria-label="Course category legend">
         <span className="legend-title">Course groups</span>
         <span className="category-cst">Core</span><span className="category-math">Math</span><span className="category-ge-lower">Lower-division GE</span><span className="category-ge-upper">Upper-division GE</span><span className="category-concentration-required">Concentration requirement</span><span className="category-elective">Elective</span>

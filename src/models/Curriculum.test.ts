@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { canonicalCourseId, catalogVersions, coursesById, curriculumPlan, defaultCatalogVersion, getCourse, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, prerequisiteText, programs, slotLabel, summarizePlanCredits, type CurriculumPlan } from './Curriculum'
+import { canonicalCourseId, catalogVersions, coursesById, curriculumPlan, defaultCatalogVersion, getCourse, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, prerequisiteText, programs, remainingPlanCredits, slotLabel, summarizePlanCredits, type CurriculumPlan } from './Curriculum'
 
 describe('curriculum data', () => {
   it('normalizes alternate course code spacing', () => {
@@ -84,4 +84,11 @@ describe('curriculum data', () => {
     expect(catalogVersions['2026']?.title).toBe('2026 Catalog')
     expect(catalogVersions['2026']?.programs['bs-computer-science'].concentrations['data-science']).toBeDefined()
   })
+
+  it('calculates remaining credits from completed plan slots', () => {
+    const firstCourse = curriculumPlan.years[0].terms[0].slots[0]
+
+    expect(remainingPlanCredits(curriculumPlan, new Set([`course:${firstCourse.type === 'course' ? firstCourse.courseId : ''}`]))).toBe(98)
+  })
+
 })

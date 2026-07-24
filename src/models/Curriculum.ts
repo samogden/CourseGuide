@@ -215,6 +215,18 @@ export function summarizePlanCredits(plan: CurriculumPlan): PlanCreditSummary {
   })
 }
 
+export function remainingPlanCredits(plan: CurriculumPlan, completed: ReadonlySet<string>, courseAssignments: ReadonlyMap<string, string> = new Map()): number {
+  return plan.years.reduce((remaining, year) => remaining + year.terms.reduce((termRemaining, term) => termRemaining + term.slots.reduce((slotRemaining, slot) => {
+    return isPlanSlotCompleted(slot, completed, courseAssignments) ? slotRemaining : slotRemaining + slot.credits
+  }, 0), 0), 0)
+}
+
+function isPlanSlotCompleted(slot: PlanSlot, completed: ReadonlySet<string>, courseAssignments: ReadonlyMap<string, string>): boolean {
+  const resolvedCourseId = courseAssignments.get(progressKey(slot))
+  const completionKey = resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(slot)
+  return completed.has(completionKey)
+}
+
 export function progressKey(slot: PlanSlot): string {
   return slot.type === 'course' ? `course:${slot.courseId}` : `slot:${slot.slotId}`
 }
