@@ -106,7 +106,6 @@ programs:
               - CST-325
               - CST-326
               - CST-336
-              - CST-363
               - CST-380
               - CST-383
       game-development:
@@ -139,7 +138,7 @@ programs:
               - CST-383
               - CST-438
       general:
-        title: General
+        title: Computer Science Electives
         requirements:
           - id: upper_division_electives
             completion:

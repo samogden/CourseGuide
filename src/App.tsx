@@ -30,9 +30,9 @@ function readCompleted(): Set<string> {
 function readConcentration(): string | null {
   try {
     const value: unknown = JSON.parse(localStorage.getItem(concentrationStorageKey) ?? 'null')
-    return typeof value === 'string' ? value : null
+    return typeof value === 'string' ? value : 'general'
   } catch {
-    return null
+    return 'general'
   }
 }
 
@@ -151,7 +151,6 @@ function App() {
       </section>
       <section className="path-picker" aria-label="Program concentration">
         <span className="legend-title">Path</span>
-        <button className={`path-button${activeConcentrationId === null ? ' is-selected' : ''}`} type="button" onClick={() => setSelectedConcentration(null)}>No concentration</button>
         {Object.entries(activeProgram.concentrations).map(([concentrationId, concentration]) => (
           <button
             key={concentrationId}

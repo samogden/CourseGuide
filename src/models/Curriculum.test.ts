@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { canonicalCourseId, coursesById, curriculumPlan, getCourse, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, prerequisiteText, slotLabel, summarizePlanCredits, type CurriculumPlan } from './Curriculum'
+import { canonicalCourseId, coursesById, curriculumPlan, getCourse, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, prerequisiteText, programs, slotLabel, summarizePlanCredits, type CurriculumPlan } from './Curriculum'
 
 describe('curriculum data', () => {
   it('normalizes alternate course code spacing', () => {
@@ -67,5 +67,15 @@ describe('curriculum data', () => {
       lowerDivisionGeneralEducation: 3,
       upperDivisionGeneralEducation: 3,
     })
+  })
+
+  it('keeps the official concentration course lists distinct', () => {
+    const softwareEngineering = programs.programs['bs-computer-science'].concentrations['software-engineering']
+    const softwareElectives = softwareEngineering.requirements.find(requirement => requirement.id === 'upper_division_electives')
+    const general = programs.programs['bs-computer-science'].concentrations.general
+
+    expect(softwareElectives?.courseIds).not.toContain('CST-363')
+    expect(general.title).toBe('Computer Science Electives')
+    expect(general.requirements[0].completion).toEqual({ kind: 'minimumCredits', credits: 24 })
   })
 })
