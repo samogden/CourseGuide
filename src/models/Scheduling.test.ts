@@ -96,10 +96,11 @@ describe('suggested scheduling', () => {
       programId: 'bs-computer-science',
       concentrationId: 'data-science',
     })
+    const juniorSpringElective = curriculumPlan.years[2].terms[1].slots[3]
     const seniorFallElective = curriculumPlan.years[3].terms[0].slots[0]
 
-    expect(schedule.assignments.has(progressKey(seniorFallElective))).toBe(false)
-    expect(schedule.pathOptions.get(progressKey(seniorFallElective))).toEqual({
+    expect(schedule.assignments.get(progressKey(seniorFallElective))).toBe('CST-463')
+    expect(schedule.pathOptions.get(progressKey(juniorSpringElective))).toEqual({
       label: 'Concentration elective option',
       courseIds: ['CST-205', 'CST-311', 'CST-315', 'CST-325', 'CST-326', 'CST-336', 'CST-380', 'CST-438'],
     })

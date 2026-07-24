@@ -66,6 +66,7 @@ const programsSchema = z.object({
 }).strict()
 
 export type Category = z.infer<typeof categorySchema>
+export type AcademicTerm = 'fall' | 'spring'
 export type PlanSlot = z.infer<typeof planSlotSchema>
 export type CurriculumPlan = z.infer<typeof planSchema>
 export type Programs = z.infer<typeof programsSchema>
@@ -81,6 +82,7 @@ export interface Course {
   units: number
   teachingStatus: 'active' | 'inactive'
   description?: string
+  offeredTerms?: readonly AcademicTerm[]
   prerequisites: unknown[]
   prerequisiteNotes: string[]
   placeholder: boolean
@@ -106,6 +108,7 @@ const catalogEntries: Course[] = Object.entries(parsedCatalog.courses).map(([id,
     units: course.credits.minimum,
     teachingStatus: course.teachingStatus,
     description: course.description,
+    offeredTerms: course.offered && 'terms' in course.offered ? course.offered.terms : undefined,
     prerequisites: course.prerequisites ?? [],
     prerequisiteNotes: course.prerequisiteNotes ?? [],
     placeholder: course.placeholder,
@@ -157,6 +160,11 @@ export function candidateCourseIds(requirements: Requirement[]): Set<string> {
 
 export function getCourse(value: string): Course | undefined {
   return coursesById.get(canonicalCourseId(value))
+}
+
+export function isCourseOffered(courseId: string, term: AcademicTerm): boolean {
+  const offeredTerms = getCourse(courseId)?.offeredTerms
+  return !offeredTerms || offeredTerms.includes(term)
 }
 
 export function slotLabel(slot: PlanSlot): string {

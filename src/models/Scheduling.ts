@@ -3,6 +3,7 @@ import {
   candidateCourseIds,
   directRequirementCourseIds,
   getCourse,
+  isCourseOffered,
   prerequisiteCount,
   prerequisiteCourseIds,
   prerequisitesMet,
@@ -115,6 +116,7 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
               hasConcentration,
               rankedPathCourses,
               usedPathCourseIds,
+              term.term,
             )
             if (!candidate) return []
             return [{
@@ -206,7 +208,7 @@ function buildPathAssignments(
         }
 
         if (slot.type !== 'requirement' || slot.category !== 'elective') continue
-        const courseId = pickGenericCourse(slot, courseIdsCompletedBeforeTerm, requiredPathCourses, usedPathCourseIds)
+        const courseId = pickGenericCourse(slot, courseIdsCompletedBeforeTerm, requiredPathCourses, usedPathCourseIds, term.term)
         if (!courseId) {
           remainingSlots.push(slot)
           continue
@@ -282,10 +284,12 @@ function resolveSlotCandidate(
   hasConcentration: boolean,
   rankedPathCourses: RankedCourse[],
   usedPathCourseIds: ReadonlySet<string>,
+  term: 'fall' | 'spring',
 ): { courseId?: string; consumePathCourse: boolean } | undefined {
   if (slot.type === 'course') {
     const course = getCourse(slot.courseId)
     if (!course) return undefined
+    if (!isCourseOffered(course.id, term)) return undefined
     if (!prerequisitesMet(course.prerequisites, projectedCourseIds)) return undefined
     return { courseId: course.id, consumePathCourse: false }
   }
@@ -298,7 +302,7 @@ function resolveSlotCandidate(
     return { consumePathCourse: false }
   }
 
-  const courseId = pickGenericCourse(slot, projectedCourseIds, rankedPathCourses, usedPathCourseIds)
+  const courseId = pickGenericCourse(slot, projectedCourseIds, rankedPathCourses, usedPathCourseIds, term)
   if (courseId) return { courseId, consumePathCourse: true }
   return { consumePathCourse: false }
 }
@@ -308,10 +312,12 @@ function pickGenericCourse(
   projectedCourseIds: ReadonlySet<string>,
   rankedPathCourses: RankedCourse[],
   usedPathCourseIds: ReadonlySet<string>,
+  term: 'fall' | 'spring',
 ): string | undefined {
   const eligibleCandidates = rankedPathCourses.filter(candidate =>
     !usedPathCourseIds.has(candidate.courseId) &&
     getCourse(candidate.courseId)?.units === slot.credits &&
+    isCourseOffered(candidate.courseId, term) &&
     prerequisitesMet(getCourse(candidate.courseId)?.prerequisites ?? [], projectedCourseIds))
 
   if (eligibleCandidates.length === 0) return undefined
