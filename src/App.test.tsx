@@ -52,4 +52,16 @@ describe('planner', () => {
     expect(screen.queryByRole('button', { name: /mark as taken/i })).not.toBeInTheDocument()
     expect(screen.queryByRole('button', { name: /reset path/i })).not.toBeInTheDocument()
   })
+
+  it('selects a target course and removes it from other elective choices', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: 'Data Science' }))
+    fireEvent.click(screen.getAllByRole('button', { name: /Concentration elective option/i })[0])
+    fireEvent.click(screen.getAllByRole('button', { name: 'Select' })[0])
+
+    expect(localStorage.getItem('courseguide-target-courses-v1')).toContain('CST-205')
+    expect(screen.getByRole('button', { name: /CST 205/i })).toHaveTextContent('Selected course')
+    fireEvent.click(screen.getAllByRole('button', { name: /Concentration elective option/i })[0])
+    expect(screen.getByRole('dialog')).not.toHaveTextContent('CST 205')
+  })
 })

@@ -120,4 +120,29 @@ describe('suggested scheduling', () => {
       courseIds: ['CST-205', 'CST-311', 'CST-315', 'CST-325', 'CST-326', 'CST-336', 'CST-380', 'CST-438'],
     })
   })
+
+  it('removes a selected target course from the other elective option lists', () => {
+    const juniorSpringElective = curriculumPlan.years[2].terms[1].slots[3]
+    const seniorFallElective = curriculumPlan.years[3].terms[0].slots[1]
+    const schedule = buildSuggestedSchedule(curriculumPlan, new Set(), {
+      programId: 'bs-computer-science',
+      concentrationId: 'data-science',
+      targetCourses: new Map([[progressKey(juniorSpringElective), 'CST-205']]),
+    })
+
+    expect(schedule.assignments.get(progressKey(juniorSpringElective))).toBe('CST-205')
+    expect(schedule.selectedTargetKeys.has(progressKey(juniorSpringElective))).toBe(true)
+    expect(schedule.pathOptions.get(progressKey(seniorFallElective))?.courseIds).not.toContain('CST-205')
+  })
+
+  it('removes a selected course choice from the matching course-choice slot', () => {
+    const juniorFallChoice = curriculumPlan.years[2].terms[0].slots[0]
+    const juniorSpringChoice = curriculumPlan.years[2].terms[1].slots[0]
+    const schedule = buildSuggestedSchedule(curriculumPlan, new Set(), {
+      targetCourses: new Map([[progressKey(juniorFallChoice), 'CST-334']]),
+    })
+
+    expect(schedule.assignments.get(progressKey(juniorFallChoice))).toBe('CST-334')
+    expect(schedule.choiceOptions.get(progressKey(juniorSpringChoice))?.courseIds).toEqual(['CST-370'])
+  })
 })

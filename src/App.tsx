@@ -6,7 +6,12 @@ import { buildSuggestedSchedule } from './models/Scheduling'
 
 const progressStorageKey = 'courseguide-completed-v1'
 const concentrationStorageKey = 'courseguide-concentration-v1'
+const targetCoursesStorageKey = 'courseguide-target-courses-v1'
 const activeProgramId = 'bs-computer-science'
+
+function targetCourseKey(concentrationId: string, slotKey: string): string {
+  return `${concentrationId}:${slotKey}`
+}
 
 function readCompleted(): Set<string> {
   try {
@@ -26,10 +31,21 @@ function readConcentration(): string | null {
   }
 }
 
+function readTargetCourses(): Map<string, string> {
+  try {
+    const value: unknown = JSON.parse(localStorage.getItem(targetCoursesStorageKey) ?? '{}')
+    if (!value || typeof value !== 'object' || Array.isArray(value)) return new Map()
+    return new Map(Object.entries(value).filter((entry): entry is [string, string] => typeof entry[0] === 'string' && typeof entry[1] === 'string'))
+  } catch {
+    return new Map()
+  }
+}
+
 function App() {
   const [selectedSlot, setSelectedSlot] = useState<PlanSlot | null>(null)
   const [completed, setCompleted] = useState<Set<string>>(() => readCompleted())
   const [selectedConcentration, setSelectedConcentration] = useState<string | null>(() => readConcentration())
+  const [targetCourses, setTargetCourses] = useState<Map<string, string>>(() => readTargetCourses())
 
   useEffect(() => {
     localStorage.setItem(progressStorageKey, JSON.stringify([...completed]))
@@ -38,6 +54,10 @@ function App() {
   useEffect(() => {
     localStorage.setItem(concentrationStorageKey, JSON.stringify(selectedConcentration))
   }, [selectedConcentration])
+
+  useEffect(() => {
+    localStorage.setItem(targetCoursesStorageKey, JSON.stringify(Object.fromEntries(targetCourses)))
+  }, [targetCourses])
 
   const updateCompletion = (slot: PlanSlot, isCompleted: boolean, resolvedCourseId?: string | null) => {
     const key = resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(slot)
@@ -53,19 +73,36 @@ function App() {
     if (window.confirm('Reset all saved course progress on this device?')) setCompleted(new Set())
   }
 
+  const selectTargetCourse = (slot: PlanSlot, courseId: string) => {
+    const targetScope = slot.type === 'choice' ? 'general' : activeConcentrationId
+    if (!targetScope) return
+    setTargetCourses(current => {
+      const next = new Map(current)
+      next.set(targetCourseKey(targetScope, progressKey(slot)), courseId)
+      return next
+    })
+    setSelectedSlot(null)
+  }
+
   const activeProgram = programs.programs[activeProgramId]
   const planCredits = summarizePlanCredits(curriculumPlan)
   const activeConcentrationId = selectedConcentration && activeProgram.concentrations[selectedConcentration] ? selectedConcentration : null
+  const activeTargetCourses = new Map(
+    [...targetCourses]
+      .filter(([key]) => key.startsWith('general:') || (activeConcentrationId ? key.startsWith(`${activeConcentrationId}:`) : false))
+      .map(([key, courseId]) => [key.slice(key.indexOf(':') + 1), courseId]),
+  )
   const suggestedSchedule = buildSuggestedSchedule(curriculumPlan, completed, {
     programId: activeProgramId,
     concentrationId: activeConcentrationId,
+    targetCourses: activeTargetCourses,
   })
   const completedCourseIds = new Set([...completed]
     .filter(key => key.startsWith('course:'))
     .map(key => key.slice('course:'.length)))
   const selectedSuggestion = selectedSlot ? suggestedSchedule.suggestions.get(progressKey(selectedSlot)) ?? null : null
   const selectedAssignedCourseId = selectedSlot ? suggestedSchedule.assignments.get(progressKey(selectedSlot)) : undefined
-  const selectedPathOptions = selectedSlot ? suggestedSchedule.pathOptions.get(progressKey(selectedSlot)) : undefined
+  const selectedPathOptions = selectedSlot ? suggestedSchedule.pathOptions.get(progressKey(selectedSlot)) ?? suggestedSchedule.choiceOptions.get(progressKey(selectedSlot)) : undefined
   const resolvedCourseId = selectedSuggestion?.courseId ?? selectedAssignedCourseId ?? (selectedSlot?.type === 'course' ? selectedSlot.courseId : null)
   const selectedPrerequisitesMet = resolvedCourseId ? prerequisitesMet(getCourse(resolvedCourseId)?.prerequisites ?? [], completedCourseIds) : selectedSlot ? suggestedSchedule.isCourseReady(selectedSlot) : undefined
 
@@ -118,10 +155,10 @@ function App() {
                   <div className="credit-grid" role="cell">
                     {term.slots.map(slot => {
                       const assignedCourseId = suggestedSchedule.assignments.get(progressKey(slot))
-                      const pathOptions = suggestedSchedule.pathOptions.get(progressKey(slot))
+                      const pathOptions = suggestedSchedule.pathOptions.get(progressKey(slot)) ?? suggestedSchedule.choiceOptions.get(progressKey(slot))
                       const isCompleted = completed.has(assignedCourseId ? `course:${assignedCourseId}` : progressKey(slot))
                       const suggestion = suggestedSchedule.suggestions.get(progressKey(slot)) ?? null
-                      return <CourseCell key={progressKey(slot)} slot={slot} assignedCourseId={assignedCourseId} pathOptions={pathOptions} completed={isCompleted} suggestion={suggestion} highPriority={suggestedSchedule.isHighPriority(slot) && !isCompleted} onSelect={() => setSelectedSlot(slot)} />
+                      return <CourseCell key={progressKey(slot)} slot={slot} assignedCourseId={assignedCourseId} pathOptions={pathOptions} selectedTarget={suggestedSchedule.selectedTargetKeys.has(progressKey(slot))} completed={isCompleted} suggestion={suggestion} highPriority={suggestedSchedule.isHighPriority(slot) && !isCompleted} onSelect={() => setSelectedSlot(slot)} />
                     })}
                   </div>
                 </div>
@@ -130,7 +167,7 @@ function App() {
           ))}
         </div>
       </div>
-      {selectedSlot && <CourseModal slot={selectedSlot} resolvedCourseId={resolvedCourseId} pathOptions={selectedPathOptions} completed={completed.has(resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(selectedSlot))} prerequisitesMet={selectedPrerequisitesMet} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => updateCompletion(selectedSlot, isCompleted, resolvedCourseId)} />}
+      {selectedSlot && <CourseModal slot={selectedSlot} resolvedCourseId={resolvedCourseId} pathOptions={selectedPathOptions} completed={completed.has(resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(selectedSlot))} prerequisitesMet={selectedPrerequisitesMet} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => updateCompletion(selectedSlot, isCompleted, resolvedCourseId)} onTargetCourseSelect={courseId => selectTargetCourse(selectedSlot, courseId)} />}
     </main>
   )
 }

@@ -84,10 +84,14 @@ years:
     terms:
       - term: fall
         slots:
-          - type: course
-            courseId: CST-334
+          - type: choice
+            slotId: junior-fall-cst-334-or-cst-370
+            alternatives:
+              - CST-334
+              - CST-370
             credits: 4
             category: cst
+            guidance: Choose either CST 334 or CST 370; complete the other course in the following term.
           - type: course
             courseId: CST-338
             credits: 4
@@ -104,10 +108,14 @@ years:
             guidance: Complete an upper-division elective or concentration requirement.
       - term: spring
         slots:
-          - type: course
-            courseId: CST-370
+          - type: choice
+            slotId: junior-spring-cst-334-or-cst-370
+            alternatives:
+              - CST-334
+              - CST-370
             credits: 4
             category: cst
+            guidance: Complete the CST 334 or CST 370 course not taken in junior fall.
           - type: course
             courseId: CST-300
             credits: 3
