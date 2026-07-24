@@ -26,15 +26,17 @@ export function CourseCell({ slot, assignedCourseId, pathOptions, selectedTarget
   )
 }
 
-export function CourseModal({ slot, resolvedCourseId, pathOptions, completed, prerequisitesMet, onClose, onCompletedChange, onTargetCourseSelect }: {
+export function CourseModal({ slot, resolvedCourseId, pathOptions, selectedTarget, completed, prerequisitesMet, onClose, onCompletedChange, onTargetCourseSelect, onTargetCourseClear }: {
   slot: PlanSlot
   resolvedCourseId?: string | null
   pathOptions?: PathSlotOptions
+  selectedTarget: boolean
   completed: boolean
   prerequisitesMet?: boolean
   onClose: () => void
   onCompletedChange: (completed: boolean) => void
   onTargetCourseSelect: (courseId: string) => void
+  onTargetCourseClear: () => void
 }) {
   const closeButton = useRef<HTMLButtonElement>(null)
   const course = resolvedCourseId ? getCourse(resolvedCourseId) : slot.type === 'course' ? getCourse(slot.courseId) : undefined
@@ -74,6 +76,7 @@ export function CourseModal({ slot, resolvedCourseId, pathOptions, completed, pr
             const isSelected = courseId === resolvedCourseId
             return <li key={courseId}><strong>{option?.code ?? courseId}</strong>{option ? ` — ${option.name}` : ''} ({option?.units ?? slot.credits} credits) {isSelected ? <span className="selected-option">Selected</span> : <button className="option-control" type="button" onClick={() => onTargetCourseSelect(courseId)}>Select</button>}</li>
           })}</ul>
+          {selectedTarget && <button className="clear-choice-control" type="button" onClick={onTargetCourseClear}>Clear selected course</button>}
         </>}
         {slot.type === 'choice' && <p><strong>Alternatives:</strong> {slotLabel(slot)}</p>}
         {resolvedCourseId && <button className="taken-control" type="button" onClick={() => {

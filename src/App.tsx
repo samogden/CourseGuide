@@ -73,12 +73,27 @@ function App() {
     if (window.confirm('Reset all saved course progress on this device?')) setCompleted(new Set())
   }
 
+  const resetCourseChoices = () => {
+    if (window.confirm('Reset all saved course choices on this device?')) setTargetCourses(new Map())
+  }
+
   const selectTargetCourse = (slot: PlanSlot, courseId: string) => {
     const targetScope = slot.type === 'choice' ? 'general' : activeConcentrationId
     if (!targetScope) return
     setTargetCourses(current => {
       const next = new Map(current)
       next.set(targetCourseKey(targetScope, progressKey(slot)), courseId)
+      return next
+    })
+    setSelectedSlot(null)
+  }
+
+  const clearTargetCourse = (slot: PlanSlot) => {
+    const targetScope = slot.type === 'choice' ? 'general' : activeConcentrationId
+    if (!targetScope) return
+    setTargetCourses(current => {
+      const next = new Map(current)
+      next.delete(targetCourseKey(targetScope, progressKey(slot)))
       return next
     })
     setSelectedSlot(null)
@@ -111,6 +126,7 @@ function App() {
       <header className="planner-header">
         <div><p className="eyebrow">Computer Science</p><h1>Curriculum planner</h1><p>Explore the suggested course sequence and mark completed coursework.</p></div>
         <div className="header-actions">
+          <button className="reset-button" type="button" onClick={resetCourseChoices}>Reset course choices</button>
           <button className="reset-button" type="button" onClick={resetProgress}>Reset progress</button>
         </div>
       </header>
@@ -137,7 +153,7 @@ function App() {
       {suggestedSchedule.suggestions.size > 0 && <section className="next-term" aria-live="polite"><strong>Suggested schedule:</strong> {suggestedSchedule.credits} credits. Courses are selected by year, term, then prerequisite priority. Later-plan courses are included only when they are available now and their prerequisites are already complete. Green courses unlock later planned courses; red courses are optional stretch additions that bring the total to 16–18 credits.{activeConcentrationId && <> The {activeProgram.concentrations[activeConcentrationId].title} path fills the elective slots shown later in the plan.</>}</section>}
       <section className="legend" aria-label="Course category legend">
         <span className="legend-title">Course groups</span>
-        <span className="category-cst">CST</span><span className="category-math">Math</span><span className="category-ge-lower">Lower-division GE</span><span className="category-ge-upper">Upper-division GE</span><span className="category-concentration-required">Concentration requirement</span><span className="category-elective">Elective</span>
+        <span className="category-cst">Core</span><span className="category-math">Math</span><span className="category-ge-lower">Lower-division GE</span><span className="category-ge-upper">Upper-division GE</span><span className="category-concentration-required">Concentration requirement</span><span className="category-elective">Elective</span>
       </section>
       <p className="scroll-hint">Scroll horizontally to see the complete 18-credit grid on smaller screens.</p>
       <div className="curriculum-scroll">
@@ -167,7 +183,7 @@ function App() {
           ))}
         </div>
       </div>
-      {selectedSlot && <CourseModal slot={selectedSlot} resolvedCourseId={resolvedCourseId} pathOptions={selectedPathOptions} completed={completed.has(resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(selectedSlot))} prerequisitesMet={selectedPrerequisitesMet} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => updateCompletion(selectedSlot, isCompleted, resolvedCourseId)} onTargetCourseSelect={courseId => selectTargetCourse(selectedSlot, courseId)} />}
+      {selectedSlot && <CourseModal slot={selectedSlot} resolvedCourseId={resolvedCourseId} pathOptions={selectedPathOptions} selectedTarget={suggestedSchedule.selectedTargetKeys.has(progressKey(selectedSlot))} completed={completed.has(resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(selectedSlot))} prerequisitesMet={selectedPrerequisitesMet} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => updateCompletion(selectedSlot, isCompleted, resolvedCourseId)} onTargetCourseSelect={courseId => selectTargetCourse(selectedSlot, courseId)} onTargetCourseClear={() => clearTargetCourse(selectedSlot)} />}
     </main>
   )
 }

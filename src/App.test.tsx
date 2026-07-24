@@ -64,4 +64,25 @@ describe('planner', () => {
     fireEvent.click(screen.getAllByRole('button', { name: /Concentration elective option/i })[0])
     expect(screen.getByRole('dialog')).not.toHaveTextContent('CST 205')
   })
+
+  it('clears an individual selected target course', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: 'Data Science' }))
+    fireEvent.click(screen.getAllByRole('button', { name: /Concentration elective option/i })[0])
+    fireEvent.click(screen.getAllByRole('button', { name: 'Select' })[0])
+    fireEvent.click(screen.getByRole('button', { name: /CST 205/i }))
+    fireEvent.click(screen.getByRole('button', { name: /clear selected course/i }))
+
+    expect(localStorage.getItem('courseguide-target-courses-v1')).toBe('{}')
+    expect(screen.getAllByRole('button', { name: /Concentration elective option/i })).not.toHaveLength(0)
+  })
+
+  it('resets all selected target courses after confirmation', () => {
+    localStorage.setItem('courseguide-target-courses-v1', '{"data-science:slot:junior-spring-elective":"CST-205"}')
+    vi.spyOn(window, 'confirm').mockReturnValue(true)
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /reset course choices/i }))
+
+    expect(localStorage.getItem('courseguide-target-courses-v1')).toBe('{}')
+  })
 })
