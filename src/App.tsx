@@ -1,13 +1,14 @@
-import { useEffect, useState } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import './App.css'
 import { CourseCell, CourseModal } from './components/CourseBox'
-import { curriculumPlan, getCourse, prerequisitesMet, progressKey, programs, summarizePlanCredits, type PlanSlot } from './models/Curriculum'
-import { buildSuggestedSchedule } from './models/Scheduling'
+import { curriculumPlan, getCourse, prerequisitesMet, progressKey, programs, summarizePlanCredits, type AcademicTerm, type PlanSlot } from './models/Curriculum'
+import { buildRegistrationPlan, buildSuggestedSchedule } from './models/Scheduling'
 
 const progressStorageKey = 'courseguide-completed-v1'
 const concentrationStorageKey = 'courseguide-concentration-v1'
 const targetCoursesStorageKey = 'courseguide-target-courses-v1'
 const activeProgramId = 'bs-computer-science'
+const RegistrationPlanner = lazy(() => import('./components/RegistrationPlanner').then(module => ({ default: module.RegistrationPlanner })))
 
 function targetCourseKey(concentrationId: string, slotKey: string): string {
   return `${concentrationId}:${slotKey}`
@@ -46,6 +47,8 @@ function App() {
   const [completed, setCompleted] = useState<Set<string>>(() => readCompleted())
   const [selectedConcentration, setSelectedConcentration] = useState<string | null>(() => readConcentration())
   const [targetCourses, setTargetCourses] = useState<Map<string, string>>(() => readTargetCourses())
+  const [activeView, setActiveView] = useState<'roadmap' | 'registration'>('roadmap')
+  const [registrationTerm, setRegistrationTerm] = useState<AcademicTerm>('fall')
 
   useEffect(() => {
     localStorage.setItem(progressStorageKey, JSON.stringify([...completed]))
@@ -112,6 +115,12 @@ function App() {
     concentrationId: activeConcentrationId,
     targetCourses: activeTargetCourses,
   })
+  const registrationPlan = buildRegistrationPlan(curriculumPlan, completed, {
+    programId: activeProgramId,
+    concentrationId: activeConcentrationId,
+    targetCourses: activeTargetCourses,
+    currentTerm: registrationTerm,
+  })
   const completedCourseIds = new Set([...completed]
     .filter(key => key.startsWith('course:'))
     .map(key => key.slice('course:'.length)))
@@ -150,12 +159,17 @@ function App() {
           </button>
         ))}
       </section>
-      {suggestedSchedule.suggestions.size > 0 && <section className="next-term" aria-live="polite"><strong>Suggested schedule:</strong> {suggestedSchedule.credits} credits. Courses are selected by year, term, then prerequisite priority. Later-plan courses are included only when they are available now and their prerequisites are already complete. Green courses unlock later planned courses; red courses are optional stretch additions that bring the total to 16–18 credits.{activeConcentrationId && <> The {activeProgram.concentrations[activeConcentrationId].title} path fills the elective slots shown later in the plan.</>}</section>}
+      <nav className="view-picker" aria-label="Planner view">
+        <button className={`path-button${activeView === 'registration' ? ' is-selected' : ''}`} type="button" onClick={() => setActiveView('registration')}>Registration planner</button>
+        <button className={`path-button${activeView === 'roadmap' ? ' is-selected' : ''}`} type="button" onClick={() => setActiveView('roadmap')}>Roadmap</button>
+      </nav>
+      {activeView === 'registration' && <Suspense fallback={<p className="planner-loading">Loading registration planner…</p>}><RegistrationPlanner plan={registrationPlan} currentTerm={registrationTerm} onCurrentTermChange={setRegistrationTerm} onCourseSelect={setSelectedSlot} /></Suspense>}
+      {activeView === 'roadmap' && suggestedSchedule.suggestions.size > 0 && <section className="next-term" aria-live="polite"><strong>Suggested schedule:</strong> {suggestedSchedule.credits} credits. Courses are selected by year, term, then prerequisite priority. Later-plan courses are included only when they are available now and their prerequisites are already complete. Green courses unlock later planned courses; red courses are optional stretch additions that bring the total to 16–18 credits.{activeConcentrationId && <> The {activeProgram.concentrations[activeConcentrationId].title} path fills the elective slots shown later in the plan.</>}</section>}
       <section className="legend" aria-label="Course category legend">
         <span className="legend-title">Course groups</span>
         <span className="category-cst">Core</span><span className="category-math">Math</span><span className="category-ge-lower">Lower-division GE</span><span className="category-ge-upper">Upper-division GE</span><span className="category-concentration-required">Concentration requirement</span><span className="category-elective">Elective</span>
       </section>
-      <p className="scroll-hint">Scroll horizontally to see the complete 18-credit grid on smaller screens.</p>
+      {activeView === 'roadmap' && <><p className="scroll-hint">Scroll horizontally to see the complete 18-credit grid on smaller screens.</p>
       <div className="curriculum-scroll">
         <div className="curriculum-grid" role="table" aria-label="Suggested curriculum plan">
           <div className="grid-header" role="row">
@@ -183,6 +197,7 @@ function App() {
           ))}
         </div>
       </div>
+      </>}
       {selectedSlot && <CourseModal slot={selectedSlot} resolvedCourseId={resolvedCourseId} pathOptions={selectedPathOptions} selectedTarget={suggestedSchedule.selectedTargetKeys.has(progressKey(selectedSlot))} completed={completed.has(resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(selectedSlot))} prerequisitesMet={selectedPrerequisitesMet} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => updateCompletion(selectedSlot, isCompleted, resolvedCourseId)} onTargetCourseSelect={courseId => selectTargetCourse(selectedSlot, courseId)} onTargetCourseClear={() => clearTargetCourse(selectedSlot)} />}
     </main>
   )

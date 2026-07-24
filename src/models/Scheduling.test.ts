@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { curriculumPlan, progressKey, type CurriculumPlan } from './Curriculum'
-import { buildSuggestedSchedule } from './Scheduling'
+import { buildRegistrationPlan, buildSuggestedSchedule } from './Scheduling'
 
 describe('suggested scheduling', () => {
   it('keeps the early prerequisite-driven course visible and standard', () => {
@@ -144,5 +144,16 @@ describe('suggested scheduling', () => {
 
     expect(schedule.assignments.get(progressKey(juniorFallChoice))).toBe('CST-334')
     expect(schedule.choiceOptions.get(progressKey(juniorSpringChoice))?.courseIds).toEqual(['CST-370'])
+  })
+
+  it('connects a registration course to its directly unlocked future course', () => {
+    const completed = new Set(['course:CST-231', 'course:MATH-130', 'course:CST-286'])
+    const registrationPlan = buildRegistrationPlan(curriculumPlan, completed, { currentTerm: 'fall' })
+
+    expect(registrationPlan.courses.some(course => course.courseId === 'CST-238')).toBe(true)
+    expect(registrationPlan.edges).toContainEqual(expect.objectContaining({
+      sourceCourseId: 'CST-238',
+      targetCourseId: 'CST-338',
+    }))
   })
 })

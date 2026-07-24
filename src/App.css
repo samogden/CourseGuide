@@ -8,6 +8,8 @@
 .reset-button:hover, .reset-button:focus-visible { background: #eef2ff; outline: 3px solid #1d4ed8; outline-offset: 2px; }
 .credit-summary { align-items: center; background: #f8fafc; border: 1px solid #cbd5e1; color: #334155; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin-bottom: 1rem; padding: 0.65rem 0.8rem; }.credit-summary strong { color: #172033; }.credit-summary span + span { border-left: 1px solid #cbd5e1; padding-left: 1rem; }
 .path-picker { align-items: center; display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; }
+.view-picker { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+.planner-loading { color: #475569; padding: 1rem 0; }
 .path-button { background: #fff; border: 1px solid #94a3b8; border-radius: 999px; color: #172033; cursor: pointer; font: inherit; padding: 0.25rem 0.7rem; }
 .path-button:hover, .path-button:focus-visible { background: #eef2ff; outline: 3px solid #1d4ed8; outline-offset: 2px; }
 .path-button.is-selected { background: #dbeafe; border-color: #1d4ed8; font-weight: 700; }

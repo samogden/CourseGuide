@@ -32,6 +32,14 @@ describe('planner', () => {
     expect(geArea1).toHaveClass('is-suggested', 'is-standard')
   })
 
+  it('marks a general-education requirement as taken', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /GE Area 1 Lower Division/i }))
+    fireEvent.click(screen.getByRole('button', { name: /mark as taken/i }))
+
+    expect(localStorage.getItem('courseguide-completed-v1')).toContain('slot:ge-1-lower-division')
+  })
+
   it('shows the planned-credit breakdown', () => {
     render(<App />)
 
@@ -84,5 +92,13 @@ describe('planner', () => {
     fireEvent.click(screen.getByRole('button', { name: /reset course choices/i }))
 
     expect(localStorage.getItem('courseguide-target-courses-v1')).toBe('{}')
+  })
+
+  it('switches to the registration planner view', async () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /registration planner/i }))
+
+    expect(await screen.findByLabelText('Registration planner')).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /classes to sign up for/i })).toBeInTheDocument()
   })
 })

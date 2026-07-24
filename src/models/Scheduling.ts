@@ -9,6 +9,7 @@ import {
   prerequisitesMet,
   progressKey,
   requirementCourseIds,
+  slotLabel,
   type CurriculumPlan,
   type PlanSlot,
   type Requirement,
@@ -41,6 +42,28 @@ export interface ScheduleSelection {
   programId?: string
   concentrationId?: string | null
   targetCourses?: ReadonlyMap<string, string>
+  currentTerm?: 'fall' | 'spring'
+}
+
+export interface RegistrationCourse {
+  key: string
+  slot: PlanSlot
+  courseId?: string
+  label: string
+  credits: number
+  kind: SuggestionKind
+}
+
+export interface RegistrationEdge {
+  sourceCourseId: string
+  targetCourseId: string
+  targetSlot: PlanSlot
+}
+
+export interface RegistrationPlan {
+  credits: number
+  courses: RegistrationCourse[]
+  edges: RegistrationEdge[]
 }
 
 interface RankedCourse {
@@ -102,7 +125,7 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
   const selectedEntries: SelectedEntry[] = []
   const usedPathCourseIds = new Set<string>()
   let credits = 0
-  let suggestedTerm: 'fall' | 'spring' | undefined
+  let suggestedTerm: 'fall' | 'spring' | undefined = selection?.currentTerm
 
   for (const year of plan.years) {
     for (const term of year.terms) {
@@ -179,6 +202,43 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
   }
 
   return { credits, suggestions, assignments, pathOptions, choiceOptions, selectedTargetKeys, isCourseReady, isHighPriority }
+}
+
+export function buildRegistrationPlan(plan: CurriculumPlan, completed: ReadonlySet<string>, selection?: ScheduleSelection): RegistrationPlan {
+  const schedule = buildSuggestedSchedule(plan, completed, selection)
+  const completedCourseIds = new Set([...completed]
+    .filter(key => key.startsWith('course:'))
+    .map(key => key.slice('course:'.length)))
+  const slots = plan.years.flatMap(year => year.terms.flatMap(term => term.slots))
+  const courses = slots.flatMap(slot => {
+    const suggestion = schedule.suggestions.get(progressKey(slot))
+    if (!suggestion) return []
+    const courseId = suggestion.courseId ?? schedule.assignments.get(progressKey(slot)) ?? (slot.type === 'course' ? slot.courseId : undefined)
+    return [{
+      key: progressKey(slot),
+      slot,
+      courseId,
+      label: courseId ? getCourse(courseId)?.code ?? slotLabel(slot) : slotLabel(slot),
+      credits: slot.credits,
+      kind: suggestion.kind,
+    }]
+  })
+  const registrationCourseIds = new Set(courses.flatMap(course => course.courseId ? [course.courseId] : []))
+  const futureCourses = new Map<string, PlanSlot>()
+  for (const slot of slots) {
+    const courseId = schedule.assignments.get(progressKey(slot)) ?? (slot.type === 'course' ? slot.courseId : undefined)
+    if (!courseId || completedCourseIds.has(courseId) || registrationCourseIds.has(courseId)) continue
+    futureCourses.set(courseId, slot)
+  }
+  const edges: RegistrationEdge[] = []
+  for (const [targetCourseId, targetSlot] of futureCourses) {
+    const prerequisites = prerequisiteCourseIds(getCourse(targetCourseId)?.prerequisites ?? [])
+    for (const sourceCourseId of registrationCourseIds) {
+      if (prerequisites.has(sourceCourseId)) edges.push({ sourceCourseId, targetCourseId, targetSlot })
+    }
+  }
+
+  return { credits: schedule.credits, courses, edges }
 }
 
 function buildPathAssignments(

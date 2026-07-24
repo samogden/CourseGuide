@@ -79,7 +79,7 @@ export function CourseModal({ slot, resolvedCourseId, pathOptions, selectedTarge
           {selectedTarget && <button className="clear-choice-control" type="button" onClick={onTargetCourseClear}>Clear selected course</button>}
         </>}
         {slot.type === 'choice' && <p><strong>Alternatives:</strong> {slotLabel(slot)}</p>}
-        {resolvedCourseId && <button className="taken-control" type="button" onClick={() => {
+        {(!pathOptions || resolvedCourseId) && <button className="taken-control" type="button" onClick={() => {
           onCompletedChange(!completed)
           onClose()
         }}>
