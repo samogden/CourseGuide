@@ -98,7 +98,7 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
   const selectedEntries: SelectedEntry[] = []
   const usedPathCourseIds = new Set<string>()
   let credits = 0
-  const projectedCourseIds = new Set(completedCourseIds)
+  let suggestedTerm: 'fall' | 'spring' | undefined
 
   for (const year of plan.years) {
     for (const term of year.terms) {
@@ -112,11 +112,11 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
             if (completed.has(key) || selectedInTerm.has(key)) return []
             const candidate = resolveSlotCandidate(
               slot,
-              projectedCourseIds,
+              completedCourseIds,
               hasConcentration,
               rankedPathCourses,
               usedPathCourseIds,
-              term.term,
+              suggestedTerm ?? term.term,
             )
             if (!candidate) return []
             return [{
@@ -150,19 +150,15 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
             ...(candidate.courseId ? { courseId: candidate.courseId } : {}),
           })
           selectedEntries.push({ key: candidate.key, slot: candidate.slot, courseId: candidate.courseId })
-          if (candidate.courseId) {
-            projectedCourseIds.add(candidate.courseId)
-            if (candidate.consumePathCourse) usedPathCourseIds.add(candidate.courseId)
-          }
+          if (candidate.courseId && candidate.consumePathCourse) usedPathCourseIds.add(candidate.courseId)
           selectedInTerm.add(candidate.key)
           credits += candidate.slot.credits
+          suggestedTerm ??= term.term
           madeProgress = true
           break
         }
       }
-      if (credits >= 18) break
     }
-    if (credits >= 18) break
   }
 
   const highPriorityKeys = new Set(

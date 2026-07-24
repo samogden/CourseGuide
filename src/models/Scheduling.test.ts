@@ -11,6 +11,21 @@ describe('suggested scheduling', () => {
     expect(schedule.isHighPriority(cst286)).toBe(true)
   })
 
+  it('does not use a suggested course to satisfy another suggested course prerequisite', () => {
+    const schedule = buildSuggestedSchedule(curriculumPlan, new Set())
+    const cst238 = curriculumPlan.years[0].terms[1].slots[0]
+
+    expect(schedule.suggestions.has(progressKey(cst238))).toBe(false)
+  })
+
+  it('adds an eligible later-plan course as an early stretch option', () => {
+    const completed = new Set(['course:CST-231', 'course:MATH-130', 'course:CST-286'])
+    const schedule = buildSuggestedSchedule(curriculumPlan, completed)
+    const cst238 = curriculumPlan.years[0].terms[1].slots[0]
+
+    expect(schedule.suggestions.get(progressKey(cst238))?.kind).toBe('standard')
+  })
+
   it('does not recommend a later course with unmet prerequisites', () => {
     const softwareEngineering = curriculumPlan.years[2].terms[0].slots[1]
     const schedule = buildSuggestedSchedule(curriculumPlan, new Set())
