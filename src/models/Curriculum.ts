@@ -139,6 +139,10 @@ export function activeProgramRequirements(programId: string, concentrationId: st
   return concentration ? [...program.requirements, ...concentration.requirements] : [...program.requirements]
 }
 
+export function concentrationRequirements(programId: string, concentrationId: string | null | undefined): Requirement[] {
+  return getConcentration(programId, concentrationId)?.requirements ?? []
+}
+
 export function requirementCourseIds(requirement: Requirement): string[] {
   return requirement.courseIds.map(canonicalCourseId)
 }

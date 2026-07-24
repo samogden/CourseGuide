@@ -248,7 +248,6 @@ courses:
     prerequisites:
       - courseId: CST-238
       - courseId: MATH-130
-      - courseId: MATH-150
   CST-349:
     code: CST 349
     title: Computer Science Proseminar

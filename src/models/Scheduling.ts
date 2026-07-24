@@ -1,5 +1,5 @@
 import {
-  activeProgramRequirements,
+  concentrationRequirements,
   candidateCourseIds,
   directRequirementCourseIds,
   getCourse,
@@ -39,12 +39,19 @@ interface RankedCourse {
   prerequisiteCount: number
 }
 
-interface SlotCandidate {
-  slot: PlanSlot
+interface SelectedEntry {
   key: string
+  slot: PlanSlot
+  courseId?: string
+}
+
+interface TermCandidate {
+  key: string
+  slot: PlanSlot
   slotIndex: number
-  courseId: string
-  prerequisiteCount: number
+  courseId?: string
+  consumePathCourse: boolean
+  priority: number
 }
 
 const defaultProgramId = 'bs-computer-science'
@@ -54,78 +61,103 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
     .filter(key => key.startsWith('course:'))
     .map(key => key.slice('course:'.length)))
   const isCourseReady = (slot: PlanSlot) => slot.type !== 'course' || prerequisitesMet(getCourse(slot.courseId)?.prerequisites ?? [], completedCourseIds)
-  const plannedCourses = plan.years.flatMap((year, yearIndex) => year.terms.flatMap((term, termIndex) => term.slots
-    .filter((slot): slot is Extract<PlanSlot, { type: 'course' }> => slot.type === 'course')
-    .map(slot => ({ courseId: slot.courseId, order: yearIndex * 10 + termIndex }))))
   const explicitPlannedCourseIds = new Set(plan.years.flatMap(year => year.terms.flatMap(term => term.slots.flatMap(slot => {
     if (slot.type === 'course') return [slot.courseId]
     if (slot.type === 'choice') return slot.alternatives
     return []
   }))))
-  const plannedCourseOrder = new Map(plannedCourses.map(course => [course.courseId, course.order]))
   const pathRequirements = resolvePathRequirements(selection)
   const hasConcentration = Boolean(selection?.concentrationId)
-  const activeCourseIds = hasConcentration ? candidateCourseIds(pathRequirements) : new Set<string>()
+  const preferredCourseIds = new Set([...explicitPlannedCourseIds, ...completedCourseIds])
+  const activeCourseIds = hasConcentration ? expandPrerequisiteClosure(candidateCourseIds(pathRequirements), preferredCourseIds) : new Set<string>()
   const directRequiredCourseIds = hasConcentration ? directRequirementCourseIds(pathRequirements) : new Set<string>()
   const downstreamGraph = hasConcentration ? buildDownstreamGraph(activeCourseIds) : new Map<string, Set<string>>()
   const rankedPathCourses = hasConcentration ? buildRankedPathCourses(activeCourseIds, explicitPlannedCourseIds, completedCourseIds, directRequiredCourseIds, downstreamGraph) : []
-  const genericAssignments = hasConcentration ? assignGenericSlots(plan, completedCourseIds, rankedPathCourses) : new Map<string, string>()
+  const generalDownstreamGraph = buildDownstreamGraph(explicitPlannedCourseIds)
+  const rankedGeneralCourses = buildRankedPathCourses(explicitPlannedCourseIds, new Set<string>(), completedCourseIds, new Set<string>(), generalDownstreamGraph)
+  const rankedPathCourseById = new Map(rankedPathCourses.map((course, index) => [course.courseId, { ...course, rank: index }]))
+  const rankedGeneralCourseById = new Map(rankedGeneralCourses.map((course, index) => [course.courseId, { ...course, rank: index }]))
   const suggestions = new Map<string, ScheduledSuggestion>()
-  const candidates: Array<SlotCandidate & { priority: number }> = []
-  for (const [yearIndex, year] of plan.years.entries()) {
-    for (const [termIndex, term] of year.terms.entries()) {
-      for (const [slotIndex, slot] of term.slots.entries()) {
-        const key = progressKey(slot)
-        if (completed.has(key)) continue
-        if (slot.type === 'course') {
-          const candidate = {
-            slot,
-            key,
-            priority: yearIndex * 10 + termIndex,
-            slotIndex,
-            courseId: slot.courseId,
-            prerequisiteCount: prerequisiteCount(getCourse(slot.courseId)?.prerequisites ?? []),
-          } satisfies SlotCandidate & { priority: number }
-          if (isCourseReadyCandidate(candidate, completedCourseIds)) candidates.push(candidate)
-          continue
-        }
-
-        const assignedCourseId = genericAssignments.get(key)
-        if (!assignedCourseId || completedCourseIds.has(assignedCourseId)) continue
-        const candidate = {
-          slot,
-          key,
-          priority: yearIndex * 10 + termIndex,
-          slotIndex,
-          courseId: assignedCourseId,
-          prerequisiteCount: prerequisiteCount(getCourse(assignedCourseId)?.prerequisites ?? []),
-        } satisfies SlotCandidate & { priority: number }
-        if (isCourseReadyCandidate(candidate, completedCourseIds)) candidates.push(candidate)
-      }
-    }
-  }
-
-  candidates.sort((left, right) =>
-    left.priority - right.priority ||
-    right.prerequisiteCount - left.prerequisiteCount ||
-    left.slotIndex - right.slotIndex)
-
+  const selectedEntries: SelectedEntry[] = []
+  const usedPathCourseIds = new Set<string>()
   let credits = 0
-  for (const candidate of candidates) {
-    if (credits + candidate.slot.credits > 18) continue
-    credits += candidate.slot.credits
-    suggestions.set(candidate.key, {
-      kind: credits >= 16 ? 'stretch' : 'standard',
-      courseId: candidate.courseId,
-    })
+  const projectedCourseIds = new Set(completedCourseIds)
+
+  for (const year of plan.years) {
+    for (const term of year.terms) {
+      const selectedInTerm = new Set<string>()
+      let madeProgress = true
+      while (madeProgress && credits < 18) {
+        madeProgress = false
+        const termCandidates = term.slots
+          .flatMap((slot, slotIndex) => {
+            const key = progressKey(slot)
+            if (completed.has(key) || selectedInTerm.has(key)) return []
+            const candidate = resolveSlotCandidate(
+              slot,
+              projectedCourseIds,
+              hasConcentration,
+              rankedPathCourses,
+              usedPathCourseIds,
+            )
+            if (!candidate) return []
+            return [{
+              key,
+              slot,
+              slotIndex,
+              courseId: candidate.courseId,
+              consumePathCourse: candidate.consumePathCourse,
+              priority: getCandidatePriority(
+                slot,
+                candidate.courseId,
+                slotIndex,
+                rankedPathCourseById,
+                rankedGeneralCourseById,
+                directRequiredCourseIds,
+                downstreamGraph,
+              ),
+            } satisfies TermCandidate]
+          })
+          .sort((left, right) =>
+            left.priority - right.priority ||
+            left.slotIndex - right.slotIndex ||
+            Number(right.slot.type === 'course') - Number(left.slot.type === 'course') ||
+            left.key.localeCompare(right.key))
+
+        for (const candidate of termCandidates) {
+          if (credits + candidate.slot.credits > 18) continue
+          const suggestionKind: SuggestionKind = credits + candidate.slot.credits >= 16 ? 'stretch' : 'standard'
+          suggestions.set(candidate.key, {
+            kind: suggestionKind,
+            ...(candidate.courseId ? { courseId: candidate.courseId } : {}),
+          })
+          selectedEntries.push({ key: candidate.key, slot: candidate.slot, courseId: candidate.courseId })
+          if (candidate.courseId) {
+            projectedCourseIds.add(candidate.courseId)
+            if (candidate.consumePathCourse) usedPathCourseIds.add(candidate.courseId)
+          }
+          selectedInTerm.add(candidate.key)
+          credits += candidate.slot.credits
+          madeProgress = true
+          break
+        }
+      }
+      if (credits >= 18) break
+    }
+    if (credits >= 18) break
   }
 
+  const highPriorityKeys = new Set(
+    selectedEntries
+      .filter(entry => entry.slot.type === 'course' || entry.slot.category === 'elective-prereq')
+      .slice(0, 4)
+      .map(entry => entry.key),
+  )
   const isHighPriority = (slot: PlanSlot) => {
     const suggestion = suggestions.get(progressKey(slot))
-    if (!suggestion || suggestion.kind !== 'standard') return false
-    const courseId = slot.type === 'course' ? slot.courseId : suggestion.courseId
-    if (!courseId) return false
-    return isCourseHighPriority(courseId, plannedCourseOrder, downstreamGraph)
+    if (suggestion?.kind === 'stretch') return false
+    if (slot.type === 'course') return highPriorityKeys.has(progressKey(slot))
+    return slot.category === 'elective-prereq' && highPriorityKeys.has(progressKey(slot))
   }
 
   return { credits, suggestions, isCourseReady, isHighPriority }
@@ -133,7 +165,7 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
 
 function resolvePathRequirements(selection?: ScheduleSelection): Requirement[] {
   if (!selection?.concentrationId) return []
-  return activeProgramRequirements(selection.programId ?? defaultProgramId, selection.concentrationId)
+  return concentrationRequirements(selection.programId ?? defaultProgramId, selection.concentrationId)
 }
 
 function buildRankedPathCourses(
@@ -160,34 +192,73 @@ function buildRankedPathCourses(
       left.courseId.localeCompare(right.courseId))
 }
 
-function assignGenericSlots(
-  plan: CurriculumPlan,
-  completedCourseIds: ReadonlySet<string>,
-  rankedCourses: RankedCourse[],
-): Map<string, string> {
-  const assignments = new Map<string, string>()
-  const usedCourseIds = new Set<string>()
-  const genericSlots = plan.years.flatMap(year => year.terms.flatMap(term => term.slots.filter(slot => slot.type !== 'course' && (slot.category === 'elective-prereq' || slot.category === 'elective'))))
-
-  for (const slot of genericSlots) {
-    const slotKey = progressKey(slot)
-    const eligibleCandidates = rankedCourses.filter(candidate =>
-      !usedCourseIds.has(candidate.courseId) &&
-      getCourse(candidate.courseId)?.units === slot.credits &&
-      prerequisitesMet(getCourse(candidate.courseId)?.prerequisites ?? [], completedCourseIds))
-    if (eligibleCandidates.length === 0) continue
-
-    const preferredCandidate = slot.category === 'elective-prereq'
-      ? eligibleCandidates.find(candidate => candidate.reachCount > 0 || candidate.directRequired)
-      : undefined
-    const candidate = preferredCandidate ?? eligibleCandidates[0]
-
-    if (slot.category === 'elective-prereq' && candidate.reachCount === 0 && !candidate.directRequired) continue
-    assignments.set(slotKey, candidate.courseId)
-    usedCourseIds.add(candidate.courseId)
+function resolveSlotCandidate(
+  slot: PlanSlot,
+  projectedCourseIds: ReadonlySet<string>,
+  hasConcentration: boolean,
+  rankedPathCourses: RankedCourse[],
+  usedPathCourseIds: ReadonlySet<string>,
+): { courseId?: string; consumePathCourse: boolean } | undefined {
+  if (slot.type === 'course') {
+    const course = getCourse(slot.courseId)
+    if (!course) return undefined
+    if (!prerequisitesMet(course.prerequisites, projectedCourseIds)) return undefined
+    return { courseId: course.id, consumePathCourse: false }
   }
 
-  return assignments
+  if (slot.type === 'choice') {
+    return { consumePathCourse: false }
+  }
+
+  if (!hasConcentration || (slot.category !== 'elective-prereq' && slot.category !== 'elective')) {
+    return { consumePathCourse: false }
+  }
+
+  const courseId = pickGenericCourse(slot, projectedCourseIds, rankedPathCourses, usedPathCourseIds)
+  if (courseId) return { courseId, consumePathCourse: true }
+  return { consumePathCourse: false }
+}
+
+function pickGenericCourse(
+  slot: Extract<PlanSlot, { type: 'requirement' }>,
+  projectedCourseIds: ReadonlySet<string>,
+  rankedPathCourses: RankedCourse[],
+  usedPathCourseIds: ReadonlySet<string>,
+): string | undefined {
+  const eligibleCandidates = rankedPathCourses.filter(candidate =>
+    !usedPathCourseIds.has(candidate.courseId) &&
+    getCourse(candidate.courseId)?.units === slot.credits &&
+    prerequisitesMet(getCourse(candidate.courseId)?.prerequisites ?? [], projectedCourseIds))
+
+  if (eligibleCandidates.length === 0) return undefined
+
+  if (slot.category === 'elective-prereq') {
+    const preferredCandidate = eligibleCandidates.find(candidate => candidate.reachCount > 0 || candidate.directRequired)
+    return preferredCandidate?.courseId
+  }
+
+  return eligibleCandidates[0]?.courseId
+}
+
+function getCandidatePriority(
+  slot: PlanSlot,
+  courseId: string | undefined,
+  slotIndex: number,
+  rankedPathCourseById: ReadonlyMap<string, RankedCourse & { rank: number }>,
+  rankedGeneralCourseById: ReadonlyMap<string, RankedCourse & { rank: number }>,
+  directRequiredCourseIds: ReadonlySet<string>,
+  downstreamGraph: ReadonlyMap<string, ReadonlySet<string>>,
+): number {
+  const categoryTier = slot.type === 'course'
+    ? (slot.category === 'cst' || slot.category === 'math' ? 0 : 2)
+    : 1
+  const basePriority = categoryTier * 20 + slotIndex
+  if (!courseId) return basePriority
+  const rankedCourse = rankedPathCourseById.get(courseId) ?? rankedGeneralCourseById.get(courseId)
+  if (!rankedCourse) return basePriority
+
+  const pathBonus = 300 + rankedCourse.reachCount * 20 + rankedCourse.depth * 10 + rankedCourse.prerequisiteCount * 5 + (rankedCourse.directRequired || directRequiredCourseIds.has(courseId) ? 50 : 0) + (downstreamReachCount(courseId, downstreamGraph) > 0 ? 25 : 0) - rankedCourse.rank * 2
+  return basePriority - Math.max(pathBonus, 0)
 }
 
 function buildDownstreamGraph(courseIds: Iterable<string>): Map<string, Set<string>> {
@@ -212,6 +283,47 @@ function buildDownstreamGraph(courseIds: Iterable<string>): Map<string, Set<stri
 
   for (const courseId of courseIds) visit(courseId)
   return graph
+}
+
+function expandPrerequisiteClosure(courseIds: Iterable<string>, preferredCourseIds: ReadonlySet<string>): Set<string> {
+  const expanded = new Set<string>()
+  const stack = [...courseIds]
+
+  while (stack.length > 0) {
+    const courseId = stack.pop()
+    if (!courseId || expanded.has(courseId)) continue
+    expanded.add(courseId)
+    const course = getCourse(courseId)
+    if (!course) continue
+    for (const prerequisiteId of preferredPrerequisiteCourseIds(course.prerequisites, preferredCourseIds)) {
+      if (!expanded.has(prerequisiteId)) stack.push(prerequisiteId)
+    }
+  }
+
+  return expanded
+}
+
+function preferredPrerequisiteCourseIds(prerequisites: unknown[], preferredCourseIds: ReadonlySet<string>): string[] {
+  const ids: string[] = []
+  for (const prerequisite of prerequisites) ids.push(...preferredPrerequisiteCourseIdsForNode(prerequisite, preferredCourseIds))
+  return ids
+}
+
+function preferredPrerequisiteCourseIdsForNode(prerequisite: unknown, preferredCourseIds: ReadonlySet<string>): string[] {
+  if (!prerequisite || typeof prerequisite !== 'object') return []
+  const value = prerequisite as { courseId?: string; allOf?: unknown[]; anyOf?: unknown[] }
+  if (value.courseId) return [getCourse(value.courseId)?.id ?? value.courseId]
+  if (value.allOf) return value.allOf.flatMap(item => preferredPrerequisiteCourseIdsForNode(item, preferredCourseIds))
+  if (value.anyOf) {
+    const options = value.anyOf.map(option => {
+      const optionIds = prerequisiteCourseIds([option])
+      const overlapCount = [...optionIds].filter(courseId => preferredCourseIds.has(courseId)).length
+      return { option, overlapCount, size: optionIds.size }
+    })
+    options.sort((left, right) => right.overlapCount - left.overlapCount || right.size - left.size)
+    return preferredPrerequisiteCourseIdsForNode(options[0].option, preferredCourseIds)
+  }
+  return []
 }
 
 function downstreamReachCount(courseId: string, graph: ReadonlyMap<string, ReadonlySet<string>>, memo = new Map<string, number>(), active = new Set<string>()): number {
@@ -256,19 +368,4 @@ function downstreamDepth(courseId: string, graph: ReadonlyMap<string, ReadonlySe
   memo.set(courseId, depth)
   active.delete(courseId)
   return depth
-}
-
-function isCourseHighPriority(courseId: string, plannedCourseOrder: ReadonlyMap<string, number>, downstreamGraph: ReadonlyMap<string, ReadonlySet<string>>): boolean {
-  if (downstreamReachCount(courseId, downstreamGraph) > 0) return true
-  const order = plannedCourseOrder.get(courseId)
-  if (order === undefined) return false
-  for (const [plannedCourseId, plannedOrder] of plannedCourseOrder.entries()) {
-    if (plannedOrder <= order) continue
-    if (prerequisiteCourseIds(getCourse(plannedCourseId)?.prerequisites ?? []).has(courseId)) return true
-  }
-  return false
-}
-
-function isCourseReadyCandidate(candidate: SlotCandidate, completedCourseIds: ReadonlySet<string>): boolean {
-  return prerequisitesMet(getCourse(candidate.courseId)?.prerequisites ?? [], completedCourseIds)
 }

@@ -26,10 +26,9 @@ describe('planner', () => {
     expect(localStorage.getItem('courseguide-completed-v1')).toBe('[]')
   })
 
-  it('shows a high-priority course without marking it as stretch', () => {
+  it('shows the early GE requirement as a suggested course', () => {
     render(<App />)
-    const math170 = screen.getByRole('button', { name: /MATH 170/i })
-    expect(math170).toHaveClass('is-suggested', 'is-standard')
-    expect(math170).toHaveClass('is-high-priority')
+    const geArea1 = screen.getByRole('button', { name: /GE Area 1 Lower Division/i })
+    expect(geArea1).toHaveClass('is-suggested', 'is-standard')
   })
 })
