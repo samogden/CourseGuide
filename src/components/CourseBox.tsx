@@ -8,9 +8,10 @@ import type { PathSlotOptions, ScheduledSuggestion } from '../models/Scheduling'
 export function CourseCell({ slot, assignedCourseId, pathOptions, completed, suggestion, highPriority, onSelect }: { slot: PlanSlot; assignedCourseId?: string; pathOptions?: PathSlotOptions; completed: boolean; suggestion: ScheduledSuggestion | null; highPriority: boolean; onSelect: () => void }) {
   const courseId = suggestion?.courseId ?? assignedCourseId
   const label = courseId && slot.type !== 'course' ? getCourse(courseId)?.code ?? slotLabel(slot) : pathOptions?.label ?? slotLabel(slot)
+  const displayCategory = assignedCourseId ? 'concentration-required' : slot.category
   return (
     <button
-      className={`course-cell category-${slot.category}${completed ? ' is-completed' : ''}${suggestion ? ` is-suggested is-${suggestion.kind}` : ''}${assignedCourseId || pathOptions ? ' is-path-assigned' : ''}${highPriority ? ' is-high-priority' : ''}`}
+      className={`course-cell category-${displayCategory}${completed ? ' is-completed' : ''}${suggestion ? ` is-suggested is-${suggestion.kind}` : ''}${assignedCourseId || pathOptions ? ' is-path-assigned' : ''}${highPriority ? ' is-high-priority' : ''}`}
       style={{ gridColumn: `span ${slot.credits}` }}
       onClick={onSelect}
       type="button"

@@ -98,10 +98,10 @@ years:
             category: cst
           - type: requirement
             slotId: junior-fall-elective-prerequisite
-            label: Elective Pre-req
+            label: Elective
             credits: 4
-            category: elective-prereq
-            guidance: Choose an upper-division course needed before a later elective pathway course.
+            category: elective
+            guidance: Complete an upper-division elective or concentration requirement.
       - term: spring
         slots:
           - type: course
@@ -114,10 +114,10 @@ years:
             category: cst
           - type: requirement
             slotId: junior-spring-elective-prerequisite
-            label: Elective Pre-req
+            label: Elective
             credits: 4
-            category: elective-prereq
-            guidance: Choose an upper-division course needed before a later elective pathway course.
+            category: elective
+            guidance: Complete an upper-division elective or concentration requirement.
           - type: requirement
             slotId: junior-spring-elective
             label: Elective

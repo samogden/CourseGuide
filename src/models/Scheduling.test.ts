@@ -32,9 +32,9 @@ describe('suggested scheduling', () => {
                 {
                   type: 'requirement',
                   slotId: 'elective-prereq-slot',
-                  label: 'Elective Pre-req',
+                  label: 'Elective',
                   credits: 4,
-                  category: 'elective-prereq',
+                  category: 'elective',
                   guidance: 'Choose a prerequisite-bearing elective.',
                 },
               ],
@@ -65,6 +65,17 @@ describe('suggested scheduling', () => {
 
     expect(dataScience.assignments.get(progressKey(juniorFallElectivePrerequisite))).toBe('CST-383')
     expect(networkSecurity.assignments.get(progressKey(juniorFallElectivePrerequisite))).toBe('CST-311')
+  })
+
+  it('orders required concentration courses before the requirements they unlock', () => {
+    const schedule = buildSuggestedSchedule(curriculumPlan, new Set(), {
+      programId: 'bs-computer-science',
+      concentrationId: 'network-security',
+    })
+    const juniorSpring = curriculumPlan.years[2].terms[1].slots
+
+    expect(schedule.assignments.get(progressKey(juniorSpring[2]))).toBe('CST-315')
+    expect(schedule.assignments.get(progressKey(juniorSpring[3]))).toBe('CST-415')
   })
 
   it('keeps a completed path course in its assigned elective slot', () => {

@@ -4,7 +4,7 @@ import catalogText from '../assets/courses.yaml?raw'
 import planText from '../assets/scd-curriculum.yaml?raw'
 import programsText from '../assets/programs.yaml?raw'
 
-const categorySchema = z.enum(['cst', 'math', 'ge-lower', 'ge-upper', 'elective-prereq', 'elective'])
+const categorySchema = z.enum(['cst', 'math', 'ge-lower', 'ge-upper', 'elective'])
 
 const prerequisiteSchema: z.ZodType<unknown> = z.lazy(() => z.object({
   courseId: z.string().optional(),

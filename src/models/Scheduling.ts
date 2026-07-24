@@ -165,7 +165,7 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
 
   const highPriorityKeys = new Set(
     selectedEntries
-      .filter(entry => entry.slot.type === 'course' || entry.slot.category === 'elective-prereq')
+      .filter(entry => entry.slot.type === 'course')
       .slice(0, 4)
       .map(entry => entry.key),
   )
@@ -173,7 +173,7 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
     const suggestion = suggestions.get(progressKey(slot))
     if (suggestion?.kind === 'stretch') return false
     if (slot.type === 'course') return highPriorityKeys.has(progressKey(slot))
-    return slot.category === 'elective-prereq' && highPriorityKeys.has(progressKey(slot))
+    return false
   }
 
   return { credits, suggestions, assignments, pathOptions, isCourseReady, isHighPriority }
@@ -203,7 +203,7 @@ function buildPathAssignments(
           continue
         }
 
-        if (slot.type !== 'requirement' || (slot.category !== 'elective-prereq' && slot.category !== 'elective')) continue
+        if (slot.type !== 'requirement' || slot.category !== 'elective') continue
         const courseId = pickGenericCourse(slot, projectedCourseIds, requiredPathCourses, usedPathCourseIds)
         if (!courseId) {
           remainingSlots.push(slot)
@@ -291,7 +291,7 @@ function resolveSlotCandidate(
     return { consumePathCourse: false }
   }
 
-  if (!hasConcentration || (slot.category !== 'elective-prereq' && slot.category !== 'elective')) {
+  if (!hasConcentration || slot.category !== 'elective') {
     return { consumePathCourse: false }
   }
 
@@ -312,11 +312,6 @@ function pickGenericCourse(
     prerequisitesMet(getCourse(candidate.courseId)?.prerequisites ?? [], projectedCourseIds))
 
   if (eligibleCandidates.length === 0) return undefined
-
-  if (slot.category === 'elective-prereq') {
-    const preferredCandidate = eligibleCandidates.find(candidate => candidate.reachCount > 0 || candidate.directRequired)
-    return preferredCandidate?.courseId
-  }
 
   return eligibleCandidates[0]?.courseId
 }
