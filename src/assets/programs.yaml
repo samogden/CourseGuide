@@ -1,5 +1,5 @@
-schemaVersion: 1
-programs:
+schemaVersion: 2
+programs: &catalog_2026_programs
   bs-computer-science:
     title: B.S. Computer Science
     requirements:
@@ -157,3 +157,7 @@ programs:
               - CST-415
               - CST-438
               - CST-463
+catalogVersions:
+  "2026":
+    title: 2026 Catalog
+    programs: *catalog_2026_programs

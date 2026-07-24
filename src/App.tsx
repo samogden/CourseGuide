@@ -1,17 +1,18 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
 import './App.css'
 import { CourseCell, CourseModal } from './components/CourseBox'
-import { curriculumPlan, getCourse, prerequisitesMet, progressKey, programs, summarizePlanCredits, type AcademicTerm, type PlanSlot } from './models/Curriculum'
+import { catalogVersions, curriculumPlan, defaultCatalogVersion, getCourse, prerequisitesMet, progressKey, summarizePlanCredits, type AcademicTerm, type PlanSlot } from './models/Curriculum'
 import { buildRegistrationPlan, buildSuggestedSchedule } from './models/Scheduling'
 
 const progressStorageKey = 'courseguide-completed-v1'
 const concentrationStorageKey = 'courseguide-concentration-v1'
+const catalogVersionStorageKey = 'courseguide-catalog-version-v1'
 const targetCoursesStorageKey = 'courseguide-target-courses-v1'
 const activeProgramId = 'bs-computer-science'
 const RegistrationPlanner = lazy(() => import('./components/RegistrationPlanner').then(module => ({ default: module.RegistrationPlanner })))
 
-function targetCourseKey(concentrationId: string, slotKey: string): string {
-  return `${concentrationId}:${slotKey}`
+function targetCourseKey(catalogVersion: string, scope: string, slotKey: string): string {
+  return `${catalogVersion}/${scope}:${slotKey}`
 }
 
 function targetScopeForSlot(slot: PlanSlot, concentrationId: string | null): string | null {
@@ -36,6 +37,15 @@ function readConcentration(): string | null {
   }
 }
 
+function readCatalogVersion(): string {
+  try {
+    const value: unknown = JSON.parse(localStorage.getItem(catalogVersionStorageKey) ?? JSON.stringify(defaultCatalogVersion))
+    return typeof value === 'string' && catalogVersions[value] ? value : defaultCatalogVersion
+  } catch {
+    return defaultCatalogVersion
+  }
+}
+
 function readTargetCourses(): Map<string, string> {
   try {
     const value: unknown = JSON.parse(localStorage.getItem(targetCoursesStorageKey) ?? '{}')
@@ -50,6 +60,7 @@ function App() {
   const [selectedSlot, setSelectedSlot] = useState<PlanSlot | null>(null)
   const [completed, setCompleted] = useState<Set<string>>(() => readCompleted())
   const [selectedConcentration, setSelectedConcentration] = useState<string | null>(() => readConcentration())
+  const [selectedCatalogVersion, setSelectedCatalogVersion] = useState<string>(() => readCatalogVersion())
   const [targetCourses, setTargetCourses] = useState<Map<string, string>>(() => readTargetCourses())
   const [activeView, setActiveView] = useState<'roadmap' | 'registration'>('roadmap')
   const [registrationTerm, setRegistrationTerm] = useState<AcademicTerm>('fall')
@@ -61,6 +72,10 @@ function App() {
   useEffect(() => {
     localStorage.setItem(concentrationStorageKey, JSON.stringify(selectedConcentration))
   }, [selectedConcentration])
+
+  useEffect(() => {
+    localStorage.setItem(catalogVersionStorageKey, JSON.stringify(selectedCatalogVersion))
+  }, [selectedCatalogVersion])
 
   useEffect(() => {
     localStorage.setItem(targetCoursesStorageKey, JSON.stringify(Object.fromEntries(targetCourses)))
@@ -89,7 +104,7 @@ function App() {
     if (!targetScope) return
     setTargetCourses(current => {
       const next = new Map(current)
-      next.set(targetCourseKey(targetScope, progressKey(slot)), courseId)
+      next.set(targetCourseKey(selectedCatalogVersion, targetScope, progressKey(slot)), courseId)
       return next
     })
     setSelectedSlot(null)
@@ -100,27 +115,30 @@ function App() {
     if (!targetScope) return
     setTargetCourses(current => {
       const next = new Map(current)
-      next.delete(targetCourseKey(targetScope, progressKey(slot)))
+      next.delete(targetCourseKey(selectedCatalogVersion, targetScope, progressKey(slot)))
       return next
     })
     setSelectedSlot(null)
   }
 
-  const activeProgram = programs.programs[activeProgramId]
+  const activeCatalog = catalogVersions[selectedCatalogVersion] ?? catalogVersions[defaultCatalogVersion]
+  const activeProgram = activeCatalog.programs[activeProgramId]
   const planCredits = summarizePlanCredits(curriculumPlan)
   const activeConcentrationId = selectedConcentration && activeProgram.concentrations[selectedConcentration] ? selectedConcentration : null
   const activeTargetCourses = new Map(
     [...targetCourses]
-      .filter(([key]) => key.startsWith('general:') || (activeConcentrationId ? key.startsWith(`${activeConcentrationId}:`) : false))
+      .filter(([key]) => key.startsWith(`${selectedCatalogVersion}/general:`) || (activeConcentrationId ? key.startsWith(`${selectedCatalogVersion}/${activeConcentrationId}:`) : false))
       .map(([key, courseId]) => [key.slice(key.indexOf(':') + 1), courseId]),
   )
   const suggestedSchedule = buildSuggestedSchedule(curriculumPlan, completed, {
     programId: activeProgramId,
+    catalogVersion: selectedCatalogVersion,
     concentrationId: activeConcentrationId,
     targetCourses: activeTargetCourses,
   })
   const registrationPlan = buildRegistrationPlan(curriculumPlan, completed, {
     programId: activeProgramId,
+    catalogVersion: selectedCatalogVersion,
     concentrationId: activeConcentrationId,
     targetCourses: activeTargetCourses,
     currentTerm: registrationTerm,
@@ -150,6 +168,9 @@ function App() {
         <span>{planCredits.upperDivisionGeneralEducation} upper-division GE</span>
       </section>
       <section className="path-picker" aria-label="Program concentration">
+        <label className="catalog-picker">Catalog version
+          <select value={selectedCatalogVersion} onChange={event => setSelectedCatalogVersion(event.target.value)}>{Object.entries(catalogVersions).map(([catalogVersion, catalog]) => <option key={catalogVersion} value={catalogVersion}>{catalog.title}</option>)}</select>
+        </label>
         <span className="legend-title">Path</span>
         {Object.entries(activeProgram.concentrations).map(([concentrationId, concentration]) => (
           <button

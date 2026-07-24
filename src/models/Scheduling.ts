@@ -1,5 +1,6 @@
 import {
   concentrationRequirements,
+  defaultCatalogVersion,
   candidateCourseIds,
   directRequirementCourseIds,
   getCourse,
@@ -38,6 +39,7 @@ export interface SuggestedSchedule {
 }
 
 export interface ScheduleSelection {
+  catalogVersion?: string
   programId?: string
   concentrationId?: string | null
   targetCourses?: ReadonlyMap<string, string>
@@ -376,7 +378,7 @@ function pathOptionGroups(requirements: Requirement[]): PathSlotOptions[] {
 
 function resolvePathRequirements(selection?: ScheduleSelection): Requirement[] {
   if (!selection?.concentrationId) return []
-  return concentrationRequirements(selection.programId ?? defaultProgramId, selection.concentrationId)
+  return concentrationRequirements(selection.programId ?? defaultProgramId, selection.concentrationId, selection.catalogVersion ?? defaultCatalogVersion)
 }
 
 function buildRankedPathCourses(

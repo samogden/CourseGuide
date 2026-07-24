@@ -57,11 +57,19 @@ const requirementSchema = z.object({
 }).strict()
 
 const programsSchema = z.object({
-  schemaVersion: z.literal(1),
+  schemaVersion: z.literal(2),
   programs: z.record(z.string(), z.object({
     title: z.string(),
     requirements: z.array(requirementSchema),
     concentrations: z.record(z.string(), z.object({ title: z.string(), requirements: z.array(requirementSchema) }).strict()),
+  }).strict()),
+  catalogVersions: z.record(z.string(), z.object({
+    title: z.string(),
+    programs: z.record(z.string(), z.object({
+      title: z.string(),
+      requirements: z.array(requirementSchema),
+      concentrations: z.record(z.string(), z.object({ title: z.string(), requirements: z.array(requirementSchema) }).strict()),
+    }).strict()),
   }).strict()),
 }).strict()
 
@@ -70,9 +78,12 @@ export type AcademicTerm = 'fall' | 'spring'
 export type PlanSlot = z.infer<typeof planSlotSchema>
 export type CurriculumPlan = z.infer<typeof planSchema>
 export type Programs = z.infer<typeof programsSchema>
+export type CatalogVersion = Programs['catalogVersions'][string]
 export type Requirement = z.infer<typeof requirementSchema>
 export type Program = Programs['programs'][string]
 export type Concentration = Program['concentrations'][string]
+
+export const defaultCatalogVersion = '2026'
 
 export interface Course {
   id: string
@@ -104,6 +115,7 @@ export function canonicalCourseId(value: string): string {
 const parsedCatalog = z.object({ schemaVersion: z.literal(1), courses: z.record(z.string(), courseSchema) }).strict().parse(parse(catalogText))
 export const curriculumPlan: CurriculumPlan = planSchema.parse(parse(planText))
 export const programs: Programs = programsSchema.parse(parse(programsText))
+export const catalogVersions = programs.catalogVersions
 
 const catalogEntries: Course[] = Object.entries(parsedCatalog.courses).map(([id, course]) => {
   if (id !== canonicalCourseId(id)) throw new Error(`Course catalog ID must be canonical: ${id}`)
@@ -133,24 +145,28 @@ for (const courseId of programCourseIds) {
   if (!coursesById.has(courseId)) throw new Error(`Program requirement references unknown course: ${courseId}`)
 }
 
-export function getProgram(programId: string): Program | undefined {
-  return programs.programs[programId]
+export function getCatalogVersion(catalogVersion: string = defaultCatalogVersion): CatalogVersion | undefined {
+  return catalogVersions[catalogVersion]
 }
 
-export function getConcentration(programId: string, concentrationId: string | null | undefined): Concentration | undefined {
+export function getProgram(programId: string, catalogVersion: string = defaultCatalogVersion): Program | undefined {
+  return getCatalogVersion(catalogVersion)?.programs[programId]
+}
+
+export function getConcentration(programId: string, concentrationId: string | null | undefined, catalogVersion: string = defaultCatalogVersion): Concentration | undefined {
   if (!concentrationId) return undefined
-  return programs.programs[programId]?.concentrations[concentrationId]
+  return getProgram(programId, catalogVersion)?.concentrations[concentrationId]
 }
 
-export function activeProgramRequirements(programId: string, concentrationId: string | null | undefined): Requirement[] {
-  const program = getProgram(programId)
+export function activeProgramRequirements(programId: string, concentrationId: string | null | undefined, catalogVersion: string = defaultCatalogVersion): Requirement[] {
+  const program = getProgram(programId, catalogVersion)
   if (!program) return []
-  const concentration = getConcentration(programId, concentrationId)
+  const concentration = getConcentration(programId, concentrationId, catalogVersion)
   return concentration ? [...program.requirements, ...concentration.requirements] : [...program.requirements]
 }
 
-export function concentrationRequirements(programId: string, concentrationId: string | null | undefined): Requirement[] {
-  return getConcentration(programId, concentrationId)?.requirements ?? []
+export function concentrationRequirements(programId: string, concentrationId: string | null | undefined, catalogVersion: string = defaultCatalogVersion): Requirement[] {
+  return getConcentration(programId, concentrationId, catalogVersion)?.requirements ?? []
 }
 
 export function requirementCourseIds(requirement: Requirement): string[] {

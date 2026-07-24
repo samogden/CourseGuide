@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { canonicalCourseId, coursesById, curriculumPlan, getCourse, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, prerequisiteText, programs, slotLabel, summarizePlanCredits, type CurriculumPlan } from './Curriculum'
+import { canonicalCourseId, catalogVersions, coursesById, curriculumPlan, defaultCatalogVersion, getCourse, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, prerequisiteText, programs, slotLabel, summarizePlanCredits, type CurriculumPlan } from './Curriculum'
 
 describe('curriculum data', () => {
   it('normalizes alternate course code spacing', () => {
@@ -77,5 +77,11 @@ describe('curriculum data', () => {
     expect(softwareElectives?.courseIds).not.toContain('CST-363')
     expect(general.title).toBe('Computer Science Electives')
     expect(general.requirements[0].completion).toEqual({ kind: 'minimumCredits', credits: 24 })
+  })
+
+  it('exposes the official pathways through the 2026 catalog version', () => {
+    expect(defaultCatalogVersion).toBe('2026')
+    expect(catalogVersions['2026']?.title).toBe('2026 Catalog')
+    expect(catalogVersions['2026']?.programs['bs-computer-science'].concentrations['data-science']).toBeDefined()
   })
 })
