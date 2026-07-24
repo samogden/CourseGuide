@@ -197,22 +197,25 @@ function buildPathAssignments(
 
   for (const year of plan.years) {
     for (const term of year.terms) {
+      const courseIdsCompletedBeforeTerm = new Set(projectedCourseIds)
+      const courseIdsTakenThisTerm: string[] = []
       for (const slot of term.slots) {
         if (slot.type === 'course') {
-          projectedCourseIds.add(slot.courseId)
+          courseIdsTakenThisTerm.push(slot.courseId)
           continue
         }
 
         if (slot.type !== 'requirement' || slot.category !== 'elective') continue
-        const courseId = pickGenericCourse(slot, projectedCourseIds, requiredPathCourses, usedPathCourseIds)
+        const courseId = pickGenericCourse(slot, courseIdsCompletedBeforeTerm, requiredPathCourses, usedPathCourseIds)
         if (!courseId) {
           remainingSlots.push(slot)
           continue
         }
         assignments.set(progressKey(slot), courseId)
         usedPathCourseIds.add(courseId)
-        projectedCourseIds.add(courseId)
+        courseIdsTakenThisTerm.push(courseId)
       }
+      courseIdsTakenThisTerm.forEach(courseId => projectedCourseIds.add(courseId))
     }
   }
 

@@ -67,15 +67,17 @@ describe('suggested scheduling', () => {
     expect(networkSecurity.assignments.get(progressKey(juniorFallElectivePrerequisite))).toBe('CST-311')
   })
 
-  it('orders required concentration courses before the requirements they unlock', () => {
+  it('places a concentration prerequisite in an earlier term than the course it unlocks', () => {
     const schedule = buildSuggestedSchedule(curriculumPlan, new Set(), {
       programId: 'bs-computer-science',
       concentrationId: 'network-security',
     })
     const juniorSpring = curriculumPlan.years[2].terms[1].slots
+    const seniorFall = curriculumPlan.years[3].terms[0].slots
 
     expect(schedule.assignments.get(progressKey(juniorSpring[2]))).toBe('CST-315')
-    expect(schedule.assignments.get(progressKey(juniorSpring[3]))).toBe('CST-415')
+    expect(schedule.assignments.get(progressKey(juniorSpring[3]))).toBeUndefined()
+    expect(schedule.assignments.get(progressKey(seniorFall[0]))).toBe('CST-415')
   })
 
   it('keeps a completed path course in its assigned elective slot', () => {
