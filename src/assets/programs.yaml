@@ -138,7 +138,7 @@ programs: &catalog_2026_programs
               - CST-383
               - CST-438
       general:
-        title: Computer Science Electives
+        title: General
         requirements:
           - id: upper_division_electives
             completion:

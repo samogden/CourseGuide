@@ -75,7 +75,7 @@ describe('curriculum data', () => {
     const general = programs.programs['bs-computer-science'].concentrations.general
 
     expect(softwareElectives?.courseIds).not.toContain('CST-363')
-    expect(general.title).toBe('Computer Science Electives')
+    expect(general.title).toBe('General')
     expect(general.requirements[0].completion).toEqual({ kind: 'minimumCredits', credits: 24 })
   })
 

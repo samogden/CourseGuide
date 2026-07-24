@@ -167,10 +167,16 @@ function App() {
         <span>{planCredits.lowerDivisionGeneralEducation} lower-division GE</span>
         <span>{planCredits.upperDivisionGeneralEducation} upper-division GE</span>
       </section>
-      <section className="path-picker" aria-label="Program concentration">
+      <section className="catalog-controls" aria-label="Catalog and planner view">
         <label className="catalog-picker">Catalog version
           <select value={selectedCatalogVersion} onChange={event => setSelectedCatalogVersion(event.target.value)}>{Object.entries(catalogVersions).map(([catalogVersion, catalog]) => <option key={catalogVersion} value={catalogVersion}>{catalog.title}</option>)}</select>
         </label>
+        <nav className="view-picker" aria-label="Planner view">
+          <button className={`path-button${activeView === 'registration' ? ' is-selected' : ''}`} type="button" onClick={() => setActiveView('registration')}>Registration planner</button>
+          <button className={`path-button${activeView === 'roadmap' ? ' is-selected' : ''}`} type="button" onClick={() => setActiveView('roadmap')}>Roadmap</button>
+        </nav>
+      </section>
+      <section className="path-picker" aria-label="Program concentration">
         <span className="legend-title">Path</span>
         {Object.entries(activeProgram.concentrations).map(([concentrationId, concentration]) => (
           <button
@@ -183,10 +189,6 @@ function App() {
           </button>
         ))}
       </section>
-      <nav className="view-picker" aria-label="Planner view">
-        <button className={`path-button${activeView === 'registration' ? ' is-selected' : ''}`} type="button" onClick={() => setActiveView('registration')}>Registration planner</button>
-        <button className={`path-button${activeView === 'roadmap' ? ' is-selected' : ''}`} type="button" onClick={() => setActiveView('roadmap')}>Roadmap</button>
-      </nav>
       {activeView === 'registration' && <Suspense fallback={<p className="planner-loading">Loading registration planner…</p>}><RegistrationPlanner plan={registrationPlan} currentTerm={registrationTerm} onCurrentTermChange={setRegistrationTerm} onCourseSelect={setSelectedSlot} /></Suspense>}
       {activeView === 'roadmap' && suggestedSchedule.suggestions.size > 0 && <section className="next-term" aria-live="polite"><strong>Suggested schedule:</strong> {suggestedSchedule.credits} credits. Courses are selected by year, term, then prerequisite priority. Later-plan courses are included only when they are available now and their prerequisites are already complete. Green courses unlock later planned courses; red courses are optional stretch additions that bring the total to 16–18 credits.{activeConcentrationId && <> The {activeProgram.concentrations[activeConcentrationId].title} path fills the elective slots shown later in the plan.</>}</section>}
       <section className="legend" aria-label="Course category legend">
