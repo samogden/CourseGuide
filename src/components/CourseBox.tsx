@@ -5,13 +5,13 @@ import './CourseBox.css'
 
 import type { PathSlotOptions, ScheduledSuggestion } from '../models/Scheduling'
 
-export function CourseCell({ slot, assignedCourseId, pathOptions, selectedTarget, completed, suggestion, highPriority, onSelect }: { slot: PlanSlot; assignedCourseId?: string; pathOptions?: PathSlotOptions; selectedTarget: boolean; completed: boolean; suggestion: ScheduledSuggestion | null; highPriority: boolean; onSelect: () => void }) {
+export function CourseCell({ slot, assignedCourseId, courseOptions, selectedTarget, completed, suggestion, highPriority, onSelect }: { slot: PlanSlot; assignedCourseId?: string; courseOptions?: PathSlotOptions; selectedTarget: boolean; completed: boolean; suggestion: ScheduledSuggestion | null; highPriority: boolean; onSelect: () => void }) {
   const courseId = suggestion?.courseId ?? assignedCourseId
-  const label = courseId && slot.type !== 'course' ? getCourse(courseId)?.code ?? slotLabel(slot) : pathOptions?.label ?? slotLabel(slot)
+  const label = courseId && slot.type !== 'course' ? getCourse(courseId)?.code ?? slotLabel(slot) : courseOptions?.label ?? slotLabel(slot)
   const displayCategory = assignedCourseId ? 'concentration-required' : slot.category
   return (
     <button
-      className={`course-cell category-${displayCategory}${completed ? ' is-completed' : ''}${suggestion ? ` is-suggested is-${suggestion.kind}` : ''}${assignedCourseId || pathOptions ? ' is-path-assigned' : ''}${highPriority ? ' is-high-priority' : ''}`}
+      className={`course-cell category-${displayCategory}${completed ? ' is-completed' : ''}${suggestion ? ` is-suggested is-${suggestion.kind}` : ''}${assignedCourseId || courseOptions ? ' is-path-assigned' : ''}${highPriority ? ' is-high-priority' : ''}`}
       style={{ gridColumn: `span ${slot.credits}` }}
       onClick={onSelect}
       type="button"
@@ -19,17 +19,17 @@ export function CourseCell({ slot, assignedCourseId, pathOptions, selectedTarget
       {highPriority && <span className="course-status priority-status">High priority</span>}
       {suggestion && <span className="course-status">{suggestion.kind === 'stretch' ? '16+ credits' : 'Suggested next'}</span>}
       {assignedCourseId && !suggestion && <span className="course-status path-status">{selectedTarget ? 'Selected course' : 'Path course'}</span>}
-      {pathOptions && !assignedCourseId && !suggestion && <span className="course-status path-status">Choose from path</span>}
+      {courseOptions && !assignedCourseId && !suggestion && <span className="course-status path-status">Choose a course</span>}
       <span>{label}</span>
       <span className="course-cell-credits">{slot.credits} credits</span>
     </button>
   )
 }
 
-export function CourseModal({ slot, resolvedCourseId, pathOptions, selectedTarget, completed, prerequisitesMet, onClose, onCompletedChange, onTargetCourseSelect, onTargetCourseClear }: {
+export function CourseModal({ slot, resolvedCourseId, courseOptions, selectedTarget, completed, prerequisitesMet, onClose, onCompletedChange, onTargetCourseSelect, onTargetCourseClear }: {
   slot: PlanSlot
   resolvedCourseId?: string | null
-  pathOptions?: PathSlotOptions
+  courseOptions?: PathSlotOptions
   selectedTarget: boolean
   completed: boolean
   prerequisitesMet?: boolean
@@ -55,7 +55,7 @@ export function CourseModal({ slot, resolvedCourseId, pathOptions, selectedTarge
       <section className="course-modal" role="dialog" aria-modal="true" aria-labelledby="course-modal-title" onMouseDown={event => event.stopPropagation()}>
         <button ref={closeButton} className="modal-close" onClick={onClose} type="button" aria-label="Close course details">×</button>
         <p className="modal-kind">{slot.type === 'course' ? 'Course' : slot.type === 'choice' ? 'Choice requirement' : 'Requirement'}</p>
-        <h2 id="course-modal-title">{course?.code ?? pathOptions?.label ?? slotLabel(slot)}</h2>
+        <h2 id="course-modal-title">{course?.code ?? courseOptions?.label ?? slotLabel(slot)}</h2>
         <p><strong>Credits:</strong> {slot.credits}</p>
         {slot.type !== 'course' && <p className="modal-slot-label"><strong>Requirement:</strong> {slotLabel(slot)}</p>}
         {course ? (
@@ -67,11 +67,11 @@ export function CourseModal({ slot, resolvedCourseId, pathOptions, selectedTarge
             {course.prerequisiteNotes.length > 0 && <ul>{course.prerequisiteNotes.map(note => <li key={note}>{note}</li>)}</ul>}
             {course.placeholder && <p className="placeholder-note">Catalog details for this course are still being added.</p>}
           </>
-        ) : <p>{pathOptions ? 'Choose one of the following courses for this concentration requirement.' : slot.type === 'course' ? 'Course details are coming soon.' : slot.guidance}</p>}
-        {pathOptions && <>
+        ) : <p>{courseOptions ? 'Choose one of the available courses for this requirement.' : slot.type === 'course' ? 'Course details are coming soon.' : slot.guidance}</p>}
+        {courseOptions && <>
           {course && <h3>Choose a different course</h3>}
           {!course && <h3>Course options</h3>}
-          <ul className="path-course-options">{pathOptions.courseIds.map(courseId => {
+          <ul className="path-course-options">{courseOptions.courseIds.map(courseId => {
             const option = getCourse(courseId)
             const isSelected = courseId === resolvedCourseId
             return <li key={courseId}><strong>{option?.code ?? courseId}</strong>{option ? ` — ${option.name}` : ''} ({option?.units ?? slot.credits} credits) {isSelected ? <span className="selected-option">Selected</span> : <button className="option-control" type="button" onClick={() => onTargetCourseSelect(courseId)}>Select</button>}</li>
@@ -79,7 +79,7 @@ export function CourseModal({ slot, resolvedCourseId, pathOptions, selectedTarge
           {selectedTarget && <button className="clear-choice-control" type="button" onClick={onTargetCourseClear}>Clear selected course</button>}
         </>}
         {slot.type === 'choice' && <p><strong>Alternatives:</strong> {slotLabel(slot)}</p>}
-        {(!pathOptions || resolvedCourseId) && <button className="taken-control" type="button" onClick={() => {
+        {(!courseOptions || resolvedCourseId) && <button className="taken-control" type="button" onClick={() => {
           onCompletedChange(!completed)
           onClose()
         }}>

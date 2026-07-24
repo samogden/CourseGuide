@@ -31,8 +31,7 @@ export interface SuggestedSchedule {
   credits: number
   suggestions: ReadonlyMap<string, ScheduledSuggestion>
   assignments: ReadonlyMap<string, string>
-  pathOptions: ReadonlyMap<string, PathSlotOptions>
-  choiceOptions: ReadonlyMap<string, PathSlotOptions>
+  courseOptions: ReadonlyMap<string, PathSlotOptions>
   selectedTargetKeys: ReadonlySet<string>
   isCourseReady: (slot: PlanSlot) => boolean
   isHighPriority: (slot: PlanSlot) => boolean
@@ -123,7 +122,7 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
   const rankedGeneralCourses = buildRankedPathCourses(explicitPlannedCourseIds, new Set<string>(), completedCourseIds, new Set<string>(), generalDownstreamGraph)
   const rankedPathCourseById = new Map(rankedPathCourses.map((course, index) => [course.courseId, { ...course, rank: index }]))
   const rankedGeneralCourseById = new Map(rankedGeneralCourses.map((course, index) => [course.courseId, { ...course, rank: index }]))
-  const { assignments, pathOptions, choiceOptions, selectedTargetKeys } = buildPathAssignments(
+  const { assignments, courseOptions, selectedTargetKeys } = buildPathAssignments(
     plan,
     completedCourseIds,
     pathRequirements,
@@ -211,7 +210,7 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
     return false
   }
 
-  return { credits, suggestions, assignments, pathOptions, choiceOptions, selectedTargetKeys, isCourseReady, isHighPriority }
+  return { credits, suggestions, assignments, courseOptions, selectedTargetKeys, isCourseReady, isHighPriority }
 }
 
 export function buildRegistrationPlan(plan: CurriculumPlan, completed: ReadonlySet<string>, selection?: ScheduleSelection): RegistrationPlan {
@@ -278,10 +277,9 @@ function buildPathAssignments(
   rankedPathCourses: RankedCourse[],
   directRequiredCourseIds: ReadonlySet<string>,
   targetCourses?: ReadonlyMap<string, string>,
-): { assignments: Map<string, string>; pathOptions: Map<string, PathSlotOptions>; choiceOptions: Map<string, PathSlotOptions>; selectedTargetKeys: Set<string> } {
+): { assignments: Map<string, string>; courseOptions: Map<string, PathSlotOptions>; selectedTargetKeys: Set<string> } {
   const assignments = new Map<string, string>()
-  const pathOptions = new Map<string, PathSlotOptions>()
-  const choiceOptions = buildChoiceOptions(plan)
+  const courseOptions = buildChoiceOptions(plan)
   const selectedTargetKeys = new Set<string>()
 
   if (pathRequirements.length > 0) {
@@ -318,22 +316,21 @@ function buildPathAssignments(
     for (const [index, slot] of remainingSlots.entries()) {
       const optionGroup = optionGroups[index]
       if (!optionGroup) break
-      pathOptions.set(progressKey(slot), optionGroup)
+      courseOptions.set(progressKey(slot), optionGroup)
     }
   }
 
   const unavailableCourseIds = new Set(assignments.values())
   for (const [slotKey, courseId] of targetCourses ?? []) {
-    const options = pathOptions.get(slotKey) ?? choiceOptions.get(slotKey)
+    const options = courseOptions.get(slotKey)
     if (!options || !options.courseIds.includes(courseId) || unavailableCourseIds.has(courseId)) continue
     assignments.set(slotKey, courseId)
     selectedTargetKeys.add(slotKey)
     unavailableCourseIds.add(courseId)
   }
-  filterUnavailableOptions(pathOptions, assignments, unavailableCourseIds)
-  filterUnavailableOptions(choiceOptions, assignments, unavailableCourseIds)
+  filterUnavailableOptions(courseOptions, assignments, unavailableCourseIds)
 
-  return { assignments, pathOptions, choiceOptions, selectedTargetKeys }
+  return { assignments, courseOptions, selectedTargetKeys }
 }
 
 function buildChoiceOptions(plan: CurriculumPlan): Map<string, PathSlotOptions> {

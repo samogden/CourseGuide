@@ -100,5 +100,7 @@ describe('planner', () => {
 
     expect(await screen.findByLabelText('Registration planner')).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: /classes to sign up for/i })).toBeInTheDocument()
+    fireEvent.click(screen.getByLabelText('Open CST 231'))
+    expect(screen.getByRole('dialog')).toHaveTextContent('Problem Solving/Programming')
   })
 })

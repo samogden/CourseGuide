@@ -14,6 +14,10 @@ function targetCourseKey(concentrationId: string, slotKey: string): string {
   return `${concentrationId}:${slotKey}`
 }
 
+function targetScopeForSlot(slot: PlanSlot, concentrationId: string | null): string | null {
+  return slot.type === 'choice' ? 'general' : concentrationId
+}
+
 function readCompleted(): Set<string> {
   try {
     const value: unknown = JSON.parse(localStorage.getItem(progressStorageKey) ?? '[]')
@@ -81,7 +85,7 @@ function App() {
   }
 
   const selectTargetCourse = (slot: PlanSlot, courseId: string) => {
-    const targetScope = slot.type === 'choice' ? 'general' : activeConcentrationId
+    const targetScope = targetScopeForSlot(slot, activeConcentrationId)
     if (!targetScope) return
     setTargetCourses(current => {
       const next = new Map(current)
@@ -92,7 +96,7 @@ function App() {
   }
 
   const clearTargetCourse = (slot: PlanSlot) => {
-    const targetScope = slot.type === 'choice' ? 'general' : activeConcentrationId
+    const targetScope = targetScopeForSlot(slot, activeConcentrationId)
     if (!targetScope) return
     setTargetCourses(current => {
       const next = new Map(current)
@@ -126,7 +130,7 @@ function App() {
     .map(key => key.slice('course:'.length)))
   const selectedSuggestion = selectedSlot ? suggestedSchedule.suggestions.get(progressKey(selectedSlot)) ?? null : null
   const selectedAssignedCourseId = selectedSlot ? suggestedSchedule.assignments.get(progressKey(selectedSlot)) : undefined
-  const selectedPathOptions = selectedSlot ? suggestedSchedule.pathOptions.get(progressKey(selectedSlot)) ?? suggestedSchedule.choiceOptions.get(progressKey(selectedSlot)) : undefined
+  const selectedCourseOptions = selectedSlot ? suggestedSchedule.courseOptions.get(progressKey(selectedSlot)) : undefined
   const resolvedCourseId = selectedSuggestion?.courseId ?? selectedAssignedCourseId ?? (selectedSlot?.type === 'course' ? selectedSlot.courseId : null)
   const selectedPrerequisitesMet = resolvedCourseId ? prerequisitesMet(getCourse(resolvedCourseId)?.prerequisites ?? [], completedCourseIds) : selectedSlot ? suggestedSchedule.isCourseReady(selectedSlot) : undefined
 
@@ -185,10 +189,10 @@ function App() {
                   <div className="credit-grid" role="cell">
                     {term.slots.map(slot => {
                       const assignedCourseId = suggestedSchedule.assignments.get(progressKey(slot))
-                      const pathOptions = suggestedSchedule.pathOptions.get(progressKey(slot)) ?? suggestedSchedule.choiceOptions.get(progressKey(slot))
+                      const courseOptions = suggestedSchedule.courseOptions.get(progressKey(slot))
                       const isCompleted = completed.has(assignedCourseId ? `course:${assignedCourseId}` : progressKey(slot))
                       const suggestion = suggestedSchedule.suggestions.get(progressKey(slot)) ?? null
-                      return <CourseCell key={progressKey(slot)} slot={slot} assignedCourseId={assignedCourseId} pathOptions={pathOptions} selectedTarget={suggestedSchedule.selectedTargetKeys.has(progressKey(slot))} completed={isCompleted} suggestion={suggestion} highPriority={suggestedSchedule.isHighPriority(slot) && !isCompleted} onSelect={() => setSelectedSlot(slot)} />
+                      return <CourseCell key={progressKey(slot)} slot={slot} assignedCourseId={assignedCourseId} courseOptions={courseOptions} selectedTarget={suggestedSchedule.selectedTargetKeys.has(progressKey(slot))} completed={isCompleted} suggestion={suggestion} highPriority={suggestedSchedule.isHighPriority(slot) && !isCompleted} onSelect={() => setSelectedSlot(slot)} />
                     })}
                   </div>
                 </div>
@@ -198,7 +202,7 @@ function App() {
         </div>
       </div>
       </>}
-      {selectedSlot && <CourseModal slot={selectedSlot} resolvedCourseId={resolvedCourseId} pathOptions={selectedPathOptions} selectedTarget={suggestedSchedule.selectedTargetKeys.has(progressKey(selectedSlot))} completed={completed.has(resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(selectedSlot))} prerequisitesMet={selectedPrerequisitesMet} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => updateCompletion(selectedSlot, isCompleted, resolvedCourseId)} onTargetCourseSelect={courseId => selectTargetCourse(selectedSlot, courseId)} onTargetCourseClear={() => clearTargetCourse(selectedSlot)} />}
+      {selectedSlot && <CourseModal slot={selectedSlot} resolvedCourseId={resolvedCourseId} courseOptions={selectedCourseOptions} selectedTarget={suggestedSchedule.selectedTargetKeys.has(progressKey(selectedSlot))} completed={completed.has(resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(selectedSlot))} prerequisitesMet={selectedPrerequisitesMet} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => updateCompletion(selectedSlot, isCompleted, resolvedCourseId)} onTargetCourseSelect={courseId => selectTargetCourse(selectedSlot, courseId)} onTargetCourseClear={() => clearTargetCourse(selectedSlot)} />}
     </main>
   )
 }

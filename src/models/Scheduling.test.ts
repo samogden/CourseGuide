@@ -115,7 +115,7 @@ describe('suggested scheduling', () => {
     const seniorFallElective = curriculumPlan.years[3].terms[0].slots[0]
 
     expect(schedule.assignments.get(progressKey(seniorFallElective))).toBe('CST-463')
-    expect(schedule.pathOptions.get(progressKey(juniorSpringElective))).toEqual({
+    expect(schedule.courseOptions.get(progressKey(juniorSpringElective))).toEqual({
       label: 'Concentration elective option',
       courseIds: ['CST-205', 'CST-311', 'CST-315', 'CST-325', 'CST-326', 'CST-336', 'CST-380', 'CST-438'],
     })
@@ -132,7 +132,7 @@ describe('suggested scheduling', () => {
 
     expect(schedule.assignments.get(progressKey(juniorSpringElective))).toBe('CST-205')
     expect(schedule.selectedTargetKeys.has(progressKey(juniorSpringElective))).toBe(true)
-    expect(schedule.pathOptions.get(progressKey(seniorFallElective))?.courseIds).not.toContain('CST-205')
+    expect(schedule.courseOptions.get(progressKey(seniorFallElective))?.courseIds).not.toContain('CST-205')
   })
 
   it('removes a selected course choice from the matching course-choice slot', () => {
@@ -143,7 +143,7 @@ describe('suggested scheduling', () => {
     })
 
     expect(schedule.assignments.get(progressKey(juniorFallChoice))).toBe('CST-334')
-    expect(schedule.choiceOptions.get(progressKey(juniorSpringChoice))?.courseIds).toEqual(['CST-370'])
+    expect(schedule.courseOptions.get(progressKey(juniorSpringChoice))?.courseIds).toEqual(['CST-370'])
   })
 
   it('connects a registration course to its directly unlocked future course', () => {

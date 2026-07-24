@@ -19,6 +19,7 @@ export function RegistrationPlanner({ plan, currentTerm, onCurrentTermChange, on
   })
   const sourceNodes: Node[] = orderedCourses.map((course, index) => ({
     id: `source:${course.courseId ?? course.key}`,
+    ariaLabel: `Open ${course.label}`,
     position: { x: index * 190, y: 0 },
     data: { label: `${course.label}\n${course.credits} credits` },
     style: {
@@ -41,6 +42,7 @@ export function RegistrationPlanner({ plan, currentTerm, onCurrentTermChange, on
     const course = getCourse(courseId)
     return {
       id: `future:${courseId}`,
+      ariaLabel: `Open ${course?.code ?? courseId}`,
       position: { x: index * 190, y: 170 },
       data: { label: `${course?.code ?? courseId}\n${course?.units ?? 0} credits` },
       style: {
