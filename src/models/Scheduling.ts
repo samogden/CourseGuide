@@ -53,6 +53,7 @@ export interface RegistrationCourse {
   label: string
   credits: number
   kind: SuggestionKind
+  priority: 'high' | 'regular' | 'stretch'
   downstreamCount: number
 }
 
@@ -232,6 +233,7 @@ export function buildRegistrationPlan(plan: CurriculumPlan, completed: ReadonlyS
       label: courseId ? getCourse(courseId)?.code ?? slotLabel(slot) : slotLabel(slot),
       credits: slot.credits,
       kind: suggestion.kind,
+      priority: (suggestion.kind === 'stretch' ? 'stretch' : schedule.isHighPriority(slot) ? 'high' : 'regular') as RegistrationCourse['priority'],
       downstreamCount: 0,
     }]
   })

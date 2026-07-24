@@ -23,8 +23,8 @@ export function RegistrationPlanner({ plan, currentTerm, onCurrentTermChange, on
     position: { x: index * 190, y: 0 },
     data: { label: `${course.label}\n${course.credits} credits` },
     style: {
-      background: course.kind === 'stretch' ? '#fee2e2' : '#dcfce7',
-      border: `2px solid ${course.kind === 'stretch' ? '#dc2626' : '#16a34a'}`,
+      background: course.priority === 'stretch' ? '#fee2e2' : course.priority === 'high' ? '#dcfce7' : '#dbeafe',
+      border: `2px solid ${course.priority === 'stretch' ? '#dc2626' : course.priority === 'high' ? '#16a34a' : '#2563eb'}`,
       borderRadius: '0.5rem',
       fontWeight: 700,
       textAlign: 'center',
@@ -81,19 +81,22 @@ export function RegistrationPlanner({ plan, currentTerm, onCurrentTermChange, on
           </select>
         </label>
       </div>
-      {plan.edges.length > 0 ? <div className="dependency-graph" aria-label="Courses unlocked by the current plan">
-        <ReactFlow nodes={[...sourceNodes, ...futureNodes]} edges={edges} fitView nodesDraggable={false} nodesConnectable={false} elementsSelectable={false} onNodeClick={(_, node) => {
-          const sourceCourse = sourceCourseByNodeId.get(node.id)
-          if (sourceCourse) onCourseSelect(sourceCourse.slot)
-          else {
-            const futureSlot = futureSlotByNodeId.get(node.id)
-            if (futureSlot) onCourseSelect(futureSlot)
-          }
-        }} proOptions={{ hideAttribution: true }}>
-          <Background />
-          <Controls showInteractive={false} />
-        </ReactFlow>
-      </div> : <p className="dependency-empty">No direct upcoming prerequisite connections are available yet.</p>}
+      {plan.courses.length > 0 ? <>
+        <div className="dependency-graph" aria-label="Courses in the current registration plan">
+          <ReactFlow nodes={[...sourceNodes, ...futureNodes]} edges={edges} fitView nodesDraggable={false} nodesConnectable={false} elementsSelectable={false} onNodeClick={(_, node) => {
+            const sourceCourse = sourceCourseByNodeId.get(node.id)
+            if (sourceCourse) onCourseSelect(sourceCourse.slot)
+            else {
+              const futureSlot = futureSlotByNodeId.get(node.id)
+              if (futureSlot) onCourseSelect(futureSlot)
+            }
+          }} proOptions={{ hideAttribution: true }}>
+            <Background />
+            <Controls showInteractive={false} />
+          </ReactFlow>
+        </div>
+        {plan.edges.length === 0 && <p className="dependency-empty">These classes are available to register for now; none directly unlock a remaining concrete roadmap course.</p>}
+      </> : <p className="dependency-empty">No eligible classes are available for the selected term yet.</p>}
       <section className="upcoming-courses" aria-label="Upcoming courses">
         <h3>Upcoming courses</h3>
         <p>Other roadmap classes to keep in view while planning ahead.</p>
