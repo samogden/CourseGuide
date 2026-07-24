@@ -52,6 +52,7 @@ export interface RegistrationCourse {
   label: string
   credits: number
   kind: SuggestionKind
+  downstreamCount: number
 }
 
 export interface RegistrationEdge {
@@ -64,6 +65,15 @@ export interface RegistrationPlan {
   credits: number
   courses: RegistrationCourse[]
   edges: RegistrationEdge[]
+  upcomingCourses: RegistrationFutureCourse[]
+}
+
+export interface RegistrationFutureCourse {
+  key: string
+  label: string
+  credits: number
+  prerequisiteCount: number
+  isAvailableNow: boolean
 }
 
 interface RankedCourse {
@@ -221,6 +231,7 @@ export function buildRegistrationPlan(plan: CurriculumPlan, completed: ReadonlyS
       label: courseId ? getCourse(courseId)?.code ?? slotLabel(slot) : slotLabel(slot),
       credits: slot.credits,
       kind: suggestion.kind,
+      downstreamCount: 0,
     }]
   })
   const registrationCourseIds = new Set(courses.flatMap(course => course.courseId ? [course.courseId] : []))
@@ -238,7 +249,26 @@ export function buildRegistrationPlan(plan: CurriculumPlan, completed: ReadonlyS
     }
   }
 
-  return { credits: schedule.credits, courses, edges }
+  const downstreamCounts = new Map<string, number>()
+  for (const edge of edges) downstreamCounts.set(edge.sourceCourseId, (downstreamCounts.get(edge.sourceCourseId) ?? 0) + 1)
+  for (const course of courses) course.downstreamCount = course.courseId ? downstreamCounts.get(course.courseId) ?? 0 : 0
+  const upcomingCourses = slots.flatMap(slot => {
+    const key = progressKey(slot)
+    if (completed.has(key) || schedule.suggestions.has(key)) return []
+    const courseId = schedule.assignments.get(key) ?? (slot.type === 'course' ? slot.courseId : undefined)
+    return [{
+      key,
+      label: courseId ? getCourse(courseId)?.code ?? slotLabel(slot) : slotLabel(slot),
+      credits: slot.credits,
+      prerequisiteCount: prerequisiteCount(getCourse(courseId ?? '')?.prerequisites ?? []),
+      isAvailableNow: !courseId || (
+        prerequisitesMet(getCourse(courseId)?.prerequisites ?? [], completedCourseIds) &&
+        isCourseOffered(courseId, selection?.currentTerm ?? 'fall')
+      ),
+    }]
+  })
+
+  return { credits: schedule.credits, courses, edges, upcomingCourses }
 }
 
 function buildPathAssignments(
