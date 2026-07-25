@@ -61,6 +61,14 @@ describe('planner', () => {
     expect(screen.queryByRole('button', { name: /reset path/i })).not.toBeInTheDocument()
   })
 
+  it('visually identifies courses offered in just one term', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: 'Data Science' }))
+
+    expect(screen.getByRole('button', { name: /CST 463/i })).toHaveClass('is-limited-offering')
+    expect(screen.getByText('Limited-term offering')).toBeInTheDocument()
+  })
+
   it('selects a target course and removes it from other elective choices', () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: 'Data Science' }))

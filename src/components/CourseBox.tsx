@@ -6,16 +6,18 @@ import './CourseBox.css'
 import type { PathSlotOptions, ScheduledSuggestion } from '../models/Scheduling'
 
 export function CourseCell({ slot, assignedCourseId, courseOptions, selectedTarget, completed, suggestion, highPriority, onSelect }: { slot: PlanSlot; assignedCourseId?: string; courseOptions?: PathSlotOptions; selectedTarget: boolean; completed: boolean; suggestion: ScheduledSuggestion | null; highPriority: boolean; onSelect: () => void }) {
-  const courseId = suggestion?.courseId ?? assignedCourseId
+  const courseId = suggestion?.courseId ?? assignedCourseId ?? (slot.type === 'course' ? slot.courseId : undefined)
   const label = courseId && slot.type !== 'course' ? getCourse(courseId)?.code ?? slotLabel(slot) : courseOptions?.label ?? slotLabel(slot)
   const displayCategory = assignedCourseId ? 'concentration-required' : slot.category
+  const offeredTerms = courseId ? getCourse(courseId)?.offeredTerms : undefined
+  const offeringClass = !completed && offeredTerms?.length === 1 ? ' is-limited-offering' : ''
   const accessibleLabel = slot.type === 'choice' && courseOptions
     ? `${courseOptions.label}: ${slotLabel(slot)}`
     : undefined
   return (
     <button
       aria-label={accessibleLabel}
-      className={`course-cell category-${displayCategory}${completed ? ' is-completed' : ''}${suggestion ? ` is-suggested is-${suggestion.kind}` : ''}${assignedCourseId || courseOptions ? ' is-path-assigned' : ''}${highPriority ? ' is-high-priority' : ''}`}
+      className={`course-cell category-${displayCategory}${completed ? ' is-completed' : ''}${suggestion ? ` is-suggested is-${suggestion.kind}` : ''}${assignedCourseId || courseOptions ? ' is-path-assigned' : ''}${highPriority ? ' is-high-priority' : ''}${offeringClass}`}
       style={{ gridColumn: `span ${slot.credits}` }}
       onClick={onSelect}
       type="button"

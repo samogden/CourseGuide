@@ -22,6 +22,7 @@
 .course-cell.is-completed > span { position: relative; z-index: 1; }
 .course-cell.is-suggested { box-shadow: inset 0 0 0 3px #2563eb; }.course-cell.is-stretch { box-shadow: inset 0 0 0 3px #dc2626; }
 .course-cell.is-high-priority { box-shadow: inset 0 0 0 3px #16a34a; }.course-cell.is-high-priority.is-stretch { box-shadow: inset 0 0 0 3px #dc2626, inset 0 0 0 6px #16a34a; }
+.course-cell.is-limited-offering { background-image: repeating-linear-gradient(135deg, rgba(71, 85, 105, 0.22) 0 5px, transparent 5px 10px); }
 .course-status { background: rgba(255, 255, 255, 0.78); border-radius: 999px; font-size: 0.66rem; font-weight: 800; margin-bottom: 0.2rem; padding: 0.08rem 0.35rem; }.course-cell.is-blocked .course-status { background: #7f1d1d; color: #fff; }
 .course-cell.is-stretch .course-status { background: #991b1b; color: #fff; }
 .course-status.priority-status { background: #166534; color: #fff; }

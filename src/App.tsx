@@ -224,7 +224,7 @@ function App() {
       {activeView === 'roadmap' && suggestedSchedule.suggestions.size > 0 && <section className="next-term" aria-live="polite"><strong>Suggested schedule:</strong> {suggestedSchedule.credits} credits. <strong>{remainingCredits} planned credits remain</strong> — about {semestersAtFifteen} semesters at 15 credits per term, or {semestersAtEighteen} at 18.</section>}
       <section className="legend" aria-label="Course category legend">
         <span className="legend-title">Course groups</span>
-        <span className="category-cst">Core</span><span className="category-math">Math</span><span className="category-ge-lower">Lower-division GE</span><span className="category-ge-upper">Upper-division GE</span><span className="category-concentration-required">Concentration requirement</span><span className="category-elective">Elective</span>
+        <span className="category-cst">Core</span><span className="category-math">Math</span><span className="category-ge-lower">Lower-division GE</span><span className="category-ge-upper">Upper-division GE</span><span className="category-concentration-required">Concentration requirement</span><span className="category-elective">Elective</span><span className="offering-legend">Limited-term offering</span>
       </section>
       {activeView === 'roadmap' && <><p className="scroll-hint">Scroll horizontally to see the complete 18-credit grid on smaller screens.</p>
       <div className="curriculum-scroll">
