@@ -131,7 +131,6 @@ function App() {
       }
       return next
     })
-    setSelectedSlot(null)
   }
 
   const clearTargetCourse = (slot: PlanSlot) => {

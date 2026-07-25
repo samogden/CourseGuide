@@ -121,6 +121,33 @@ describe('suggested scheduling', () => {
     })
   })
 
+  it('keeps an unselected concentration elective as a choice when it is suggested', () => {
+    const electiveSlots = Array.from({ length: 4 }, (_, index) => ({
+      type: 'requirement' as const,
+      slotId: `elective-choice-${index}`,
+      label: 'Elective',
+      credits: 4,
+      category: 'elective' as const,
+      guidance: 'Choose a concentration elective.',
+    }))
+    const miniPlan = {
+      schemaVersion: 1,
+      years: [{
+        year: 'freshman',
+        terms: [{ term: 'fall', slots: electiveSlots }],
+      }],
+    } as unknown as CurriculumPlan
+
+    const schedule = buildSuggestedSchedule(miniPlan, new Set(), {
+      programId: 'bs-computer-science',
+      concentrationId: 'data-science',
+    })
+    const optionalSlot = electiveSlots[0]
+
+    expect(schedule.courseOptions.get(progressKey(optionalSlot))?.label).toBe('Concentration elective option')
+    expect(schedule.suggestions.get(progressKey(optionalSlot))?.courseId).toBeUndefined()
+  })
+
   it('removes a selected target course from the other elective option lists', () => {
     const juniorSpringElective = curriculumPlan.years[2].terms[1].slots[3]
     const seniorFallElective = curriculumPlan.years[3].terms[0].slots[1]

@@ -135,7 +135,6 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
   )
   const suggestions = new Map<string, ScheduledSuggestion>()
   const selectedEntries: SelectedEntry[] = []
-  const usedPathCourseIds = new Set<string>()
   let credits = 0
   let suggestedTerm: 'fall' | 'spring' | undefined = selection?.currentTerm
 
@@ -151,14 +150,9 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
             const assignedCourseId = assignments.get(key)
             const isCompleted = completed.has(key) || (assignedCourseId ? completed.has(`course:${assignedCourseId}`) : false)
             if (isCompleted || selectedInTerm.has(key)) return []
-            const candidate = resolveSlotCandidate(
-              slot,
-              completedCourseIds,
-              hasConcentration,
-              rankedPathCourses,
-              usedPathCourseIds,
-              suggestedTerm ?? term.term,
-            )
+            const candidate = assignedCourseId
+              ? resolveAssignedCourseCandidate(assignedCourseId, completedCourseIds, suggestedTerm ?? term.term)
+              : resolveSlotCandidate(slot, completedCourseIds, suggestedTerm ?? term.term)
             if (!candidate) return []
             return [{
               key,
@@ -191,7 +185,6 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
             ...(candidate.courseId ? { courseId: candidate.courseId } : {}),
           })
           selectedEntries.push({ key: candidate.key, slot: candidate.slot, courseId: candidate.courseId })
-          if (candidate.courseId && candidate.consumePathCourse) usedPathCourseIds.add(candidate.courseId)
           selectedInTerm.add(candidate.key)
           credits += candidate.slot.credits
           suggestedTerm ??= term.term
@@ -412,9 +405,6 @@ function buildRankedPathCourses(
 function resolveSlotCandidate(
   slot: PlanSlot,
   projectedCourseIds: ReadonlySet<string>,
-  hasConcentration: boolean,
-  rankedPathCourses: RankedCourse[],
-  usedPathCourseIds: ReadonlySet<string>,
   term: 'fall' | 'spring',
 ): { courseId?: string; consumePathCourse: boolean } | undefined {
   if (slot.type === 'course') {
@@ -429,13 +419,17 @@ function resolveSlotCandidate(
     return { consumePathCourse: false }
   }
 
-  if (!hasConcentration || slot.category !== 'elective') {
-    return { consumePathCourse: false }
-  }
-
-  const courseId = pickGenericCourse(slot, projectedCourseIds, rankedPathCourses, usedPathCourseIds, term)
-  if (courseId) return { courseId, consumePathCourse: true }
   return { consumePathCourse: false }
+}
+
+function resolveAssignedCourseCandidate(
+  courseId: string,
+  projectedCourseIds: ReadonlySet<string>,
+  term: 'fall' | 'spring',
+): { courseId: string; consumePathCourse: boolean } | undefined {
+  const course = getCourse(courseId)
+  if (!course || !isCourseOffered(course.id, term) || !prerequisitesMet(course.prerequisites, projectedCourseIds)) return undefined
+  return { courseId: course.id, consumePathCourse: false }
 }
 
 function pickGenericCourse(

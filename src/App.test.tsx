@@ -68,6 +68,8 @@ describe('planner', () => {
     fireEvent.click(screen.getAllByRole('button', { name: 'Select' })[0])
 
     expect(localStorage.getItem('courseguide-target-courses-v1')).toContain('CST-205')
+    expect(screen.getByRole('dialog')).toHaveTextContent('CST 205')
+    expect(screen.getByRole('button', { name: /mark as taken/i })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /CST 205/i })).toHaveTextContent('Selected course')
     fireEvent.click(screen.getAllByRole('button', { name: /Concentration elective option/i })[0])
     expect(screen.getByRole('dialog')).not.toHaveTextContent('CST 205')
