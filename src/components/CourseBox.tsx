@@ -9,8 +9,12 @@ export function CourseCell({ slot, assignedCourseId, courseOptions, selectedTarg
   const courseId = suggestion?.courseId ?? assignedCourseId
   const label = courseId && slot.type !== 'course' ? getCourse(courseId)?.code ?? slotLabel(slot) : courseOptions?.label ?? slotLabel(slot)
   const displayCategory = assignedCourseId ? 'concentration-required' : slot.category
+  const accessibleLabel = slot.type === 'choice' && courseOptions
+    ? `${courseOptions.label}: ${slotLabel(slot)}`
+    : undefined
   return (
     <button
+      aria-label={accessibleLabel}
       className={`course-cell category-${displayCategory}${completed ? ' is-completed' : ''}${suggestion ? ` is-suggested is-${suggestion.kind}` : ''}${assignedCourseId || courseOptions ? ' is-path-assigned' : ''}${highPriority ? ' is-high-priority' : ''}`}
       style={{ gridColumn: `span ${slot.credits}` }}
       onClick={onSelect}

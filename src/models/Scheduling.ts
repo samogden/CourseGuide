@@ -149,7 +149,7 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
           .flatMap((slot, slotIndex) => {
             const key = progressKey(slot)
             const assignedCourseId = assignments.get(key)
-            const isCompleted = assignedCourseId ? completed.has(`course:${assignedCourseId}`) : completed.has(key)
+            const isCompleted = completed.has(key) || (assignedCourseId ? completed.has(`course:${assignedCourseId}`) : false)
             if (isCompleted || selectedInTerm.has(key)) return []
             const candidate = resolveSlotCandidate(
               slot,

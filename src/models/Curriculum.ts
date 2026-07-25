@@ -224,7 +224,7 @@ export function remainingPlanCredits(plan: CurriculumPlan, completed: ReadonlySe
 function isPlanSlotCompleted(slot: PlanSlot, completed: ReadonlySet<string>, courseAssignments: ReadonlyMap<string, string>): boolean {
   const resolvedCourseId = courseAssignments.get(progressKey(slot))
   const completionKey = resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(slot)
-  return completed.has(completionKey)
+  return completed.has(progressKey(slot)) || completed.has(completionKey)
 }
 
 export function progressKey(slot: PlanSlot): string {

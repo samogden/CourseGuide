@@ -85,6 +85,18 @@ describe('planner', () => {
     expect(screen.getAllByRole('button', { name: /Concentration elective option/i })).not.toHaveLength(0)
   })
 
+  it('records both the chosen course and its requirement slot when completed', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: 'Data Science' }))
+    fireEvent.click(screen.getAllByRole('button', { name: /Concentration elective option/i })[0])
+    fireEvent.click(screen.getAllByRole('button', { name: 'Select' })[0])
+    fireEvent.click(screen.getByRole('button', { name: /CST 205/i }))
+    fireEvent.click(screen.getByRole('button', { name: /mark as taken/i }))
+
+    expect(localStorage.getItem('courseguide-completed-v1')).toContain('course:CST-205')
+    expect(localStorage.getItem('courseguide-completed-v1')).toContain('slot:junior-spring-elective')
+  })
+
   it('resets all selected target courses after confirmation', () => {
     localStorage.setItem('courseguide-target-courses-v1', '{"data-science:slot:junior-spring-elective":"CST-205"}')
     vi.spyOn(window, 'confirm').mockReturnValue(true)
@@ -92,6 +104,17 @@ describe('planner', () => {
     fireEvent.click(screen.getByRole('button', { name: /reset course choices/i }))
 
     expect(localStorage.getItem('courseguide-target-courses-v1')).toBe('{}')
+  })
+
+  it('automatically selects the paired CST choice in the other term', () => {
+    render(<App />)
+    fireEvent.click(screen.getAllByRole('button', { name: 'Course choice: CST 334 or CST 370' })[0])
+    fireEvent.click(screen.getAllByRole('button', { name: 'Select' })[0])
+
+    expect(screen.getAllByRole('button', { name: 'Course choice: CST 334 or CST 370' })).toHaveLength(2)
+    expect(screen.getAllByText('Selected course')).toHaveLength(2)
+    expect(screen.getAllByRole('button', { name: 'Course choice: CST 334 or CST 370' })[0]).toHaveTextContent('CST 334')
+    expect(screen.getAllByRole('button', { name: 'Course choice: CST 334 or CST 370' })[1]).toHaveTextContent('CST 370')
   })
 
   it('switches to the registration planner view', async () => {

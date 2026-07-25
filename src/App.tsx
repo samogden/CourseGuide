@@ -19,6 +19,16 @@ function targetScopeForSlot(slot: PlanSlot, concentrationId: string | null): str
   return slot.type === 'choice' ? 'general' : concentrationId
 }
 
+function linkedChoiceSlots(slot: PlanSlot): PlanSlot[] {
+  if (slot.type !== 'choice' || slot.alternatives.length !== 2) return []
+  const alternativesKey = [...slot.alternatives].sort().join('|')
+  return curriculumPlan.years.flatMap(year => year.terms.flatMap(term => term.slots))
+    .filter((candidate): candidate is Extract<PlanSlot, { type: 'choice' }> =>
+      candidate.type === 'choice' &&
+      progressKey(candidate) !== progressKey(slot) &&
+      [...candidate.alternatives].sort().join('|') === alternativesKey)
+}
+
 function readCompleted(): Set<string> {
   try {
     const value: unknown = JSON.parse(localStorage.getItem(progressStorageKey) ?? '[]')
@@ -82,11 +92,17 @@ function App() {
   }, [targetCourses])
 
   const updateCompletion = (slot: PlanSlot, isCompleted: boolean, resolvedCourseId?: string | null) => {
-    const key = resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(slot)
     setCompleted(current => {
       const next = new Set(current)
-      if (isCompleted) next.add(key)
-      else next.delete(key)
+      const slotKey = progressKey(slot)
+      const courseKey = resolvedCourseId ? `course:${resolvedCourseId}` : null
+      if (isCompleted) {
+        if (slot.type !== 'course') next.add(slotKey)
+        if (courseKey) next.add(courseKey)
+      } else {
+        if (slot.type !== 'course') next.delete(slotKey)
+        if (courseKey) next.delete(courseKey)
+      }
       return next
     })
   }
@@ -105,6 +121,14 @@ function App() {
     setTargetCourses(current => {
       const next = new Map(current)
       next.set(targetCourseKey(selectedCatalogVersion, targetScope, progressKey(slot)), courseId)
+      if (slot.type === 'choice') {
+        const pairedCourseId = slot.alternatives.find(alternative => alternative !== courseId)
+        if (pairedCourseId) {
+          for (const pairedSlot of linkedChoiceSlots(slot)) {
+            next.set(targetCourseKey(selectedCatalogVersion, targetScope, progressKey(pairedSlot)), pairedCourseId)
+          }
+        }
+      }
       return next
     })
     setSelectedSlot(null)
@@ -116,6 +140,11 @@ function App() {
     setTargetCourses(current => {
       const next = new Map(current)
       next.delete(targetCourseKey(selectedCatalogVersion, targetScope, progressKey(slot)))
+      if (slot.type === 'choice') {
+        for (const pairedSlot of linkedChoiceSlots(slot)) {
+          next.delete(targetCourseKey(selectedCatalogVersion, targetScope, progressKey(pairedSlot)))
+        }
+      }
       return next
     })
     setSelectedSlot(null)
@@ -227,7 +256,10 @@ function App() {
         </div>
       </div>
       </>}
-      {selectedSlot && <CourseModal slot={selectedSlot} resolvedCourseId={resolvedCourseId} courseOptions={selectedCourseOptions} selectedTarget={suggestedSchedule.selectedTargetKeys.has(progressKey(selectedSlot))} completed={completed.has(resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(selectedSlot))} prerequisitesMet={selectedPrerequisitesMet} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => updateCompletion(selectedSlot, isCompleted, resolvedCourseId)} onTargetCourseSelect={courseId => selectTargetCourse(selectedSlot, courseId)} onTargetCourseClear={() => clearTargetCourse(selectedSlot)} />}
+      {selectedSlot && <CourseModal slot={selectedSlot} resolvedCourseId={resolvedCourseId} courseOptions={selectedCourseOptions} selectedTarget={suggestedSchedule.selectedTargetKeys.has(progressKey(selectedSlot))} completed={completed.has(progressKey(selectedSlot)) || completed.has(resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(selectedSlot))} prerequisitesMet={selectedPrerequisitesMet} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => {
+        if (isCompleted && selectedSlot.type !== 'course' && resolvedCourseId && selectedCourseOptions) selectTargetCourse(selectedSlot, resolvedCourseId)
+        updateCompletion(selectedSlot, isCompleted, resolvedCourseId)
+      }} onTargetCourseSelect={courseId => selectTargetCourse(selectedSlot, courseId)} onTargetCourseClear={() => clearTargetCourse(selectedSlot)} />}
     </main>
   )
 }
