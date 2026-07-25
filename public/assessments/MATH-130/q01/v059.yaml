@@ -1,0 +1,15 @@
+question_html: "\n\n<p>Let  \\(f(x) = 5x + 0\\) . Find f(-3).</p>\n\n <p><label>f(x):\
+  \ <input class=\"quizgen-answer-input\" data-accepted=\"[&quot;-15&quot;]\" data-blank-id=\"\
+  q01-v059-a01\" aria-label=\"f(x)\"><span class=\"quizgen-feedback\"></span></label></p>"
+answer:
+- label: f(x)
+  accepted_values:
+  - '-15'
+  kind: fill_in_multiple_blanks_question
+explanation_html: '
+
+
+  <p>The function value is -15.</p>
+
+
+  '

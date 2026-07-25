@@ -1,0 +1,20 @@
+question_html: "\n\n<p>A population follows  \\(P(t) = 100(1.2)^t\\) . Find P(3).</p>\n\
+  \n <p><label>Amount: <input class=\"quizgen-answer-input\" data-accepted=\"[&quot;172.8&quot;,\
+  \ &quot;172.8000&quot;]\" data-blank-id=\"q05-v019-a01\" aria-label=\"Amount\"><span\
+  \ class=\"quizgen-feedback\"></span></label></p> <div class=\"answer-warnings\"\
+  ><p><strong>Notes for answer entry</strong></p><ul><li>Round floats to 4 decimal\
+  \ places (fewer if exact, e.g., <code>1.25</code>). No mixed numbers (e.g. use <code>5/4</code>,\
+  \ not <code>1 1/4</code>). Integers as integers (e.g., <code>2</code>, not <code>2/1</code>).</li></ul></div>"
+answer:
+- label: Amount
+  accepted_values:
+  - '172.8'
+  - '172.8000'
+  kind: fill_in_multiple_blanks_question
+explanation_html: '
+
+
+  <p>The modeled amount is 172.80.</p>
+
+
+  '

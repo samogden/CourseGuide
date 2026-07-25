@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@xyflow/react": "^12.11.2",
+    "mathjax": "3.2.2",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "yaml": "^2.9.0",

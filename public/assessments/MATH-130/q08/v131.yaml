@@ -1,0 +1,19 @@
+question_html: "\n\n<p>Solve  \\(\\sin(\\theta) = -1.0\\)  for 0 &lt;= theta &lt;=\
+  \ 360 degrees. Enter all angles separated by commas.</p>\n\n <p><label>Angles (degrees):\
+  \ <input class=\"quizgen-answer-input\" data-accepted=\"[&quot;270&quot;]\" data-blank-id=\"\
+  q08-v131-a01\" aria-label=\"Angles (degrees)\"><span class=\"quizgen-feedback\"\
+  ></span></label></p> <div class=\"answer-warnings\"><p><strong>Notes for answer\
+  \ entry</strong></p><ul><li>Enter lists as comma-separated values with a space after\
+  \ the comma (e.g., <code>1, 2, 3</code>).</li></ul></div>"
+answer:
+- label: Angles (degrees)
+  accepted_values:
+  - '270'
+  kind: fill_in_multiple_blanks_question
+explanation_html: '
+
+
+  <p>Use the reference angle and the quadrants where sine has the required sign.</p>
+
+
+  '

@@ -1,0 +1,16 @@
+question_html: "\n\n<p>Evaluate  \\(\\log_{10}(10)\\) .</p>\n\n <p><label>Logarithm\
+  \ value: <input class=\"quizgen-answer-input\" data-accepted=\"[&quot;1&quot;]\"\
+  \ data-blank-id=\"q06-v087-a01\" aria-label=\"Logarithm value\"><span class=\"quizgen-feedback\"\
+  ></span></label></p>"
+answer:
+- label: Logarithm value
+  accepted_values:
+  - '1'
+  kind: fill_in_multiple_blanks_question
+explanation_html: '
+
+
+  <p>A logarithm asks for the exponent.</p>
+
+
+  '

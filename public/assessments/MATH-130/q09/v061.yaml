@@ -1,0 +1,16 @@
+question_html: "\n\n<p>A taxi fare is modeled by  \\(C(m) = 6 + 3m\\) , where m is\
+  \ miles. Predict the fare for 5 miles.</p>\n\n <p><label>Prediction: <input class=\"\
+  quizgen-answer-input\" data-accepted=\"[&quot;21&quot;]\" data-blank-id=\"q09-v061-a01\"\
+  \ aria-label=\"Prediction\"><span class=\"quizgen-feedback\"></span></label></p>"
+answer:
+- label: Prediction
+  accepted_values:
+  - '21'
+  kind: fill_in_multiple_blanks_question
+explanation_html: '
+
+
+  <p>Substitute the observed input into the model.</p>
+
+
+  '

@@ -1,6 +1,8 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
 import './App.css'
 import { CourseCell, CourseModal } from './components/CourseBox'
+import { ReadinessAssessment } from './components/ReadinessAssessment'
+import { getAssessmentPack } from './models/Assessments'
 import { catalogVersions, curriculumPlan, defaultCatalogVersion, getCourse, prerequisitesMet, progressKey, remainingPlanCredits, summarizePlanCredits, type AcademicTerm, type PlanSlot } from './models/Curriculum'
 import { buildRegistrationPlan, buildSuggestedSchedule } from './models/Scheduling'
 
@@ -68,6 +70,7 @@ function readTargetCourses(): Map<string, string> {
 
 function App() {
   const [selectedSlot, setSelectedSlot] = useState<PlanSlot | null>(null)
+  const [assessmentCourseId, setAssessmentCourseId] = useState<string | null>(null)
   const [completed, setCompleted] = useState<Set<string>>(() => readCompleted())
   const [selectedConcentration, setSelectedConcentration] = useState<string | null>(() => readConcentration())
   const [selectedCatalogVersion, setSelectedCatalogVersion] = useState<string>(() => readCatalogVersion())
@@ -255,10 +258,11 @@ function App() {
         </div>
       </div>
       </>}
-      {selectedSlot && <CourseModal slot={selectedSlot} resolvedCourseId={resolvedCourseId} courseOptions={selectedCourseOptions} selectedTarget={suggestedSchedule.selectedTargetKeys.has(progressKey(selectedSlot))} completed={completed.has(progressKey(selectedSlot)) || completed.has(resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(selectedSlot))} prerequisitesMet={selectedPrerequisitesMet} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => {
+      {selectedSlot && !assessmentCourseId && <CourseModal slot={selectedSlot} resolvedCourseId={resolvedCourseId} courseOptions={selectedCourseOptions} selectedTarget={suggestedSchedule.selectedTargetKeys.has(progressKey(selectedSlot))} completed={completed.has(progressKey(selectedSlot)) || completed.has(resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(selectedSlot))} prerequisitesMet={selectedPrerequisitesMet} assessmentAvailable={Boolean(resolvedCourseId && getAssessmentPack(resolvedCourseId))} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => {
         if (isCompleted && selectedSlot.type !== 'course' && resolvedCourseId && selectedCourseOptions) selectTargetCourse(selectedSlot, resolvedCourseId)
         updateCompletion(selectedSlot, isCompleted, resolvedCourseId)
-      }} onTargetCourseSelect={courseId => selectTargetCourse(selectedSlot, courseId)} onTargetCourseClear={() => clearTargetCourse(selectedSlot)} />}
+      }} onTargetCourseSelect={courseId => selectTargetCourse(selectedSlot, courseId)} onTargetCourseClear={() => clearTargetCourse(selectedSlot)} onOpenAssessment={() => resolvedCourseId && setAssessmentCourseId(resolvedCourseId)} />}
+      {assessmentCourseId && <ReadinessAssessment courseId={assessmentCourseId} onClose={() => setAssessmentCourseId(null)} />}
     </main>
   )
 }

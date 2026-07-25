@@ -1,0 +1,20 @@
+question_html: "\n\n<p>Find the mean of this data set: 5, 8, 9, 2, 8.</p>\n\n <p><label>Mean:\
+  \ <input class=\"quizgen-answer-input\" data-accepted=\"[&quot;6.4&quot;, &quot;6.4000&quot;]\"\
+  \ data-blank-id=\"q10-v013-a01\" aria-label=\"Mean\"><span class=\"quizgen-feedback\"\
+  ></span></label></p> <div class=\"answer-warnings\"><p><strong>Notes for answer\
+  \ entry</strong></p><ul><li>Round floats to 4 decimal places (fewer if exact, e.g.,\
+  \ <code>1.25</code>). No mixed numbers (e.g. use <code>5/4</code>, not <code>1 1/4</code>).\
+  \ Integers as integers (e.g., <code>2</code>, not <code>2/1</code>).</li></ul></div>"
+answer:
+- label: Mean
+  accepted_values:
+  - '6.4'
+  - '6.4000'
+  kind: fill_in_multiple_blanks_question
+explanation_html: '
+
+
+  <p>The mean is the sum divided by the number of observations.</p>
+
+
+  '

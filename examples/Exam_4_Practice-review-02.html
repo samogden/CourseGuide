@@ -1,0 +1,1328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exam 4 Practice</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f5ef;
+      --panel: #ffffff;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --line: #d8d4ca;
+      --accent: #0f766e;
+      --good: #15803d;
+      --bad: #b91c1c;
+      --soft-good: #dcfce7;
+      --soft-bad: #fee2e2;
+      --shadow: 0 16px 40px rgba(17, 24, 39, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #fff8e7, var(--bg) 40%, #eef2ff 100%);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    .hero {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(216, 212, 202, 0.8);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      letter-spacing: -0.03em;
+    }
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .hero-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 16px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 18px 0 28px;
+    }
+    .toolbar button, .pdf-link {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 0.8rem 1.1rem;
+      font: inherit;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(17, 24, 39, 0.05);
+    }
+    .toolbar button:hover, .pdf-link:hover {
+      border-color: var(--accent);
+    }
+    .quiz-form {
+      display: grid;
+      gap: 18px;
+    }
+    .review-question {
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+    .review-question-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: baseline;
+      border-bottom: 1px solid rgba(216, 212, 202, 0.7);
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+    }
+    .review-question-title {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .review-question-points {
+      color: var(--muted);
+      white-space: nowrap;
+      font-size: 0.95rem;
+    }
+    .review-question-body {
+      display: grid;
+      gap: 12px;
+    }
+    .review-question-body img,
+    .review-section img {
+      max-width: min(85%, 720px);
+      max-height: 320px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+    .review-question-body figure,
+    .review-section figure {
+      margin: 0.75rem 0;
+    }
+    .review-question-body figcaption,
+    .review-section figcaption {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .review-question-body p {
+      margin: 0 0 0.5rem;
+    }
+    .review-question-body pre,
+    .review-section pre {
+      margin: 0.5rem 0 1rem;
+      padding: 0.85rem 1rem;
+      border-radius: 12px;
+      background: #f8fafc;
+      border: 1px solid #dbe4f0;
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+    .review-question-body code,
+    .review-section code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 0.95em;
+    }
+    .review-question-body table,
+    .review-section table {
+      width: 100%;
+      max-width: 100%;
+      border-collapse: collapse;
+      margin: 0.5rem 0 1rem;
+    }
+    .review-question-body td,
+    .review-question-body th,
+    .review-section td,
+    .review-section th {
+      padding: 0.45rem 0.6rem;
+      vertical-align: top;
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+    .quizgen-answer-field {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      width: 100%;
+      margin: 0.1rem 0;
+    }
+    .quizgen-answer-label,
+    .quizgen-answer-unit {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .quizgen-answer-input {
+      border: 2px solid var(--line);
+      border-radius: 10px;
+      padding: 0.55rem 0.75rem;
+      min-height: 2.5rem;
+      min-width: 20rem;
+      background: #fff;
+      color: var(--ink);
+      transition: border-color 120ms ease, background-color 120ms ease, box-shadow 120ms ease;
+    }
+    .quizgen-answer-input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.12);
+    }
+    .quizgen-answer-input.is-correct {
+      border-color: var(--good);
+      background: var(--soft-good);
+    }
+    .quizgen-answer-input.is-incorrect {
+      border-color: var(--bad);
+      background: var(--soft-bad);
+    }
+    .quizgen-checkbox-list {
+      display: grid;
+      gap: 0.5rem;
+      margin: 0.5rem 0 1rem;
+    }
+    .quizgen-checkbox-option {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.7rem 0.85rem;
+      border: 2px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      transition: border-color 120ms ease, background-color 120ms ease, box-shadow 120ms ease;
+    }
+    .quizgen-checkbox-option input {
+      width: 1.1rem;
+      height: 1.1rem;
+      margin: 0;
+    }
+    .quizgen-checkbox-option code {
+      background: #f3f4f6;
+      padding: 0.12rem 0.35rem;
+      border-radius: 6px;
+    }
+    .quizgen-checkbox-option.is-correct {
+      border-color: var(--good);
+      background: var(--soft-good);
+    }
+    .quizgen-checkbox-option.is-incorrect {
+      border-color: var(--bad);
+      background: var(--soft-bad);
+    }
+    .quizgen-feedback {
+      min-width: 3.5rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+    .quizgen-feedback.is-correct {
+      color: var(--good);
+    }
+    .quizgen-feedback.is-incorrect {
+      color: var(--bad);
+    }
+    .review-question.submitted {
+      border-color: rgba(15, 118, 110, 0.2);
+    }
+    .review-question.all-correct {
+      box-shadow: 0 16px 40px rgba(21, 128, 61, 0.1);
+    }
+    .review-question-controls {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 14px;
+    }
+    .recheck-button {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+    .review-spoilers {
+      margin-top: 14px;
+      border-top: 1px dashed var(--line);
+      padding-top: 12px;
+    }
+    .review-spoilers summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .review-section {
+      margin-top: 14px;
+    }
+    .review-section h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+    }
+    .answer-warnings {
+      margin-top: 1rem;
+      padding: 0.85rem 1rem;
+      border: 1px solid rgba(216, 212, 202, 0.85);
+      border-radius: 14px;
+      background: #fff8e7;
+    }
+    .answer-warnings p {
+      margin: 0 0 0.4rem;
+    }
+    .answer-warnings ul {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+    .answer-warnings li {
+      margin: 0.25rem 0;
+    }
+    .answer-key {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+    .answer-key li {
+      margin-bottom: 0.45rem;
+    }
+    .answer-key code {
+      background: #f3f4f6;
+      padding: 0.12rem 0.35rem;
+      border-radius: 6px;
+    }
+    .question-sep {
+      height: 1px;
+      background: var(--line);
+    }
+    .notice {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    @media (max-width: 700px) {
+      .review-question-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .quizgen-feedback {
+        width: 100%;
+      }
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\(', '\)']],
+        displayMath: [['$$', '$$'], ['\[', '\]']]
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <h1>Exam 4 Practice</h1>
+      <p>Self-check practice review</p>
+      <div class="hero-row">
+        <div class="notice">Copy 2 of 5</div>
+        <div class="notice">2026-07-24 19:38:18</div>
+      </div>
+      <div class="toolbar">
+        <button type="button" id="quizgen-check-all">Check Answers</button>
+        <button type="button" id="quizgen-reset">Reset</button>
+        
+      </div>
+      <p class="notice">Enter your answers, then check each blank. Open the spoilers for the walkthrough after you try the problem.</p>
+    </header>
+
+    <form class="quiz-form" id="quizgen-review-form">
+      <section class="review-question" data-question-number="1"><header class="review-question-header"><div class="review-question-title">Question 1: Question 1</div><div class="review-question-points">1 point</div></header><div class="review-question-body">
+
+Given the following grammar, which of the below strings are part of the language?
+
+  <pre><code>&lt;sentence&gt; ::= &lt;subject&gt; &lt;verb&gt; &lt;object&gt;
+&lt;subject&gt; ::= The cat | A dog | The bird | A child | &lt;adjective&gt; &lt;animal&gt;
+&lt;animal&gt; ::= cat | dog | bird | child
+&lt;adjective&gt; ::= happy | sad | angry | playful
+&lt;verb&gt; ::= chases | sees | hates | loves
+&lt;object&gt; ::= the ball | the toy | the tree | &lt;adjective&gt; &lt;object&gt;</code></pre> <div class="quizgen-checkbox-list"><label class="quizgen-checkbox-option" data-correct="true"><input type="checkbox" class="quizgen-checkbox-input"><span class="quizgen-choice-text"><code>A child sees sad the toy</code></span><span class="quizgen-feedback" aria-live="polite"></span></label><label class="quizgen-checkbox-option" data-correct="false"><input type="checkbox" class="quizgen-checkbox-input"><span class="quizgen-choice-text"><code>Some child chases the toy</code></span><span class="quizgen-feedback" aria-live="polite"></span></label><label class="quizgen-checkbox-option" data-correct="false"><input type="checkbox" class="quizgen-checkbox-input"><span class="quizgen-choice-text"><code>A &lt;adjective&gt; &lt;animal&gt; sees the tree</code></span><span class="quizgen-feedback" aria-live="polite"></span></label><label class="quizgen-checkbox-option" data-correct="true"><input type="checkbox" class="quizgen-checkbox-input"><span class="quizgen-choice-text"><code>A child loves the toy</code></span><span class="quizgen-feedback" aria-live="polite"></span></label><label class="quizgen-checkbox-option" data-correct="false"><input type="checkbox" class="quizgen-checkbox-input"><span class="quizgen-choice-text"><code>The human hates the ball</code></span><span class="quizgen-feedback" aria-live="polite"></span></label><label class="quizgen-checkbox-option" data-correct="true"><input type="checkbox" class="quizgen-checkbox-input"><span class="quizgen-choice-text"><code>The cat loves the toy</code></span><span class="quizgen-feedback" aria-live="polite"></span></label><label class="quizgen-checkbox-option" data-correct="true"><input type="checkbox" class="quizgen-checkbox-input"><span class="quizgen-choice-text"><code>A dog sees the ball</code></span><span class="quizgen-feedback" aria-live="polite"></span></label><label class="quizgen-checkbox-option" data-correct="true"><input type="checkbox" class="quizgen-checkbox-input"><span class="quizgen-choice-text"><code>A dog loves the ball</code></span><span class="quizgen-feedback" aria-live="polite"></span></label><label class="quizgen-checkbox-option" data-correct="false"><input type="checkbox" class="quizgen-checkbox-input"><span class="quizgen-choice-text"><code>The dog sees the tree</code></span><span class="quizgen-feedback" aria-live="polite"></span></label><label class="quizgen-checkbox-option" data-correct="true"><input type="checkbox" class="quizgen-checkbox-input"><span class="quizgen-choice-text"><code>A child loves the tree</code></span><span class="quizgen-feedback" aria-live="polite"></span></label></div>  </div><div class="review-question-controls"><button type="button" class="recheck-button" data-action="recheck">Check this question</button></div><details class="review-spoilers"><summary>Spoilers</summary><section class="review-section"><h3>Walkthrough</h3>
+
+Remember, for a string to be part of our language, we need to be able to derive it from our grammar. Unfortunately, there isn&#x27;t space here to demonstrate the derivation so please work through them on your own!
+
+</section></details></section><section class="review-question" data-question-number="2"><header class="review-question-header"><div class="review-question-title">Question 2: Question 2</div><div class="review-question-points">1 point</div></header><div class="review-question-body">
+
+Given the below information please calculate the equivalent physical address of the given virtual address, filling out all steps along the way. This problem uses  <strong>two-level (hierarchical) paging</strong> . Remember, we typically have the MSB representing valid or invalid.
+
+ <p><b>Address Info:</b></p>
+<table border="1" style="border-collapse: collapse; width: 100%; table-layout: auto;">
+  <tbody>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Virtual Address</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b1110001010</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">&#35; PDI bits</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">3</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">&#35; PTI bits</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">2</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">&#35; Offset bits</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">5</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">&#35; PFN bits</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">5</td>
+    </tr>
+  </tbody>
+</table>
+<p><b>Page Directory:</b></p>
+<table border="1" style="border-collapse: collapse; width: 100%; table-layout: auto;">
+  <tbody>
+    <tr>
+      <td style="padding: 5px; font-weight: bold; ;"><b>PDI</b></td>
+      <td style="padding: 5px; font-weight: bold; ;"><b>PD Entry</b></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">...</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">...</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b011</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b100100</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b100</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b100001</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b101</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b100010</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b110</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b111000</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b111</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b011110</td>
+    </tr>
+  </tbody>
+</table> <p><b>PTC 0b00001:</b></p>
+<table border="1" style="border-collapse: collapse; width: 100%; table-layout: auto;">
+  <tbody>
+    <tr>
+      <td style="padding: 5px; font-weight: bold; ;"><b>PTI</b></td>
+      <td style="padding: 5px; font-weight: bold; ;"><b>PTE</b></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b00</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b101001</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b01</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b101111</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">...</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">...</td>
+    </tr>
+  </tbody>
+</table>
+<p><b>PTC 0b00010:</b></p>
+<table border="1" style="border-collapse: collapse; width: 100%; table-layout: auto;">
+  <tbody>
+    <tr>
+      <td style="padding: 5px; font-weight: bold; ;"><b>PTI</b></td>
+      <td style="padding: 5px; font-weight: bold; ;"><b>PTE</b></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b00</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b110101</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b01</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b111010</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">...</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">...</td>
+    </tr>
+  </tbody>
+</table>
+<p><b>PTC 0b11110:</b></p>
+<table border="1" style="border-collapse: collapse; width: 100%; table-layout: auto;">
+  <tbody>
+    <tr>
+      <td style="padding: 5px; font-weight: bold; ;"><b>PTI</b></td>
+      <td style="padding: 5px; font-weight: bold; ;"><b>PTE</b></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b00</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b010111</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b01</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">0b111011</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">...</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">...</td>
+    </tr>
+  </tbody>
+</table> <table border="1" style="border-collapse: collapse; width: 100%; table-layout: auto;">
+  <tbody>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="a90ea153-7b0a-4114-b854-b78571468453"><span class="quizgen-answer-label">PDI (Page Directory Index):</span><input type="text" class="quizgen-answer-input" data-accepted="[&quot;111&quot;, &quot;0b111&quot;, &quot;7&quot;, &quot;0x7&quot;]" data-blank-id="a90ea153-7b0a-4114-b854-b78571468453" aria-label="PDI (Page Directory Index)" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="5d123a7f-e5f8-4f03-b5e3-c4e847f8e7d8"><span class="quizgen-answer-label">PTI (Page Table Index):</span><input type="text" class="quizgen-answer-input" data-accepted="[&quot;00&quot;, &quot;0b00&quot;, &quot;0&quot;, &quot;0x0&quot;]" data-blank-id="5d123a7f-e5f8-4f03-b5e3-c4e847f8e7d8" aria-label="PTI (Page Table Index)" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="c0b22ced-dfa5-4ef5-ae91-f6adde8c9284"><span class="quizgen-answer-label">Offset:</span><input type="text" class="quizgen-answer-input" data-accepted="[&quot;01010&quot;, &quot;0b01010&quot;, &quot;A&quot;, &quot;0xA&quot;, &quot;10&quot;]" data-blank-id="c0b22ced-dfa5-4ef5-ae91-f6adde8c9284" aria-label="Offset" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="2908cb62-e60a-46d4-abeb-c4fb2dd6b8b1"><span class="quizgen-answer-label">PD Entry (from Page Directory):</span><input type="text" class="quizgen-answer-input" data-accepted="[&quot;011110&quot;, &quot;0b011110&quot;, &quot;1E&quot;, &quot;0x1E&quot;, &quot;30&quot;]" data-blank-id="2908cb62-e60a-46d4-abeb-c4fb2dd6b8b1" aria-label="PD Entry (from Page Directory)" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="72d8797c-90fc-45b3-9b1a-487d50102456"><span class="quizgen-answer-label">Page Table Number:</span><input type="text" class="quizgen-answer-input" data-accepted="[&quot;INVALID&quot;]" data-blank-id="72d8797c-90fc-45b3-9b1a-487d50102456" aria-label="Page Table Number" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="9d7ef650-89e8-4f34-a3ee-6ee63b4341fd"><span class="quizgen-answer-label">PTE (from Page Table):</span><input type="text" class="quizgen-answer-input" data-accepted="[&quot;INVALID&quot;, &quot;N/A&quot;]" data-blank-id="9d7ef650-89e8-4f34-a3ee-6ee63b4341fd" aria-label="PTE (from Page Table)" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="b6bf544e-0b11-4698-8081-7a942d34dfea"><span class="quizgen-answer-label">VALID or INVALID?:</span><input type="text" class="quizgen-answer-input" data-accepted="[&quot;INVALID&quot;]" data-blank-id="b6bf544e-0b11-4698-8081-7a942d34dfea" aria-label="VALID or INVALID?" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="b931ead0-118d-4f9b-9736-99e20d96739a"><span class="quizgen-answer-label">PFN:</span><input type="text" class="quizgen-answer-input" data-accepted="[&quot;INVALID&quot;]" data-blank-id="b931ead0-118d-4f9b-9736-99e20d96739a" aria-label="PFN" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="c7628584-a073-4857-b543-460c8880af52"><span class="quizgen-answer-label">Physical Address:</span><input type="text" class="quizgen-answer-input" data-accepted="[&quot;INVALID&quot;]" data-blank-id="c7628584-a073-4857-b543-460c8880af52" aria-label="Physical Address" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+  </tbody>
+</table></div><div class="review-question-controls"><button type="button" class="recheck-button" data-action="recheck">Check this question</button></div><details class="review-spoilers"><summary>Spoilers</summary><section class="review-section"><h3>Walkthrough</h3>
+
+Two-level paging requires two lookups: first in the Page Directory, then in a Page Table. The virtual address is split into three parts: PDI | PTI | Offset.
+
+ 
+
+Don&#x27;t forget to pad with the appropriate number of 0s!
+
+ 
+
+<strong>Step 1: Extract components from Virtual Address</strong> Virtual Address = PDI | PTI | Offset <code>0b1110001010</code> = <code>0b111</code> | <code>0b00</code> | <code>0b01010</code>
+
+ 
+
+<strong>Step 2: Look up Page Directory Entry</strong> Using PDI = <code>0b111</code>, we find PD Entry = <code>0b011110</code>
+
+ 
+
+<strong>Step 3: Check Page Directory Entry validity</strong> The MSB (valid bit) is <strong>0</strong>, so this PD Entry is <strong>INVALID</strong>.
+
+ 
+
+Since the Page Directory Entry is invalid, the translation fails here. We write <strong>INVALID</strong> for all remaining fields. If it were valid, we would continue with the steps below.
+
+ 
+
+<strong>Step 4: Extract Page Table Number</strong> We remove the valid bit from the PD Entry to get the Page Table Number:
+
+ <div class='math'>$$ \displaystyle \texttt{11110} = \texttt{0b011110} \& \texttt{0b011111} \; $$</div></section></details></section><section class="review-question" data-question-number="3"><header class="review-question-header"><div class="review-question-title">Question 3: Question 3</div><div class="review-question-points">1 point</div></header><div class="review-question-body">
+
+Please calculate the Average Memory Access Time given the below information.  Please round your answer to 4 decimal points. 
+
+ <table border="1" style="border-collapse: collapse; width: 100%; table-layout: auto;">
+  <tbody>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Hit Latency</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">8 cycles</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Miss Latency</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">40 cycles</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Miss Rate</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">0.04%</td>
+    </tr>
+  </tbody>
+</table> <br><br> <table border="1" style="border-collapse: collapse; width: 100%; table-layout: auto;">
+  <tbody>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="b2aa7b5e-652d-474f-a4b1-73b38c6f84b7"><span class="quizgen-answer-label">Average Memory Access Time:</span><input type="text" class="quizgen-answer-input" data-accepted="[&quot;8.0128&quot;, &quot;8.016&quot;, &quot;8.0160&quot;]" data-blank-id="b2aa7b5e-652d-474f-a4b1-73b38c6f84b7" aria-label="Average Memory Access Time" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-answer-unit"> cycles</span><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+  </tbody>
+</table> <div class="answer-warnings"><p><strong>Notes for answer entry</strong></p><ul><li>Round floats to 4 decimal places (fewer if exact, e.g., <code>1.25</code>). No mixed numbers (e.g. use <code>5/4</code>, not <code>1 1/4</code>). Integers as integers (e.g., <code>2</code>, not <code>2/1</code>).</li></ul></div></div><div class="review-question-controls"><button type="button" class="recheck-button" data-action="recheck">Check this question</button></div><details class="review-spoilers"><summary>Spoilers</summary><section class="review-section"><h3>Walkthrough</h3>
+
+This question accepts either AMAT convention. One convention uses a weighted average with hit rate and miss rate. The other uses hit time plus a miss-rate penalty term.
+
+ 
+
+If you use the weighted-average convention, compute:
+
+ <div class='math'>$$ \displaystyle \begin{array}{l}
+AMAT = (\text{hit rate}) \cdot (\text{hit time}) + (\text{miss rate}) \cdot (\text{miss time}) \\
+\phantom{AMAT} = (0.9996) \cdot (8) + (0.0004) \cdot (40) = 8.0128\text{cycles} \\
+\end{array} \; $$</div> 
+
+If you use the miss-penalty convention, compute:
+
+ <div class='math'>$$ \displaystyle \begin{array}{l}
+AMAT = \text{hit time} + (\text{miss rate}) \cdot (\text{miss time}) \\
+\phantom{AMAT} = 8 + (0.0004) \cdot (40) = 8.0160\text{cycles} \\
+\end{array} \; $$</div> 
+
+If the table gives hit rate, use <code>1 - hit rate</code> for miss rate. If it gives miss rate, use it directly.
+
+</section></details></section><section class="review-question" data-question-number="4"><header class="review-question-header"><div class="review-question-title">Question 4: Question 4</div><div class="review-question-points">1 point</div></header><div class="review-question-body">
+
+What operation happens between these two states?
+
+ <pre><code>inode bitmap  1111
+inodes        [d a:0 r:4] [d a:1 r:2] [f a:2 r:1] [d a:3 r:3] 
+data bitmap   1111
+data          [(.,0) (..,0) (o,1) (y,3)] [(.,1) (..,0)] [s] [(.,3) (..,0) (c,2)]</code></pre> <table border="1" style="border-collapse: collapse; width: 100%; table-layout: auto;">
+  <tbody>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="7f80df78-0db7-4ac0-ad54-84e49ea60b3b"><span class="quizgen-answer-label">Command:</span><input type="text" class="quizgen-answer-input" data-accepted="[&quot;unlink(\&quot;/y/c\&quot;);&quot;]" data-blank-id="7f80df78-0db7-4ac0-ad54-84e49ea60b3b" aria-label="Command" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+  </tbody>
+</table> <pre><code>inode bitmap  1101
+inodes        [d a:0 r:4] [d a:1 r:2] [] [d a:3 r:2] 
+data bitmap   1101
+data          [(.,0) (..,0) (o,1) (y,3)] [(.,1) (..,0)] [] [(.,3) (..,0)]</code></pre></div><div class="review-question-controls"><button type="button" class="recheck-button" data-action="recheck">Check this question</button></div><details class="review-spoilers"><summary>Spoilers</summary><section class="review-section"><h3>Walkthrough</h3>
+
+The key thing to pay attention to when solving these problems is where there are differences between the start state and the end state. In this particular problem, we can see that these lines are different:
+
+ 
+
+Inode Bitmap:
+
+ <pre><code>1111
+1101</code></pre> <br><br> 
+
+Inodes:
+
+ <pre><code>[d a:0 r:4] [d a:1 r:2] [f a:2 r:1] [d a:3 r:3]
+[d a:0 r:4] [d a:1 r:2] [] [d a:3 r:2]</code></pre> <br><br> 
+
+Data Bitmap:
+
+ <pre><code>1111
+1101</code></pre> <br><br> 
+
+Data:
+
+ <pre><code>[(.,0) (..,0) (o,1) (y,3)] [(.,1) (..,0)] [s] [(.,3) (..,0) (c,2)]
+[(.,0) (..,0) (o,1) (y,3)] [(.,1) (..,0)] [] [(.,3) (..,0)]</code></pre> <br><br> 
+
+A great place to start is to check the bitmap changes, since they quickly tell us what kind of operation happened. The inode bitmap lost an inode, so we likely called <code>unlink</code>. The data bitmap lost a block, so we likely called <code>unlink</code>.
+
+ 
+
+The overall changes are highlighted with <code>*</code> symbols below
+
+ <pre><code>inode bitmap  11***0***1
+inodes        [d a:0 r:4] [d a:1 r:2] [] [d a:3 r:***2***] 
+data bitmap   11***0***1
+data          [(.,0) (..,0) (o,1) (y,3)] [(.,1) (..,0)] [] [(.,3) (..,0)]</code></pre></section></details></section><section class="review-question" data-question-number="5"><header class="review-question-header"><div class="review-question-title">Question 5: Question 5</div><div class="review-question-points">1 point</div></header><div class="review-question-body">
+
+Given the below information, compute the required values if using <strong>Round Robin</strong> scheduling. Break any ties using the job number.
+
+ <table border="1" style="border-collapse: collapse; width: 100%; table-layout: auto;">
+  <tbody>
+    <tr>
+      <td style="padding: 5px; font-weight: bold; ;"><b>Job ID</b></td>
+      <td style="padding: 5px; font-weight: bold; ;"><b>Arrival</b></td>
+      <td style="padding: 5px; font-weight: bold; ;"><b>Duration</b></td>
+      <td style="padding: 5px; font-weight: bold; ;"><b>Response Time</b></td>
+      <td style="padding: 5px; font-weight: bold; ;"><b>TAT</b></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Job0</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">5</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">9</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="32807473-7c4c-4717-84c4-2f2f4012d59f"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;0&quot;, &quot;0.0000&quot;]" data-blank-id="32807473-7c4c-4717-84c4-2f2f4012d59f" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="2340c28e-ff70-4e24-b286-d47a767476ce"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;15.5&quot;, &quot;15.5000&quot;]" data-blank-id="2340c28e-ff70-4e24-b286-d47a767476ce" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Job1</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">10</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">3</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="28a1de92-f16c-47bc-ad05-0976973c8a0f"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;0&quot;, &quot;0.0000&quot;]" data-blank-id="28a1de92-f16c-47bc-ad05-0976973c8a0f" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="e16b6674-97d5-4004-a594-ca9b8f6b5cdc"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;8.5&quot;, &quot;8.5000&quot;]" data-blank-id="e16b6674-97d5-4004-a594-ca9b8f6b5cdc" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Job2</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">11</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">2</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="0384f50b-7c05-4d33-8fd3-cfdd9b6efd6b"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;0&quot;, &quot;0.0000&quot;]" data-blank-id="0384f50b-7c05-4d33-8fd3-cfdd9b6efd6b" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="616b4a4c-f8ad-4dfe-b1d7-a7895b1a15b0"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;6&quot;, &quot;6.0000&quot;]" data-blank-id="616b4a4c-f8ad-4dfe-b1d7-a7895b1a15b0" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Job3</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">17</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">4</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="f0f025b4-e46b-40df-aaa9-8633949896e4"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;0&quot;, &quot;0.0000&quot;]" data-blank-id="f0f025b4-e46b-40df-aaa9-8633949896e4" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="4b7ced87-6ac4-41ff-93f5-ab7403d64e65"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;6&quot;, &quot;6.0000&quot;]" data-blank-id="4b7ced87-6ac4-41ff-93f5-ab7403d64e65" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+  </tbody>
+</table> <table border="1" style="border-collapse: collapse; width: 100%; table-layout: auto;">
+  <tbody>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="b6c1df68-c495-40b2-96a2-32fcd8b3dae8"><span class="quizgen-answer-label">Overall average response time:</span><input type="text" class="quizgen-answer-input" data-accepted="[&quot;0&quot;, &quot;0.0000&quot;]" data-blank-id="b6c1df68-c495-40b2-96a2-32fcd8b3dae8" aria-label="Overall average response time" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="f5404917-e99b-43e9-a8ba-9e9b5723b904"><span class="quizgen-answer-label">Overall average TAT:</span><input type="text" class="quizgen-answer-input" data-accepted="[&quot;9&quot;, &quot;9.0000&quot;]" data-blank-id="f5404917-e99b-43e9-a8ba-9e9b5723b904" aria-label="Overall average TAT" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+  </tbody>
+</table> <div class="answer-warnings"><p><strong>Notes for answer entry</strong></p><ul><li>Round floats to 4 decimal places (fewer if exact, e.g., <code>1.25</code>). No mixed numbers (e.g. use <code>5/4</code>, not <code>1 1/4</code>). Integers as integers (e.g., <code>2</code>, not <code>2/1</code>).</li></ul></div></div><div class="review-question-controls"><button type="button" class="recheck-button" data-action="recheck">Check this question</button></div><details class="review-spoilers"><summary>Spoilers</summary><section class="review-section"><h3>Walkthrough</h3>
+
+To calculate the overall Turnaround and Response times using Round Robin we want to first start by calculating the respective target and response times of all of our individual jobs.
+
+ 
+
+We do this by subtracting arrival time from either the completion time or the start time.  That is:
+
+ <div class='math'>$$ \displaystyle Job_{TAT} = Job_{completion} - Job_{arrival\_time} \; $$</div> <div class='math'>$$ \displaystyle Job_{response} = Job_{start} - Job_{arrival\_time} \; $$</div> 
+
+For each of our 4 jobs, we can make these calculations.
+
+ 
+
+For turnaround time (TAT) this would be: Job0_TAT = 20.50 - 5.00 = 15.50 Job1_TAT = 18.50 - 10.00 = 8.50 Job2_TAT = 17.00 - 11.00 = 6.00 Job3_TAT = 23.00 - 17.00 = 6.00
+
+ 
+
+We then calculate the average of these to find the average TAT time Avg(TAT) = (15.50 + 8.50 + 6.00 + 6.00) / (4) = 9.00
+
+ 
+
+For response time this would be: Job0_response = 5.00 - 5.00 = 0.00 Job1_response = 10.00 - 10.00 = 0.00 Job2_response = 11.00 - 11.00 = 0.00 Job3_response = 17.00 - 17.00 = 0.00
+
+ 
+
+We then calculate the average of these to find the average Response time Avg(Response) = (0.00 + 0.00 + 0.00 + 0.00) / (4) = 0.00 <br>
+
+ <table border="1" style="border-collapse: collapse; width: 100%; table-layout: auto;">
+  <tbody>
+    <tr>
+      <td style="padding: 5px; font-weight: bold; ;"><b>Time</b></td>
+      <td style="padding: 5px; font-weight: bold; ;"><b>Events</b></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">0.00s</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">Simulation Start<br>(No job running)</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">5.00s</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">Job0 arrived<br>Starting Job0 (resp = 0.00s)</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">10.00s</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">Job1 arrived<br>Starting Job1 (resp = 0.00s)</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">11.00s</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">Job2 arrived<br>Starting Job2 (resp = 0.00s)</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">17.00s</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">Job3 arrived<br>Completed Job2 (TAT = 6.00s)<br>Starting Job3 (resp = 0.00s)</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">18.50s</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">Completed Job1 (TAT = 8.50s)</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">20.50s</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">Completed Job0 (TAT = 15.50s)</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">23.00s</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">Completed Job3 (TAT = 6.00s)</td>
+    </tr>
+  </tbody>
+</table> <figure>
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABUAAAAMQCAYAAADmWM/2AAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjExLjAsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvlcelbwAAAAlwSFlzAAAViAAAFYgBxNdAoAAAXGBJREFUeJzt3QeYVNX9P/5DFxCsERTBhgVLbFiIsceGDaNGjTWW2GJM1GhsUWOJXYwaNVFjj4kae429YYuiiA0FUbGiICBK3f/zOd//7I+yFCNsOfN6Pc8+M3v37uyde2fP3Hnfc86nWU1NTU0CAAAAAChQ84beAAAAAACAuUUACgAAAAAUSwAKAAAAABRLAAoAAAAAFEsACgAAAAAUSwAKAAAAABRLAAoAAAAAFEsACgAAAAAUSwAKAAAAABRLAAoAAAAAFEsACgAAAAAUSwAKAAAAABRLAAoAAAAAFEsACgAAAAAUSwAKAAAAABRLAAoAAAAAFEsACgAAAAAUSwAKAAAAABRLAAoAAAAAFEsACgAAAAAUSwAKAAAAABRLAAoAAAAAFEsACgAAAAAUSwAKAAAAABRLAAoAAAAAFEsACgAAAAAUSwAKAAAAABRLAAoAUA/efffd/FUxduzYdPLJJ6fdd9893XHHHU3qGHz11VfpnXfeScOHD69d9uyzz6b9998/HX744enjjz9u0O0D+C5qampymzZ48ODaZaNHj04nnHBC2mOPPdL9999vh9Yh2vrYb/F+VnH99dfnfXbmmWemCRMm2G8NJN6f49iMGjWqdtk999yT9t5773T88cenMWPGODaF++STT/Jr4Ouvv65ddtNNN6U999wznX766WncuHGp2jSridYeAIC5Jj48b7XVVql37975A0jYeeed0y233FK7zoMPPpg222yzJnEUttxyy/TAAw/UbnMEuyuttFLtyfQqq6ySXnnlldSsWbOG3lSAWYq2ONrkn/3sZ+mf//xnXhZtdiX4bN68eXryySfTj370I3tzioB4iSWWSJMnT07vvfdemn/++dM111yT9tlnn9p9FBfE+vbta5/VszgmK664Yg6/3njjjbTsssumxx57LG288ca162y//fbp9ttvd2wK9c0336Qll1wyh59DhgxJP/jBD3Lbtuuuu9auc+CBB6bLLrssVRM9QAEA5rKLL7443/7617+uvSp/9913p2eeeSaddNJJeVlT+ZAYH6gi/FxhhRVqA9srr7wy/eQnP0mDBg1K3bt3TwMGDEgPPfRQQ28qwP/URkdP0CeeeCK9+OKL6Xe/+10OlC688EJ7cwo33HBDGjFiRO5NFuFnuOSSS9IZZ5yRHn/88dSyZct0xRVX5KCU+hUXJ996660c4kf4Gf7yl7+kQw45JPXv3z8frzvvvHOqUSmUJcLOzz77LO222245/Kz8f5500knp6aefTq1bt84XLOJ/uJoIQAEA5rLXXnuttmdkiJ5EvXr1yl+HHXZYXvbCCy80yecS4sPuL3/5yxx+VnoXNJXnA1Bp11ZeeeXaNm3TTTdNa665Zjr00EPzMm3azN8LYkh1hGu/+tWv0gYbbJB69uyZe59FD0Qax/t0vJZXXXXVPIojBgL/97//dWiq5DUQI3See+65fM4ZPdnj69tvv80XrKuJABQAYC6rzMHVtm3bfPvqq6+mNdZYI99fcMEF8/DKmK8rehk1tecSH6LiRLvyfCo9DT7//PMG3EqA2VfppdiuXbvp2mht2uy9FwwcODAtvfTSqUOHDvZbIzs2n376aX6Nx8iN4DVdfa+BN998My266KJpoYUWqurXgAAUAGAu69KlS759/fXXa3tiRM+iynD4CD47d+6cg9Cm9lxefvnlfIK9+OKL5++HDRuWb+NEG6ApWGyxxWbYRmvTvvv7mv3W+I7N6quvXnuO4TVdPv+fdWs5g+UAAMwh2267be4lGcPEowhBDDvbfPPN88+iWFCo9DZq7GLYVPRajbnx9ttvv9xTarvttqv9eVN7PgDRRl900UW5QvY666yT50asFIzRps14n0Wl99hvkyZNSldffXXtXKoxtPbtt9/OPWorvQ6pPzH3Z4sWLdLNN9+cOnXqlOccj/OPikqRwghFKff/8+STT06XX355no/3+uuvT2eddVb+2YQJE/LUFG3atMkFLKtJ4+9mAADQxB155JE5EIzeGHEyesEFF9QOQ4oCQuEXv/hFagqit2d84I3bq666Ks/7FifZ4YMPPsjFj7p165Y22WSTht5UgNly3HHH5fk/IxiKIC+Khcw777xNso2uz4thUVRn7Nix6Zxzzsnzfu688861BVjiveFnP/tZ7bQC1J94Dz7ttNPy/SjeFSMyKvONR2/QCPg33HDDtNRSSzkshYpzzt/+9rf5YsS5556b1lprrbT77rvnn/373//OxY922GGHNN9886Vq0qwmJm4CAGCui8rCMe9SZY60EJXgx48fn9Zbb73UqlWrJnMU4sNtzB21xBJL1A6ri4qjEfJGj5MePXo09CYCzLb4WDxkyJDcfrVv3752eRSti2lK1l9//SYxTUl9i/klY/9MOe1JVCD/+OOPc+/PmN6FhvHll1/mQlRdu3atXTZ06ND8Ol9yySXzF2WL87To8VmZ5iMMGjQoT4Ow3HLLTbW8GghAAQAAAIBimQMUAGAuiuruTz31VJ4P7auvvsrLOnbsmLp37557fTa13jEvvfRSLnwUvQdi6OM888yTFllkkbTKKqukXr165bmmAJpSD8ann34694qqVE6OYaHLLrts+vGPf1xbLZn/Z9y4cXmfReX3eI+L76PXbAy9jkJIMZ0ADSPmY3322WfTgAED8mv7m2++ydMQRA/d1VZbLfXs2TPP/0m5osdn/H/G3PPRA7Ty/7n44ovn/88f/vCHqVo5QwUAmAvef//9PPfnbbfdlj+Q1CWGU/bu3TvPCRqBaGN200035XnyYujcjMS8pkcffXQ66qijDBUFGrWYBzHmyLvnnnvyEO66RCGZ7bffPp1//vl5uo9qF9O1nHrqqenPf/5zbVhcl5gC5eyzz07bbLNNvW5ftU/hEMfljDPOyNPRzEiE1KecckraZ5996nX7mPsmTpyYj3+cU44cOXKG6y233HK5gFnMAVptDIEHqAdRGCSuvsXJc8zxFyfaMcF+XKGNOaUOPPBAV2OhIB9++GHuZRG9LyIUjJPMVVddNVdPj9Az5uWK3hkRjsY6sbxfv375pLQxigIXEWyGqJAcFeyjeEL0Kom2LZ5vzJP34IMP5vYtJtqPiqMAjdE777yT1l133fTFF1/kHuzRRkcv9miLI0iKNvrVV1/NbXT0cIx1XnjhhRweVavYL3HB7v777889/eN+FEKKOQRbt26d54WOUPnee++trTIeBaQUj6of8Vnir3/9a97vm266aS5yFK/XGKURozXee++9XKQwegaGk046qbaAIWXo06dPuuOOO/KFm6222iqPMurSpUuu9l75/7z//vvzSJ5w6aWXpoMOOihVlSiCBMDcM2TIkJqWLVvWLL300jUTJkzIy04++eQoQFf7dcEFFzgEUJC99947/29vscUWNaNGjZrhemPHjq3Zcccd87p9+vSpaYw+/fTTmlatWtU0b9685h//+MdM133++edr5ptvvvx8HnvssXrbRoDvYsp29+uvv57heqNHj67p3bt3XnePPfao6p1888035/3QuXPnmoEDB8503b/85S953Y4dO+b3OeauF154Ie/v9u3b1zzxxBMzXfeOO+7In0viPX3o0KEOTSHuuuuu/BpYeOGFa1555ZWZrnvllVfmddu1azfTc9QSKWMHMJdddtlleUjCIYcckq+YxxX0uOJ23XXX5SGloW/fvnk5UIb//Oc/tf/bU1Z8n1bbtm3TxRdfnO9Hz4zG6PHHH8/zSW222WZp1113nem6a621Vm1vgsb6fAAqbfRFF12Ue7LPyLzzzpsuvPDCfL/a27TKPoupXVZcccWZrnvwwQfnuQZjmPzzzz9fT1tYvSrHJoa1x8iymdluu+3ytA4xWuPRRx+tpy2kvl4Dhx9++Czn+Nx3331z79DoGfzMM89U1cERgALMZTEBdYihVeHNN9/MYecee+yRdtlll1wAZejQoXmSaqAMX3/9db7t1KnTLNeNAhsxLD5ORGc0D11TeS5TrhfDrQAao2hvQwxtnxVt2v/xXtB4OTZ4DcweASjAXFaZJD56eoWYU2r11Vev/XmluqgAFMpRmcsz5o+bldtvvz0Hn1FxOILQxvpcovfT6NGjZ7puXNyJ5xOWX375etk+gO8q2ttQaa9m5t///ne+rfY27bu8r0URnspck411buuSVPbxnXfeOcOiixVRFT7mgQzV/pqu1v/PL7/8Mo/uqcbXQOM7ywYoTEw+HV5//fV8G284MSyoYtiwYfl20UUXbaAtBOa0Qw89NN/G1BdRMTeKD9RVHC2KC+2999616zZGvXr1SmussUb66KOP0gYbbJDuvvvu2t5TFTFE/qmnnsoVf5944om08MILp5133rnBthlgdtroKNBz1lln5fZ4WjE65/TTT6+d1qOxttH1JYZXt2/fPgcsMYIphrZPG7bFRf9bbrklv1d89dVXeeqUStjM3BNFvKIY1Ysvvpi22GKL9Nhjj6Xx48fXGXxutNFGafDgwalHjx75PmXYc889U8eOHdN9992XfvrTn+ZCuzEF25TGjBmT/39jmoQoABe3K6+8cqomqsADzGU33nhjrogcQ6j22muvXP095txZe+21c+Xkrl275urwdQUkQNN1/PHHpzPPPLN2WHvMJRcV4cOIESNqe4eHww47LM8X2hh7gIZonyLcHDhwYP4+qszG0NGYOy8+ZEUl+8qJdiyPE+yoDgzQGEVv9SOOOCLP71mZgz3ma44q8JUeUpUe79HeHX300bk9r3YRoO22225p5MiR+ftWrVrlNr9SBX7K0UzrrLNOrkg9u9On8P3897//zXN7VjpWRCXw2PdRATzCz+iVWzkfiVD6nnvuEU4X5pFHHskXn6P9mvb/M4bIf/7557XtXVzYvuuuu3JwXk0EoABzWYQC8WZUGWb129/+Np1//vn5/imnnJJOPvnk/HXSSSc5FlCYAQMGpCuvvDL3ihw0aFDtvJjRi2aZZZbJV9+jB9KUvcIbc1sWF3Qi3Hz55Zfzh6xYFqFtTOUR8xxvvfXWab/99ptp4SeAxuKll15Kf//739OTTz6Z3nnnndp59OKCVYRE0UZHwZBVV121oTe10YieY1dccUUOQ+OiWHwfwVqELXFRP97P4rx3xx13bLQX9UoVr9+rr746B1sx5VaEntFLN4qwxkiz1VZbLfXp0yfXIYhQjPLEBfY477z33nvz/+fw4cNr/z+7dOmS/z/jf/NnP/tZDsmrjQAUoJ5Eb8+YB7TSAyy88sor+Y0qTkjmn39+xwIKV+l9UcqHwhj6HifVACUorY2uL94LGi/HBq+B/0cACgAAAAAUq2VDbwBA6UNRYljVG2+8kedjieGiMaxqqaWWynMjxRBYoGwx/CgKBL399tu5KESIieq7d++e1ltvvdS5c+fU1IaMVobARzGkeeaZJ88xFUPgo2BSDLUDaCpiDuOoWB7TlFTmZp5vvvnyEPgf//jHeYoPZi2GWn/yySf5PWHK0U40vJj3MY5N9Gw2J2t19PiMNu21117L836OGzcuT720+OKL5yHwP/zhD1O1coYKMBfECfSxxx6brrrqqvTtt9/OcL0IQWM+UMVCoDzvv/9+OvLII/OcmdNWyq2IDyO9e/dOF1xwQQ5EG7ObbropHXfccWnIkCEzXCc+9EaxkKOOOsoQUqBRe/fdd/O87FEMpjL0fVoxR14UlolztShYWc0iSIkL+5UCeFOGLSeccEK6/PLLay/yLb/88umss87K+465L6bTin0fRbziAuuUwee5556bv2I+0BAh2B/+8Id0wAEHODSFiY42Z5xxRj6nrBQqq8tyyy2Xi7rtsMMOqdoYAg8wh0WlxQg0+/fvn+f8jJO/tdZaK19xjZ5RcYLy1ltv5QnKo7dBTEIe9zfffHPHAgqa87dnz565Z1GEgnGSGUU04sNJhJ7RIzwKJEU4GuvE8n79+uWT0sbonHPOycFm5cJNtFfRkz0+BEfPgni+0dv9wQcfzEHC7rvvnq6//vqG3myAOkXBo3XXXTcX8IlAL9ro6MUebXGERtFGRxGZaKOjF3+s88ILL6Ru3bpV7R7daaed0q233ppuvvnmfL9il112Sf/617/ye9vKK6+c9128JzRr1ixXgd92220bdLurQVx0PO+88/J7ddyvOOaYY9LZZ5+d7/fo0SOH1fHaDxdffHE69NBDG2ybmfOiwFX8z8WFm6222iqPMorCR23atMlFON99991cvCxG8oRLL700HXTQQdV1KGoAmKPOOeecmmhee/ToUfPBBx/McL1JkybV/P73v8/rdu/e3VGAguy99975f3uLLbaoGTVq1AzXGzt2bM2OO+6Y1+3Tp09NY/Tpp5/WtGrVqqZ58+Y1//jHP2a67vPPP18z33zz5efz2GOP1ds2AnwXU7a7X3/99QzXGz16dE3v3r3zunvssUdV7+TKPrv55ptrlz311FN5WevWrWseffTRvGzy5Mk1hx12WF6+7LLL5u+Zu4488si8v+MzSMXQoUNrWrRokZffcMMNtcvPO++8vCzeq2f22qdpueuuu/JxXXjhhWteeeWVma575ZVX5nXbtWs303PUEilvBzCH/ec//8m3f/zjH/MwkxmJK+WnnXZa7lUQV2OHDh3qWEBh7UDfvn1Thw4dZrhe9BKPXhjhoYceSo3R448/nnuNbLbZZmnXXXed6brR273Sm6CxPh+ASht90UUXTTWce1oxb/uFF16Y72vTpnf33Xfn23hv2GijjfL96PkZw2sXWGCBPNIp5r+m/t133315+p0NNtgg/fznP69dHtM+xBQFMSItRm5QVpt2+OGHz3KOz3333Tf3Do153J955plUTQSgAHNYzI8UZmeS8RiisPDCC+f7MTQBqL52IApsxAWROBGd0Tx0TeW5TLmeNg1orKK9DXERela0aTOf6zrEdAJTilA5hsOHwYMHf69jxZw9NhFQr7322o5NYZyrzR4BKMAcVpnDL+aNmpWoDv/mm2/muVmqfXJ9qNZ24Pbbb8/BZ1QcjiC0sT6X6P00evToma4bc+fF8wnRwwSgMYr2NlTaq5n597//nW+1adOrFNyJ0QzTiqrToTG+r1UDx6a6fJfzzi+//DKP7qnGdk1rBDCHHXzwwflkL4a+xuTir732Wg4FphST7v/9739Pm266aQ4+9tprrzzMCihDpbDAIYcckk499dT03nvvTbfOBx98kAsW7L333rXrNka9evVKa6yxRvroo4/yULoY8ljpPVURQ+SfeuqptM0226Qnnngi92zfeeedG2ybAWanjf7FL36Rq5VHezytmJro9NNPr53Wo7G20fUtCiHFFE7x9fHHH9de0J/WkCFD8u0yyyxT79tYrR5++OHaY1M5Jo5Nddhzzz1z6B1TH/z0pz9Nzz77bK4KP6UxY8bkgHT99dfPn0XjttJTu1qoAg8wF1x99dU5CP3222/z9/PMM08e5hpV4EeNGpXfdCoiMLjppptqr5QDZTj++OPzPGiVYe1xkSMqwocRI0bktqDisMMOyxdNGmtPmQhwo60aOHBg7RC6GDoawxzHjx+fK9lXTrRjeZxg/+hHP2rgrQaoW1yYPuKII/L8npWL1DFfc1SBr/SQqvR4j/bu6KOPzu15NatUga9L165d83yfMaIpRKC81FJLpaWXXjq99dZbeR8y96vA1yU+X0QYHZ9DQlzAjBoFcW4SFzZnNgcuTcsjjzySLz5H+xVatWqVz8lat26dh8h//vnnte1dXNi+66670mKLLZaqiQAUYC6Jk7+//e1vedhoDHMfOXJkftOJk8Mll1wyrbPOOnlS8i222MIxgEINGDAgXXnllblXZHw4rMyLGR9IoldMXH2PHkhrrrlmauwi4LzxxhtzuPnyyy+nYcOG5WUR2sYHq1VWWSVtvfXWab/99ptp4SeAxuKll17KI3KiGEwUpKzMoxcXrGKYfLTRUTBk1VVXTdUuzmWHDx8+w5/He8B8882X719++eXp0ksvzT1tDzjggHrcyuoUFyk//PDDmQ6Prsx3G6HXiSeemHbYYYd00kkn1eNWUh/iAnucd9577735onX8z0bYHWFoly5d8vnmjjvumH72s5/lWhTVRgAKUE8i/IxqjNELFKhOld6gjbWn53cVQ9/jpBqgBKW10QDO1f4fASgAAAAAUCzdkADmohhKFcOqYgLymI8lhovGsKqYFymGwJsYHgAAAOYuASjAXBDFTY499th01VVX1RZCqkuEoOeff75iIVDlomJnFBOK+TWb+pDyqEB6ySWXpN69e6uaDBQxLH677bbL8+XdcccdDb05TUYUjXrqqafy+fB6663X0JvDFOLzyb///e88Z3fMBUr1Oe+889Kjjz6aC2httNFGqVoIQAHmsG+++SZtuOGGqX///qlt27Zp1113TWuttVbq1KlTnv/zq6++yhUxYxLy5557Lm288cb5/uabb+5YQJWKyerHjRuX5wlu6gHo0KFD0z333JOrzAKUEIBGm1aNBUO+jxdffDHvt3322aehN4VpvP766/nYVFPwxdSimGW8BuJzajUxByjAHHbuueem3/3ud6lHjx7pwQcfnGEIECfUxx9/fL5C3r1791whGqhOUSU+2oQNNtigyRff+Oijj9Lbb7+dFltssVx5FqCpF7F8/PHHU7NmzfIFbmZPVKD+/PPP00orrZR+8IMf2G2NyLvvvps++OCDPBVX165dG3pzaABvvPFG+vTTT/Pn1eikUy0EoABz2BZbbJGDz5tvvjnttNNOM103entFSPDZZ5+l9957Ly2xxBKOBwAAAMxBTbuLAUAjLXwUZudqWgynWnjhhfP9MWPGzPVtAwAAgGpjDlCAOSyGfD799NO5mMn6668/y+EHb775ZmrTpo3en1Co4cOH50IQMSw85gAOHTt2zFNfRGGIzp07p5JMnDgxF3+LuUyjbQNobAYMGJBWXHFF83r+jwYPHpzb+JjmKaYGCDGNS5z7xnltly5dcnGd+eabb04eNmZDjC579tln82s8hjhHbYJ27dqlRRddNK222mqpZ8+etceM6vLhhx/m6Q+WWmqp1K1bt1SVagCYo55//vma5s2b1zRr1qzmkEMOqRkwYEDN5MmTp1pn+PDhNVdddVXNoosuWhNN8QEHHOAoQGGGDh1as9NOO9W0aNEi/5/X9RVtxTbbbFMzaNCgmlJceuml+bkdeOCBDb0pANOZMGFCbqPiHOzoo4+uefPNN+2l2dSvX7+a7t27176HrbLKKjUDBw6sGTduXM2GG2441ftbp06dal577TX7tp7EZ42+ffvWLLLIIjM854ivbt261fz97393XAo0cuTImoMOOii3bfH/t+eee9Z89tln+WdHHXVUPuesvA522223/H9bbcwBCjAXXH311enggw/OvaDCPPPMkyeAjyrwo0aNSl988UXtuttss0266aabUvv27R0LKOgqe/SyiN4XCy20UO4Js+qqq6YFF1wwFzn68ssvc++M6C0T68Tyfv36FVE06LLLLsvt34EHHpjvAzS2XurRe3FKvXr1Svvuu2/aZZddUocOHRps2xr7FE9RNCfes6L3WLxfxftWjGI45JBD0pFHHpn22muv/N73t7/9Lb/HrbPOOrk3InNfvOf+9a9/zb07N91001ywK45TfAYZO3ZsrjXw0EMP5VFq4aSTTkonn3yyQ1OQzTbbLB/jEL1+47ivu+666aijjsp1KVZYYYXcC/jee+/Nn0ejaO/ZZ5+dqokAFGAuieqKcQIYb0QxHGjkyJG5kmgMCV1yySXzSeHPf/7zXDQJKMs+++yTrrnmmvz/HQXRZvSBOoam7bnnnunWW29Nffr0yYFoUycABZpCABrzsN999935XO2uu+5KEyZMyKFBBAURhm6wwQaGCtfRtq+55prpySefTG3btk0vv/xyWmuttfL9jTfeON1555153U8++SQPs42OADFcPu4z97z44ov5OERnivvuu2+mU3DFMdpxxx3zlAVDhgyp3qHQhXn00UfTJptski+ox2fPCDqvu+66tPfee+fPndHevfLKK/k18sQTT+SAPM5NoxBvhOTVQhEkgLmka9eu6Y9//GN65plncm+vmJMnTq7jZDAC0Uo4ApTnP//5T77t27fvTHsTxYfGiy++ON+vXLVvjB96o0fJ7H7FB2SApmDLLbfMF6Ci1/5ZZ52V56689tpr00YbbZSWXXbZdNppp+WfkdLAgQNrL/DFe1dYffXVcw+zKOTZu3fv2t0UvULXXnvtfP+tt96y++rpnCOOzazqD2y33XZp++23zwFohGaUIS5KhF/84hf5/zLOx6JH9iqrrJJ7/+622261ow3j4k6PHj3S6NGjU//+/VM1EYAC1JN4I4oh8EB1DBUMnTp1muW6MT1GDIuPoUrxgaSxqRRLiCA3hj/O6iueD0BTssgii6Sjjz46F6t77LHH0u67756GDRuWTjzxxFykMoLSf/3rX6maxZDZShG/KVW+n3feeadaXvl+/Pjx9baN1eq7nHNMuV4E15Qz8jAsv/zyUy2vfB/t2JTifC1EO1dNBKAAAHNYZS7P2RnSfvvtt+fgM3obRRDa2MTcpSEqJr/zzjuz/Iqe7wBNVQwNvf7669NHH32U/vznP6eVVlopPfDAA3naomoWw2jDf//739plMbLp1VdfzfffeOONqdav9PyMcJn6OeeI4e0x4mxmYuqd+++/v86wjKarcvH5q6++mmp5TL0Wph3m3vL/75TTunXrVE0a31k2QJX57W9/mwshRXAAlOHQQw/Nt1EY4tRTT83Dj+q6Wn/OOefk+Zkq6zZGMYwxeos8//zzufgFQDVYYIEF0mGHHZYDvijks//++6dqtu222+bbyy+/PE/v8sgjj+T3r3hf2GqrrfJcqq+//nqe7/6SSy5J7777bh45ULmIxtwThRYXW2yxPBdoTK8VvZin7XlbCT5jeoeYlzWGQMd9ylD5P6tMVVER88xfcMEFuTjZlCrnpZWeoNVCESSABhZvSHE1/YUXXpjuzQlouo4//vh05pln1g5rj+GAURE+jBgxonY4YYgP2fGBsjH2AA377bdfuuqqq9KVV16Zi4PMTMxvHNWAYy6yc889t962EeC7FkGK+8y+CIHjfWBKxx57bNpll11ycc9x48bl97rK0Oq4AHjCCSfYxfUgPkvE3J6VIc3x+o6Ll9EDMMLPKHZTOR+JESf33HNPvqUMMY1SzL0bPTpj3uKZFTb67LPPcvGrRRddNF+oaKznnnODABSgEZywxCTUUVVzZsVSgKZnwIAB+cNiVNwcNGhQ7YfCmIg+rrpHsYKYsD7+/xuz4cOH5xPqGGIVRUIAmqoIgaJgTwREEQIx+6J35z//+c/04IMP5hA5en726dMn/yyWHXfccbnQZ7xPHHjggemII46we+t5LtCrr7463XXXXbnncgRdMSQ+hjtH2BWVweN47bHHHlU39LkaxHEfOnRoPsaLL774DNf7+9//ns4777z0y1/+Mv36179O1UQACgBQTyq9L6rpajsA0DBintYIqwEBKAAAAABQMN0PAOpZTEoexU9Gjhxp3wO1w9Yqw+ObuphTL55LzAUHUIJo06KdZvZ9++23eb/Nqio5QH0RgALMYR9//HGurDdt9cUoeHLAAQfkqqIx8XTcRtGjp556yjGAKhfFkWIO4PjA2NRdccUV+bkcfvjhDb0pAHPkok60afPNN5+9+R3EPJOx32677Tb7rZ7E/J+bbbZZWmuttdLBBx+chgwZUud6f/zjH3PBnEsvvdSxKUhcbLj44ovTRhttlIuSxRy88bm0Lr/61a/ya+DWW29N1UQACjCHbbvttmmppZbKk49PefIcE8VHMBBz8ayxxhq5mEgUQPrJT36SbwEAAL6rE088MRdVfOihh9KLL76YLrvssrTKKqvkolXTik4Zn376qV7NhTnooIPSYYcdlh5//PH0/PPPpwsuuCCtvPLKuUDZtEaOHJlfA998802qJgJQgHoQJx/PPPNMWnDBBXPYGV/Dhg1LP/3pT/Mw0d///veOAwAA8J28//776U9/+lO+/4c//CFPtfXss8+mNddcM/385z/PPUMpW3y2jI42UWQzgs+PPvooPfroo2mJJZbInXPuvvvuht7ERkEAClAPKm86MdwgrsaGqMh44YUXphYtWuQ3qLFjxzoWUIh55pknNWvWbLa/GvN8mdGL5Ls8lxh2B9BYxaic79KmqaD9f3baaafvtN+qbWhtQ7rvvvvy8OdNN900nXLKKWnxxRfPQ6AfeeSR3Ct0v/32S9ddd11Dbyb18Flzt912S7/5zW/SoosumofCRwec3r175//f++67r+qPQcuq3wMA9XRlNqy77rpTLY8TlMUWWyxfqR06dGjq0aOH4wEFiA9/Yemll669PzODBw9ONTU1qTGqbH/M5bbIIovMcv0YWvf555/Xw5YBfHdTtsnLLLPMbP3Ou+++W/W7urLfOnXqlOadd95Z7o9PPvnEEOt6Ep8hwo9//OOplkcni7/97W95+q199tkn9w7cfffd62uzaASvgbgg/69//Sv16dMn7bDDDun2229PW265ZdUeGwEoQD3o2LFjvm3btu10P2vfvn2+jZMSoAyrrrpqeu6559INN9ww3YWPusQJamPtBRrPJay44op5SN3s9BjVCxRorCIUWmmlldLAgQNzGBBz5M2qx6heoP/3XnDLLbek/fffP5122mmz3M/R40wv0PpRKdBV12iyCK6vvPLKNGLEiLT33nunli1FQNX2Goj2K/53N9tssxyC3nXXXala+bQNMJdcddVV+QQxvipvRm+88cZU60SPr7hiF+FnFE4CyhDzLYUSTjLXXnvt3OMnJtSPCfMBmrqS2uj6Yp81Xssvv3y+HTRoUJ0/j9AzegGut956aY899siFkqiu10B0wrn77rvTcsstl7bbbrv08ssvp2okAAWYSy699NJckTG+nnjiibxs2knI+/Xrl6vvbbLJJql169aOBRQiTi6/y4frhRdeOC200EKzNVy+vsUF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kFluZ4SrdYnAdeWVV/7OzxsAAAAAqIIeoOeee24OKddee+307rvv5mrxI0eOTLfcckuaZ555Ut++fdOgQYOm+70IP88555w8x2cEmDG3Z+/evdMXX3yRzjjjjNr14udhvvnmm+4xosfplOsAAAAAAE1fowpA77nnnnx74403pqWWWqp2+Y477ph7gE6ePDnP4zmtrbbaKh111FGpefP/ezoLL7xwuu6661Lbtm1rHzNEoaMwceLE6R6jsqyyzsz069evzi+9PwEAAACgcWlUAWgMXY/5PmMez2mtv/76+TZ6hc7OkPQFF1wwD3WPKu8VCyywQL79/PPPp1s/htlPuQ4AAAAA0PQ1qgC0devWacyYMXX+rDI0vU2bNtP9bGa/06pVq9rvK3N//ve//51u3ZdeemmqdQAAAACApq9RBaArrrhiDi3vuOOO6X52ww035NuVVlppup/ddtttady4cVMte/755/M8olOuv+mmm+bbq666Kk2YMKF2eVSXv/zyy/P9zTbbbA4+IwAAAACgITWqAPQXv/hFvt1zzz3T2WefnZ555pl0//33p1122SXdfvvtaaGFFkrbbbfddL8XQWeEm7HOc889ly677LK07bbb5mBz7733rl0vKsyvttpqaeDAgWmHHXZIjz32WHr66afT7rvvngspxdD7Lbfcsl6fMwAAAAAw98y64s9c1KxZs6m+32OPPdJ//vOfdO2116Zjjjlmqp9FQaPrr78+dejQYbrHOeigg3IP0Qg1pxS9OQ855JCp/t4111yTNtxww1wcacoCSe3bt8+Fk6YcMg8AAAAANG0NEoBW5uyM0HFaEVBG782bbropDRkyJM/52bNnz3TYYYelZZdddqp1IwyNIe5RBOnwww9PZ511VhowYEB+3O233z6Hny1atJjqd374wx+mV199NZ133nl5mHxUll9jjTXSEUcckbp37z6XnzkAAAAAUHwA+vLLL+fbrl271vnznXbaKX/NSgxpf+2112q/v/LKK2fr78ff7du372xvLwAAAADQNNVrABo9L2P+zeOPPz5/H0PRAQAAAACKCEBjqPmkSZPy/RjW3qdPn/r88wAAAABAlanXAHTllVfO83ZuvPHG6cgjj0wtWzZoDSYAAAAAoHD1mkD279+/Pv8cAAAAAFDlmjf0BgAAAAAAzC0CUAAAAACgWAJQAAAAAKBYAlAAAAAAoFgCUAAAAACgWAJQAAAAAKBYAlAAAAAAoFgCUAAAAACgWAJQAAAAAKBYAlAAAAAAoFgCUAAAAACgWAJQAAAAAKBYAlAAAAAAoFgCUAAAAACgWAJQAAAAAKBYAlAAAAAAoFgCUAAAAACgWAJQAAAAAKBYAlAAAAAAoFgCUAAAAACgWAJQAAAAAKBYAlAAAAAAoFgCUAAAAACgWAJQAAAAAKBYAlAAAAAAoFgCUAAAAACgWAJQAAAAAKBYAlAAAAAAoFgCUAAAAACgWAJQAAAAAKBYAlAAAAAAoFgCUAAAAACgWAJQAAAAAKBYAlAAAAAAoFgCUAAAAACgWAJQAAAAAKBYAlAAAAAAoFgCUAAAAACgWAJQAAAAAKBYAlAAAAAAoFgCUAAAAACgWAJQAAAAAKBYAlAAAAAAoFgCUAAAAACgWAJQAAAAAKBYLRt6AwBKM3r06NSxY8eG3gyggUyaNKmofT9x4sSG3gQAGtjZZ5/d0JvANMaOHWufwHcgAAWYSyEoAACUYPz48Q29CQDfiyHwAAAAAECx9AAFmAM6dOiQvh43MdWklJqllNq30bxCNSqtHSjt+QDVTZtmv5X6mm7epl1Dbwo0es5kAeaAYcOGpR4n3p++mTAptW3VIr1x6pb2K1Sh0tqB0p4PUN20afZbya9pYOYMgQcAAAAAiiUABQAAAACKJQAFAAAAAIolAAUAAAAAiiUABQAAAACKJQAFAAAAAIolAAUAAAAAiiUABQAAAACKJQAFAAAAAIolAAUAAAAAiiUABQAAAACKJQAFAAAAAIolAAUAAAAAiiUABQAAAACKJQAFAAAAAIolAAUAAAAAiiUABQAAAACKJQAFAAAAAIolAAUAAAAAiiUABQAAAACKJQAFAAAAAIolAAUAAAAAiiUABQAAAACKJQAFAAAAAIrVsqE3AACgBF26dEmfDB+RalJKzVJKHS9s+qdZX4+bWNTzAaqbNu377bcWbdqldOrwOXxUAOqHM1kAgDlg9OjRafL4b/L9+KA4enw5u7W05wNUN23a/2byHD4OAPXJEHgAAAAAoFh6gAIAzAXt2rUrYr9OnDixoTcBgAYyfrzu/0AZBKAAAHMh/LznnnuK2K+PP/54Q28CAA3kjDPOEIICRTAEHgAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAAChWgwSg77//flphhRXSvvvu+70e56mnnsqPc+21187270yYMCE99NBD6fDDD0+rrrpq/v14HAAAAACgPC0b4o+OHz8+vfXWW2nxxRf/Xo8zZsyY/DhffvnlbP9OBJ6DBw+e7nEAAAAAgPJU3RD46AG66aabpr59+6addtqpoTcHAAAAACitB2hDevPNN1O7du3y/UGDBjX05gAAAAAA1dQDtKamJv3zn/9MO+ywQ1pttdXSOuuskw499NA81H1m3n777Tyn6BprrJE22GCDdN555+Wh9tOqhJ8AAAAAQPlaNrbwc88990w33HDDVMuff/75dNVVV6Vbb7019e7du87w86STTkqjRo2qXfbkk0+m++67L91///2pZctG9TQBAAAAgGrsAXrdddfl8LNDhw7pnHPOSc8991x68MEH06677pq+/fbbHI6OHj16ut+7/PLLc0X3u+66K7344ovpr3/9a+rcuXN6+OGH0yWXXDLHt7NXr151fr322mtz/G8BAAAAAP+7RtU18pprrsm3119/fdpuu+1ql2+22WY5AL399tvTHXfckfbYY4+pfq979+7poYceSq1bt87fr7nmmmn11VfPw+evvfbadPjhh9fzMwEAAAAAGoNGFYAOHDgw9/6cMvysiNAzAtBYZ1p9+vSpDT8revbsmZZeeuk61/+++vXrV+fy6AUKAAAAADQejWoI/IQJE9K8885b588qy+sqbDSj34kwdeLEiXN4KwEAAACApqJRBaBdu3ZNH3/8cXrnnXem+1kUNQpLLLHEdD97+umnp1s2fPjw9Oabb+bHBAAAAACqU6MKQLfddtt8u/vuu6d33323tjL8zTffnM4777zUvHnzOqvAP/DAA+nMM8+s7e352Wef5SHz33zzTdp6663r+VkAAAAAAI1Fg84B2qxZs6m+P/LII9ONN96Ynn/++VzYaNFFF81V38eMGZN//rvf/S4vn9YGG2yQjj322HTyySenH/zgB2nYsGE5OI37xx9//FTrHn300enOO+/M9z/99NN8e8ABB6T27dvn+3/+85/T5ptvPteeMwAAAABQeA/Qyjye0xYumn/++dNTTz2Vdtlll9SmTZs8HD7Cz8UWWyz17ds3nX322XU+3g477JAuueSSPBfohx9+mMPP9dZbLz3++OM5RJ3SRx99lN566638NXLkyLwsfqeybNSoUXPteQMAAAAAVdAD9L333su30UNzWhFY3nTTTWncuHE5rIwgNALQuqy//vrpjTfeSJ06dUoLLLBA+uUvf5l/J3pzLrTQQnX+zjnnnJNOOOGEGW5bly5d/ufnBQAAAABUeQAaPTrPP//8fH/NNdec4XoRfC611FIzfawIOldYYYXa71u2bJm6des209+JgHXaXqEAAAAAQJnqNQDt0aNHGjx4cB4C37FjxzzUHQAAAACgiDlABw0alMPPCELvvvvutMgii9TnnwcAAAAAqky99gB9/fXX03zzzZfn7AQAAAAAKCoAXW655erzzwEAAAAAVa5eh8ADAAAAANQnASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUKyWDb0BAAClGTt2bNp6661TCSZOnNjQmwBAAxk/frx9DxRBAAoAMJdCUAAAoOEZAg8AAAAAFEsPUACAOaBDhw7p63ETU01KqVlKqX2bpn+aVdrzAaqbNu377bfmbdrN4SMCUH+cyQIAzAHDhg1LPU68P30zYVJq26pFeuPULZv8fi3t+QDVTZv2/fcbQFNlCDwAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUKyWDb0BAAA0Pl26dEmfDB+RalJKzVJKHS902gg0bV+Pm5jbtBZt2qV06vCG3hwA6pEzWQAApjN69Og0efw3+X4EBqPH20lAGSY39AYAUO8MgQcAAAAAiqUHKAAAs9S6dWt7CWiyxo/XjR2gmglAAQCYZfh53HHH2UtAk3XGGWcIQQGqmCHwAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxWjbEH/3yyy/T+eefn7p375722Wef//lxBg0alK655pq09dZbp169es3W79TU1KQXXnghvfrqq+njjz9OCy20UFp//fXTKqus8j9vBwAAAADQODVYAHr66aenTTfd9HsFoO+++25+nIUXXni2AtA77rgj/eY3v0nvvffedD/bfvvt0/XXX5/mnXfe/3l7AAAAAIDGpUEC0IYSPT+HDh2a1llnnbTSSiulzp07p7feeivdfvvtORw9+OCD03XXXdfQmwkAAAAAzCFVFYDusMMOaf/9909LLrnkVMsfeuihtMUWW6R//vOf6Yorrkht2rRpsG0EAAAAAAoPQEeMGJHuvffeNGTIkBxG9uzZM2200UapWbNmM/ydyZMnp/vvvz/1798/D2Pv3bt3nmN0SmuuuWadv/uTn/wkrbDCCun1119PY8aMEYACAAAAQCEaXQAavTAPOOCANHr06KmWr7322um2225Liy222HS/880336RNNtkkPf7447XLjjzyyHT22Wen3/72t7P8mxMnTkxffPFF6tatWy6KBAAAAACUoVEFoC+99FLaY489ciC57rrr5ursX331VZ6j8/nnn89D2J999tnpeoJGRfmxY8emvffeOy266KL5cR588MEcgq666qo5HJ2Z8847L3366ad5+PvsmFHBpddeey2tvPLK3+EZAwAAAABVE4BGEBnhZwSX5557bu3yP/3pT7lwUYSgjzzySK4eP20P0Jdffjktt9xytcsuvPDCXPE9HnNmAWj0Kj3++OPT7rvvnvbbb7+59MwAAAAAgIbQPDUizzzzTGrVqlU67bTTplq+4IILpmOOOaZ2nWlFeDll+Bl+/etfp0UWWST169dvhn/vpptuSrvsskvq06dPuvrqq2d7O+Mx6/rS+xMAAAAAGpdGFYCOHDkyde7cOc0zzzzT/WzppZfOt19++eV0P5u2qnuIYfJLLLFEfsy6XHbZZTk4jWH1EYS2bNmoOsMCAAAAAKUFoAsssED6+OOP83ye03rnnXfybV1FigYPHlxnVfj33nsvP+a0Tj/99HTwwQfn3p833nij8BMAAAAACtWoAtAf//jHeQ7Q4447LtXU1NQu//zzz9NZZ51Vu860brjhhlyAaEox92f83nrrrVe7LB7ziCOOSCeccELaa6+90vXXX59atGgxV58TAAAAANBwGtW47yh+9M9//jMXMHryySdzeDlq1Kh09913py+++CL96Ec/ShtttNF0v9exY8e01lprpe233762CvwTTzyRh8EfddRRU/X8vOCCC9L888+funTpkv7whz9M91i/+tWv8jB8AAAAAKDpa5AANIan5z8+zbybq666ap6PM6qxR4gZXxXR8/OWW26p8/Gi2vtDDz2Uw9OK1q1bp759+6YNNtigdlkMiQ8xL2hUlq/LTjvtJAAFAAAAgEI0SAA6fPjw2p6b04qiRJtuuml68MEH05AhQ1KbNm1Sz549c+/PaUXl91NPPTVtsskm6eijj04PP/xwGjBgQGrfvn3aaqutUrdu3aZ77LoKJk0pepACAAAAAGVokAD0zjvvzLcrrLBCnT+PYDR6Ys5KVIaP+TwrNttss/w1I1tvvXX+AgAAAACqQ70GoMcff3wuVlQJQKNHJgAAAABAEQFoVHKfNGlSLk4Uld5XX331+vzzAAAAAECVqdcANObrjOHtUcl9pZVWqs8/DQAAAABUoXoNQI899tj6/HMAAAAAQJVr3tAbAAAAAAAwtwhAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBitWzoDQAAoHEbP358OuOMMxp6MwC+VzsGQPUSgAIAMEvCAwAAmipD4AEAAACAYukBCgDAdDp06JC+Hjcx1aSUmqWU2rdx2gg0bZU2rXmbdg29KQDUM2eyAABMZ9iwYanHifenbyZMSm1btUhvnLqlvQQ0aVO2aQBUF0PgAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBitWzoDQAAAIC5qUuXLumT4SNSTUqpWUqp44U+Cs+ur8dNtN8aKceGymugRZt2KZ063A6ZCa0+AAAARRs9enSaPP6bfD/CgtHjG3qLmh77rfFybJhsF8ySIfAAAAAAQLH0AAUAAKCqtG7duqE3oUlp2VJ00Fi1aNGioTeBBuzZzuzTigEAAFBV4edxxx3X0JvRpGy44YYNvQnMwEYbbWTfVKmOHTsKQb8DQ+ABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGIJQAEAAACAYglAAQAAAIBiCUABAAAAgGI1SAA6fvz41L9///Tuu+9+r8cZPXp0fpzPP//8O//ut99+m9566630/vvvp5qamu+1HQAAAABA49QgAWiEjquvvno68MADv9fjPP300/lxbrjhhtlaf9y4cemiiy5KPXv2TO3atUsrrLBCWmKJJVKnTp3S6aefniZNmvS9tgcAAAAAaFxapirywQcfpF//+tf5fvv27dPiiy+ePvvss9yD9IQTTsg/v+yyyxp6MwEAAACAOaSq5gCdZ5550jHHHJMGDhyYxowZk9588830xRdfpBtvvDG1atUq/fWvf02ffvppQ28mAAAAAFB6AFoJKIcMGTLbc3TGEPe33347ffTRR3X+PHp8nnnmmWnFFVesXdasWbO02267pc033zz/nfh7AAAAAEAZGl0A+uGHH6YddtghLbDAAqlHjx5p6aWXTossskg6++yzZxqEXnjhhalz585p+eWXT126dElrrbVWevXVV2frb8bjRs/P5s2bpyWXXHIOPhsAAAAAoCE1qjlAv/zyy7TeeuvlIkkRRi611FLpq6++SsOHD89D16NnZ9++faf7vX/961+pX79+qUOHDql79+7pvffeSy+++GLaeOON0yuvvJJ7fk7bU/SNN95IkydPTh9//HG6+uqr8/qHHnpoDlFnpVevXnUuf+2119LKK6/8PfYAAAAAAFBsD9Bzzz03h5/rrrtuHoo+ePDgPEfn7bffntq2bZv+/Oc/5yHu04rw84ILLshh6aBBg3Jvzm233TYHqmecccZ068djR/X4NddcM22zzTbp7rvvzsFqVIgHAAAAAMrRqHqA3nPPPfk2ihJ169atdvn222+fjjrqqHTqqaeme++9Ny233HJT/V7v3r3Tb37zm9rvF1xwwXTNNdfknp+xfl3FkFZdddU0adKkHJZWqsDPO++8ab/99pvldkbg+l16hgIAAAAADaNR9QD94IMP0qKLLpqHvk/rxz/+ce0604oeo9OKOURjPtCYU3RaMc9n//7904ABA9Jnn32WXnjhhdSpU6f0y1/+Mg+FBwAAAADK0KgC0DZt2uTq73UZNWpU7TrTGj169Ax/p1WrVrP8uz179kzHH398nhO0rh6jAAAAAEDT1KgC0JVWWimHmbfddtt0P7vuuuvybV1Fhv7973/nwkZTevbZZ/McolOuP3bs2Bn+7TfffPN7bj0AAAAA0Ng0qjlA99133/Twww+nvfbaKx177LF52Hv04vz73/+e7rzzzrTwwgun7bbbrs6iRhtuuGGeJzSG0L/88svplFNOSTU1NWmfffapXe+kk05Kr776atppp53S0ksvndq3b5+rwN911125EnyzZs3S1ltvXc/PGgAAAAAoMgCNwHFKP//5z9NDDz2UA88Ykj6ldu3a5eJIUahoWocccki64YYb0s477zzV8i233DIddNBBtd9H4Pnggw/mr2k1b948/elPf8qV4QEAAACAMjRIAFqZ5zMCyWldddVVuZfnTTfdlHt2xpyfMUfnr371q9xrc0odO3bM1dyjCFJUgT/77LNzYaN43Kgcf+CBB6YWLVrUrn/yySenzTffPP3rX/9Kb7zxRhoxYkSuGL/GGmuk3XffPQ/BBwAAAADK0SAB6EsvvZRvu3btWufP+/Tpk79m5Uc/+lGu5l5x+eWXz9bvxBcAAAAAUL6W9R18Dhw4MB133HH5+4033rg+/zwAAAAAUGXqNQBde+2106RJk2rvxzB1AAAAAIAiAtDVVlstdejQIff8jDk7p5yfEwAAAACgSQegL774Yn3+OQAAAACgyjVv6A0AAAAAAJhbBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsQSgAAAAAECxBKAAAAAAQLEEoAAAAABAsVo29AYAAABAfRk/fnw644wz7PDv4Oyzz7a/GqkWLVo09CbQQEaPHm3ffwcCUAAAAKpKhKDYX0D1MAQeAAAAACiWHqAAAAAUrUOHDunrcRNTTUqpWUqpfRsfhWeX/dZ4OTZUXgPN27SzM2ZBqw8AAEDRhg0blnqceH/6ZsKk1LZVi/TGqVs29CY1GfZb4+XYMOVrgJkzBB4AAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAACiWABQAAAAAKJYAFAAAAAAolgAUAAAAAChWs5qampqG3ohSdOrUKY0dOzatvPLKDb0pQAPo/8HINLmmJjVv1iyt1nV+xwCqUGntQGnPB6hu2jT7rTRe0zTV18Brr72W2rVrlz799NN6+5st6+0vVYFRo0aliRMnNvRmAA2k5Vcf5lsXQaB6ldYONKUTaWhMH+pKagdKok2z30prB7ymaaqvgXbt2qUFFligXv+mAHQOWm211fJtv3795uTDAk1Er1698q02AKqXdgDQDgDaAWh8zAEKAAAAABRLAAoAAAAAFEsACgAAAAAUSwAKAAAAABRLAAoAAAAAFKtZTU1NTUNvBAAAAADA3KAHKAAAAABQLAEoAAAAAFAsASgAAAAAUCwBKAAAAABQLAEoAAAAAFAsASgAAAAAUKyWDb0BJXjzzTfTDTfckIYMGZIWWGCBtM0226QtttiioTcLqAc33XRTuuWWW+r8WZcuXdKFF17oOEBBxowZkx588MF03333pREjRqQddtgh7b777jP9nTvvvDM98MAD6auvvkrdu3dPe+21V1p66aXrbZuBOevzzz9P9957b3r44YfT2LFj0+GHH57WX3/9Otc95JBD0meffVbnz3bbbbe04447OjzQBNuAO+64Iw0cODB9+umnqVOnTmmTTTZJW2+9dWrevO4+ZiNHjkzXXHNN6t+/f15nnXXWSXvuuWdq27ZtvW8/VCsB6Pd07bXXpgMOOCCNHz++dtnFF1+c9tlnn3TVVVelZs2afd8/ATRir732Wrr11lvr/Nnyyy9f79sDzD0nnXRSOuuss9K4ceNql0WgOSMTJ05MO++8c7r99tunWn722WfniyfbbbedwwVNzK677ppuvvnmNHny5Nplffr0mWEAGkHp0KFD6/zZaqutNte2E5g7/vSnP6U//OEP+T1+Sn379k3rrbdeuuuuu3KnqCm99dZbadNNN03Dhg2rXRZZQXSUePTRR9MiiyzicEE9EIB+D++8807af//904QJE3LgGY1a9AI999xz09VXX5169eqVfvnLX865owU0WhGKTNujq2PHjg22PcCcFx9gWrVqlXr37p0/3MSH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" data-quizgen-hash="bc35014cc86f5fd6" alt="Process Scheduling Overview">
+  <figcaption>Process Scheduling Overview</figcaption>
+</figure></section></details></section><section class="review-question" data-question-number="6"><header class="review-question-header"><div class="review-question-title">Question 6: Question 6</div><div class="review-question-points">1 point</div></header><div class="review-question-body">
+
+Given the information below, please calculate the following values.
+
+ <table border="1" style="border-collapse: collapse; width: 100%; table-layout: auto;">
+  <tbody>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Block Size</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">5120 Bytes</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Inode Number</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">111</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Inode Start Location</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">10240 Bytes</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Inode size</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">512 Bytes</td>
+    </tr>
+  </tbody>
+</table> <table border="1" style="border-collapse: collapse; width: 100%; table-layout: auto;">
+  <tbody>
+    <tr>
+      <td style="padding: 5px; font-weight: bold; ;"><b>Variable</b></td>
+      <td style="padding: 5px; font-weight: bold; ;"><b>Value</b></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Inode address</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="85275456-f578-41ea-a361-27474118881c"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;67072&quot;]" data-blank-id="85275456-f578-41ea-a361-27474118881c" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Block containing inode</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="3103616f-79d5-4e81-9fa3-b217964e8d23"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;13&quot;]" data-blank-id="3103616f-79d5-4e81-9fa3-b217964e8d23" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Inode address (offset) within block</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="996136ca-0b2f-40ed-813d-ead5d282dc31"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;512&quot;]" data-blank-id="996136ca-0b2f-40ed-813d-ead5d282dc31" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Inode index within block</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="5dda1af5-26a4-4545-9378-042bd72dbac8"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;1&quot;]" data-blank-id="5dda1af5-26a4-4545-9378-042bd72dbac8" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+  </tbody>
+</table></div><div class="review-question-controls"><button type="button" class="recheck-button" data-action="recheck">Check this question</button></div><details class="review-spoilers"><summary>Spoilers</summary><section class="review-section"><h3>Walkthrough</h3>
+
+If we are given an inode number, there are a few steps that we need to take to load the actual inode. These consist of determining the address of the inode, which block would contain it, and then its address within the block. To find the inode address, we calculate:
+
+ <div class='math'>$$ \displaystyle (\text{Inode address}) = (\text{Inode Start Location}) + (\text{inode #}) \cdot (\text{inode size}) \; $$</div> <div class='math'>$$ \displaystyle = 10240 + 111 \cdot 512 \; $$</div> <div class='math'>$$ \displaystyle = 67072 \; $$</div> 
+
+Next, we use this to figure out what block the inode is in. We do this directly so we know what block to load, thus minimizing the number of loads we have to make.
+
+ <div class='math'>$$ \displaystyle \text{Block containing inode} = (\text{Inode address}) \text{//} (\text{block size}) \; $$</div> <div class='math'>$$ \displaystyle = 67072 \text{//} 5120 \; $$</div> <div class='math'>$$ \displaystyle = 13 \; $$</div> 
+
+When we load this block, we now have in our system memory (remember, blocks on the hard drive are effectively useless to us until they&#x27;re in main memory!), the inode, so next we need to figure out where it is within that block. This means that we&#x27;ll need to find the offset into this block. We&#x27;ll calculate this both as the offset in bytes and also in number of inodes, since we can use array indexing.
+
+ <div class='math'>$$ \displaystyle \text{offset within block} = (\text{Inode address}) \text{ mod } (\text{block size}) \; $$</div> <div class='math'>$$ \displaystyle = 67072 \text{ mod } 5120 \; $$</div> <div class='math'>$$ \displaystyle = 512 \; $$</div> Remember that <code>mod</code> is the same as <code>%</code>, the modulo operation. <div class='math'>$$ \displaystyle \text{index within block} = \frac{\text{offset within block}}{\text{inode size}} \; $$</div> <div class='math'>$$ \displaystyle = \frac{512}{512} \; $$</div> <div class='math'>$$ \displaystyle = 1 \; $$</div></section></details></section><section class="review-question" data-question-number="7"><header class="review-question-header"><div class="review-question-title">Question 7: Question 7</div><div class="review-question-points">1 point</div></header><div class="review-question-body">
+
+Assume we are using a <strong>FIFO</strong> caching policy and a cache size of <strong>4</strong>. Given the below series of requests please fill in the table. For the hit/miss column, please write either &quot;hit&quot; or &quot;miss&quot;. For the eviction column, please write either the number of the evicted page or simply a dash (e.g. &quot;-&quot;).
+
+ 
+
+For the cache state, please enter the cache contents in the order suggested in class, which means separated by commas with spaces (e.g. &quot;1, 2, 3&quot;) and with the left-most being the next to be evicted. In the case where there is a tie, order by increasing number.
+
+ <table border="1" style="border-collapse: collapse; width: 100%; table-layout: auto;">
+  <tbody>
+    <tr>
+      <td style="padding: 5px; font-weight: bold; ;"><b>Page Requested</b></td>
+      <td style="padding: 5px; font-weight: bold; ;"><b>Hit/Miss</b></td>
+      <td style="padding: 5px; font-weight: bold; ;"><b>Evicted</b></td>
+      <td style="padding: 5px; font-weight: bold; ;"><b>Cache State</b></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">0</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="ed6659be-2c39-4610-8885-8fb2e981bc2a"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;miss&quot;]" data-blank-id="ed6659be-2c39-4610-8885-8fb2e981bc2a" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="a0e8d39f-d096-42c4-8b82-23a1d967e05a"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;-&quot;]" data-blank-id="a0e8d39f-d096-42c4-8b82-23a1d967e05a" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="aff33799-f5da-4ff6-b161-9c65885db27a"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;0&quot;]" data-blank-id="aff33799-f5da-4ff6-b161-9c65885db27a" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">1</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="3d581c62-3a16-4d63-9a3d-06e13c7108f2"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;miss&quot;]" data-blank-id="3d581c62-3a16-4d63-9a3d-06e13c7108f2" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="ba8cb480-0798-4cb5-962f-64346c03ffb3"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;-&quot;]" data-blank-id="ba8cb480-0798-4cb5-962f-64346c03ffb3" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="7bcf3837-4138-45d3-ac56-df23d976d4da"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;0, 1&quot;]" data-blank-id="7bcf3837-4138-45d3-ac56-df23d976d4da" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">2</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="a5a16e4f-ef72-422d-844c-65b59259ad02"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;miss&quot;]" data-blank-id="a5a16e4f-ef72-422d-844c-65b59259ad02" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="bf136a85-d160-430d-8ab6-b89986e74062"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;-&quot;]" data-blank-id="bf136a85-d160-430d-8ab6-b89986e74062" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="3fcea50e-9acd-40ce-b7a3-61ed502f511a"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;0, 1, 2&quot;]" data-blank-id="3fcea50e-9acd-40ce-b7a3-61ed502f511a" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">3</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="14a48cb1-ee03-4924-892c-e7b3ba2b1b2e"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;miss&quot;]" data-blank-id="14a48cb1-ee03-4924-892c-e7b3ba2b1b2e" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="d8e4c5dc-2ffc-4af1-bd86-a11b61ce0671"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;-&quot;]" data-blank-id="d8e4c5dc-2ffc-4af1-bd86-a11b61ce0671" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="02fbce86-c3c4-4b71-9576-b7ead9300b25"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;0, 1, 2, 3&quot;]" data-blank-id="02fbce86-c3c4-4b71-9576-b7ead9300b25" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">1</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="1dda49c6-b9df-427f-be99-fed5357c9667"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;hit&quot;]" data-blank-id="1dda49c6-b9df-427f-be99-fed5357c9667" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="2a0f162a-0aa7-4d79-bf01-4b25365890a0"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;-&quot;]" data-blank-id="2a0f162a-0aa7-4d79-bf01-4b25365890a0" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="3bafb847-a4a2-43bf-a4d8-e4a32ef42163"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;0, 1, 2, 3&quot;]" data-blank-id="3bafb847-a4a2-43bf-a4d8-e4a32ef42163" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">5</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="ca5d0bd9-a38b-4a61-b42c-f526b79fc441"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;miss&quot;]" data-blank-id="ca5d0bd9-a38b-4a61-b42c-f526b79fc441" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="63a258b5-9316-456f-a530-f581ad52c546"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;0&quot;]" data-blank-id="63a258b5-9316-456f-a530-f581ad52c546" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="e1350f0d-ac35-4a52-8144-b8dfc31a156c"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;1, 2, 3, 5&quot;]" data-blank-id="e1350f0d-ac35-4a52-8144-b8dfc31a156c" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">6</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="6aec1332-c17d-4d73-be78-ac9b3a3011fa"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;miss&quot;]" data-blank-id="6aec1332-c17d-4d73-be78-ac9b3a3011fa" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="e8e4c90b-be75-42fe-94c9-f0ea951e6260"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;1&quot;]" data-blank-id="e8e4c90b-be75-42fe-94c9-f0ea951e6260" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="49453b10-7f92-46ce-9331-1e2124331c67"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;2, 3, 5, 6&quot;]" data-blank-id="49453b10-7f92-46ce-9331-1e2124331c67" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">1</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="feb5f50e-d782-4d3b-ab2c-ad7777d3591c"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;miss&quot;]" data-blank-id="feb5f50e-d782-4d3b-ab2c-ad7777d3591c" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="10519e3d-beb7-4f9d-8d78-93ef38ec3f7a"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;2&quot;]" data-blank-id="10519e3d-beb7-4f9d-8d78-93ef38ec3f7a" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="51ff0623-41a1-401a-aa08-dade7a51465d"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;3, 5, 6, 1&quot;]" data-blank-id="51ff0623-41a1-401a-aa08-dade7a51465d" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">2</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="907717f0-f31c-47b7-9371-5e2ee1331698"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;miss&quot;]" data-blank-id="907717f0-f31c-47b7-9371-5e2ee1331698" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="4f05b128-898d-4844-b4a6-dc53d4a689f7"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;3&quot;]" data-blank-id="4f05b128-898d-4844-b4a6-dc53d4a689f7" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="cec456f2-06a3-4e5f-9351-64463d5c24cc"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;5, 6, 1, 2&quot;]" data-blank-id="cec456f2-06a3-4e5f-9351-64463d5c24cc" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">5</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="4e46f2a9-846d-405d-ae2c-3ca9a4eafdbd"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;hit&quot;]" data-blank-id="4e46f2a9-846d-405d-ae2c-3ca9a4eafdbd" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="2619ca1b-3b91-4132-9d51-01783a373312"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;-&quot;]" data-blank-id="2619ca1b-3b91-4132-9d51-01783a373312" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="76c39182-3fa5-4d4a-bb7b-e5ba8d04c35e"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;5, 6, 1, 2&quot;]" data-blank-id="76c39182-3fa5-4d4a-bb7b-e5ba8d04c35e" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">0</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="14539472-9836-4053-9a75-f892891c1a25"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;miss&quot;]" data-blank-id="14539472-9836-4053-9a75-f892891c1a25" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="3479508f-0c1e-4b10-b93a-7d658e036d90"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;5&quot;]" data-blank-id="3479508f-0c1e-4b10-b93a-7d658e036d90" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="0108629c-5492-4a61-9f11-660ec62ee5e3"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;6, 1, 2, 0&quot;]" data-blank-id="0108629c-5492-4a61-9f11-660ec62ee5e3" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">6</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="acaa10a5-786d-4db7-a7a8-2c3af3069c87"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;hit&quot;]" data-blank-id="acaa10a5-786d-4db7-a7a8-2c3af3069c87" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="e06b31ff-00a0-4030-9c53-529076ac4dd1"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;-&quot;]" data-blank-id="e06b31ff-00a0-4030-9c53-529076ac4dd1" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="df29235f-8795-4094-8488-2ef9e557addf"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;6, 1, 2, 0&quot;]" data-blank-id="df29235f-8795-4094-8488-2ef9e557addf" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">6</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="2ba764cd-43a3-4907-b33b-f497e4129d8a"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;hit&quot;]" data-blank-id="2ba764cd-43a3-4907-b33b-f497e4129d8a" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="1550df2f-a1ec-427a-8508-67fca45a4348"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;-&quot;]" data-blank-id="1550df2f-a1ec-427a-8508-67fca45a4348" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="dcbdcb7e-b563-4078-9f12-ba34374f3514"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;6, 1, 2, 0&quot;]" data-blank-id="dcbdcb7e-b563-4078-9f12-ba34374f3514" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">4</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="f5dd54e5-fe4c-4eaa-b74d-642751ea1875"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;miss&quot;]" data-blank-id="f5dd54e5-fe4c-4eaa-b74d-642751ea1875" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="06623a64-5863-4bb2-bc1f-69cd79fbabaf"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;6&quot;]" data-blank-id="06623a64-5863-4bb2-bc1f-69cd79fbabaf" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="25f9a442-871a-4ed6-b0f2-ada0a74de2b8"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;1, 2, 0, 4&quot;]" data-blank-id="25f9a442-871a-4ed6-b0f2-ada0a74de2b8" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">5</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="076e6615-c16b-415d-bae1-15a5fd5bdb6a"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;miss&quot;]" data-blank-id="076e6615-c16b-415d-bae1-15a5fd5bdb6a" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="dc88a2b1-615f-4622-94c5-923c609575e5"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;1&quot;]" data-blank-id="dc88a2b1-615f-4622-94c5-923c609575e5" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="377f193b-901a-43d7-a872-083990611bcc"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;2, 0, 4, 5&quot;]" data-blank-id="377f193b-901a-43d7-a872-083990611bcc" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">2</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="46c946ff-7966-4bdb-b76d-9e44af485a3f"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;hit&quot;]" data-blank-id="46c946ff-7966-4bdb-b76d-9e44af485a3f" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="e67329b2-57de-4ef6-9e8e-eaec0292107f"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;-&quot;]" data-blank-id="e67329b2-57de-4ef6-9e8e-eaec0292107f" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="cfb19de6-9746-4ae8-ae5b-566a6a2b3953"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;2, 0, 4, 5&quot;]" data-blank-id="cfb19de6-9746-4ae8-ae5b-566a6a2b3953" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">2</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="c26d3144-5dfe-414c-ba62-7ba4300582e8"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;hit&quot;]" data-blank-id="c26d3144-5dfe-414c-ba62-7ba4300582e8" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="cc71d567-cd57-48b7-b4f1-41ab43c77787"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;-&quot;]" data-blank-id="cc71d567-cd57-48b7-b4f1-41ab43c77787" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="3783d3e5-1276-4993-b34d-87d57d6b3abf"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;2, 0, 4, 5&quot;]" data-blank-id="3783d3e5-1276-4993-b34d-87d57d6b3abf" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">2</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="78802766-c7b1-4b22-97f8-7bf2dc5df6ba"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;hit&quot;]" data-blank-id="78802766-c7b1-4b22-97f8-7bf2dc5df6ba" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="fbb67e9f-41aa-4090-9fc6-c410b5c85d54"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;-&quot;]" data-blank-id="fbb67e9f-41aa-4090-9fc6-c410b5c85d54" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="f803df03-550d-420a-ba31-b336a81da589"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;2, 0, 4, 5&quot;]" data-blank-id="f803df03-550d-420a-ba31-b336a81da589" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">1</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="8f7e674b-b7db-4229-a874-1fbf30aa4092"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;miss&quot;]" data-blank-id="8f7e674b-b7db-4229-a874-1fbf30aa4092" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="d0c44045-ecda-472e-8c72-58b616cedc6d"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;2&quot;]" data-blank-id="d0c44045-ecda-472e-8c72-58b616cedc6d" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="2cdd702a-eb7b-4f17-a2cf-106d9dbb6ad7"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;0, 4, 5, 1&quot;]" data-blank-id="2cdd702a-eb7b-4f17-a2cf-106d9dbb6ad7" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+  </tbody>
+</table> <table border="1" style="border-collapse: collapse; width: 100%; table-layout: auto;">
+  <tbody>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="26e33852-a148-499f-98b6-bb7a83cea45e"><span class="quizgen-answer-label">Hit rate, excluding non-capacity misses:</span><input type="text" class="quizgen-answer-input" data-accepted="[&quot;140/3&quot;, &quot;280/6&quot;, &quot;560/12&quot;, &quot;46.6667&quot;]" data-blank-id="26e33852-a148-499f-98b6-bb7a83cea45e" aria-label="Hit rate, excluding non-capacity misses" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-answer-unit"> %</span><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+  </tbody>
+</table> <div class="answer-warnings"><p><strong>Notes for answer entry</strong></p><ul><li>Enter lists as comma-separated values with a space after the comma (e.g., <code>1, 2, 3</code>).</li><li>Round floats to 4 decimal places (fewer if exact, e.g., <code>1.25</code>). No mixed numbers (e.g. use <code>5/4</code>, not <code>1 1/4</code>). Integers as integers (e.g., <code>2</code>, not <code>2/1</code>).</li></ul></div></div><div class="review-question-controls"><button type="button" class="recheck-button" data-action="recheck">Check this question</button></div><details class="review-spoilers"><summary>Spoilers</summary><section class="review-section"><h3>Walkthrough</h3>
+
+The full caching table can be seen below.
+
+ <table border="1" style="border-collapse: collapse; width: 100%; table-layout: auto;">
+  <tbody>
+    <tr>
+      <td style="padding: 5px; font-weight: bold; ;"><b>Page</b></td>
+      <td style="padding: 5px; font-weight: bold; ;"><b>Hit/Miss</b></td>
+      <td style="padding: 5px; font-weight: bold; ;"><b>Evicted</b></td>
+      <td style="padding: 5px; font-weight: bold; ;"><b>Cache State</b></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">0</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">miss</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">-</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">0</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">1</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">miss</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">-</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">0,1</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">2</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">miss</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">-</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">0,1,2</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">3</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">miss</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">-</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">0,1,2,3</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">1</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">hit</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">-</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">0,1,2,3</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">5</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">miss</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">0</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">1,2,3,5</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">6</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">miss</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">1</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">2,3,5,6</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">1</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">miss</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">2</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">3,5,6,1</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">2</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">miss</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">3</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">5,6,1,2</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">5</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">hit</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">-</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">5,6,1,2</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">0</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">miss</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">5</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">6,1,2,0</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">6</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">hit</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">-</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">6,1,2,0</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">6</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">hit</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">-</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">6,1,2,0</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">4</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">miss</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">6</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">1,2,0,4</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">5</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">miss</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">1</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">2,0,4,5</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">2</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">hit</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">-</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">2,0,4,5</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">2</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">hit</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">-</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">2,0,4,5</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">2</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">hit</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">-</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">2,0,4,5</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">1</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">miss</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">2</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">0,4,5,1</td>
+    </tr>
+  </tbody>
+</table> 
+
+To calculate the hit rate we calculate the percentage of requests that were cache hits out of the total number of requests. In this case we are counting only all but 4 requests, since we are excluding capacity misses.
+
+</section></details></section><section class="review-question" data-question-number="8"><header class="review-question-header"><div class="review-question-title">Question 8: Question 8</div><div class="review-question-points">1 point</div></header><div class="review-question-body">
+
+Given the information below, please calculate the following values.
+
+ <table border="1" style="border-collapse: collapse; width: 100%; table-layout: auto;">
+  <tbody>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Hard Drive Rotation Speed</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">11000RPM</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Seek Delay</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">7.0ms</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Transfer Rate</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">149MB/s</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Number of Reads</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">2</td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Size of Reads</td>
+      <td  style="padding: 5px ; vertical-align: top; ;">10KB</td>
+    </tr>
+  </tbody>
+</table> 
+
+All calculated answers should be entered in milliseconds (ms). Make sure that if you round your answers you use the unrounded values for your final calculations, otherwise you may introduce error into your calculations. (i.e. don&#x27;t use your rounded answers to calculate your overall answer)
+
+ <table border="1" style="border-collapse: collapse; width: 100%; table-layout: auto;">
+  <tbody>
+    <tr>
+      <td style="padding: 5px; font-weight: bold; ;"><b>Variable</b></td>
+      <td style="padding: 5px; font-weight: bold; ;"><b>Value</b></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Rotational Delay (ms)</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="1f8a0e40-cb0a-4dc7-b042-fbc2437b99fc"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;30/11&quot;, &quot;2.7273&quot;]" data-blank-id="1f8a0e40-cb0a-4dc7-b042-fbc2437b99fc" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-answer-unit"> ms</span><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Access Delay (ms)</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="ca5ddef8-4850-4591-9f26-5ca6e144e173"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;107/11&quot;, &quot;9.7273&quot;]" data-blank-id="ca5ddef8-4850-4591-9f26-5ca6e144e173" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-answer-unit"> ms</span><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Transfer Delay (ms)</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="abede4dc-1356-42e3-85de-467c4283d1fe"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;0.1311&quot;]" data-blank-id="abede4dc-1356-42e3-85de-467c4283d1fe" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-answer-unit"> ms</span><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+    <tr>
+      <td  style="padding: 5px ; vertical-align: top; ;">Total Disk Access Delay (ms)</td>
+      <td  style="padding: 5px ; vertical-align: top; ;"><span class="quizgen-answer-field" data-blank-id="90010b38-3e7f-463a-bde8-34a9fc51e5e0"><input type="text" class="quizgen-answer-input" data-accepted="[&quot;19.5856&quot;]" data-blank-id="90010b38-3e7f-463a-bde8-34a9fc51e5e0" aria-label="Answer" autocomplete="off" autocapitalize="off" spellcheck="false" style="width: min(100%, 26ch); min-width: 18rem;"><span class="quizgen-answer-unit"> ms</span><span class="quizgen-feedback" aria-live="polite"></span></span></td>
+    </tr>
+  </tbody>
+</table> <div class="answer-warnings"><p><strong>Notes for answer entry</strong></p><ul><li>Round floats to 4 decimal places (fewer if exact, e.g., <code>1.25</code>). No mixed numbers (e.g. use <code>5/4</code>, not <code>1 1/4</code>). Integers as integers (e.g., <code>2</code>, not <code>2/1</code>).</li></ul></div></div><div class="review-question-controls"><button type="button" class="recheck-button" data-action="recheck">Check this question</button></div><details class="review-spoilers"><summary>Spoilers</summary><section class="review-section"><h3>Walkthrough</h3>
+
+To calculate the total disk access time (or &quot;delay&quot;), we should first calculate each of the individual parts. Since we know that:
+
+ <div class='math'>$$ \displaystyle t_{total} = (\text{# of reads}) \cdot t_{access} + t_{transfer} \; $$</div> 
+
+We therefore need to calculate  \(t_{access}\)  and  \(t_{transfer}\) , where  \(t_{access} = t_{rotation} + t_{seek}\) .
+
+ 
+
+Starting with the rotation delay, we calculate:
+
+ <div class='math'>$$ \displaystyle t_{rotation} = \frac{1 \text{ minute}}{11000 \text{ revolutions}}\cdot \frac{60 \text{ seconds}}{1 \text{ minute}} \cdot \frac{1000 \text{ ms}}{1 \text{ second}} \cdot \frac{1 \text{ revolution}}{2} = 2.73ms \; $$</div> 
+
+Now we can calculate:
+
+ <div class='math'>$$ \displaystyle t_{access} = t_{rotation} + t_{seek} = 2.73ms + 7.00ms = 9.73ms \; $$</div> 
+
+Next we need to calculate our transfer delay,  \(t_{transfer}\) , which we do as:
+
+ <div class='math'>$$ \displaystyle t_{transfer} = \frac{2 \cdot 10 \text{ KB}}{1} \cdot \frac{1 \text{ MB}}{1024 \text{ KB}} \cdot \frac{1 \text{ second}}{149 \text{ MB}} \cdot \frac{1000 \text{ ms}}{1 \text{ second}} = 0.13ms \; $$</div> 
+
+Putting these together we get:
+
+ <div class='math'>$$ \displaystyle t_{total} = \text{(# reads)} \cdot t_{access} + t_{transfer} = 2 \cdot 9.73 + 0.13 = 19.59ms \; $$</div></section></details></section>
+    </form>
+  </div>
+
+  <script>
+    (() => {
+      const normalize = (value) => (value ?? '').toString().trim().replace(/\s+/g, ' ');
+
+      const gradeInput = (input) => {
+        let accepted = [];
+        try {
+          accepted = JSON.parse(input.dataset.accepted || '[]');
+        } catch (error) {
+          accepted = [];
+        }
+
+        const actual = normalize(input.value);
+        const ok = accepted.some((candidate) => normalize(candidate) === actual);
+        const feedback = input.parentElement?.querySelector('.quizgen-feedback');
+
+        input.classList.toggle('is-correct', ok);
+        input.classList.toggle('is-incorrect', !ok);
+        if (feedback) {
+          feedback.textContent = ok ? 'Correct' : 'Wrong';
+          feedback.classList.toggle('is-correct', ok);
+          feedback.classList.toggle('is-incorrect', !ok);
+        }
+        return ok;
+      };
+
+      const gradeCheckboxOption = (option) => {
+        const input = option.querySelector('input[type="checkbox"]');
+        if (!(input instanceof HTMLInputElement)) {
+          return true;
+        }
+
+        const shouldBeChecked = option.dataset.correct === 'true';
+        const ok = input.checked === shouldBeChecked;
+        const feedback = option.querySelector('.quizgen-feedback');
+
+        option.classList.toggle('is-correct', ok);
+        option.classList.toggle('is-incorrect', !ok);
+        if (feedback) {
+          feedback.textContent = ok ? 'Correct' : 'Wrong';
+          feedback.classList.toggle('is-correct', ok);
+          feedback.classList.toggle('is-incorrect', !ok);
+        }
+        return ok;
+      };
+
+      const gradeQuestion = (question) => {
+        const inputs = Array.from(question.querySelectorAll('.quizgen-answer-input'));
+        const checkboxOptions = Array.from(question.querySelectorAll('.quizgen-checkbox-option'));
+        let allCorrect = true;
+        for (const input of inputs) {
+          const ok = gradeInput(input);
+          if (!ok) {
+            allCorrect = false;
+          }
+        }
+        for (const option of checkboxOptions) {
+          const ok = gradeCheckboxOption(option);
+          if (!ok) {
+            allCorrect = false;
+          }
+        }
+        question.classList.add('submitted');
+        question.classList.toggle('all-correct', allCorrect);
+        return allCorrect;
+      };
+
+      const gradeAll = () => {
+        const questions = Array.from(document.querySelectorAll('.review-question'));
+        questions.forEach((question) => gradeQuestion(question));
+      };
+
+      const resetAll = () => {
+        document.querySelectorAll('.quizgen-answer-input').forEach((input) => {
+          input.value = '';
+          input.classList.remove('is-correct', 'is-incorrect');
+          const feedback = input.parentElement?.querySelector('.quizgen-feedback');
+          if (feedback) {
+            feedback.textContent = '';
+            feedback.classList.remove('is-correct', 'is-incorrect');
+          }
+        });
+        document.querySelectorAll('.quizgen-checkbox-option').forEach((option) => {
+          const input = option.querySelector('input[type="checkbox"]');
+          if (input instanceof HTMLInputElement) {
+            input.checked = false;
+          }
+          option.classList.remove('is-correct', 'is-incorrect');
+          const feedback = option.querySelector('.quizgen-feedback');
+          if (feedback) {
+            feedback.textContent = '';
+            feedback.classList.remove('is-correct', 'is-incorrect');
+          }
+        });
+        document.querySelectorAll('.review-question').forEach((question) => {
+          question.classList.remove('submitted', 'all-correct');
+        });
+      };
+
+      document.getElementById('quizgen-check-all')?.addEventListener('click', gradeAll);
+      document.getElementById('quizgen-reset')?.addEventListener('click', resetAll);
+      document.addEventListener('click', (event) => {
+        const target = event.target;
+        if (!(target instanceof HTMLElement)) {
+          return;
+        }
+        const button = target.closest('.recheck-button');
+        if (!button) {
+          return;
+        }
+        const question = button.closest('.review-question');
+        if (question) {
+          gradeQuestion(question);
+        }
+      });
+      document.getElementById('quizgen-review-form')?.addEventListener('submit', (event) => {
+        event.preventDefault();
+        gradeAll();
+      });
+
+      document.addEventListener('input', (event) => {
+        const input = event.target;
+        if (!(input instanceof HTMLInputElement)) {
+          return;
+        }
+        if (!input.classList.contains('quizgen-answer-input')) {
+          return;
+        }
+        if (input.closest('.review-question')?.classList.contains('submitted')) {
+          gradeInput(input);
+        }
+      });
+      document.addEventListener('change', (event) => {
+        const input = event.target;
+        if (!(input instanceof HTMLInputElement)) {
+          return;
+        }
+        if (input.type !== 'checkbox') {
+          return;
+        }
+        const option = input.closest('.quizgen-checkbox-option');
+        if (option && option.parentElement?.closest('.review-question')?.classList.contains('submitted')) {
+          gradeCheckboxOption(option);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

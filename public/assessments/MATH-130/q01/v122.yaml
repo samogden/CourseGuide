@@ -1,0 +1,15 @@
+question_html: "\n\n<p>Let  \\(f(x) = 1x - 3\\) . Find f(-1).</p>\n\n <p><label>f(x):\
+  \ <input class=\"quizgen-answer-input\" data-accepted=\"[&quot;-4&quot;]\" data-blank-id=\"\
+  q01-v122-a01\" aria-label=\"f(x)\"><span class=\"quizgen-feedback\"></span></label></p>"
+answer:
+- label: f(x)
+  accepted_values:
+  - '-4'
+  kind: fill_in_multiple_blanks_question
+explanation_html: '
+
+
+  <p>The function value is -4.</p>
+
+
+  '

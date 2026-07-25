@@ -1,0 +1,20 @@
+question_html: "\n\n<p>Find the real zeros of  \\(p(x) = (x + 1)(x + 0)\\) . Enter\
+  \ them separated by commas.</p>\n\n <p><label>Zeros: <input class=\"quizgen-answer-input\"\
+  \ data-accepted=\"[&quot;-1, 0&quot;, &quot;0, -1&quot;]\" data-blank-id=\"q03-v124-a01\"\
+  \ aria-label=\"Zeros\"><span class=\"quizgen-feedback\"></span></label></p> <div\
+  \ class=\"answer-warnings\"><p><strong>Notes for answer entry</strong></p><ul><li>Enter\
+  \ lists as comma-separated values with a space after the comma (e.g., <code>1, 2,\
+  \ 3</code>).</li></ul></div>"
+answer:
+- label: Zeros
+  accepted_values:
+  - -1, 0
+  - 0, -1
+  kind: fill_in_multiple_blanks_question
+explanation_html: '
+
+
+  <p>The zeros are -1 and 0.</p>
+
+
+  '

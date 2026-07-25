@@ -32,6 +32,13 @@ describe('planner', () => {
     expect(geArea1).toHaveClass('is-suggested', 'is-standard')
   })
 
+  it('offers the MATH 130 readiness self-evaluation from course details', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /MATH 130/i }))
+
+    expect(screen.getByRole('button', { name: /check readiness/i })).toBeInTheDocument()
+  })
+
   it('marks a general-education requirement as taken', () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: /GE Area 1 Lower Division/i }))

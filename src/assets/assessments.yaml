@@ -1,0 +1,36 @@
+schemaVersion: 1
+assessments:
+  MATH-130:
+    title: MATH 130 readiness self-check
+    introduction: This optional self-check can help you identify topics to review before MATH 130. It does not affect enrollment or your course plan.
+    questionSlots:
+      - id: q01
+        skill: Function evaluation
+        variations: 200
+      - id: q02
+        skill: Quadratic vertex form
+        variations: 200
+      - id: q03
+        skill: Polynomial zeros
+        variations: 200
+      - id: q04
+        skill: Rational-function domains
+        variations: 200
+      - id: q05
+        skill: Exponential functions
+        variations: 200
+      - id: q06
+        skill: Logarithms
+        variations: 200
+      - id: q07
+        skill: Trigonometric values
+        variations: 200
+      - id: q08
+        skill: Trigonometric equations
+        variations: 200
+      - id: q09
+        skill: Linear models
+        variations: 200
+      - id: q10
+        skill: Descriptive statistics
+        variations: 200

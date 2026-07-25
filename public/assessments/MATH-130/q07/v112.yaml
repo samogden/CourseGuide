@@ -1,0 +1,20 @@
+question_html: "\n\n<p>Evaluate  \\(\\sin(180^\\circ)\\) .</p>\n\n <p><label>sin value:\
+  \ <input class=\"quizgen-answer-input\" data-accepted=\"[&quot;0&quot;, &quot;0.0000&quot;]\"\
+  \ data-blank-id=\"q07-v112-a01\" aria-label=\"sin value\"><span class=\"quizgen-feedback\"\
+  ></span></label></p> <div class=\"answer-warnings\"><p><strong>Notes for answer\
+  \ entry</strong></p><ul><li>Round floats to 4 decimal places (fewer if exact, e.g.,\
+  \ <code>1.25</code>). No mixed numbers (e.g. use <code>5/4</code>, not <code>1 1/4</code>).\
+  \ Integers as integers (e.g., <code>2</code>, not <code>2/1</code>).</li></ul></div>"
+answer:
+- label: sin value
+  accepted_values:
+  - '0'
+  - '0.0000'
+  kind: fill_in_multiple_blanks_question
+explanation_html: '
+
+
+  <p>Use the unit-circle sine coordinate.</p>
+
+
+  '

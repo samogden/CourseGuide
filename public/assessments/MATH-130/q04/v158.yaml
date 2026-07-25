@@ -1,0 +1,16 @@
+question_html: "\n\n<p>For  \\(R(x) = \\frac{1}{x + 5}\\) , which x-value is not in\
+  \ the domain?</p>\n\n <p><label>Excluded x-value: <input class=\"quizgen-answer-input\"\
+  \ data-accepted=\"[&quot;-5&quot;]\" data-blank-id=\"q04-v158-a01\" aria-label=\"\
+  Excluded x-value\"><span class=\"quizgen-feedback\"></span></label></p>"
+answer:
+- label: Excluded x-value
+  accepted_values:
+  - '-5'
+  kind: fill_in_multiple_blanks_question
+explanation_html: '
+
+
+  <p>A rational function cannot have a zero denominator.</p>
+
+
+  '

@@ -1,0 +1,17 @@
+question_html: "<div class='math'>$$ \\displaystyle y = (x - 2)^2 - 4 \\; $$</div>\
+  \ \n\n<p>Find the turning point (also called the vertex) and enter it as (h, k).</p>\n\
+  \n <p><label>Turning point: <input class=\"quizgen-answer-input\" data-accepted=\"\
+  [&quot;(2, -4)&quot;]\" data-blank-id=\"q02-v195-a01\" aria-label=\"Turning point\"\
+  ><span class=\"quizgen-feedback\"></span></label></p>"
+answer:
+- label: Turning point
+  accepted_values:
+  - (2, -4)
+  kind: fill_in_multiple_blanks_question
+explanation_html: '
+
+
+  <p>The vertex is (2, -4); it is the parabola&#x27;s minimum.</p>
+
+
+  '

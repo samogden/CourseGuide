@@ -32,17 +32,19 @@ export function CourseCell({ slot, assignedCourseId, courseOptions, selectedTarg
   )
 }
 
-export function CourseModal({ slot, resolvedCourseId, courseOptions, selectedTarget, completed, prerequisitesMet, onClose, onCompletedChange, onTargetCourseSelect, onTargetCourseClear }: {
+export function CourseModal({ slot, resolvedCourseId, courseOptions, selectedTarget, completed, prerequisitesMet, assessmentAvailable, onClose, onCompletedChange, onTargetCourseSelect, onTargetCourseClear, onOpenAssessment }: {
   slot: PlanSlot
   resolvedCourseId?: string | null
   courseOptions?: PathSlotOptions
   selectedTarget: boolean
   completed: boolean
   prerequisitesMet?: boolean
+  assessmentAvailable: boolean
   onClose: () => void
   onCompletedChange: (completed: boolean) => void
   onTargetCourseSelect: (courseId: string) => void
   onTargetCourseClear: () => void
+  onOpenAssessment: () => void
 }) {
   const closeButton = useRef<HTMLButtonElement>(null)
   const course = resolvedCourseId ? getCourse(resolvedCourseId) : slot.type === 'course' ? getCourse(slot.courseId) : undefined
@@ -85,6 +87,7 @@ export function CourseModal({ slot, resolvedCourseId, courseOptions, selectedTar
           {selectedTarget && <button className="clear-choice-control" type="button" onClick={onTargetCourseClear}>Clear selected course</button>}
         </>}
         {slot.type === 'choice' && <p><strong>Alternatives:</strong> {slotLabel(slot)}</p>}
+        {assessmentAvailable && <button className="assessment-control" type="button" onClick={onOpenAssessment}>Check readiness</button>}
         {(!courseOptions || resolvedCourseId) && <button className="taken-control" type="button" onClick={() => {
           onCompletedChange(!completed)
           onClose()
