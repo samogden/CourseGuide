@@ -1,20 +1,13 @@
-question_html: "\n\n<p>Find the real zeros of  \\(p(x) = (x + 0)(x - 2)\\) . Enter\
-  \ them separated by commas.</p>\n\n <p><label>Zeros: <input class=\"quizgen-answer-input\"\
-  \ data-accepted=\"[&quot;0, 2&quot;, &quot;2, 0&quot;]\" data-blank-id=\"q03-v101-a01\"\
-  \ aria-label=\"Zeros\"><span class=\"quizgen-feedback\"></span></label></p> <div\
-  \ class=\"answer-warnings\"><p><strong>Notes for answer entry</strong></p><ul><li>Enter\
-  \ lists as comma-separated values with a space after the comma (e.g., <code>1, 2,\
-  \ 3</code>).</li></ul></div>"
+question_html: |-
+  <p>Find the real zeros of  \(p(x) = (x + 0)(x - 2)\) . Enter them separated by commas.</p>
+  <p><label>Zeros: <input class="quizgen-answer-input" data-accepted="[&quot;0, 2&quot;, &quot;2, 0&quot;]" data-blank-id="q03-v101-a01" aria-label="Zeros"><span class="quizgen-feedback"></span></label></p> <div class="answer-warnings"><p><strong>Notes for answer entry</strong></p><ul><li>Enter lists as comma-separated values with a space after the comma (e.g., <code>1, 2, 3</code>).</li></ul></div>
 answer:
 - label: Zeros
   accepted_values:
   - 0, 2
   - 2, 0
   kind: fill_in_multiple_blanks_question
-explanation_html: '
-
-
-  <p>The zeros are 0 and 2.</p>
-
-
-  '
+explanation_html: |-
+  <p>A product equals zero when at least one factor equals zero. Set each factor equal to zero and solve for x.</p>
+  <div class='math'>$$ \displaystyle x + 0 = 0 \quad \text{or} \quad x - 2 = 0 \; $$</div>
+  <p>This gives x = 0 or x = 2, so those are the two real zeros.</p>

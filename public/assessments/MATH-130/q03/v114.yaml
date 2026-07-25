@@ -1,20 +1,13 @@
-question_html: "\n\n<p>Find the real zeros of  \\(p(x) = (x + 3)(x - 4)\\) . Enter\
-  \ them separated by commas.</p>\n\n <p><label>Zeros: <input class=\"quizgen-answer-input\"\
-  \ data-accepted=\"[&quot;-3, 4&quot;, &quot;4, -3&quot;]\" data-blank-id=\"q03-v114-a01\"\
-  \ aria-label=\"Zeros\"><span class=\"quizgen-feedback\"></span></label></p> <div\
-  \ class=\"answer-warnings\"><p><strong>Notes for answer entry</strong></p><ul><li>Enter\
-  \ lists as comma-separated values with a space after the comma (e.g., <code>1, 2,\
-  \ 3</code>).</li></ul></div>"
+question_html: |-
+  <p>Find the real zeros of  \(p(x) = (x + 3)(x - 4)\) . Enter them separated by commas.</p>
+  <p><label>Zeros: <input class="quizgen-answer-input" data-accepted="[&quot;-3, 4&quot;, &quot;4, -3&quot;]" data-blank-id="q03-v114-a01" aria-label="Zeros"><span class="quizgen-feedback"></span></label></p> <div class="answer-warnings"><p><strong>Notes for answer entry</strong></p><ul><li>Enter lists as comma-separated values with a space after the comma (e.g., <code>1, 2, 3</code>).</li></ul></div>
 answer:
 - label: Zeros
   accepted_values:
   - -3, 4
   - 4, -3
   kind: fill_in_multiple_blanks_question
-explanation_html: '
-
-
-  <p>The zeros are -3 and 4.</p>
-
-
-  '
+explanation_html: |-
+  <p>A product equals zero when at least one factor equals zero. Set each factor equal to zero and solve for x.</p>
+  <div class='math'>$$ \displaystyle x + 3 = 0 \quad \text{or} \quad x - 4 = 0 \; $$</div>
+  <p>This gives x = -3 or x = 4, so those are the two real zeros.</p>

@@ -1,17 +1,12 @@
-question_html: "<div class='math'>$$ \\displaystyle y = (x - 1)^2 - 1 \\; $$</div>\
-  \ \n\n<p>Find the turning point (also called the vertex) and enter it as (h, k).</p>\n\
-  \n <p><label>Turning point: <input class=\"quizgen-answer-input\" data-accepted=\"\
-  [&quot;(1, -1)&quot;]\" data-blank-id=\"q02-v049-a01\" aria-label=\"Turning point\"\
-  ><span class=\"quizgen-feedback\"></span></label></p>"
+question_html: |-
+  <div class='math'>$$ \displaystyle y = (x - 1)^2 - 1 \; $$</div>
+  <p>Find the turning point (also called the vertex) and enter it as (h, k).</p>
+  <p><label>Turning point: <input class="quizgen-answer-input" data-accepted="[&quot;(1, -1)&quot;]" data-blank-id="q02-v049-a01" aria-label="Turning point"><span class="quizgen-feedback"></span></label></p>
 answer:
 - label: Turning point
   accepted_values:
   - (1, -1)
   kind: fill_in_multiple_blanks_question
-explanation_html: '
-
-
-  <p>The vertex is (1, -1); it is the parabola&#x27;s minimum.</p>
-
-
-  '
+explanation_html: |-
+  <p>A quadratic written in vertex form has the pattern  \(y = a(x - h)^2 + k\) . Its turning point is  \((h, k)\) .</p>
+  <p>Here, h = 1 and k = -1, so the turning point is (1, -1). Because the squared term has a positive coefficient, the parabola has a minimum at that point.</p>

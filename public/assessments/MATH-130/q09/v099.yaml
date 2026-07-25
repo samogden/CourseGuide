@@ -1,16 +1,12 @@
-question_html: "\n\n<p>A taxi fare is modeled by  \\(C(m) = 16 + 7m\\) , where m is\
-  \ miles. Predict the fare for 8 miles.</p>\n\n <p><label>Prediction: <input class=\"\
-  quizgen-answer-input\" data-accepted=\"[&quot;72&quot;]\" data-blank-id=\"q09-v099-a01\"\
-  \ aria-label=\"Prediction\"><span class=\"quizgen-feedback\"></span></label></p>"
+question_html: |-
+  <p>A taxi fare is modeled by  \(C(m) = 16 + 7m\) , where m is miles. Predict the fare for 8 miles.</p>
+  <p><label>Prediction: <input class="quizgen-answer-input" data-accepted="[&quot;72&quot;]" data-blank-id="q09-v099-a01" aria-label="Prediction"><span class="quizgen-feedback"></span></label></p>
 answer:
 - label: Prediction
   accepted_values:
   - '72'
   kind: fill_in_multiple_blanks_question
-explanation_html: '
-
-
-  <p>Substitute the observed input into the model.</p>
-
-
-  '
+explanation_html: |-
+  <p>The model uses m for the number of miles traveled. This trip is 8 miles, so replace m with 8.</p>
+  <div class='math'>$$ \displaystyle C(8) = 16 + 7(8) = 16 + 56 = 72 \; $$</div>
+  <p>The 16 is the starting fare, and 7 times 8 is the mileage charge. Together, the predicted fare is 72.</p>

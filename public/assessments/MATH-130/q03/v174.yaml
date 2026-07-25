@@ -1,20 +1,13 @@
-question_html: "\n\n<p>Find the real zeros of  \\(p(x) = (x + 2)(x - 6)\\) . Enter\
-  \ them separated by commas.</p>\n\n <p><label>Zeros: <input class=\"quizgen-answer-input\"\
-  \ data-accepted=\"[&quot;-2, 6&quot;, &quot;6, -2&quot;]\" data-blank-id=\"q03-v174-a01\"\
-  \ aria-label=\"Zeros\"><span class=\"quizgen-feedback\"></span></label></p> <div\
-  \ class=\"answer-warnings\"><p><strong>Notes for answer entry</strong></p><ul><li>Enter\
-  \ lists as comma-separated values with a space after the comma (e.g., <code>1, 2,\
-  \ 3</code>).</li></ul></div>"
+question_html: |-
+  <p>Find the real zeros of  \(p(x) = (x + 2)(x - 6)\) . Enter them separated by commas.</p>
+  <p><label>Zeros: <input class="quizgen-answer-input" data-accepted="[&quot;-2, 6&quot;, &quot;6, -2&quot;]" data-blank-id="q03-v174-a01" aria-label="Zeros"><span class="quizgen-feedback"></span></label></p> <div class="answer-warnings"><p><strong>Notes for answer entry</strong></p><ul><li>Enter lists as comma-separated values with a space after the comma (e.g., <code>1, 2, 3</code>).</li></ul></div>
 answer:
 - label: Zeros
   accepted_values:
   - -2, 6
   - 6, -2
   kind: fill_in_multiple_blanks_question
-explanation_html: '
-
-
-  <p>The zeros are -2 and 6.</p>
-
-
-  '
+explanation_html: |-
+  <p>A product equals zero when at least one factor equals zero. Set each factor equal to zero and solve for x.</p>
+  <div class='math'>$$ \displaystyle x + 2 = 0 \quad \text{or} \quad x - 6 = 0 \; $$</div>
+  <p>This gives x = -2 or x = 6, so those are the two real zeros.</p>

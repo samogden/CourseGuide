@@ -1,16 +1,12 @@
-question_html: "\n\n<p>Evaluate  \\(\\log_{3}(81)\\) .</p>\n\n <p><label>Logarithm\
-  \ value: <input class=\"quizgen-answer-input\" data-accepted=\"[&quot;4&quot;]\"\
-  \ data-blank-id=\"q06-v149-a01\" aria-label=\"Logarithm value\"><span class=\"quizgen-feedback\"\
-  ></span></label></p>"
+question_html: |-
+  <p>Evaluate  \(\log_{3}(81)\) .</p>
+  <p><label>Logarithm value: <input class="quizgen-answer-input" data-accepted="[&quot;4&quot;]" data-blank-id="q06-v149-a01" aria-label="Logarithm value"><span class="quizgen-feedback"></span></label></p>
 answer:
 - label: Logarithm value
   accepted_values:
   - '4'
   kind: fill_in_multiple_blanks_question
-explanation_html: '
-
-
-  <p>A logarithm asks for the exponent.</p>
-
-
-  '
+explanation_html: |-
+  <p>A logarithm asks: what exponent must be placed on the base to make the given number? Look for the exponent that makes 3 become 81.</p>
+  <div class='math'>$$ \displaystyle 3^{4} = 81 \; $$</div>
+  <p>Because this equation is true,  \(\log_{3}(81) = 4\) .</p>

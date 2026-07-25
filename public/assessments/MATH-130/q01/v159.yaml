@@ -1,15 +1,12 @@
-question_html: "\n\n<p>Let  \\(f(x) = -1x - 5\\) . Find f(0).</p>\n\n <p><label>f(x):\
-  \ <input class=\"quizgen-answer-input\" data-accepted=\"[&quot;-5&quot;]\" data-blank-id=\"\
-  q01-v159-a01\" aria-label=\"f(x)\"><span class=\"quizgen-feedback\"></span></label></p>"
+question_html: |-
+  <p>Let  \(f(x) = -1x - 5\) . Find f(0).</p>
+  <p><label>f(x): <input class="quizgen-answer-input" data-accepted="[&quot;-5&quot;]" data-blank-id="q01-v159-a01" aria-label="f(x)"><span class="quizgen-feedback"></span></label></p>
 answer:
 - label: f(x)
   accepted_values:
   - '-5'
   kind: fill_in_multiple_blanks_question
-explanation_html: '
-
-
-  <p>The function value is -5.</p>
-
-
-  '
+explanation_html: |-
+  <p>The notation f( \(0\) ) means that we use  \(0\)  in place of every  \(x\)  in the rule for the function.</p>
+  <div class='math'>$$ \displaystyle f(0) = -1(0) - 5 = -5 \; $$</div>
+  <p>So the value of the function at x = 0 is -5.</p>

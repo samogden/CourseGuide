@@ -1,16 +1,12 @@
-question_html: "\n\n<p>A taxi fare is modeled by  \\(C(m) = 7 + 3m\\) , where m is\
-  \ miles. Predict the fare for 9 miles.</p>\n\n <p><label>Prediction: <input class=\"\
-  quizgen-answer-input\" data-accepted=\"[&quot;34&quot;]\" data-blank-id=\"q09-v033-a01\"\
-  \ aria-label=\"Prediction\"><span class=\"quizgen-feedback\"></span></label></p>"
+question_html: |-
+  <p>A taxi fare is modeled by  \(C(m) = 7 + 3m\) , where m is miles. Predict the fare for 9 miles.</p>
+  <p><label>Prediction: <input class="quizgen-answer-input" data-accepted="[&quot;34&quot;]" data-blank-id="q09-v033-a01" aria-label="Prediction"><span class="quizgen-feedback"></span></label></p>
 answer:
 - label: Prediction
   accepted_values:
   - '34'
   kind: fill_in_multiple_blanks_question
-explanation_html: '
-
-
-  <p>Substitute the observed input into the model.</p>
-
-
-  '
+explanation_html: |-
+  <p>The model uses m for the number of miles traveled. This trip is 9 miles, so replace m with 9.</p>
+  <div class='math'>$$ \displaystyle C(9) = 7 + 3(9) = 7 + 27 = 34 \; $$</div>
+  <p>The 7 is the starting fare, and 3 times 9 is the mileage charge. Together, the predicted fare is 34.</p>

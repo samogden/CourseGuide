@@ -1,20 +1,13 @@
-question_html: "\n\n<p>A population follows  \\(P(t) = 500(1.5)^t\\) . Find P(1).</p>\n\
-  \n <p><label>Amount: <input class=\"quizgen-answer-input\" data-accepted=\"[&quot;750&quot;,\
-  \ &quot;750.0000&quot;]\" data-blank-id=\"q05-v077-a01\" aria-label=\"Amount\"><span\
-  \ class=\"quizgen-feedback\"></span></label></p> <div class=\"answer-warnings\"\
-  ><p><strong>Notes for answer entry</strong></p><ul><li>Round floats to 4 decimal\
-  \ places (fewer if exact, e.g., <code>1.25</code>). No mixed numbers (e.g. use <code>5/4</code>,\
-  \ not <code>1 1/4</code>). Integers as integers (e.g., <code>2</code>, not <code>2/1</code>).</li></ul></div>"
+question_html: |-
+  <p>A population follows  \(P(t) = 500(1.5)^t\) . Find P(1).</p>
+  <p><label>Amount: <input class="quizgen-answer-input" data-accepted="[&quot;750&quot;, &quot;750.0000&quot;]" data-blank-id="q05-v077-a01" aria-label="Amount"><span class="quizgen-feedback"></span></label></p> <div class="answer-warnings"><p><strong>Notes for answer entry</strong></p><ul><li>Round floats to 4 decimal places (fewer if exact, e.g., <code>1.25</code>). No mixed numbers (e.g. use <code>5/4</code>, not <code>1 1/4</code>). Integers as integers (e.g., <code>2</code>, not <code>2/1</code>).</li></ul></div>
 answer:
 - label: Amount
   accepted_values:
   - '750'
   - '750.0000'
   kind: fill_in_multiple_blanks_question
-explanation_html: '
-
-
-  <p>The modeled amount is 750.00.</p>
-
-
-  '
+explanation_html: |-
+  <p>The input t tells us how many time periods have passed. Since the question asks for 1 time periods, replace t with 1 in the model.</p>
+  <div class='math'>$$ \displaystyle P(1) = 500(1.5)^{1} = 500(1.5) = 750.0 \; $$</div>
+  <p>The population after 1 time periods is 750.00.</p>

@@ -1,16 +1,12 @@
-question_html: "\n\n<p>A taxi fare is modeled by  \\(C(m) = 12 + 2m\\) , where m is\
-  \ miles. Predict the fare for 3 miles.</p>\n\n <p><label>Prediction: <input class=\"\
-  quizgen-answer-input\" data-accepted=\"[&quot;18&quot;]\" data-blank-id=\"q09-v107-a01\"\
-  \ aria-label=\"Prediction\"><span class=\"quizgen-feedback\"></span></label></p>"
+question_html: |-
+  <p>A taxi fare is modeled by  \(C(m) = 12 + 2m\) , where m is miles. Predict the fare for 3 miles.</p>
+  <p><label>Prediction: <input class="quizgen-answer-input" data-accepted="[&quot;18&quot;]" data-blank-id="q09-v107-a01" aria-label="Prediction"><span class="quizgen-feedback"></span></label></p>
 answer:
 - label: Prediction
   accepted_values:
   - '18'
   kind: fill_in_multiple_blanks_question
-explanation_html: '
-
-
-  <p>Substitute the observed input into the model.</p>
-
-
-  '
+explanation_html: |-
+  <p>The model uses m for the number of miles traveled. This trip is 3 miles, so replace m with 3.</p>
+  <div class='math'>$$ \displaystyle C(3) = 12 + 2(3) = 12 + 6 = 18 \; $$</div>
+  <p>The 12 is the starting fare, and 2 times 3 is the mileage charge. Together, the predicted fare is 18.</p>

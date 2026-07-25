@@ -1,16 +1,12 @@
-question_html: "\n\n<p>For  \\(R(x) = \\frac{1}{x + 4}\\) , which x-value is not in\
-  \ the domain?</p>\n\n <p><label>Excluded x-value: <input class=\"quizgen-answer-input\"\
-  \ data-accepted=\"[&quot;-4&quot;]\" data-blank-id=\"q04-v044-a01\" aria-label=\"\
-  Excluded x-value\"><span class=\"quizgen-feedback\"></span></label></p>"
+question_html: |-
+  <p>For  \(R(x) = \frac{1}{x + 4}\) , which x-value is not in the domain?</p>
+  <p><label>Excluded x-value: <input class="quizgen-answer-input" data-accepted="[&quot;-4&quot;]" data-blank-id="q04-v044-a01" aria-label="Excluded x-value"><span class="quizgen-feedback"></span></label></p>
 answer:
 - label: Excluded x-value
   accepted_values:
   - '-4'
   kind: fill_in_multiple_blanks_question
-explanation_html: '
-
-
-  <p>A rational function cannot have a zero denominator.</p>
-
-
-  '
+explanation_html: |-
+  <p>A fraction is undefined when its denominator is zero, so we only need to find the value of x that makes the denominator zero.</p>
+  <div class='math'>$$ \displaystyle x + 4 = 0 \quad \Rightarrow \quad x = -4 \; $$</div>
+  <p>Therefore x = -4 is not allowed in the domain.</p>
