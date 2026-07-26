@@ -14,20 +14,174 @@
   text-align: center;
 }
 
-.course-cell:hover, .course-cell:focus-visible { filter: brightness(0.94); outline: 3px solid #1d4ed8; outline-offset: -3px; }
-.course-cell-credits { font-size: 0.72rem; opacity: 0.72; }
-.course-cell.is-completed { background: #94a3b8; border-color: #475569; color: #0f172a; font-weight: 700; overflow: hidden; position: relative; }
-.course-cell.is-completed::before, .course-cell.is-completed::after { background: #000; content: ''; height: 3px; left: -25%; opacity: 0.85; position: absolute; top: 50%; transform-origin: center; width: 150%; }
-.course-cell.is-completed::before { transform: rotate(20deg); }.course-cell.is-completed::after { transform: rotate(-20deg); }
+.course-cell:hover,
+.course-cell:focus-visible {
+  filter: brightness(0.94);
+  outline: 3px solid #1d4ed8;
+  outline-offset: -3px;
+}
+
+.course-cell-credits {
+  font-size: 0.72rem;
+  opacity: 0.72;
+}
+
+.course-cell.is-completed {
+  background: #94a3b8;
+  border-color: #475569;
+  color: #0f172a;
+  font-weight: 700;
+  overflow: hidden;
+  position: relative;
+}
+
+.course-cell.is-completed::before,
+.course-cell.is-completed::after {
+  background: #000;
+  content: '';
+  height: 3px;
+  left: -25%;
+  opacity: 0.85;
+  position: absolute;
+  top: 50%;
+  transform-origin: center;
+  width: 150%;
+}
+
+.course-cell.is-completed::before { transform: rotate(20deg); }
+.course-cell.is-completed::after { transform: rotate(-20deg); }
 .course-cell.is-completed > span { position: relative; z-index: 1; }
-.course-cell.is-suggested { box-shadow: inset 0 0 0 3px #2563eb; }.course-cell.is-stretch { box-shadow: inset 0 0 0 3px #dc2626; }
-.course-cell.is-high-priority { box-shadow: inset 0 0 0 3px #16a34a; }.course-cell.is-high-priority.is-stretch { box-shadow: inset 0 0 0 3px #dc2626, inset 0 0 0 6px #16a34a; }
+
+.course-cell.is-suggested { box-shadow: inset 0 0 0 3px #2563eb; }
+.course-cell.is-stretch { box-shadow: inset 0 0 0 3px #dc2626; }
+.course-cell.is-high-priority { box-shadow: inset 0 0 0 3px #16a34a; }
+.course-cell.is-high-priority.is-stretch { box-shadow: inset 0 0 0 3px #dc2626, inset 0 0 0 6px #16a34a; }
 .course-cell.is-limited-offering { background-image: repeating-linear-gradient(135deg, rgba(71, 85, 105, 0.22) 0 5px, transparent 5px 10px); }
-.course-status { background: rgba(255, 255, 255, 0.78); border-radius: 999px; font-size: 0.66rem; font-weight: 800; margin-bottom: 0.2rem; padding: 0.08rem 0.35rem; }.course-cell.is-blocked .course-status { background: #7f1d1d; color: #fff; }
+
+.course-status {
+  background: rgba(255, 255, 255, 0.78);
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 800;
+  margin-bottom: 0.2rem;
+  padding: 0.08rem 0.35rem;
+}
+
+.course-cell.is-blocked .course-status,
 .course-cell.is-stretch .course-status { background: #991b1b; color: #fff; }
 .course-status.priority-status { background: #166534; color: #fff; }
-.category-cst { --category-color: #d9ead3; }.category-math { --category-color: #fff2cc; }.category-ge-lower { --category-color: #fce5cd; }.category-ge-upper { --category-color: #f9ddbc; }.category-concentration-required { --category-color: #d9eaf7; }.category-elective { --category-color: #ead1dc; }
-.modal-backdrop { align-items: center; background: rgba(15, 23, 42, 0.58); display: flex; inset: 0; justify-content: center; padding: 1rem; position: fixed; z-index: 10; }
-.course-modal { background: #fff; border-radius: 0.75rem; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); color: #172033; max-height: min(44rem, 90vh); max-width: 42rem; overflow: auto; padding: 2rem; position: relative; text-align: left; width: 100%; }
-.course-modal h2 { margin: 0 2rem 0.75rem 0; }.course-modal h3 { margin-bottom: 0.25rem; margin-top: 1.5rem; }.course-modal p { margin: 0.75rem 0; }.course-modal ul { margin-top: 0.25rem; padding-left: 1.25rem; }.modal-close { background: transparent; border: 0; cursor: pointer; font-size: 2rem; line-height: 1; position: absolute; right: 1rem; top: 1rem; }.modal-kind { color: #5b6475; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }.course-name { font-weight: 700; }.modal-slot-label { color: #475569; font-size: 0.95rem; }.placeholder-note { color: #7c2d12; font-style: italic; }.prerequisite-status { border-radius: 0.25rem; font-weight: 700; padding: 0.5rem; }.prerequisite-status.is-met { background: #dcfce7; color: #166534; }.prerequisite-status.is-unmet { background: #fee2e2; color: #991b1b; }.taken-control, .option-control, .clear-choice-control, .assessment-control { background: #1d4ed8; border: 0; border-radius: 0.35rem; color: #fff; cursor: pointer; font: inherit; font-weight: 700; padding: 0.35rem 0.55rem; }.taken-control { margin-top: 1.5rem; padding: 0.65rem 0.9rem; }.assessment-control { background: #0f766e; margin-top: 1rem; }.clear-choice-control { background: #fff; border: 1px solid #64748b; color: #172033; margin-top: 0.75rem; }.taken-control:hover, .taken-control:focus-visible, .option-control:hover, .option-control:focus-visible, .assessment-control:hover, .assessment-control:focus-visible { background: #1e40af; outline: 3px solid #93c5fd; outline-offset: 2px; }.assessment-control:hover, .assessment-control:focus-visible { background: #115e59; }.clear-choice-control:hover, .clear-choice-control:focus-visible { background: #f1f5f9; outline: 3px solid #93c5fd; outline-offset: 2px; }.selected-option { color: #166534; font-weight: 700; }
-.course-modal-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }.course-modal-actions .taken-control, .course-modal-actions .assessment-control { margin: 0; padding: 0.65rem 0.9rem; }.course-modal-actions .assessment-control { background: #1d4ed8; }.course-modal-actions .taken-control { background: #15803d; }.course-modal-actions .assessment-control:hover, .course-modal-actions .assessment-control:focus-visible { background: #1e40af; }.course-modal-actions .taken-control:hover, .course-modal-actions .taken-control:focus-visible { background: #166534; }
+
+.category-cst { --category-color: #d9ead3; }
+.category-math { --category-color: #fff2cc; }
+.category-ge-lower { --category-color: #fce5cd; }
+.category-ge-upper { --category-color: #f9ddbc; }
+.category-concentration-required { --category-color: #d9eaf7; }
+.category-elective { --category-color: #ead1dc; }
+
+.modal-backdrop {
+  align-items: center;
+  background: rgba(15, 23, 42, 0.58);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 1rem;
+  position: fixed;
+  z-index: 10;
+}
+
+.course-modal {
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  color: #172033;
+  max-height: min(44rem, 90vh);
+  max-width: 42rem;
+  overflow: auto;
+  padding: 2rem;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+.course-modal h2 { margin: 0 2rem 0.75rem 0; }
+.course-modal h3 { margin-bottom: 0.25rem; margin-top: 1.5rem; }
+.course-modal p { margin: 0.75rem 0; }
+.course-modal ul { margin-top: 0.25rem; padding-left: 1.25rem; }
+
+.modal-close {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.modal-kind {
+  color: #5b6475;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.course-name { font-weight: 700; }
+.modal-slot-label { color: #475569; font-size: 0.95rem; }
+.placeholder-note { color: #7c2d12; font-style: italic; }
+
+.prerequisite-status { border-radius: 0.25rem; font-weight: 700; padding: 0.5rem; }
+.prerequisite-status.is-met { background: #dcfce7; color: #166534; }
+.prerequisite-status.is-unmet { background: #fee2e2; color: #991b1b; }
+
+.taken-control,
+.option-control,
+.clear-choice-control,
+.assessment-control {
+  background: #1d4ed8;
+  border: 0;
+  border-radius: 0.35rem;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 0.35rem 0.55rem;
+}
+
+.clear-choice-control {
+  background: #fff;
+  border: 1px solid #64748b;
+  color: #172033;
+  margin-top: 0.75rem;
+}
+
+.option-control:hover,
+.option-control:focus-visible,
+.assessment-control:hover,
+.assessment-control:focus-visible { background: #1e40af; outline: 3px solid #93c5fd; outline-offset: 2px; }
+
+.clear-choice-control:hover,
+.clear-choice-control:focus-visible { background: #f1f5f9; outline: 3px solid #93c5fd; outline-offset: 2px; }
+
+.selected-option { color: #166534; font-weight: 700; }
+
+.course-modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.course-modal-actions .taken-control,
+.course-modal-actions .assessment-control {
+  margin: 0;
+  padding: 0.65rem 0.9rem;
+}
+
+.course-modal-actions .assessment-control { background: #1d4ed8; }
+.course-modal-actions .taken-control { background: #15803d; }
+.course-modal-actions .assessment-control:hover,
+.course-modal-actions .assessment-control:focus-visible { background: #1e40af; outline: 3px solid #93c5fd; outline-offset: 2px; }
+.course-modal-actions .taken-control:hover,
+.course-modal-actions .taken-control:focus-visible { background: #166534; outline: 3px solid #86efac; outline-offset: 2px; }

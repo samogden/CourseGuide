@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "bun run validate && tsc -b && vite build",
     "lint": "oxlint",
-    "test": "vitest run",
+    "test": "bun run validate && vitest run",
+    "validate": "bun scripts/validate-assessments.ts",
     "preview": "vite preview"
   },
   "dependencies": {
