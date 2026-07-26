@@ -87,13 +87,15 @@ export function CourseModal({ slot, resolvedCourseId, courseOptions, selectedTar
           {selectedTarget && <button className="clear-choice-control" type="button" onClick={onTargetCourseClear}>Clear selected course</button>}
         </>}
         {slot.type === 'choice' && <p><strong>Alternatives:</strong> {slotLabel(slot)}</p>}
-        {assessmentAvailable && <button className="assessment-control" type="button" onClick={onOpenAssessment}>Check readiness</button>}
-        {(!courseOptions || resolvedCourseId) && <button className="taken-control" type="button" onClick={() => {
-          onCompletedChange(!completed)
-          onClose()
-        }}>
-          {completed ? 'Mark as untaken' : 'Mark as taken'}
-        </button>}
+        {(assessmentAvailable || !courseOptions || resolvedCourseId) && <div className="course-modal-actions">
+          {assessmentAvailable && <button className="assessment-control" type="button" onClick={onOpenAssessment}>Check readiness</button>}
+          {(!courseOptions || resolvedCourseId) && <button className="taken-control" type="button" onClick={() => {
+            onCompletedChange(!completed)
+            onClose()
+          }}>
+            {completed ? 'Mark as untaken' : 'Mark as taken'}
+          </button>}
+        </div>}
       </section>
     </div>
   )
