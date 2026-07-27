@@ -26,6 +26,7 @@ export interface ScheduledSuggestion {
 export interface PathSlotOptions {
   label: string
   courseIds: readonly string[]
+  required?: boolean
 }
 
 export interface SuggestedSchedule {
@@ -289,7 +290,7 @@ function buildPathAssignments(
     const projectedCourseIds = new Set(completedCourseIds)
     const usedPathCourseIds = new Set<string>()
     const requiredPathCourses = rankedPathCourses.filter(course => directRequiredCourseIds.has(course.courseId))
-    const remainingSlots: Extract<PlanSlot, { type: 'requirement' }>[] = []
+    const remainingSlots: { slot: Extract<PlanSlot, { type: 'requirement' }>; term: 'fall' | 'spring' }[] = []
 
     for (const year of plan.years) {
       for (const term of year.terms) {
@@ -304,7 +305,7 @@ function buildPathAssignments(
           if (slot.type !== 'requirement' || slot.category !== 'elective') continue
           const courseId = pickGenericCourse(slot, courseIdsCompletedBeforeTerm, requiredPathCourses, usedPathCourseIds, term.term)
           if (!courseId) {
-            remainingSlots.push(slot)
+            remainingSlots.push({ slot, term: term.term })
             continue
           }
           assignments.set(progressKey(slot), courseId)
@@ -316,10 +317,17 @@ function buildPathAssignments(
     }
 
     const optionGroups = pathOptionGroups(pathRequirements)
-    for (const [index, slot] of remainingSlots.entries()) {
-      const optionGroup = optionGroups[index]
-      if (!optionGroup) break
-      courseOptions.set(progressKey(slot), optionGroup)
+    const projectedByTerm = projectedCoursesBeforeTerms(plan, completedCourseIds, assignments)
+    const unassignedSlots = [...remainingSlots]
+    for (const optionGroup of optionGroups) {
+      const slotIndex = unassignedSlots.findIndex(({ slot, term }) =>
+        optionGroup.courseIds.some(courseId => {
+          const course = getCourse(courseId)
+          return course && isCourseOffered(courseId, term) && prerequisitesMet(course.prerequisites, projectedByTerm.get(progressKey(slot)) ?? completedCourseIds)
+        }))
+      if (slotIndex < 0) continue
+      const [target] = unassignedSlots.splice(slotIndex, 1)
+      if (target) courseOptions.set(progressKey(target.slot), optionGroup)
     }
   }
 
@@ -342,7 +350,7 @@ function buildChoiceOptions(plan: CurriculumPlan): Map<string, PathSlotOptions> 
     for (const term of year.terms) {
       for (const slot of term.slots) {
         if (slot.type !== 'choice' || !slot.alternatives.every(courseId => getCourse(courseId))) continue
-        options.set(progressKey(slot), { label: 'Course choice', courseIds: slot.alternatives })
+        options.set(progressKey(slot), { label: courseOptionLabel(slot.alternatives, 'Course choice'), courseIds: slot.alternatives })
       }
     }
   }
@@ -365,8 +373,9 @@ function pathOptionGroups(requirements: Requirement[]): PathSlotOptions[] {
     if (requirement.completion.kind === 'all') return []
     if (requirement.completion.kind === 'choose') {
       return Array.from({ length: requirement.completion.count }, () => ({
-        label: 'Concentration course option',
+        label: courseOptionLabel(courseIds, 'Concentration course option'),
         courseIds,
+        required: true,
       }))
     }
     const slotCount = Math.ceil(requirement.completion.credits / 4)
@@ -375,6 +384,28 @@ function pathOptionGroups(requirements: Requirement[]): PathSlotOptions[] {
       courseIds,
     }))
   })
+}
+
+function projectedCoursesBeforeTerms(plan: CurriculumPlan, completedCourseIds: ReadonlySet<string>, assignments: ReadonlyMap<string, string>): Map<string, Set<string>> {
+  const projected = new Set(completedCourseIds)
+  const beforeTerm = new Map<string, Set<string>>()
+  for (const year of plan.years) {
+    for (const term of year.terms) {
+      const takenThisTerm: string[] = []
+      for (const slot of term.slots) {
+        beforeTerm.set(progressKey(slot), new Set(projected))
+        const courseId = assignments.get(progressKey(slot)) ?? (slot.type === 'course' ? slot.courseId : undefined)
+        if (courseId) takenThisTerm.push(courseId)
+      }
+      takenThisTerm.forEach(courseId => projected.add(courseId))
+    }
+  }
+  return beforeTerm
+}
+
+function courseOptionLabel(courseIds: readonly string[], fallback: string): string {
+  if (courseIds.length !== 2) return fallback
+  return courseIds.map(courseId => getCourse(courseId)?.code ?? courseId).join(' or ')
 }
 
 function resolvePathRequirements(selection?: ScheduleSelection): Requirement[] {

@@ -8,12 +8,10 @@ years:
             courseId: CST-231
             credits: 4
             category: cst
-          - type: requirement
-            slotId: ge-1-lower-division
-            label: GE Area 1 Lower Division
+          - type: course
+            courseId: FYS-145
             credits: 3
             category: ge-lower
-            guidance: First-Year Seminar fulfills this lower-division general education area.
           - type: course
             courseId: MATH-130
             credits: 4
@@ -75,11 +73,11 @@ years:
           - type: choice
             slotId: world-culture-or-language
             alternatives:
-              - World Culture
-              - Language
+              - JAPN-350
+              - SPAN-350
             credits: 3
             category: ge-lower
-            guidance: Choose either the World Culture or Language requirement.
+            guidance: Choose either the Japanese or Spanish World Culture and Language course.
   - year: junior
     terms:
       - term: fall
@@ -136,6 +134,10 @@ years:
     terms:
       - term: fall
         slots:
+          - type: course
+            courseId: CST-462S
+            credits: 3
+            category: cst
           - type: requirement
             slotId: senior-fall-elective-1
             label: Elective
@@ -144,12 +146,6 @@ years:
             guidance: Complete an upper-division elective.
           - type: requirement
             slotId: senior-fall-elective-2
-            label: Elective
-            credits: 4
-            category: elective
-            guidance: Complete an upper-division elective.
-          - type: requirement
-            slotId: senior-fall-elective-3
             label: Elective
             credits: 4
             category: elective
@@ -166,10 +162,12 @@ years:
             courseId: CST-499
             credits: 4
             category: cst
-          - type: course
-            courseId: CST-462S
-            credits: 3
-            category: cst
+          - type: requirement
+            slotId: senior-spring-elective
+            label: Elective
+            credits: 4
+            category: elective
+            guidance: Complete an upper-division elective.
           - type: choice
             slotId: ge-2-or-ge-5-upper-division
             alternatives:

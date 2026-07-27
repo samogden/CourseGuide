@@ -18,18 +18,20 @@ describe('planner', () => {
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
   })
 
-  it('resets saved progress after confirmation', () => {
+  it('resets all saved planner state after confirmation', () => {
     localStorage.setItem('courseguide-completed-v1', '["course:CST-231"]')
+    localStorage.setItem('courseguide-transfer-preparation-v1', '{"2026/ast-to-bs":["MATH-130"]}')
     vi.spyOn(window, 'confirm').mockReturnValue(true)
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /reset progress/i }))
+    fireEvent.click(screen.getByRole('button', { name: /reset planner/i }))
     expect(localStorage.getItem('courseguide-completed-v1')).toBe('[]')
+    expect(localStorage.getItem('courseguide-transfer-preparation-v1')).toBe('{}')
   })
 
-  it('shows the early GE requirement as a suggested course', () => {
+  it('shows FYS 145 as the early GE course', () => {
     render(<App />)
-    const geArea1 = screen.getByRole('button', { name: /GE Area 1 Lower Division/i })
-    expect(geArea1).toHaveClass('is-suggested', 'is-standard')
+    const fys145 = screen.getByRole('button', { name: /FYS 145/i })
+    expect(fys145).toHaveClass('is-suggested', 'is-standard')
   })
 
   it('offers the MATH 130 readiness self-evaluation from course details', () => {
@@ -39,12 +41,12 @@ describe('planner', () => {
     expect(screen.getByRole('button', { name: /check readiness/i })).toBeInTheDocument()
   })
 
-  it('marks a general-education requirement as taken', () => {
+  it('marks FYS 145 as taken', () => {
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /GE Area 1 Lower Division/i }))
+    fireEvent.click(screen.getByRole('button', { name: /FYS 145/i }))
     fireEvent.click(screen.getByRole('button', { name: /mark as taken/i }))
 
-    expect(localStorage.getItem('courseguide-completed-v1')).toContain('slot:ge-1-lower-division')
+    expect(localStorage.getItem('courseguide-completed-v1')).toContain('course:FYS-145')
   })
 
   it('shows the planned-credit breakdown', () => {
@@ -118,20 +120,20 @@ describe('planner', () => {
     localStorage.setItem('courseguide-target-courses-v1', '{"data-science:slot:junior-spring-elective":"CST-205"}')
     vi.spyOn(window, 'confirm').mockReturnValue(true)
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /reset course choices/i }))
+    fireEvent.click(screen.getByRole('button', { name: /reset planner/i }))
 
     expect(localStorage.getItem('courseguide-target-courses-v1')).toBe('{}')
   })
 
   it('automatically selects the paired CST choice in the other term', () => {
     render(<App />)
-    fireEvent.click(screen.getAllByRole('button', { name: 'Course choice: CST 334 or CST 370' })[0])
+    fireEvent.click(screen.getAllByRole('button', { name: 'CST 334 or CST 370: CST 334 or CST 370' })[0])
     fireEvent.click(screen.getAllByRole('button', { name: 'Select' })[0])
 
-    expect(screen.getAllByRole('button', { name: 'Course choice: CST 334 or CST 370' })).toHaveLength(2)
+    expect(screen.getAllByRole('button', { name: 'CST 334 or CST 370: CST 334 or CST 370' })).toHaveLength(2)
     expect(screen.getAllByText('Selected course')).toHaveLength(2)
-    expect(screen.getAllByRole('button', { name: 'Course choice: CST 334 or CST 370' })[0]).toHaveTextContent('CST 334')
-    expect(screen.getAllByRole('button', { name: 'Course choice: CST 334 or CST 370' })[1]).toHaveTextContent('CST 370')
+    expect(screen.getAllByRole('button', { name: 'CST 334 or CST 370: CST 334 or CST 370' })[0]).toHaveTextContent('CST 334')
+    expect(screen.getAllByRole('button', { name: 'CST 334 or CST 370: CST 334 or CST 370' })[1]).toHaveTextContent('CST 370')
   })
 
   it('switches to the registration planner view', async () => {

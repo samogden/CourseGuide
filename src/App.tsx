@@ -150,12 +150,19 @@ function App() {
     })
   }
 
-  const resetProgress = () => {
-    if (window.confirm('Reset all saved course progress on this device?')) setCompleted(new Set())
-  }
-
-  const resetCourseChoices = () => {
-    if (window.confirm('Reset all saved course choices on this device?')) setTargetCourses(new Map())
+  const resetPlanner = () => {
+    if (!window.confirm('Reset all saved planner progress, course choices, and transfer preparation on this device?')) return
+    setCompleted(new Set())
+    setTargetCourses(new Map())
+    setTransferPreparation(new Map())
+    setSelectedConcentration('general')
+    setSelectedCatalogVersion(defaultCatalogVersion)
+    setDegreeType('bs')
+    setActiveView('roadmap')
+    setRegistrationTerm('fall')
+    setSelectedSlot(null)
+    setAssessmentCourseId(null)
+    setTransferReadinessOpen(false)
   }
 
   const updateTransferPreparation = (courseId: string, included: boolean) => {
@@ -258,8 +265,7 @@ function App() {
       <header className="planner-header">
         <div><p className="eyebrow">Computer Science</p><h1>Curriculum planner</h1><p>Explore the suggested course sequence and mark completed coursework.</p></div>
         <div className="header-actions">
-          <button className="reset-button" type="button" onClick={resetCourseChoices}>Reset course choices</button>
-          <button className="reset-button" type="button" onClick={resetProgress}>Reset progress</button>
+          <button className="reset-button" type="button" onClick={resetPlanner}>Reset planner</button>
         </div>
       </header>
       <section className="credit-summary" aria-label="Curriculum credit summary">
@@ -277,11 +283,14 @@ function App() {
           <button className={`path-button${activeView === 'roadmap' ? ' is-selected' : ''}`} type="button" onClick={() => setActiveView('roadmap')}>Roadmap</button>
         </nav>
       </section>
-      <section className="path-picker" aria-label="Degree type and program concentration">
+      <section className="degree-picker" aria-label="Degree type">
         <span className="legend-title">Degree</span>
         <button className={`path-button${degreeType === 'bs' ? ' is-selected' : ''}`} type="button" onClick={() => setDegreeType('bs')}>B.S.</button>
         <button className={`path-button${degreeType === 'ast-to-bs' ? ' is-selected' : ''}`} type="button" onClick={() => setDegreeType('ast-to-bs')}>AS-T to B.S.</button>
-        <span className="legend-title path-divider">Path</span>
+        {degreeType === 'ast-to-bs' && <button className="transfer-readiness-button" type="button" onClick={() => setTransferReadinessOpen(true)}>Check transfer readiness</button>}
+      </section>
+      <section className="path-picker" aria-label="Program concentration">
+        <span className="legend-title">Path</span>
         {Object.entries(activeProgram.concentrations).map(([concentrationId, concentration]) => (
           <button
             key={concentrationId}
@@ -292,7 +301,6 @@ function App() {
             {concentration.title}
           </button>
         ))}
-        {degreeType === 'ast-to-bs' && <button className="transfer-readiness-button" type="button" onClick={() => setTransferReadinessOpen(true)}>Check transfer readiness</button>}
       </section>
       {activeView === 'registration' && <Suspense fallback={<p className="planner-loading">Loading registration planner…</p>}><RegistrationPlanner plan={registrationPlan} currentTerm={registrationTerm} onCurrentTermChange={setRegistrationTerm} onCourseSelect={setSelectedSlot} /></Suspense>}
       {activeView === 'roadmap' && suggestedSchedule.suggestions.size > 0 && <section className="next-term" aria-live="polite"><strong>Suggested schedule:</strong> {suggestedSchedule.credits} credits. <strong>{remainingCredits} planned credits remain</strong> — about {semestersAtFifteen} semesters at 15 credits per term, or {semestersAtEighteen} at 18.</section>}

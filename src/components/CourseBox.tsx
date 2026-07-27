@@ -8,7 +8,7 @@ import type { PathSlotOptions, ScheduledSuggestion } from '../models/Scheduling'
 export function CourseCell({ slot, assignedCourseId, courseOptions, selectedTarget, completed, suggestion, highPriority, onSelect }: { slot: PlanSlot; assignedCourseId?: string; courseOptions?: PathSlotOptions; selectedTarget: boolean; completed: boolean; suggestion: ScheduledSuggestion | null; highPriority: boolean; onSelect: () => void }) {
   const courseId = suggestion?.courseId ?? assignedCourseId ?? (slot.type === 'course' ? slot.courseId : undefined)
   const label = courseId && slot.type !== 'course' ? getCourse(courseId)?.code ?? slotLabel(slot) : courseOptions?.label ?? slotLabel(slot)
-  const displayCategory = assignedCourseId ? 'concentration-required' : slot.category
+  const displayCategory = assignedCourseId || courseOptions?.required ? 'concentration-required' : slot.category
   const offeredTerms = courseId ? getCourse(courseId)?.offeredTerms : undefined
   const offeringClass = !completed && offeredTerms?.length === 1 ? ' is-limited-offering' : ''
   const accessibleLabel = slot.type === 'choice' && courseOptions

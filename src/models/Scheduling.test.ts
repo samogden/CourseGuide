@@ -88,11 +88,12 @@ describe('suggested scheduling', () => {
       concentrationId: 'network-security',
     })
     const juniorSpring = curriculumPlan.years[2].terms[1].slots
-    const seniorFall = curriculumPlan.years[3].terms[0].slots
+    const seniorFallElective = curriculumPlan.years[3].terms[0].slots.find(slot => slot.type === 'requirement' && slot.category === 'elective')
 
     expect(schedule.assignments.get(progressKey(juniorSpring[2]))).toBe('CST-315')
     expect(schedule.assignments.get(progressKey(juniorSpring[3]))).toBeUndefined()
-    expect(schedule.assignments.get(progressKey(seniorFall[0]))).toBe('CST-415')
+    expect(seniorFallElective).toBeDefined()
+    expect(schedule.assignments.get(progressKey(seniorFallElective!))).toBe('CST-415')
   })
 
   it('keeps a completed path course in its assigned elective slot', () => {
@@ -112,12 +113,34 @@ describe('suggested scheduling', () => {
       concentrationId: 'data-science',
     })
     const juniorSpringElective = curriculumPlan.years[2].terms[1].slots[3]
-    const seniorFallElective = curriculumPlan.years[3].terms[0].slots[0]
+    const seniorFallElective = curriculumPlan.years[3].terms[0].slots.find(slot => slot.type === 'requirement' && slot.category === 'elective')
 
-    expect(schedule.assignments.get(progressKey(seniorFallElective))).toBe('CST-463')
+    expect(seniorFallElective).toBeDefined()
+    expect(schedule.assignments.get(progressKey(seniorFallElective!))).toBe('CST-463')
     expect(schedule.courseOptions.get(progressKey(juniorSpringElective))).toEqual({
       label: 'Concentration elective option',
       courseIds: ['CST-205', 'CST-311', 'CST-315', 'CST-325', 'CST-326', 'CST-336', 'CST-380', 'CST-438'],
+    })
+  })
+
+  it('places the required game-development choice after its prerequisites', () => {
+    const gameDevelopment = buildSuggestedSchedule(curriculumPlan, new Set(), {
+      programId: 'bs-computer-science',
+      concentrationId: 'game-development',
+    })
+    const juniorChoice = curriculumPlan.years[2].terms[0].slots[0]
+    const juniorFallElective = curriculumPlan.years[2].terms[0].slots[3]
+    const juniorSpringElective = curriculumPlan.years[2].terms[1].slots[2]
+    const seniorFallElective = curriculumPlan.years[3].terms[0].slots.find(slot => slot.type === 'requirement' && slot.slotId === 'senior-fall-elective-1')
+
+    expect(gameDevelopment.courseOptions.get(progressKey(juniorChoice))?.label).toBe('CST 334 or CST 370')
+    expect(gameDevelopment.assignments.get(progressKey(juniorFallElective))).toBe('CST-325')
+    expect(gameDevelopment.assignments.get(progressKey(juniorSpringElective))).toBe('CST-326')
+    expect(seniorFallElective).toBeDefined()
+    expect(gameDevelopment.courseOptions.get(progressKey(seniorFallElective!))).toEqual({
+      label: 'CST 426 or CST 438',
+      courseIds: ['CST-426', 'CST-438'],
+      required: true,
     })
   })
 
@@ -150,7 +173,6 @@ describe('suggested scheduling', () => {
 
   it('removes a selected target course from the other elective option lists', () => {
     const juniorSpringElective = curriculumPlan.years[2].terms[1].slots[3]
-    const seniorFallElective = curriculumPlan.years[3].terms[0].slots[1]
     const schedule = buildSuggestedSchedule(curriculumPlan, new Set(), {
       programId: 'bs-computer-science',
       concentrationId: 'data-science',
@@ -159,7 +181,9 @@ describe('suggested scheduling', () => {
 
     expect(schedule.assignments.get(progressKey(juniorSpringElective))).toBe('CST-205')
     expect(schedule.selectedTargetKeys.has(progressKey(juniorSpringElective))).toBe(true)
-    expect(schedule.courseOptions.get(progressKey(seniorFallElective))?.courseIds).not.toContain('CST-205')
+    expect([...schedule.courseOptions.entries()]
+      .filter(([slotKey]) => slotKey !== progressKey(juniorSpringElective))
+      .every(([, options]) => !options.courseIds.includes('CST-205'))).toBe(true)
   })
 
   it('removes a selected course choice from the matching course-choice slot', () => {

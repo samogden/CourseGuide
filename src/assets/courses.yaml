@@ -1,5 +1,16 @@
 schemaVersion: 1
 courses:
+  FYS-145:
+    code: FYS 145
+    title: Digital Media & Culture
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This First Year Seminar explores how social media impacts culture from social, political, and economic perspectives. The course also develops a framework of best practices for college student success and introduces the various professional disciplines of communication and design.
+    offered:
+      terms:
+        - fall
   MATH-130:
     code: MATH 130
     title: Precalculus
@@ -54,6 +65,34 @@ courses:
       maximum: 4
     description: Catalog details are still being added.
     placeholder: true
+  JAPN-350:
+    code: JAPN 350
+    title: "World Culture and Language: Japanese"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course focuses on language use related to the cultures of the Japanese-speaking community. It addresses culture-specific practices and concepts that cannot be translated into English. Students will also learn the use of Japanese to communicate at basic levels in culturally appropriate ways. Taught in English and Japanese.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - GE Areas 1A and 1B and 1C and 2 with a C- or better.
+  SPAN-350:
+    code: SPAN 350
+    title: "World Culture and Language: Spanish"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course focuses on language use related to the cultures of the Spanish-speaking world. It addresses culture-specific practices and concepts that cannot be translated into English. Students will also learn the use of Spanish to communicate at basic levels in culturally appropriate ways. Taught in English and Spanish. Spanish language functions are taught in cultural context.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - GE Areas 1A and 1B and 1C and 2 with a C- or better.
   CST-205:
     code: CST 205
     title: Multimedia Design and Programming
@@ -376,7 +415,8 @@ courses:
         - fall
         - spring
     prerequisites:
-      - courseId: CST-338
+      - courseId: CST-325
+      - courseId: CST-326
   CST-462S:
     code: CST 462S
     title: Race, Gender, Class in the Digital World

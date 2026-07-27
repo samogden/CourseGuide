@@ -13,6 +13,27 @@ describe('curriculum data', () => {
     expect(slotLabel(mathChoice)).toBe('MATH 151 or MATH 270')
   })
 
+  it('uses FYS 145 and the two official World Culture and Language courses', () => {
+    const firstYearFall = curriculumPlan.years[0].terms[0].slots
+    const cultureChoice = curriculumPlan.years[1].terms[1].slots[0]
+
+    expect(firstYearFall[1]).toMatchObject({ type: 'course', courseId: 'FYS-145', credits: 3 })
+    expect(cultureChoice).toMatchObject({
+      type: 'choice',
+      alternatives: ['JAPN-350', 'SPAN-350'],
+    })
+    expect(getCourse('JAPN 350')?.name).toBe('World Culture and Language: Japanese')
+    expect(getCourse('SPAN 350')?.name).toBe('World Culture and Language: Spanish')
+  })
+
+  it('places CST 462S in the final fall and keeps an elective in the final spring', () => {
+    const finalFall = curriculumPlan.years[3].terms[0].slots
+    const finalSpring = curriculumPlan.years[3].terms[1].slots
+
+    expect(finalFall.some(slot => slot.type === 'course' && slot.courseId === 'CST-462S')).toBe(true)
+    expect(finalSpring.some(slot => slot.type === 'requirement' && slot.slotId === 'senior-spring-elective')).toBe(true)
+  })
+
   it('evaluates nested prerequisite alternatives', () => {
     const dataStructures = getCourse('CST 238')
     expect(prerequisitesMet(dataStructures?.prerequisites ?? [], new Set(['CST-231', 'MATH-130']))).toBe(true)
@@ -77,6 +98,20 @@ describe('curriculum data', () => {
     expect(softwareElectives?.courseIds).not.toContain('CST-363')
     expect(general.title).toBe('General')
     expect(general.requirements[0].completion).toEqual({ kind: 'minimumCredits', credits: 24 })
+  })
+
+  it('treats the advanced game-development pair as a required choice', () => {
+    const gameDevelopment = programs.programs['bs-computer-science'].concentrations['game-development']
+    const requiredCourses = gameDevelopment.requirements.find(requirement => requirement.id === 'required_upper_division')
+    const advancedChoice = gameDevelopment.requirements.find(requirement => requirement.id === 'advanced_game_development_choice')
+    const electiveCourses = gameDevelopment.requirements.find(requirement => requirement.id === 'upper_division_electives')
+
+    expect(requiredCourses?.completion).toEqual({ kind: 'all' })
+    expect(requiredCourses?.courseIds).toEqual(['CST-325', 'CST-326'])
+    expect(advancedChoice?.completion).toEqual({ kind: 'choose', count: 1 })
+    expect(advancedChoice?.courseIds).toEqual(['CST-426', 'CST-438'])
+    expect(electiveCourses?.courseIds).not.toContain('CST-438')
+    expect(prerequisiteCourseIds(getCourse('CST 438')?.prerequisites ?? [])).toEqual(new Set(['CST-325', 'CST-326']))
   })
 
   it('exposes the official pathways through the 2026 catalog version', () => {

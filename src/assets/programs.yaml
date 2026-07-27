@@ -117,7 +117,7 @@ programs: &catalog_2026_programs
             courseIds:
               - CST-325
               - CST-326
-          - id: upper_division_choice
+          - id: advanced_game_development_choice
             completion:
               kind: choose
               count: 1
@@ -136,7 +136,6 @@ programs: &catalog_2026_programs
               - CST-363
               - CST-380
               - CST-383
-              - CST-438
       general:
         title: General
         requirements:
