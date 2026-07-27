@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { canonicalCourseId, catalogVersions, coursesById, curriculumPlan, defaultCatalogVersion, getCourse, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, prerequisiteText, programs, remainingPlanCredits, slotLabel, summarizePlanCredits, type CurriculumPlan } from './Curriculum'
+import { canonicalCourseId, catalogVersions, coursesById, curriculumPlan, defaultCatalogVersion, degreeYearLabel, getCourse, planForDegreeType, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, prerequisiteText, programs, remainingPlanCredits, slotLabel, summarizePlanCredits, transferAssumedCourseIds, type CurriculumPlan } from './Curriculum'
 
 describe('curriculum data', () => {
   it('normalizes alternate course code spacing', () => {
@@ -89,6 +89,15 @@ describe('curriculum data', () => {
     const firstCourse = curriculumPlan.years[0].terms[0].slots[0]
 
     expect(remainingPlanCredits(curriculumPlan, new Set([`course:${firstCourse.type === 'course' ? firstCourse.courseId : ''}`]))).toBe(98)
+  })
+
+  it('derives the AS-T roadmap from only the junior and senior plan years', () => {
+    const transferPlan = planForDegreeType('ast-to-bs')
+
+    expect(transferPlan.years.map(year => year.year)).toEqual(['junior', 'senior'])
+    expect(degreeYearLabel('ast-to-bs', 'junior')).toBe('1st year')
+    expect(degreeYearLabel('ast-to-bs', 'senior')).toBe('2nd year')
+    expect(['CST-231', 'CST-238', 'MATH-130', 'MATH-170'].every(courseId => transferAssumedCourseIds.has(courseId))).toBe(true)
   })
 
 })

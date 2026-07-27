@@ -8,12 +8,15 @@
 .reset-button:hover, .reset-button:focus-visible { background: #eef2ff; outline: 3px solid #1d4ed8; outline-offset: 2px; }
 .credit-summary { align-items: center; background: #f8fafc; border: 1px solid #cbd5e1; color: #334155; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin-bottom: 1rem; padding: 0.65rem 0.8rem; }.credit-summary strong { color: #172033; }.credit-summary span + span { border-left: 1px solid #cbd5e1; padding-left: 1rem; }
 .path-picker { align-items: center; display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; }
+.path-divider { margin-left: 0.75rem; }
 .catalog-controls { align-items: center; display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.75rem; }.catalog-picker { align-items: center; display: flex; font-weight: 700; gap: 0.4rem; }.catalog-picker select { background: #fff; border: 1px solid #64748b; border-radius: 0.35rem; font: inherit; padding: 0.25rem 0.4rem; }
 .view-picker { display: flex; gap: 0.5rem; }
 .planner-loading { color: #475569; padding: 1rem 0; }
 .path-button { background: #fff; border: 1px solid #94a3b8; border-radius: 999px; color: #172033; cursor: pointer; font: inherit; padding: 0.25rem 0.7rem; }
 .path-button:hover, .path-button:focus-visible { background: #eef2ff; outline: 3px solid #1d4ed8; outline-offset: 2px; }
 .path-button.is-selected { background: #dbeafe; border-color: #1d4ed8; font-weight: 700; }
+.transfer-readiness-button { background: #166534; border: 1px solid #166534; border-radius: 999px; color: #fff; cursor: pointer; font: inherit; font-weight: 700; margin-left: auto; padding: 0.3rem 0.75rem; }
+.transfer-readiness-button:hover, .transfer-readiness-button:focus-visible { background: #15803d; outline: 3px solid #86efac; outline-offset: 2px; }
 .next-term { background: #eff6ff; border-left: 4px solid #2563eb; color: #172554; margin-bottom: 1rem; padding: 0.75rem 1rem; text-transform: capitalize; }
 .legend { align-items: center; display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }.legend-title { font-weight: 700; margin-right: 0.25rem; }.legend span:not(.legend-title) { background: var(--category-color); border: 1px solid #94a3b8; border-radius: 999px; color: #172033; font-size: 0.8rem; padding: 0.2rem 0.5rem; }.scroll-hint { color: #475569; font-size: 0.85rem; margin: 0 0 0.5rem; }
 .legend span.offering-legend { background: repeating-linear-gradient(135deg, rgba(71, 85, 105, 0.19) 0 4px, #fff 4px 8px); border-color: #94a3b8; }
@@ -27,6 +30,7 @@
 .credit-numbers span { border-left: 1px dotted #94a3b8; padding: 0.25rem 0; }
 .year-group { display: grid; grid-template-columns: 7rem minmax(0, 1fr); }
 .year-group + .year-group { border-top: 1px solid #4b5563; }
+.preparation-year-group .year-label { grid-row: span 1; }
 .year-label { align-content: center; background: #f8fafc; font-weight: 700; grid-row: span 2; text-transform: capitalize; }
 .term-row { display: grid; grid-column: 2; grid-template-columns: 5rem minmax(0, 1fr); }
 .term-row + .term-row { border-top: 1px solid #4b5563; }

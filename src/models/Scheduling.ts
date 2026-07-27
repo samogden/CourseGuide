@@ -44,6 +44,8 @@ export interface ScheduleSelection {
   concentrationId?: string | null
   targetCourses?: ReadonlyMap<string, string>
   currentTerm?: 'fall' | 'spring'
+  /** Transfer coursework that is assumed satisfied without rendering it in the active plan. */
+  assumedCompletedCourseIds?: ReadonlySet<string>
 }
 
 export interface RegistrationCourse {
@@ -107,6 +109,7 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
   const completedCourseIds = new Set([...completed]
     .filter(key => key.startsWith('course:'))
     .map(key => key.slice('course:'.length)))
+  for (const courseId of selection?.assumedCompletedCourseIds ?? []) completedCourseIds.add(courseId)
   const isCourseReady = (slot: PlanSlot) => slot.type !== 'course' || prerequisitesMet(getCourse(slot.courseId)?.prerequisites ?? [], completedCourseIds)
   const explicitPlannedCourseIds = new Set(plan.years.flatMap(year => year.terms.flatMap(term => term.slots.flatMap(slot => {
     if (slot.type === 'course') return [slot.courseId]
@@ -216,6 +219,7 @@ export function buildRegistrationPlan(plan: CurriculumPlan, completed: ReadonlyS
   const completedCourseIds = new Set([...completed]
     .filter(key => key.startsWith('course:'))
     .map(key => key.slice('course:'.length)))
+  for (const courseId of selection?.assumedCompletedCourseIds ?? []) completedCourseIds.add(courseId)
   const slots = plan.years.flatMap(year => year.terms.flatMap(term => term.slots))
   const courses = slots.flatMap(slot => {
     const suggestion = schedule.suggestions.get(progressKey(slot))

@@ -1,0 +1,102 @@
+.transfer-readiness-modal {
+  background: #fff;
+  border-radius: 0.9rem;
+  box-shadow: 0 24px 60px rgb(15 23 42 / 35%);
+  max-height: min(88vh, 54rem);
+  max-width: 58rem;
+  overflow: auto;
+  padding: 2.25rem;
+  position: relative;
+  width: min(94vw, 58rem);
+}
+
+.transfer-readiness-note {
+  background: #eff6ff;
+  border-left: 4px solid #2563eb;
+  color: #1e3a8a;
+  padding: 0.75rem;
+}
+
+.transfer-readiness-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.transfer-readiness-card {
+  align-items: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.6rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(12rem, 1fr) auto;
+  padding: 1rem;
+}
+
+.transfer-readiness-card h3,
+.transfer-readiness-card p {
+  margin: 0;
+}
+
+.transfer-readiness-card p + p {
+  margin-top: 0.25rem;
+}
+
+.readiness-state {
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.readiness-state.is-completed {
+  color: #166534;
+  font-weight: 700;
+}
+
+.transfer-readiness-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  justify-content: flex-end;
+}
+
+.transfer-readiness-actions button {
+  border-radius: 0.35rem;
+  cursor: pointer;
+  font: inherit;
+  padding: 0.5rem 0.7rem;
+}
+
+.assessment-coming-soon {
+  color: #64748b;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.transfer-control,
+.remove-preparation-control {
+  background: #fff;
+  border: 1px solid #64748b;
+  color: #172033;
+}
+
+.add-preparation-control {
+  background: #eff6ff;
+  border: 1px solid #2563eb;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .transfer-readiness-modal {
+    padding: 1.5rem;
+  }
+
+  .transfer-readiness-card {
+    grid-template-columns: 1fr;
+  }
+
+  .transfer-readiness-actions {
+    justify-content: flex-start;
+  }
+}

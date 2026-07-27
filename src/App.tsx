@@ -2,29 +2,33 @@ import { lazy, Suspense, useEffect, useState } from 'react'
 import './App.css'
 import { CourseCell, CourseModal } from './components/CourseBox'
 import { ReadinessAssessment } from './components/ReadinessAssessment'
+import { TransferReadiness } from './components/TransferReadiness'
 import { getAssessmentPack } from './models/Assessments'
-import { catalogVersions, curriculumPlan, defaultCatalogVersion, getCourse, prerequisitesMet, progressKey, remainingPlanCredits, summarizePlanCredits, type AcademicTerm, type PlanSlot } from './models/Curriculum'
+import { catalogVersions, defaultCatalogVersion, degreeYearLabel, getCourse, planForDegreeType, prerequisitesMet, progressKey, remainingPlanCredits, summarizePlanCredits, transferAssumedCourseIds, type AcademicTerm, type DegreeType, type PlanSlot } from './models/Curriculum'
 import { buildRegistrationPlan, buildSuggestedSchedule } from './models/Scheduling'
+import { buildPreparationTerms, preparationCredits } from './models/TransferPreparation'
 
 const progressStorageKey = 'courseguide-completed-v1'
 const concentrationStorageKey = 'courseguide-concentration-v1'
 const catalogVersionStorageKey = 'courseguide-catalog-version-v1'
 const targetCoursesStorageKey = 'courseguide-target-courses-v1'
+const degreeTypeStorageKey = 'courseguide-degree-type-v1'
+const transferPreparationStorageKey = 'courseguide-transfer-preparation-v1'
 const activeProgramId = 'bs-computer-science'
 const RegistrationPlanner = lazy(() => import('./components/RegistrationPlanner').then(module => ({ default: module.RegistrationPlanner })))
 
-function targetCourseKey(catalogVersion: string, scope: string, slotKey: string): string {
-  return `${catalogVersion}/${scope}:${slotKey}`
+function targetCourseKey(catalogVersion: string, degreeType: DegreeType, scope: string, slotKey: string): string {
+  return `${catalogVersion}/${degreeType}/${scope}:${slotKey}`
 }
 
 function targetScopeForSlot(slot: PlanSlot, concentrationId: string | null): string | null {
   return slot.type === 'choice' ? 'general' : concentrationId
 }
 
-function linkedChoiceSlots(slot: PlanSlot): PlanSlot[] {
+function linkedChoiceSlots(plan: ReturnType<typeof planForDegreeType>, slot: PlanSlot): PlanSlot[] {
   if (slot.type !== 'choice' || slot.alternatives.length !== 2) return []
   const alternativesKey = [...slot.alternatives].sort().join('|')
-  return curriculumPlan.years.flatMap(year => year.terms.flatMap(term => term.slots))
+  return plan.years.flatMap(year => year.terms.flatMap(term => term.slots))
     .filter((candidate): candidate is Extract<PlanSlot, { type: 'choice' }> =>
       candidate.type === 'choice' &&
       progressKey(candidate) !== progressKey(slot) &&
@@ -62,7 +66,32 @@ function readTargetCourses(): Map<string, string> {
   try {
     const value: unknown = JSON.parse(localStorage.getItem(targetCoursesStorageKey) ?? '{}')
     if (!value || typeof value !== 'object' || Array.isArray(value)) return new Map()
-    return new Map(Object.entries(value).filter((entry): entry is [string, string] => typeof entry[0] === 'string' && typeof entry[1] === 'string'))
+    return new Map(Object.entries(value)
+      .filter((entry): entry is [string, string] => typeof entry[0] === 'string' && typeof entry[1] === 'string')
+      .map(([key, courseId]) => [key.includes('/bs/') || key.includes('/ast-to-bs/') ? key : key.replace(/^([^/]+)\//, '$1/bs/'), courseId]))
+  } catch {
+    return new Map()
+  }
+}
+
+function readDegreeType(): DegreeType {
+  try {
+    const value: unknown = JSON.parse(localStorage.getItem(degreeTypeStorageKey) ?? '"bs"')
+    return value === 'ast-to-bs' ? value : 'bs'
+  } catch {
+    return 'bs'
+  }
+}
+
+function readTransferPreparation(): Map<string, string[]> {
+  try {
+    const value: unknown = JSON.parse(localStorage.getItem(transferPreparationStorageKey) ?? '{}')
+    if (!value || typeof value !== 'object' || Array.isArray(value)) return new Map()
+    const entries: [string, string[]][] = []
+    for (const [key, courseIds] of Object.entries(value)) {
+      if (Array.isArray(courseIds)) entries.push([key, courseIds.filter((courseId): courseId is string => typeof courseId === 'string')])
+    }
+    return new Map(entries)
   } catch {
     return new Map()
   }
@@ -74,7 +103,10 @@ function App() {
   const [completed, setCompleted] = useState<Set<string>>(() => readCompleted())
   const [selectedConcentration, setSelectedConcentration] = useState<string | null>(() => readConcentration())
   const [selectedCatalogVersion, setSelectedCatalogVersion] = useState<string>(() => readCatalogVersion())
+  const [degreeType, setDegreeType] = useState<DegreeType>(() => readDegreeType())
   const [targetCourses, setTargetCourses] = useState<Map<string, string>>(() => readTargetCourses())
+  const [transferPreparation, setTransferPreparation] = useState<Map<string, string[]>>(() => readTransferPreparation())
+  const [transferReadinessOpen, setTransferReadinessOpen] = useState(false)
   const [activeView, setActiveView] = useState<'roadmap' | 'registration'>('roadmap')
   const [registrationTerm, setRegistrationTerm] = useState<AcademicTerm>('fall')
 
@@ -93,6 +125,14 @@ function App() {
   useEffect(() => {
     localStorage.setItem(targetCoursesStorageKey, JSON.stringify(Object.fromEntries(targetCourses)))
   }, [targetCourses])
+
+  useEffect(() => {
+    localStorage.setItem(degreeTypeStorageKey, JSON.stringify(degreeType))
+  }, [degreeType])
+
+  useEffect(() => {
+    localStorage.setItem(transferPreparationStorageKey, JSON.stringify(Object.fromEntries(transferPreparation)))
+  }, [transferPreparation])
 
   const updateCompletion = (slot: PlanSlot, isCompleted: boolean, resolvedCourseId?: string | null) => {
     setCompleted(current => {
@@ -118,17 +158,37 @@ function App() {
     if (window.confirm('Reset all saved course choices on this device?')) setTargetCourses(new Map())
   }
 
+  const updateTransferPreparation = (courseId: string, included: boolean) => {
+    setTransferPreparation(current => {
+      const next = new Map(current)
+      const selected = new Set(next.get(`${selectedCatalogVersion}/ast-to-bs`) ?? [])
+      if (included) selected.add(courseId)
+      else selected.delete(courseId)
+      next.set(`${selectedCatalogVersion}/ast-to-bs`, [...selected])
+      return next
+    })
+  }
+
+  const updateTransferCompletion = (courseId: string, isCompleted: boolean) => {
+    setCompleted(current => {
+      const next = new Set(current)
+      if (isCompleted) next.add(`course:${courseId}`)
+      else next.delete(`course:${courseId}`)
+      return next
+    })
+  }
+
   const selectTargetCourse = (slot: PlanSlot, courseId: string) => {
     const targetScope = targetScopeForSlot(slot, activeConcentrationId)
     if (!targetScope) return
     setTargetCourses(current => {
       const next = new Map(current)
-      next.set(targetCourseKey(selectedCatalogVersion, targetScope, progressKey(slot)), courseId)
+      next.set(targetCourseKey(selectedCatalogVersion, degreeType, targetScope, progressKey(slot)), courseId)
       if (slot.type === 'choice') {
         const pairedCourseId = slot.alternatives.find(alternative => alternative !== courseId)
         if (pairedCourseId) {
-          for (const pairedSlot of linkedChoiceSlots(slot)) {
-            next.set(targetCourseKey(selectedCatalogVersion, targetScope, progressKey(pairedSlot)), pairedCourseId)
+          for (const pairedSlot of linkedChoiceSlots(activePlan, slot)) {
+            next.set(targetCourseKey(selectedCatalogVersion, degreeType, targetScope, progressKey(pairedSlot)), pairedCourseId)
           }
         }
       }
@@ -141,10 +201,10 @@ function App() {
     if (!targetScope) return
     setTargetCourses(current => {
       const next = new Map(current)
-      next.delete(targetCourseKey(selectedCatalogVersion, targetScope, progressKey(slot)))
+      next.delete(targetCourseKey(selectedCatalogVersion, degreeType, targetScope, progressKey(slot)))
       if (slot.type === 'choice') {
-        for (const pairedSlot of linkedChoiceSlots(slot)) {
-          next.delete(targetCourseKey(selectedCatalogVersion, targetScope, progressKey(pairedSlot)))
+        for (const pairedSlot of linkedChoiceSlots(activePlan, slot)) {
+          next.delete(targetCourseKey(selectedCatalogVersion, degreeType, targetScope, progressKey(pairedSlot)))
         }
       }
       return next
@@ -154,25 +214,28 @@ function App() {
 
   const activeCatalog = catalogVersions[selectedCatalogVersion] ?? catalogVersions[defaultCatalogVersion]
   const activeProgram = activeCatalog.programs[activeProgramId]
-  const planCredits = summarizePlanCredits(curriculumPlan)
+  const activePlan = planForDegreeType(degreeType)
+  const planCredits = summarizePlanCredits(activePlan)
   const activeConcentrationId = selectedConcentration && activeProgram.concentrations[selectedConcentration] ? selectedConcentration : null
   const activeTargetCourses = new Map(
     [...targetCourses]
-      .filter(([key]) => key.startsWith(`${selectedCatalogVersion}/general:`) || (activeConcentrationId ? key.startsWith(`${selectedCatalogVersion}/${activeConcentrationId}:`) : false))
+      .filter(([key]) => key.startsWith(`${selectedCatalogVersion}/${degreeType}/general:`) || (activeConcentrationId ? key.startsWith(`${selectedCatalogVersion}/${degreeType}/${activeConcentrationId}:`) : false))
       .map(([key, courseId]) => [key.slice(key.indexOf(':') + 1), courseId]),
   )
-  const suggestedSchedule = buildSuggestedSchedule(curriculumPlan, completed, {
+  const suggestedSchedule = buildSuggestedSchedule(activePlan, completed, {
     programId: activeProgramId,
     catalogVersion: selectedCatalogVersion,
     concentrationId: activeConcentrationId,
     targetCourses: activeTargetCourses,
+    ...(degreeType === 'ast-to-bs' ? { assumedCompletedCourseIds: transferAssumedCourseIds } : {}),
   })
-  const registrationPlan = buildRegistrationPlan(curriculumPlan, completed, {
+  const registrationPlan = buildRegistrationPlan(activePlan, completed, {
     programId: activeProgramId,
     catalogVersion: selectedCatalogVersion,
     concentrationId: activeConcentrationId,
     targetCourses: activeTargetCourses,
     currentTerm: registrationTerm,
+    ...(degreeType === 'ast-to-bs' ? { assumedCompletedCourseIds: transferAssumedCourseIds } : {}),
   })
   const completedCourseIds = new Set([...completed]
     .filter(key => key.startsWith('course:'))
@@ -182,7 +245,11 @@ function App() {
   const selectedCourseOptions = selectedSlot ? suggestedSchedule.courseOptions.get(progressKey(selectedSlot)) : undefined
   const resolvedCourseId = selectedSuggestion?.courseId ?? selectedAssignedCourseId ?? (selectedSlot?.type === 'course' ? selectedSlot.courseId : null)
   const selectedPrerequisitesMet = resolvedCourseId ? prerequisitesMet(getCourse(resolvedCourseId)?.prerequisites ?? [], completedCourseIds) : selectedSlot ? suggestedSchedule.isCourseReady(selectedSlot) : undefined
-  const remainingCredits = remainingPlanCredits(curriculumPlan, completed, suggestedSchedule.assignments)
+  const preparationKey = `${selectedCatalogVersion}/ast-to-bs`
+  const preparationCourseIds = new Set(transferPreparation.get(preparationKey) ?? [])
+  const preparationTerms = degreeType === 'ast-to-bs' ? buildPreparationTerms(preparationCourseIds) : []
+  const preparationRemainingCredits = degreeType === 'ast-to-bs' ? preparationCredits(preparationCourseIds, completed) : 0
+  const remainingCredits = remainingPlanCredits(activePlan, completed, suggestedSchedule.assignments) + preparationRemainingCredits
   const semestersAtFifteen = Math.ceil(remainingCredits / 15)
   const semestersAtEighteen = Math.ceil(remainingCredits / 18)
 
@@ -210,8 +277,11 @@ function App() {
           <button className={`path-button${activeView === 'roadmap' ? ' is-selected' : ''}`} type="button" onClick={() => setActiveView('roadmap')}>Roadmap</button>
         </nav>
       </section>
-      <section className="path-picker" aria-label="Program concentration">
-        <span className="legend-title">Path</span>
+      <section className="path-picker" aria-label="Degree type and program concentration">
+        <span className="legend-title">Degree</span>
+        <button className={`path-button${degreeType === 'bs' ? ' is-selected' : ''}`} type="button" onClick={() => setDegreeType('bs')}>B.S.</button>
+        <button className={`path-button${degreeType === 'ast-to-bs' ? ' is-selected' : ''}`} type="button" onClick={() => setDegreeType('ast-to-bs')}>AS-T to B.S.</button>
+        <span className="legend-title path-divider">Path</span>
         {Object.entries(activeProgram.concentrations).map(([concentrationId, concentration]) => (
           <button
             key={concentrationId}
@@ -222,6 +292,7 @@ function App() {
             {concentration.title}
           </button>
         ))}
+        {degreeType === 'ast-to-bs' && <button className="transfer-readiness-button" type="button" onClick={() => setTransferReadinessOpen(true)}>Check transfer readiness</button>}
       </section>
       {activeView === 'registration' && <Suspense fallback={<p className="planner-loading">Loading registration planner…</p>}><RegistrationPlanner plan={registrationPlan} currentTerm={registrationTerm} onCurrentTermChange={setRegistrationTerm} onCourseSelect={setSelectedSlot} /></Suspense>}
       {activeView === 'roadmap' && suggestedSchedule.suggestions.size > 0 && <section className="next-term" aria-live="polite"><strong>Suggested schedule:</strong> {suggestedSchedule.credits} credits. <strong>{remainingCredits} planned credits remain</strong> — about {semestersAtFifteen} semesters at 15 credits per term, or {semestersAtEighteen} at 18.</section>}
@@ -236,9 +307,23 @@ function App() {
             <span>Year</span><span>Term</span>
             <div className="credit-heading"><strong>Suggested credits</strong><div className="credit-numbers" aria-label="Credit positions">{Array.from({ length: 18 }, (_, index) => <span key={index}>{index + 1}</span>)}</div></div>
           </div>
-          {curriculumPlan.years.map(year => (
+          {preparationTerms.map((term, index) => (
+            <div className="year-group preparation-year-group" role="rowgroup" key={`preparation-${index}`}>
+              <div className="year-label" role="rowheader">Preparation</div>
+              <div className="term-row" role="row">
+                <div className="term-label" role="rowheader">{term.term}</div>
+                <div className="credit-grid" role="cell">
+                  {term.slots.map(slot => {
+                    const isCompleted = completed.has(progressKey(slot))
+                    return <CourseCell key={progressKey(slot)} slot={slot} selectedTarget={false} completed={isCompleted} suggestion={null} highPriority={false} onSelect={() => setSelectedSlot(slot)} />
+                  })}
+                </div>
+              </div>
+            </div>
+          ))}
+          {activePlan.years.map(year => (
             <div className="year-group" role="rowgroup" key={year.year}>
-              <div className="year-label" role="rowheader">{year.year}</div>
+              <div className="year-label" role="rowheader">{degreeYearLabel(degreeType, year.year)}</div>
               {year.terms.map(term => (
                 <div className="term-row" role="row" key={`${year.year}-${term.term}`}>
                   <div className="term-label" role="rowheader">{term.term}</div>
@@ -263,6 +348,17 @@ function App() {
         updateCompletion(selectedSlot, isCompleted, resolvedCourseId)
       }} onTargetCourseSelect={courseId => selectTargetCourse(selectedSlot, courseId)} onTargetCourseClear={() => clearTargetCourse(selectedSlot)} onOpenAssessment={() => resolvedCourseId && setAssessmentCourseId(resolvedCourseId)} />}
       {assessmentCourseId && <ReadinessAssessment courseId={assessmentCourseId} onClose={() => setAssessmentCourseId(null)} />}
+      {transferReadinessOpen && !assessmentCourseId && <TransferReadiness
+        completed={completed}
+        preparationCourseIds={preparationCourseIds}
+        onClose={() => setTransferReadinessOpen(false)}
+        onCompletedChange={updateTransferCompletion}
+        onPreparationChange={updateTransferPreparation}
+        onOpenAssessment={courseId => {
+          setTransferReadinessOpen(false)
+          setAssessmentCourseId(courseId)
+        }}
+      />}
     </main>
   )
 }

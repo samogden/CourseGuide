@@ -75,6 +75,7 @@ const programsSchema = z.object({
 
 export type Category = z.infer<typeof categorySchema>
 export type AcademicTerm = 'fall' | 'spring'
+export type DegreeType = 'bs' | 'ast-to-bs'
 export type PlanSlot = z.infer<typeof planSlotSchema>
 export type CurriculumPlan = z.infer<typeof planSchema>
 export type Programs = z.infer<typeof programsSchema>
@@ -116,6 +117,40 @@ const parsedCatalog = z.object({ schemaVersion: z.literal(1), courses: z.record(
 export const curriculumPlan: CurriculumPlan = planSchema.parse(parse(planText))
 export const programs: Programs = programsSchema.parse(parse(programsText))
 export const catalogVersions = programs.catalogVersions
+
+/** Courses AS-T students ordinarily completed before entering the upper division. */
+export const transferAssumedCourseIds = new Set(
+  curriculumPlan.years
+    .filter(year => year.year === 'freshman' || year.year === 'sophomore')
+    .flatMap(year => year.terms.flatMap(term => term.slots.flatMap(slot => {
+      if (slot.type === 'course') return [slot.courseId]
+      if (slot.type === 'choice') return slot.alternatives
+      return []
+    }))),
+)
+
+export const transferReadinessCourseIds = [
+  'MATH-130',
+  'CST-231',
+  'CST-237',
+  'CST-238',
+  'MATH-151',
+  'MATH-170',
+  'MATH-270',
+] as const
+
+export function planForDegreeType(degreeType: DegreeType): CurriculumPlan {
+  if (degreeType === 'bs') return curriculumPlan
+  return {
+    ...curriculumPlan,
+    years: curriculumPlan.years.filter(year => year.year === 'junior' || year.year === 'senior'),
+  }
+}
+
+export function degreeYearLabel(degreeType: DegreeType, year: CurriculumPlan['years'][number]['year']): string {
+  if (degreeType === 'ast-to-bs') return year === 'junior' ? '1st year' : '2nd year'
+  return year
+}
 
 const catalogEntries: Course[] = Object.entries(parsedCatalog.courses).map(([id, course]) => {
   if (id !== canonicalCourseId(id)) throw new Error(`Course catalog ID must be canonical: ${id}`)
