@@ -291,7 +291,13 @@ function App() {
       </section>
       <section className="path-picker" aria-label="Program concentration">
         <span className="legend-title">Path</span>
-        {Object.entries(activeProgram.concentrations).map(([concentrationId, concentration]) => (
+        {Object.entries(activeProgram.concentrations)
+          .sort(([leftId, left], [rightId, right]) => {
+            if (leftId === 'general') return -1
+            if (rightId === 'general') return 1
+            return left.title.localeCompare(right.title)
+          })
+          .map(([concentrationId, concentration]) => (
           <button
             key={concentrationId}
             className={`path-button${activeConcentrationId === concentrationId ? ' is-selected' : ''}`}
