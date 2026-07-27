@@ -5,7 +5,7 @@ import { ReadinessAssessment } from './components/ReadinessAssessment'
 import { TransferReadiness } from './components/TransferReadiness'
 import { getAssessmentPack } from './models/Assessments'
 import { catalogVersions, defaultCatalogVersion, degreeYearLabel, getCourse, planForDegreeType, prerequisitesMet, progressKey, remainingPlanCredits, summarizePlanCredits, transferAssumedCourseIds, type AcademicTerm, type DegreeType, type PlanSlot } from './models/Curriculum'
-import { buildRegistrationPlan, buildSuggestedSchedule } from './models/Scheduling'
+import { buildCompactedSchedule, buildRegistrationPlan, buildSuggestedSchedule } from './models/Scheduling'
 import { buildPreparationTerms, preparationCredits } from './models/TransferPreparation'
 
 const progressStorageKey = 'courseguide-completed-v1'
@@ -107,8 +107,9 @@ function App() {
   const [targetCourses, setTargetCourses] = useState<Map<string, string>>(() => readTargetCourses())
   const [transferPreparation, setTransferPreparation] = useState<Map<string, string[]>>(() => readTransferPreparation())
   const [transferReadinessOpen, setTransferReadinessOpen] = useState(false)
-  const [activeView, setActiveView] = useState<'roadmap' | 'registration'>('roadmap')
+  const [activeView, setActiveView] = useState<'roadmap' | 'registration' | 'compacted'>('roadmap')
   const [registrationTerm, setRegistrationTerm] = useState<AcademicTerm>('fall')
+  const [compactedCreditLimit, setCompactedCreditLimit] = useState(15)
 
   useEffect(() => {
     localStorage.setItem(progressStorageKey, JSON.stringify([...completed]))
@@ -160,6 +161,7 @@ function App() {
     setDegreeType('bs')
     setActiveView('roadmap')
     setRegistrationTerm('fall')
+    setCompactedCreditLimit(15)
     setSelectedSlot(null)
     setAssessmentCourseId(null)
     setTransferReadinessOpen(false)
@@ -244,6 +246,17 @@ function App() {
     currentTerm: registrationTerm,
     ...(degreeType === 'ast-to-bs' ? { assumedCompletedCourseIds: transferAssumedCourseIds } : {}),
   })
+  const compactedSchedule = buildCompactedSchedule(activePlan, completed, compactedCreditLimit, degreeType, {
+    programId: activeProgramId,
+    catalogVersion: selectedCatalogVersion,
+    concentrationId: activeConcentrationId,
+    targetCourses: activeTargetCourses,
+    ...(degreeType === 'ast-to-bs' ? { assumedCompletedCourseIds: transferAssumedCourseIds } : {}),
+  })
+  const compactedYears = Array.from(new Set(compactedSchedule.terms.map(term => term.year))).map(year => ({
+    year,
+    terms: compactedSchedule.terms.filter(term => term.year === year),
+  }))
   const completedCourseIds = new Set([...completed]
     .filter(key => key.startsWith('course:'))
     .map(key => key.slice('course:'.length)))
@@ -281,6 +294,7 @@ function App() {
         <nav className="view-picker" aria-label="Planner view">
           <button className={`path-button${activeView === 'registration' ? ' is-selected' : ''}`} type="button" onClick={() => setActiveView('registration')}>Registration planner</button>
           <button className={`path-button${activeView === 'roadmap' ? ' is-selected' : ''}`} type="button" onClick={() => setActiveView('roadmap')}>Roadmap</button>
+          <button className={`path-button${activeView === 'compacted' ? ' is-selected' : ''}`} type="button" onClick={() => setActiveView('compacted')}>Compacted</button>
         </nav>
       </section>
       <section className="degree-picker" aria-label="Degree type">
@@ -310,6 +324,11 @@ function App() {
       </section>
       {activeView === 'registration' && <Suspense fallback={<p className="planner-loading">Loading registration planner…</p>}><RegistrationPlanner plan={registrationPlan} currentTerm={registrationTerm} onCurrentTermChange={setRegistrationTerm} onCourseSelect={setSelectedSlot} /></Suspense>}
       {activeView === 'roadmap' && suggestedSchedule.suggestions.size > 0 && <section className="next-term" aria-live="polite"><strong>Suggested schedule:</strong> {suggestedSchedule.credits} credits. <strong>{remainingCredits} planned credits remain</strong> — about {semestersAtFifteen} semesters at 15 credits per term, or {semestersAtEighteen} at 18.</section>}
+      {activeView === 'compacted' && <section className="compacted-controls" aria-label="Compacted schedule settings">
+        <label htmlFor="compacted-credit-limit">Maximum credits per term <strong>{compactedCreditLimit}</strong></label>
+        <input id="compacted-credit-limit" type="range" min="12" max="18" value={compactedCreditLimit} onChange={event => setCompactedCreditLimit(Number(event.target.value))} />
+        <p>Courses are placed in the earliest fall or spring term that meets their prerequisites, offering pattern, and standing requirements.</p>
+      </section>}
       <section className="legend" aria-label="Course category legend">
         <span className="legend-title">Course groups</span>
         <span className="category-cst">Core</span><span className="category-math">Math</span><span className="category-ge-lower">Lower-division GE</span><span className="category-ge-upper">Upper-division GE</span><span className="category-concentration-required">Concentration requirement</span><span className="category-elective">Elective</span><span className="offering-legend">Limited-term offering</span>
@@ -348,6 +367,45 @@ function App() {
                       const isCompleted = completed.has(assignedCourseId ? `course:${assignedCourseId}` : progressKey(slot))
                       const suggestion = suggestedSchedule.suggestions.get(progressKey(slot)) ?? null
                       return <CourseCell key={progressKey(slot)} slot={slot} assignedCourseId={assignedCourseId} courseOptions={courseOptions} selectedTarget={suggestedSchedule.selectedTargetKeys.has(progressKey(slot))} completed={isCompleted} suggestion={suggestion} highPriority={suggestedSchedule.isHighPriority(slot) && !isCompleted} onSelect={() => setSelectedSlot(slot)} />
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+      </>}
+      {activeView === 'compacted' && <><p className="scroll-hint">Scroll horizontally to see the complete 18-credit grid on smaller screens.</p>
+      <div className="curriculum-scroll">
+        <div className="curriculum-grid" role="table" aria-label="Compacted curriculum plan">
+          <div className="grid-header" role="row">
+            <span>Year</span><span>Term</span>
+            <div className="credit-heading"><strong>Planned credits</strong><div className="credit-numbers" aria-label="Credit positions">{Array.from({ length: 18 }, (_, index) => <span key={index}>{index + 1}</span>)}</div></div>
+          </div>
+          {preparationTerms.map((term, index) => (
+            <div className="year-group preparation-year-group" role="rowgroup" key={`compacted-preparation-${index}`}>
+              <div className="year-label" role="rowheader">Preparation</div>
+              <div className="term-row" role="row">
+                <div className="term-label" role="rowheader">{term.term}</div>
+                <div className="credit-grid" role="cell">
+                  {term.slots.map(slot => <CourseCell key={progressKey(slot)} slot={slot} selectedTarget={false} completed={completed.has(progressKey(slot))} suggestion={null} highPriority={false} onSelect={() => setSelectedSlot(slot)} />)}
+                </div>
+              </div>
+            </div>
+          ))}
+          {compactedYears.map(year => (
+            <div className="year-group compacted-year-group" role="rowgroup" key={year.year}>
+              <div className="year-label" style={{ gridRow: `span ${year.terms.length}` }} role="rowheader">{year.year}{year.year === 1 ? 'st' : year.year === 2 ? 'nd' : year.year === 3 ? 'rd' : 'th'} year</div>
+              {year.terms.map(term => (
+                <div className="term-row" role="row" key={`${term.year}-${term.term}`}>
+                  <div className="term-label" role="rowheader">{term.term} · {term.credits}</div>
+                  <div className="credit-grid" role="cell">
+                    {term.slots.map(slot => {
+                      const assignedCourseId = compactedSchedule.assignments.get(progressKey(slot))
+                      const courseOptions = compactedSchedule.courseOptions.get(progressKey(slot))
+                      const isCompleted = completed.has(assignedCourseId ? `course:${assignedCourseId}` : progressKey(slot))
+                      return <CourseCell key={progressKey(slot)} slot={slot} assignedCourseId={assignedCourseId} courseOptions={courseOptions} selectedTarget={compactedSchedule.selectedTargetKeys.has(progressKey(slot))} completed={isCompleted} suggestion={null} highPriority={false} onSelect={() => setSelectedSlot(slot)} />
                     })}
                   </div>
                 </div>

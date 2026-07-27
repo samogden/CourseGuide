@@ -1,8 +1,33 @@
 import { describe, expect, it } from 'vitest'
-import { curriculumPlan, progressKey, type CurriculumPlan } from './Curriculum'
-import { buildRegistrationPlan, buildSuggestedSchedule } from './Scheduling'
+import { curriculumPlan, planForDegreeType, progressKey, transferAssumedCourseIds, type CurriculumPlan } from './Curriculum'
+import { buildCompactedSchedule, buildRegistrationPlan, buildSuggestedSchedule } from './Scheduling'
 
 describe('suggested scheduling', () => {
+  it('compacts eligible work forward without moving junior-standing courses early', () => {
+    const compacted = buildCompactedSchedule(curriculumPlan, new Set(), 15, 'bs', {
+      programId: 'bs-computer-science',
+      concentrationId: 'general',
+    })
+    const secondSpring = compacted.terms.find(term => term.year === 2 && term.term === 'spring')
+    const thirdFall = compacted.terms.find(term => term.year === 3 && term.term === 'fall')
+
+    expect(compacted.terms.every(term => term.credits <= 15)).toBe(true)
+    expect(secondSpring?.slots.map(progressKey)).toContain('slot:junior-fall-cst-334-or-cst-370')
+    expect(secondSpring?.slots.map(progressKey)).toContain('course:CST-338')
+    expect(secondSpring?.slots.map(progressKey)).not.toContain('course:CST-349')
+    expect(thirdFall?.slots.map(progressKey)).toContain('course:CST-349')
+  })
+
+  it('allows junior-standing courses in the first AS-T transfer term', () => {
+    const compacted = buildCompactedSchedule(planForDegreeType('ast-to-bs'), new Set(), 15, 'ast-to-bs', {
+      programId: 'bs-computer-science',
+      concentrationId: 'general',
+      assumedCompletedCourseIds: transferAssumedCourseIds,
+    })
+
+    expect(compacted.terms[0]?.slots.map(progressKey)).toContain('course:CST-349')
+  })
+
   it('keeps the early prerequisite-driven course visible and standard', () => {
     const schedule = buildSuggestedSchedule(curriculumPlan, new Set())
     const cst286 = curriculumPlan.years[0].terms[0].slots[3]

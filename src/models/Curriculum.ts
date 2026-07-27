@@ -23,6 +23,7 @@ const courseSchema = z.object({
     z.object({ terms: z.array(z.enum(['fall', 'spring'])).min(1) }).strict(),
     z.object({ availability: z.literal('periodic') }).strict(),
   ]).optional(),
+  minimumStanding: z.enum(['junior']).optional(),
   prerequisites: z.array(prerequisiteSchema).optional(),
   corequisites: z.array(prerequisiteSchema).optional(),
   prerequisiteNotes: z.array(z.string()).optional(),
@@ -99,6 +100,7 @@ export interface Course {
   prerequisites: unknown[]
   prerequisiteNotes: string[]
   placeholder: boolean
+  minimumStanding?: 'junior'
 }
 
 export interface PlanCreditSummary {
@@ -167,6 +169,7 @@ const catalogEntries: Course[] = Object.entries(parsedCatalog.courses).map(([id,
     prerequisites: course.prerequisites ?? [],
     prerequisiteNotes: course.prerequisiteNotes ?? [],
     placeholder: course.placeholder,
+    minimumStanding: course.minimumStanding,
   }
 })
 

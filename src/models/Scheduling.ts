@@ -12,6 +12,7 @@ import {
   requirementCourseIds,
   slotLabel,
   type CurriculumPlan,
+  type DegreeType,
   type PlanSlot,
   type Requirement,
 } from './Curriculum'
@@ -80,6 +81,20 @@ export interface RegistrationFutureCourse {
   credits: number
   prerequisiteCount: number
   isAvailableNow: boolean
+}
+
+export interface CompactedTerm {
+  year: number
+  term: 'fall' | 'spring'
+  slots: PlanSlot[]
+  credits: number
+}
+
+export interface CompactedSchedule {
+  terms: CompactedTerm[]
+  assignments: ReadonlyMap<string, string>
+  courseOptions: ReadonlyMap<string, PathSlotOptions>
+  selectedTargetKeys: ReadonlySet<string>
 }
 
 interface RankedCourse {
@@ -273,6 +288,146 @@ export function buildRegistrationPlan(plan: CurriculumPlan, completed: ReadonlyS
   })
 
   return { credits: schedule.credits, courses, edges, upcomingCourses }
+}
+
+/** Re-packs remaining plan slots into the earliest valid term without changing degree requirements. */
+export function buildCompactedSchedule(
+  plan: CurriculumPlan,
+  completed: ReadonlySet<string>,
+  maximumCredits: number,
+  degreeType: DegreeType,
+  selection?: ScheduleSelection,
+): CompactedSchedule {
+  const baseSchedule = buildSuggestedSchedule(plan, completed, selection)
+  const completedCourseIds = completedCourseIdsFor(selection, completed)
+  const orderedSlots = plan.years.flatMap(year => year.terms.flatMap(term => term.slots))
+  const originalOrder = new Map(orderedSlots.map((slot, index) => [progressKey(slot), index]))
+  const remaining = orderedSlots.filter(slot => !isSlotCompleted(slot, completed, baseSchedule.assignments))
+  const terms: CompactedTerm[] = []
+  const scheduledCourseIds = new Set<string>()
+  const scheduledChoiceTerms = new Map<string, number>()
+  const previousChoiceByKey = buildPreviousChoiceKeys(orderedSlots)
+  let termIndex = 0
+
+  while (remaining.length > 0) {
+    const term: 'fall' | 'spring' = termIndex % 2 === 0 ? 'fall' : 'spring'
+    const availableBeforeTerm = new Set([...completedCourseIds, ...scheduledCourseIds])
+    const scheduledThisTerm: PlanSlot[] = []
+    const courseIdsThisTerm: string[] = []
+    let credits = 0
+    let madeProgress = true
+
+    while (madeProgress) {
+      madeProgress = false
+      const candidate = [...remaining]
+        .sort((left, right) => (originalOrder.get(progressKey(left)) ?? 0) - (originalOrder.get(progressKey(right)) ?? 0))
+        .find(slot => credits + slot.credits <= maximumCredits && canCompactSlot(
+          slot,
+          term,
+          termIndex,
+          degreeType,
+          availableBeforeTerm,
+          completed,
+          baseSchedule.assignments,
+          baseSchedule.courseOptions,
+          previousChoiceByKey,
+          scheduledChoiceTerms,
+        ))
+      if (!candidate) continue
+
+      remaining.splice(remaining.indexOf(candidate), 1)
+      scheduledThisTerm.push(candidate)
+      credits += candidate.credits
+      const key = progressKey(candidate)
+      if (candidate.type === 'choice') scheduledChoiceTerms.set(key, termIndex)
+      const courseId = baseSchedule.assignments.get(key) ?? (candidate.type === 'course' ? candidate.courseId : undefined)
+      if (courseId) courseIdsThisTerm.push(courseId)
+      else if (candidate.type === 'choice') courseIdsThisTerm.push(...candidate.alternatives.filter(alternative => getCourse(alternative)))
+      madeProgress = true
+    }
+
+    if (scheduledThisTerm.length > 0) {
+      terms.push({ year: Math.floor(termIndex / 2) + 1, term, slots: scheduledThisTerm, credits })
+      courseIdsThisTerm.forEach(courseId => scheduledCourseIds.add(courseId))
+    }
+    termIndex += 1
+    if (termIndex > 24) throw new Error(`Unable to place compacted plan slots: ${remaining.map(progressKey).join(', ')}`)
+  }
+
+  return {
+    terms,
+    assignments: baseSchedule.assignments,
+    courseOptions: baseSchedule.courseOptions,
+    selectedTargetKeys: baseSchedule.selectedTargetKeys,
+  }
+}
+
+function completedCourseIdsFor(selection: ScheduleSelection | undefined, completed: ReadonlySet<string>): Set<string> {
+  const courseIds = new Set([...completed]
+    .filter(key => key.startsWith('course:'))
+    .map(key => key.slice('course:'.length)))
+  for (const courseId of selection?.assumedCompletedCourseIds ?? []) courseIds.add(courseId)
+  return courseIds
+}
+
+function isSlotCompleted(slot: PlanSlot, completed: ReadonlySet<string>, assignments: ReadonlyMap<string, string>): boolean {
+  const key = progressKey(slot)
+  const assignedCourseId = assignments.get(key)
+  return completed.has(key) || completed.has(assignedCourseId ? `course:${assignedCourseId}` : key)
+}
+
+function buildPreviousChoiceKeys(slots: readonly PlanSlot[]): Map<string, string> {
+  const latestByAlternatives = new Map<string, string>()
+  const previous = new Map<string, string>()
+  for (const slot of slots) {
+    if (slot.type !== 'choice') continue
+    const alternatives = [...slot.alternatives].sort().join('|')
+    const prior = latestByAlternatives.get(alternatives)
+    if (prior) previous.set(progressKey(slot), prior)
+    latestByAlternatives.set(alternatives, progressKey(slot))
+  }
+  return previous
+}
+
+function canCompactSlot(
+  slot: PlanSlot,
+  term: 'fall' | 'spring',
+  termIndex: number,
+  degreeType: DegreeType,
+  completedCourseIds: ReadonlySet<string>,
+  completed: ReadonlySet<string>,
+  assignments: ReadonlyMap<string, string>,
+  courseOptions: ReadonlyMap<string, PathSlotOptions>,
+  previousChoiceByKey: ReadonlyMap<string, string>,
+  scheduledChoiceTerms: ReadonlyMap<string, number>,
+): boolean {
+  const key = progressKey(slot)
+  const previousChoice = previousChoiceByKey.get(key)
+  if (previousChoice && scheduledChoiceTerms.get(previousChoice) === termIndex) return false
+  if (previousChoice && !scheduledChoiceTerms.has(previousChoice) && !completed.has(previousChoice)) return false
+
+  const assignedCourseId = assignments.get(key)
+  if (assignedCourseId) return isCompactedCourseAvailable(assignedCourseId, term, termIndex, degreeType, completedCourseIds, courseOptions.get(key)?.prerequisites)
+  if (slot.type === 'course') return isCompactedCourseAvailable(slot.courseId, term, termIndex, degreeType, completedCourseIds)
+  if (slot.type === 'requirement' && !courseOptions.has(key)) return true
+
+  if (slot.type === 'choice' && !courseOptions.has(key) && !slot.alternatives.every(alternative => getCourse(alternative))) return true
+  const options: PathSlotOptions | undefined = courseOptions.get(key) ?? (slot.type === 'choice' ? { label: 'Course choice', courseIds: slot.alternatives } : undefined)
+  return Boolean(options?.courseIds.some(courseId => isCompactedCourseAvailable(courseId, term, termIndex, degreeType, completedCourseIds, options.prerequisites)))
+}
+
+function isCompactedCourseAvailable(
+  courseId: string,
+  term: 'fall' | 'spring',
+  termIndex: number,
+  degreeType: DegreeType,
+  completedCourseIds: ReadonlySet<string>,
+  additionalPrerequisites: readonly unknown[] = [],
+): boolean {
+  const course = getCourse(courseId)
+  if (!course || !isCourseOffered(courseId, term)) return false
+  if (course.minimumStanding === 'junior' && degreeType !== 'ast-to-bs' && termIndex < 4) return false
+  return prerequisitesMet([...course.prerequisites, ...additionalPrerequisites], completedCourseIds)
 }
 
 function buildPathAssignments(

@@ -183,6 +183,7 @@ courses:
       terms:
         - spring
     prerequisites: []
+    minimumStanding: junior
     prerequisiteNotes:
       - GE Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing
   CST-311:
@@ -300,6 +301,7 @@ courses:
         - fall
         - spring
     prerequisites: []
+    minimumStanding: junior
     prerequisiteNotes:
       - Junior Standing Required
   CST-363:

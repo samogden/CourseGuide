@@ -145,4 +145,15 @@ describe('planner', () => {
     fireEvent.click(screen.getByLabelText('Open CST 231'))
     expect(screen.getByRole('dialog')).toHaveTextContent('Problem Solving/Programming')
   })
+
+  it('shows compacted scheduling controls and sequential year labels', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: 'Compacted' }))
+
+    expect(screen.getByLabelText('Compacted schedule settings')).toBeInTheDocument()
+    expect(screen.getByLabelText(/maximum credits per term/i)).toHaveValue('15')
+    expect(screen.getByRole('rowheader', { name: '1st year' })).toBeInTheDocument()
+    fireEvent.change(screen.getByLabelText(/maximum credits per term/i), { target: { value: '12' } })
+    expect(screen.getByLabelText(/maximum credits per term/i)).toHaveValue('12')
+  })
 })
