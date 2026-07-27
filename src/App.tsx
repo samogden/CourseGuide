@@ -5,7 +5,7 @@ import { ReadinessAssessment } from './components/ReadinessAssessment'
 import { TransferReadiness } from './components/TransferReadiness'
 import { getAssessmentPack } from './models/Assessments'
 import { catalogVersions, defaultCatalogVersion, degreeYearLabel, getCourse, planForDegreeType, prerequisitesMet, progressKey, remainingPlanCredits, summarizePlanCredits, transferAssumedCourseIds, type AcademicTerm, type DegreeType, type PlanSlot } from './models/Curriculum'
-import { buildCompactedSchedule, buildRegistrationPlan, buildSuggestedSchedule } from './models/Scheduling'
+import { buildCompactedSchedule, buildRegistrationPlan, buildSuggestedSchedule, sortSlotsForPresentation } from './models/Scheduling'
 import { buildPreparationTerms, preparationCredits } from './models/TransferPreparation'
 
 const progressStorageKey = 'courseguide-completed-v1'
@@ -346,7 +346,7 @@ function App() {
               <div className="term-row" role="row">
                 <div className="term-label" role="rowheader">{term.term}</div>
                 <div className="credit-grid" role="cell">
-                  {term.slots.map(slot => {
+                  {sortSlotsForPresentation(term.slots, new Map(), new Map(), completed).map(slot => {
                     const isCompleted = completed.has(progressKey(slot))
                     return <CourseCell key={progressKey(slot)} slot={slot} selectedTarget={false} completed={isCompleted} suggestion={null} highPriority={false} onSelect={() => setSelectedSlot(slot)} />
                   })}
@@ -361,7 +361,7 @@ function App() {
                 <div className="term-row" role="row" key={`${year.year}-${term.term}`}>
                   <div className="term-label" role="rowheader">{term.term}</div>
                   <div className="credit-grid" role="cell">
-                    {term.slots.map(slot => {
+                    {sortSlotsForPresentation(term.slots, suggestedSchedule.assignments, suggestedSchedule.courseOptions, completed).map(slot => {
                       const assignedCourseId = suggestedSchedule.assignments.get(progressKey(slot))
                       const courseOptions = suggestedSchedule.courseOptions.get(progressKey(slot))
                       const isCompleted = completed.has(assignedCourseId ? `course:${assignedCourseId}` : progressKey(slot))
@@ -389,7 +389,7 @@ function App() {
               <div className="term-row" role="row">
                 <div className="term-label" role="rowheader">{term.term}</div>
                 <div className="credit-grid" role="cell">
-                  {term.slots.map(slot => <CourseCell key={progressKey(slot)} slot={slot} selectedTarget={false} completed={completed.has(progressKey(slot))} suggestion={null} highPriority={false} onSelect={() => setSelectedSlot(slot)} />)}
+                  {sortSlotsForPresentation(term.slots, new Map(), new Map(), completed).map(slot => <CourseCell key={progressKey(slot)} slot={slot} selectedTarget={false} completed={completed.has(progressKey(slot))} suggestion={null} highPriority={false} onSelect={() => setSelectedSlot(slot)} />)}
                 </div>
               </div>
             </div>
@@ -401,7 +401,7 @@ function App() {
                 <div className="term-row" role="row" key={`${term.year}-${term.term}`}>
                   <div className="term-label" role="rowheader">{term.term} · {term.credits}</div>
                   <div className="credit-grid" role="cell">
-                    {term.slots.map(slot => {
+                    {sortSlotsForPresentation(term.slots, compactedSchedule.assignments, compactedSchedule.courseOptions, completed).map(slot => {
                       const assignedCourseId = compactedSchedule.assignments.get(progressKey(slot))
                       const courseOptions = compactedSchedule.courseOptions.get(progressKey(slot))
                       const isCompleted = completed.has(assignedCourseId ? `course:${assignedCourseId}` : progressKey(slot))

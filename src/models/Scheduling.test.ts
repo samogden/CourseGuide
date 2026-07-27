@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { curriculumPlan, planForDegreeType, progressKey, transferAssumedCourseIds, type CurriculumPlan } from './Curriculum'
-import { buildCompactedSchedule, buildRegistrationPlan, buildSuggestedSchedule } from './Scheduling'
+import { buildCompactedSchedule, buildRegistrationPlan, buildSuggestedSchedule, sortSlotsForPresentation } from './Scheduling'
 
 describe('suggested scheduling', () => {
   it('compacts eligible work forward without moving junior-standing courses early', () => {
@@ -26,6 +26,39 @@ describe('suggested scheduling', () => {
     })
 
     expect(compacted.terms[0]?.slots.map(progressKey)).toContain('course:CST-349')
+  })
+
+  it('moves completed compacted courses into the earliest displayed term', () => {
+    const completed = new Set(['slot:junior-fall-cst-334-or-cst-370', 'course:CST-334'])
+    const compacted = buildCompactedSchedule(curriculumPlan, completed, 15, 'bs', {
+      programId: 'bs-computer-science',
+      concentrationId: 'general',
+    })
+
+    expect(compacted.terms[0]?.slots.map(progressKey)).toContain('slot:junior-fall-cst-334-or-cst-370')
+  })
+
+  it('presents core work before concentration requirements, electives, math, and GE work', () => {
+    const schedule = buildSuggestedSchedule(curriculumPlan, new Set(), {
+      programId: 'bs-computer-science',
+      concentrationId: 'data-science',
+    })
+    const juniorFall = curriculumPlan.years[2].terms[0].slots
+    const orderedKeys = sortSlotsForPresentation(juniorFall, schedule.assignments, schedule.courseOptions).map(progressKey)
+
+    expect(orderedKeys).toEqual([
+      'slot:junior-fall-cst-334-or-cst-370',
+      'course:CST-338',
+      'course:CST-349',
+      'slot:junior-fall-elective-prerequisite',
+    ])
+  })
+
+  it('presents completed work before every other course in a term', () => {
+    const freshmanFall = curriculumPlan.years[0].terms[0].slots
+    const orderedKeys = sortSlotsForPresentation(freshmanFall, new Map(), new Map(), new Set(['course:MATH-130'])).map(progressKey)
+
+    expect(orderedKeys[0]).toBe('course:MATH-130')
   })
 
   it('keeps the early prerequisite-driven course visible and standard', () => {

@@ -57,6 +57,7 @@ export interface RegistrationCourse {
   courseId?: string
   label: string
   credits: number
+  category: PresentationCategory
   kind: SuggestionKind
   priority: 'high' | 'regular' | 'stretch'
   downstreamCount: number
@@ -96,6 +97,8 @@ export interface CompactedSchedule {
   courseOptions: ReadonlyMap<string, PathSlotOptions>
   selectedTargetKeys: ReadonlySet<string>
 }
+
+export type PresentationCategory = 'cst' | 'concentration-required' | 'elective' | 'math' | 'ge-lower' | 'ge-upper'
 
 interface RankedCourse {
   courseId: string
@@ -241,13 +244,16 @@ export function buildRegistrationPlan(plan: CurriculumPlan, completed: ReadonlyS
   const courses = slots.flatMap(slot => {
     const suggestion = schedule.suggestions.get(progressKey(slot))
     if (!suggestion) return []
-    const courseId = suggestion.courseId ?? schedule.assignments.get(progressKey(slot)) ?? (slot.type === 'course' ? slot.courseId : undefined)
+    const key = progressKey(slot)
+    const assignedCourseId = schedule.assignments.get(key)
+    const courseId = suggestion.courseId ?? assignedCourseId ?? (slot.type === 'course' ? slot.courseId : undefined)
     return [{
-      key: progressKey(slot),
+      key,
       slot,
       courseId,
       label: courseId ? getCourse(courseId)?.code ?? slotLabel(slot) : slotLabel(slot),
       credits: slot.credits,
+      category: presentationCategory(slot, assignedCourseId, schedule.courseOptions.get(key)),
       kind: suggestion.kind,
       priority: (suggestion.kind === 'stretch' ? 'stretch' : schedule.isHighPriority(slot) ? 'high' : 'regular') as RegistrationCourse['priority'],
       downstreamCount: 0,
@@ -302,6 +308,7 @@ export function buildCompactedSchedule(
   const completedCourseIds = completedCourseIdsFor(selection, completed)
   const orderedSlots = plan.years.flatMap(year => year.terms.flatMap(term => term.slots))
   const originalOrder = new Map(orderedSlots.map((slot, index) => [progressKey(slot), index]))
+  const completedSlots = orderedSlots.filter(slot => isSlotCompleted(slot, completed, baseSchedule.assignments))
   const remaining = orderedSlots.filter(slot => !isSlotCompleted(slot, completed, baseSchedule.assignments))
   const terms: CompactedTerm[] = []
   const scheduledCourseIds = new Set<string>()
@@ -309,12 +316,20 @@ export function buildCompactedSchedule(
   const previousChoiceByKey = buildPreviousChoiceKeys(orderedSlots)
   let termIndex = 0
 
-  while (remaining.length > 0) {
+  while (completedSlots.length > 0 || remaining.length > 0) {
     const term: 'fall' | 'spring' = termIndex % 2 === 0 ? 'fall' : 'spring'
     const availableBeforeTerm = new Set([...completedCourseIds, ...scheduledCourseIds])
     const scheduledThisTerm: PlanSlot[] = []
     const courseIdsThisTerm: string[] = []
     let credits = 0
+
+    while (completedSlots.length > 0) {
+      const completedSlot = completedSlots.find(slot => credits + slot.credits <= maximumCredits)
+      if (!completedSlot) break
+      completedSlots.splice(completedSlots.indexOf(completedSlot), 1)
+      scheduledThisTerm.push(completedSlot)
+      credits += completedSlot.credits
+    }
     let madeProgress = true
 
     while (madeProgress) {
@@ -347,7 +362,7 @@ export function buildCompactedSchedule(
     }
 
     if (scheduledThisTerm.length > 0) {
-      terms.push({ year: Math.floor(termIndex / 2) + 1, term, slots: scheduledThisTerm, credits })
+      terms.push({ year: Math.floor(termIndex / 2) + 1, term, slots: sortSlotsForPresentation(scheduledThisTerm, baseSchedule.assignments, baseSchedule.courseOptions, completed), credits })
       courseIdsThisTerm.forEach(courseId => scheduledCourseIds.add(courseId))
     }
     termIndex += 1
@@ -360,6 +375,35 @@ export function buildCompactedSchedule(
     courseOptions: baseSchedule.courseOptions,
     selectedTargetKeys: baseSchedule.selectedTargetKeys,
   }
+}
+
+/** Category used consistently for course colors and left-to-right presentation. */
+export function presentationCategory(slot: PlanSlot, assignedCourseId?: string, courseOptions?: PathSlotOptions): PresentationCategory {
+  if (assignedCourseId || courseOptions?.required) return 'concentration-required'
+  return slot.category
+}
+
+export function presentationCategoryRank(category: PresentationCategory): number {
+  switch (category) {
+    case 'cst': return 0
+    case 'concentration-required': return 1
+    case 'elective': return 2
+    case 'math': return 3
+    case 'ge-lower':
+    case 'ge-upper': return 4
+  }
+}
+
+export function sortSlotsForPresentation(slots: readonly PlanSlot[], assignments: ReadonlyMap<string, string> = new Map(), courseOptions: ReadonlyMap<string, PathSlotOptions> = new Map(), completed?: ReadonlySet<string>): PlanSlot[] {
+  return slots
+    .map((slot, index) => ({
+      slot,
+      index,
+      category: presentationCategory(slot, assignments.get(progressKey(slot)), courseOptions.get(progressKey(slot))),
+      completed: completed ? isSlotCompleted(slot, completed, assignments) : false,
+    }))
+    .sort((left, right) => Number(right.completed) - Number(left.completed) || presentationCategoryRank(left.category) - presentationCategoryRank(right.category) || left.index - right.index)
+    .map(entry => entry.slot)
 }
 
 function completedCourseIdsFor(selection: ScheduleSelection | undefined, completed: ReadonlySet<string>): Set<string> {

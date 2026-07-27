@@ -2,7 +2,7 @@ import { Background, Controls, ReactFlow, type Edge, type Node } from '@xyflow/r
 import '@xyflow/react/dist/style.css'
 import type { AcademicTerm, PlanSlot } from '../models/Curriculum'
 import { getCourse, prerequisiteCount } from '../models/Curriculum'
-import type { RegistrationPlan } from '../models/Scheduling'
+import { presentationCategoryRank, type RegistrationPlan } from '../models/Scheduling'
 import './RegistrationPlanner.css'
 
 interface RegistrationPlannerProps {
@@ -14,6 +14,8 @@ interface RegistrationPlannerProps {
 
 export function RegistrationPlanner({ plan, currentTerm, onCurrentTermChange, onCourseSelect }: RegistrationPlannerProps) {
   const orderedCourses = [...plan.courses].sort((left, right) => {
+    const categoryDifference = presentationCategoryRank(left.category) - presentationCategoryRank(right.category)
+    if (categoryDifference !== 0) return categoryDifference
     if (left.kind !== right.kind) return left.kind === 'stretch' ? 1 : -1
     return left.kind === 'standard' ? right.downstreamCount - left.downstreamCount || left.label.localeCompare(right.label) : 0
   })
