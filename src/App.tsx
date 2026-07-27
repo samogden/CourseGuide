@@ -346,7 +346,7 @@ function App() {
               <div className="term-row" role="row">
                 <div className="term-label" role="rowheader">{term.term}</div>
                 <div className="credit-grid" role="cell">
-                  {sortSlotsForPresentation(term.slots, new Map(), new Map(), completed).map(slot => {
+                  {sortSlotsForPresentation(term.slots).map(slot => {
                     const isCompleted = completed.has(progressKey(slot))
                     return <CourseCell key={progressKey(slot)} slot={slot} selectedTarget={false} completed={isCompleted} suggestion={null} highPriority={false} onSelect={() => setSelectedSlot(slot)} />
                   })}
@@ -361,7 +361,7 @@ function App() {
                 <div className="term-row" role="row" key={`${year.year}-${term.term}`}>
                   <div className="term-label" role="rowheader">{term.term}</div>
                   <div className="credit-grid" role="cell">
-                    {sortSlotsForPresentation(term.slots, suggestedSchedule.assignments, suggestedSchedule.courseOptions, completed).map(slot => {
+                    {sortSlotsForPresentation(term.slots, suggestedSchedule.assignments, suggestedSchedule.courseOptions).map(slot => {
                       const assignedCourseId = suggestedSchedule.assignments.get(progressKey(slot))
                       const courseOptions = suggestedSchedule.courseOptions.get(progressKey(slot))
                       const isCompleted = completed.has(assignedCourseId ? `course:${assignedCourseId}` : progressKey(slot))
