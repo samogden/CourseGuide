@@ -329,6 +329,11 @@ function buildPathAssignments(
       const [target] = unassignedSlots.splice(slotIndex, 1)
       if (target) courseOptions.set(progressKey(target.slot), optionGroup)
     }
+
+    const electiveFallback = electiveFallbackOption(pathRequirements)
+    if (electiveFallback) {
+      for (const { slot } of unassignedSlots) courseOptions.set(progressKey(slot), electiveFallback)
+    }
   }
 
   const unavailableCourseIds = new Set(assignments.values())
@@ -406,6 +411,15 @@ function projectedCoursesBeforeTerms(plan: CurriculumPlan, completedCourseIds: R
 function courseOptionLabel(courseIds: readonly string[], fallback: string): string {
   if (courseIds.length !== 2) return fallback
   return courseIds.map(courseId => getCourse(courseId)?.code ?? courseId).join(' or ')
+}
+
+function electiveFallbackOption(requirements: Requirement[]): PathSlotOptions | undefined {
+  const requirement = requirements.find(candidate => candidate.completion.kind === 'minimumCredits')
+  if (!requirement) return undefined
+  return {
+    label: 'Concentration elective option',
+    courseIds: requirementCourseIds(requirement),
+  }
 }
 
 function resolvePathRequirements(selection?: ScheduleSelection): Requirement[] {

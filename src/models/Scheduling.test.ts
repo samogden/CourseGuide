@@ -144,6 +144,19 @@ describe('suggested scheduling', () => {
     })
   })
 
+  it('keeps the final software-engineering elective available as a concentration option', () => {
+    const schedule = buildSuggestedSchedule(curriculumPlan, new Set(), {
+      programId: 'bs-computer-science',
+      concentrationId: 'software-engineering',
+    })
+    const finalElective = curriculumPlan.years[3].terms[1].slots.find(slot => slot.type === 'requirement' && slot.slotId === 'senior-spring-elective')
+
+    expect(finalElective).toBeDefined()
+    expect(schedule.courseOptions.get(progressKey(finalElective!))).toEqual(expect.objectContaining({
+      label: 'Concentration elective option',
+    }))
+  })
+
   it('keeps an unselected concentration elective as a choice when it is suggested', () => {
     const electiveSlots = Array.from({ length: 4 }, (_, index) => ({
       type: 'requirement' as const,
