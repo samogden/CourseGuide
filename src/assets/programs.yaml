@@ -124,6 +124,9 @@ programs: &catalog_2026_programs
             courseIds:
               - CST-426
               - CST-438
+            prerequisites:
+              - courseId: CST-325
+              - courseId: CST-326
           - id: upper_division_electives
             completion:
               kind: minimumCredits

@@ -54,6 +54,7 @@ const requirementSchema = z.object({
   completion: completionSchema,
   minimumGrade: z.string().optional(),
   courseIds: z.array(z.string()).min(1),
+  prerequisites: z.array(prerequisiteSchema).optional(),
 }).strict()
 
 const programsSchema = z.object({
@@ -287,7 +288,7 @@ function formatGroup(prerequisites: unknown[], operator: 'and' | 'or', parentOpe
   return parentOperator && parentOperator !== operator ? `(${text})` : text
 }
 
-export function prerequisitesMet(prerequisites: unknown[], completedCourseIds: ReadonlySet<string>): boolean {
+export function prerequisitesMet(prerequisites: readonly unknown[], completedCourseIds: ReadonlySet<string>): boolean {
   return prerequisites.every(prerequisiteMet)
 
   function prerequisiteMet(prerequisite: unknown): boolean {

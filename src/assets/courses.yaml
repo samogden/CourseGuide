@@ -415,8 +415,7 @@ courses:
         - fall
         - spring
     prerequisites:
-      - courseId: CST-325
-      - courseId: CST-326
+      - courseId: CST-338
   CST-462S:
     code: CST 462S
     title: Race, Gender, Class in the Digital World

@@ -27,6 +27,7 @@ export interface PathSlotOptions {
   label: string
   courseIds: readonly string[]
   required?: boolean
+  prerequisites?: readonly unknown[]
 }
 
 export interface SuggestedSchedule {
@@ -155,7 +156,7 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
             const isCompleted = completed.has(key) || (assignedCourseId ? completed.has(`course:${assignedCourseId}`) : false)
             if (isCompleted || selectedInTerm.has(key)) return []
             const candidate = assignedCourseId
-              ? resolveAssignedCourseCandidate(assignedCourseId, completedCourseIds, suggestedTerm ?? term.term)
+              ? resolveAssignedCourseCandidate(assignedCourseId, completedCourseIds, suggestedTerm ?? term.term, courseOptions.get(key)?.prerequisites)
               : resolveSlotCandidate(slot, completedCourseIds, suggestedTerm ?? term.term)
             if (!candidate) return []
             return [{
@@ -320,11 +321,13 @@ function buildPathAssignments(
     const projectedByTerm = projectedCoursesBeforeTerms(plan, completedCourseIds, assignments)
     const unassignedSlots = [...remainingSlots]
     for (const optionGroup of optionGroups) {
-      const slotIndex = unassignedSlots.findIndex(({ slot, term }) =>
-        optionGroup.courseIds.some(courseId => {
+      const slotIndex = unassignedSlots.findIndex(({ slot, term }) => {
+        const projectedCourseIds = projectedByTerm.get(progressKey(slot)) ?? completedCourseIds
+        return prerequisitesMet(optionGroup.prerequisites ?? [], projectedCourseIds) && optionGroup.courseIds.some(courseId => {
           const course = getCourse(courseId)
-          return course && isCourseOffered(courseId, term) && prerequisitesMet(course.prerequisites, projectedByTerm.get(progressKey(slot)) ?? completedCourseIds)
-        }))
+          return course && isCourseOffered(courseId, term) && prerequisitesMet(course.prerequisites, projectedCourseIds)
+        })
+      })
       if (slotIndex < 0) continue
       const [target] = unassignedSlots.splice(slotIndex, 1)
       if (target) courseOptions.set(progressKey(target.slot), optionGroup)
@@ -381,6 +384,7 @@ function pathOptionGroups(requirements: Requirement[]): PathSlotOptions[] {
         label: courseOptionLabel(courseIds, 'Concentration course option'),
         courseIds,
         required: true,
+        ...(requirement.prerequisites ? { prerequisites: requirement.prerequisites } : {}),
       }))
     }
     const slotCount = Math.ceil(requirement.completion.credits / 4)
@@ -475,9 +479,10 @@ function resolveAssignedCourseCandidate(
   courseId: string,
   projectedCourseIds: ReadonlySet<string>,
   term: 'fall' | 'spring',
+  additionalPrerequisites: readonly unknown[] = [],
 ): { courseId: string; consumePathCourse: boolean } | undefined {
   const course = getCourse(courseId)
-  if (!course || !isCourseOffered(course.id, term) || !prerequisitesMet(course.prerequisites, projectedCourseIds)) return undefined
+  if (!course || !isCourseOffered(course.id, term) || !prerequisitesMet([...course.prerequisites, ...additionalPrerequisites], projectedCourseIds)) return undefined
   return { courseId: course.id, consumePathCourse: false }
 }
 

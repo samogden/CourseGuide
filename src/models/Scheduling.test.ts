@@ -141,6 +141,7 @@ describe('suggested scheduling', () => {
       label: 'CST 426 or CST 438',
       courseIds: ['CST-426', 'CST-438'],
       required: true,
+      prerequisites: [{ courseId: 'CST-325' }, { courseId: 'CST-326' }],
     })
   })
 

@@ -111,7 +111,8 @@ describe('curriculum data', () => {
     expect(advancedChoice?.completion).toEqual({ kind: 'choose', count: 1 })
     expect(advancedChoice?.courseIds).toEqual(['CST-426', 'CST-438'])
     expect(electiveCourses?.courseIds).not.toContain('CST-438')
-    expect(prerequisiteCourseIds(getCourse('CST 438')?.prerequisites ?? [])).toEqual(new Set(['CST-325', 'CST-326']))
+    expect(prerequisiteCourseIds(advancedChoice?.prerequisites ?? [])).toEqual(new Set(['CST-325', 'CST-326']))
+    expect(prerequisiteCourseIds(getCourse('CST 438')?.prerequisites ?? [])).toEqual(new Set(['CST-338']))
   })
 
   it('exposes the official pathways through the 2026 catalog version', () => {
