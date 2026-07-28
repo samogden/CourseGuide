@@ -1,0 +1,12 @@
+question_html: |-
+  <p>Find the requested term of this arithmetic sequence.</p>
+  <div class='math'>$$ \displaystyle a_1=4,\quad d=6,\quad a_5=? \; $$</div> <p><label>a_5: <input class="quizgen-answer-input" data-accepted="[&quot;28&quot;]" data-blank-id="q04-v129-a01" aria-label="a_5"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: a_5
+  accepted_values:
+  - '28'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>An arithmetic sequence adds 6 each time. From the first term to term 5, there are 4 additions.</p>
+  <p>Start at 4 and add 4 groups of 6 to get 28.</p>
+  <div class='math'>$$ \displaystyle a_5=4+(4)(6)=28 \; $$</div>

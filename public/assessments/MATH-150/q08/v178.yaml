@@ -1,0 +1,12 @@
+question_html: |-
+  <p>A circle&#x27;s radius is 6 cm and growing at 4 cm/s. Find how fast its area is growing.</p>
+  <div class='math'>$$ \displaystyle A = \pi r^2 \; $$</div> <p><label>dA/dt: <input class="quizgen-answer-input" data-accepted="[&quot;150.7964&quot;]" data-blank-id="q08-v178-a01" aria-label="dA/dt"><span class="quizgen-feedback"></span></label></p> <div class="answer-warnings"><p><strong>Notes for answer entry</strong></p><ul><li>Round floats to 4 decimal places (fewer if exact, e.g., <code>1.25</code>). No mixed numbers (e.g. use <code>5/4</code>, not <code>1 1/4</code>). Integers as integers (e.g., <code>2</code>, not <code>2/1</code>).</li></ul></div>
+answer:
+- label: dA/dt
+  accepted_values:
+  - '150.7964'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>Differentiate the area formula with respect to time. The radius changes with time, so multiply by dr/dt.</p>
+  <p>Use r = 6 and dr/dt = 4.</p>
+  <div class='math'>$$ \displaystyle \frac{dA}{dt} = 2\pi r\frac{dr}{dt} = 2\pi(6)(4) = 150.79644737231007 \; $$</div>

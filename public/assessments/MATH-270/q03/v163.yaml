@@ -1,0 +1,12 @@
+question_html: |-
+  <p>Find the dot product of the vectors.</p>
+  <div class='math'>$$ \displaystyle (-1,0)\cdot(0,-2) \; $$</div> <p><label>Dot product: <input class="quizgen-answer-input" data-accepted="[&quot;0&quot;]" data-blank-id="q03-v163-a01" aria-label="Dot product"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: Dot product
+  accepted_values:
+  - '0'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>Multiply corresponding components, then add those products.</p>
+  <p>The products are -1 times 0 and 0 times -2.</p>
+  <div class='math'>$$ \displaystyle -1(0)+0(-2)=0+0=0 \; $$</div>

@@ -16,28 +16,43 @@ courses:
     title: Precalculus
     teachingStatus: active
     credits:
-      minimum: 4
-      maximum: 4
-    description: Catalog details are still being added.
-    placeholder: true
-  MATH-151:
-    code: MATH 151
+      minimum: 5
+      maximum: 5
+    description: Studies the functions that will be used in calculus. Topics include quadratic, exponential, logarithmic, polynomial, rational, piecewise, and trigonometric functions. Students study the properties of these functions as well as their applications including projectile motion, periodic behavior, population growth, decay, and cyclic phenomena.
+    offered:
+      terms:
+        - fall
+        - spring
+  MATH-150:
+    code: MATH 150
     title: Calculus I
     teachingStatus: active
     credits:
       minimum: 4
       maximum: 4
-    description: Catalog details are still being added.
-    placeholder: true
-  MATH-150:
-    code: MATH 150
-    title: Calculus Preparation
+    description: Includes limits, continuity, derivatives including trigonometric functions, chain rule, curve sketching, extremum problems, implicit differentiation, related rates, Mean Value Theorem, logarithmic and trigonometric functions, introduction to integration, fundamental theorem of calculus, substitution, and applications.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: MATH-130
+        minimumGrade: C-
+  MATH-151:
+    code: MATH 151
+    title: Calculus II
     teachingStatus: active
     credits:
       minimum: 4
       maximum: 4
-    description: Catalog details are still being added.
-    placeholder: true
+    description: Includes the calculus of exponential and logarithmic functions, trigonometric and inverse trigonometric functions, techniques of integration, separable differential equations, Taylor polynomials, L’Hôpital’s rule, improper integrals, series, and an introduction to partial derivatives.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: MATH-150
+        minimumGrade: C-
   MATH-170:
     code: MATH 170
     title: Discrete Mathematics
@@ -45,17 +60,31 @@ courses:
     credits:
       minimum: 4
       maximum: 4
-    description: Catalog details are still being added.
-    placeholder: true
+    description: Introduces set theory, deductive logic, elements of mathematical proofs focusing on direct proofs and indirect proofs by contraposition and contradiction. Introduces sequences, the summation notation, and proofs by mathematical induction. Develops understanding of bijective functions, relations, and equivalence relations. Introduces the counting principles, discrete probability, and graph theory. Applies these topics to solve problems in mathematics and branches of science, particularly computer science.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: MATH-130
+        minimumGrade: C-
   MATH-270:
     code: MATH 270
-    title: Linear Algebra
+    title: Mathematics for Computing
     teachingStatus: active
     credits:
       minimum: 4
       maximum: 4
-    description: Catalog details are still being added.
-    placeholder: true
+    description: Studies basic linear algebra, continuous and discrete probability, and computing theory emphasizing theoretical and applicable methods. Topics include systems of linear equations, matrices, vectors, vector transformations, determinants, eigenvalues, numerical integration, probability distributions and densities, expected value, functions of random variables, random number generation, automata, and regular expressions. An appropriate programming language such as Python is incorporated as needed.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: MATH-150
+        minimumGrade: C-
+      - courseId: MATH-170
+        minimumGrade: C-
   MATH-250:
     code: MATH 250
     title: Calculus II

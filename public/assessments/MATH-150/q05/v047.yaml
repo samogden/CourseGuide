@@ -1,0 +1,12 @@
+question_html: |-
+  <p>Use the chain rule. Enter the coefficient of x in the derivative.</p>
+  <div class='math'>$$ \displaystyle f(x) = (5x+1)^{5} \; $$</div> <p><label>Coefficient: <input class="quizgen-answer-input" data-accepted="[&quot;25&quot;]" data-blank-id="q05-v047-a01" aria-label="Coefficient"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: Coefficient
+  accepted_values:
+  - '25'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>Differentiate the outside power first, keeping (5x+1) in place. Then multiply by the derivative of the inside, which is 5.</p>
+  <p>Multiplying 5 by 5 gives 25.</p>
+  <div class='math'>$$ \displaystyle f'(x) = 5(5x+1)^{4}(5) = 25(5x+1)^{4} \; $$</div>

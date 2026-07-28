@@ -1,6 +1,6 @@
 import { parse } from 'yaml'
 import { z } from 'zod'
-import assessmentText from '../assets/assessments.yaml?raw'
+import { discoveredAssessmentPacks } from '../assets/assessment-packs.generated'
 
 const assessmentSchema = z.object({
   title: z.string(),
@@ -38,7 +38,10 @@ const questionFileSchema = z.object({
 
 export type AssessmentQuestionContent = z.infer<typeof questionFileSchema>
 
-export const assessmentCatalog = assessmentCatalogSchema.parse(parse(assessmentText))
+export const assessmentCatalog = assessmentCatalogSchema.parse({
+  schemaVersion: 1,
+  assessments: discoveredAssessmentPacks,
+})
 
 export function getAssessmentPack(courseId: string): AssessmentPack | undefined {
   return assessmentCatalog.assessments[courseId]
@@ -63,6 +66,6 @@ export function parseAssessmentQuestion(source: string): AssessmentQuestionConte
 export function readinessBand(correctCount: number, totalQuestions: number): { title: string; message: string } {
   const ratio = totalQuestions === 0 ? 0 : correctCount / totalQuestions
   if (ratio >= 0.8) return { title: 'Strong starting point', message: 'You showed confidence with most of these representative skills. Review any missed topics, then use this as one input while planning your next course.' }
-  if (ratio >= 0.5) return { title: 'Some topics to review', message: 'You have a foundation to build on. Reviewing the missed skills could make the transition into MATH 130 more comfortable.' }
+  if (ratio >= 0.5) return { title: 'Some topics to review', message: 'You have a foundation to build on. Reviewing the missed skills could make the next math course more comfortable.' }
   return { title: 'Review would be helpful', message: 'A refresher on the missed skills may help you feel more prepared. This is a self-check, not enrollment advice.' }
 }

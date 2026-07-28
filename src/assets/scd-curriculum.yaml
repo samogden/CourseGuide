@@ -14,7 +14,7 @@ years:
             category: ge-lower
           - type: course
             courseId: MATH-130
-            credits: 4
+            credits: 5
             category: math
           - type: course
             courseId: CST-286
@@ -27,15 +27,13 @@ years:
             credits: 4
             category: cst
           - type: course
+            courseId: MATH-150
+            credits: 4
+            category: math
+          - type: course
             courseId: MATH-170
             credits: 4
             category: math
-          - type: requirement
-            slotId: ge-2-lower-division
-            label: GE Area 2 Lower Division
-            credits: 3
-            category: ge-lower
-            guidance: Complete a lower-division GE Area 2 course, such as MATH 150.
           - type: course
             courseId: CST-271
             credits: 3

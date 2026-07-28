@@ -1,0 +1,12 @@
+question_html: |-
+  <p>Find the dot product of the vectors.</p>
+  <div class='math'>$$ \displaystyle (3,-2)\cdot(2,1) \; $$</div> <p><label>Dot product: <input class="quizgen-answer-input" data-accepted="[&quot;4&quot;]" data-blank-id="q03-v011-a01" aria-label="Dot product"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: Dot product
+  accepted_values:
+  - '4'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>Multiply corresponding components, then add those products.</p>
+  <p>The products are 3 times 2 and -2 times 1.</p>
+  <div class='math'>$$ \displaystyle 3(2)+-2(1)=6+-2=4 \; $$</div>

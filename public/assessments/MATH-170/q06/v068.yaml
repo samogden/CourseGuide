@@ -1,0 +1,11 @@
+question_html: |-
+  <p>Is f(x) = x + 3 from the integers to the integers bijective? Enter YES or NO.</p>
+  <div class='math'>$$ \displaystyle f(x)=x+3 \; $$</div> <p><label>Bijective?: <input class="quizgen-answer-input" data-accepted="[&quot;YES&quot;]" data-blank-id="q06-v068-a01" aria-label="Bijective?"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: Bijective?
+  accepted_values:
+  - 'YES'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>Adding 3 never sends two different inputs to the same output, so the function is one-to-one. Every integer y has the preimage y - 3, so it is onto.</p>
+  <p>Because it is both one-to-one and onto, the function is bijective.</p>

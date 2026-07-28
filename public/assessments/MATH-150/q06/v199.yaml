@@ -1,0 +1,12 @@
+question_html: |-
+  <p>Find the x-coordinate of the critical point.</p>
+  <div class='math'>$$ \displaystyle f'(x) = 2(x-(-3)) \; $$</div> <p><label>Critical x-value: <input class="quizgen-answer-input" data-accepted="[&quot;-3&quot;]" data-blank-id="q06-v199-a01" aria-label="Critical x-value"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: Critical x-value
+  accepted_values:
+  - '-3'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>Critical points can occur where the derivative is zero. Set the displayed derivative equal to zero.</p>
+  <p>The derivative is zero when x = -3, so that is the critical x-value.</p>
+  <div class='math'>$$ \displaystyle 2(x-(-3)) = 0 \quad \Rightarrow \quad x = -3 \; $$</div>

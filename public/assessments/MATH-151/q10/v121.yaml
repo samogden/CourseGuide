@@ -1,0 +1,12 @@
+question_html: |-
+  <p>Find the sum of this infinite geometric series.</p>
+  <div class='math'>$$ \displaystyle 1+0.25+0.25^2+\cdots \; $$</div> <p><label>Sum: <input class="quizgen-answer-input" data-accepted="[&quot;1.3333&quot;]" data-blank-id="q10-v121-a01" aria-label="Sum"><span class="quizgen-feedback"></span></label></p> <div class="answer-warnings"><p><strong>Notes for answer entry</strong></p><ul><li>Round floats to 4 decimal places (fewer if exact, e.g., <code>1.25</code>). No mixed numbers (e.g. use <code>5/4</code>, not <code>1 1/4</code>). Integers as integers (e.g., <code>2</code>, not <code>2/1</code>).</li></ul></div>
+answer:
+- label: Sum
+  accepted_values:
+  - '1.3333'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>An infinite geometric series with first term a and ratio r has sum a/(1-r) when the absolute value of r is less than 1.</p>
+  <p>Here a = 1 and r = 0.25, which is less than 1 in absolute value.</p>
+  <div class='math'>$$ \displaystyle S=\frac{1}{1-0.25}=1.3333333333333333 \; $$</div>

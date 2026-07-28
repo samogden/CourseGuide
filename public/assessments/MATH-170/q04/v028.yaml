@@ -1,0 +1,12 @@
+question_html: |-
+  <p>Find the requested term of this arithmetic sequence.</p>
+  <div class='math'>$$ \displaystyle a_1=4,\quad d=4,\quad a_8=? \; $$</div> <p><label>a_8: <input class="quizgen-answer-input" data-accepted="[&quot;32&quot;]" data-blank-id="q04-v028-a01" aria-label="a_8"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: a_8
+  accepted_values:
+  - '32'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>An arithmetic sequence adds 4 each time. From the first term to term 8, there are 7 additions.</p>
+  <p>Start at 4 and add 7 groups of 4 to get 32.</p>
+  <div class='math'>$$ \displaystyle a_8=4+(7)(4)=32 \; $$</div>

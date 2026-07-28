@@ -1,0 +1,12 @@
+question_html: |-
+  <p>Use the chain rule. Enter the coefficient of x in the derivative.</p>
+  <div class='math'>$$ \displaystyle f(x) = (4x+1)^{3} \; $$</div> <p><label>Coefficient: <input class="quizgen-answer-input" data-accepted="[&quot;12&quot;]" data-blank-id="q05-v110-a01" aria-label="Coefficient"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: Coefficient
+  accepted_values:
+  - '12'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>Differentiate the outside power first, keeping (4x+1) in place. Then multiply by the derivative of the inside, which is 4.</p>
+  <p>Multiplying 3 by 4 gives 12.</p>
+  <div class='math'>$$ \displaystyle f'(x) = 3(4x+1)^{2}(4) = 12(4x+1)^{2} \; $$</div>

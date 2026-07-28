@@ -1,0 +1,12 @@
+question_html: |-
+  <p>Solve the system and enter x.</p>
+  <div class='math'>$$ \displaystyle x+y=5,\qquad x-y=1 \; $$</div> <p><label>x: <input class="quizgen-answer-input" data-accepted="[&quot;3&quot;]" data-blank-id="q01-v124-a01" aria-label="x"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: x
+  accepted_values:
+  - '3'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>Add the equations so that y and -y cancel. This leaves 2x equal to the sum of the right sides.</p>
+  <p>The sum is 5 + (1) = 6, so x = 3.</p>
+  <div class='math'>$$ \displaystyle 2x=6\quad\Rightarrow\quad x=3 \; $$</div>

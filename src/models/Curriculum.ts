@@ -134,6 +134,7 @@ export const transferAssumedCourseIds = new Set(
 
 export const transferReadinessCourseIds = [
   'MATH-130',
+  'MATH-150',
   'CST-231',
   'CST-237',
   'CST-238',

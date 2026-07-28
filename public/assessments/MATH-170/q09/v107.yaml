@@ -1,0 +1,12 @@
+question_html: |-
+  <p>A fair experiment has the stated number of favorable outcomes and total outcomes. Find the probability.</p>
+  <div class='math'>$$ \displaystyle \text{favorable}=2,\quad \text{total}=6 \; $$</div> <p><label>Probability: <input class="quizgen-answer-input" data-accepted="[&quot;0.3333&quot;]" data-blank-id="q09-v107-a01" aria-label="Probability"><span class="quizgen-feedback"></span></label></p> <div class="answer-warnings"><p><strong>Notes for answer entry</strong></p><ul><li>Round floats to 4 decimal places (fewer if exact, e.g., <code>1.25</code>). No mixed numbers (e.g. use <code>5/4</code>, not <code>1 1/4</code>). Integers as integers (e.g., <code>2</code>, not <code>2/1</code>).</li></ul></div>
+answer:
+- label: Probability
+  accepted_values:
+  - '0.3333'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>For equally likely outcomes, probability is favorable outcomes divided by total outcomes.</p>
+  <p>There are 2 favorable outcomes out of 6, so the probability is 2/6.</p>
+  <div class='math'>$$ \displaystyle P=\frac{2}{6}=0.3333333333333333 \; $$</div>

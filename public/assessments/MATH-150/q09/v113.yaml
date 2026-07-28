@@ -1,0 +1,13 @@
+question_html: |-
+  <p>For f(x) = x squared, find the value c guaranteed by the Mean Value Theorem on the interval shown.</p>
+  <div class='math'>$$ \displaystyle [-2, 3] \; $$</div> <p><label>c: <input class="quizgen-answer-input" data-accepted="[&quot;0.5&quot;, &quot;0.5000&quot;]" data-blank-id="q09-v113-a01" aria-label="c"><span class="quizgen-feedback"></span></label></p> <div class="answer-warnings"><p><strong>Notes for answer entry</strong></p><ul><li>Round floats to 4 decimal places (fewer if exact, e.g., <code>1.25</code>). No mixed numbers (e.g. use <code>5/4</code>, not <code>1 1/4</code>). Integers as integers (e.g., <code>2</code>, not <code>2/1</code>).</li></ul></div>
+answer:
+- label: c
+  accepted_values:
+  - '0.5'
+  - '0.5000'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>The Mean Value Theorem matches the instantaneous slope f&#x27;(c) to the average slope over the interval.</p>
+  <p>For x squared, the average slope from -2 to 3 is 1, and f&#x27;(x) = 2x.</p>
+  <div class='math'>$$ \displaystyle 2c = 1 \quad \Rightarrow \quad c = 0.5 \; $$</div>

@@ -52,9 +52,9 @@ describe('planner', () => {
   it('shows the planned-credit breakdown', () => {
     render(<App />)
 
-    expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('102 planned credits')
-    expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('72 major/core')
-    expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('21 lower-division GE')
+    expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('104 planned credits')
+    expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('77 major/core')
+    expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('18 lower-division GE')
     expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('9 upper-division GE')
   })
 

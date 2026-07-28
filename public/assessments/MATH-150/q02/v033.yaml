@@ -1,0 +1,11 @@
+question_html: |-
+  <p>Is this rational function continuous at the stated x-value? Enter YES or NO.</p>
+  <div class='math'>$$ \displaystyle f(x) = \frac{x+1}{x-(3)}, \qquad x=3 \; $$</div> <p><label>Continuous?: <input class="quizgen-answer-input" data-accepted="[&quot;NO&quot;]" data-blank-id="q02-v033-a01" aria-label="Continuous?"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: Continuous?
+  accepted_values:
+  - 'NO'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>A rational function is not continuous where its denominator is zero. At x = 3, the denominator becomes 3 - (3) = 0.</p>
+  <p>Because division by zero is undefined, the function is not continuous at x = 3.</p>

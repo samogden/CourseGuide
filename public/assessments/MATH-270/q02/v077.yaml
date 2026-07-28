@@ -1,0 +1,12 @@
+question_html: |-
+  <p>Find the top-left entry of the matrix product.</p>
+  <div class='math'>$$ \displaystyle \begin{bmatrix}5&3\\0&1\end{bmatrix}\begin{bmatrix}2&0\\3&1\end{bmatrix} \; $$</div> <p><label>Top-left entry: <input class="quizgen-answer-input" data-accepted="[&quot;19&quot;]" data-blank-id="q02-v077-a01" aria-label="Top-left entry"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: Top-left entry
+  accepted_values:
+  - '19'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>The top-left entry is the dot product of the first row of the left matrix and the first column of the right matrix.</p>
+  <p>Multiply 5 by 2, multiply 3 by 3, and add the results.</p>
+  <div class='math'>$$ \displaystyle 5(2)+3(3)=10+9=19 \; $$</div>

@@ -1,0 +1,12 @@
+question_html: |-
+  <p>Differentiate the function. Enter the coefficient of the derivative term.</p>
+  <div class='math'>$$ \displaystyle f(x) = 2x^{5} \; $$</div> <p><label>Coefficient: <input class="quizgen-answer-input" data-accepted="[&quot;10&quot;]" data-blank-id="q03-v173-a01" aria-label="Coefficient"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: Coefficient
+  accepted_values:
+  - '10'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>The power rule says to multiply the coefficient by the exponent, then reduce the exponent by 1.</p>
+  <p>The coefficient of f&#x27;(x) is 10.</p>
+  <div class='math'>$$ \displaystyle f'(x) = 2(5)x^{4} = 10x^{4} \; $$</div>

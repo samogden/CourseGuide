@@ -48,6 +48,19 @@ describe('curriculum data', () => {
     expect(prerequisiteCourseIds(getCourse('CST 238')?.prerequisites ?? [])).toEqual(new Set(['CST-231', 'MATH-130', 'MATH-150']))
   })
 
+  it('models the MATH 130 to MATH 150 to MATH 151 preparation sequence', () => {
+    expect(prerequisiteCourseIds(getCourse('MATH 150')?.prerequisites ?? [])).toEqual(new Set(['MATH-130']))
+    expect(prerequisiteCourseIds(getCourse('MATH 151')?.prerequisites ?? [])).toEqual(new Set(['MATH-150']))
+    expect(prerequisiteCourseIds(getCourse('MATH 270')?.prerequisites ?? [])).toEqual(new Set(['MATH-150', 'MATH-170']))
+  })
+
+  it('places MATH 150 in freshman spring as the Area 2 mathematics course', () => {
+    const freshmanSpring = curriculumPlan.years[0].terms[1].slots
+
+    expect(freshmanSpring).toContainEqual(expect.objectContaining({ type: 'course', courseId: 'MATH-150', credits: 4 }))
+    expect(freshmanSpring.some(slot => slot.type === 'requirement' && slot.slotId === 'ge-2-lower-division')).toBe(false)
+  })
+
   it('uses parentheses to preserve prerequisite alternatives', () => {
     expect(prerequisiteText(getCourse('CST 238')?.prerequisites[0])).toBe('CST 231 (C- or better) and (MATH 130 (C- or better) or MATH 150 (C- or better))')
   })
@@ -124,7 +137,7 @@ describe('curriculum data', () => {
   it('calculates remaining credits from completed plan slots', () => {
     const firstCourse = curriculumPlan.years[0].terms[0].slots[0]
 
-    expect(remainingPlanCredits(curriculumPlan, new Set([`course:${firstCourse.type === 'course' ? firstCourse.courseId : ''}`]))).toBe(98)
+    expect(remainingPlanCredits(curriculumPlan, new Set([`course:${firstCourse.type === 'course' ? firstCourse.courseId : ''}`]))).toBe(100)
   })
 
   it('derives the AS-T roadmap from only the junior and senior plan years', () => {

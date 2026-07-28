@@ -1,0 +1,13 @@
+question_html: |-
+  <p>Use the second-degree Taylor polynomial for e to the x at x = 0.</p>
+  <div class='math'>$$ \displaystyle x=0.3 \; $$</div> <p><label>Approximation: <input class="quizgen-answer-input" data-accepted="[&quot;1.345&quot;, &quot;1.3450&quot;]" data-blank-id="q07-v194-a01" aria-label="Approximation"><span class="quizgen-feedback"></span></label></p> <div class="answer-warnings"><p><strong>Notes for answer entry</strong></p><ul><li>Round floats to 4 decimal places (fewer if exact, e.g., <code>1.25</code>). No mixed numbers (e.g. use <code>5/4</code>, not <code>1 1/4</code>). Integers as integers (e.g., <code>2</code>, not <code>2/1</code>).</li></ul></div>
+answer:
+- label: Approximation
+  accepted_values:
+  - '1.345'
+  - '1.3450'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>The second-degree Taylor polynomial for e to the x is 1 + x + x squared divided by 2. Replace x with the given value.</p>
+  <p>This gives an approximation of 1.3450.</p>
+  <div class='math'>$$ \displaystyle 1+0.3+\frac{(0.3)^2}{2}=1.345 \; $$</div>

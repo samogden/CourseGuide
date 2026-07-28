@@ -1,0 +1,12 @@
+question_html: |-
+  <p>Find the dot product of the vectors.</p>
+  <div class='math'>$$ \displaystyle (-2,5)\cdot(-3,1) \; $$</div> <p><label>Dot product: <input class="quizgen-answer-input" data-accepted="[&quot;11&quot;]" data-blank-id="q03-v042-a01" aria-label="Dot product"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: Dot product
+  accepted_values:
+  - '11'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>Multiply corresponding components, then add those products.</p>
+  <p>The products are -2 times -3 and 5 times 1.</p>
+  <div class='math'>$$ \displaystyle -2(-3)+5(1)=6+5=11 \; $$</div>

@@ -8,6 +8,13 @@ describe('assessment packs', () => {
     expect(pack?.questionSlots).toHaveLength(10)
   })
 
+  it.each(['MATH-150', 'MATH-151', 'MATH-170', 'MATH-270'])('discovers the readiness assessment folder for %s', courseId => {
+    const pack = getAssessmentPack(courseId)
+
+    expect(pack?.questionSlots).toHaveLength(10)
+    expect(createAssessmentAttempt(courseId, pack!, () => 0)[0]?.path).toBe(`/assessments/${courseId}/q01/v001.yaml`)
+  })
+
   it('selects one fragment variation for every question slot', () => {
     const pack = getAssessmentPack('MATH-130')
     if (!pack) throw new Error('Expected the MATH 130 assessment pack')

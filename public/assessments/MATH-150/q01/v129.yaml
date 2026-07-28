@@ -1,0 +1,12 @@
+question_html: |-
+  <p>Evaluate the limit by direct substitution.</p>
+  <div class='math'>$$ \displaystyle \lim_{x \to -3} (5x -4) \; $$</div> <p><label>Limit: <input class="quizgen-answer-input" data-accepted="[&quot;-19&quot;]" data-blank-id="q01-v129-a01" aria-label="Limit"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: Limit
+  accepted_values:
+  - '-19'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>This is a polynomial, so it is continuous. We may replace x directly with -3.</p>
+  <p>The limit is -19.</p>
+  <div class='math'>$$ \displaystyle 5(-3) -4 = -19 \; $$</div>

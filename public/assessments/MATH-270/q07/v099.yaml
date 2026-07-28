@@ -1,0 +1,12 @@
+question_html: |-
+  <p>A game pays $0 with probability 0.7 and $10 with probability 0.3. Find its expected value.</p>
+  <div class='math'>$$ \displaystyle E[X]=\sum xP(X=x) \; $$</div> <p><label>Expected value: <input class="quizgen-answer-input" data-accepted="[&quot;3&quot;]" data-blank-id="q07-v099-a01" aria-label="Expected value"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: Expected value
+  accepted_values:
+  - '3'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>Expected value is a weighted average: multiply each possible outcome by its probability, then add.</p>
+  <p>The zero-dollar outcome contributes 0, and the ten-dollar outcome contributes 10 times 0.3.</p>
+  <div class='math'>$$ \displaystyle E[X]=0(0.7)+10(0.3)=3 \; $$</div>

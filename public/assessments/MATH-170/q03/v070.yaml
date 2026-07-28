@@ -1,0 +1,11 @@
+question_html: |-
+  <p>Write the contrapositive of: If an integer is divisible by 4, then it is even.</p>
+  <div class='math'>$$ \displaystyle 4\mid n \Rightarrow n\text{ is even} \; $$</div> <p><label>Contrapositive: <input class="quizgen-answer-input" data-accepted="[&quot;If n is not even, then 4 does not divide n.&quot;]" data-blank-id="q03-v070-a01" aria-label="Contrapositive"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: Contrapositive
+  accepted_values:
+  - If n is not even, then 4 does not divide n.
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>To form a contrapositive, reverse the implication and negate both statements.</p>
+  <p>The original conclusion becomes the new condition: if n is not even, then n cannot be divisible by 4.</p>

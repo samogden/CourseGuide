@@ -1,0 +1,13 @@
+question_html: |-
+  <p>Use one trapezoid to approximate the integral from 0 to the stated upper bound.</p>
+  <div class='math'>$$ \displaystyle f(0)=5,\quad f(4)=7 \; $$</div> <p><label>Approximation: <input class="quizgen-answer-input" data-accepted="[&quot;24&quot;, &quot;24.0000&quot;]" data-blank-id="q06-v139-a01" aria-label="Approximation"><span class="quizgen-feedback"></span></label></p> <div class="answer-warnings"><p><strong>Notes for answer entry</strong></p><ul><li>Round floats to 4 decimal places (fewer if exact, e.g., <code>1.25</code>). No mixed numbers (e.g. use <code>5/4</code>, not <code>1 1/4</code>). Integers as integers (e.g., <code>2</code>, not <code>2/1</code>).</li></ul></div>
+answer:
+- label: Approximation
+  accepted_values:
+  - '24'
+  - '24.0000'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>The trapezoid rule with one interval is width times the average of the two endpoint heights.</p>
+  <p>The width is 4, and the endpoint heights are 5 and 7.</p>
+  <div class='math'>$$ \displaystyle 4\cdot\frac{5+7}{2}=24.0 \; $$</div>

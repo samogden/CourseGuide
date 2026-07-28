@@ -1,0 +1,12 @@
+question_html: |-
+  <p>Find the requested term of this arithmetic sequence.</p>
+  <div class='math'>$$ \displaystyle a_1=2,\quad d=3,\quad a_5=? \; $$</div> <p><label>a_5: <input class="quizgen-answer-input" data-accepted="[&quot;14&quot;]" data-blank-id="q04-v143-a01" aria-label="a_5"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: a_5
+  accepted_values:
+  - '14'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>An arithmetic sequence adds 3 each time. From the first term to term 5, there are 4 additions.</p>
+  <p>Start at 2 and add 4 groups of 3 to get 14.</p>
+  <div class='math'>$$ \displaystyle a_5=2+(4)(3)=14 \; $$</div>

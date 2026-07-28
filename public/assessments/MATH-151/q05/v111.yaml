@@ -1,0 +1,12 @@
+question_html: |-
+  <p>Identify the coefficient A in the partial-fraction form.</p>
+  <div class='math'>$$ \displaystyle \frac{1}{(x+3)(x+9)} = \frac{A}{x+3} + \frac{B}{x+9} \; $$</div> <p><label>A: <input class="quizgen-answer-input" data-accepted="[&quot;0.1667&quot;]" data-blank-id="q05-v111-a01" aria-label="A"><span class="quizgen-feedback"></span></label></p> <div class="answer-warnings"><p><strong>Notes for answer entry</strong></p><ul><li>Round floats to 4 decimal places (fewer if exact, e.g., <code>1.25</code>). No mixed numbers (e.g. use <code>5/4</code>, not <code>1 1/4</code>). Integers as integers (e.g., <code>2</code>, not <code>2/1</code>).</li></ul></div>
+answer:
+- label: A
+  accepted_values:
+  - '0.1667'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>Multiply by both denominators. Then set x equal to -3; this makes the B term disappear.</p>
+  <p>That leaves 1 = A(6), so A = 1/6.</p>
+  <div class='math'>$$ \displaystyle 1 = A(-3+9) = 6A \quad \Rightarrow \quad A=\frac{1}{6} \; $$</div>

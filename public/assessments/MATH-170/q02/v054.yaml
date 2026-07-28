@@ -1,0 +1,11 @@
+question_html: |-
+  <p>If P is true and Q is false, evaluate the statement.</p>
+  <div class='math'>$$ \displaystyle P\land\neg Q \; $$</div> <p><label>Truth value: <input class="quizgen-answer-input" data-accepted="[&quot;TRUE&quot;]" data-blank-id="q02-v054-a01" aria-label="Truth value"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: Truth value
+  accepted_values:
+  - 'TRUE'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>Q is false, so not Q is true. A conjunction is true only when both parts are true.</p>
+  <p>Here P is true and not Q is true, so the whole statement is true.</p>

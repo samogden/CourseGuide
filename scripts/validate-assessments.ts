@@ -29,6 +29,7 @@ const errors: string[] = []
 let questionCount = 0
 
 const manifest = await readManifest()
+await discoverAssessmentDirectories(manifest)
 for (const [courseId, pack] of Object.entries(manifest)) await validateCourse(courseId, pack)
 
 if (errors.length > 0) {
@@ -59,6 +60,30 @@ async function readManifest(): Promise<Record<string, AssessmentPack>> {
   return packs
 }
 
+async function discoverAssessmentDirectories(packs: Record<string, AssessmentPack>) {
+  let entries: Awaited<ReturnType<typeof readdir>>
+  try {
+    entries = await readdir(root, { withFileTypes: true })
+  } catch {
+    errors.push('missing public assessment directory')
+    return
+  }
+
+  for (const entry of entries.filter(entry => entry.isDirectory())) {
+    if (packs[entry.name]) continue
+    const courseRoot = resolve(root, entry.name)
+    const slotEntries = await readdir(courseRoot, { withFileTypes: true })
+    const questionSlots = await Promise.all(slotEntries
+      .filter(slot => slot.isDirectory() && /^q\d+$/.test(slot.name))
+      .map(async slot => ({
+        id: slot.name,
+        variations: (await readdir(resolve(courseRoot, slot.name), { withFileTypes: true }))
+          .filter(file => file.isFile() && /^v\d{3}\.yaml$/.test(file.name)).length,
+      })))
+    packs[entry.name] = { questionSlots }
+  }
+}
+
 async function validateCourse(courseId: string, pack: AssessmentPack) {
   const courseRoot = resolve(root, courseId)
   const expectedSlotIds = new Set(pack.questionSlots.map(slot => slot.id))
@@ -71,6 +96,7 @@ async function validateCourse(courseId: string, pack: AssessmentPack) {
   }
 
   const actualSlotIds = new Set(directories.filter(entry => entry.isDirectory()).map(entry => entry.name))
+  if (expectedSlotIds.size !== 10) errors.push(`${courseId}: expected exactly 10 question directories but found ${expectedSlotIds.size}`)
   for (const slotId of expectedSlotIds) if (!actualSlotIds.has(slotId)) errors.push(`${courseId}: missing question directory ${slotId}`)
   for (const slotId of actualSlotIds) if (!expectedSlotIds.has(slotId)) errors.push(`${courseId}: ${slotId} is not declared in the assessment manifest`)
 

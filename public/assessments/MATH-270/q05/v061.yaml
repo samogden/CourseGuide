@@ -1,0 +1,11 @@
+question_html: |-
+  <p>Enter one eigenvalue of this diagonal matrix.</p>
+  <div class='math'>$$ \displaystyle \begin{bmatrix}7&0\\0&2\end{bmatrix} \; $$</div> <p><label>Eigenvalue: <input class="quizgen-answer-input" data-accepted="[&quot;7&quot;]" data-blank-id="q05-v061-a01" aria-label="Eigenvalue"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: Eigenvalue
+  accepted_values:
+  - '7'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>For a diagonal matrix, the entries on the diagonal are its eigenvalues.</p>
+  <p>The diagonal entries are 7 and 2, so 7 is one valid eigenvalue.</p>

@@ -1,0 +1,12 @@
+question_html: |-
+  <p>How many edges does a complete graph with the stated number of vertices have?</p>
+  <div class='math'>$$ \displaystyle K_{4} \; $$</div> <p><label>Edges: <input class="quizgen-answer-input" data-accepted="[&quot;6&quot;]" data-blank-id="q10-v138-a01" aria-label="Edges"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: Edges
+  accepted_values:
+  - '6'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>In a complete graph, every pair of different vertices has exactly one edge. The number of pairs is n(n-1)/2.</p>
+  <p>For 4 vertices, this is 4(3)/2 = 6.</p>
+  <div class='math'>$$ \displaystyle \binom{4}{2}=6 \; $$</div>

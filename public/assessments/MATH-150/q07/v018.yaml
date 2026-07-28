@@ -1,0 +1,12 @@
+question_html: |-
+  <p>For the circle below, find dy/dx at the point (5, 3).</p>
+  <div class='math'>$$ \displaystyle x^2+y^2=25 \; $$</div> <p><label>dy/dx: <input class="quizgen-answer-input" data-accepted="[&quot;-1.6667&quot;]" data-blank-id="q07-v018-a01" aria-label="dy/dx"><span class="quizgen-feedback"></span></label></p> <div class="answer-warnings"><p><strong>Notes for answer entry</strong></p><ul><li>Round floats to 4 decimal places (fewer if exact, e.g., <code>1.25</code>). No mixed numbers (e.g. use <code>5/4</code>, not <code>1 1/4</code>). Integers as integers (e.g., <code>2</code>, not <code>2/1</code>).</li></ul></div>
+answer:
+- label: dy/dx
+  accepted_values:
+  - '-1.6667'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>Differentiate both sides with respect to x. Remember that y depends on x, so differentiating y squared requires dy/dx.</p>
+  <p>Now substitute x = 5 and y = 3 into the derivative formula.</p>
+  <div class='math'>$$ \displaystyle 2x + 2y\frac{dy}{dx} = 0 \; $$</div> <div class='math'>$$ \displaystyle \frac{dy}{dx} = -\frac{x}{y} = -\frac{5}{3} = -1.6666666666666667 \; $$</div>

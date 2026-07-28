@@ -1,0 +1,12 @@
+question_html: |-
+  <p>Find the requested term of this arithmetic sequence.</p>
+  <div class='math'>$$ \displaystyle a_1=3,\quad d=6,\quad a_8=? \; $$</div> <p><label>a_8: <input class="quizgen-answer-input" data-accepted="[&quot;45&quot;]" data-blank-id="q04-v111-a01" aria-label="a_8"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: a_8
+  accepted_values:
+  - '45'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>An arithmetic sequence adds 6 each time. From the first term to term 8, there are 7 additions.</p>
+  <p>Start at 3 and add 7 groups of 6 to get 45.</p>
+  <div class='math'>$$ \displaystyle a_8=3+(7)(6)=45 \; $$</div>

@@ -1,0 +1,12 @@
+question_html: |-
+  <p>Evaluate the limit by direct substitution.</p>
+  <div class='math'>$$ \displaystyle \lim_{x \to 0} (4x +2) \; $$</div> <p><label>Limit: <input class="quizgen-answer-input" data-accepted="[&quot;2&quot;]" data-blank-id="q01-v190-a01" aria-label="Limit"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: Limit
+  accepted_values:
+  - '2'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>This is a polynomial, so it is continuous. We may replace x directly with 0.</p>
+  <p>The limit is 2.</p>
+  <div class='math'>$$ \displaystyle 4(0) +2 = 2 \; $$</div>

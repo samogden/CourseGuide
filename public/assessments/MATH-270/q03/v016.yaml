@@ -1,0 +1,12 @@
+question_html: |-
+  <p>Find the dot product of the vectors.</p>
+  <div class='math'>$$ \displaystyle (5,4)\cdot(-2,0) \; $$</div> <p><label>Dot product: <input class="quizgen-answer-input" data-accepted="[&quot;-10&quot;]" data-blank-id="q03-v016-a01" aria-label="Dot product"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: Dot product
+  accepted_values:
+  - '-10'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>Multiply corresponding components, then add those products.</p>
+  <p>The products are 5 times -2 and 4 times 0.</p>
+  <div class='math'>$$ \displaystyle 5(-2)+4(0)=-10+0=-10 \; $$</div>

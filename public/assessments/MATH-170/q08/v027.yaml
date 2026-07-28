@@ -1,0 +1,12 @@
+question_html: |-
+  <p>How many outcomes are possible when choosing one item from each independent group?</p>
+  <div class='math'>$$ \displaystyle 3\text{ shirt choices and }5\text{ pants choices} \; $$</div> <p><label>Outcomes: <input class="quizgen-answer-input" data-accepted="[&quot;15&quot;]" data-blank-id="q08-v027-a01" aria-label="Outcomes"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: Outcomes
+  accepted_values:
+  - '15'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>For each of the 3 shirt choices, there are 5 pants choices. The multiplication principle tells us to multiply independent choices.</p>
+  <p>That gives 3 times 5, or 15 possible outfits.</p>
+  <div class='math'>$$ \displaystyle 3\cdot 5=15 \; $$</div>

@@ -1,0 +1,12 @@
+question_html: |-
+  <p>Differentiate the function. Enter the coefficient multiplying cos(x).</p>
+  <div class='math'>$$ \displaystyle f(x) = 3\sin(x) \; $$</div> <p><label>Coefficient: <input class="quizgen-answer-input" data-accepted="[&quot;3&quot;]" data-blank-id="q04-v161-a01" aria-label="Coefficient"><span class="quizgen-feedback"></span></label></p>
+answer:
+- label: Coefficient
+  accepted_values:
+  - '3'
+  kind: fill_in_multiple_blanks_question
+explanation_html: |-
+  <p>The derivative of sin(x) is cos(x). The constant in front stays in front when differentiating.</p>
+  <p>Therefore the coefficient of cos(x) is 3.</p>
+  <div class='math'>$$ \displaystyle f'(x) = 3\cos(x) \; $$</div>
