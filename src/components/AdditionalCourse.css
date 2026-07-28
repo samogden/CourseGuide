@@ -1,0 +1,41 @@
+.additional-course-cell,
+.additional-course-placeholder,
+.additional-course-add {
+  align-items: center;
+  border: 1px solid #718096;
+  color: #1e293b;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  justify-content: center;
+  min-height: 4.5rem;
+  padding: 0.35rem;
+  text-align: center;
+}
+
+.additional-course-cell { background: #dbe4ea; }
+.additional-course-placeholder { background: #edf2f5; border-style: dashed; color: #475569; font-size: 0.85rem; }
+.additional-course-placeholder span:last-child,
+.additional-course-credits,
+.additional-course-name { font-size: 0.72rem; opacity: 0.78; }
+.additional-course-add { background: #edf2f5; border-style: dashed; font-size: 1.6rem; font-weight: 700; }
+
+.additional-course-cell:hover,
+.additional-course-cell:focus-visible,
+.additional-course-placeholder:hover,
+.additional-course-placeholder:focus-visible,
+.additional-course-add:hover,
+.additional-course-add:focus-visible { background: #cbd7df; outline: 3px solid #475569; outline-offset: -3px; }
+
+.additional-course-modal { max-width: 38rem; }
+.additional-course-list { list-style: none; padding: 0; }
+.additional-course-list li { align-items: center; border-bottom: 1px solid #cbd5e1; display: flex; gap: 0.75rem; justify-content: space-between; padding: 0.55rem 0; }
+.additional-course-list button { background: #fff; border: 1px solid #991b1b; border-radius: 0.3rem; color: #991b1b; cursor: pointer; font: inherit; padding: 0.25rem 0.45rem; }
+.additional-course-form { display: grid; gap: 0.75rem; margin-top: 1rem; }
+.additional-course-form label { display: grid; font-weight: 700; gap: 0.25rem; }
+.additional-course-form label span { color: #475569; font-size: 0.8rem; font-weight: 400; }
+.additional-course-form input { border: 1px solid #64748b; border-radius: 0.35rem; font: inherit; padding: 0.45rem; }
+.additional-course-form button { background: #334155; border: 0; border-radius: 0.35rem; color: #fff; cursor: pointer; font: inherit; font-weight: 700; justify-self: start; padding: 0.45rem 0.7rem; }
+.additional-course-form button:disabled { cursor: not-allowed; opacity: 0.55; }
+.additional-course-capacity { background: #fef3c7; border-radius: 0.35rem; padding: 0.6rem; }

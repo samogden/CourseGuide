@@ -1,5 +1,6 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
 import './App.css'
+import { AdditionalCourseAdd, AdditionalCourseCell, AdditionalCourseModal, AdditionalCoursePlaceholder, type AdditionalCourse } from './components/AdditionalCourse'
 import { CourseCell, CourseModal } from './components/CourseBox'
 import { ReadinessAssessment } from './components/ReadinessAssessment'
 import { TransferReadiness } from './components/TransferReadiness'
@@ -14,6 +15,7 @@ const catalogVersionStorageKey = 'courseguide-catalog-version-v1'
 const targetCoursesStorageKey = 'courseguide-target-courses-v1'
 const degreeTypeStorageKey = 'courseguide-degree-type-v1'
 const transferPreparationStorageKey = 'courseguide-transfer-preparation-v1'
+const additionalCoursesStorageKey = 'courseguide-additional-courses-v1'
 const activeProgramId = 'bs-computer-science'
 const RegistrationPlanner = lazy(() => import('./components/RegistrationPlanner').then(module => ({ default: module.RegistrationPlanner })))
 
@@ -97,6 +99,25 @@ function readTransferPreparation(): Map<string, string[]> {
   }
 }
 
+function readAdditionalCourses(): Map<string, AdditionalCourse[]> {
+  try {
+    const value: unknown = JSON.parse(localStorage.getItem(additionalCoursesStorageKey) ?? '{}')
+    if (!value || typeof value !== 'object' || Array.isArray(value)) return new Map()
+    return new Map(Object.entries(value).flatMap(([termKey, courses]) => {
+      if (!Array.isArray(courses)) return []
+      const validCourses = courses.flatMap(course => {
+        if (!course || typeof course !== 'object') return []
+        const { id, code, name, credits } = course as Record<string, unknown>
+        if (typeof id !== 'string' || typeof code !== 'string' || typeof credits !== 'number' || !Number.isFinite(credits) || credits <= 0 || credits > 18) return []
+        return [{ id, code, credits, ...(typeof name === 'string' ? { name } : {}) }]
+      })
+      return [[termKey, validCourses] as [string, AdditionalCourse[]]]
+    }))
+  } catch {
+    return new Map()
+  }
+}
+
 function App() {
   const [selectedSlot, setSelectedSlot] = useState<PlanSlot | null>(null)
   const [assessmentCourseId, setAssessmentCourseId] = useState<string | null>(null)
@@ -106,6 +127,8 @@ function App() {
   const [degreeType, setDegreeType] = useState<DegreeType>(() => readDegreeType())
   const [targetCourses, setTargetCourses] = useState<Map<string, string>>(() => readTargetCourses())
   const [transferPreparation, setTransferPreparation] = useState<Map<string, string[]>>(() => readTransferPreparation())
+  const [additionalCourses, setAdditionalCourses] = useState<Map<string, AdditionalCourse[]>>(() => readAdditionalCourses())
+  const [additionalCourseTerm, setAdditionalCourseTerm] = useState<{ key: string; label: string; plannedCredits: number } | null>(null)
   const [transferReadinessOpen, setTransferReadinessOpen] = useState(false)
   const [activeView, setActiveView] = useState<'roadmap' | 'registration' | 'compacted'>('roadmap')
   const [registrationTerm, setRegistrationTerm] = useState<AcademicTerm>('fall')
@@ -135,6 +158,10 @@ function App() {
     localStorage.setItem(transferPreparationStorageKey, JSON.stringify(Object.fromEntries(transferPreparation)))
   }, [transferPreparation])
 
+  useEffect(() => {
+    localStorage.setItem(additionalCoursesStorageKey, JSON.stringify(Object.fromEntries(additionalCourses)))
+  }, [additionalCourses])
+
   const updateCompletion = (slot: PlanSlot, isCompleted: boolean, resolvedCourseId?: string | null) => {
     setCompleted(current => {
       const next = new Set(current)
@@ -156,6 +183,7 @@ function App() {
     setCompleted(new Set())
     setTargetCourses(new Map())
     setTransferPreparation(new Map())
+    setAdditionalCourses(new Map())
     setSelectedConcentration('general')
     setSelectedCatalogVersion(defaultCatalogVersion)
     setDegreeType('bs')
@@ -165,6 +193,7 @@ function App() {
     setSelectedSlot(null)
     setAssessmentCourseId(null)
     setTransferReadinessOpen(false)
+    setAdditionalCourseTerm(null)
   }
 
   const updateTransferPreparation = (courseId: string, included: boolean) => {
@@ -183,6 +212,25 @@ function App() {
       const next = new Set(current)
       if (isCompleted) next.add(`course:${courseId}`)
       else next.delete(`course:${courseId}`)
+      return next
+    })
+  }
+
+  const addAdditionalCourse = (termKey: string, course: Omit<AdditionalCourse, 'id'>) => {
+    setAdditionalCourses(current => {
+      const next = new Map(current)
+      const existing = next.get(termKey) ?? []
+      next.set(termKey, [...existing, { ...course, id: `${Date.now()}-${Math.random().toString(36).slice(2)}` }])
+      return next
+    })
+  }
+
+  const removeAdditionalCourse = (termKey: string, courseId: string) => {
+    setAdditionalCourses(current => {
+      const next = new Map(current)
+      const remaining = (next.get(termKey) ?? []).filter(course => course.id !== courseId)
+      if (remaining.length > 0) next.set(termKey, remaining)
+      else next.delete(termKey)
       return next
     })
   }
@@ -272,6 +320,30 @@ function App() {
   const remainingCredits = remainingPlanCredits(activePlan, completed, suggestedSchedule.assignments) + preparationRemainingCredits
   const semestersAtFifteen = Math.ceil(remainingCredits / 15)
   const semestersAtEighteen = Math.ceil(remainingCredits / 18)
+  const additionalCourseView = activeView === 'compacted' ? 'compacted' : 'roadmap'
+  const additionalCourseScope = `${selectedCatalogVersion}/${degreeType}/${additionalCourseView}`
+  const additionalCredits = [...additionalCourses]
+    .filter(([key]) => key.startsWith(`${selectedCatalogVersion}/${degreeType}/`))
+    .flatMap(([, courses]) => courses)
+    .reduce((total, course) => total + course.credits, 0)
+  const transferCredits = degreeType === 'ast-to-bs' ? 60 : 0
+  const graduationCredits = planCredits.total + transferCredits + additionalCredits
+  const graduationCreditsRemaining = Math.max(0, 120 - graduationCredits)
+  const additionalTermKey = (termId: string) => `${additionalCourseScope}/${termId}`
+  const renderAdditionalCoursework = (termId: string, label: string, plannedCredits: number) => {
+    const key = additionalTermKey(termId)
+    const courses = additionalCourses.get(key) ?? []
+    const addedCredits = courses.reduce((total, course) => total + course.credits, 0)
+    const totalCredits = plannedCredits + addedCredits
+    const placeholderCredits = Math.max(0, 15 - totalCredits)
+    const canAdd = totalCredits < 18
+    const open = () => setAdditionalCourseTerm({ key, label, plannedCredits })
+    return <>
+      {courses.map(course => <AdditionalCourseCell key={course.id} course={course} onSelect={open} />)}
+      {placeholderCredits > 0 && <AdditionalCoursePlaceholder credits={placeholderCredits} onSelect={open} />}
+      {placeholderCredits === 0 && canAdd && <AdditionalCourseAdd onSelect={open} />}
+    </>
+  }
 
   return (
     <main className="planner">
@@ -282,7 +354,11 @@ function App() {
         </div>
       </header>
       <section className="credit-summary" aria-label="Curriculum credit summary">
-        <strong>{planCredits.total} planned credits</strong>
+        <strong>{graduationCredits} of 120 credits tracked</strong>
+        <span>{graduationCreditsRemaining > 0 ? `${graduationCreditsRemaining} additional credits needed` : '120-credit goal met'}</span>
+        <span>{planCredits.total} degree-plan credits</span>
+        {degreeType === 'ast-to-bs' && <span>60 assumed transfer credits</span>}
+        {additionalCredits > 0 && <span>{additionalCredits} extra coursework credits</span>}
         <span>{planCredits.major} major/core</span>
         <span>{planCredits.lowerDivisionGeneralEducation} lower-division GE</span>
         <span>{planCredits.upperDivisionGeneralEducation} upper-division GE</span>
@@ -331,7 +407,7 @@ function App() {
       </section>}
       <section className="legend" aria-label="Course category legend">
         <span className="legend-title">Course groups</span>
-        <span className="category-cst">Core</span><span className="category-math">Math</span><span className="category-ge-lower">Lower-division GE</span><span className="category-ge-upper">Upper-division GE</span><span className="category-concentration-required">Concentration requirement</span><span className="category-elective">Elective</span><span className="offering-legend">Limited-term offering</span>
+        <span className="category-cst">Core</span><span className="category-math">Math</span><span className="category-ge-lower">Lower-division GE</span><span className="category-ge-upper">Upper-division GE</span><span className="category-concentration-required">Concentration requirement</span><span className="category-elective">Elective</span><span className="additional-course-legend">Extra coursework</span><span className="offering-legend">Limited-term offering</span>
       </section>
       {activeView === 'roadmap' && <><p className="scroll-hint">Scroll horizontally to see the complete 18-credit grid on smaller screens.</p>
       <div className="curriculum-scroll">
@@ -368,6 +444,7 @@ function App() {
                       const suggestion = suggestedSchedule.suggestions.get(progressKey(slot)) ?? null
                       return <CourseCell key={progressKey(slot)} slot={slot} assignedCourseId={assignedCourseId} courseOptions={courseOptions} selectedTarget={suggestedSchedule.selectedTargetKeys.has(progressKey(slot))} completed={isCompleted} suggestion={suggestion} highPriority={suggestedSchedule.isHighPriority(slot) && !isCompleted} onSelect={() => setSelectedSlot(slot)} />
                     })}
+                    {renderAdditionalCoursework(`${year.year}-${term.term}`, `${degreeYearLabel(degreeType, year.year)} ${term.term}`, term.slots.reduce((total, slot) => total + slot.credits, 0))}
                   </div>
                 </div>
               ))}
@@ -407,6 +484,7 @@ function App() {
                       const isCompleted = completed.has(assignedCourseId ? `course:${assignedCourseId}` : progressKey(slot))
                       return <CourseCell key={progressKey(slot)} slot={slot} assignedCourseId={assignedCourseId} courseOptions={courseOptions} selectedTarget={compactedSchedule.selectedTargetKeys.has(progressKey(slot))} completed={isCompleted} suggestion={null} highPriority={false} onSelect={() => setSelectedSlot(slot)} />
                     })}
+                    {renderAdditionalCoursework(`${term.year}-${term.term}`, `${term.year}${term.year === 1 ? 'st' : term.year === 2 ? 'nd' : term.year === 3 ? 'rd' : 'th'} year ${term.term}`, term.credits)}
                   </div>
                 </div>
               ))}
@@ -419,6 +497,13 @@ function App() {
         if (isCompleted && selectedSlot.type !== 'course' && resolvedCourseId && selectedCourseOptions) selectTargetCourse(selectedSlot, resolvedCourseId)
         updateCompletion(selectedSlot, isCompleted, resolvedCourseId)
       }} onTargetCourseSelect={courseId => selectTargetCourse(selectedSlot, courseId)} onTargetCourseClear={() => clearTargetCourse(selectedSlot)} onOpenAssessment={() => resolvedCourseId && setAssessmentCourseId(resolvedCourseId)} />}
+      {additionalCourseTerm && <AdditionalCourseModal
+        courses={additionalCourses.get(additionalCourseTerm.key) ?? []}
+        maximumCredits={Math.max(0, 18 - additionalCourseTerm.plannedCredits - (additionalCourses.get(additionalCourseTerm.key) ?? []).reduce((total, course) => total + course.credits, 0))}
+        onAdd={course => addAdditionalCourse(additionalCourseTerm.key, course)}
+        onRemove={courseId => removeAdditionalCourse(additionalCourseTerm.key, courseId)}
+        onClose={() => setAdditionalCourseTerm(null)}
+      />}
       {assessmentCourseId && <ReadinessAssessment courseId={assessmentCourseId} onClose={() => setAssessmentCourseId(null)} />}
       {transferReadinessOpen && !assessmentCourseId && <TransferReadiness
         completed={completed}

@@ -21,11 +21,13 @@ describe('planner', () => {
   it('resets all saved planner state after confirmation', () => {
     localStorage.setItem('courseguide-completed-v1', '["course:CST-231"]')
     localStorage.setItem('courseguide-transfer-preparation-v1', '{"2026/ast-to-bs":["MATH-130"]}')
+    localStorage.setItem('courseguide-additional-courses-v1', '{"2026/bs/roadmap/freshman-fall":[{"id":"extra-1","code":"ART 200","credits":3}]}')
     vi.spyOn(window, 'confirm').mockReturnValue(true)
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: /reset planner/i }))
     expect(localStorage.getItem('courseguide-completed-v1')).toBe('[]')
     expect(localStorage.getItem('courseguide-transfer-preparation-v1')).toBe('{}')
+    expect(localStorage.getItem('courseguide-additional-courses-v1')).toBe('{}')
   })
 
   it('shows FYS 145 as the early GE course', () => {
@@ -52,7 +54,9 @@ describe('planner', () => {
   it('shows the planned-credit breakdown', () => {
     render(<App />)
 
-    expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('104 planned credits')
+    expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('104 of 120 credits tracked')
+    expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('16 additional credits needed')
+    expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('104 degree-plan credits')
     expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('77 major/core')
     expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('18 lower-division GE')
     expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('9 upper-division GE')
@@ -155,5 +159,19 @@ describe('planner', () => {
     expect(screen.getByRole('rowheader', { name: '1st year' })).toBeInTheDocument()
     fireEvent.change(screen.getByLabelText(/maximum credits per term/i), { target: { value: '12' } })
     expect(screen.getByLabelText(/maximum credits per term/i)).toHaveValue('12')
+  })
+
+  it('tracks extra coursework toward the 120-credit goal', () => {
+    render(<App />)
+    fireEvent.click(screen.getAllByRole('button', { name: /extra coursework/i })[0])
+    fireEvent.change(screen.getByLabelText('Course code'), { target: { value: 'ART 200' } })
+    fireEvent.change(screen.getByLabelText('Course name (optional)'), { target: { value: 'Introduction to Art' } })
+    fireEvent.change(screen.getByLabelText('Credits'), { target: { value: '3' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Add coursework' }))
+
+    expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('107 of 120 credits tracked')
+    expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('13 additional credits needed')
+    expect(screen.getAllByText('ART 200')).not.toHaveLength(0)
+    expect(localStorage.getItem('courseguide-additional-courses-v1')).toContain('ART 200')
   })
 })
