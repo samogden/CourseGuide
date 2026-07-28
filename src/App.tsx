@@ -5,7 +5,7 @@ import { CourseCell, CourseModal } from './components/CourseBox'
 import { ReadinessAssessment } from './components/ReadinessAssessment'
 import { TransferReadiness } from './components/TransferReadiness'
 import { getAssessmentPack } from './models/Assessments'
-import { catalogVersions, defaultCatalogVersion, degreeYearLabel, getCourse, planForDegreeType, prerequisitesMet, progressKey, remainingPlanCredits, summarizePlanCredits, transferAssumedCourseIds, type AcademicTerm, type DegreeType, type PlanSlot } from './models/Curriculum'
+import { catalogVersions, defaultCatalogVersion, degreeYearLabel, getCourse, getMinor, minorsForCatalog, planForDegreeType, prerequisitesMet, progressKey, remainingPlanCredits, summarizePlanCredits, transferAssumedCourseIds, type AcademicTerm, type DegreeType, type PlanSlot } from './models/Curriculum'
 import { buildCompactedSchedule, buildRegistrationPlan, buildSuggestedSchedule, sortSlotsForPresentation } from './models/Scheduling'
 import { buildPreparationTerms, preparationCredits } from './models/TransferPreparation'
 
@@ -16,6 +16,7 @@ const targetCoursesStorageKey = 'courseguide-target-courses-v1'
 const degreeTypeStorageKey = 'courseguide-degree-type-v1'
 const transferPreparationStorageKey = 'courseguide-transfer-preparation-v1'
 const additionalCoursesStorageKey = 'courseguide-additional-courses-v1'
+const minorStorageKey = 'courseguide-minor-v1'
 const activeProgramId = 'bs-computer-science'
 const RegistrationPlanner = lazy(() => import('./components/RegistrationPlanner').then(module => ({ default: module.RegistrationPlanner })))
 
@@ -23,8 +24,10 @@ function targetCourseKey(catalogVersion: string, degreeType: DegreeType, scope: 
   return `${catalogVersion}/${degreeType}/${scope}:${slotKey}`
 }
 
-function targetScopeForSlot(slot: PlanSlot, concentrationId: string | null): string | null {
-  return slot.type === 'choice' ? 'general' : concentrationId
+function targetScopeForSlot(slot: PlanSlot, concentrationId: string | null, minorId: string | null): string | null {
+  const baseScope = slot.type === 'choice' ? 'general' : concentrationId
+  if (!baseScope) return null
+  return minorId ? `${baseScope}/minor-${minorId}` : baseScope
 }
 
 function linkedChoiceSlots(plan: ReturnType<typeof planForDegreeType>, slot: PlanSlot): PlanSlot[] {
@@ -85,6 +88,15 @@ function readDegreeType(): DegreeType {
   }
 }
 
+function readMinor(): string | null {
+  try {
+    const value: unknown = JSON.parse(localStorage.getItem(minorStorageKey) ?? 'null')
+    return typeof value === 'string' ? value : null
+  } catch {
+    return null
+  }
+}
+
 function readTransferPreparation(): Map<string, string[]> {
   try {
     const value: unknown = JSON.parse(localStorage.getItem(transferPreparationStorageKey) ?? '{}')
@@ -125,6 +137,7 @@ function App() {
   const [selectedConcentration, setSelectedConcentration] = useState<string | null>(() => readConcentration())
   const [selectedCatalogVersion, setSelectedCatalogVersion] = useState<string>(() => readCatalogVersion())
   const [degreeType, setDegreeType] = useState<DegreeType>(() => readDegreeType())
+  const [selectedMinor, setSelectedMinor] = useState<string | null>(() => readMinor())
   const [targetCourses, setTargetCourses] = useState<Map<string, string>>(() => readTargetCourses())
   const [transferPreparation, setTransferPreparation] = useState<Map<string, string[]>>(() => readTransferPreparation())
   const [additionalCourses, setAdditionalCourses] = useState<Map<string, AdditionalCourse[]>>(() => readAdditionalCourses())
@@ -153,6 +166,10 @@ function App() {
   useEffect(() => {
     localStorage.setItem(degreeTypeStorageKey, JSON.stringify(degreeType))
   }, [degreeType])
+
+  useEffect(() => {
+    localStorage.setItem(minorStorageKey, JSON.stringify(selectedMinor))
+  }, [selectedMinor])
 
   useEffect(() => {
     localStorage.setItem(transferPreparationStorageKey, JSON.stringify(Object.fromEntries(transferPreparation)))
@@ -187,6 +204,7 @@ function App() {
     setSelectedConcentration('general')
     setSelectedCatalogVersion(defaultCatalogVersion)
     setDegreeType('bs')
+    setSelectedMinor(null)
     setActiveView('roadmap')
     setRegistrationTerm('fall')
     setCompactedCreditLimit(15)
@@ -236,7 +254,7 @@ function App() {
   }
 
   const selectTargetCourse = (slot: PlanSlot, courseId: string) => {
-    const targetScope = targetScopeForSlot(slot, activeConcentrationId)
+    const targetScope = targetScopeForSlot(slot, activeConcentrationId, activeMinorId)
     if (!targetScope) return
     setTargetCourses(current => {
       const next = new Map(current)
@@ -254,7 +272,7 @@ function App() {
   }
 
   const clearTargetCourse = (slot: PlanSlot) => {
-    const targetScope = targetScopeForSlot(slot, activeConcentrationId)
+    const targetScope = targetScopeForSlot(slot, activeConcentrationId, activeMinorId)
     if (!targetScope) return
     setTargetCourses(current => {
       const next = new Map(current)
@@ -274,15 +292,24 @@ function App() {
   const activePlan = planForDegreeType(degreeType)
   const planCredits = summarizePlanCredits(activePlan)
   const activeConcentrationId = selectedConcentration && activeProgram.concentrations[selectedConcentration] ? selectedConcentration : null
+  const availableMinors = minorsForCatalog(selectedCatalogVersion)
+  const activeMinorId = selectedMinor && availableMinors[selectedMinor] ? selectedMinor : null
+  const activeMinor = getMinor(activeMinorId, selectedCatalogVersion)
+  const activeTargetScopes = new Set(
+    ['general', activeConcentrationId]
+      .filter((scope): scope is string => Boolean(scope))
+      .map(scope => activeMinorId ? `${scope}/minor-${activeMinorId}` : scope),
+  )
   const activeTargetCourses = new Map(
     [...targetCourses]
-      .filter(([key]) => key.startsWith(`${selectedCatalogVersion}/${degreeType}/general:`) || (activeConcentrationId ? key.startsWith(`${selectedCatalogVersion}/${degreeType}/${activeConcentrationId}:`) : false))
+      .filter(([key]) => [...activeTargetScopes].some(scope => key.startsWith(`${selectedCatalogVersion}/${degreeType}/${scope}:`)))
       .map(([key, courseId]) => [key.slice(key.indexOf(':') + 1), courseId]),
   )
   const suggestedSchedule = buildSuggestedSchedule(activePlan, completed, {
     programId: activeProgramId,
     catalogVersion: selectedCatalogVersion,
     concentrationId: activeConcentrationId,
+    minorId: activeMinorId,
     targetCourses: activeTargetCourses,
     ...(degreeType === 'ast-to-bs' ? { assumedCompletedCourseIds: transferAssumedCourseIds } : {}),
   })
@@ -290,6 +317,7 @@ function App() {
     programId: activeProgramId,
     catalogVersion: selectedCatalogVersion,
     concentrationId: activeConcentrationId,
+    minorId: activeMinorId,
     targetCourses: activeTargetCourses,
     currentTerm: registrationTerm,
     ...(degreeType === 'ast-to-bs' ? { assumedCompletedCourseIds: transferAssumedCourseIds } : {}),
@@ -298,6 +326,7 @@ function App() {
     programId: activeProgramId,
     catalogVersion: selectedCatalogVersion,
     concentrationId: activeConcentrationId,
+    minorId: activeMinorId,
     targetCourses: activeTargetCourses,
     ...(degreeType === 'ast-to-bs' ? { assumedCompletedCourseIds: transferAssumedCourseIds } : {}),
   })
@@ -359,6 +388,7 @@ function App() {
         <span>{planCredits.total} degree-plan credits</span>
         {degreeType === 'ast-to-bs' && <span>60 assumed transfer credits</span>}
         {additionalCredits > 0 && <span>{additionalCredits} extra coursework credits</span>}
+        {activeMinor && <span>{activeMinor.title} minor: {activeMinor.requiredCredits} required credits</span>}
         <span>{planCredits.major} major/core</span>
         <span>{planCredits.lowerDivisionGeneralEducation} lower-division GE</span>
         <span>{planCredits.upperDivisionGeneralEducation} upper-division GE</span>
@@ -378,6 +408,22 @@ function App() {
         <button className={`path-button${degreeType === 'bs' ? ' is-selected' : ''}`} type="button" onClick={() => setDegreeType('bs')}>B.S.</button>
         <button className={`path-button${degreeType === 'ast-to-bs' ? ' is-selected' : ''}`} type="button" onClick={() => setDegreeType('ast-to-bs')}>AS-T to B.S.</button>
         {degreeType === 'ast-to-bs' && <button className="transfer-readiness-button" type="button" onClick={() => setTransferReadinessOpen(true)}>Check transfer readiness</button>}
+      </section>
+      <section className="program-picker" aria-label="Major and minor">
+        <label className="catalog-picker">Major
+          <select value={activeProgramId} disabled aria-label="Major">
+            <option value={activeProgramId}>{activeProgram.title}</option>
+          </select>
+        </label>
+        <label className="catalog-picker">Minor
+          <select aria-label="Minor" value={activeMinorId ?? ''} onChange={event => setSelectedMinor(event.target.value || null)}>
+            <option value="">No minor</option>
+            {Object.entries(availableMinors)
+              .sort(([, left], [, right]) => left.title.localeCompare(right.title))
+              .map(([minorId, minor]) => <option key={minorId} value={minorId}>{minor.title}</option>)}
+          </select>
+        </label>
+        {activeMinor?.note && <span className="minor-note">{activeMinor.note}</span>}
       </section>
       <section className="path-picker" aria-label="Program concentration">
         <span className="legend-title">Path</span>

@@ -3,6 +3,7 @@ import { z } from 'zod'
 import catalogText from '../assets/courses.yaml?raw'
 import planText from '../assets/scd-curriculum.yaml?raw'
 import programsText from '../assets/programs.yaml?raw'
+import minorsText from '../assets/minors.yaml?raw'
 
 const categorySchema = z.enum(['cst', 'math', 'ge-lower', 'ge-upper', 'elective'])
 
@@ -54,8 +55,21 @@ const requirementSchema = z.object({
   id: z.string(),
   completion: completionSchema,
   minimumGrade: z.string().optional(),
+  optionLabel: z.string().optional(),
   courseIds: z.array(z.string()).min(1),
   prerequisites: z.array(prerequisiteSchema).optional(),
+}).strict()
+
+const minorsSchema = z.object({
+  schemaVersion: z.literal(1),
+  catalogVersions: z.record(z.string(), z.object({
+    minors: z.record(z.string(), z.object({
+      title: z.string(),
+      requiredCredits: z.number().positive(),
+      note: z.string().optional(),
+      requirements: z.array(requirementSchema),
+    }).strict()),
+  }).strict()),
 }).strict()
 
 const programsSchema = z.object({
@@ -85,6 +99,7 @@ export type CatalogVersion = Programs['catalogVersions'][string]
 export type Requirement = z.infer<typeof requirementSchema>
 export type Program = Programs['programs'][string]
 export type Concentration = Program['concentrations'][string]
+export type Minor = z.infer<typeof minorsSchema>['catalogVersions'][string]['minors'][string]
 
 export const defaultCatalogVersion = '2026'
 
@@ -120,6 +135,7 @@ const parsedCatalog = z.object({ schemaVersion: z.literal(1), courses: z.record(
 export const curriculumPlan: CurriculumPlan = planSchema.parse(parse(planText))
 export const programs: Programs = programsSchema.parse(parse(programsText))
 export const catalogVersions = programs.catalogVersions
+export const minors = minorsSchema.parse(parse(minorsText))
 
 /** Courses AS-T students ordinarily completed before entering the upper division. */
 export const transferAssumedCourseIds = new Set(
@@ -181,7 +197,11 @@ const programCourseIds = Object.values(programs.programs).flatMap(program => [
   ...Object.values(program.concentrations).flatMap(concentration => concentration.requirements.flatMap(requirement => requirement.courseIds)),
 ])
 
-for (const courseId of programCourseIds) {
+const minorCourseIds = Object.values(minors.catalogVersions)
+  .flatMap(catalog => Object.values(catalog.minors))
+  .flatMap(minor => minor.requirements.flatMap(requirement => requirement.courseIds))
+
+for (const courseId of [...programCourseIds, ...minorCourseIds]) {
   if (!coursesById.has(courseId)) throw new Error(`Program requirement references unknown course: ${courseId}`)
 }
 
@@ -196,6 +216,19 @@ export function getProgram(programId: string, catalogVersion: string = defaultCa
 export function getConcentration(programId: string, concentrationId: string | null | undefined, catalogVersion: string = defaultCatalogVersion): Concentration | undefined {
   if (!concentrationId) return undefined
   return getProgram(programId, catalogVersion)?.concentrations[concentrationId]
+}
+
+export function minorsForCatalog(catalogVersion: string = defaultCatalogVersion): Record<string, Minor> {
+  return minors.catalogVersions[catalogVersion]?.minors ?? {}
+}
+
+export function getMinor(minorId: string | null | undefined, catalogVersion: string = defaultCatalogVersion): Minor | undefined {
+  if (!minorId) return undefined
+  return minorsForCatalog(catalogVersion)[minorId]
+}
+
+export function minorRequirements(minorId: string | null | undefined, catalogVersion: string = defaultCatalogVersion): Requirement[] {
+  return getMinor(minorId, catalogVersion)?.requirements ?? []
 }
 
 export function activeProgramRequirements(programId: string, concentrationId: string | null | undefined, catalogVersion: string = defaultCatalogVersion): Requirement[] {

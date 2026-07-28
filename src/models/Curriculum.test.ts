@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { canonicalCourseId, catalogVersions, coursesById, curriculumPlan, defaultCatalogVersion, degreeYearLabel, getCourse, planForDegreeType, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, prerequisiteText, programs, remainingPlanCredits, slotLabel, summarizePlanCredits, transferAssumedCourseIds, type CurriculumPlan } from './Curriculum'
+import { canonicalCourseId, catalogVersions, coursesById, curriculumPlan, defaultCatalogVersion, degreeYearLabel, getCourse, getMinor, minorsForCatalog, planForDegreeType, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, prerequisiteText, programs, remainingPlanCredits, slotLabel, summarizePlanCredits, transferAssumedCourseIds, type CurriculumPlan } from './Curriculum'
 
 describe('curriculum data', () => {
   it('normalizes alternate course code spacing', () => {
@@ -132,6 +132,17 @@ describe('curriculum data', () => {
     expect(defaultCatalogVersion).toBe('2026')
     expect(catalogVersions['2026']?.title).toBe('2026 Catalog')
     expect(catalogVersions['2026']?.programs['bs-computer-science'].concentrations['data-science']).toBeDefined()
+  })
+
+  it('models the 2026 Computer Science minor as reusable catalog data', () => {
+    const minor = getMinor('computer-science')
+
+    expect(minorsForCatalog('2026')['computer-science']).toBeDefined()
+    expect(minor).toMatchObject({ title: 'Computer Science', requiredCredits: 16 })
+    expect(minor?.requirements).toEqual(expect.arrayContaining([
+      expect.objectContaining({ completion: { kind: 'all' }, courseIds: ['CST-231', 'CST-238'] }),
+      expect.objectContaining({ completion: { kind: 'choose', count: 2 }, optionLabel: 'Computer Science minor course option' }),
+    ]))
   })
 
   it('calculates remaining credits from completed plan slots', () => {

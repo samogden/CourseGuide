@@ -74,6 +74,15 @@ describe('planner', () => {
     expect(screen.queryByRole('button', { name: /reset path/i })).not.toBeInTheDocument()
   })
 
+  it('selects the Computer Science minor and exposes its required course choices', () => {
+    render(<App />)
+    fireEvent.change(screen.getByLabelText('Minor'), { target: { value: 'computer-science' } })
+
+    expect(screen.getByLabelText('Curriculum credit summary')).toHaveTextContent('Computer Science minor: 16 required credits')
+    expect(screen.getAllByRole('button', { name: /Computer Science minor course option/i })).toHaveLength(2)
+    expect(localStorage.getItem('courseguide-minor-v1')).toBe('"computer-science"')
+  })
+
   it('visually identifies courses offered in just one term', () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: 'Data Science' }))

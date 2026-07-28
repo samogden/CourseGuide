@@ -15,6 +15,7 @@ import {
   type DegreeType,
   type PlanSlot,
   type Requirement,
+  minorRequirements,
 } from './Curriculum'
 
 export type SuggestionKind = 'standard' | 'stretch'
@@ -45,6 +46,7 @@ export interface ScheduleSelection {
   catalogVersion?: string
   programId?: string
   concentrationId?: string | null
+  minorId?: string | null
   targetCourses?: ReadonlyMap<string, string>
   currentTerm?: 'fall' | 'spring'
   /** Transfer coursework that is assumed satisfied without rendering it in the active plan. */
@@ -137,13 +139,13 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
     return []
   }))))
   const pathRequirements = resolvePathRequirements(selection)
-  const hasConcentration = Boolean(selection?.concentrationId)
+  const hasPathRequirements = pathRequirements.length > 0
   const preferredCourseIds = new Set([...explicitPlannedCourseIds, ...completedCourseIds])
-  const activeCourseIds = hasConcentration ? expandPrerequisiteClosure(candidateCourseIds(pathRequirements), preferredCourseIds) : new Set<string>()
-  const directRequiredCourseIds = hasConcentration ? directRequirementCourseIds(pathRequirements) : new Set<string>()
-  const downstreamGraph = hasConcentration ? buildDownstreamGraph(activeCourseIds) : new Map<string, Set<string>>()
-  const rankedPathCourses = hasConcentration ? buildRankedPathCourses(activeCourseIds, explicitPlannedCourseIds, completedCourseIds, directRequiredCourseIds, downstreamGraph) : []
-  const rankedPathAssignmentCourses = hasConcentration ? buildRankedPathCourses(activeCourseIds, explicitPlannedCourseIds, new Set<string>(), directRequiredCourseIds, downstreamGraph) : []
+  const activeCourseIds = hasPathRequirements ? expandPrerequisiteClosure(candidateCourseIds(pathRequirements), preferredCourseIds) : new Set<string>()
+  const directRequiredCourseIds = hasPathRequirements ? directRequirementCourseIds(pathRequirements) : new Set<string>()
+  const downstreamGraph = hasPathRequirements ? buildDownstreamGraph(activeCourseIds) : new Map<string, Set<string>>()
+  const rankedPathCourses = hasPathRequirements ? buildRankedPathCourses(activeCourseIds, explicitPlannedCourseIds, completedCourseIds, directRequiredCourseIds, downstreamGraph) : []
+  const rankedPathAssignmentCourses = hasPathRequirements ? buildRankedPathCourses(activeCourseIds, explicitPlannedCourseIds, new Set<string>(), directRequiredCourseIds, downstreamGraph) : []
   const generalDownstreamGraph = buildDownstreamGraph(explicitPlannedCourseIds)
   const rankedGeneralCourses = buildRankedPathCourses(explicitPlannedCourseIds, new Set<string>(), completedCourseIds, new Set<string>(), generalDownstreamGraph)
   const rankedPathCourseById = new Map(rankedPathCourses.map((course, index) => [course.courseId, { ...course, rank: index }]))
@@ -517,6 +519,7 @@ function buildPathAssignments(
     }
 
     const optionGroups = pathOptionGroups(pathRequirements)
+      .sort((left, right) => Number(Boolean(right.required)) - Number(Boolean(left.required)))
     const projectedByTerm = projectedCoursesBeforeTerms(plan, completedCourseIds, assignments)
     const unassignedSlots = [...remainingSlots]
     for (const optionGroup of optionGroups) {
@@ -580,7 +583,7 @@ function pathOptionGroups(requirements: Requirement[]): PathSlotOptions[] {
     if (requirement.completion.kind === 'all') return []
     if (requirement.completion.kind === 'choose') {
       return Array.from({ length: requirement.completion.count }, () => ({
-        label: courseOptionLabel(courseIds, 'Concentration course option'),
+        label: courseOptionLabel(courseIds, requirement.optionLabel ?? 'Concentration course option'),
         courseIds,
         required: true,
         ...(requirement.prerequisites ? { prerequisites: requirement.prerequisites } : {}),
@@ -588,7 +591,7 @@ function pathOptionGroups(requirements: Requirement[]): PathSlotOptions[] {
     }
     const slotCount = Math.ceil(requirement.completion.credits / 4)
     return Array.from({ length: slotCount }, () => ({
-      label: 'Concentration elective option',
+      label: requirement.optionLabel ?? 'Concentration elective option',
       courseIds,
     }))
   })
@@ -620,14 +623,18 @@ function electiveFallbackOption(requirements: Requirement[]): PathSlotOptions | 
   const requirement = requirements.find(candidate => candidate.completion.kind === 'minimumCredits')
   if (!requirement) return undefined
   return {
-    label: 'Concentration elective option',
+    label: requirement.optionLabel ?? 'Concentration elective option',
     courseIds: requirementCourseIds(requirement),
   }
 }
 
 function resolvePathRequirements(selection?: ScheduleSelection): Requirement[] {
-  if (!selection?.concentrationId) return []
-  return concentrationRequirements(selection.programId ?? defaultProgramId, selection.concentrationId, selection.catalogVersion ?? defaultCatalogVersion)
+  if (!selection) return []
+  const catalogVersion = selection.catalogVersion ?? defaultCatalogVersion
+  return [
+    ...concentrationRequirements(selection.programId ?? defaultProgramId, selection.concentrationId, catalogVersion),
+    ...minorRequirements(selection.minorId, catalogVersion),
+  ]
 }
 
 function buildRankedPathCourses(
