@@ -153,6 +153,9 @@ describe('suggested scheduling', () => {
       minimumCredits: 4,
       courseIds: expect.arrayContaining(['CART-205', 'CART-208', 'CART-215']),
     })
+    expect(cinematicPlan.years[1].terms[1].slots.some(slot =>
+      slot.type === 'requirement' && slot.slotId.includes('research-and-development'),
+    )).toBe(true)
   })
 
   it('reserves elective choices for a selected minor before flexible major electives', () => {

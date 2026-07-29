@@ -358,35 +358,57 @@ function deriveRoadmap(programId: string, catalogVersion: string): CurriculumPla
     if (terms.length === 0) terms.push(finalTerm)
   }
 
-  const optionSlots: PlanSlot[] = []
+  const optionSlots: { slot: PlanSlot; courseIds: string[] }[] = []
   for (const requirement of program.requirements) {
     if (requirement.completion.kind === 'choose') {
       optionSlots.push({
-      type: 'choice' as const,
-      slotId: `derived-${requirement.id}`,
-      alternatives: requirementCourseIds(requirement),
-      credits: getCourse(requirement.courseIds[0])?.units ?? 4,
-      category: 'elective' as const,
-      guidance: `Choose ${requirement.completion.count} course${requirement.completion.count === 1 ? '' : 's'} that satisfies this requirement.`,
+        courseIds: requirementCourseIds(requirement),
+        slot: {
+          type: 'choice' as const,
+          slotId: `derived-${requirement.id}`,
+          alternatives: requirementCourseIds(requirement),
+          credits: getCourse(requirement.courseIds[0])?.units ?? 4,
+          category: 'elective' as const,
+          guidance: `Choose ${requirement.completion.count} course${requirement.completion.count === 1 ? '' : 's'} that satisfies this requirement.`,
+        },
       })
     }
     if (requirement.completion.kind === 'minimumCredits') {
       for (let index = 0; index < Math.ceil(requirement.completion.credits / 4); index += 1) {
         optionSlots.push({
-          type: 'requirement',
-          slotId: `derived-${requirement.id}-${index + 1}`,
-          label: 'Program elective',
-          credits: 4,
-          category: 'elective',
-          guidance: 'Choose coursework that satisfies this program requirement.',
+          courseIds: requirementCourseIds(requirement),
+          slot: {
+            type: 'requirement',
+            slotId: `derived-${requirement.id}-${index + 1}`,
+            label: 'Program elective',
+            credits: 4,
+            category: 'elective',
+            guidance: 'Choose coursework that satisfies this program requirement.',
+          },
         })
       }
     }
   }
-  for (const slot of optionSlots) {
-    const lastTerm = terms.at(-1) ?? { term: 'fall' as const, slots: [] }
-    if (!terms.includes(lastTerm)) terms.push(lastTerm)
-    lastTerm.slots.push(slot)
+  for (const { slot, courseIds } of optionSlots) {
+    const targetTerm = terms.find((candidateTerm, termIndex) => {
+      const credits = candidateTerm.slots.reduce((total, candidate) => total + candidate.credits, 0)
+      if (credits + slot.credits > 15) return false
+      const completedBeforeTerm = new Set(terms
+        .slice(0, termIndex)
+        .flatMap(term => term.slots)
+        .flatMap(candidate => candidate.type === 'course' ? [candidate.courseId] : []))
+      return courseIds.some(courseId => {
+        const course = getCourse(courseId)
+        if (!course || !isCourseOffered(courseId, candidateTerm.term)) return false
+        if (course.minimumStanding === 'junior' && termIndex < 4) return false
+        const plannedPrerequisites = [...prerequisiteCourseIds(course.prerequisites)].filter(prerequisiteId => scheduled.has(prerequisiteId))
+        return plannedPrerequisites.every(prerequisiteId => completedBeforeTerm.has(prerequisiteId))
+      })
+    })
+    const fallbackTerm = terms.at(-1) ?? { term: 'fall' as const, slots: [] }
+    if (!terms.includes(fallbackTerm)) terms.push(fallbackTerm)
+    const destinationTerm = targetTerm ?? fallbackTerm
+    destinationTerm.slots.push(slot)
   }
 
   return {
