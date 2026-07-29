@@ -122,13 +122,16 @@ interface SelectedEntry {
   courseId?: string
 }
 
-interface TermCandidate {
-  key: string
-  slot: PlanSlot
+interface TermBundleMember extends SelectedEntry {
   slotIndex: number
-  courseId?: string
-  consumePathCourse: boolean
+}
+
+interface TermBundleCandidate {
+  members: TermBundleMember[]
+  credits: number
   priority: number
+  firstSlotIndex: number
+  firstKey: string
 }
 
 const defaultProgramId = 'bs-computer-science'
@@ -152,8 +155,16 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
   const preferredCourseIds = new Set([...explicitPlannedCourseIds, ...completedCourseIds])
   const activeCourseIds = hasPathRequirements ? expandPrerequisiteClosure(candidateCourseIds(pathRequirements), preferredCourseIds) : new Set<string>()
   const directRequiredCourseIds = hasPathRequirements ? directRequirementCourseIds(pathRequirements) : new Set<string>()
+  // Ranking-only: program-level required courses are the major's critical
+  // path even when program requirements are not driving slot assignments
+  // (verified roadmaps). This keeps gateway courses like CST 231 ahead of
+  // later-sequence courses such as MATH 150 when suggesting the next term.
+  const coreRequiredCourseIds = new Set([
+    ...directRequiredCourseIds,
+    ...directRequirementCourseIds(activeProgramRequirements(selection?.programId ?? defaultProgramId, null, selection?.catalogVersion ?? defaultCatalogVersion)),
+  ])
   const downstreamGraph = hasPathRequirements ? buildDownstreamGraph(activeCourseIds) : new Map<string, Set<string>>()
-  const rankedPathCourses = hasPathRequirements ? buildRankedPathCourses(activeCourseIds, explicitPlannedCourseIds, completedCourseIds, directRequiredCourseIds, downstreamGraph) : []
+  const rankedPathCourses = hasPathRequirements ? buildRankedPathCourses(activeCourseIds, explicitPlannedCourseIds, completedCourseIds, coreRequiredCourseIds, downstreamGraph) : []
   const rankedPathAssignmentCourses = hasPathRequirements ? buildRankedPathCourses(activeCourseIds, explicitPlannedCourseIds, new Set<string>(), directRequiredCourseIds, downstreamGraph) : []
   const generalDownstreamGraph = buildDownstreamGraph(explicitPlannedCourseIds)
   const rankedGeneralCourses = buildRankedPathCourses(explicitPlannedCourseIds, new Set<string>(), completedCourseIds, new Set<string>(), generalDownstreamGraph)
@@ -170,6 +181,20 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
     new Set(programRequirements.map(requirement => requirement.id)),
     getMinor(selection?.minorId, selection?.catalogVersion ?? defaultCatalogVersion)?.title,
   )
+  // The plan itself is the roadmap. Prerequisites that the plan does not
+  // contain are outside preparation (assumed satisfied, matching the derived
+  // roadmap and compacted schedule), and courses placed in earlier plan terms
+  // count as satisfied when suggesting later-term work.
+  const plannedConcreteCourseIds = new Set<string>([
+    ...plan.years.flatMap(year => year.terms.flatMap(term => term.slots.flatMap(slot => slot.type === 'course' ? [slot.courseId] : []))),
+    ...assignments.values(),
+  ])
+  const assumedExternalPrerequisiteIds = new Set(
+    [...plannedConcreteCourseIds]
+      .flatMap(courseId => [...prerequisiteCourseIds(getCourse(courseId)?.prerequisites ?? [])])
+      .filter(courseId => !plannedConcreteCourseIds.has(courseId)),
+  )
+  const projectedCourseIds = new Set([...completedCourseIds, ...assumedExternalPrerequisiteIds])
   const suggestions = new Map<string, ScheduledSuggestion>()
   const selectedEntries: SelectedEntry[] = []
   let credits = 0
@@ -181,53 +206,74 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
       let madeProgress = true
       while (madeProgress && credits < 18) {
         madeProgress = false
-        const termCandidates = term.slots
-          .flatMap((slot, slotIndex) => {
-            const key = progressKey(slot)
-            const assignedCourseId = assignments.get(key)
-            const isCompleted = completed.has(key) || (assignedCourseId ? completed.has(`course:${assignedCourseId}`) : false)
-            if (isCompleted || selectedInTerm.has(key)) return []
-            const candidate = assignedCourseId
-              ? resolveAssignedCourseCandidate(assignedCourseId, completedCourseIds, suggestedTerm ?? term.term, courseOptions.get(key)?.prerequisites)
-              : resolveSlotCandidate(slot, completedCourseIds, suggestedTerm ?? term.term)
-            if (!candidate) return []
+        const termCandidates = buildTermCorequisiteBundles(term.slots, assignments)
+          .flatMap(members => {
+            if (members.some(member =>
+              selectedInTerm.has(member.key) ||
+              completed.has(member.key) ||
+              (member.courseId ? completed.has(`course:${member.courseId}`) : false))) return []
+            const bundleCourseIds = members.flatMap(member => member.courseId ? [member.courseId] : [])
+            const projectedWithBundle = new Set([...projectedCourseIds, ...bundleCourseIds])
+            const eligible = members.every(member => {
+              if (!member.courseId) return resolveSlotCandidate(member.slot, projectedWithBundle, suggestedTerm ?? term.term) !== undefined
+              // A corequisite (such as a lab) cannot be suggested ahead of
+              // the course it belongs to when that course is planned but
+              // neither projected from an earlier term nor part of this
+              // same-term bundle.
+              const unpairedCorequisites = courseCorequisiteIds(member.courseId)
+                .filter(corequisiteId => plannedConcreteCourseIds.has(corequisiteId) && !projectedWithBundle.has(corequisiteId))
+              if (unpairedCorequisites.length > 0) return false
+              return resolveAssignedCourseCandidate(
+                member.courseId,
+                projectedWithBundle,
+                suggestedTerm ?? term.term,
+                courseOptions.get(member.key)?.prerequisites,
+              ) !== undefined
+            })
+            if (!eligible) return []
             return [{
-              key,
-              slot,
-              slotIndex,
-              courseId: candidate.courseId,
-              consumePathCourse: candidate.consumePathCourse,
-              priority: getCandidatePriority(
-                slot,
-                candidate.courseId,
-                slotIndex,
+              members,
+              credits: members.reduce((total, member) => total + member.slot.credits, 0),
+              priority: Math.min(...members.map(member => getCandidatePriority(
+                member.slot,
+                member.courseId,
+                member.slotIndex,
                 rankedPathCourseById,
                 rankedGeneralCourseById,
-                directRequiredCourseIds,
+                coreRequiredCourseIds,
                 downstreamGraph,
-              ),
-            } satisfies TermCandidate]
+              ))),
+              firstSlotIndex: Math.min(...members.map(member => member.slotIndex)),
+              firstKey: members[0]?.key ?? '',
+            } satisfies TermBundleCandidate]
           })
           .sort((left, right) =>
             left.priority - right.priority ||
-            left.slotIndex - right.slotIndex ||
-            Number(right.slot.type === 'course') - Number(left.slot.type === 'course') ||
-            left.key.localeCompare(right.key))
+            left.firstSlotIndex - right.firstSlotIndex ||
+            left.firstKey.localeCompare(right.firstKey))
 
         for (const candidate of termCandidates) {
-          if (credits + candidate.slot.credits > 18) continue
-          const suggestionKind: SuggestionKind = credits + candidate.slot.credits >= 16 ? 'stretch' : 'standard'
-          suggestions.set(candidate.key, {
-            kind: suggestionKind,
-            ...(candidate.courseId ? { courseId: candidate.courseId } : {}),
-          })
-          selectedEntries.push({ key: candidate.key, slot: candidate.slot, courseId: candidate.courseId })
-          selectedInTerm.add(candidate.key)
-          credits += candidate.slot.credits
+          if (credits + candidate.credits > 18) continue
+          const suggestionKind: SuggestionKind = credits + candidate.credits >= 16 ? 'stretch' : 'standard'
+          for (const member of candidate.members) {
+            suggestions.set(member.key, {
+              kind: suggestionKind,
+              ...(member.courseId ? { courseId: member.courseId } : {}),
+            })
+            selectedEntries.push({ key: member.key, slot: member.slot, courseId: member.courseId })
+            selectedInTerm.add(member.key)
+          }
+          credits += candidate.credits
           suggestedTerm ??= term.term
           madeProgress = true
           break
         }
+      }
+      // Courses placed in this plan term are projected as complete when
+      // evaluating suggestions for later terms.
+      for (const slot of term.slots) {
+        const courseId = assignments.get(progressKey(slot)) ?? (slot.type === 'course' ? slot.courseId : undefined)
+        if (courseId) projectedCourseIds.add(courseId)
       }
     }
   }
@@ -401,6 +447,32 @@ export function buildCompactedSchedule(
     courseOptions: baseSchedule.courseOptions,
     selectedTargetKeys: baseSchedule.selectedTargetKeys,
   }
+}
+
+/** Groups same-term slots into corequisite bundles (e.g. a lecture and its lab) so suggestions always keep them together. */
+function buildTermCorequisiteBundles(slots: readonly PlanSlot[], assignments: ReadonlyMap<string, string>): TermBundleMember[][] {
+  const bundles: TermBundleMember[][] = []
+  const bundledKeys = new Set<string>()
+  slots.forEach((slot, slotIndex) => {
+    const key = progressKey(slot)
+    if (bundledKeys.has(key)) return
+    const courseId = assignments.get(key) ?? (slot.type === 'course' ? slot.courseId : undefined)
+    const members: TermBundleMember[] = [{ key, slot, slotIndex, ...(courseId ? { courseId } : {}) }]
+    if (courseId) {
+      const corequisiteIds = new Set(courseCorequisiteIds(courseId))
+      slots.forEach((otherSlot, otherSlotIndex) => {
+        const otherKey = progressKey(otherSlot)
+        if (otherKey === key || bundledKeys.has(otherKey)) return
+        const otherCourseId = assignments.get(otherKey) ?? (otherSlot.type === 'course' ? otherSlot.courseId : undefined)
+        if (otherCourseId && (corequisiteIds.has(otherCourseId) || courseCorequisiteIds(otherCourseId).includes(courseId))) {
+          members.push({ key: otherKey, slot: otherSlot, slotIndex: otherSlotIndex, courseId: otherCourseId })
+        }
+      })
+    }
+    for (const member of members) bundledKeys.add(member.key)
+    bundles.push(members)
+  })
+  return bundles
 }
 
 function compactedCorequisiteBundle(slot: PlanSlot, remaining: readonly PlanSlot[], assignments: ReadonlyMap<string, string>): PlanSlot[] {

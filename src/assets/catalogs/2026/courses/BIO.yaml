@@ -92,12 +92,10 @@ courses:
         - fall
         - spring
     prerequisites:
-      - anyOf:
+      - allOf:
           - courseId: CHEM-110
             minimumGrade: C-
           - courseId: CHEM-110L
-            minimumGrade: C-
-          - courseId: BIO-210L
             minimumGrade: C-
     prerequisiteNotes:
       - "[Prereq: ( CHEM 110 and CHEM 110L with a C- or better) and (Coreq: BIO 210L )]"

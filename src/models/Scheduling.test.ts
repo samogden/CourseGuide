@@ -27,6 +27,23 @@ describe('suggested scheduling', () => {
     })).not.toThrow()
   })
 
+  it('suggests derived-roadmap courses in plan order and keeps corequisite labs with their lectures', () => {
+    const biologyPlan = planForDegreeType('bs', 'bs-biology', '2026')
+    const schedule = buildSuggestedSchedule(biologyPlan, new Set(), {
+      programId: 'bs-biology',
+      catalogVersion: '2026',
+    })
+
+    // Freshman-fall courses have only outside-plan preparation, which the
+    // roadmap treats as assumed, so they must be suggestible.
+    expect(schedule.suggestions.has('course:BIO-301')).toBe(true)
+    expect(schedule.suggestions.has('course:MATH-150')).toBe(true)
+    // Labs are never suggested without the lecture they corequire.
+    expect(schedule.suggestions.has('course:BIO-211L')).toBe(schedule.suggestions.has('course:BIO-211'))
+    expect(schedule.suggestions.has('course:CHEM-110L')).toBe(schedule.suggestions.has('course:CHEM-110'))
+    expect(schedule.suggestions.has('course:CHEM-111L')).toBe(schedule.suggestions.has('course:CHEM-111'))
+  })
+
   it('keeps inferred lecture and lab corequisites in the same compacted term', () => {
     const biologyPlan = planForDegreeType('bs', 'bs-biology', '2026')
     const compacted = buildCompactedSchedule(biologyPlan, new Set(), 15, 'bs', {
@@ -121,24 +138,33 @@ describe('suggested scheduling', () => {
 
   it('keeps the early prerequisite-driven course visible and standard', () => {
     const schedule = buildSuggestedSchedule(curriculumPlan, new Set())
-    const cst286 = curriculumPlan.years[0].terms[0].slots[3]
+    const cst286 = curriculumPlan.years[0].terms[0].slots[2]
 
+    expect(cst286.type).toBe('course')
+    expect(cst286.type === 'course' && cst286.courseId).toBe('CST-286')
     expect(schedule.suggestions.get(progressKey(cst286))?.kind).toBe('standard')
     expect(schedule.isHighPriority(cst286)).toBe(true)
   })
 
   it('does not use a suggested course to satisfy another suggested course prerequisite', () => {
     const schedule = buildSuggestedSchedule(curriculumPlan, new Set())
-    const cst238 = curriculumPlan.years[0].terms[1].slots[0]
+    const cst238 = curriculumPlan.years[1].terms[0].slots[0]
 
+    expect(cst238.type).toBe('course')
+    expect(cst238.type === 'course' && cst238.courseId).toBe('CST-238')
     expect(schedule.suggestions.has(progressKey(cst238))).toBe(false)
   })
 
   it('adds an eligible later-plan course as an early stretch option', () => {
     const completed = new Set(['course:CST-231', 'course:MATH-130', 'course:CST-286'])
-    const schedule = buildSuggestedSchedule(curriculumPlan, completed)
-    const cst238 = curriculumPlan.years[0].terms[1].slots[0]
+    const schedule = buildSuggestedSchedule(curriculumPlan, completed, {
+      programId: 'bs-computer-science',
+      concentrationId: 'general',
+    })
+    const cst238 = curriculumPlan.years[1].terms[0].slots[0]
 
+    expect(cst238.type).toBe('course')
+    expect(cst238.type === 'course' && cst238.courseId).toBe('CST-238')
     expect(schedule.suggestions.get(progressKey(cst238))?.kind).toBe('standard')
   })
 

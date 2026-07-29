@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { appendMinorToPlan, canonicalCourseId, catalogVersions, coursesById, curriculumPlan, defaultCatalogVersion, degreeYearLabel, getCatalogMetadata, getCourse, getDegreeCatalogEntry, getMinor, minorsForCatalog, planForDegreeType, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, prerequisiteText, progressKey, programs, remainingPlanCredits, roadmapForProgram, slotLabel, summarizePlanCredits, transferAssumedCourseIds, type CurriculumPlan } from './Curriculum'
+import { appendMinorToPlan, canonicalCourseId, catalogVersions, courseCorequisiteIds, coursesById, curriculumPlan, defaultCatalogVersion, degreeYearLabel, getCatalogMetadata, getCourse, getDegreeCatalogEntry, getMinor, minorsForCatalog, planForDegreeType, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, prerequisiteText, progressKey, programs, remainingPlanCredits, roadmapForProgram, slotLabel, summarizePlanCredits, transferAssumedCourseIds, type CurriculumPlan } from './Curriculum'
 
 describe('curriculum data', () => {
   it('normalizes alternate course code spacing', () => {
@@ -8,16 +8,16 @@ describe('curriculum data', () => {
   })
 
   it('represents pipe choices as explicit alternatives', () => {
-    const mathChoice = curriculumPlan.years[1].terms[0].slots[1]
+    const mathChoice = curriculumPlan.years[1].terms[1].slots[1]
     expect(mathChoice.type).toBe('choice')
     expect(slotLabel(mathChoice)).toBe('MATH 151 or MATH 270')
   })
 
   it('uses FYS 145 and the two official World Culture and Language courses', () => {
     const firstYearFall = curriculumPlan.years[0].terms[0].slots
-    const cultureChoice = curriculumPlan.years[1].terms[1].slots[0]
+    const cultureChoice = curriculumPlan.years[1].terms[1].slots[2]
 
-    expect(firstYearFall[1]).toMatchObject({ type: 'course', courseId: 'FYS-145', credits: 3 })
+    expect(firstYearFall[0]).toMatchObject({ type: 'course', courseId: 'FYS-145', credits: 3 })
     expect(cultureChoice).toMatchObject({
       type: 'choice',
       alternatives: ['JAPN-350', 'SPAN-350'],
@@ -199,7 +199,22 @@ describe('curriculum data', () => {
   it('calculates remaining credits from completed plan slots', () => {
     const firstCourse = curriculumPlan.years[0].terms[0].slots[0]
 
-    expect(remainingPlanCredits(curriculumPlan, new Set([`course:${firstCourse.type === 'course' ? firstCourse.courseId : ''}`]))).toBe(100)
+    expect(remainingPlanCredits(curriculumPlan, new Set([`course:${firstCourse.type === 'course' ? firstCourse.courseId : ''}`]))).toBe(101)
+  })
+
+  it('keeps corequisites out of structured prerequisites', () => {
+    const bio210 = getCourse('BIO-210')
+    expect(prerequisiteCourseIds(bio210?.prerequisites ?? [])).toEqual(new Set(['CHEM-110', 'CHEM-110L']))
+    expect(courseCorequisiteIds('BIO-210')).toContain('BIO-210L')
+    expect(prerequisiteCourseIds(bio210?.prerequisites ?? []).has('BIO-210L')).toBe(false)
+
+    // "Prereq or Coreq" partners stay in both places: prior completion or
+    // concurrent enrollment are both valid.
+    expect(prerequisiteCourseIds(getCourse('CHEM-110')?.prerequisites ?? [])).toEqual(new Set(['MATH-130', 'MATH-150']))
+    expect(courseCorequisiteIds('CHEM-110')).toEqual(expect.arrayContaining(['MATH-130', 'MATH-150', 'CHEM-110L']))
+    // BIO 211L is a hard corequisite of BIO 211, so it carries no prerequisites.
+    expect(prerequisiteCourseIds(getCourse('BIO-211L')?.prerequisites ?? [])).toEqual(new Set())
+    expect(courseCorequisiteIds('BIO-211L')).toContain('BIO-211')
   })
 
   it('derives the AS-T roadmap from only the junior and senior plan years', () => {

@@ -43,20 +43,31 @@ function courseIds(value) {
   return [...value.matchAll(/\b([A-Z]{2,})\s+(\d+[A-Z]?)\b/g)].map(([, prefix, number]) => `${prefix}-${number}`)
 }
 
+// Corequisite clauses (including "Prereq or Coreq") constrain concurrent
+// enrollment, not prior completion. Parse them separately so they are never
+// folded into prerequisite alternatives.
+function corequisiteRules(value) {
+  const ids = [...value.matchAll(/\([^)]*\bco-?req\b[^)]*\)/gi)].flatMap(match => courseIds(match[0]))
+  return [...new Set(ids)].map(courseId => ({ courseId }))
+}
+
 function prerequisiteRules(value) {
-  if (!/\bprereq/i.test(value)) return []
+  const prerequisiteText = value
+    .replace(/\([^)]*\bco-?req\b[^)]*\)/gi, ' ')
+    .replace(/\bor\s+(?:better|higher)\b/gi, '')
+  if (!/\bprereq/i.test(prerequisiteText)) return []
   const grade = /C- or better/i.test(value) ? { minimumGrade: 'C-' } : {}
-  const ids = courseIds(value)
+  const ids = courseIds(prerequisiteText)
   if (!ids.length) return []
   // Catalog requirements use parentheses around alternatives. Retain that
   // distinction so the scheduler can evaluate common prerequisite patterns.
-  const alternative = value.match(/\(\s*([A-Z]{2,}\s+\d+[A-Z]?(?:\s+or\s+[A-Z]{2,}\s+\d+[A-Z]?)+)\s*\)/i)
+  const alternative = prerequisiteText.match(/\(\s*([A-Z]{2,}\s+\d+[A-Z]?(?:\s+or\s+[A-Z]{2,}\s+\d+[A-Z]?)+)\s*\)/i)
   if (alternative) {
     const alternatives = courseIds(alternative[1])
     const required = ids.filter(id => !alternatives.includes(id))
     return [{ allOf: [...required.map(courseId => ({ courseId, ...grade })), { anyOf: alternatives.map(courseId => ({ courseId, ...grade })) }] }]
   }
-  if (/\bor\b/i.test(value)) return [{ anyOf: ids.map(courseId => ({ courseId, ...grade })) }]
+  if (/\bor\b/i.test(prerequisiteText)) return [{ anyOf: ids.map(courseId => ({ courseId, ...grade })) }]
   return ids.map(courseId => ({ courseId, ...grade }))
 }
 
@@ -84,6 +95,7 @@ for (const file of (await readdir(sourceDirectory)).sort()) {
       ...(description && { description }),
       ...(offered(availability) && { offered: offered(availability) }),
       ...(prerequisiteRules(requirements).length && { prerequisites: prerequisiteRules(requirements) }),
+      ...(corequisiteRules(requirements).length && { corequisites: corequisiteRules(requirements) }),
       ...(requirements && { prerequisiteNotes: [requirements] }),
       ...( /Junior or Senior Standing|Junior Standing Required/i.test(requirements) && { minimumStanding: 'junior' }),
     }

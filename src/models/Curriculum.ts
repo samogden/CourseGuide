@@ -147,10 +147,43 @@ export interface Course {
   minimumStanding?: 'junior'
 }
 
+function inferredCorequisiteClauses(notes: readonly string[]): { courseId: string; hard: boolean }[] {
+  // Capture every course in a corequisite clause. "Prereq or Coreq" clauses
+  // are soft: the partner may be completed earlier OR taken concurrently.
+  // Plain "Coreq" clauses are hard: the courses belong in the same term.
+  return notes.flatMap(note => [...note.matchAll(/(Prereq\s+or\s+)?Coreq:\s*([^)\]]*)/gi)])
+    .flatMap(clause => [...clause[2].matchAll(/([A-Z]+)\s*(\d+[A-Z]*)/g)]
+      .map(course => ({ courseId: canonicalCourseId(`${course[1]}-${course[2]}`), hard: !clause[1] })))
+}
+
 function inferredCorequisites(notes: readonly string[]): { courseId: string }[] {
-  return [...new Set(notes.flatMap(note => [...note.matchAll(/Coreq:\s*([A-Z]+)\s*(\d+[A-Z]*)/g)]
-    .map(match => canonicalCourseId(`${match[1]}-${match[2]}`))))]
-    .map(courseId => ({ courseId }))
+  return [...new Set(inferredCorequisiteClauses(notes).map(clause => clause.courseId))].map(courseId => ({ courseId }))
+}
+
+/**
+ * The import pipeline historically folded corequisites into the structured
+ * prerequisites tree (e.g. BIO 210 listed BIO 210L as a prerequisite
+ * alternative). Hard corequisites constrain concurrent enrollment, not prior
+ * completion, so remove them from the prerequisite tree at load time. Soft
+ * "prereq or coreq" partners stay: they are legitimately satisfied by prior
+ * completion or concurrent enrollment.
+ */
+function separateFoldedCorequisites(prerequisites: readonly unknown[], corequisiteIds: ReadonlySet<string>): unknown[] {
+  const clean = (node: unknown): unknown | undefined => {
+    if (!node || typeof node !== 'object') return node
+    const value = node as { courseId?: string; allOf?: unknown[]; anyOf?: unknown[] }
+    if (value.courseId) return corequisiteIds.has(canonicalCourseId(value.courseId)) ? undefined : node
+    if (value.allOf) {
+      const children = value.allOf.map(clean).filter(child => child !== undefined)
+      return children.length > 0 ? { ...value, allOf: children } : undefined
+    }
+    if (value.anyOf) {
+      const children = value.anyOf.map(clean).filter(child => child !== undefined)
+      return children.length > 0 ? { ...value, anyOf: children } : undefined
+    }
+    return node
+  }
+  return prerequisites.map(clean).filter((node): node is NonNullable<typeof node> => node !== undefined)
 }
 
 export interface PlanCreditSummary {
@@ -349,13 +382,14 @@ export function appendMinorToPlan(plan: CurriculumPlan, minor: Minor | undefined
     )
     // Preserve the major roadmap first. Put minor work in normal 15-credit
     // openings where possible, then use the 16–18 stretch range. If the
-    // preferred year and every later term are full, use an earlier opening as
-    // a last resort rather than silently dropping required minor credits.
-    // Never fall back to an overloaded term: 18 credits is a hard limit.
+    // preferred year and every later term are full, fall back at most one
+    // year earlier (a 300-level block may land in sophomore year, but never
+    // freshman year). Never overload a term: 18 credits is a hard limit.
+    const earliestFallbackTerm = Math.max(0, startTerm - 2)
     const targetIndex = eligible(15)
     const stretchTargetIndex = targetIndex >= 0 ? targetIndex : eligible(18)
-    const earlierTargetIndex = stretchTargetIndex >= 0 ? stretchTargetIndex : eligible(15, 0)
-    const earlierStretchTargetIndex = earlierTargetIndex >= 0 ? earlierTargetIndex : eligible(18, 0)
+    const earlierTargetIndex = stretchTargetIndex >= 0 ? stretchTargetIndex : eligible(15, earliestFallbackTerm)
+    const earlierStretchTargetIndex = earlierTargetIndex >= 0 ? earlierTargetIndex : eligible(18, earliestFallbackTerm)
     const target = terms[earlierStretchTargetIndex]
     if (!target) return false
     target.slots.push(slot)
@@ -415,6 +449,13 @@ export function degreeYearLabel(degreeType: DegreeType, year: CurriculumPlan['ye
 
 const catalogEntries: Course[] = Object.entries(parsedCatalog.courses).map(([id, course]) => {
   if (id !== canonicalCourseId(id)) throw new Error(`Course catalog ID must be canonical: ${id}`)
+  const declaredCorequisites = (course.corequisites ?? []) as { courseId?: string }[]
+  const corequisites = [...new Map([...declaredCorequisites, ...inferredCorequisites(course.prerequisiteNotes ?? [])]
+    .map(rule => [canonicalCourseId(rule.courseId ?? ''), rule] as const)).values()]
+  const hardCorequisiteIds = new Set([
+    ...inferredCorequisiteClauses(course.prerequisiteNotes ?? []).filter(clause => clause.hard).map(clause => clause.courseId),
+    ...declaredCorequisites.flatMap(rule => rule.courseId ? [canonicalCourseId(rule.courseId)] : []),
+  ])
   return {
     id,
     code: course.code,
@@ -425,8 +466,8 @@ const catalogEntries: Course[] = Object.entries(parsedCatalog.courses).map(([id,
     teachingStatus: course.teachingStatus,
     description: course.description,
     offeredTerms: course.offered && 'terms' in course.offered ? course.offered.terms : undefined,
-    prerequisites: course.prerequisites ?? [],
-    corequisites: [...(course.corequisites ?? []), ...inferredCorequisites(course.prerequisiteNotes ?? [])],
+    prerequisites: separateFoldedCorequisites(course.prerequisites ?? [], hardCorequisiteIds),
+    corequisites,
     prerequisiteNotes: course.prerequisiteNotes ?? [],
     placeholder: course.placeholder,
     minimumStanding: course.minimumStanding,
@@ -516,7 +557,14 @@ function deriveRoadmap(programId: string, catalogVersion: string): CurriculumPla
     const term: AcademicTerm = termIndex % 2 === 0 ? 'fall' : 'spring'
     let credits = 0
     const slots: PlanSlot[] = []
-    const candidates = [...requiredCourseIds].sort((left, right) => Number(left.startsWith('FYS-')) * -1 || left.localeCompare(right))
+    // First-year seminars come first; otherwise lower course numbers come
+    // before higher ones (CHEM 110 before BIO 210 before BIO 311), with the
+    // course code as the final tiebreaker.
+    const courseLevel = (courseId: string) => Number(getCourse(courseId)?.code.match(/\d{3}/)?.[0] ?? 999)
+    const candidates = [...requiredCourseIds].sort((left, right) =>
+      Number(right.startsWith('FYS-')) - Number(left.startsWith('FYS-')) ||
+      courseLevel(left) - courseLevel(right) ||
+      left.localeCompare(right))
     for (const courseId of candidates) {
       if (!requiredCourseIds.has(courseId)) continue
       const course = getCourse(courseId)
