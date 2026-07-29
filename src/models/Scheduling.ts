@@ -543,7 +543,11 @@ function buildPathAssignments(
             continue
           }
 
-          if (slot.type !== 'requirement' || slot.category !== 'elective') continue
+          // Minor requirements already have their own catalog-backed options.
+          // They must never be treated as an unassigned major elective, or the
+          // concentration planner will replace their Biology (or other minor)
+          // list with concentration courses.
+          if (slot.type !== 'requirement' || slot.category !== 'elective' || slot.source === 'minor') continue
           const derivedRequirementId = requirementIdForDerivedSlot(slot)
           if (derivedRequirementId && creditSelectableRequirementIds.has(derivedRequirementId)) {
             remainingSlots.push({ slot, term: term.term })
@@ -614,6 +618,17 @@ function buildChoiceOptions(plan: CurriculumPlan, minorLabel?: string): Map<stri
           label: slot.source === 'minor' ? `${minorLabel ?? 'Minor'} minor course option` : courseOptionLabel(slot.alternatives, 'Course choice'),
           courseIds: slot.alternatives,
           ...(slot.source === 'minor' ? { required: true } : {}),
+        })
+        continue
+      }
+      for (const slot of term.slots) {
+        if (slot.type !== 'requirement' || slot.source !== 'minor' || !slot.courseIds?.every(courseId => getCourse(courseId))) continue
+        options.set(progressKey(slot), {
+          label: slot.label,
+          courseIds: slot.courseIds,
+          minimumCredits: slot.credits,
+          requirementId: slot.slotId,
+          required: true,
         })
       }
     }

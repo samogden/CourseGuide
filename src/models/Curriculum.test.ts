@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { canonicalCourseId, catalogVersions, coursesById, curriculumPlan, defaultCatalogVersion, degreeYearLabel, getCatalogMetadata, getCourse, getDegreeCatalogEntry, getMinor, minorsForCatalog, planForDegreeType, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, prerequisiteText, programs, remainingPlanCredits, roadmapForProgram, slotLabel, summarizePlanCredits, transferAssumedCourseIds, type CurriculumPlan } from './Curriculum'
+import { appendMinorToPlan, canonicalCourseId, catalogVersions, coursesById, curriculumPlan, defaultCatalogVersion, degreeYearLabel, getCatalogMetadata, getCourse, getDegreeCatalogEntry, getMinor, minorsForCatalog, planForDegreeType, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, prerequisiteText, progressKey, programs, remainingPlanCredits, roadmapForProgram, slotLabel, summarizePlanCredits, transferAssumedCourseIds, type CurriculumPlan } from './Curriculum'
 
 describe('curriculum data', () => {
   it('normalizes alternate course code spacing', () => {
@@ -158,6 +158,21 @@ describe('curriculum data', () => {
       expect.objectContaining({ completion: { kind: 'all' }, courseIds: ['CST-231', 'CST-238'] }),
       expect.objectContaining({ completion: { kind: 'choose', count: 2 }, optionLabel: 'Computer Science minor course option' }),
     ]))
+  })
+
+  it('adds Biology minor requirements after the major roadmap without exceeding 18 credits', () => {
+    const plan = appendMinorToPlan(planForDegreeType('bs', 'bs-computer-science', '2026'), getMinor('biology', '2026'))
+    const terms = plan.years.flatMap(year => year.terms)
+    const minorSlots = terms.flatMap(term => term.slots.filter(slot => slot.source === 'minor'))
+    const termIndexByMinorSlot = new Map(minorSlots.map(slot => [progressKey(slot), terms.findIndex(term => term.slots.includes(slot))]))
+
+    // Biology's two gateway choices are separate from the explicitly stated
+    // 12-credit additional-coursework requirement.
+    expect(minorSlots.reduce((total, slot) => total + slot.credits, 0)).toBe(19)
+    expect(minorSlots.filter(slot => slot.type === 'requirement').reduce((total, slot) => total + slot.credits, 0)).toBe(12)
+    expect(terms.every(term => term.slots.reduce((total, slot) => total + slot.credits, 0) <= 18)).toBe(true)
+    expect(termIndexByMinorSlot.get('slot:minor-biology-complete-one-or-more-of-the-following-lower-division-biology-course-course-combinations-that-serve-as-prerequisites-to-upper-division-biology-courses-1')).toBeGreaterThanOrEqual(2)
+    expect(termIndexByMinorSlot.get('slot:minor-biology-complete-one-of-the-following-upper-division-biology-lab-course-course-combinations-1')).toBeGreaterThanOrEqual(4)
   })
 
   it('calculates remaining credits from completed plan slots', () => {

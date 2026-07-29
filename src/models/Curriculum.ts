@@ -29,7 +29,7 @@ const courseSchema = z.object({
 
 const planSlotSchema = z.discriminatedUnion('type', [
   z.object({ type: z.literal('course'), courseId: z.string(), credits: z.number().positive(), category: categorySchema, source: z.enum(['major', 'minor', 'other']).optional() }),
-  z.object({ type: z.literal('requirement'), slotId: z.string(), label: z.string(), credits: z.number().positive(), category: categorySchema, guidance: z.string(), source: z.enum(['major', 'minor', 'other']).optional() }),
+  z.object({ type: z.literal('requirement'), slotId: z.string(), label: z.string(), credits: z.number().positive(), category: categorySchema, guidance: z.string(), courseIds: z.array(z.string()).optional(), source: z.enum(['major', 'minor', 'other']).optional() }),
   z.object({ type: z.literal('choice'), slotId: z.string(), alternatives: z.array(z.string()).min(2), credits: z.number().positive(), category: categorySchema, guidance: z.string(), source: z.enum(['major', 'minor', 'other']).optional() }),
 ])
 
@@ -315,24 +315,47 @@ export function appendMinorToPlan(plan: CurriculumPlan, minor: Minor | undefined
   const canTake = (courseId: string, term: AcademicTerm, termIndex: number) => {
     const course = getCourse(courseId)
     if (!course || !isCourseOffered(courseId, term)) return false
-    const courseNumber = Number(course.code.match(/\d{3}/)?.[0] ?? 0)
-    // Catalog data does not always carry an explicit standing restriction;
-    // upper-division (300/400-level) coursework nevertheless belongs after
-    // the first two years in the generated plan.
-    if ((course.minimumStanding === 'junior' || courseNumber >= 300) && termIndex < 4) return false
+    // Respect an explicit catalog standing requirement. Course numbers are a
+    // placement preference below, not an artificial eligibility rule: when a
+    // minor otherwise cannot fit, an advisor can select an appropriate option
+    // from its requirement in an earlier open term.
     return prerequisitesMetForPlan(course.prerequisites, completedBefore(termIndex))
   }
+  const preferredStartTerm = (courseIds: readonly string[], credits: number): number => {
+    // Prefer the earliest level represented by the requirement.  A 200-level
+    // option belongs in sophomore year, a 300-level option in junior year,
+    // and so on.  This applies to choices as well as named courses, while
+    // still allowing a later term to be used when the preferred year is full.
+    const levels = courseIds
+      .map(courseId => getCourse(courseId))
+      .filter((course): course is Course => Boolean(course))
+      // A one-unit practicum alone cannot fill a four-unit requirement slot.
+      .filter(course => course.maximumUnits >= credits)
+      .map(course => Number(course.code.match(/\d{3}/)?.[0] ?? 100))
+    const level = Math.min(...levels)
+    if (!Number.isFinite(level)) return 0
+    return level >= 400 ? 6 : level >= 300 ? 4 : level >= 200 ? 2 : 0
+  }
   const appendSlot = (slot: PlanSlot, courseIds: readonly string[]) => {
-    const eligible = (limit: number) => terms.findIndex((term, termIndex) =>
+    const startTerm = preferredStartTerm(courseIds, slot.credits)
+    const eligible = (limit: number, firstTerm = startTerm) => terms.findIndex((term, termIndex) =>
+      termIndex >= firstTerm &&
       term.slots.reduce((total, current) => total + current.credits, 0) + slot.credits <= limit &&
       (courseIds.length === 0 || courseIds.some(courseId => canTake(courseId, term.term, termIndex))),
     )
-    // Minor coursework is additive: never use the major planner's 16–18
-    // credit stretch capacity when there is a later term with room at the
-    // normal 15-credit target.
+    // Preserve the major roadmap first. Put minor work in normal 15-credit
+    // openings where possible, then use the 16–18 stretch range. If the
+    // preferred year and every later term are full, use an earlier opening as
+    // a last resort rather than silently dropping required minor credits.
+    // Never fall back to an overloaded term: 18 credits is a hard limit.
     const targetIndex = eligible(15)
-    const target = terms[targetIndex >= 0 ? targetIndex : terms.length - 1]
-    if (target) target.slots.push(slot)
+    const stretchTargetIndex = targetIndex >= 0 ? targetIndex : eligible(18)
+    const earlierTargetIndex = stretchTargetIndex >= 0 ? stretchTargetIndex : eligible(15, 0)
+    const earlierStretchTargetIndex = earlierTargetIndex >= 0 ? earlierTargetIndex : eligible(18, 0)
+    const target = terms[earlierStretchTargetIndex]
+    if (!target) return false
+    target.slots.push(slot)
+    return true
   }
   for (const requirement of minor.requirements) {
     if (requirement.completion.kind === 'all') {
@@ -345,14 +368,35 @@ export function appendMinorToPlan(plan: CurriculumPlan, minor: Minor | undefined
       const alternatives = requirementCourseIds(requirement).filter(courseId => !plannedCourseIds.has(courseId))
       if (alternatives.length < 2) continue
       for (let index = 0; index < requirement.completion.count; index += 1) {
+        const credits = getCourse(alternatives[0])?.units ?? 4
         appendSlot({
           type: 'choice',
           slotId: `minor-${minor.id}-${requirement.id}-${index + 1}`,
           alternatives,
-          credits: getCourse(alternatives[0])?.units ?? 4,
+          credits,
           category: 'elective',
           source: 'minor',
           guidance: requirement.optionLabel ?? 'Choose a course for this minor requirement.',
+        }, alternatives)
+      }
+    } else if (requirement.completion.kind === 'minimumCredits') {
+      const alternatives = requirementCourseIds(requirement).filter(courseId => !plannedCourseIds.has(courseId))
+      // `minimumCredits` is itself the catalog obligation. Do not subtract
+      // earlier prerequisite/choice requirements from it: Biology, for
+      // example, explicitly requires 12 credits from this list in addition
+      // to its lower- and upper-division gateway choices.
+      const creditsToPlan = requirement.completion.credits
+      const slotCount = Math.ceil(creditsToPlan / 4)
+      for (let index = 0; index < slotCount; index += 1) {
+        appendSlot({
+          type: 'requirement',
+          slotId: `minor-${minor.id}-${requirement.id}-${index + 1}`,
+          label: 'Minor course option',
+          credits: Math.min(4, creditsToPlan - index * 4),
+          category: 'elective',
+          courseIds: alternatives,
+          source: 'minor',
+          guidance: requirement.optionLabel ?? 'Choose coursework that satisfies this minor requirement.',
         }, alternatives)
       }
     }

@@ -26,7 +26,7 @@ function targetCourseKey(catalogVersion: string, programId: string, degreeType: 
 }
 
 function targetScopeForSlot(slot: PlanSlot, concentrationId: string | null, minorId: string | null): string | null {
-  const baseScope = slot.type === 'choice' || (slot.type === 'requirement' && slot.slotId.startsWith('derived-'))
+  const baseScope = slot.type === 'choice' || (slot.type === 'requirement' && (slot.slotId.startsWith('derived-') || slot.source === 'minor'))
     ? 'general'
     : concentrationId
   if (!baseScope) return null

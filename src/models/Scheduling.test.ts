@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { catalogVersions, courseCorequisiteIds, curriculumPlan, planForDegreeType, progressKey, transferAssumedCourseIds, type CurriculumPlan } from './Curriculum'
+import { appendMinorToPlan, catalogVersions, courseCorequisiteIds, curriculumPlan, getMinor, planForDegreeType, progressKey, transferAssumedCourseIds, type CurriculumPlan, type PlanSlot } from './Curriculum'
 import { buildCompactedSchedule, buildRegistrationPlan, buildSuggestedSchedule, sortSlotsForPresentation } from './Scheduling'
 
 describe('suggested scheduling', () => {
@@ -228,6 +228,26 @@ describe('suggested scheduling', () => {
       .filter(options => options.label === 'Computer Science minor course option')
 
     expect(minorOptions).toHaveLength(0)
+  })
+
+  it('keeps minimum-credit minor requirements separate from concentration electives', () => {
+    const plan = appendMinorToPlan(curriculumPlan, getMinor('biology', '2026'))
+    const schedule = buildSuggestedSchedule(plan, new Set(), {
+      programId: 'bs-computer-science',
+      concentrationId: 'general',
+      minorId: 'biology',
+    })
+    const minorRequirement = plan.years.flatMap(year => year.terms.flatMap(term => term.slots))
+      .find((slot): slot is Extract<PlanSlot, { type: 'requirement' }> => slot.type === 'requirement' && slot.source === 'minor')
+
+    expect(minorRequirement).toBeDefined()
+    expect(minorRequirement?.credits).toBe(4)
+    expect(schedule.courseOptions.get(progressKey(minorRequirement!))).toMatchObject({
+      label: 'Minor course option',
+      minimumCredits: 4,
+      courseIds: expect.arrayContaining(['BIO-311', 'BIO-320', 'CHEM-310']),
+    })
+    expect(schedule.courseOptions.get(progressKey(minorRequirement!))?.courseIds).not.toContain('CST-363')
   })
 
   it('places a concentration prerequisite in an earlier term than the course it unlocks', () => {
