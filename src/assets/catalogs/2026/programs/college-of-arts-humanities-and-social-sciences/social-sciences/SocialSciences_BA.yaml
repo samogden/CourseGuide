@@ -1,0 +1,263 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: ba-social-sciences
+title: B.A Social Sciences
+credential: B.A
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: social-sciences
+  title: Social Sciences
+coursePrefixes:
+  - BUS
+  - CST
+  - ENVS
+  - GS
+  - HCOM
+  - JAPN
+  - SOC
+  - SPAN
+  - SSCI
+  - STAT
+  - VPA
+requirements:
+  - id: complete-all-of-the-following-social-theory-and-application-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following Social Theory and Application courses:"
+    courseIds:
+      - STAT-100
+      - SSCI-300
+      - SSCI-328
+      - SSCI-400
+      - SSCI-402
+  - id: complete-one-of-the-following-research-methods-courses-2
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Research Methods courses:"
+    courseIds:
+      - SSCI-321
+      - SSCI-362
+      - SSCI-366
+  - id: complete-one-of-the-following-social-scientific-writing-courses-3
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Social Scientific Writing courses:"
+    courseIds:
+      - SSCI-363
+      - SSCI-377
+      - GS-362
+  - id: complete-one-of-the-following-social-science-breadth-courses-4
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Social Science Breadth courses:"
+    courseIds:
+      - SSCI-304
+      - SSCI-320
+      - SSCI-322
+      - SSCI-335
+      - SSCI-345
+      - SSCI-350
+      - SSCI-356
+      - SSCI-364
+      - SSCI-386
+      - SSCI-389
+      - SOC-312
+      - SOC-317
+      - SOC-320
+      - SOC-399
+concentrations:
+  anthropology:
+    title: Anthropology
+    requirements:
+      - id: complete-all-of-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following courses:"
+        courseIds:
+          - SSCI-101
+          - SSCI-335
+          - SSCI-345
+          - SSCI-379
+      - id: complete-one-of-the-following-courses-2
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following courses:"
+        courseIds:
+          - SSCI-326S
+          - SSCI-384S
+          - SSCI-484S
+      - id: complete-one-of-the-following-courses-3
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following courses:"
+        courseIds:
+          - SSCI-316
+          - SSCI-325
+          - SSCI-333
+          - SSCI-346
+          - SSCI-348
+          - SSCI-355
+          - SSCI-383
+          - SSCI-388
+  geographic-information-systems:
+    title: Geographic Information Systems
+    requirements:
+      - id: complete-both-of-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete both  of the following courses:"
+        courseIds:
+          - SSCI-361
+          - SSCI-371
+      - id: complete-two-of-the-following-courses-not-previously-taken-2
+        completion:
+          kind: choose
+          count: 2
+        optionLabel: "Complete two of the following courses, not previously taken:"
+        courseIds:
+          - BUS-437
+          - CST-363
+          - ENVS-332
+          - ENVS-436
+          - GS-351
+          - SSCI-321
+          - SSCI-356
+          - SSCI-362
+          - SSCI-366
+          - SSCI-375
+  political-economy:
+    title: Political Economy
+    requirements:
+      - id: complete-all-of-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following courses:"
+        courseIds:
+          - GS-318
+          - GS-339S
+          - GS-342
+          - GS-351
+      - id: complete-one-of-the-following-courses-2
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following courses:"
+        courseIds:
+          - GS-317
+          - GS-325
+          - GS-350
+          - GS-379
+          - SSCI-381
+  social-history:
+    title: Social History
+    requirements:
+      - id: complete-both-of-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete both of the following courses:"
+        courseIds:
+          - SSCI-315
+          - SSCI-363
+      - id: complete-one-of-the-following-ethnic-histories-courses-2
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Ethnic Histories courses:"
+        courseIds:
+          - SSCI-322
+          - SSCI-350
+          - SSCI-364
+          - JAPN-317
+          - HCOM-346
+          - HCOM-356
+          - HCOM-365
+          - HCOM-369
+          - HCOM-445
+          - HCOM-451
+      - id: complete-one-of-the-following-global-and-transnational-history-courses-3
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Global and Transnational History courses:"
+        courseIds:
+          - SSCI-305
+          - SSCI-335
+          - SSCI-341
+          - SSCI-343
+          - SSCI-354
+          - SSCI-357
+          - SSCI-381
+          - HCOM-445
+          - HCOM-451
+      - id: complete-one-of-the-following-history-depth-courses-4
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following History Depth courses:"
+        courseIds:
+          - SSCI-304
+          - SSCI-305
+          - SSCI-325
+          - SSCI-348
+          - SSCI-350
+          - SSCI-353
+          - SSCI-355
+          - SSCI-378
+          - SSCI-383
+          - SSCI-386
+          - SSCI-389
+          - HCOM-346
+          - HCOM-350S
+          - HCOM-352
+          - HCOM-354
+          - HCOM-356
+          - HCOM-359
+          - HCOM-362
+          - HCOM-363
+          - HCOM-365
+          - HCOM-366
+          - HCOM-367
+          - HCOM-368
+          - HCOM-454
+          - JAPN-305
+          - JAPN-307
+          - SPAN-307
+          - SPAN-308
+          - SPAN-309
+          - GS-316
+  native-american-studies:
+    title: Native American Studies
+    requirements:
+      - id: complete-all-of-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following courses:"
+        courseIds:
+          - SSCI-249
+          - SSCI-304
+          - SSCI-350
+          - SSCI-363
+      - id: complete-two-of-the-following-courses-2
+        completion:
+          kind: choose
+          count: 2
+        optionLabel: "Complete two of the following courses:"
+        courseIds:
+          - SSCI-315
+          - SSCI-323
+          - SSCI-325
+          - SSCI-348
+          - SSCI-353
+          - SSCI-386
+          - SSCI-389
+          - VPA-320S
+  minor:
+    title: Minor
+    requirements: []

@@ -1,0 +1,62 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: bs-accounting
+title: B.S Accounting
+credential: B.S
+college:
+  id: college-of-business
+  title: College of Business
+department:
+  id: business
+  title: Business
+coursePrefixes:
+  - ACCT
+  - BUS
+  - MATH
+  - STAT
+requirements:
+  - id: complete-one-of-the-following-courses-1
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - MATH-115
+      - MATH-130
+      - MATH-150
+  - id: complete-one-of-the-following-courses-2
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - BUS-204
+      - STAT-100
+  - id: complete-all-of-the-following-courses-3
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - BUS-200
+      - BUS-201
+      - BUS-202
+      - BUS-203
+      - BUS-205
+      - BUS-206
+      - BUS-300S
+      - BUS-304
+      - BUS-305
+      - BUS-306
+      - ACCT-311
+      - ACCT-312
+      - ACCT-313
+      - ACCT-314
+      - ACCT-320
+      - ACCT-330
+      - ACCT-350
+      - ACCT-410
+      - ACCT-420
+      - ACCT-450
+      - ACCT-460
+      - ACCT-499
+concentrations: {}

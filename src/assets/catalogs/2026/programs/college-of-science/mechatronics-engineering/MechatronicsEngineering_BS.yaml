@@ -1,0 +1,67 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: bs-mechatronics-engineering
+title: B.S Mechatronics Engineering
+credential: B.S
+college:
+  id: college-of-science
+  title: College of Science
+department:
+  id: mechatronics-engineering
+  title: Mechatronics Engineering
+coursePrefixes:
+  - CHEM
+  - CST
+  - ENGR
+  - MATH
+  - PHYS
+requirements:
+  - id: required-courses-1
+    completion:
+      kind: all
+    courseIds:
+      - MATH-150
+      - MATH-151
+      - PHYS-205
+      - PHYS-210
+      - CHEM-110
+      - CHEM-110L
+      - CST-231
+      - ENGR-130
+      - ENGR-240
+      - ENGR-260
+      - ENGR-260L
+      - ENGR-310
+      - ENGR-340
+      - ENGR-370
+      - ENGR-480
+  - id: complete-all-of-the-following-courses-2
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - MATH-250
+      - MATH-265
+      - CST-238
+      - ENGR-110
+      - ENGR-115
+      - ENGR-140
+      - ENGR-140L
+      - ENGR-150
+      - ENGR-301
+      - ENGR-320
+      - ENGR-330
+      - ENGR-375
+      - ENGR-380
+      - ENGR-394
+      - ENGR-481
+  - id: complete-at-least-three-units-from-the-following-engineering-electives-3
+    completion:
+      kind: all
+    optionLabel: "Complete at least  three units from the following Engineering electives:"
+    courseIds:
+      - ENGR-335
+      - ENGR-350
+      - ENGR-360
+      - ENGR-397
+concentrations: {}

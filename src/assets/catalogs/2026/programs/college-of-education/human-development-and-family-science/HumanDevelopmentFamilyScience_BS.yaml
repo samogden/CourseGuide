@@ -1,0 +1,83 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: bs-human-development-and-family-science
+title: B.S Human Development & Family Science
+credential: B.S
+college:
+  id: college-of-education
+  title: College of Education
+department:
+  id: human-development-and-family-science
+  title: Human Development and Family Science
+coursePrefixes:
+  - HDFS
+  - KIN
+  - PANM
+  - PSY
+requirements:
+  - id: complete-one-of-the-following-courses-1
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - HDFS-200
+      - HDFS-350
+      - HDFS-360
+      - PSY-100
+  - id: complete-all-of-the-following-core-courses-2
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following core courses:"
+    courseIds:
+      - HDFS-301
+      - HDFS-302
+      - HDFS-303
+      - HDFS-380S
+      - HDFS-382
+      - PANM-422
+      - HDFS-400A
+      - HDFS-400B
+  - id: complete-nine-9-units-total-from-the-following-phase-specific-coursework-3
+    completion:
+      kind: all
+    optionLabel: "Complete nine (9) units total from the following  Phase-specific coursework:"
+    courseIds:
+      - HDFS-356
+      - HDFS-358
+      - HDFS-365
+      - HDFS-371
+  - id: complete-a-minimum-of-six-6-units-from-the-following-development-in-context-coursework-4
+    completion:
+      kind: choose
+      count: 6
+    optionLabel: "Complete a minimum of six (6) units from the following Development in Context coursework:"
+    courseIds:
+      - HDFS-341
+      - HDFS-342
+      - HDFS-344
+      - HDFS-345
+      - HDFS-353
+      - HDFS-355
+      - HDFS-377
+  - id: complete-a-minimum-of-six-6-units-from-the-following-family-science-coursework-5
+    completion:
+      kind: choose
+      count: 6
+    optionLabel: "Complete a minimum of six (6) units from the following Family Science coursework:"
+    courseIds:
+      - HDFS-307
+      - HDFS-310
+      - HDFS-315
+      - HDFS-321
+      - HDFS-322
+      - HDFS-340
+  - id: complete-one-of-the-following-interdisciplinary-health-science-courses-6
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Interdisciplinary Health Science courses:"
+    courseIds:
+      - KIN-360
+      - KIN-363
+concentrations: {}

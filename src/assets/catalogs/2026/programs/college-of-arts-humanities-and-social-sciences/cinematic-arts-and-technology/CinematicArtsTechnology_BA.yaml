@@ -1,0 +1,69 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: ba-cinematic-arts-and-technology
+title: B.A Cinematic Arts & Technology
+credential: B.A
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: cinematic-arts-and-technology
+  title: Cinematic Arts and Technology
+coursePrefixes:
+  - CART
+requirements:
+  - id: complete-all-of-the-following-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - CART-200
+      - CART-210
+      - CART-228
+      - CART-240
+      - CART-301
+      - CART-303
+      - CART-305
+      - CART-329
+      - CART-330
+      - CART-361
+      - CART-399S
+      - CART-490
+      - CART-491
+  - id: complete-one-of-the-following-film-studies-courses-2
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following film studies courses:"
+    courseIds:
+      - CART-211
+      - CART-212
+      - CART-220
+      - CART-230
+      - CART-231
+      - CART-275
+  - id: complete-4-units-from-the-following-lower-division-research-and-development-courses-3
+    completion:
+      kind: minimumCredits
+      credits: 4
+    optionLabel: "Complete 4 units from the following lower division Research and Development courses:"
+    courseIds:
+      - CART-205
+      - CART-208
+      - CART-215
+      - CART-216
+      - CART-219
+      - CART-265
+  - id: complete-one-of-the-following-media-practice-and-innovation-courses-4
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Media Practice and Innovation courses:"
+    courseIds:
+      - CART-318
+      - CART-321
+      - CART-341
+      - CART-375
+      - CART-376
+      - CART-424
+concentrations: {}

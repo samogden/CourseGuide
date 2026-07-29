@@ -1,0 +1,120 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: ba-ethnic-and-gender-studies
+title: B.A Ethnic & Gender Studies
+credential: B.A
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: ethnic-and-gender-studies
+  title: Ethnic and Gender Studies
+coursePrefixes:
+  - EGS
+  - GS
+  - HCOM
+  - JAPN
+  - SL
+  - SPAN
+  - SSCI
+requirements:
+  - id: complete-all-of-the-following-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - HCOM-242
+      - HCOM-243
+      - EGS-300
+      - GS-362
+      - HCOM-391
+      - EGS-475
+  - id: complete-one-of-the-following-intersection-of-race-and-gender-courses-2
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Intersection of Race and Gender courses:"
+    courseIds:
+      - GS-350
+      - HCOM-342
+      - HCOM-344
+      - HCOM-443
+  - id: complete-one-of-the-following-service-learning-courses-3
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Service Learning courses:"
+    courseIds:
+      - GS-339S
+      - HCOM-340S
+      - HCOM-350S
+      - HCOM-432S
+      - SPAN-301S
+      - SL-300S
+      - SL-394S
+      - SL-490
+      - SL-492S
+  - id: complete-one-of-the-following-cultural-expression-representation-courses-4
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Cultural Expression/Representation courses:"
+    courseIds:
+      - GS-336
+      - HCOM-247
+      - HCOM-306
+      - HCOM-322
+      - HCOM-324
+      - HCOM-328
+      - HCOM-329
+      - HCOM-333
+      - HCOM-335
+      - HCOM-336
+      - HCOM-337
+      - HCOM-341
+      - HCOM-348
+      - HCOM-424
+      - JAPN-317
+      - SPAN-365
+  - id: complete-one-of-the-following-social-movements-and-communities-courses-5
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Social Movements and Communities courses:"
+    courseIds:
+      - GS-236
+      - GS-317
+      - HCOM-315
+      - HCOM-343
+      - HCOM-345
+      - HCOM-440
+      - HCOM-455
+  - id: complete-one-of-the-following-historical-formations-courses-6
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Historical Formations courses:"
+    courseIds:
+      - GS-325
+      - HCOM-246
+      - HCOM-346
+      - HCOM-356
+      - HCOM-359
+      - HCOM-365
+      - HCOM-367
+      - HCOM-369
+      - HCOM-451
+      - JAPN-307
+      - SSCI-350
+      - SSCI-353
+  - id: complete-one-of-the-following-theories-of-race-and-gender-courses-not-previously-taken-7
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Theories of Race and Gender courses, not previously taken:"
+    courseIds:
+      - HCOM-344
+      - HCOM-443
+      - HCOM-445
+      - HCOM-451
+concentrations: {}

@@ -1,0 +1,88 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: ba-spanish-language-and-hispanic-cultures
+title: B.A Spanish Language & Hispanic Cultures
+credential: B.A
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: world-languages-and-cultures
+  title: World Languages and Cultures
+coursePrefixes:
+  - HCOM
+  - LING
+  - SPAN
+  - SSCI
+  - WLC
+requirements:
+  - id: complete-all-of-the-following-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - WLC-300
+      - SPAN-300
+      - SPAN-301
+      - SPAN-301S
+      - SPAN-304
+      - SPAN-362
+      - SPAN-420
+      - WLC-400
+  - id: complete-three-of-the-following-language-and-linguistics-courses-2
+    completion:
+      kind: choose
+      count: 3
+    optionLabel: "Complete three  of the following Language and Linguistics courses:"
+    courseIds:
+      - SPAN-303
+      - SPAN-305
+      - SPAN-313
+      - SPAN-314
+      - SPAN-315
+      - SPAN-320
+      - SPAN-323
+      - SPAN-345
+      - LING-392
+  - id: complete-one-of-the-following-literature-and-culture-courses-3
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Literature and Culture courses:"
+    courseIds:
+      - SPAN-306
+      - SPAN-316
+      - SPAN-321
+      - SPAN-322
+  - id: complete-two-additional-literature-and-culture-courses-not-previously-taken-from-the-list-above-or-from-the-following-list-4
+    completion:
+      kind: choose
+      count: 2
+    optionLabel: "Complete two additional Literature and Culture courses not previously taken from the list above, or from the following list:"
+    courseIds:
+      - SPAN-306
+      - SPAN-307
+      - SPAN-308
+      - SPAN-309
+      - SPAN-310
+      - SPAN-316
+      - SPAN-317
+      - SPAN-321
+      - SPAN-322
+      - SPAN-325
+      - SPAN-330
+      - SPAN-335
+      - SPAN-336
+      - SPAN-337
+      - SPAN-365
+      - SPAN-370
+      - SPAN-425
+      - SPAN-426
+      - SPAN-427
+      - SPAN-428
+      - HCOM-328
+      - HCOM-344
+      - HCOM-381
+      - SSCI-325
+      - SSCI-348
+concentrations: {}

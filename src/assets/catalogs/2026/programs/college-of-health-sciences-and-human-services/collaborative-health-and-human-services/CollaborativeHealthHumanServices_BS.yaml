@@ -1,0 +1,138 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: bs-collaborative-health-and-human-services
+title: B.S Collaborative Health & Human Services
+credential: B.S
+college:
+  id: college-of-health-sciences-and-human-services
+  title: College of Health Sciences and Human Services
+department:
+  id: collaborative-health-and-human-services
+  title: Collaborative Health and Human Services
+coursePrefixes:
+  - CHHS
+  - PANM
+  - PH
+  - SW
+requirements:
+  - id: complete-all-of-the-following-core-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete  all  of the following core courses:"
+    courseIds:
+      - SW-205
+      - PANM-202
+      - PH-207
+      - CHHS-300
+      - CHHS-302
+      - CHHS-330
+      - CHHS-350
+      - CHHS-384
+      - CHHS-396S
+      - CHHS-450
+  - id: complete-the-following-courses-in-the-same-semester-2
+    completion:
+      kind: all
+    optionLabel: "Complete the following courses  in the same semester :"
+    courseIds:
+      - CHHS-496A
+      - CHHS-411
+  - id: complete-the-following-courses-in-the-same-semester-3
+    completion:
+      kind: all
+    optionLabel: "Complete the following courses in the same semester :"
+    courseIds:
+      - CHHS-496B
+      - CHHS-401
+concentrations:
+  interdisciplinary:
+    title: Interdisciplinary
+    requirements:
+      - id: required-courses-1
+        completion:
+          kind: all
+        courseIds:
+          - PH-407
+          - PH-417
+          - CHHS-445
+          - PANM-412
+          - SW-405
+          - SW-425
+  public-administration-and-nonprofit-management:
+    title: Public Administration & Nonprofit Management
+    requirements:
+      - id: complete-both-of-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete both  of the following courses:"
+        courseIds:
+          - CHHS-445
+          - PANM-422
+      - id: complete-two-of-the-following-courses-2
+        completion:
+          kind: all
+        optionLabel: "Complete two  of the following courses:"
+        courseIds:
+          - PANM-412
+          - PANM-432
+          - PANM-442
+          - PANM-452
+          - CHHS-462
+          - PH-407
+          - PH-408
+          - PH-457
+          - PH-477
+          - SW-425
+  public-health:
+    title: Public Health
+    requirements:
+      - id: complete-all-of-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following courses:"
+        courseIds:
+          - PH-408
+          - PH-417
+      - id: complete-two-of-the-following-courses-2
+        completion:
+          kind: all
+        optionLabel: "Complete two  of the following courses:"
+        courseIds:
+          - PH-407
+          - PH-427
+          - PH-437
+          - PH-447
+          - PH-457
+          - PH-467
+          - PH-477
+          - PH-487
+          - CHHS-445
+          - CHHS-462
+          - PANM-422
+          - SW-435
+  social-work:
+    title: Social Work
+    requirements:
+      - id: complete-all-of-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following courses:"
+        courseIds:
+          - SW-405
+          - SW-425
+      - id: complete-two-of-the-following-courses-2
+        completion:
+          kind: choose
+          count: 2
+        optionLabel: "Complete two of the following courses:"
+        courseIds:
+          - SW-406
+          - SW-415
+          - SW-435
+          - SW-455
+          - CHHS-445
+          - CHHS-462
+          - PANM-422
+          - PH-407
+          - PH-408
+          - PH-477

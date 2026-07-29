@@ -1,0 +1,86 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: bs-agribusiness-supply-chain-management
+title: B.S Agribusiness Supply Chain Management
+credential: B.S
+college:
+  id: college-of-science
+  title: College of Science
+department:
+  id: agricultural-plant-and-soil-sciences
+  title: Agricultural Plant and Soil Sciences
+coursePrefixes:
+  - AGBS
+  - AGPS
+  - BUS
+  - CHEM
+  - STAT
+requirements:
+  - id: complete-one-of-the-following-course-course-combinations-1
+    completion:
+      kind: all
+    optionLabel: "Complete  one  of the following course/course combinations:"
+    courseIds:
+      - AGPS-128
+      - CHEM-109
+      - CHEM-110
+  - id: complete-one-of-the-following-courses-2
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - BUS-204
+      - STAT-100
+  - id: complete-all-of-the-following-lower-division-courses-3
+    completion:
+      kind: all
+    optionLabel: "Complete  all  of the following lower-division courses:"
+    courseIds:
+      - BUS-201
+      - BUS-202
+  - id: complete-all-of-the-following-upper-division-courses-4
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following upper division courses:"
+    courseIds:
+      - AGBS-305
+      - AGBS-306
+      - AGBS-309
+      - BUS-300S
+      - BUS-301
+      - BUS-304
+      - BUS-307
+      - BUS-308
+concentrations:
+  risk-and-marketing-management:
+    title: Risk and Marketing Management
+    requirements:
+      - id: complete-all-of-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following courses:"
+        courseIds:
+          - AGBS-370
+          - AGBS-375
+          - AGBS-434
+          - AGBS-454
+  supply-chain-management-and-operations:
+    title: Supply Chain Management and Operations
+    requirements:
+      - id: complete-the-following-course-1
+        completion:
+          kind: all
+        optionLabel: "Complete the following course:"
+        courseIds:
+          - AGBS-435
+      - id: complete-three-of-the-following-courses-2
+        completion:
+          kind: choose
+          count: 3
+        optionLabel: "Complete three of the following courses:"
+        courseIds:
+          - AGBS-437
+          - AGBS-440
+          - AGBS-441
+          - AGBS-442

@@ -1,0 +1,193 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: bs-business-administration
+title: B.S Business Administration
+credential: B.S
+college:
+  id: college-of-business
+  title: College of Business
+department:
+  id: business
+  title: Business
+coursePrefixes:
+  - BUS
+  - HOSP
+  - MATH
+  - STAT
+requirements:
+  - id: complete-one-of-the-following-courses-1
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - MATH-115
+      - MATH-130
+      - MATH-150
+  - id: complete-one-of-the-following-courses-2
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - BUS-204
+      - STAT-100
+  - id: complete-all-of-the-following-courses-3
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - BUS-200
+      - BUS-201
+      - BUS-202
+      - BUS-203
+      - BUS-205
+      - BUS-206
+      - BUS-301
+      - BUS-303
+      - BUS-304
+      - BUS-305
+      - BUS-306
+      - BUS-307
+      - BUS-308
+      - BUS-399S
+      - BUS-499
+  - id: complete-one-of-the-following-courses-students-are-encouraged-to-consult-pathways-or-speak-to-an-advisor-to-satisfy-course-prerequisites-4
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses: Students are encouraged to consult pathways or speak to an advisor to satisfy course prerequisites"
+    courseIds:
+      - BUS-309
+      - BUS-310
+concentrations:
+  financial-planning:
+    title: Financial Planning
+    requirements:
+      - id: complete-all-of-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following courses:"
+        courseIds:
+          - BUS-351
+          - BUS-352
+          - BUS-354
+          - BUS-356
+  management-and-international-business:
+    title: Management & International Business
+    requirements:
+      - id: complete-three-of-the-following-courses-1
+        completion:
+          kind: choose
+          count: 3
+        optionLabel: "Complete three of the following courses:"
+        courseIds:
+          - BUS-330
+          - BUS-331
+          - BUS-332
+          - BUS-493
+      - id: complete-one-of-the-following-courses-2
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following courses:"
+        courseIds:
+          - BUS-323
+          - BUS-333
+          - BUS-356
+          - BUS-375
+          - BUS-425
+          - BUS-430
+          - BUS-433
+          - BUS-434
+          - BUS-435
+          - BUS-440
+          - BUS-441
+          - BUS-442
+          - BUS-451
+          - BUS-460
+          - BUS-468
+          - BUS-469
+          - BUS-494
+          - BUS-498
+          - HOSP-471
+          - HOSP-472
+          - HOSP-473
+          - HOSP-481
+          - HOSP-482
+          - HOSP-483
+  marketing:
+    title: Marketing
+    requirements:
+      - id: complete-the-following-course-1
+        completion:
+          kind: all
+        optionLabel: "Complete the following course:"
+        courseIds:
+          - BUS-421
+      - id: complete-three-of-the-following-courses-2
+        completion:
+          kind: all
+        optionLabel: "Complete three  of the following courses:"
+        courseIds:
+          - BUS-322
+          - BUS-323
+          - BUS-422
+          - BUS-423
+          - BUS-425
+          - BUS-430
+          - BUS-435
+          - BUS-440
+          - BUS-441
+          - BUS-451
+          - BUS-460
+          - BUS-468
+          - BUS-469
+          - BUS-498
+  business-analytics-and-information-systems:
+    title: Business Analytics & Information Systems
+    requirements:
+      - id: complete-four-of-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete four  of the following courses:"
+        courseIds:
+          - BUS-360
+          - BUS-364
+          - BUS-462
+          - BUS-465
+          - BUS-468
+          - BUS-469
+          - BUS-472
+          - BUS-474
+  entrepreneurship:
+    title: Entrepreneurship
+    requirements:
+      - id: complete-all-of-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following courses:"
+        courseIds:
+          - BUS-310
+          - BUS-410
+      - id: complete-one-or-more-of-the-following-courses-2
+        completion:
+          kind: all
+        optionLabel: "Complete one or more of the following courses:"
+        courseIds:
+          - BUS-430
+          - BUS-451
+      - id: complete-one-ore-more-of-the-following-courses-3
+        completion:
+          kind: all
+        optionLabel: "Complete one  ore more of the following courses:"
+        courseIds:
+          - BUS-322
+          - BUS-333
+          - BUS-353
+          - BUS-421
+          - BUS-422
+          - BUS-433
+          - BUS-460
+          - BUS-494
+          - BUS-498

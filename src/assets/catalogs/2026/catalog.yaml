@@ -1,0 +1,9 @@
+schemaVersion: 1
+catalogYear: "2026"
+title: 2026 Catalog
+colleges:
+  - id: college-of-science
+    title: College of Science
+    departments:
+      - id: computing-and-design
+        title: Computing and Design

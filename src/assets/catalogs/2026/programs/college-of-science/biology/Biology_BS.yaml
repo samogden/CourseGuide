@@ -1,0 +1,306 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: bs-biology
+title: B.S Biology
+credential: B.S
+college:
+  id: college-of-science
+  title: College of Science
+department:
+  id: biology
+  title: Biology
+coursePrefixes:
+  - AGPS
+  - BIO
+  - CHEM
+  - ED
+  - ENSTU
+  - ENVS
+  - GEOL
+  - MATH
+  - MSCI
+  - PHYS
+  - RSCH
+  - SPED
+  - STAT
+requirements:
+  - id: complete-all-of-the-following-courses-with-a-grade-of-c-or-above-in-order-to-fulfill-pre-requisites-for-more-advanced-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses with a grade of C- or above, in order to fulfill pre-requisites for more advanced courses:"
+    courseIds:
+      - MATH-150
+      - CHEM-110
+      - CHEM-110L
+      - CHEM-111
+      - CHEM-111L
+      - BIO-210
+      - BIO-210L
+      - BIO-211
+      - BIO-211L
+      - BIO-301
+  - id: complete-all-of-the-following-courses-2
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - CHEM-211
+      - CHEM-211L
+      - PHYS-220
+      - BIO-311
+concentrations:
+  ecology-evolution-and-organismal-biology:
+    title: Ecology, Evolution, and Organismal Biology
+    requirements:
+      - id: complete-the-following-statistics-course-1
+        completion:
+          kind: all
+        optionLabel: "Complete the following Statistics course:"
+        courseIds:
+          - STAT-250
+      - id: complete-one-of-the-following-development-or-physiology-courses-2
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Development or Physiology courses:"
+        courseIds:
+          - BIO-330
+          - BIO-332
+          - BIO-370
+          - MSCI-331
+      - id: complete-both-of-the-following-evolution-and-ecology-courses-3
+        completion:
+          kind: all
+        optionLabel: "Complete both of the following Evolution and Ecology courses:"
+        courseIds:
+          - BIO-340
+          - BIO-341
+      - id: complete-one-of-the-following-research-methods-courses-4
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Research Methods courses:"
+        courseIds:
+          - BIO-320
+          - BIO-322
+          - BIO-380
+          - CHEM-350
+          - ENVS-350
+          - MSCI-350
+      - id: complete-one-of-the-following-integrative-learning-course-course-combinations-5
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Integrative Learning course/course combinations:"
+        courseIds:
+          - AGPS-470
+          - BIO-492
+          - BIO-420
+          - BIO-430
+          - MSCI-410
+          - BIO-444
+          - BIO-448
+          - ENVS-410
+          - ENVS-446
+          - ENVS-464
+          - ENVS-475
+          - BIO-491
+          - BIO-397
+          - BIO-494
+          - BIO-497
+          - RSCH-394
+      - id: complete-one-of-the-following-service-learning-course-course-combinations-6
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Service Learning course/course combinations:"
+        courseIds:
+          - BIO-379S
+          - ENVS-382S
+          - ENSTU-349S
+          - ENSTU-369S
+          - ENSTU-384S
+          - MSCI-359S
+          - AGPS-315
+          - AGPS-371
+          - AGPS-372
+          - BIO-306
+          - BIO-306L
+          - BIO-320
+          - BIO-322
+          - BIO-330
+          - BIO-332
+          - BIO-341L
+          - BIO-356
+          - BIO-362
+          - BIO-364
+          - BIO-366
+          - BIO-370
+          - BIO-380
+          - BIO-397
+          - BIO-410
+          - BIO-412
+          - BIO-420
+          - BIO-430
+          - BIO-441
+          - BIO-444
+          - BIO-448
+          - BIO-449
+          - BIO-497
+          - CHEM-212
+          - CHEM-212L
+          - CHEM-320
+          - CHEM-320L
+          - CHEM-350
+          - CHEM-430
+          - CHEM-432
+          - ENVS-303
+          - ENVS-303L
+          - ENVS-332
+          - ENVS-350
+          - ENVS-360
+          - ENVS-436
+          - ENVS-440
+          - ENVS-446
+          - ENVS-475
+          - MSCI-331
+          - MSCI-337
+          - MSCI-340
+          - MSCI-345
+          - MSCI-370
+          - MSCI-437
+          - MSCI-455
+          - MSCI-474
+          - MSCI-475
+          - MSCI-477
+          - BIO-392
+          - BIO-394
+          - BIO-413
+          - BIO-414
+          - BIO-461
+          - BIO-494
+          - CHEM-310
+          - CHEM-310L
+          - CHEM-410
+          - PHYS-221
+          - RSCH-301
+          - RSCH-394
+  molecular-biology:
+    title: Molecular Biology
+    requirements:
+      - id: complete-both-of-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete both of the following courses:"
+        courseIds:
+          - STAT-250
+          - CHEM-310
+      - id: complete-one-of-the-following-physiology-or-evolution-courses-2
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Physiology or Evolution courses:"
+        courseIds:
+          - BIO-330
+          - BIO-332
+          - BIO-341
+          - BIO-370
+      - id: complete-one-of-the-following-research-methods-courses-3
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Research Methods courses:"
+        courseIds:
+          - BIO-320
+          - BIO-322
+      - id: complete-one-of-the-following-courses-not-previously-taken-4
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one  of the following courses, not previously taken:"
+        courseIds:
+          - BIO-320
+          - BIO-322
+          - BIO-330
+          - BIO-332
+          - BIO-370
+          - BIO-380
+          - BIO-410
+          - BIO-412
+          - BIO-413
+          - BIO-414
+          - BIO-421
+          - BIO-430
+          - BIO-444
+          - BIO-461
+          - CHEM-350
+          - CHEM-410
+          - MSCI-331
+      - id: complete-one-of-the-following-integrative-learning-course-course-combinations-5
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Integrative Learning course/course combinations:"
+        courseIds:
+          - BIO-410
+          - BIO-492
+          - BIO-430
+          - MSCI-410
+          - BIO-444
+          - BIO-461
+          - BIO-491
+          - BIO-394
+          - BIO-397
+          - BIO-494
+          - BIO-497
+          - RSCH-394
+          - BIO-412
+          - BIO-413
+          - BIO-414
+          - CHEM-410
+      - id: complete-one-of-the-following-service-learning-courses-6
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Service Learning courses:"
+        courseIds:
+          - BIO-378S
+          - BIO-379S
+  credential:
+    title: Credential
+    requirements:
+      - id: complete-one-of-the-following-statistics-courses-1
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Statistics courses:"
+        courseIds:
+          - STAT-100
+          - STAT-250
+      - id: complete-all-of-the-following-teacher-preparation-courses-2
+        completion:
+          kind: all
+        optionLabel: "Complete  all  of the following Teacher Preparation courses:"
+        courseIds:
+          - GEOL-210
+          - PHYS-221
+          - BIO-320
+          - BIO-330
+          - BIO-340
+          - BIO-341
+      - id: complete-all-of-the-following-teacher-credential-courses-3
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following Teacher Credential courses:"
+        courseIds:
+          - SPED-560
+          - ED-605A
+          - ED-607
+          - ED-624
+          - ED-624A
+          - ED-625
+          - ED-625A
+          - ED-627
+          - ED-628
+          - ED-510
+          - ED-643

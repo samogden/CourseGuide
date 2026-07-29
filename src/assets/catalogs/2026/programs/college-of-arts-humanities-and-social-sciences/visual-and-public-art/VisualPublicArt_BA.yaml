@@ -1,0 +1,44 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: ba-visual-and-public-art
+title: B.A Visual & Public Art
+credential: B.A
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: visual-and-public-art
+  title: Visual and Public Art
+coursePrefixes:
+  - VPA
+requirements:
+  - id: complete-all-of-the-following-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - VPA-300
+      - VPA-302
+      - VPA-309
+      - VPA-310
+      - VPA-313
+      - VPA-398
+      - VPA-405A
+      - VPA-405B
+  - id: complete-one-of-the-following-courses-2
+    completion:
+      kind: all
+    optionLabel: "Complete  one  of the following courses:"
+    courseIds:
+      - VPA-306S
+      - VPA-320S
+  - id: complete-one-of-the-following-courses-3
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - VPA-305
+      - VPA-307
+      - VPA-308
+concentrations: {}

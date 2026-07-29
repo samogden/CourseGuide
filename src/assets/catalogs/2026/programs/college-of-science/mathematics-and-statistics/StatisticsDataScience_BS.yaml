@@ -1,0 +1,98 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: bs-statistics-and-data-science
+title: B.S Statistics & Data Science
+credential: B.S
+college:
+  id: college-of-science
+  title: College of Science
+department:
+  id: mathematics-and-statistics
+  title: Mathematics and Statistics
+coursePrefixes:
+  - CST
+  - MATH
+  - STAT
+requirements:
+  - id: complete-all-of-the-following-mathematical-foundations-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following Mathematical Foundations courses:"
+    courseIds:
+      - MATH-150
+      - MATH-151
+      - MATH-170
+      - MATH-250
+  - id: complete-one-of-the-following-mathematical-foundations-courses-2
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Mathematical Foundations courses:"
+    courseIds:
+      - MATH-230
+      - MATH-265
+  - id: complete-one-of-the-following-computational-foundations-courses-3
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Computational Foundations courses:"
+    courseIds:
+      - CST-231
+      - CST-319
+  - id: complete-all-of-the-following-statistical-theory-courses-4
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following Statistical Theory courses:"
+    courseIds:
+      - MATH-320
+      - STAT-420
+      - STAT-421
+  - id: complete-all-of-the-following-data-science-methods-courses-5
+    completion:
+      kind: all
+    optionLabel: "Complete all  of the following Data Science Methods courses:"
+    courseIds:
+      - STAT-210
+      - STAT-310
+      - STAT-410
+  - id: complete-all-of-the-following-ethics-and-communications-courses-6
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following Ethics and Communications courses:"
+    courseIds:
+      - MATH-300
+      - MATH-362S
+      - STAT-400
+  - id: complete-two-of-the-following-statistics-methods-courses-7
+    completion:
+      kind: choose
+      count: 2
+    optionLabel: "Complete two of the following Statistics Methods courses:"
+    courseIds:
+      - STAT-320
+      - STAT-325
+      - STAT-330
+      - STAT-335
+      - STAT-440
+  - id: complete-eight-8-units-of-specialization-courses-below-alternatively-students-may-choose-to-complete-four-4-units-from-the-following-specialization-courses-and-either-the-mathematics-minor-or-computer-science-minor-8
+    completion:
+      kind: choose
+      count: 4
+    optionLabel: Complete eight (8) units of Specialization courses below.  Alternatively, students may choose to complete four (4) units from the following Specialization courses AND either the  Mathematics, Minor    or  Computer Science, Minor
+    courseIds:
+      - MATH-322
+      - MATH-330
+      - MATH-374
+      - MATH-375
+      - MATH-420
+      - MATH-421
+      - STAT-211
+      - STAT-294
+      - STAT-320
+      - STAT-325
+      - STAT-330
+      - STAT-335
+      - STAT-394
+      - STAT-440
+      - STAT-494
+concentrations: {}

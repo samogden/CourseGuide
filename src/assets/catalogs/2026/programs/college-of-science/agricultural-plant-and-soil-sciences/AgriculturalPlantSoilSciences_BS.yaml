@@ -1,0 +1,122 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: bs-agricultural-plant-and-soil-sciences
+title: B.S Agricultural Plant & Soil Sciences
+credential: B.S
+college:
+  id: college-of-science
+  title: College of Science
+department:
+  id: agricultural-plant-and-soil-sciences
+  title: Agricultural Plant and Soil Sciences
+coursePrefixes:
+  - AGPS
+  - BIO
+  - BUS
+  - CHEM
+  - ENVS
+  - STAT
+requirements:
+  - id: complete-all-of-the-following-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - AGPS-128
+      - BIO-106
+      - STAT-100
+      - BUS-202
+      - AGPS-301
+      - AGPS-302
+      - AGPS-315
+      - AGPS-350
+      - AGPS-371
+      - AGPS-372
+      - AGPS-390
+      - AGPS-415
+      - AGPS-416
+      - AGPS-470
+      - BIO-306
+      - BIO-306L
+      - BIO-322
+      - BIO-332
+      - CHEM-305
+  - id: complete-one-of-the-following-course-course-combinations-2
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following course/course combinations:"
+    courseIds:
+      - CHEM-109
+      - CHEM-110
+      - CHEM-110L
+  - id: complete-one-of-the-following-specialized-skills-courses-3
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Specialized Skills courses:"
+    courseIds:
+      - AGPS-108
+      - AGPS-181
+      - AGPS-182
+      - AGPS-205
+      - AGPS-209
+      - AGPS-213
+      - AGPS-216
+      - CHEM-211
+      - CHEM-211L
+  - id: complete-at-least-3-units-from-the-following-specialized-knowledge-courses-not-previously-taken-4
+    completion:
+      kind: minimumCredits
+      credits: 3
+    optionLabel: "Complete at least 3 units from the following Specialized Knowledge courses, not previously taken:"
+    courseIds:
+      - AGPS-181
+      - AGPS-182
+      - AGPS-191
+      - AGPS-192
+      - AGPS-205
+      - AGPS-209
+      - AGPS-213
+      - AGPS-216
+      - AGPS-297
+      - AGPS-303
+      - AGPS-304
+      - AGPS-403
+      - AGPS-404
+      - BIO-210
+      - BIO-210L
+      - BIO-211
+      - BIO-211L
+      - CHEM-110
+      - CHEM-110L
+      - CHEM-111
+      - CHEM-111L
+      - ENVS-240
+  - id: complete-one-of-the-following-courses-5
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - AGPS-389S
+      - BIO-379S
+  - id: complete-one-of-the-following-courses-6
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - AGPS-394
+      - AGPS-397
+      - AGPS-497
+      - AGPS-494
+  - id: complete-one-of-the-following-courses-7
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - AGPS-490
+      - AGPS-491
+concentrations: {}

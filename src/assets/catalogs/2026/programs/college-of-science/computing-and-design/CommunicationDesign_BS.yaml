@@ -1,0 +1,68 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: bs-communication-design
+title: B.S Communication Design
+credential: B.S
+college:
+  id: college-of-science
+  title: College of Science
+department:
+  id: computing-and-design
+  title: Computing and Design
+coursePrefixes:
+  - CST
+requirements:
+  - id: complete-all-of-the-following-courses-with-a-grade-of-c-or-above-in-order-to-fulfill-pre-requisites-to-more-advanced-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses with a grade of C- or above in order to fulfill pre-requisites to more advanced courses:"
+    courseIds:
+      - CST-201
+      - CST-227
+      - CST-251
+      - CST-300
+      - CST-304
+      - CST-346
+      - CST-348
+  - id: complete-all-of-the-following-courses-2
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - CST-202
+      - CST-202L
+      - CST-230
+      - CST-302
+      - CST-316
+      - CST-345
+      - CST-350
+      - CST-446
+      - CST-462S
+      - CST-498
+concentrations:
+  visual-design:
+    title: Visual Design
+    requirements:
+      - id: complete-all-of-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following courses:"
+        courseIds:
+          - CST-327
+          - CST-351
+          - CST-377
+          - CST-406
+  game-design-and-interactive-media:
+    title: Game Design & Interactive Media
+    requirements:
+      - id: complete-all-of-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following courses:"
+        courseIds:
+          - CST-321
+          - CST-322
+          - CST-323
+          - CST-421
+          - CST-422
+          - CST-423

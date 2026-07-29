@@ -1,0 +1,73 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: ba-music
+title: B.A Music
+credential: B.A
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: music-and-performing-arts
+  title: Music and Performing Arts
+coursePrefixes:
+  - MPA
+requirements:
+  - id: complete-all-of-the-following-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - MPA-100
+      - MPA-101
+      - MPA-102
+      - MPA-104
+      - MPA-105
+      - MPA-106
+      - MPA-108
+      - MPA-110
+      - MPA-114
+      - MPA-210
+      - MPA-300
+      - MPA-304
+      - MPA-305
+      - MPA-317S
+      - MPA-340
+      - MPA-384
+      - MPA-475A
+      - MPA-475B
+concentrations:
+  music-technology:
+    title: Music Technology
+    requirements:
+      - id: complete-two-units-from-the-following-composition-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete two units from the following Composition courses:"
+        courseIds:
+          - MPA-368
+          - MPA-370
+          - MPA-371
+          - MPA-372
+      - id: complete-all-of-the-following-courses-2
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following courses:"
+        courseIds:
+          - MPA-307
+          - MPA-308
+          - MPA-369
+          - MPA-408
+          - MPA-418
+          - MPA-419
+  no:
+    title: No
+    requirements:
+      - id: complete-four-units-from-the-following-composition-coursework-1
+        completion:
+          kind: all
+        optionLabel: "Complete four units from the following Composition coursework:"
+        courseIds:
+          - MPA-368
+          - MPA-370
+          - MPA-371
+          - MPA-372

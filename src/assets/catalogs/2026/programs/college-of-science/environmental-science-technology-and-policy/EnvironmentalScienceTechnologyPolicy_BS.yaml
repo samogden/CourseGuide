@@ -1,0 +1,379 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: bs-environmental-science-technology-and-policy
+title: B.S Environmental Science, Technology, & Policy
+credential: B.S
+college:
+  id: college-of-science
+  title: College of Science
+department:
+  id: environmental-science-technology-and-policy
+  title: Environmental Science, Technology, and Policy
+coursePrefixes:
+  - AGPS
+  - BIO
+  - BUS
+  - CHEM
+  - ENSTU
+  - ENVS
+  - FYS
+  - GEOL
+  - MATH
+  - MSCI
+  - PHYS
+  - RSCH
+  - STAT
+requirements:
+  - id: complete-all-of-the-following-core-courses-with-a-grade-of-c-or-above-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following core courses with a grade of C- or above:"
+    courseIds:
+      - MATH-150
+      - STAT-250
+      - ENVS-300
+      - ENVS-350
+  - id: complete-one-of-the-following-core-courses-with-a-grade-of-c-or-above-2
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following core courses with a grade of C- or above:"
+    courseIds:
+      - ENVS-201
+      - FYS-124
+  - id: complete-one-of-the-following-core-course-course-combinations-with-a-grade-of-c-or-above-3
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following core course/course combinations with a grade of C- or above:"
+    courseIds:
+      - ENVS-240
+      - BIO-211
+      - BIO-211L
+  - id: complete-all-of-the-following-core-courses-4
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following core courses:"
+    courseIds:
+      - CHEM-110
+      - CHEM-110L
+      - GEOL-260
+      - PHYS-220
+      - ENVS-332
+  - id: complete-one-of-the-following-core-courses-5
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following core courses:"
+    courseIds:
+      - ENSTU-280
+      - BUS-202
+  - id: complete-one-of-the-following-science-breadth-course-course-combinations-6
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following science breadth course/course combinations:"
+    courseIds:
+      - MATH-151
+      - CHEM-111
+      - CHEM-111L
+      - BIO-210
+      - BIO-210L
+      - BIO-306
+      - BIO-306L
+      - PHYS-221
+  - id: complete-one-of-the-following-upper-division-service-learning-courses-or-course-combinations-7
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following upper division service-learning courses or course combinations:"
+    courseIds:
+      - ENSTU-349S
+      - ENSTU-369S
+      - ENSTU-384S
+      - ENVS-382S
+      - BIO-379S
+      - MSCI-359S
+  - id: complete-one-of-the-following-capstone-seminar-courses-8
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete  one  of the following capstone seminar courses:"
+    courseIds:
+      - ENVS-410
+      - ENVS-402
+concentrations:
+  environmental-data-analysis:
+    title: Environmental Data Analysis
+    requirements:
+      - id: complete-the-following-course-1
+        completion:
+          kind: all
+        optionLabel: "Complete the following course:"
+        courseIds:
+          - BIO-380
+      - id: complete-the-following-capstone-project-course-2
+        completion:
+          kind: all
+        optionLabel: "Complete the following capstone project course:"
+        courseIds:
+          - ENVS-436
+      - id: complete-one-of-the-following-data-analysis-related-courses-3
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following data analysis-related courses:"
+        courseIds:
+          - ENVS-440
+          - ENVS-532
+          - BIO-448
+          - STAT-320
+          - STAT-325
+          - STAT-410
+      - id: complete-one-of-the-following-courses-that-also-fulfills-upper-division-ge-area-b-4
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following courses that also fulfills upper-division GE area B:"
+        courseIds:
+          - BIO-340
+          - GEOL-360
+          - STAT-310
+      - id: complete-at-least-3-units-from-the-following-courses-5
+        completion:
+          kind: minimumCredits
+          credits: 3
+        optionLabel: "Complete at least 3 units from the following courses:"
+        courseIds:
+          - ENVS-303
+          - ENVS-303L
+          - ENVS-342
+          - ENVS-436
+          - ENVS-440
+          - ENVS-446
+          - ENVS-464
+          - ENVS-475
+          - ENVS-483
+          - AGPS-315
+          - GEOL-360
+          - GEOL-460
+          - BIO-340
+          - BIO-448
+          - CHEM-320
+          - CHEM-320L
+          - CHEM-350
+          - MSCI-337
+          - MSCI-437
+          - STAT-310
+          - STAT-320
+          - STAT-325
+          - STAT-335
+          - STAT-410
+          - BIO-210
+          - BIO-210L
+          - BIO-211
+          - BIO-211L
+          - BIO-394
+          - BIO-397
+          - BIO-494
+          - BIO-497
+          - CHEM-111
+          - CHEM-111L
+          - ENSTU-309
+          - ENVS-185
+          - ENVS-302
+          - ENVS-394
+          - ENVS-397
+          - ENVS-486
+          - ENVS-496L
+          - ENVS-497
+          - MATH-151
+          - PHYS-221
+          - RSCH-394
+  applied-ecology:
+    title: Applied Ecology
+    requirements:
+      - id: complete-the-following-course-1
+        completion:
+          kind: all
+        optionLabel: "Complete the following course:"
+        courseIds:
+          - BIO-340
+      - id: complete-one-of-the-following-capstone-project-courses-2
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following capstone project courses:"
+        courseIds:
+          - BIO-448
+          - ENVS-446
+          - ENVS-464
+          - ENVS-475
+      - id: complete-one-of-the-following-applied-ecology-courses-or-course-combinations-not-previously-taken-3
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following applied ecology courses or course combinations, not previously taken:"
+        courseIds:
+          - ENVS-303
+          - ENVS-303L
+          - ENVS-342
+          - ENVS-440
+          - ENVS-446
+          - ENVS-464
+          - ENVS-475
+          - ENVS-483
+          - BIO-448
+          - BIO-449
+      - id: to-satisfy-the-requirements-of-the-estp-major-complete-twelve-units-of-environmental-science-electives-or-complete-a-minor-from-the-list-below-4
+        completion:
+          kind: all
+        optionLabel: To satisfy the requirements of the ESTP major, complete twelve units of Environmental Science Electives or complete a Minor from the list below.
+        courseIds:
+          - ENVS-303
+          - ENVS-303L
+          - ENVS-342
+          - ENVS-360
+          - ENVS-436
+          - ENVS-440
+          - ENVS-446
+          - ENVS-464
+          - ENVS-475
+          - ENVS-483
+          - GEOL-360
+          - GEOL-460
+          - AGPS-315
+          - BIO-320
+          - BIO-322
+          - BIO-344L
+          - BIO-356
+          - BIO-362
+          - BIO-364
+          - BIO-380
+          - BIO-448
+          - BIO-449
+          - CHEM-320
+          - CHEM-320L
+          - CHEM-350
+          - CHEM-432
+          - ENSTU-387
+          - MSCI-337
+          - MSCI-345
+          - MSCI-437
+          - STAT-320
+          - STAT-325
+          - STAT-335
+          - STAT-410
+          - BIO-210
+          - BIO-210L
+          - BIO-211
+          - BIO-211L
+          - BIO-394
+          - BIO-397
+          - BIO-494
+          - BIO-497
+          - CHEM-111
+          - CHEM-111L
+          - ENSTU-309
+          - ENVS-185
+          - ENVS-302
+          - ENVS-307
+          - ENVS-363
+          - ENVS-392
+          - ENVS-394
+          - ENVS-397
+          - ENVS-486
+          - ENVS-496L
+          - ENVS-497
+          - MATH-151
+          - MSCI-497
+          - MSCI-397
+          - PHYS-221
+          - RSCH-394
+  watershed-systems:
+    title: Watershed Systems
+    requirements:
+      - id: complete-the-following-course-1
+        completion:
+          kind: all
+        optionLabel: "Complete the following course:"
+        courseIds:
+          - GEOL-360
+      - id: complete-the-following-capstone-project-course-2
+        completion:
+          kind: all
+        optionLabel: "Complete the following capstone project course:"
+        courseIds:
+          - GEOL-460
+      - id: complete-one-of-the-following-watershed-related-course-course-combinations-not-previously-taken-3
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following watershed-related course/course combinations, not previously taken:"
+        courseIds:
+          - ENVS-303
+          - ENVS-303L
+          - ENVS-342
+          - ENVS-483
+          - BIO-340
+      - id: to-satisfy-the-requirements-of-the-estp-major-complete-twelve-units-of-environmental-science-electives-or-complete-a-minor-from-the-list-below-4
+        completion:
+          kind: all
+        optionLabel: To satisfy the requirements of the ESTP major, complete twelve units of Environmental Science Electives or complete a Minor from the list below.
+        courseIds:
+          - ENVS-303
+          - ENVS-303L
+          - ENVS-342
+          - ENVS-360
+          - ENVS-436
+          - ENVS-440
+          - ENVS-446
+          - ENVS-464
+          - ENVS-475
+          - ENVS-483
+          - AGPS-315
+          - BIO-320
+          - BIO-322
+          - BIO-340
+          - BIO-344L
+          - BIO-356
+          - BIO-362
+          - BIO-364
+          - BIO-380
+          - BIO-448
+          - BIO-449
+          - CHEM-320
+          - CHEM-320L
+          - CHEM-350
+          - CHEM-432
+          - ENSTU-387
+          - MSCI-337
+          - MSCI-437
+          - STAT-320
+          - STAT-325
+          - STAT-335
+          - STAT-410
+          - BIO-210
+          - BIO-210L
+          - BIO-211
+          - BIO-211L
+          - BIO-394
+          - BIO-397
+          - BIO-494
+          - BIO-497
+          - CHEM-111
+          - CHEM-111L
+          - ENSTU-309
+          - ENVS-185
+          - ENVS-302
+          - ENVS-307
+          - ENVS-363
+          - ENVS-392
+          - ENVS-394
+          - ENVS-397
+          - ENVS-486
+          - ENVS-496L
+          - ENVS-497
+          - MATH-151
+          - PHYS-221
+          - RSCH-394

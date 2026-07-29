@@ -1,0 +1,122 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: bs-marine-science
+title: B.S Marine Science
+credential: B.S
+college:
+  id: college-of-science
+  title: College of Science
+department:
+  id: marine-science
+  title: Marine Science
+coursePrefixes:
+  - BIO
+  - BUS
+  - CHEM
+  - ENSTU
+  - ENVS
+  - MATH
+  - MSCI
+  - PHYS
+  - RSCH
+  - STAT
+requirements:
+  - id: complete-all-of-the-following-marine-science-core-courses-with-a-grade-of-c-or-above-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following Marine Science Core courses with a grade of C- or above:"
+    courseIds:
+      - MATH-150
+      - CHEM-110
+      - CHEM-110L
+      - CHEM-111
+      - CHEM-111L
+      - MSCI-270
+      - PHYS-220
+      - BIO-210
+      - BIO-210L
+      - BIO-211
+      - BIO-211L
+      - STAT-250
+      - MSCI-340
+  - id: complete-all-of-the-following-courses-2
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - ENVS-332
+      - MSCI-350
+      - MSCI-370
+      - MSCI-345
+  - id: complete-one-of-the-following-economics-courses-3
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following economics courses:"
+    courseIds:
+      - ENSTU-280
+      - BUS-201
+      - BUS-202
+  - id: complete-one-of-the-following-upper-division-service-learning-courses-4
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Upper-Division Service Learning courses:"
+    courseIds:
+      - MSCI-359S
+      - ENSTU-349S
+      - BIO-379S
+      - ENSTU-369S
+      - ENSTU-384S
+  - id: complete-one-of-the-following-capstone-course-combinations-5
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Capstone course combinations:"
+    courseIds:
+      - MSCI-430
+      - MSCI-410
+      - MSCI-437
+      - MSCI-445
+      - MSCI-455
+      - MSCI-472
+      - MSCI-485
+      - MSCI-490
+      - MSCI-394
+      - MSCI-397
+      - MSCI-497
+  - id: complete-at-least-ten-10-units-of-the-following-marine-science-electives-not-previously-taken-at-least-six-6-units-must-be-from-group-a-with-the-remainder-from-either-group-a-or-group-b-6
+    completion:
+      kind: choose
+      count: 6
+    optionLabel: "Complete at least ten (10) units of the following Marine Science Electives not previously taken. At least six (6) units must be from Group A, with the remainder from either Group A or Group B:"
+    courseIds:
+      - MSCI-310
+      - MSCI-331
+      - MSCI-337
+      - MSCI-341
+      - MSCI-380
+      - MSCI-395
+      - MSCI-430
+      - MSCI-437
+      - MSCI-445
+      - MSCI-455
+      - MSCI-475
+      - MSCI-485
+      - BIO-330
+      - BIO-340
+      - BIO-380
+      - BIO-420
+      - STAT-210
+      - MATH-151
+      - PHYS-221
+      - MSCI-397
+      - MSCI-497
+      - BIO-397
+      - BIO-394
+      - RSCH-300
+      - RSCH-301
+      - RSCH-394
+      - MSCI-394
+      - MSCI-283
+concentrations: {}

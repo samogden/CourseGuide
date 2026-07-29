@@ -1,0 +1,234 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: ba-liberal-studies
+title: B.A Liberal Studies
+credential: B.A
+college:
+  id: college-of-education
+  title: College of Education
+department:
+  id: liberal-studies
+  title: Liberal Studies
+coursePrefixes:
+  - BIO
+  - ED
+  - GEOL
+  - GS
+  - HCOM
+  - HDFS
+  - KIN
+  - LING
+  - LS
+  - MATH
+  - PHYS
+  - SPAN
+  - SPED
+  - SSCI
+requirements:
+  - id: complete-all-of-the-following-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete  all  of the following courses:"
+    courseIds:
+      - LS-242S
+      - LS-300
+      - LS-350
+      - LS-386S
+  - id: complete-all-of-the-following-courses-in-content-area-1-reading-language-literature-history-and-social-science-2
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses in Content Area 1 (Reading, Language, Literature, History, and Social Science):"
+    courseIds:
+      - GS-214
+      - HCOM-251
+      - SSCI-386
+      - LING-392
+      - LING-393
+      - LS-390
+  - id: complete-all-of-the-following-courses-in-content-area-2-math-and-science-3
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses in Content Area 2 (Math and Science):"
+    courseIds:
+      - PHYS-121
+      - PHYS-121L
+      - BIO-204
+      - GEOL-210
+      - MATH-100
+      - MATH-308
+      - MATH-309
+  - id: complete-all-of-the-following-courses-in-content-area-3-physical-education-human-development-visual-and-performing-arts-4
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses in Content Area 3 (Physical Education, Human Development, Visual and Performing Arts):"
+    courseIds:
+      - HDFS-200
+      - LS-233
+      - KIN-373
+      - KIN-373L
+concentrations:
+  integrated-bilingual-elementary-education:
+    title: Integrated Bilingual Elementary Education
+    requirements:
+      - id: complete-all-of-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following courses:"
+        courseIds:
+          - ED-212S
+          - ED-611
+          - ED-612
+          - ED-601A
+          - ED-603A
+          - SPAN-101
+      - id: complete-all-of-the-following-courses-or-equivalents-2
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following courses (or equivalents):"
+        courseIds:
+          - SPAN-102
+          - SPAN-201
+          - SPAN-301
+      - id: complete-at-least-one-of-the-following-courses-3
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete at least one of the following courses:"
+        courseIds:
+          - SPAN-303
+          - SPAN-313
+          - SPAN-314
+          - SPAN-323
+          - SPAN-345
+      - id: complete-all-of-the-following-courses-or-equivalent-4
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following courses (or equivalent):"
+        courseIds:
+          - SPAN-102
+          - SPAN-212
+          - SPAN-301
+      - id: complete-at-least-one-of-the-following-courses-5
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete at least one of the following courses:"
+        courseIds:
+          - SPAN-303
+          - SPAN-313
+          - SPAN-314
+          - SPAN-323
+          - SPAN-345
+      - id: complete-all-of-the-following-elementary-education-credential-courses-6
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following Elementary Education credential courses:"
+        courseIds:
+          - ED-510
+          - ED-540
+          - ED-601
+          - ED-603
+          - ED-609
+          - ED-615
+          - SPED-560
+      - id: now-complete-all-of-the-following-coursework-to-be-eligible-for-the-bilingual-authorization-credential-14-18-units-7
+        completion:
+          kind: all
+        optionLabel: "NOW, complete all of the following coursework to be eligible for the Bilingual Authorization Credential (14-18 units):"
+        courseIds:
+          - ED-604A
+          - ED-610
+          - ED-616
+          - ED-617
+          - ED-629
+  integrated-special-education:
+    title: Integrated Special Education
+    requirements:
+      - id: complete-all-of-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following courses:"
+        courseIds:
+          - ED-212S
+          - SPED-560
+          - SPED-561
+          - SPED-562
+          - SPED-567
+          - SPED-577
+          - ED-600
+      - id: complete-all-of-the-following-disability-studies-emphasis-courses-2
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following Disability Studies Emphasis courses:"
+        courseIds:
+          - ED-510
+          - SPED-563
+          - SPED-566
+          - SPED-568
+          - SPED-571
+      - id: complete-all-of-the-following-sped-credential-courses-3
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following SPED credential courses:"
+        courseIds:
+          - ED-617
+          - SPED-585
+      - id: complete-one-of-the-following-sped-credential-courses-4
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following SPED credential courses:"
+        courseIds:
+          - SPED-564
+          - SPED-574
+      - id: complete-one-of-the-following-sped-credential-courses-5
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following SPED credential courses:"
+        courseIds:
+          - SPED-567A
+          - SPED-567B
+      - id: complete-one-of-the-following-sped-credential-courses-6
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following SPED credential courses:"
+        courseIds:
+          - SPED-577A
+          - SPED-577B
+  integrated-elementary-education:
+    title: Integrated Elementary Education
+    requirements:
+      - id: complete-all-of-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following courses:"
+        courseIds:
+          - ED-212S
+          - LS-398
+          - ED-510
+          - ED-601A
+          - ED-603A
+          - ED-611
+          - SPED-560
+      - id: complete-all-of-the-following-linguistics-emphasis-courses-2
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following Linguistics Emphasis courses:"
+        courseIds:
+          - LING-392
+          - LING-393
+          - ED-612
+      - id: complete-all-of-the-following-elementary-education-credential-courses-3
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following Elementary Education credential courses:"
+        courseIds:
+          - ED-601
+          - ED-603
+          - ED-609
+          - ED-540
+          - ED-615
+          - ED-616
+          - ED-617

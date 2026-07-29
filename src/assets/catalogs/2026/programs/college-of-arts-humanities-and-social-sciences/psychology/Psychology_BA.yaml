@@ -1,0 +1,90 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: ba-psychology
+title: B.A Psychology
+credential: B.A
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: psychology
+  title: Psychology
+coursePrefixes:
+  - HDFS
+  - PSY
+  - STAT
+requirements:
+  - id: complete-all-of-the-following-lower-division-core-courses-must-be-completed-before-moving-on-to-upper-division-courses-1
+    completion:
+      kind: all
+    optionLabel: Complete all of the following lower-division core courses. (must be completed before moving on to upper-division courses)
+    courseIds:
+      - STAT-100
+      - PSY-100
+      - PSY-200
+      - PSY-200L
+  - id: complete-all-of-the-following-upper-division-courses-2
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following upper-division courses:"
+    courseIds:
+      - PSY-300
+      - PSY-302
+      - PSY-302L
+      - PSY-400
+  - id: complete-one-of-the-following-upper-division-course-combinations-3
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following upper-division course combinations:"
+    courseIds:
+      - PSY-301
+      - PSY-301L
+      - PSY-305
+      - PSY-305L
+  - id: complete-one-course-course-combination-in-each-of-the-following-five-areas-4
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one course/course combination in each of the following five areas:"
+    courseIds:
+      - PSY-310
+      - PSY-310L
+      - PSY-315
+      - PSY-320
+      - PSY-320L
+      - PSY-321
+      - PSY-321L
+      - PSY-329
+      - PSY-329L
+      - HDFS-355
+      - PSY-330
+      - PSY-330L
+      - PSY-331
+      - PSY-331L
+      - PSY-333
+      - PSY-333L
+      - PSY-334
+      - PSY-334L
+      - PSY-335
+      - PSY-336
+      - PSY-336L
+      - PSY-340
+      - PSY-340L
+      - PSY-346
+      - PSY-347
+      - PSY-348
+      - HDFS-341
+      - HDFS-350
+      - HDFS-353
+      - HDFS-356
+      - HDFS-360
+      - HDFS-365
+      - HDFS-371
+      - PSY-350
+      - PSY-350L
+      - PSY-352
+      - PSY-353
+      - PSY-355
+      - PSY-357
+concentrations: {}

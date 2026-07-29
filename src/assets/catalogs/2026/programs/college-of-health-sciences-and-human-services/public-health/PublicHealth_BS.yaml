@@ -1,0 +1,52 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: bs-public-health
+title: B.S Public Health
+credential: B.S
+college:
+  id: college-of-health-sciences-and-human-services
+  title: College of Health Sciences and Human Services
+department:
+  id: public-health
+  title: Public Health
+coursePrefixes:
+  - BIO
+  - CHHS
+  - PANM
+  - PH
+  - SW
+requirements:
+  - id: complete-all-of-the-following-foundational-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following Foundational courses:"
+    courseIds:
+      - PH-207
+      - BIO-204
+      - SW-205
+      - CHHS-302
+      - CHHS-330
+      - CHHS-350
+      - CHHS-450
+  - id: complete-all-of-the-following-public-health-core-courses-2
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following Public Health Core courses:"
+    courseIds:
+      - PANM-422
+      - PH-407
+      - PH-408
+      - PH-417
+      - PH-457
+      - PH-477
+  - id: complete-all-of-the-following-field-and-capstone-courses-3
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following Field and Capstone courses:"
+    courseIds:
+      - CHHS-396S
+      - CHHS-496A
+      - CHHS-411
+      - CHHS-496B
+      - CHHS-401
+concentrations: {}

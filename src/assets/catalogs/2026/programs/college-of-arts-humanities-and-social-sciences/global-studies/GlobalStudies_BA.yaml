@@ -1,0 +1,108 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: ba-global-studies
+title: B.A Global Studies
+credential: B.A
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: global-studies
+  title: Global Studies
+coursePrefixes:
+  - EGS
+  - ENSTU
+  - GS
+  - HCOM
+  - JAPN
+  - SL
+  - SOC
+  - SSCI
+requirements:
+  - id: complete-all-of-the-following-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - GS-206
+      - GS-300
+      - GS-362
+      - EGS-475
+  - id: complete-one-of-the-following-service-learning-course-or-course-combinations-2
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Service Learning course or course combinations:"
+    courseIds:
+      - GS-339S
+      - SL-490
+      - SL-492S
+  - id: complete-one-of-the-following-upper-division-area-4-social-sciences-ge-courses-3
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following upper-division Area 4 Social Sciences GE courses:"
+    courseIds:
+      - GS-327
+      - GS-336
+      - GS-342
+      - GS-363
+      - SSCI-345
+  - id: complete-one-of-the-following-upper-division-area-5-science-ge-courses-4
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following upper-division Area 5  Science GE courses:"
+    courseIds:
+      - ENSTU-309
+      - GS-318
+      - JAPN-410
+      - SSCI-321
+      - SSCI-361
+  - id: complete-one-of-the-following-global-culture-and-representation-courses-not-previously-taken-5
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following global culture and representation courses not previously taken:"
+    courseIds:
+      - GS-336
+      - GS-350
+      - GS-363
+      - HCOM-348
+      - JAPN-317
+  - id: complete-one-of-the-following-global-politics-courses-not-previously-taken-6
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following global politics courses not previously taken:"
+    courseIds:
+      - GS-317
+      - GS-327
+      - GS-390
+      - HCOM-443
+      - SOC-399
+  - id: complete-one-of-the-following-global-political-economy-courses-no-previously-taken-7
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following global political economy courses no previously taken:"
+    courseIds:
+      - GS-318
+      - GS-342
+      - GS-351
+      - GS-370
+      - GS-379
+      - HCOM-445
+  - id: complete-one-of-the-following-historical-foundations-courses-not-previously-taken-8
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following historical foundations courses not previously taken:"
+    courseIds:
+      - GS-316
+      - GS-325
+      - GS-331
+      - GS-385
+      - HCOM-346
+      - JAPN-407
+concentrations: {}

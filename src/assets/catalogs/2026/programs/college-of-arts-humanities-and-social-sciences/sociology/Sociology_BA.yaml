@@ -1,0 +1,54 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: ba-sociology
+title: B.A Sociology
+credential: B.A
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: sociology
+  title: Sociology
+coursePrefixes:
+  - SOC
+  - SSCI
+  - STAT
+requirements:
+  - id: complete-all-of-the-following-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - SOC-100
+      - STAT-100
+      - SOC-201
+      - SOC-300
+      - SOC-302
+      - SSCI-321
+      - SSCI-362
+      - SSCI-377
+      - SOC-400
+      - SOC-402
+  - id: complete-one-of-the-following-courses-2
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - SOC-312
+      - SOC-317
+      - SOC-320
+      - SOC-399
+  - id: complete-at-least-15-units-from-any-of-the-following-courses-not-previously-taken-3
+    completion:
+      kind: minimumCredits
+      credits: 15
+    optionLabel: "Complete at least 15 units from any of the following courses not previously taken:"
+    courseIds:
+      - SOC-315
+      - SOC-325
+      - SOC-330
+      - SOC-340
+      - SOC-360
+      - SOC-365
+concentrations: {}

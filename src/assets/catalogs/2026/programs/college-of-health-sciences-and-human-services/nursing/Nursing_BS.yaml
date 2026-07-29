@@ -1,0 +1,30 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: bs-nursing
+title: B.S Nursing
+credential: B.S
+college:
+  id: college-of-health-sciences-and-human-services
+  title: College of Health Sciences and Human Services
+department:
+  id: nursing
+  title: Nursing
+coursePrefixes:
+  - NURS
+requirements:
+  - id: complete-all-of-the-following-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - NURS-300
+      - NURS-301
+      - NURS-326
+      - NURS-350
+      - NURS-375
+      - NURS-402
+      - NURS-430
+      - NURS-440
+      - NURS-498S
+      - NURS-499
+concentrations: {}

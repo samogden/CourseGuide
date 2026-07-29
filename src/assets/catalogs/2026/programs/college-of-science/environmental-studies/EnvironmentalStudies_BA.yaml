@@ -1,0 +1,197 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: ba-environmental-studies
+title: B.A Environmental Studies
+credential: B.A
+college:
+  id: college-of-science
+  title: College of Science
+department:
+  id: environmental-studies
+  title: Environmental Studies
+coursePrefixes:
+  - AGPS
+  - BIO
+  - BUS
+  - CART
+  - CHHS
+  - ENSTU
+  - ENVS
+  - FYS
+  - GEOL
+  - HOSP
+  - KIN
+  - LS
+  - MSCI
+  - SSCI
+  - STAT
+requirements:
+  - id: complete-all-of-the-following-environmental-studies-core-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following Environmental Studies core courses:"
+    courseIds:
+      - STAT-100
+      - ENVS-240
+      - ENSTU-280
+      - ENSTU-300
+      - ENSTU-350
+      - ENSTU-410
+      - ENSTU-412
+  - id: complete-one-of-the-following-environmental-science-courses-2
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Environmental Science courses:"
+    courseIds:
+      - ENVS-201
+      - FYS-124
+  - id: complete-one-of-the-following-courses-3
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - GEOL-110
+      - GEOL-210
+      - GEOL-260
+      - AGPS-128
+  - id: complete-one-of-the-following-courses-4
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - MSCI-270
+      - ENVS-282
+  - id: complete-one-of-the-following-courses-5
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - ENSTU-309
+      - ENSTU-387
+  - id: complete-one-of-the-following-capstone-project-courses-6
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Capstone Project courses:"
+    courseIds:
+      - ENSTU-471
+      - ENSTU-472
+concentrations:
+  sustainable-communities:
+    title: Sustainable Communities
+    requirements:
+      - id: complete-one-of-the-following-courses-1
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following courses:"
+        courseIds:
+          - ENVS-332
+          - SSCI-371
+      - id: complete-one-of-the-following-courses-2
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following courses:"
+        courseIds:
+          - ENSTU-375
+          - ENSTU-376
+      - id: complete-one-of-the-following-courses-3
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of  the following courses:"
+        courseIds:
+          - ENSTU-384S
+          - ENVS-382S
+      - id: to-satisfy-the-requirements-of-the-environmental-studies-major-complete-at-least-10-units-from-the-following-sustainable-communities-elective-courses-not-previously-taken-alternatively-you-may-choose-to-complete-a-minor-from-the-list-below-4
+        completion:
+          kind: minimumCredits
+          credits: 10
+        optionLabel: To satisfy the requirements of the Environmental Studies major, complete at least 10 units from the following Sustainable Communities Elective courses, not previously taken.  Alternatively, you may choose to complete a Minor from the list below.
+        courseIds:
+          - ENSTU-309
+          - ENSTU-349S
+          - ENSTU-369S
+          - ENSTU-375
+          - ENSTU-376
+          - ENSTU-384S
+          - ENSTU-387
+          - ENSTU-394
+          - ENSTU-397
+          - ENSTU-497
+          - AGPS-315
+          - BIO-356
+          - BIO-362
+          - BIO-364
+          - BUS-433
+          - CHHS-330
+          - CHHS-445
+          - ENVS-303
+          - ENVS-303L
+          - ENVS-307
+          - ENVS-342
+          - ENVS-360
+          - ENVS-382S
+          - ENVS-483
+          - GEOL-310
+          - HOSP-471
+          - HOSP-473
+          - SSCI-371
+  education-and-community-outreach:
+    title: Education & Community Outreach
+    requirements:
+      - id: complete-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete the following courses:"
+        courseIds:
+          - ENSTU-365
+          - ENVS-363
+      - id: complete-one-of-the-following-environmental-education-in-a-community-setting-courses-2
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Environmental Education in a Community Setting courses:"
+        courseIds:
+          - ENSTU-349S
+          - ENSTU-369S
+      - id: to-satisfy-the-requirements-of-the-environmental-studies-major-complete-at-least-10-units-from-the-following-eco-elective-courses-not-previously-taken-alternatively-you-may-choose-to-complete-a-minor-from-the-list-below-3
+        completion:
+          kind: minimumCredits
+          credits: 10
+        optionLabel: To satisfy the requirements of the Environmental Studies major, complete at least 10 units from the following ECO Elective courses, not previously taken.  Alternatively you may choose to complete a Minor from the list below.
+        courseIds:
+          - ENSTU-309
+          - ENSTU-349S
+          - ENSTU-369S
+          - ENSTU-394
+          - ENSTU-397
+          - ENSTU-497
+          - BIO-356
+          - BIO-362
+          - BIO-364
+          - BIO-379S
+          - CART-424
+          - ENVS-303
+          - ENVS-303L
+          - ENVS-342
+          - ENVS-360
+          - ENVS-382S
+          - GEOL-310
+          - KIN-382
+          - KIN-382L
+          - KIN-383
+          - KIN-383L
+          - KIN-384
+          - KIN-384L
+          - KIN-385
+          - KIN-385L
+          - LS-380
+          - LS-383
+          - LS-384
+          - MSCI-305

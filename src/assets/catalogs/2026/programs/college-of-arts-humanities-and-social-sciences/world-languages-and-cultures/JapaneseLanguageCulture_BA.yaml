@@ -1,0 +1,68 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: ba-japanese-language-and-culture
+title: B.A Japanese Language & Culture
+credential: B.A
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: world-languages-and-cultures
+  title: World Languages and Cultures
+coursePrefixes:
+  - JAPN
+  - WLC
+requirements:
+  - id: complete-all-of-the-following-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - JAPN-300
+      - JAPN-320S
+      - JAPN-403
+      - WLC-400
+      - WLC-300
+      - JAPN-404
+      - JAPN-420
+  - id: complete-both-of-the-following-culture-courses-2
+    completion:
+      kind: all
+    optionLabel: "Complete both of the following Culture courses:"
+    courseIds:
+      - JAPN-311
+      - JAPN-410
+  - id: complete-four-of-the-following-language-and-linguistics-courses-3
+    completion:
+      kind: choose
+      count: 4
+    optionLabel: "Complete four of the following Language and Linguistics courses:"
+    courseIds:
+      - JAPN-301
+      - JAPN-302
+      - JAPN-303
+      - JAPN-304
+      - JAPN-312
+      - JAPN-380
+      - JAPN-401
+      - JAPN-402
+  - id: complete-three-of-the-following-culture-courses-please-note-only-one-course-may-be-at-the-200-level-4
+    completion:
+      kind: choose
+      count: 3
+    optionLabel: "Complete three  of the following Culture courses: Please note: only one course may be at the 200-level"
+    courseIds:
+      - JAPN-211
+      - JAPN-212
+      - JAPN-213
+      - JAPN-215
+      - JAPN-305
+      - JAPN-306
+      - JAPN-307
+      - JAPN-308
+      - JAPN-309
+      - JAPN-310
+      - JAPN-314
+      - JAPN-317
+      - JAPN-407
+concentrations: {}

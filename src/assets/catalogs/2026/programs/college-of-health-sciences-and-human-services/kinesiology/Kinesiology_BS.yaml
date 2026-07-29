@@ -1,0 +1,92 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: bs-kinesiology
+title: B.S Kinesiology
+credential: B.S
+college:
+  id: college-of-health-sciences-and-human-services
+  title: College of Health Sciences and Human Services
+department:
+  id: kinesiology
+  title: Kinesiology
+coursePrefixes:
+  - HDFS
+  - KIN
+  - STAT
+requirements:
+  - id: complete-all-of-the-following-core-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following core courses:"
+    courseIds:
+      - STAT-100
+      - KIN-300
+      - KIN-346
+      - KIN-355
+      - KIN-360
+      - KIN-360L
+      - KIN-370
+      - KIN-370L
+      - KIN-371
+      - KIN-371L
+      - KIN-375
+      - KIN-390
+      - KIN-421
+      - KIN-471S
+concentrations:
+  exercise-science:
+    title: Exercise Science
+    requirements:
+      - id: complete-all-of-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following courses:"
+        courseIds:
+          - KIN-310
+          - KIN-340
+          - KIN-430
+          - KIN-440
+          - KIN-450
+  wellness:
+    title: Wellness
+    requirements:
+      - id: complete-the-following-course-1
+        completion:
+          kind: all
+        optionLabel: "Complete the following course:"
+        courseIds:
+          - KIN-330
+      - id: complete-one-of-the-following-courses-2
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following courses:"
+        courseIds:
+          - KIN-350
+          - KIN-366
+      - id: complete-one-of-the-following-courses-3
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following courses:"
+        courseIds:
+          - KIN-450
+          - KIN-490
+      - id: complete-two-of-the-following-courses-not-previously-taken-4
+        completion:
+          kind: choose
+          count: 2
+        optionLabel: "Complete two of the following courses, not previously taken:"
+        courseIds:
+          - KIN-303
+          - KIN-320
+          - KIN-340
+          - KIN-350
+          - KIN-363
+          - KIN-366
+          - KIN-450
+          - KIN-461
+          - KIN-469
+          - KIN-490
+          - KIN-492
+          - HDFS-350

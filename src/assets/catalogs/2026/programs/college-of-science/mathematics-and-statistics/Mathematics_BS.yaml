@@ -1,0 +1,138 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: bs-mathematics
+title: B.S Mathematics
+credential: B.S
+college:
+  id: college-of-science
+  title: College of Science
+department:
+  id: mathematics-and-statistics
+  title: Mathematics and Statistics
+coursePrefixes:
+  - CST
+  - MATH
+  - STAT
+requirements:
+  - id: complete-all-of-the-following-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - MATH-150
+      - MATH-151
+      - MATH-250
+      - MATH-300
+      - MATH-320
+      - MATH-322
+      - MATH-330
+      - MATH-400
+      - MATH-410
+      - MATH-420
+  - id: complete-one-of-the-following-courses-2
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - CST-231
+      - CST-319
+  - id: complete-one-of-the-following-course-course-combinations-3
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following course/course combinations:"
+    courseIds:
+      - MATH-230
+      - MATH-240
+      - MATH-265
+concentrations:
+  pure-and-applied-mathematics:
+    title: Pure & Applied Mathematics
+    requirements:
+      - id: complete-one-of-the-following-courses-1
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following courses:"
+        courseIds:
+          - MATH-411
+          - MATH-421
+      - id: complete-one-of-the-following-courses-2
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following courses:"
+        courseIds:
+          - MATH-361S
+          - MATH-362S
+      - id: complete-twelve-units-from-the-following-math-or-stat-electives-not-counted-above-3
+        completion:
+          kind: all
+        optionLabel: "Complete twelve units from the following MATH or STAT Electives, not counted above:"
+        courseIds:
+          - MATH-294
+          - MATH-325
+          - MATH-326
+          - MATH-329
+          - MATH-340
+          - MATH-350
+          - MATH-370
+          - MATH-374
+          - MATH-375
+          - MATH-376
+          - MATH-385
+          - MATH-386
+          - MATH-394
+          - MATH-411
+          - MATH-421
+          - MATH-494
+          - STAT-310
+          - STAT-320
+          - STAT-325
+          - STAT-330
+          - STAT-335
+          - STAT-410
+          - STAT-420
+          - STAT-421
+          - STAT-440
+  mathematics-for-teaching:
+    title: Mathematics for Teaching
+    requirements:
+      - id: complete-all-of-the-following-courses-1
+        completion:
+          kind: all
+        optionLabel: "Complete all of the following courses:"
+        courseIds:
+          - MATH-325
+          - MATH-326
+          - MATH-329
+          - MATH-361S
+      - id: complete-four-units-of-the-following-math-stat-electives-not-previously-taken-2
+        completion:
+          kind: choose
+          count: 4
+        optionLabel: "Complete four units  of the following MATH/STAT Electives not previously taken:"
+        courseIds:
+          - MATH-340
+          - MATH-350
+          - MATH-370
+          - MATH-374
+          - MATH-375
+          - MATH-376
+          - MATH-385
+          - MATH-386
+          - MATH-411
+          - MATH-421
+          - STAT-310
+          - STAT-320
+          - STAT-325
+          - STAT-330
+          - STAT-335
+          - STAT-410
+          - STAT-420
+          - STAT-421
+          - STAT-440
+          - MATH-294
+          - MATH-394
+          - MATH-494

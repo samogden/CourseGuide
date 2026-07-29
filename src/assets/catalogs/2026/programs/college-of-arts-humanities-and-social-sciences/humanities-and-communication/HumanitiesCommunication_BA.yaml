@@ -1,0 +1,494 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: ba-humanities-and-communication
+title: B.A Humanities & Communication
+credential: B.A
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: humanities-and-communication
+  title: Humanities and Communication
+coursePrefixes:
+  - CART
+  - GS
+  - HCOM
+  - JAPN
+  - SOC
+  - SPAN
+  - SSCI
+  - VPA
+requirements:
+  - id: complete-all-of-the-following-courses-1
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - HCOM-300
+      - HCOM-475
+  - id: complete-one-of-the-following-courses-2
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - HCOM-303
+      - HCOM-312
+  - id: complete-one-of-the-following-ethical-and-effective-communication-courses-3
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Ethical and Effective Communication courses:"
+    courseIds:
+      - HCOM-304
+      - HCOM-310
+      - HCOM-321
+  - id: complete-one-of-the-following-social-and-cultural-analysis-courses-4
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Social and Cultural Analysis courses:"
+    courseIds:
+      - HCOM-343
+      - HCOM-353
+      - HCOM-369
+  - id: complete-one-of-the-following-engaged-creative-practice-courses-5
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Engaged Creative Practice courses:"
+    courseIds:
+      - HCOM-328
+      - HCOM-329
+      - HCOM-330
+      - HCOM-371
+  - id: complete-one-of-the-following-humanistic-inquiry-courses-6
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Humanistic Inquiry courses:"
+    courseIds:
+      - HCOM-290
+      - HCOM-301
+      - HCOM-327
+      - HCOM-362
+      - HCOM-391
+  - id: complete-one-of-the-following-service-learning-courses-7
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Service Learning courses:"
+    courseIds:
+      - HCOM-307S
+      - HCOM-317S
+      - HCOM-339S
+      - HCOM-340S
+      - HCOM-350S
+      - HCOM-432S
+  - id: complete-at-least-2-units-from-the-following-courses-8
+    completion:
+      kind: minimumCredits
+      credits: 2
+    optionLabel: "Complete at least 2 units from the following courses:"
+    courseIds:
+      - HCOM-408
+      - HCOM-419
+      - HCOM-470
+      - HCOM-471
+      - HCOM-474
+      - HCOM-476
+      - HCOM-477
+concentrations:
+  communication-studies:
+    title: Communication Studies
+    requirements:
+      - id: complete-one-of-the-following-public-communication-courses-1
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Public Communication courses:"
+        courseIds:
+          - HCOM-310
+          - HCOM-312
+          - HCOM-321
+          - HCOM-372
+          - HCOM-409
+      - id: complete-one-of-the-following-communication-ethics-courses-2
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Communication Ethics courses:"
+        courseIds:
+          - HCOM-304
+          - HCOM-314
+          - HCOM-316
+          - HCOM-403
+          - HCOM-440
+      - id: complete-one-of-the-following-peace-and-justice-courses-3
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Peace and Justice courses:"
+        courseIds:
+          - HCOM-306
+          - HCOM-309
+          - HCOM-349
+          - HCOM-404
+          - HCOM-412
+          - HCOM-423
+  creative-writing-and-social-action:
+    title: Creative Writing & Social Action
+    requirements:
+      - id: complete-8-units-from-the-following-creative-writing-content-courses-1
+        completion:
+          kind: minimumCredits
+          credits: 8
+        optionLabel: "Complete 8 units from the following Creative Writing Content courses:"
+        courseIds:
+          - HCOM-332
+          - HCOM-333
+          - HCOM-334
+          - HCOM-339S
+          - HCOM-341
+          - HCOM-430
+          - HCOM-432
+          - HCOM-432S
+          - HCOM-433
+          - HCOM-434
+          - HCOM-439
+          - HCOM-328
+          - HCOM-329
+          - HCOM-350S
+          - HCOM-390
+          - CART-330
+          - CART-340
+      - id: complete-one-of-the-following-literature-social-justice-courses-2
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Literature/Social Justice courses:"
+        courseIds:
+          - HCOM-322
+          - HCOM-323
+          - HCOM-324
+          - HCOM-325
+          - HCOM-327
+          - HCOM-335
+          - HCOM-336
+          - HCOM-337
+          - HCOM-338
+          - HCOM-343
+          - HCOM-344
+          - HCOM-345
+          - HCOM-346
+          - HCOM-348
+          - HCOM-353
+          - HCOM-356
+          - HCOM-359
+          - HCOM-365
+          - HCOM-404
+          - HCOM-426
+          - HCOM-428
+          - HCOM-436
+          - HCOM-437
+          - HCOM-443
+          - HCOM-445
+          - HCOM-451
+          - HCOM-452
+          - SSCI-304
+          - SSCI-350
+  english-studies:
+    title: English Studies
+    requirements:
+      - id: required-courses-1
+        completion:
+          kind: all
+        courseIds:
+          - HCOM-323
+          - HCOM-327
+          - HCOM-426
+          - HCOM-427
+          - HCOM-436
+          - HCOM-437
+          - HCOM-454
+          - GS-362
+          - JAPN-309
+          - JAPN-316
+          - SPAN-425
+          - SPAN-426
+          - SPAN-427
+          - SPAN-428
+          - HCOM-322
+          - HCOM-324
+          - HCOM-325
+          - HCOM-328
+          - HCOM-335
+          - HCOM-337
+          - HCOM-338
+          - HCOM-428
+          - SPAN-365
+          - HCOM-306
+          - HCOM-309
+          - HCOM-320
+          - HCOM-321
+          - HCOM-329
+          - HCOM-334
+          - HCOM-390
+          - HCOM-420
+          - HCOM-422
+          - HCOM-348
+          - HCOM-352
+          - HCOM-406
+          - HCOM-452
+          - JAPN-310
+  english-subject-matter-preparation-program:
+    title: English Subject Matter Preparation Program
+    requirements:
+      - id: complete-the-following-course-1
+        completion:
+          kind: all
+        optionLabel: "Complete the following course:"
+        courseIds:
+          - HCOM-222
+      - id: complete-the-following-course-for-the-area-of-literary-analysis-2
+        completion:
+          kind: all
+        optionLabel: "Complete the following course for the area of Literary Analysis:"
+        courseIds:
+          - HCOM-429
+      - id: complete-the-following-course-for-the-area-of-language-linguistics-and-literacy-3
+        completion:
+          kind: all
+        optionLabel: "Complete the following course for the area of Language, Linguistics, and Literacy:"
+        courseIds:
+          - HCOM-338
+      - id: complete-the-following-course-for-the-area-of-composition-and-rhetoric-4
+        completion:
+          kind: all
+        optionLabel: "Complete the following course for the area of Composition and Rhetoric:"
+        courseIds:
+          - HCOM-320
+      - id: complete-the-following-course-for-the-area-of-speech-media-and-creative-performance-5
+        completion:
+          kind: all
+        optionLabel: "Complete the following course for the area of Speech, Media, and Creative Performance:"
+        courseIds:
+          - HCOM-437
+  historical-studies:
+    title: Historical Studies
+    requirements:
+      - id: complete-the-following-research-methods-course-1
+        completion:
+          kind: all
+        optionLabel: "Complete the following Research Methods course:"
+        courseIds:
+          - SSCI-363
+      - id: complete-one-of-the-following-global-and-transnational-history-courses-2
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Global and Transnational History courses:"
+        courseIds:
+          - HCOM-445
+          - HCOM-451
+          - SSCI-305
+          - SSCI-335
+          - SSCI-341
+          - SSCI-343
+          - SSCI-354
+          - SSCI-357
+      - id: complete-one-of-the-following-ethnic-histories-courses-3
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Ethnic Histories courses:"
+        courseIds:
+          - HCOM-346
+          - HCOM-356
+          - HCOM-365
+          - HCOM-369
+          - HCOM-445
+          - HCOM-451
+          - SSCI-322
+          - SSCI-350
+          - SSCI-364
+          - JAPN-317
+      - id: complete-one-of-the-following-history-depth-courses-not-already-taken-4
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following History Depth courses, not already taken:"
+        courseIds:
+          - HCOM-346
+          - HCOM-352
+          - HCOM-354
+          - HCOM-356
+          - HCOM-359
+          - HCOM-362
+          - HCOM-363
+          - HCOM-365
+          - HCOM-366
+          - HCOM-367
+          - HCOM-368
+          - HCOM-454
+          - SSCI-304
+          - SSCI-305
+          - SSCI-315
+          - SSCI-325
+          - SSCI-348
+          - SSCI-350
+          - SSCI-353
+          - SSCI-355
+          - SSCI-378
+          - SSCI-383
+          - SSCI-386
+          - SSCI-389
+          - GS-316
+          - JAPN-305
+          - JAPN-307
+          - SPAN-307
+          - SPAN-308
+          - SPAN-309
+  journalism-and-media-studies:
+    title: Journalism & Media Studies
+    requirements:
+      - id: complete-one-of-the-following-media-law-ethics-courses-1
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Media Law/Ethics courses:"
+        courseIds:
+          - HCOM-316
+          - HCOM-410
+          - HCOM-411
+      - id: complete-the-following-course-2
+        completion:
+          kind: all
+        optionLabel: "Complete the following course:"
+        courseIds:
+          - HCOM-352
+      - id: complete-both-of-the-following-introductory-storytelling-theory-courses-3
+        completion:
+          kind: all
+        optionLabel: "Complete both of the following Introductory Storytelling/Theory courses:"
+        courseIds:
+          - HCOM-170
+          - HCOM-280
+      - id: complete-one-of-the-following-intermediate-storytelling-theory-courses-4
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Intermediate Storytelling/Theory courses:"
+        courseIds:
+          - HCOM-315
+          - HCOM-319
+          - HCOM-334
+          - HCOM-349
+          - HCOM-361
+          - HCOM-370
+          - HCOM-372
+          - HCOM-373
+          - HCOM-383
+          - HCOM-387
+          - HCOM-390
+          - CART-303
+          - CART-330
+          - CART-361
+          - CART-376
+          - VPA-305
+      - id: complete-one-of-the-following-advanced-storytelling-theory-courses-5
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Advanced Storytelling/Theory courses:"
+        courseIds:
+          - HCOM-409
+          - HCOM-424
+          - HCOM-434
+          - HCOM-435
+          - HCOM-488
+  legal-studies:
+    title: Legal Studies
+    requirements:
+      - id: complete-one-of-the-following-philosophy-and-ethics-courses-1
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Philosophy and Ethics courses:"
+        courseIds:
+          - HCOM-301
+          - HCOM-304
+          - HCOM-349
+          - HCOM-403
+          - HCOM-404
+          - HCOM-405
+          - HCOM-412
+          - HCOM-440
+          - GS-351
+      - id: complete-one-of-the-following-constitutional-issues-courses-2
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Constitutional Issues courses:"
+        courseIds:
+          - HCOM-357
+          - HCOM-362
+      - id: complete-two-of-the-following-legal-studies-courses-3
+        completion:
+          kind: choose
+          count: 2
+        optionLabel: "Complete two  of the following Legal Studies courses:"
+        courseIds:
+          - HCOM-302
+          - HCOM-358
+          - HCOM-359
+          - HCOM-361
+          - HCOM-398
+          - HCOM-411
+          - HCOM-420
+          - HCOM-498
+          - GS-317
+          - GS-342
+          - GS-370
+          - GS-390
+          - SSCI-333
+          - SOC-333
+  philosophy-and-applied-ethics:
+    title: Philosophy & Applied Ethics
+    requirements:
+      - id: complete-one-of-the-following-philosophical-issues-in-fairness-and-justice-courses-1
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Philosophical Issues in Fairness and Justice courses:"
+        courseIds:
+          - HCOM-342
+          - HCOM-343
+          - HCOM-349
+          - HCOM-404
+          - HCOM-423
+      - id: complete-one-of-the-following-rhetorical-and-philosophical-theory-courses-2
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Rhetorical and Philosophical Theory courses:"
+        courseIds:
+          - HCOM-301
+          - HCOM-321
+          - HCOM-405
+          - HCOM-406
+          - HCOM-420
+          - HCOM-422
+      - id: complete-one-of-the-following-applied-ethics-courses-3
+        completion:
+          kind: choose
+          count: 1
+        optionLabel: "Complete one of the following Applied Ethics courses:"
+        courseIds:
+          - HCOM-304
+          - HCOM-316
+          - HCOM-403
+          - HCOM-404
+          - HCOM-410
+          - HCOM-412
+          - HCOM-440

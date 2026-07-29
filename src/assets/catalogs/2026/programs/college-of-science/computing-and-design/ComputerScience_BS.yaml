@@ -1,0 +1,545 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: bs-computer-science
+title: B.S. Computer Science
+credential: B.S.
+college:
+  id: college-of-science
+  title: College of Science
+department:
+  id: computing-and-design
+  title: Computing and Design
+coursePrefixes:
+  - CST
+  - MATH
+  - FYS
+  - JAPN
+  - SPAN
+requirements:
+  - id: required_lower_division
+    completion:
+      kind: all
+    minimumGrade: C-
+    courseIds:
+      - MATH-170
+      - CST-231
+      - CST-237
+      - CST-238
+      - CST-300
+      - CST-338
+      - CST-349
+  - id: required_upper_division
+    completion:
+      kind: all
+    courseIds:
+      - MATH-250
+      - CST-334
+      - CST-370
+      - CST-462S
+      - CST-499
+  - id: math_foundation_choice
+    completion:
+      kind: choose
+      count: 1
+    courseIds:
+      - MATH-151
+      - MATH-270
+concentrations:
+  data-science:
+    title: Data Science
+    requirements:
+      - id: required_upper_division
+        completion:
+          kind: all
+        courseIds:
+          - CST-363
+          - CST-383
+          - CST-463
+      - id: upper_division_electives
+        completion:
+          kind: minimumCredits
+          credits: 12
+        courseIds:
+          - CST-205
+          - CST-311
+          - CST-315
+          - CST-325
+          - CST-326
+          - CST-336
+          - CST-380
+          - CST-438
+  network-security:
+    title: Network Security
+    requirements:
+      - id: required_upper_division
+        completion:
+          kind: all
+        courseIds:
+          - CST-311
+          - CST-315
+          - CST-415
+      - id: upper_division_electives
+        completion:
+          kind: minimumCredits
+          credits: 12
+        courseIds:
+          - CST-205
+          - CST-325
+          - CST-326
+          - CST-336
+          - CST-363
+          - CST-380
+          - CST-383
+          - CST-438
+  software-engineering:
+    title: Software Engineering
+    requirements:
+      - id: required_upper_division
+        completion:
+          kind: all
+        courseIds:
+          - CST-363
+          - CST-438
+      - id: upper_division_choice
+        completion:
+          kind: choose
+          count: 1
+        courseIds:
+          - CST-336
+          - CST-325
+          - CST-380
+      - id: upper_division_electives
+        completion:
+          kind: minimumCredits
+          credits: 12
+        courseIds:
+          - CST-205
+          - CST-311
+          - CST-315
+          - CST-325
+          - CST-326
+          - CST-336
+          - CST-380
+          - CST-383
+  game-development:
+    title: Game Development
+    requirements:
+      - id: required_upper_division
+        completion:
+          kind: all
+        courseIds:
+          - CST-325
+          - CST-326
+      - id: advanced_game_development_choice
+        completion:
+          kind: choose
+          count: 1
+        courseIds:
+          - CST-426
+          - CST-438
+        prerequisites:
+          - courseId: CST-325
+          - courseId: CST-326
+      - id: upper_division_electives
+        completion:
+          kind: minimumCredits
+          credits: 12
+        courseIds:
+          - CST-205
+          - CST-311
+          - CST-315
+          - CST-336
+          - CST-363
+          - CST-380
+          - CST-383
+  general:
+    title: General
+    requirements:
+      - id: upper_division_electives
+        completion:
+          kind: minimumCredits
+          credits: 24
+        courseIds:
+          - CST-205
+          - CST-311
+          - CST-315
+          - CST-325
+          - CST-326
+          - CST-336
+          - CST-363
+          - CST-380
+          - CST-383
+          - CST-415
+          - CST-438
+          - CST-463
+roadmaps:
+  bs:
+    status: verified
+    plan:
+      schemaVersion: 1
+      years:
+        - year: freshman
+          terms:
+            - term: fall
+              slots:
+                - type: course
+                  courseId: CST-231
+                  credits: 4
+                  category: cst
+                - type: course
+                  courseId: FYS-145
+                  credits: 3
+                  category: ge-lower
+                - type: course
+                  courseId: MATH-130
+                  credits: 5
+                  category: math
+                - type: course
+                  courseId: CST-286
+                  credits: 3
+                  category: ge-lower
+            - term: spring
+              slots:
+                - type: course
+                  courseId: CST-238
+                  credits: 4
+                  category: cst
+                - type: course
+                  courseId: MATH-150
+                  credits: 4
+                  category: math
+                - type: course
+                  courseId: MATH-170
+                  credits: 4
+                  category: math
+                - type: course
+                  courseId: CST-271
+                  credits: 3
+                  category: ge-lower
+        - year: sophomore
+          terms:
+            - term: fall
+              slots:
+                - type: course
+                  courseId: CST-237
+                  credits: 4
+                  category: cst
+                - type: choice
+                  slotId: math-foundation-choice
+                  alternatives:
+                    - MATH-151
+                    - MATH-270
+                  credits: 4
+                  category: math
+                  guidance: Choose one mathematics foundation course.
+                - type: requirement
+                  slotId: ge-4-lower-division
+                  label: GE Area 4 Lower Division
+                  credits: 3
+                  category: ge-lower
+                  guidance: Complete a lower-division GE Area 4 course.
+                - type: requirement
+                  slotId: ge-6-lower-division
+                  label: GE Area 6 Lower Division
+                  credits: 3
+                  category: ge-lower
+                  guidance: Complete a lower-division GE Area 6 course.
+            - term: spring
+              slots:
+                - type: choice
+                  slotId: world-culture-or-language
+                  alternatives:
+                    - JAPN-350
+                    - SPAN-350
+                  credits: 3
+                  category: ge-lower
+                  guidance: Choose either the Japanese or Spanish World Culture and Language course.
+        - year: junior
+          terms:
+            - term: fall
+              slots:
+                - type: choice
+                  slotId: junior-fall-cst-334-or-cst-370
+                  alternatives:
+                    - CST-334
+                    - CST-370
+                  credits: 4
+                  category: cst
+                  guidance: Choose either CST 334 or CST 370; complete the other course in the following term.
+                - type: course
+                  courseId: CST-338
+                  credits: 4
+                  category: cst
+                - type: course
+                  courseId: CST-349
+                  credits: 2
+                  category: cst
+                - type: requirement
+                  slotId: junior-fall-elective-prerequisite
+                  label: Elective
+                  credits: 4
+                  category: elective
+                  guidance: Complete an upper-division elective or concentration requirement.
+            - term: spring
+              slots:
+                - type: choice
+                  slotId: junior-spring-cst-334-or-cst-370
+                  alternatives:
+                    - CST-334
+                    - CST-370
+                  credits: 4
+                  category: cst
+                  guidance: Complete the CST 334 or CST 370 course not taken in junior fall.
+                - type: course
+                  courseId: CST-300
+                  credits: 3
+                  category: cst
+                - type: requirement
+                  slotId: junior-spring-elective-prerequisite
+                  label: Elective
+                  credits: 4
+                  category: elective
+                  guidance: Complete an upper-division elective or concentration requirement.
+                - type: requirement
+                  slotId: junior-spring-elective
+                  label: Elective
+                  credits: 4
+                  category: elective
+                  guidance: Complete an elective appropriate to your future concentration.
+        - year: senior
+          terms:
+            - term: fall
+              slots:
+                - type: course
+                  courseId: CST-462S
+                  credits: 3
+                  category: cst
+                - type: requirement
+                  slotId: senior-fall-elective-1
+                  label: Elective
+                  credits: 4
+                  category: elective
+                  guidance: Complete an upper-division elective.
+                - type: requirement
+                  slotId: senior-fall-elective-2
+                  label: Elective
+                  credits: 4
+                  category: elective
+                  guidance: Complete an upper-division elective.
+                - type: requirement
+                  slotId: ge-3-upper-division
+                  label: GE Area 3 Upper Division
+                  credits: 3
+                  category: ge-upper
+                  guidance: Complete an upper-division GE Area 3 course.
+            - term: spring
+              slots:
+                - type: course
+                  courseId: CST-499
+                  credits: 4
+                  category: cst
+                - type: requirement
+                  slotId: senior-spring-elective
+                  label: Elective
+                  credits: 4
+                  category: elective
+                  guidance: Complete an upper-division elective.
+                - type: choice
+                  slotId: ge-2-or-ge-5-upper-division
+                  alternatives:
+                    - GE Area 2
+                    - GE Area 5
+                  credits: 3
+                  category: ge-upper
+                  guidance: Choose an upper-division course in GE Area 2 or GE Area 5.
+                - type: requirement
+                  slotId: ge-4-upper-division
+                  label: GE Area 4 Upper Division
+                  credits: 3
+                  category: ge-upper
+                  guidance: Complete an upper-division GE Area 4 course.
+  ast-to-bs:
+    status: verified
+    plan:
+      schemaVersion: 1
+      years:
+        - year: freshman
+          terms:
+            - term: fall
+              slots:
+                - type: course
+                  courseId: CST-231
+                  credits: 4
+                  category: cst
+                - type: course
+                  courseId: FYS-145
+                  credits: 3
+                  category: ge-lower
+                - type: course
+                  courseId: MATH-130
+                  credits: 5
+                  category: math
+                - type: course
+                  courseId: CST-286
+                  credits: 3
+                  category: ge-lower
+            - term: spring
+              slots:
+                - type: course
+                  courseId: CST-238
+                  credits: 4
+                  category: cst
+                - type: course
+                  courseId: MATH-150
+                  credits: 4
+                  category: math
+                - type: course
+                  courseId: MATH-170
+                  credits: 4
+                  category: math
+                - type: course
+                  courseId: CST-271
+                  credits: 3
+                  category: ge-lower
+        - year: sophomore
+          terms:
+            - term: fall
+              slots:
+                - type: course
+                  courseId: CST-237
+                  credits: 4
+                  category: cst
+                - type: choice
+                  slotId: math-foundation-choice
+                  alternatives:
+                    - MATH-151
+                    - MATH-270
+                  credits: 4
+                  category: math
+                  guidance: Choose one mathematics foundation course.
+                - type: requirement
+                  slotId: ge-4-lower-division
+                  label: GE Area 4 Lower Division
+                  credits: 3
+                  category: ge-lower
+                  guidance: Complete a lower-division GE Area 4 course.
+                - type: requirement
+                  slotId: ge-6-lower-division
+                  label: GE Area 6 Lower Division
+                  credits: 3
+                  category: ge-lower
+                  guidance: Complete a lower-division GE Area 6 course.
+            - term: spring
+              slots:
+                - type: choice
+                  slotId: world-culture-or-language
+                  alternatives:
+                    - JAPN-350
+                    - SPAN-350
+                  credits: 3
+                  category: ge-lower
+                  guidance: Choose either the Japanese or Spanish World Culture and Language course.
+        - year: junior
+          terms:
+            - term: fall
+              slots:
+                - type: choice
+                  slotId: junior-fall-cst-334-or-cst-370
+                  alternatives:
+                    - CST-334
+                    - CST-370
+                  credits: 4
+                  category: cst
+                  guidance: Choose either CST 334 or CST 370; complete the other course in the following term.
+                - type: course
+                  courseId: CST-338
+                  credits: 4
+                  category: cst
+                - type: course
+                  courseId: CST-349
+                  credits: 2
+                  category: cst
+                - type: requirement
+                  slotId: junior-fall-elective-prerequisite
+                  label: Elective
+                  credits: 4
+                  category: elective
+                  guidance: Complete an upper-division elective or concentration requirement.
+            - term: spring
+              slots:
+                - type: choice
+                  slotId: junior-spring-cst-334-or-cst-370
+                  alternatives:
+                    - CST-334
+                    - CST-370
+                  credits: 4
+                  category: cst
+                  guidance: Complete the CST 334 or CST 370 course not taken in junior fall.
+                - type: course
+                  courseId: CST-300
+                  credits: 3
+                  category: cst
+                - type: requirement
+                  slotId: junior-spring-elective-prerequisite
+                  label: Elective
+                  credits: 4
+                  category: elective
+                  guidance: Complete an upper-division elective or concentration requirement.
+                - type: requirement
+                  slotId: junior-spring-elective
+                  label: Elective
+                  credits: 4
+                  category: elective
+                  guidance: Complete an elective appropriate to your future concentration.
+        - year: senior
+          terms:
+            - term: fall
+              slots:
+                - type: course
+                  courseId: CST-462S
+                  credits: 3
+                  category: cst
+                - type: requirement
+                  slotId: senior-fall-elective-1
+                  label: Elective
+                  credits: 4
+                  category: elective
+                  guidance: Complete an upper-division elective.
+                - type: requirement
+                  slotId: senior-fall-elective-2
+                  label: Elective
+                  credits: 4
+                  category: elective
+                  guidance: Complete an upper-division elective.
+                - type: requirement
+                  slotId: ge-3-upper-division
+                  label: GE Area 3 Upper Division
+                  credits: 3
+                  category: ge-upper
+                  guidance: Complete an upper-division GE Area 3 course.
+            - term: spring
+              slots:
+                - type: course
+                  courseId: CST-499
+                  credits: 4
+                  category: cst
+                - type: requirement
+                  slotId: senior-spring-elective
+                  label: Elective
+                  credits: 4
+                  category: elective
+                  guidance: Complete an upper-division elective.
+                - type: choice
+                  slotId: ge-2-or-ge-5-upper-division
+                  alternatives:
+                    - GE Area 2
+                    - GE Area 5
+                  credits: 3
+                  category: ge-upper
+                  guidance: Choose an upper-division course in GE Area 2 or GE Area 5.
+                - type: requirement
+                  slotId: ge-4-upper-division
+                  label: GE Area 4 Upper Division
+                  credits: 3
+                  category: ge-upper
+                  guidance: Complete an upper-division GE Area 4 course.
