@@ -140,6 +140,21 @@ describe('suggested scheduling', () => {
     expect(networkSecurity.assignments.get(progressKey(juniorFallElectivePrerequisite))).toBe('CST-311')
   })
 
+  it('exposes program credit requirements as selectable course-and-unit slots in derived roadmaps', () => {
+    const cinematicPlan = planForDegreeType('bs', 'ba-cinematic-arts-and-technology', '2026')
+    const schedule = buildSuggestedSchedule(cinematicPlan, new Set(), {
+      programId: 'ba-cinematic-arts-and-technology',
+      catalogVersion: '2026',
+      includeProgramRequirements: true,
+    })
+    const option = [...schedule.courseOptions.values()].find(candidate => candidate.requirementId === 'complete-4-units-from-the-following-lower-division-research-and-development-courses-3')
+
+    expect(option).toMatchObject({
+      minimumCredits: 4,
+      courseIds: expect.arrayContaining(['CART-205', 'CART-208', 'CART-215']),
+    })
+  })
+
   it('reserves elective choices for a selected minor before flexible major electives', () => {
     const schedule = buildSuggestedSchedule(curriculumPlan, new Set(), {
       programId: 'bs-computer-science',

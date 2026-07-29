@@ -136,6 +136,7 @@ export interface Course {
   aliases: string[]
   name: string
   units: number
+  maximumUnits: number
   teachingStatus: 'active' | 'inactive'
   description?: string
   offeredTerms?: readonly AcademicTerm[]
@@ -292,6 +293,7 @@ const catalogEntries: Course[] = Object.entries(parsedCatalog.courses).map(([id,
     aliases: [course.code, course.code.replace(' ', '')],
     name: course.title,
     units: course.credits.minimum,
+    maximumUnits: course.credits.maximum,
     teachingStatus: course.teachingStatus,
     description: course.description,
     offeredTerms: course.offered && 'terms' in course.offered ? course.offered.terms : undefined,

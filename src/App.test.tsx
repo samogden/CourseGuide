@@ -183,4 +183,16 @@ describe('planner', () => {
     expect(screen.getAllByText('ART 200')).not.toHaveLength(0)
     expect(localStorage.getItem('courseguide-additional-courses-v1')).toContain('ART 200')
   })
+
+  it('adds variable-credit coursework to a derived program requirement', () => {
+    render(<App />)
+    fireEvent.change(screen.getByLabelText('Major'), { target: { value: 'ba-cinematic-arts-and-technology' } })
+    fireEvent.click(screen.getByRole('button', { name: /complete 4 units from the following lower division research/i }))
+
+    expect(screen.getByText('0 of 4 required credits selected.')).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: 'Add course' }))
+
+    expect(screen.getByText('1 of 4 required credits selected.')).toBeInTheDocument()
+    expect(localStorage.getItem('courseguide-requirement-courses-v1')).toContain('CART-205')
+  })
 })

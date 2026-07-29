@@ -1,7 +1,7 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
 import './App.css'
 import { AdditionalCourseAdd, AdditionalCourseCell, AdditionalCourseModal, AdditionalCoursePlaceholder, type AdditionalCourse } from './components/AdditionalCourse'
-import { CourseCell, CourseModal } from './components/CourseBox'
+import { CourseCell, CourseModal, type RequirementCourseSelection } from './components/CourseBox'
 import { ReadinessAssessment } from './components/ReadinessAssessment'
 import { TransferReadiness } from './components/TransferReadiness'
 import { getAssessmentPack } from './models/Assessments'
@@ -18,6 +18,7 @@ const transferPreparationStorageKey = 'courseguide-transfer-preparation-v1'
 const additionalCoursesStorageKey = 'courseguide-additional-courses-v1'
 const minorStorageKey = 'courseguide-minor-v1'
 const programStorageKey = 'courseguide-program-v1'
+const requirementCoursesStorageKey = 'courseguide-requirement-courses-v1'
 const RegistrationPlanner = lazy(() => import('./components/RegistrationPlanner').then(module => ({ default: module.RegistrationPlanner })))
 
 function targetCourseKey(catalogVersion: string, programId: string, degreeType: DegreeType, scope: string, slotKey: string): string {
@@ -25,7 +26,9 @@ function targetCourseKey(catalogVersion: string, programId: string, degreeType: 
 }
 
 function targetScopeForSlot(slot: PlanSlot, concentrationId: string | null, minorId: string | null): string | null {
-  const baseScope = slot.type === 'choice' ? 'general' : concentrationId
+  const baseScope = slot.type === 'choice' || (slot.type === 'requirement' && slot.slotId.startsWith('derived-'))
+    ? 'general'
+    : concentrationId
   if (!baseScope) return null
   return minorId ? `${baseScope}/minor-${minorId}` : baseScope
 }
@@ -112,6 +115,24 @@ function readProgram(): string {
   }
 }
 
+function readRequirementCourses(): Map<string, RequirementCourseSelection[]> {
+  try {
+    const value: unknown = JSON.parse(localStorage.getItem(requirementCoursesStorageKey) ?? '{}')
+    if (!value || typeof value !== 'object' || Array.isArray(value)) return new Map()
+    return new Map(Object.entries(value).flatMap(([key, selections]) => {
+      if (!Array.isArray(selections)) return []
+      const validSelections = selections.flatMap(selection => {
+        if (!selection || typeof selection !== 'object') return []
+        const { courseId, credits } = selection as Record<string, unknown>
+        return typeof courseId === 'string' && typeof credits === 'number' && Number.isFinite(credits) && credits > 0 ? [{ courseId, credits }] : []
+      })
+      return [[key, validSelections] as [string, RequirementCourseSelection[]]]
+    }))
+  } catch {
+    return new Map()
+  }
+}
+
 function readTransferPreparation(): Map<string, string[]> {
   try {
     const value: unknown = JSON.parse(localStorage.getItem(transferPreparationStorageKey) ?? '{}')
@@ -159,6 +180,7 @@ function App() {
   const [selectedCatalogVersion, setSelectedCatalogVersion] = useState<string>(() => readCatalogVersion())
   const [degreeType, setDegreeType] = useState<DegreeType>(() => readDegreeType())
   const [selectedProgramId, setSelectedProgramId] = useState<string>(() => readProgram())
+  const [requirementCourses, setRequirementCourses] = useState<Map<string, RequirementCourseSelection[]>>(() => readRequirementCourses())
   const [selectedMinor, setSelectedMinor] = useState<string | null>(() => readMinor())
   const [targetCourses, setTargetCourses] = useState<Map<string, string>>(() => readTargetCourses())
   const [transferPreparation, setTransferPreparation] = useState<Map<string, string[]>>(() => readTransferPreparation())
@@ -198,6 +220,10 @@ function App() {
   }, [selectedProgramId])
 
   useEffect(() => {
+    localStorage.setItem(requirementCoursesStorageKey, JSON.stringify(Object.fromEntries(requirementCourses)))
+  }, [requirementCourses])
+
+  useEffect(() => {
     localStorage.setItem(transferPreparationStorageKey, JSON.stringify(Object.fromEntries(transferPreparation)))
   }, [transferPreparation])
 
@@ -232,6 +258,7 @@ function App() {
     setDegreeType('bs')
     setSelectedMinor(null)
     setSelectedProgramId('bs-computer-science')
+    setRequirementCourses(new Map())
     setActiveView('roadmap')
     setRegistrationTerm('fall')
     setCompactedCreditLimit(15)
@@ -334,11 +361,24 @@ function App() {
       .filter(([key]) => [...activeTargetScopes].some(scope => key.startsWith(`${selectedCatalogVersion}/${activeProgramId}/${degreeType}/${scope}:`)))
       .map(([key, courseId]) => [key.slice(key.indexOf(':') + 1), courseId]),
   )
+  const requirementSelectionKeyForSlot = (slot: PlanSlot): string | null => {
+    const scope = targetScopeForSlot(slot, activeConcentrationId, activeMinorId)
+    return scope ? targetCourseKey(selectedCatalogVersion, activeProgramId, degreeType, scope, progressKey(slot)) : null
+  }
+  const activeRequirementCoursesBySlot = new Map<string, RequirementCourseSelection[]>()
+  for (const slot of activePlan.years.flatMap(year => year.terms.flatMap(term => term.slots))) {
+    const key = requirementSelectionKeyForSlot(slot)
+    const selections = key ? requirementCourses.get(key) : undefined
+    if (selections?.length) activeRequirementCoursesBySlot.set(progressKey(slot), selections)
+  }
+  const reservedRequirementCourseIds = new Map([...activeRequirementCoursesBySlot].map(([slotKey, selections]) => [slotKey, selections.map(selection => selection.courseId)]))
   const suggestedSchedule = buildSuggestedSchedule(activePlan, completed, {
     programId: activeProgramId,
     catalogVersion: selectedCatalogVersion,
     concentrationId: activeConcentrationId,
     minorId: activeMinorId,
+    includeProgramRequirements: activeRoadmap?.status === 'derived',
+    reservedCourseIds: reservedRequirementCourseIds,
     targetCourses: activeTargetCourses,
     ...(degreeType === 'ast-to-bs' ? { assumedCompletedCourseIds: transferAssumedCourseIds } : {}),
   })
@@ -347,6 +387,8 @@ function App() {
     catalogVersion: selectedCatalogVersion,
     concentrationId: activeConcentrationId,
     minorId: activeMinorId,
+    includeProgramRequirements: activeRoadmap?.status === 'derived',
+    reservedCourseIds: reservedRequirementCourseIds,
     targetCourses: activeTargetCourses,
     currentTerm: registrationTerm,
     ...(degreeType === 'ast-to-bs' ? { assumedCompletedCourseIds: transferAssumedCourseIds } : {}),
@@ -356,6 +398,8 @@ function App() {
     catalogVersion: selectedCatalogVersion,
     concentrationId: activeConcentrationId,
     minorId: activeMinorId,
+    includeProgramRequirements: activeRoadmap?.status === 'derived',
+    reservedCourseIds: reservedRequirementCourseIds,
     targetCourses: activeTargetCourses,
     ...(degreeType === 'ast-to-bs' ? { assumedCompletedCourseIds: transferAssumedCourseIds } : {}),
   })
@@ -401,6 +445,34 @@ function App() {
       {placeholderCredits > 0 && <AdditionalCoursePlaceholder credits={placeholderCredits} onSelect={open} />}
       {placeholderCredits === 0 && canAdd && <AdditionalCourseAdd onSelect={open} />}
     </>
+  }
+
+  const addRequirementCourse = (slot: PlanSlot, courseId: string, credits: number) => {
+    const key = requirementSelectionKeyForSlot(slot)
+    const options = suggestedSchedule.courseOptions.get(progressKey(slot))
+    const course = getCourse(courseId)
+    const requiredCredits = options?.minimumCredits
+    if (!key || !requiredCredits || !options.courseIds.includes(courseId) || !course || credits < course.units || credits > course.maximumUnits) return
+    setRequirementCourses(current => {
+      const existing = current.get(key) ?? []
+      const alreadyReserved = [...current.entries()].some(([selectionKey, selections]) => selectionKey !== key && selections.some(selection => selection.courseId === courseId))
+      if (alreadyReserved || existing.some(selection => selection.courseId === courseId) || existing.reduce((total, selection) => total + selection.credits, 0) + credits > requiredCredits) return current
+      const next = new Map(current)
+      next.set(key, [...existing, { courseId, credits }])
+      return next
+    })
+  }
+
+  const removeRequirementCourse = (slot: PlanSlot, courseId: string) => {
+    const key = requirementSelectionKeyForSlot(slot)
+    if (!key) return
+    setRequirementCourses(current => {
+      const next = new Map(current)
+      const remaining = (next.get(key) ?? []).filter(selection => selection.courseId !== courseId)
+      if (remaining.length) next.set(key, remaining)
+      else next.delete(key)
+      return next
+    })
   }
 
   return (
@@ -520,7 +592,7 @@ function App() {
                       const courseOptions = suggestedSchedule.courseOptions.get(progressKey(slot))
                       const isCompleted = completed.has(assignedCourseId ? `course:${assignedCourseId}` : progressKey(slot))
                       const suggestion = suggestedSchedule.suggestions.get(progressKey(slot)) ?? null
-                      return <CourseCell key={progressKey(slot)} slot={slot} assignedCourseId={assignedCourseId} courseOptions={courseOptions} selectedTarget={suggestedSchedule.selectedTargetKeys.has(progressKey(slot))} completed={isCompleted} suggestion={suggestion} highPriority={suggestedSchedule.isHighPriority(slot) && !isCompleted} onSelect={() => setSelectedSlot(slot)} />
+                      return <CourseCell key={progressKey(slot)} slot={slot} assignedCourseId={assignedCourseId} courseOptions={courseOptions} requirementSelections={activeRequirementCoursesBySlot.get(progressKey(slot))} selectedTarget={suggestedSchedule.selectedTargetKeys.has(progressKey(slot))} completed={isCompleted} suggestion={suggestion} highPriority={suggestedSchedule.isHighPriority(slot) && !isCompleted} onSelect={() => setSelectedSlot(slot)} />
                     })}
                     {renderAdditionalCoursework(`${year.year}-${term.term}`, `${degreeYearLabel(degreeType, year.year)} ${term.term}`, term.slots.reduce((total, slot) => total + slot.credits, 0))}
                   </div>
@@ -560,7 +632,7 @@ function App() {
                       const assignedCourseId = compactedSchedule.assignments.get(progressKey(slot))
                       const courseOptions = compactedSchedule.courseOptions.get(progressKey(slot))
                       const isCompleted = completed.has(assignedCourseId ? `course:${assignedCourseId}` : progressKey(slot))
-                      return <CourseCell key={progressKey(slot)} slot={slot} assignedCourseId={assignedCourseId} courseOptions={courseOptions} selectedTarget={compactedSchedule.selectedTargetKeys.has(progressKey(slot))} completed={isCompleted} suggestion={null} highPriority={false} onSelect={() => setSelectedSlot(slot)} />
+                      return <CourseCell key={progressKey(slot)} slot={slot} assignedCourseId={assignedCourseId} courseOptions={courseOptions} requirementSelections={activeRequirementCoursesBySlot.get(progressKey(slot))} selectedTarget={compactedSchedule.selectedTargetKeys.has(progressKey(slot))} completed={isCompleted} suggestion={null} highPriority={false} onSelect={() => setSelectedSlot(slot)} />
                     })}
                     {renderAdditionalCoursework(`${term.year}-${term.term}`, `${term.year}${term.year === 1 ? 'st' : term.year === 2 ? 'nd' : term.year === 3 ? 'rd' : 'th'} year ${term.term}`, term.credits)}
                   </div>
@@ -571,10 +643,10 @@ function App() {
         </div>
       </div>
       </>}
-      {selectedSlot && !assessmentCourseId && <CourseModal slot={selectedSlot} resolvedCourseId={resolvedCourseId} courseOptions={selectedCourseOptions} selectedTarget={suggestedSchedule.selectedTargetKeys.has(progressKey(selectedSlot))} completed={completed.has(progressKey(selectedSlot)) || completed.has(resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(selectedSlot))} prerequisitesMet={selectedPrerequisitesMet} assessmentAvailable={Boolean(resolvedCourseId && getAssessmentPack(resolvedCourseId))} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => {
+      {selectedSlot && !assessmentCourseId && <CourseModal slot={selectedSlot} resolvedCourseId={resolvedCourseId} courseOptions={selectedCourseOptions} requirementSelections={activeRequirementCoursesBySlot.get(progressKey(selectedSlot))} selectedTarget={suggestedSchedule.selectedTargetKeys.has(progressKey(selectedSlot))} completed={completed.has(progressKey(selectedSlot)) || completed.has(resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(selectedSlot))} prerequisitesMet={selectedPrerequisitesMet} assessmentAvailable={Boolean(resolvedCourseId && getAssessmentPack(resolvedCourseId))} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => {
         if (isCompleted && selectedSlot.type !== 'course' && resolvedCourseId && selectedCourseOptions) selectTargetCourse(selectedSlot, resolvedCourseId)
         updateCompletion(selectedSlot, isCompleted, resolvedCourseId)
-      }} onTargetCourseSelect={courseId => selectTargetCourse(selectedSlot, courseId)} onTargetCourseClear={() => clearTargetCourse(selectedSlot)} onOpenAssessment={() => resolvedCourseId && setAssessmentCourseId(resolvedCourseId)} />}
+      }} onTargetCourseSelect={courseId => selectTargetCourse(selectedSlot, courseId)} onTargetCourseClear={() => clearTargetCourse(selectedSlot)} onRequirementCourseAdd={(courseId, credits) => addRequirementCourse(selectedSlot, courseId, credits)} onRequirementCourseRemove={courseId => removeRequirementCourse(selectedSlot, courseId)} onOpenAssessment={() => resolvedCourseId && setAssessmentCourseId(resolvedCourseId)} />}
       {additionalCourseTerm && <AdditionalCourseModal
         courses={additionalCourses.get(additionalCourseTerm.key) ?? []}
         maximumCredits={Math.max(0, 18 - additionalCourseTerm.plannedCredits - (additionalCourses.get(additionalCourseTerm.key) ?? []).reduce((total, course) => total + course.credits, 0))}

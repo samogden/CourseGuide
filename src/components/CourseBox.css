@@ -185,3 +185,8 @@
 .course-modal-actions .assessment-control:focus-visible { background: #1e40af; outline: 3px solid #93c5fd; outline-offset: 2px; }
 .course-modal-actions .taken-control:hover,
 .course-modal-actions .taken-control:focus-visible { background: #166534; outline: 3px solid #86efac; outline-offset: 2px; }
+
+.credit-course-picker { align-items: end; display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.75rem; }
+.credit-course-picker label { display: grid; font-weight: 700; gap: 0.25rem; }
+.credit-course-picker input, .credit-course-picker select { border: 1px solid #94a3b8; border-radius: 0.3rem; font: inherit; padding: 0.35rem; }
+.credit-course-picker input { width: 5rem; }

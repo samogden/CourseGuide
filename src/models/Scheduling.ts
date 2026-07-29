@@ -1,5 +1,6 @@
 import {
   concentrationRequirements,
+  activeProgramRequirements,
   defaultCatalogVersion,
   candidateCourseIds,
   directRequirementCourseIds,
@@ -30,6 +31,8 @@ export interface PathSlotOptions {
   courseIds: readonly string[]
   required?: boolean
   prerequisites?: readonly unknown[]
+  minimumCredits?: number
+  requirementId?: string
 }
 
 export interface SuggestedSchedule {
@@ -47,6 +50,8 @@ export interface ScheduleSelection {
   programId?: string
   concentrationId?: string | null
   minorId?: string | null
+  includeProgramRequirements?: boolean
+  reservedCourseIds?: ReadonlyMap<string, readonly string[]>
   targetCourses?: ReadonlyMap<string, string>
   currentTerm?: 'fall' | 'spring'
   /** Transfer coursework that is assumed satisfied without rendering it in the active plan. */
@@ -138,7 +143,10 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
     if (slot.type === 'choice') return slot.alternatives
     return []
   }))))
-  const pathRequirements = resolvePathRequirements(selection)
+  const programRequirements = selection?.includeProgramRequirements
+    ? activeProgramRequirements(selection.programId ?? defaultProgramId, null, selection.catalogVersion ?? defaultCatalogVersion)
+    : []
+  const pathRequirements = [...programRequirements, ...resolvePathRequirements(selection)]
   const hasPathRequirements = pathRequirements.length > 0
   const preferredCourseIds = new Set([...explicitPlannedCourseIds, ...completedCourseIds])
   const activeCourseIds = hasPathRequirements ? expandPrerequisiteClosure(candidateCourseIds(pathRequirements), preferredCourseIds) : new Set<string>()
@@ -157,6 +165,8 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
     rankedPathAssignmentCourses,
     directRequiredCourseIds,
     selection?.targetCourses,
+    selection?.reservedCourseIds,
+    new Set(programRequirements.map(requirement => requirement.id)),
   )
   const suggestions = new Map<string, ScheduledSuggestion>()
   const selectedEntries: SelectedEntry[] = []
@@ -483,6 +493,8 @@ function buildPathAssignments(
   rankedPathCourses: RankedCourse[],
   directRequiredCourseIds: ReadonlySet<string>,
   targetCourses?: ReadonlyMap<string, string>,
+  reservedCourseIds?: ReadonlyMap<string, readonly string[]>,
+  creditSelectableRequirementIds: ReadonlySet<string> = new Set(),
 ): { assignments: Map<string, string>; courseOptions: Map<string, PathSlotOptions>; selectedTargetKeys: Set<string> } {
   const assignments = new Map<string, string>()
   const courseOptions = buildChoiceOptions(plan)
@@ -505,6 +517,11 @@ function buildPathAssignments(
           }
 
           if (slot.type !== 'requirement' || slot.category !== 'elective') continue
+          const derivedRequirementId = requirementIdForDerivedSlot(slot)
+          if (derivedRequirementId && creditSelectableRequirementIds.has(derivedRequirementId)) {
+            remainingSlots.push({ slot, term: term.term })
+            continue
+          }
           const courseId = pickGenericCourse(slot, courseIdsCompletedBeforeTerm, requiredPathCourses, usedPathCourseIds, term.term)
           if (!courseId) {
             remainingSlots.push({ slot, term: term.term })
@@ -518,12 +535,15 @@ function buildPathAssignments(
       }
     }
 
-    const optionGroups = pathOptionGroups(pathRequirements)
+    const optionGroups = pathOptionGroups(pathRequirements, creditSelectableRequirementIds)
       .sort((left, right) => Number(Boolean(right.required)) - Number(Boolean(left.required)))
     const projectedByTerm = projectedCoursesBeforeTerms(plan, completedCourseIds, assignments)
     const unassignedSlots = [...remainingSlots]
     for (const optionGroup of optionGroups) {
       const slotIndex = unassignedSlots.findIndex(({ slot, term }) => {
+        const derivedRequirementId = requirementIdForDerivedSlot(slot)
+        if (derivedRequirementId) return optionGroup.requirementId === derivedRequirementId
+        if (optionGroup.requirementId) return false
         const projectedCourseIds = projectedByTerm.get(progressKey(slot)) ?? completedCourseIds
         return prerequisitesMet(optionGroup.prerequisites ?? [], projectedCourseIds) && optionGroup.courseIds.some(courseId => {
           const course = getCourse(courseId)
@@ -541,7 +561,10 @@ function buildPathAssignments(
     }
   }
 
-  const unavailableCourseIds = new Set(assignments.values())
+  const unavailableCourseIds = new Set([
+    ...assignments.values(),
+    ...[...(reservedCourseIds ?? new Map()).values()].flat(),
+  ])
   for (const [slotKey, courseId] of targetCourses ?? []) {
     const options = courseOptions.get(slotKey)
     if (!options || !options.courseIds.includes(courseId) || unavailableCourseIds.has(courseId)) continue
@@ -549,7 +572,7 @@ function buildPathAssignments(
     selectedTargetKeys.add(slotKey)
     unavailableCourseIds.add(courseId)
   }
-  filterUnavailableOptions(courseOptions, assignments, unavailableCourseIds)
+  filterUnavailableOptions(courseOptions, assignments, unavailableCourseIds, reservedCourseIds)
 
   return { assignments, courseOptions, selectedTargetKeys }
 }
@@ -567,18 +590,19 @@ function buildChoiceOptions(plan: CurriculumPlan): Map<string, PathSlotOptions> 
   return options
 }
 
-function filterUnavailableOptions(optionsBySlot: Map<string, PathSlotOptions>, assignments: ReadonlyMap<string, string>, unavailableCourseIds: ReadonlySet<string>) {
+function filterUnavailableOptions(optionsBySlot: Map<string, PathSlotOptions>, assignments: ReadonlyMap<string, string>, unavailableCourseIds: ReadonlySet<string>, reservedCourseIds: ReadonlyMap<string, readonly string[]> = new Map()) {
   for (const [slotKey, options] of optionsBySlot) {
     const selectedCourseId = assignments.get(slotKey)
+    const selectedForSlot = new Set(reservedCourseIds.get(slotKey) ?? [])
     optionsBySlot.set(slotKey, {
       ...options,
-      courseIds: options.courseIds.filter(courseId => courseId === selectedCourseId || !unavailableCourseIds.has(courseId)),
+      courseIds: options.courseIds.filter(courseId => courseId === selectedCourseId || selectedForSlot.has(courseId) || !unavailableCourseIds.has(courseId)),
     })
   }
 }
 
-function pathOptionGroups(requirements: Requirement[]): PathSlotOptions[] {
-  return requirements.flatMap(requirement => {
+function pathOptionGroups(requirements: Requirement[], creditSelectableRequirementIds: ReadonlySet<string> = new Set()): PathSlotOptions[] {
+  return requirements.flatMap<PathSlotOptions>(requirement => {
     const courseIds = requirementCourseIds(requirement)
     if (requirement.completion.kind === 'all') return []
     if (requirement.completion.kind === 'choose') {
@@ -589,12 +613,22 @@ function pathOptionGroups(requirements: Requirement[]): PathSlotOptions[] {
         ...(requirement.prerequisites ? { prerequisites: requirement.prerequisites } : {}),
       }))
     }
-    const slotCount = Math.ceil(requirement.completion.credits / 4)
+    const requiredCredits = requirement.completion.credits
+    const slotCount = Math.ceil(requiredCredits / 4)
     return Array.from({ length: slotCount }, () => ({
       label: requirement.optionLabel ?? 'Concentration elective option',
       courseIds,
+      ...(creditSelectableRequirementIds.has(requirement.id) ? {
+        minimumCredits: Math.min(4, requiredCredits),
+        requirementId: requirement.id,
+      } : {}),
     }))
   })
+}
+
+function requirementIdForDerivedSlot(slot: Extract<PlanSlot, { type: 'requirement' }>): string | undefined {
+  const match = /^derived-(.+)-\d+$/.exec(slot.slotId)
+  return match?.[1]
 }
 
 function projectedCoursesBeforeTerms(plan: CurriculumPlan, completedCourseIds: ReadonlySet<string>, assignments: ReadonlyMap<string, string>): Map<string, Set<string>> {
