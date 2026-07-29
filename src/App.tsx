@@ -467,6 +467,11 @@ function App() {
   const selectedAssignedCourseId = selectedSlot ? suggestedSchedule.assignments.get(progressKey(selectedSlot)) : undefined
   const selectedCourseOptions = selectedSlot ? suggestedSchedule.courseOptions.get(progressKey(selectedSlot)) : undefined
   const resolvedCourseId = selectedSuggestion?.courseId ?? selectedAssignedCourseId ?? (selectedSlot?.type === 'course' ? selectedSlot.courseId : null)
+  // The placement choice assesses readiness for direct MATH 150 placement,
+  // so it always opens the MATH 130 preparation assessment.
+  const selectedAssessmentCourseId = selectedSlot && progressKey(selectedSlot) === 'slot:freshman-math-placement-choice'
+    ? 'MATH-130'
+    : resolvedCourseId
   const selectedPrerequisitesMet = resolvedCourseId ? (
     prerequisitesMet(getCourse(resolvedCourseId)?.prerequisites ?? [], completedCourseIds) &&
     getCourse(resolvedCourseId)?.generalEducationPrerequisites.every(area => completedGeneralEducation.has(area)) !== false
@@ -708,10 +713,10 @@ function App() {
         </div>
       </div>
       </>}
-      {selectedSlot && !assessmentCourseId && <CourseModal slot={selectedSlot} resolvedCourseId={resolvedCourseId} courseOptions={selectedCourseOptions} requirementSelections={activeRequirementCoursesBySlot.get(progressKey(selectedSlot))} selectedTarget={suggestedSchedule.selectedTargetKeys.has(progressKey(selectedSlot))} completed={completed.has(progressKey(selectedSlot)) || completed.has(resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(selectedSlot))} prerequisitesMet={selectedPrerequisitesMet} assessmentAvailable={Boolean(resolvedCourseId && getAssessmentPack(resolvedCourseId))} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => {
+      {selectedSlot && !assessmentCourseId && <CourseModal slot={selectedSlot} resolvedCourseId={resolvedCourseId} courseOptions={selectedCourseOptions} requirementSelections={activeRequirementCoursesBySlot.get(progressKey(selectedSlot))} selectedTarget={suggestedSchedule.selectedTargetKeys.has(progressKey(selectedSlot))} completed={completed.has(progressKey(selectedSlot)) || completed.has(resolvedCourseId ? `course:${resolvedCourseId}` : progressKey(selectedSlot))} prerequisitesMet={selectedPrerequisitesMet} assessmentAvailable={Boolean(selectedAssessmentCourseId && getAssessmentPack(selectedAssessmentCourseId))} assessmentCourseCode={selectedSlot && progressKey(selectedSlot) === 'slot:freshman-math-placement-choice' ? getCourse(selectedAssessmentCourseId ?? '')?.code : undefined} onClose={() => setSelectedSlot(null)} onCompletedChange={isCompleted => {
         if (isCompleted && selectedSlot.type !== 'course' && resolvedCourseId && selectedCourseOptions) selectTargetCourse(selectedSlot, resolvedCourseId)
         updateCompletion(selectedSlot, isCompleted, resolvedCourseId)
-      }} onTargetCourseSelect={courseId => selectTargetCourse(selectedSlot, courseId)} onTargetCourseClear={() => clearTargetCourse(selectedSlot)} onRequirementCourseAdd={(courseId, credits) => addRequirementCourse(selectedSlot, courseId, credits)} onRequirementCourseRemove={courseId => removeRequirementCourse(selectedSlot, courseId)} onOpenAssessment={() => resolvedCourseId && setAssessmentCourseId(resolvedCourseId)} />}
+      }} onTargetCourseSelect={courseId => selectTargetCourse(selectedSlot, courseId)} onTargetCourseClear={() => clearTargetCourse(selectedSlot)} onRequirementCourseAdd={(courseId, credits) => addRequirementCourse(selectedSlot, courseId, credits)} onRequirementCourseRemove={courseId => removeRequirementCourse(selectedSlot, courseId)} onOpenAssessment={() => selectedAssessmentCourseId && setAssessmentCourseId(selectedAssessmentCourseId)} />}
       {additionalCourseTerm && <AdditionalCourseModal
         courses={additionalCourses.get(additionalCourseTerm.key) ?? []}
         maximumCredits={Math.max(0, 18 - additionalCourseTerm.plannedCredits - (additionalCourses.get(additionalCourseTerm.key) ?? []).reduce((total, course) => total + course.credits, 0))}

@@ -40,7 +40,7 @@ export function CourseCell({ slot, assignedCourseId, courseOptions, requirementS
   )
 }
 
-export function CourseModal({ slot, resolvedCourseId, courseOptions, requirementSelections = [], selectedTarget, completed, prerequisitesMet, assessmentAvailable, onClose, onCompletedChange, onTargetCourseSelect, onTargetCourseClear, onRequirementCourseAdd, onRequirementCourseRemove, onOpenAssessment }: {
+export function CourseModal({ slot, resolvedCourseId, courseOptions, requirementSelections = [], selectedTarget, completed, prerequisitesMet, assessmentAvailable, assessmentCourseCode, onClose, onCompletedChange, onTargetCourseSelect, onTargetCourseClear, onRequirementCourseAdd, onRequirementCourseRemove, onOpenAssessment }: {
   slot: PlanSlot
   resolvedCourseId?: string | null
   courseOptions?: PathSlotOptions
@@ -49,6 +49,7 @@ export function CourseModal({ slot, resolvedCourseId, courseOptions, requirement
   completed: boolean
   prerequisitesMet?: boolean
   assessmentAvailable: boolean
+  assessmentCourseCode?: string
   onClose: () => void
   onCompletedChange: (completed: boolean) => void
   onTargetCourseSelect: (courseId: string) => void
@@ -131,7 +132,7 @@ export function CourseModal({ slot, resolvedCourseId, courseOptions, requirement
         </>}
         {slot.type === 'choice' && <p><strong>Alternatives:</strong> {slotLabel(slot)}</p>}
         {(assessmentAvailable || !courseOptions || resolvedCourseId) && <div className="course-modal-actions">
-          {assessmentAvailable && <button className="assessment-control" type="button" onClick={onOpenAssessment}>Check readiness</button>}
+          {assessmentAvailable && <button className="assessment-control" type="button" onClick={onOpenAssessment}>{assessmentCourseCode ? `Check ${assessmentCourseCode} readiness` : 'Check readiness'}</button>}
           {(!courseOptions || resolvedCourseId) && <button className="taken-control" type="button" onClick={() => {
             onCompletedChange(!completed)
             onClose()

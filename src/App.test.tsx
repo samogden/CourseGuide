@@ -44,13 +44,16 @@ describe('planner', () => {
     expect(screen.getByRole('button', { name: /MATH 130 or MATH 150/i })).toHaveTextContent('MATH 150')
     expect(screen.queryAllByRole('button', { name: /^MATH 150$/i })).toHaveLength(0)
     expect(localStorage.getItem('courseguide-target-courses-v1')).toContain('freshman-math-placement-choice')
+
+    fireEvent.click(screen.getByRole('button', { name: /MATH 130 or MATH 150/i }))
+    expect(screen.getByRole('button', { name: /check math 130 readiness/i })).toBeInTheDocument()
   })
 
-  it('offers the MATH 130 readiness self-evaluation from course details', () => {
+  it('offers the MATH 130 readiness self-evaluation from the math-placement choice', () => {
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /MATH 130/i }))
+    fireEvent.click(screen.getByRole('button', { name: /MATH 130 or MATH 150/i }))
 
-    expect(screen.getByRole('button', { name: /check readiness/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /check math 130 readiness/i })).toBeInTheDocument()
   })
 
   it('marks FYS 145 as taken', () => {
