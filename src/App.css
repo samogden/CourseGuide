@@ -48,5 +48,5 @@
 .term-row { display: grid; grid-column: 2; grid-template-columns: 5rem minmax(0, 1fr); }
 .term-row + .term-row { border-top: 1px solid #4b5563; }
 .term-label { background: #f8fafc; text-transform: capitalize; }
-.credit-grid { background-image: repeating-linear-gradient(to right, transparent 0, transparent calc(5.5556% - 1px), #b6bec9 calc(5.5556% - 1px), #b6bec9 5.5556%); background-size: 100% 100%; display: grid; grid-template-columns: repeat(18, minmax(0, 1fr)); min-height: 4.5rem; }
+.credit-grid { background-image: repeating-linear-gradient(to right, transparent 0, transparent calc(5.5556% - 1px), #b6bec9 calc(5.5556% - 1px), #b6bec9 5.5556%); background-size: 100% 100%; display: grid; grid-template-columns: repeat(18, minmax(0, 1fr)); height: 5.75rem; min-height: 5.75rem; }
 @media (max-width: 700px) { .planner { padding: 1rem; }.planner-header { align-items: start; flex-direction: column; gap: 1rem; }.planner h1 { font-size: 2rem; }.reset-button { width: 100%; }.credit-summary span + span { border-left: 0; padding-left: 0; } }

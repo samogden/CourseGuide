@@ -183,8 +183,10 @@ describe('curriculum data', () => {
 
     // Biology's two gateway choices are separate from the explicitly stated
     // 12-credit additional-coursework requirement.
-    expect(minorSlots.reduce((total, slot) => total + slot.credits, 0)).toBe(19)
+    expect(minorSlots.reduce((total, slot) => total + slot.credits, 0)).toBe(20)
     expect(minorSlots.filter(slot => slot.type === 'requirement').reduce((total, slot) => total + slot.credits, 0)).toBe(12)
+    const upperDivisionChoice = minorSlots.find(slot => slot.type === 'choice' && slot.slotId.includes('upper-division-biology-lab'))
+    expect(upperDivisionChoice).toMatchObject({ credits: 4 })
     expect(terms.every(term => term.slots.reduce((total, slot) => total + slot.credits, 0) <= 18)).toBe(true)
     expect(termIndexByMinorSlot.get('slot:minor-biology-complete-one-or-more-of-the-following-lower-division-biology-course-course-combinations-that-serve-as-prerequisites-to-upper-division-biology-courses-1')).toBeGreaterThanOrEqual(2)
     expect(termIndexByMinorSlot.get('slot:minor-biology-complete-one-of-the-following-upper-division-biology-lab-course-course-combinations-1')).toBeGreaterThanOrEqual(4)

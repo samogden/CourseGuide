@@ -204,7 +204,7 @@ describe('planner', () => {
 
   it('tracks extra coursework toward the 120-credit goal', () => {
     render(<App />)
-    fireEvent.click(screen.getAllByRole('button', { name: /extra coursework/i })[0])
+    fireEvent.click(screen.getAllByRole('button', { name: /extra credits/i })[0])
     fireEvent.change(screen.getByLabelText('Course code'), { target: { value: 'ART 200' } })
     fireEvent.change(screen.getByLabelText('Course name (optional)'), { target: { value: 'Introduction to Art' } })
     fireEvent.change(screen.getByLabelText('Credits'), { target: { value: '3' } })

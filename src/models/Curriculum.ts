@@ -486,7 +486,9 @@ export function appendMinorToPlan(plan: CurriculumPlan, minor: Minor | undefined
       const alternatives = requirementCourseIds(requirement).filter(courseId => !plannedCourseIds.has(courseId))
       if (alternatives.length < 2) continue
       for (let index = 0; index < requirement.completion.count; index += 1) {
-        const credits = getCourse(alternatives[0])?.units ?? 4
+        // Reserve enough grid width for any valid selection. Some catalog
+        // lists begin with a 3-credit option but also include 4-credit courses.
+        const credits = Math.max(4, ...alternatives.map(courseId => getCourse(courseId)?.units ?? 0))
         appendSlot({
           type: 'choice',
           slotId: `minor-${minor.id}-${requirement.id}-${index + 1}`,

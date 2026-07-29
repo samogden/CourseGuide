@@ -8,8 +8,10 @@
   display: flex;
   flex-direction: column;
   font: inherit;
+  height: 100%;
   justify-content: center;
-  min-height: 4.5rem;
+  min-height: 0;
+  overflow: hidden;
   padding: 0.35rem;
   text-align: center;
 }

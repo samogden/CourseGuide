@@ -18,8 +18,7 @@ export function AdditionalCourseCell({ course, onSelect }: { course: AdditionalC
 
 export function AdditionalCoursePlaceholder({ credits, onSelect }: { credits: number; onSelect: () => void }) {
   return <button className="additional-course-placeholder" style={{ gridColumn: `span ${credits}` }} type="button" onClick={onSelect}>
-    <span>Extra coursework</span>
-    <span>{credits} credits to reach 15</span>
+    <span>Extra credits</span>
   </button>
 }
 
