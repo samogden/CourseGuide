@@ -1,0 +1,32 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: peace-studies
+title: Peace Studies
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: complete-one-of-the-following-theories-of-conflict-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Theories of Conflict courses:"
+    courseIds:
+      - GS-317
+      - GS-327
+      - GS-363
+      - HCOM-404
+  - id: complete-one-of-the-following-communication-and-conflict-resolution-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Communication and Conflict Resolution courses:"
+    courseIds:
+      - HCOM-309
+      - HCOM-312
+      - HCOM-343
+      - HCOM-412

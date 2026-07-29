@@ -1,0 +1,48 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: health-and-wellness
+title: Health & Wellness
+college:
+  id: college-of-health-sciences-and-human-services
+  title: College of Health Sciences and Human Services
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: complete-one-of-the-following-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - KIN-330
+      - KIN-350
+      - KIN-363
+      - KIN-461
+  - id: complete-one-of-the-following-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - KIN-450
+      - KIN-490
+      - PH-417
+  - id: complete-one-of-the-following-courses-not-previously-taken
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses, not previously taken:"
+    courseIds:
+      - KIN-330
+      - KIN-350
+      - KIN-366
+  - id: complete-one-of-the-following-courses-not-previously-taken
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses, not previously taken:"
+    courseIds:
+      - KIN-366
+      - KIN-492

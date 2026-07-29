@@ -1,0 +1,21 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: psychology
+title: Psychology
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 19
+requirements:
+  - id: complete-all-of-the-following-courses
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - PSY-100
+      - STAT-100
+      - PSY-200
+      - PSY-200L

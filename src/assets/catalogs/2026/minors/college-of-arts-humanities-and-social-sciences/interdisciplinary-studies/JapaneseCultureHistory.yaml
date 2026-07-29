@@ -1,0 +1,34 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: japanese-culture-and-history
+title: Japanese Culture & History
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: to-satisfy-the-requirements-of-this-minor-successfully-complete-twelve-12-units-six-6-units-of-which-must-be-in-the-upper-division-from-any-of-the-following-courses
+    completion:
+      kind: all
+    optionLabel: "To satisfy the requirements of this minor, successfully complete twelve (12) units, six (6 units) of which must be in the upper division, from any of the following courses:"
+    courseIds:
+      - JAPN-211
+      - JAPN-212
+      - JAPN-213
+      - JAPN-215
+      - JAPN-305
+      - JAPN-306
+      - JAPN-307
+      - JAPN-308
+      - JAPN-309
+      - JAPN-310
+      - JAPN-311
+      - JAPN-314
+      - JAPN-317
+      - JAPN-405
+      - JAPN-407
+      - JAPN-410
+      - HCOM-322

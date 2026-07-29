@@ -1,0 +1,28 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: environmental-health-policy
+title: Environmental Health Policy
+college:
+  id: college-of-health-sciences-and-human-services
+  title: College of Health Sciences and Human Services
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: complete-a-minimum-of-12-units-from-the-following-courses
+    completion:
+      kind: minimumCredits
+      credits: 12
+    optionLabel: "Complete a minimum of 12 units from the following courses:"
+    courseIds:
+      - ENSTU-309
+      - ENSTU-365
+      - ENSTU-384S
+      - ENSTU-387
+      - ENSTU-412
+      - PH-207
+      - PH-407
+      - PH-417
+      - PH-447
+      - CHHS-450

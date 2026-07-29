@@ -1,0 +1,33 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: human-movement
+title: Human Movement
+college:
+  id: college-of-health-sciences-and-human-services
+  title: College of Health Sciences and Human Services
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 15
+requirements:
+  - id: complete-both-of-the-following-courses
+    completion:
+      kind: all
+    optionLabel: "Complete both of the following courses:"
+    courseIds:
+      - KIN-373
+      - KIN-373L
+  - id: complete-three-of-the-following-courses
+    completion:
+      kind: choose
+      count: 3
+    optionLabel: "Complete three of the following courses:"
+    courseIds:
+      - KIN-330
+      - KIN-331
+      - KIN-335
+      - KIN-340
+      - KIN-346
+      - KIN-355
+      - KIN-375
+      - KIN-450

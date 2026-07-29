@@ -1,0 +1,32 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: nonprofit-management
+title: Nonprofit Management
+college:
+  id: college-of-health-sciences-and-human-services
+  title: College of Health Sciences and Human Services
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 13
+requirements:
+  - id: complete-all-of-the-following-courses
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - BUS-433
+      - PANM-422
+      - CHHS-445
+  - id: complete-one-from-the-following-courses
+    completion:
+      kind: all
+    optionLabel: "Complete one from the following courses:"
+    courseIds:
+      - BUS-323
+      - BUS-330
+      - BUS-430
+      - PANM-412
+      - PANM-432
+      - PANM-442
+      - PANM-452

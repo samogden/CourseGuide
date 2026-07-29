@@ -1,0 +1,36 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: global-studies
+title: Global Studies
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: complete-at-least-twelve-units-selected-from-the-following-courses
+    completion:
+      kind: minimumCredits
+      credits: 12
+    optionLabel: "Complete at least twelve units  selected from the following courses:"
+    courseIds:
+      - GS-206
+      - GS-316
+      - GS-317
+      - GS-318
+      - GS-325
+      - GS-327
+      - GS-331
+      - GS-336
+      - GS-339S
+      - GS-342
+      - GS-350
+      - GS-351
+      - GS-362
+      - GS-363
+      - GS-370
+      - GS-379
+      - GS-385
+      - GS-390

@@ -1,0 +1,39 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: chicanx-studies
+title: Chicanx Studies
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 13
+requirements:
+  - id: complete-one-of-the-following-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - HCOM-345
+      - HCOM-455
+  - id: complete-three-of-the-following-courses
+    completion:
+      kind: choose
+      count: 3
+    optionLabel: "Complete three of the following courses:"
+    courseIds:
+      - HCOM-328
+      - HCOM-344
+      - HCOM-365
+      - HCOM-428
+      - HCOM-451
+      - HCOM-455
+      - LS-311
+      - SPAN-308
+      - SPAN-365
+      - SPAN-370
+      - SSCI-325
+      - SSCI-384S
+      - VPA-347

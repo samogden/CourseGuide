@@ -1,0 +1,34 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: environmental-studies
+title: Environmental Studies
+college:
+  id: college-of-science
+  title: College of Science
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: complete-one-or-more-of-the-following-courses
+    completion:
+      kind: all
+    optionLabel: "Complete one or more of the following courses:"
+    courseIds:
+      - ENSTU-309
+      - ENSTU-365
+      - ENSTU-375
+      - ENSTU-376
+      - ENSTU-387
+      - ENSTU-412
+  - id: complete-one-or-more-of-the-following-courses
+    completion:
+      kind: all
+    optionLabel: "Complete one or more of the following courses:"
+    courseIds:
+      - ENSTU-349S
+      - ENSTU-350
+      - ENSTU-369S
+      - ENVS-382S
+      - ENSTU-384S
+      - ENSTU-394

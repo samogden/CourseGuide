@@ -1,0 +1,36 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: visual-and-public-art
+title: Visual & Public Art
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 13
+requirements:
+  - id: complete-one-of-the-following-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - VPA-307
+      - VPA-308
+  - id: complete-the-following-course
+    completion:
+      kind: all
+    optionLabel: "Complete the following course:"
+    courseIds:
+      - VPA-305
+  - id: complete-two-of-the-following-courses
+    completion:
+      kind: choose
+      count: 2
+    optionLabel: "Complete two of the following courses:"
+    courseIds:
+      - VPA-310
+      - VPA-315
+      - VPA-316
+      - VPA-403

@@ -1,0 +1,29 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: social-work
+title: Social Work
+college:
+  id: college-of-health-sciences-and-human-services
+  title: College of Health Sciences and Human Services
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: complete-both-of-the-following-courses
+    completion:
+      kind: all
+    optionLabel: "Complete both of the following courses:"
+    courseIds:
+      - SW-205
+      - SW-405
+  - id: complete-two-of-the-following-courses
+    completion:
+      kind: all
+    optionLabel: "Complete two  of the following courses:"
+    courseIds:
+      - SW-406
+      - SW-415
+      - SW-425
+      - SW-435
+      - SW-455

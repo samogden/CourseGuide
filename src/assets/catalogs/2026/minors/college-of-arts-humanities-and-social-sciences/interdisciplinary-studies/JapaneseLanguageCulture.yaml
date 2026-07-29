@@ -1,0 +1,50 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: japanese-language-and-culture
+title: Japanese Language & Culture
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: complete-one-or-more-of-the-following-language-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete  one   or more of the following language courses:"
+    courseIds:
+      - JAPN-300
+      - JAPN-301
+      - JAPN-302
+      - JAPN-303
+      - JAPN-304
+      - JAPN-312
+      - JAPN-380
+      - JAPN-401
+      - JAPN-402
+  - id: complete-one-or-more-of-the-following-culture-courses-you-may-take-no-more-than-two-200-level-courses-to-fulfill-this-requirement
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: Complete  one or more of the following culture courses. You may take no more than two 200-level courses to fulfill this requirement
+    courseIds:
+      - JAPN-211
+      - JAPN-212
+      - JAPN-213
+      - JAPN-215
+      - JAPN-305
+      - JAPN-306
+      - JAPN-307
+      - JAPN-308
+      - JAPN-309
+      - JAPN-310
+      - JAPN-311
+      - JAPN-314
+      - JAPN-317
+      - JAPN-405
+      - JAPN-407
+      - JAPN-410
+      - HCOM-322

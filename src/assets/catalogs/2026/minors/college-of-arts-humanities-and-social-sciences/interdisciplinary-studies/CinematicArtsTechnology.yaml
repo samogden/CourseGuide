@@ -1,0 +1,40 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: cinematic-arts-and-technology
+title: Cinematic Arts & Technology
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: complete-12-units-6-of-which-must-be-upper-division-from-the-following-courses
+    completion:
+      kind: minimumCredits
+      credits: 12
+    optionLabel: "Complete 12 units, 6 of which must be upper division, from the following courses:"
+    courseIds:
+      - CART-200
+      - CART-211
+      - CART-212
+      - CART-215
+      - CART-220
+      - CART-228
+      - CART-230
+      - CART-231
+      - CART-240
+      - CART-275
+      - CART-305
+      - CART-318
+      - CART-319
+      - CART-321
+      - CART-323
+      - CART-330
+      - CART-341
+      - CART-361
+      - CART-375
+      - CART-376
+      - CART-422
+      - CART-424

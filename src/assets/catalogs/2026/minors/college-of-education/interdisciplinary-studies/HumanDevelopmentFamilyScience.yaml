@@ -1,0 +1,45 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: human-development-and-family-science
+title: Human Development & Family Science
+college:
+  id: college-of-education
+  title: College of Education
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: complete-one-of-the-following-courses-or-course-combinations
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses or course combinations:"
+    courseIds:
+      - HDFS-200
+      - HDFS-350
+      - HDFS-360
+      - PSY-340
+      - PSY-340L
+  - id: complete-three-of-the-following-courses-if-one-of-the-courses-above-is-taken-as-part-of-a-major-requirement-complete-four-of-the-following-courses
+    completion:
+      kind: choose
+      count: 3
+    optionLabel: "Complete three  of the following courses: * If one of the courses above is taken as part of a major requirement, complete four of the following courses"
+    courseIds:
+      - HDFS-310
+      - HDFS-315
+      - HDFS-321
+      - HDFS-322
+      - HDFS-340
+      - HDFS-341
+      - HDFS-342
+      - HDFS-344
+      - HDFS-345
+      - HDFS-353
+      - HDFS-355
+      - HDFS-356
+      - HDFS-358
+      - HDFS-365
+      - HDFS-371
+      - HDFS-377

@@ -1,0 +1,44 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: writing-and-rhetoric
+title: Writing & Rhetoric
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 16
+requirements:
+  - id: complete-the-following-course
+    completion:
+      kind: all
+    optionLabel: "Complete the following course:"
+    courseIds:
+      - HCOM-317S
+  - id: complete-one-of-the-following-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - HCOM-306
+      - HCOM-309
+  - id: complete-one-of-the-following-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - HCOM-321
+      - HCOM-420
+      - HCOM-422
+  - id: complete-one-of-the-following-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - HCOM-301
+      - HCOM-312
+      - HCOM-320

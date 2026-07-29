@@ -1,0 +1,42 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: sociology
+title: Sociology
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: complete-the-following-course
+    completion:
+      kind: all
+    optionLabel: "Complete the following course:"
+    courseIds:
+      - SOC-100
+  - id: complete-one-of-the-following-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following courses:"
+    courseIds:
+      - SSCI-321
+      - SSCI-362
+      - SSCI-366
+  - id: complete-two-of-the-following-courses
+    completion:
+      kind: choose
+      count: 2
+    optionLabel: "Complete two of the following courses:"
+    courseIds:
+      - SOC-312
+      - SOC-317
+      - SOC-320
+      - SOC-325
+      - SOC-333
+      - SOC-338
+      - SOC-340
+      - SOC-365
+      - SOC-399

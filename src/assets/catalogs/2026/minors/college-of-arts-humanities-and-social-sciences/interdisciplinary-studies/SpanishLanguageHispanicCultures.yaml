@@ -1,0 +1,58 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: spanish-language-and-hispanic-cultures
+title: Spanish Language & Hispanic Cultures
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: complete-one-or-more-of-the-following-language-and-linguistics-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one  or more of the following language and linguistics courses:"
+    courseIds:
+      - SPAN-301
+      - SPAN-303
+      - SPAN-305
+      - SPAN-313
+      - SPAN-314
+      - SPAN-315
+      - SPAN-323
+  - id: complete-one-or-more-of-the-following-literature-culture-history-courses-only-one-hcom-or-sbs-course-can-count-toward-this-minor
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one  or more of the following literature/culture/history courses: *Only one HCOM or SBS course can count toward this minor"
+    courseIds:
+      - SPAN-304
+      - SPAN-306
+      - SPAN-307
+      - SPAN-308
+      - SPAN-309
+      - SPAN-310
+      - SPAN-316
+      - SPAN-317
+      - SPAN-321
+      - SPAN-322
+      - SPAN-325
+      - SPAN-330
+      - SPAN-335
+      - SPAN-336
+      - SPAN-337
+      - SPAN-362
+      - SPAN-365
+      - SPAN-370
+      - SPAN-425
+      - SPAN-426
+      - SPAN-427
+      - SPAN-428
+      - HCOM-328
+      - HCOM-344
+      - HCOM-381
+      - SSCI-325
+      - SSCI-348

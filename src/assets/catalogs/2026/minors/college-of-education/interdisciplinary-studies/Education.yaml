@@ -1,0 +1,54 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: education
+title: Education
+college:
+  id: college-of-education
+  title: College of Education
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: complete-the-following-core-course
+    completion:
+      kind: minimumCredits
+      credits: 12
+    optionLabel: "Complete the following core course:"
+    courseIds:
+      - LS-398
+  - id: complete-one-of-the-following-developing-educator-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Developing Educator courses:"
+    courseIds:
+      - LS-350
+      - LS-383
+      - LS-384
+      - HDFS-350
+      - ED-510
+      - ED-607
+      - ED-611
+  - id: complete-one-of-the-following-diversity-and-multicultural-scholar-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Diversity and Multicultural Scholar courses:"
+    courseIds:
+      - LS-311
+      - LS-363
+      - HDFS-355
+      - SPED-568
+      - ED-612
+      - ED-628
+  - id: complete-a-minimum-of-3-units-from-the-following-social-justice-collaborator-courses
+    completion:
+      kind: minimumCredits
+      credits: 3
+    optionLabel: "Complete a minimum of 3 units from the following Social Justice Collaborator courses:"
+    courseIds:
+      - LS-380
+      - LS-386S
+      - ED-212S
+      - SPED-560

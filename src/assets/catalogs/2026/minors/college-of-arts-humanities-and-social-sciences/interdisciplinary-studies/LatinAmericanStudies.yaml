@@ -1,0 +1,48 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: latin-american-studies
+title: Latin American Studies
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 18
+requirements:
+  - id: complete-one-of-the-following-courses-with-a-grade-of-c-or-higher
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete ONE of the following courses with a grade of “C” or higher:"
+    courseIds:
+      - SPAN-306
+      - SPAN-309
+  - id: complete-two-of-the-following-humanities-courses
+    completion:
+      kind: choose
+      count: 2
+    optionLabel: "Complete TWO of the following Humanities courses:"
+    courseIds:
+      - SPAN-262
+      - SPAN-304
+      - SPAN-306
+      - SPAN-425
+      - SPAN-426
+      - SPAN-427
+      - SPAN-428
+      - HCOM-328
+      - SSCI-325
+  - id: complete-two-of-the-following-social-science-courses
+    completion:
+      kind: choose
+      count: 2
+    optionLabel: "Complete TWO of the following Social Science courses:"
+    courseIds:
+      - SPAN-307
+      - SPAN-309
+      - HCOM-445
+      - SSCI-348
+      - SSCI-355
+      - SSCI-362
+      - SSCI-388

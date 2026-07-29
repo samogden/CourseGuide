@@ -1,0 +1,45 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: hispanic-cultures-and-history
+title: Hispanic Cultures & History
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 14
+requirements:
+  - id: complete-one-of-the-following-literature-based-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following literature-based courses:"
+    courseIds:
+      - SPAN-362
+      - SPAN-365
+  - id: complete-one-of-the-following-history-culture-based-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following history/culture-based courses:"
+    courseIds:
+      - SPAN-307
+      - SPAN-308
+      - SPAN-309
+      - SPAN-325
+      - SPAN-370
+  - id: complete-two-additional-history-culture-courses-from-the-list-above-not-previously-taken-or-complete-one-history-culture-course-from-the-list-above-not-previously-taken-and-one-course-from-the-following-list
+    completion:
+      kind: choose
+      count: 2
+    optionLabel: "Complete two additional history/culture courses from the list above (not previously taken) or complete one history/culture course from the list above (not previously taken) and one course from the following list:"
+    courseIds:
+      - HCOM-324
+      - HCOM-328
+      - HCOM-329
+      - HCOM-344
+      - HCOM-345
+      - HCOM-455
+      - SSCI-325
+      - SSCI-348

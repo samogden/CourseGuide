@@ -1,0 +1,67 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: ethnic-and-gender-studies
+title: Ethnic & Gender Studies
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 13
+requirements:
+  - id: complete-one-of-the-following-cultural-expression-representation-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Cultural Expression/Representation courses:"
+    courseIds:
+      - GS-336
+      - HCOM-324
+      - HCOM-328
+      - HCOM-329
+      - HCOM-333
+      - HCOM-335
+      - HCOM-336
+      - HCOM-337
+      - HCOM-341
+      - HCOM-348
+      - HCOM-426
+  - id: complete-one-of-the-following-social-movements-and-communities-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Social Movements and Communities courses:"
+    courseIds:
+      - GS-317
+      - HCOM-315
+      - HCOM-343
+      - HCOM-345
+      - HCOM-440
+      - HCOM-455
+  - id: complete-one-of-the-following-historical-formations-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Historical Formations courses:"
+    courseIds:
+      - GS-325
+      - HCOM-346
+      - HCOM-356
+      - HCOM-359
+      - HCOM-365
+      - HCOM-367
+      - HCOM-369
+      - HCOM-451
+      - SSCI-350
+      - SSCI-353
+  - id: complete-one-of-the-following-theories-of-race-and-gender-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Theories of Race and Gender courses:"
+    courseIds:
+      - HCOM-344
+      - HCOM-443
+      - HCOM-445
+      - HCOM-451

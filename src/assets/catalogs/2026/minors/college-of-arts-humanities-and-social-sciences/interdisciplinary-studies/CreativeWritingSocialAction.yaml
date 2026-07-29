@@ -1,0 +1,36 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: creative-writing-and-social-action
+title: Creative Writing & Social Action
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 16
+requirements:
+  - id: complete-one-of-the-following-introductory-level-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following introductory-level courses:"
+    courseIds:
+      - HCOM-330
+      - HCOM-339S
+  - id: after-completing-one-of-the-introductory-courses-above-complete-12-units-from-the-following-courses
+    completion:
+      kind: minimumCredits
+      credits: 12
+    optionLabel: "After completing one of the introductory courses above, complete 12 units from the following courses:"
+    courseIds:
+      - HCOM-332
+      - HCOM-333
+      - HCOM-334
+      - HCOM-341
+      - HCOM-430
+      - HCOM-432
+      - HCOM-432S
+      - HCOM-433
+      - HCOM-434
+      - HCOM-439

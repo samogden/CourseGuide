@@ -1,0 +1,31 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: social-justice-and-community-leadership
+title: Social Justice & Community Leadership
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: complete-two-of-the-following-courses
+    completion:
+      kind: choose
+      count: 2
+    optionLabel: "Complete two of the following courses:"
+    courseIds:
+      - SL-300S
+      - SL-305
+      - SL-394S
+  - id: complete-at-least-four-units-from-the-following-courses-course-combinations
+    completion:
+      kind: all
+    optionLabel: "Complete at least four units from the following courses/course combinations:"
+    courseIds:
+      - SL-497S
+      - SL-391S
+      - SL-491S
+      - SL-490
+      - SL-492S

@@ -1,0 +1,59 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: business-administration
+title: Business Administration
+college:
+  id: college-of-business
+  title: College of Business
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 14
+requirements:
+  - id: complete-both-of-the-following-core-courses
+    completion:
+      kind: all
+    optionLabel: "Complete both of the following core courses:"
+    courseIds:
+      - BUS-305
+      - BUS-306
+  - id: complete-two-of-the-following-courses
+    completion:
+      kind: choose
+      count: 2
+    optionLabel: "Complete two of the following courses:"
+    courseIds:
+      - BUS-201
+      - BUS-202
+      - BUS-203
+      - BUS-204
+      - BUS-205
+      - BUS-301
+      - BUS-307
+      - BUS-308
+      - BUS-309
+      - BUS-310
+      - BUS-322
+      - BUS-323
+      - BUS-330
+      - BUS-331
+      - BUS-332
+      - BUS-333
+      - BUS-334
+      - BUS-350
+      - BUS-354
+      - BUS-356
+      - BUS-364
+      - BUS-375
+      - BUS-410
+      - BUS-422
+      - BUS-425
+      - BUS-433
+      - BUS-434
+      - BUS-435
+      - BUS-493
+      - BUS-494
+      - HOSP-200
+      - HOSP-221
+      - HOSP-312
+      - HOSP-471

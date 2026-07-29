@@ -1,0 +1,38 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: computer-science
+title: Computer Science
+college:
+  id: college-of-science
+  title: College of Science
+department:
+  id: computing-and-design
+  title: Computing and Design
+requiredCredits: 16
+note: Twelve units applied to a minor, six of which must be upper division, may not also fulfill another minor, concentration, or major requirement.
+requirements:
+  - id: required-courses
+    completion:
+      kind: all
+    minimumGrade: C-
+    courseIds:
+      - CST-231
+      - CST-238
+  - id: upper-division-choice
+    completion:
+      kind: choose
+      count: 2
+    optionLabel: Computer Science minor course option
+    courseIds:
+      - CST-311
+      - CST-315
+      - CST-325
+      - CST-326
+      - CST-334
+      - CST-336
+      - CST-338
+      - CST-363
+      - CST-383
+      - CST-415
+      - CST-438
+      - CST-463

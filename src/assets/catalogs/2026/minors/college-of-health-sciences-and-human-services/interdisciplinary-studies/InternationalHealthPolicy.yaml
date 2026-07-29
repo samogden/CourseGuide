@@ -1,0 +1,32 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: international-health-policy
+title: International Health Policy
+college:
+  id: college-of-health-sciences-and-human-services
+  title: College of Health Sciences and Human Services
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: complete-all-of-the-following-courses
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - PH-207
+      - PH-417
+  - id: complete-at-least-six-units-from-the-following-course-list
+    completion:
+      kind: all
+    optionLabel: "Complete at least six units from the following course list:"
+    courseIds:
+      - PH-407
+      - PH-408
+      - PH-447
+      - PH-457
+      - PH-477
+      - PH-487
+      - CHHS-225
+      - CHHS-450

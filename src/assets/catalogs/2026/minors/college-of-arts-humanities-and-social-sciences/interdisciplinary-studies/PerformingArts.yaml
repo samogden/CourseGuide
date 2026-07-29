@@ -1,0 +1,32 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: performing-arts
+title: Performing Arts
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: course-options-1
+    completion:
+      kind: minimumCredits
+      credits: 12
+    courseIds:
+      - CART-230
+      - CART-255
+      - CART-342
+      - CART-345
+      - HCOM-439
+      - MPA-241
+      - MPA-310
+      - MPA-320
+      - MPA-323
+      - MPA-324
+      - MPA-330
+      - MPA-332
+      - MPA-340
+      - MPA-418
+      - VPA-401

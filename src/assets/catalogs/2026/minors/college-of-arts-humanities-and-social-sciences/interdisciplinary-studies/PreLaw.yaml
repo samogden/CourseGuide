@@ -1,0 +1,76 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: pre-law
+title: Pre-Law
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: complete-one-of-the-following-ethical-and-effective-communication-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Ethical and Effective Communication courses:"
+    courseIds:
+      - HCOM-304
+      - HCOM-310
+      - HCOM-314
+      - HCOM-321
+      - HCOM-349
+      - HCOM-403
+      - HCOM-412
+      - HCOM-420
+  - id: complete-one-of-the-following-deeper-understanding-of-law-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Deeper Understanding of Law courses:"
+    courseIds:
+      - HCOM-302
+      - HCOM-310
+      - HCOM-340S
+      - HCOM-343
+      - HCOM-357
+      - HCOM-358
+      - HCOM-359
+      - HCOM-361
+      - HCOM-362
+      - HCOM-398
+      - HCOM-411
+      - HCOM-498
+  - id: complete-one-of-the-following-communication-and-advocacy-skills-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Communication and Advocacy Skills courses:"
+    courseIds:
+      - HCOM-301
+      - HCOM-312
+      - HCOM-383
+      - HCOM-404
+      - HCOM-412
+      - HCOM-440
+  - id: complete-one-of-the-following-elective-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following elective courses:"
+    courseIds:
+      - BUS-331
+      - CHHS-330
+      - CHHS-350
+      - ENSTU-384S
+      - ENSTU-387
+      - GS-342
+      - GS-350
+      - GS-370
+      - GS-390
+      - HCOM-399
+      - PSY-355
+      - SOC-333
+      - SSCI-350
+      - SL-394S

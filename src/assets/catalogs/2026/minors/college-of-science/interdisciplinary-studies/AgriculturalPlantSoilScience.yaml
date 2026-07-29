@@ -1,0 +1,41 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: agricultural-plant-and-soil-science
+title: Agricultural Plant & Soil Science
+college:
+  id: college-of-science
+  title: College of Science
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: complete-0-6-units-of-the-following-lower-division-coursework
+    completion:
+      kind: minimumCredits
+      credits: 12
+    optionLabel: "Complete 0-6 units of the following lower-division coursework:"
+    courseIds:
+      - BIO-106
+      - AGPS-128
+      - AGPS-205
+      - AGPS-209
+      - AGPS-213
+      - AGPS-216
+  - id: complete-6-or-more-units-of-the-following-upper-division-coursework
+    completion:
+      kind: minimumCredits
+      credits: 6
+    optionLabel: "Complete 6 or more units of the following upper-division coursework:"
+    courseIds:
+      - AGPS-302
+      - AGPS-315
+      - AGPS-371
+      - AGPS-372
+      - AGPS-390
+      - AGPS-415
+      - AGPS-416
+      - AGPS-470
+      - BIO-306
+      - BIO-306L
+      - BIO-322

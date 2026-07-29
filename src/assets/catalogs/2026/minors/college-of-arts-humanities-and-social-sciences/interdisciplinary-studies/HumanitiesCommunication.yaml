@@ -1,0 +1,24 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: humanities-and-communication
+title: Humanities & Communication
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 15
+requirements:
+  - id: complete-at-least-2-units-from-the-following-courses
+    completion:
+      kind: minimumCredits
+      credits: 2
+    optionLabel: "Complete at least 2 units from the following courses:"
+    courseIds:
+      - HCOM-408
+      - HCOM-419
+      - HCOM-470
+      - HCOM-471
+      - HCOM-476
+      - HCOM-477

@@ -1,0 +1,38 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: community-health-education
+title: Community Health Education
+college:
+  id: college-of-health-sciences-and-human-services
+  title: College of Health Sciences and Human Services
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: complete-both-of-the-following-courses
+    completion:
+      kind: all
+    optionLabel: "Complete both of the following courses:"
+    courseIds:
+      - PH-207
+      - PH-407
+  - id: complete-a-minimum-of-6-units-from-the-following-course-course-combinations
+    completion:
+      kind: minimumCredits
+      credits: 6
+    optionLabel: "Complete a minimum of 6 units from the following course/course combinations:"
+    courseIds:
+      - CHHS-384
+      - CHHS-445
+      - PANM-422
+      - PANM-432
+      - PH-447
+      - PH-457
+      - KIN-360
+      - KIN-360L
+      - KIN-363
+      - KIN-366
+      - KIN-450
+      - KIN-461
+      - KIN-490

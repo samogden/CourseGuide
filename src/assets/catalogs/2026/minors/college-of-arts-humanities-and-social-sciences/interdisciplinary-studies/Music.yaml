@@ -1,0 +1,39 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: music
+title: Music
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 15
+requirements:
+  - id: complete-the-following-theory-and-musicianship-courses
+    completion:
+      kind: all
+    optionLabel: "Complete the following Theory and Musicianship courses:"
+    courseIds:
+      - MPA-100
+      - MPA-104
+  - id: complete-one-of-the-following-composition-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Composition courses:"
+    courseIds:
+      - MPA-368
+      - MPA-370
+      - MPA-371
+      - MPA-372
+  - id: complete-one-of-the-following-musicology-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Musicology courses:"
+    courseIds:
+      - MPA-321
+      - MPA-335
+      - MPA-365
+      - MPA-384

@@ -1,0 +1,61 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: journalism-and-media-studies
+title: Journalism & Media Studies
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 17
+requirements:
+  - id: complete-one-of-the-following-media-law-and-ethics-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Media Law and Ethics courses:"
+    courseIds:
+      - HCOM-316
+      - HCOM-410
+      - HCOM-411
+  - id: complete-two-of-the-following-introductory-storytelling-theory-courses
+    completion:
+      kind: choose
+      count: 2
+    optionLabel: "Complete two of the following Introductory Storytelling/Theory courses:"
+    courseIds:
+      - HCOM-170
+      - HCOM-280
+      - HCOM-371
+  - id: complete-one-of-the-following-intermediate-storytelling-theory-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Intermediate Storytelling/Theory courses:"
+    courseIds:
+      - HCOM-315
+      - HCOM-319
+      - HCOM-334
+      - HCOM-349
+      - HCOM-361
+      - HCOM-370
+      - HCOM-372
+      - HCOM-373
+      - HCOM-383
+      - HCOM-387
+      - HCOM-390
+      - CART-303
+      - CART-330
+      - VPA-305
+  - id: complete-one-of-the-following-advanced-storytelling-theory-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following Advanced Storytelling/Theory courses:"
+    courseIds:
+      - HCOM-409
+      - HCOM-424
+      - HCOM-434
+      - HCOM-435
+      - HCOM-488

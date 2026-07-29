@@ -1,0 +1,86 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: biology
+title: Biology
+college:
+  id: college-of-science
+  title: College of Science
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: complete-one-or-more-of-the-following-lower-division-biology-course-course-combinations-that-serve-as-prerequisites-to-upper-division-biology-courses
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one or more of the following lower-division biology course/course combinations that serve as prerequisites to upper-division biology courses:"
+    courseIds:
+      - BIO-210
+      - BIO-210L
+      - BIO-211
+      - BIO-211L
+      - ENVS-240
+  - id: complete-one-of-the-following-upper-division-biology-lab-course-course-combinations
+    completion:
+      kind: choose
+      count: 1
+    optionLabel: "Complete one of the following upper-division biology lab course/course combinations:"
+    courseIds:
+      - BIO-306
+      - BIO-306L
+      - BIO-320
+      - BIO-322
+      - BIO-340
+      - BIO-341
+      - BIO-341L
+      - BIO-342
+      - BIO-344L
+      - BIO-356
+      - BIO-360
+      - BIO-362
+      - BIO-364
+      - BIO-380
+      - BIO-420
+      - BIO-430
+      - BIO-444
+      - BIO-448
+      - BIO-449
+      - BIO-461
+  - id: complete-additional-biology-courses-as-needed-from-the-list-below-to-complete-the-unit-requirements-of-this-minor
+    completion:
+      kind: minimumCredits
+      credits: 12
+    optionLabel: Complete additional biology courses as needed from the list below to complete the unit requirements of this minor.
+    courseIds:
+      - BIO-196
+      - BIO-311
+      - BIO-320
+      - BIO-322
+      - BIO-330
+      - BIO-340
+      - BIO-341
+      - BIO-341L
+      - BIO-342
+      - BIO-344L
+      - BIO-356
+      - BIO-360
+      - BIO-362
+      - BIO-364
+      - BIO-370
+      - BIO-380
+      - BIO-347
+      - BIO-366
+      - BIO-392
+      - BIO-410
+      - BIO-412
+      - BIO-413
+      - BIO-416
+      - BIO-414
+      - BIO-420
+      - BIO-430
+      - BIO-444
+      - BIO-448
+      - BIO-449
+      - BIO-461
+      - CHEM-310

@@ -1,0 +1,68 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: environmental-science
+title: Environmental Science
+college:
+  id: college-of-science
+  title: College of Science
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: complete-one-or-more-of-the-following-course-course-combinations
+    completion:
+      kind: all
+    optionLabel: "Complete one  or more of the following course/course combinations:"
+    courseIds:
+      - ENVS-303
+      - ENVS-303L
+      - ENVS-332
+      - ENVS-342
+      - ENVS-350
+      - ENVS-355
+      - ENVS-360
+      - ENVS-363
+      - ENVS-436
+      - ENVS-440
+      - ENVS-446
+      - ENVS-464
+      - ENVS-475
+      - ENVS-483
+  - id: complete-additional-coursework-from-the-following-list
+    completion:
+      kind: minimumCredits
+      credits: 12
+    optionLabel: "Complete additional coursework from the following list:"
+    courseIds:
+      - ENSTU-309
+      - ENVS-185
+      - ENVS-196
+      - ENVS-201
+      - ENVS-240
+      - ENVS-282
+      - ENVS-302
+      - ENVS-303
+      - ENVS-303L
+      - ENVS-307
+      - ENVS-332
+      - ENVS-342
+      - ENVS-350
+      - ENVS-355
+      - ENVS-360
+      - ENVS-363
+      - ENVS-394
+      - ENVS-397
+      - ENVS-436
+      - ENVS-440
+      - ENVS-446
+      - ENVS-464
+      - ENVS-475
+      - ENVS-497
+      - AGPS-315
+      - BIO-340
+      - BIO-448
+      - GEOL-260
+      - GEOL-310
+      - GEOL-360
+      - GEOL-460

@@ -1,0 +1,36 @@
+schemaVersion: 1
+catalogYear: "2026"
+id: anthropology
+title: Anthropology
+college:
+  id: college-of-arts-humanities-and-social-sciences
+  title: College of Arts, Humanities and Social Sciences
+department:
+  id: interdisciplinary-studies
+  title: Interdisciplinary Studies
+requiredCredits: 12
+requirements:
+  - id: complete-all-of-the-following-courses
+    completion:
+      kind: all
+    optionLabel: "Complete all of the following courses:"
+    courseIds:
+      - SSCI-101
+      - SSCI-335
+  - id: complete-two-of-the-following-courses
+    completion:
+      kind: all
+    optionLabel: "Complete two  of the following courses:"
+    courseIds:
+      - SSCI-325
+      - SSCI-326S
+      - SSCI-332
+      - SSCI-333
+      - SSCI-345
+      - SSCI-348
+      - SSCI-355
+      - SSCI-360S
+      - SSCI-379
+      - SSCI-383
+      - SSCI-388
+      - SSCI-484S
