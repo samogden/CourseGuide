@@ -3,8 +3,11 @@ import {
   activeProgramRequirements,
   defaultCatalogVersion,
   candidateCourseIds,
+  availableGeneralEducationAreas,
   courseCorequisiteIds,
   directRequirementCourseIds,
+  generalEducationAreaForSlot,
+  generalEducationPrerequisitesMet,
   getCourse,
   getMinor,
   isCourseOffered,
@@ -16,6 +19,7 @@ import {
   slotLabel,
   type CurriculumPlan,
   type DegreeType,
+  type GeneralEducationArea,
   type PlanSlot,
   type Requirement,
 } from './Curriculum'
@@ -141,7 +145,11 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
     .filter(key => key.startsWith('course:'))
     .map(key => key.slice('course:'.length)))
   for (const courseId of selection?.assumedCompletedCourseIds ?? []) completedCourseIds.add(courseId)
-  const isCourseReady = (slot: PlanSlot) => slot.type !== 'course' || prerequisitesMet(getCourse(slot.courseId)?.prerequisites ?? [], completedCourseIds)
+  const availableCompletedGeAreas = availableGeneralEducationAreas(plan, completed)
+  const isCourseReady = (slot: PlanSlot) => slot.type !== 'course' || (
+    prerequisitesMet(getCourse(slot.courseId)?.prerequisites ?? [], completedCourseIds) &&
+    generalEducationPrerequisitesMet(getCourse(slot.courseId), availableCompletedGeAreas)
+  )
   const explicitPlannedCourseIds = new Set(plan.years.flatMap(year => year.terms.flatMap(term => term.slots.flatMap(slot => {
     if (slot.type === 'course') return [slot.courseId]
     if (slot.type === 'choice') return slot.alternatives
@@ -195,6 +203,7 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
       .filter(courseId => !plannedConcreteCourseIds.has(courseId)),
   )
   const projectedCourseIds = new Set([...completedCourseIds, ...assumedExternalPrerequisiteIds])
+  const projectedGeAreas = new Set(availableCompletedGeAreas)
   const suggestions = new Map<string, ScheduledSuggestion>()
   const selectedEntries: SelectedEntry[] = []
   let credits = 0
@@ -216,6 +225,7 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
             const projectedWithBundle = new Set([...projectedCourseIds, ...bundleCourseIds])
             const eligible = members.every(member => {
               if (!member.courseId) return resolveSlotCandidate(member.slot, projectedWithBundle, suggestedTerm ?? term.term) !== undefined
+              if (!generalEducationPrerequisitesMet(getCourse(member.courseId), projectedGeAreas)) return false
               // A corequisite (such as a lab) cannot be suggested ahead of
               // the course it belongs to when that course is planned but
               // neither projected from an earlier term nor part of this
@@ -274,6 +284,8 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
       for (const slot of term.slots) {
         const courseId = assignments.get(progressKey(slot)) ?? (slot.type === 'course' ? slot.courseId : undefined)
         if (courseId) projectedCourseIds.add(courseId)
+        const generalEducationArea = generalEducationAreaForSlot(slot)
+        if (generalEducationArea) projectedGeAreas.add(generalEducationArea)
       }
     }
   }
@@ -300,6 +312,7 @@ export function buildRegistrationPlan(plan: CurriculumPlan, completed: ReadonlyS
     .filter(key => key.startsWith('course:'))
     .map(key => key.slice('course:'.length)))
   for (const courseId of selection?.assumedCompletedCourseIds ?? []) completedCourseIds.add(courseId)
+  const availableCompletedGeAreas = availableGeneralEducationAreas(plan, completed)
   const slots = plan.years.flatMap(year => year.terms.flatMap(term => term.slots))
   const courses = slots.flatMap(slot => {
     const suggestion = schedule.suggestions.get(progressKey(slot))
@@ -348,6 +361,7 @@ export function buildRegistrationPlan(plan: CurriculumPlan, completed: ReadonlyS
       prerequisiteCount: prerequisiteCount(getCourse(courseId ?? '')?.prerequisites ?? []),
       isAvailableNow: !courseId || (
         prerequisitesMet(getCourse(courseId)?.prerequisites ?? [], completedCourseIds) &&
+        generalEducationPrerequisitesMet(getCourse(courseId), availableCompletedGeAreas) &&
         isCourseOffered(courseId, selection?.currentTerm ?? 'fall')
       ),
     }]
@@ -367,6 +381,7 @@ export function buildCompactedSchedule(
   const baseSchedule = buildSuggestedSchedule(plan, completed, selection)
   const completedCourseIds = completedCourseIdsFor(selection, completed)
   const orderedSlots = plan.years.flatMap(year => year.terms.flatMap(term => term.slots))
+  const availableCompletedGeAreas = availableGeneralEducationAreas(plan, completed)
   const plannedConcreteCourseIds = new Set([
     ...orderedSlots.flatMap(slot => slot.type === 'course' ? [slot.courseId] : []),
     ...baseSchedule.assignments.values(),
@@ -381,6 +396,7 @@ export function buildCompactedSchedule(
   const remaining = orderedSlots.filter(slot => !isSlotCompleted(slot, completed, baseSchedule.assignments))
   const terms: CompactedTerm[] = []
   const scheduledCourseIds = new Set<string>()
+  const scheduledGeAreas = new Set<GeneralEducationArea>()
   const scheduledChoiceTerms = new Map<string, number>()
   const previousChoiceByKey = buildPreviousChoiceKeys(orderedSlots)
   let termIndex = 0
@@ -388,7 +404,12 @@ export function buildCompactedSchedule(
   while (completedSlots.length > 0 || remaining.length > 0) {
     const term: 'fall' | 'spring' = termIndex % 2 === 0 ? 'fall' : 'spring'
     const availableBeforeTerm = new Set([...completedCourseIds, ...assumedExternalPrerequisiteIds, ...scheduledCourseIds])
+    const availableGeBeforeTerm = new Set([
+      ...availableCompletedGeAreas,
+      ...scheduledGeAreas,
+    ])
     const scheduledThisTerm: PlanSlot[] = []
+    const geAreasThisTerm = new Set<GeneralEducationArea>()
     const courseIdsThisTerm: string[] = []
     let credits = 0
 
@@ -412,6 +433,7 @@ export function buildCompactedSchedule(
           termIndex,
           degreeType,
           availableBeforeTerm,
+          availableGeBeforeTerm,
           completed,
           baseSchedule.assignments,
           baseSchedule.courseOptions,
@@ -426,6 +448,8 @@ export function buildCompactedSchedule(
         credits += candidate.credits
         const key = progressKey(candidate)
         if (candidate.type === 'choice') scheduledChoiceTerms.set(key, termIndex)
+        const generalEducationArea = generalEducationAreaForSlot(candidate)
+        if (generalEducationArea) geAreasThisTerm.add(generalEducationArea)
         const courseId = baseSchedule.assignments.get(key) ?? (candidate.type === 'course' ? candidate.courseId : undefined)
         if (courseId) courseIdsThisTerm.push(courseId)
         else if (candidate.type === 'choice') courseIdsThisTerm.push(...candidate.alternatives.filter(alternative => getCourse(alternative)))
@@ -436,6 +460,7 @@ export function buildCompactedSchedule(
     if (scheduledThisTerm.length > 0) {
       terms.push({ year: Math.floor(termIndex / 2) + 1, term, slots: sortSlotsForPresentation(scheduledThisTerm, baseSchedule.assignments, baseSchedule.courseOptions, completed), credits })
       courseIdsThisTerm.forEach(courseId => scheduledCourseIds.add(courseId))
+      geAreasThisTerm.forEach(area => scheduledGeAreas.add(area))
     }
     termIndex += 1
     if (termIndex > 24) throw new Error(`Unable to place compacted plan slots: ${remaining.map(progressKey).join(', ')}`)
@@ -552,6 +577,7 @@ function canCompactSlot(
   termIndex: number,
   degreeType: DegreeType,
   completedCourseIds: ReadonlySet<string>,
+  completedGeAreas: ReadonlySet<GeneralEducationArea>,
   completed: ReadonlySet<string>,
   assignments: ReadonlyMap<string, string>,
   courseOptions: ReadonlyMap<string, PathSlotOptions>,
@@ -564,13 +590,13 @@ function canCompactSlot(
   if (previousChoice && !scheduledChoiceTerms.has(previousChoice) && !completed.has(previousChoice)) return false
 
   const assignedCourseId = assignments.get(key)
-  if (assignedCourseId) return isCompactedCourseAvailable(assignedCourseId, term, termIndex, degreeType, completedCourseIds, courseOptions.get(key)?.prerequisites)
-  if (slot.type === 'course') return isCompactedCourseAvailable(slot.courseId, term, termIndex, degreeType, completedCourseIds)
+  if (assignedCourseId) return isCompactedCourseAvailable(assignedCourseId, term, termIndex, degreeType, completedCourseIds, completedGeAreas, courseOptions.get(key)?.prerequisites)
+  if (slot.type === 'course') return isCompactedCourseAvailable(slot.courseId, term, termIndex, degreeType, completedCourseIds, completedGeAreas)
   if (slot.type === 'requirement' && !courseOptions.has(key)) return true
 
   if (slot.type === 'choice' && !courseOptions.has(key) && !slot.alternatives.every(alternative => getCourse(alternative))) return true
   const options: PathSlotOptions | undefined = courseOptions.get(key) ?? (slot.type === 'choice' ? { label: 'Course choice', courseIds: slot.alternatives } : undefined)
-  return Boolean(options?.courseIds.some(courseId => isCompactedCourseAvailable(courseId, term, termIndex, degreeType, completedCourseIds, options.prerequisites)))
+  return Boolean(options?.courseIds.some(courseId => isCompactedCourseAvailable(courseId, term, termIndex, degreeType, completedCourseIds, completedGeAreas, options.prerequisites)))
 }
 
 function isCompactedCourseAvailable(
@@ -579,11 +605,13 @@ function isCompactedCourseAvailable(
   termIndex: number,
   degreeType: DegreeType,
   completedCourseIds: ReadonlySet<string>,
+  completedGeAreas: ReadonlySet<GeneralEducationArea>,
   additionalPrerequisites: readonly unknown[] = [],
 ): boolean {
   const course = getCourse(courseId)
   if (!course || !isCourseOffered(courseId, term)) return false
   if (course.minimumStanding === 'junior' && degreeType !== 'ast-to-bs' && termIndex < 4) return false
+  if (!generalEducationPrerequisitesMet(course, completedGeAreas)) return false
   const completedWithCorequisites = new Set([...completedCourseIds, ...courseCorequisiteIds(courseId)])
   return prerequisitesMet([...course.prerequisites, ...additionalPrerequisites], completedWithCorequisites)
 }

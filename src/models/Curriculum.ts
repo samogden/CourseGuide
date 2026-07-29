@@ -130,6 +130,31 @@ export type CatalogMetadata = z.infer<typeof catalogFileSchema>
 
 export const defaultCatalogVersion = '2026'
 
+export const generalEducationAreas = ['1a', '1b', '1c', '2', '3', '4', '5', '6'] as const
+export type GeneralEducationArea = typeof generalEducationAreas[number]
+
+const generalEducationAreaLabels: Record<GeneralEducationArea, string> = {
+  '1a': 'GE Area 1A: English Communication',
+  '1b': 'GE Area 1B: English Communication',
+  '1c': 'GE Area 1C: English Communication',
+  '2': 'GE Area 2: Mathematical Concepts & Quantitative Reasoning',
+  '3': 'GE Area 3: Arts & Humanities',
+  '4': 'GE Area 4: Social & Behavioral Sciences',
+  '5': 'GE Area 5: Physical & Biological Sciences',
+  '6': 'GE Area 6: Ethnic Studies',
+}
+
+const generalEducationAreaBySlotId: Record<string, GeneralEducationArea> = {
+  'ge-1a-lower-division': '1a',
+  'ge-1b-lower-division': '1b',
+  'ge-1c-lower-division': '1c',
+  'ge-2-lower-division': '2',
+  'ge-3-lower-division': '3',
+  'ge-4-lower-division': '4',
+  'ge-5-lower-division': '5',
+  'ge-6-lower-division': '6',
+}
+
 export interface Course {
   id: string
   code: string
@@ -142,9 +167,64 @@ export interface Course {
   offeredTerms?: readonly AcademicTerm[]
   prerequisites: unknown[]
   corequisites: unknown[]
+  /** Catalog GE areas that must be completed before this course. */
+  generalEducationPrerequisites: GeneralEducationArea[]
   prerequisiteNotes: string[]
   placeholder: boolean
   minimumStanding?: 'junior'
+}
+
+export function generalEducationAreaLabel(area: GeneralEducationArea): string {
+  return generalEducationAreaLabels[area]
+}
+
+export function generalEducationAreaForSlot(slot: PlanSlot): GeneralEducationArea | undefined {
+  return slot.type === 'requirement' ? generalEducationAreaBySlotId[slot.slotId] : undefined
+}
+
+export function completedGeneralEducationAreas(plan: CurriculumPlan, completed: ReadonlySet<string>): Set<GeneralEducationArea> {
+  return new Set(plan.years.flatMap(year => year.terms.flatMap(term => term.slots))
+    .flatMap(slot => completed.has(progressKey(slot)) ? [generalEducationAreaForSlot(slot)] : [])
+    .filter((area): area is GeneralEducationArea => Boolean(area)))
+}
+
+/** Verified roadmaps may use approved concrete GE courses rather than 1A/1B/1C slots. */
+export function availableGeneralEducationAreas(plan: CurriculumPlan, completed: ReadonlySet<string>): Set<GeneralEducationArea> {
+  const trackedAreas = completedGeneralEducationAreas(plan, completed)
+  const tracksGranularAreas = plan.years.flatMap(year => year.terms.flatMap(term => term.slots))
+    .some(slot => ['1a', '1b', '1c'].includes(generalEducationAreaForSlot(slot) ?? ''))
+  return tracksGranularAreas ? trackedAreas : new Set(generalEducationAreas)
+}
+
+export function generalEducationPrerequisitesMet(course: Course | undefined, completedAreas: ReadonlySet<GeneralEducationArea>): boolean {
+  return (course?.generalEducationPrerequisites ?? []).every(area => completedAreas.has(area))
+}
+
+function inferredGeneralEducationPrerequisites(notes: readonly string[]): GeneralEducationArea[] {
+  const areas = new Set<GeneralEducationArea>()
+  const add = (...values: GeneralEducationArea[]) => values.forEach(area => areas.add(area))
+  for (const note of notes) {
+    // Stop at a new parenthesized clause, another catalog constraint, or the
+    // grade language. This keeps "and (Coreq: BIO 320)" out of the GE list
+    // while preserving the Area 1A/1B/1C/2 sequence.
+    const geText = [...note.matchAll(/\bGE\s+(?:GE\s+)?Areas?\s+([\s\S]*?)(?=\s*(?:with\b|\)|\]|\(|\b(?:AND|OR|and|or)\s+(?:\(?\s*)?(?:Coreq|Prereq|Junior|Senior|GWAR)\b|$))/gi)]
+      .map(match => match[1])
+      .join(' ')
+    for (const rawToken of geText.match(/\b(?:[AB][1-4]|[1-6][A-C]?)\b/gi) ?? []) {
+      switch (rawToken.toUpperCase()) {
+        case '1': add('1a', '1b', '1c'); break
+        case '1A': case 'A1': add('1a'); break
+        case '1B': case 'A2': add('1b'); break
+        case '1C': case 'A3': add('1c'); break
+        case '2': case '2A': case 'B4': case '4B': add('2'); break
+        case '3': add('3'); break
+        case '4': add('4'); break
+        case '5': case '5A': case '5B': case '5C': case 'B1': case 'B2': case 'B3': add('5'); break
+        case '6': add('6'); break
+      }
+    }
+  }
+  return [...areas]
 }
 
 function inferredCorequisiteClauses(notes: readonly string[]): { courseId: string; hard: boolean }[] {
@@ -468,6 +548,7 @@ const catalogEntries: Course[] = Object.entries(parsedCatalog.courses).map(([id,
     offeredTerms: course.offered && 'terms' in course.offered ? course.offered.terms : undefined,
     prerequisites: separateFoldedCorequisites(course.prerequisites ?? [], hardCorequisiteIds),
     corequisites,
+    generalEducationPrerequisites: inferredGeneralEducationPrerequisites(course.prerequisiteNotes ?? []),
     prerequisiteNotes: course.prerequisiteNotes ?? [],
     placeholder: course.placeholder,
     minimumStanding: course.minimumStanding,
@@ -494,13 +575,18 @@ interface DerivedOptionSlot {
  * placement; this is applied only while generating a draft roadmap.
  */
 function generalEducationSlots(): DerivedOptionSlot[] {
+  // Catalog course prerequisites name the three English-communication
+  // components individually (1A, 1B, 1C), so the plan must track them
+  // separately rather than using one combined Area 1 placeholder.
   const lowerDivision = [
-    ['ge-1-lower-division', 'GE Area 1: English Communication'],
-    ['ge-2-lower-division', 'GE Area 2: Mathematical Concepts & Quantitative Reasoning'],
-    ['ge-3-lower-division', 'GE Area 3: Arts & Humanities'],
-    ['ge-4-lower-division', 'GE Area 4: Social & Behavioral Sciences'],
-    ['ge-5-lower-division', 'GE Area 5: Physical & Biological Sciences'],
-    ['ge-6-lower-division', 'GE Area 6: Ethnic Studies'],
+    ['ge-1a-lower-division', generalEducationAreaLabel('1a')],
+    ['ge-1b-lower-division', generalEducationAreaLabel('1b')],
+    ['ge-1c-lower-division', generalEducationAreaLabel('1c')],
+    ['ge-2-lower-division', generalEducationAreaLabel('2')],
+    ['ge-3-lower-division', generalEducationAreaLabel('3')],
+    ['ge-4-lower-division', generalEducationAreaLabel('4')],
+    ['ge-5-lower-division', generalEducationAreaLabel('5')],
+    ['ge-6-lower-division', generalEducationAreaLabel('6')],
   ] as const
   const lowerSlots = lowerDivision.map(([slotId, label]): DerivedOptionSlot => ({
     courseIds: [],
@@ -536,8 +622,8 @@ function generalEducationSlots(): DerivedOptionSlot[] {
 
 /**
  * Produces an explicitly draft roadmap for catalog programs that have requirements but no
- * staff-verified sequence. It only orders courses against prerequisites that are also in
- * the program requirements; outside preparation is left for advisor review.
+ * staff-verified sequence. It orders catalog courses against program-course chains and
+ * catalog GE-area prerequisites; other outside preparation is left for advisor review.
  */
 function deriveRoadmap(programId: string, catalogVersion: string): CurriculumPlan {
   const program = getProgram(programId, catalogVersion)
@@ -550,6 +636,15 @@ function deriveRoadmap(programId: string, catalogVersion: string): CurriculumPla
   const deferredCourseIds = [...requiredCourseIds].filter(courseId => getCourse(courseId)?.code.endsWith('499'))
   deferredCourseIds.forEach(courseId => requiredCourseIds.delete(courseId))
   const scheduled = new Set<string>()
+  const scheduledGeAreas = new Set<GeneralEducationArea>()
+  const prioritizedGeAreas = new Set([...requiredCourseIds]
+    .flatMap(courseId => getCourse(courseId)?.generalEducationPrerequisites ?? []))
+  const prioritizedGeSlots = generalEducationSlots()
+    .filter(({ slot }) => {
+      const area = generalEducationAreaForSlot(slot)
+      return area && prioritizedGeAreas.has(area)
+    })
+  const preplacedGeSlotIds = new Set<string>()
   const terms: { term: AcademicTerm; slots: PlanSlot[] }[] = []
   const yearNames: CurriculumPlan['years'][number]['year'][] = ['freshman', 'sophomore', 'junior', 'senior']
 
@@ -557,6 +652,16 @@ function deriveRoadmap(programId: string, catalogVersion: string): CurriculumPla
     const term: AcademicTerm = termIndex % 2 === 0 ? 'fall' : 'spring'
     let credits = 0
     const slots: PlanSlot[] = []
+    // Spread catalog GE prerequisites across the early terms. Each area is
+    // completed at the end of its term, so a course that names 1A + 1B + 1C
+    // + 2 cannot be scheduled until a later term has all four available.
+    const geSlot = prioritizedGeSlots.find(candidate => !preplacedGeSlotIds.has(progressKey(candidate.slot)))
+    const geArea = geSlot ? generalEducationAreaForSlot(geSlot.slot) : undefined
+    if (geSlot && geArea) {
+      slots.push(geSlot.slot)
+      credits += geSlot.slot.credits
+      preplacedGeSlotIds.add(progressKey(geSlot.slot))
+    }
     // First-year seminars come first; otherwise lower course numbers come
     // before higher ones (CHEM 110 before BIO 210 before BIO 311), with the
     // course code as the final tiebreaker.
@@ -578,9 +683,10 @@ function deriveRoadmap(programId: string, catalogVersion: string): CurriculumPla
         const candidate = getCourse(candidateId)
         if (!candidate) return false
         const corequisites = new Set(courseCorequisiteIds(candidateId))
-          const requiredEarlier = [...prerequisiteCourseIds(candidate.prerequisites)]
+        const requiredEarlier = [...prerequisiteCourseIds(candidate.prerequisites)]
           .filter(prerequisiteId => !corequisites.has(prerequisiteId) && plannedRequiredCourseIds.has(prerequisiteId))
-        return requiredEarlier.every(prerequisiteId => scheduled.has(prerequisiteId))
+        return requiredEarlier.every(prerequisiteId => scheduled.has(prerequisiteId)) &&
+          generalEducationPrerequisitesMet(candidate, scheduledGeAreas)
       })
       if (!canScheduleBundle) continue
       for (const bundleCourseId of bundleCourseIds) {
@@ -594,6 +700,7 @@ function deriveRoadmap(programId: string, catalogVersion: string): CurriculumPla
     slots.forEach(slot => {
       if (slot.type === 'course') scheduled.add(slot.courseId)
     })
+    if (geArea) scheduledGeAreas.add(geArea)
     terms.push({ term, slots })
   }
 
@@ -639,7 +746,7 @@ function deriveRoadmap(programId: string, catalogVersion: string): CurriculumPla
       }
     }
   }
-  optionSlots.push(...generalEducationSlots())
+  optionSlots.push(...generalEducationSlots().filter(({ slot }) => !preplacedGeSlotIds.has(progressKey(slot))))
   for (const { slot, courseIds, minimumTermIndex } of optionSlots) {
     const targetTerm = terms.find((candidateTerm, termIndex) => {
       if (termIndex < (minimumTermIndex ?? 0)) return false

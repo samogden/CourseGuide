@@ -5,7 +5,7 @@ import { CourseCell, CourseModal, type RequirementCourseSelection } from './comp
 import { ReadinessAssessment } from './components/ReadinessAssessment'
 import { TransferReadiness } from './components/TransferReadiness'
 import { getAssessmentPack } from './models/Assessments'
-import { appendMinorToPlan, catalogVersions, defaultCatalogVersion, degreeYearLabel, getCourse, getMinor, minorsForCatalog, planForDegreeType, prerequisitesMet, progressKey, remainingPlanCredits, roadmapForProgram, summarizePlanCredits, transferAssumedCourseIds, type AcademicTerm, type DegreeType, type PlanSlot } from './models/Curriculum'
+import { appendMinorToPlan, availableGeneralEducationAreas, catalogVersions, defaultCatalogVersion, degreeYearLabel, getCourse, getMinor, minorsForCatalog, planForDegreeType, prerequisitesMet, progressKey, remainingPlanCredits, roadmapForProgram, summarizePlanCredits, transferAssumedCourseIds, type AcademicTerm, type DegreeType, type PlanSlot } from './models/Curriculum'
 import { buildCompactedSchedule, buildRegistrationPlan, buildSuggestedSchedule, sortSlotsForPresentation } from './models/Scheduling'
 import { buildPreparationTerms, preparationCredits } from './models/TransferPreparation'
 
@@ -410,11 +410,15 @@ function App() {
   const completedCourseIds = new Set([...completed]
     .filter(key => key.startsWith('course:'))
     .map(key => key.slice('course:'.length)))
+  const completedGeneralEducation = availableGeneralEducationAreas(activePlan, completed)
   const selectedSuggestion = selectedSlot ? suggestedSchedule.suggestions.get(progressKey(selectedSlot)) ?? null : null
   const selectedAssignedCourseId = selectedSlot ? suggestedSchedule.assignments.get(progressKey(selectedSlot)) : undefined
   const selectedCourseOptions = selectedSlot ? suggestedSchedule.courseOptions.get(progressKey(selectedSlot)) : undefined
   const resolvedCourseId = selectedSuggestion?.courseId ?? selectedAssignedCourseId ?? (selectedSlot?.type === 'course' ? selectedSlot.courseId : null)
-  const selectedPrerequisitesMet = resolvedCourseId ? prerequisitesMet(getCourse(resolvedCourseId)?.prerequisites ?? [], completedCourseIds) : selectedSlot ? suggestedSchedule.isCourseReady(selectedSlot) : undefined
+  const selectedPrerequisitesMet = resolvedCourseId ? (
+    prerequisitesMet(getCourse(resolvedCourseId)?.prerequisites ?? [], completedCourseIds) &&
+    getCourse(resolvedCourseId)?.generalEducationPrerequisites.every(area => completedGeneralEducation.has(area)) !== false
+  ) : selectedSlot ? suggestedSchedule.isCourseReady(selectedSlot) : undefined
   const preparationKey = `${selectedCatalogVersion}/${activeProgramId}/ast-to-bs`
   const preparationCourseIds = new Set(transferPreparation.get(preparationKey) ?? [])
   const preparationTerms = degreeType === 'ast-to-bs' ? buildPreparationTerms(preparationCourseIds) : []

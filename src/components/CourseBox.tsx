@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import type { PlanSlot } from '../models/Curriculum'
-import { getCourse, prerequisiteText, slotLabel } from '../models/Curriculum'
+import { generalEducationAreaLabel, getCourse, prerequisiteText, slotLabel } from '../models/Curriculum'
 import './CourseBox.css'
 
 import { presentationCategory, type PathSlotOptions, type ScheduledSuggestion } from '../models/Scheduling'
@@ -88,7 +88,8 @@ export function CourseModal({ slot, resolvedCourseId, courseOptions, requirement
             <p className="course-name">{course.name}</p>
             <p>{course.description ?? 'Course details are coming soon.'}</p>
             {course.prerequisites.length > 0 && <><h3>Prerequisites</h3><ul>{course.prerequisites.map((prerequisite, index) => <li key={index}>{prerequisiteText(prerequisite)}</li>)}</ul></>}
-            {course.prerequisites.length > 0 && !completed && <p className={prerequisitesMet ? 'prerequisite-status is-met' : 'prerequisite-status is-unmet'}>{prerequisitesMet ? 'Prerequisites met — this course is available to take.' : 'Prerequisites are not yet met.'}</p>}
+            {course.generalEducationPrerequisites.length > 0 && <><h3>General education prerequisites</h3><ul>{course.generalEducationPrerequisites.map(area => <li key={area}>{generalEducationAreaLabel(area)}</li>)}</ul></>}
+            {(course.prerequisites.length > 0 || course.generalEducationPrerequisites.length > 0) && !completed && <p className={prerequisitesMet ? 'prerequisite-status is-met' : 'prerequisite-status is-unmet'}>{prerequisitesMet ? 'Prerequisites met — this course is available to take.' : 'Prerequisites are not yet met.'}</p>}
             {course.prerequisiteNotes.length > 0 && <ul>{course.prerequisiteNotes.map(note => <li key={note}>{note}</li>)}</ul>}
             {course.placeholder && <p className="placeholder-note">Catalog details for this course are still being added.</p>}
           </>

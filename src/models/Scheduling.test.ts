@@ -34,14 +34,35 @@ describe('suggested scheduling', () => {
       catalogVersion: '2026',
     })
 
-    // Freshman-fall courses have only outside-plan preparation, which the
-    // roadmap treats as assumed, so they must be suggestible.
-    expect(schedule.suggestions.has('course:BIO-301')).toBe(true)
+    // MATH 150 is eligible in the first term, while BIO 301 waits for the
+    // catalog-required Area 1A/1B/1C/2 GE blocks in later plan terms.
     expect(schedule.suggestions.has('course:MATH-150')).toBe(true)
+    expect(schedule.suggestions.has('course:BIO-301')).toBe(false)
     // Labs are never suggested without the lecture they corequire.
     expect(schedule.suggestions.has('course:BIO-211L')).toBe(schedule.suggestions.has('course:BIO-211'))
     expect(schedule.suggestions.has('course:CHEM-110L')).toBe(schedule.suggestions.has('course:CHEM-110'))
     expect(schedule.suggestions.has('course:CHEM-111L')).toBe(schedule.suggestions.has('course:CHEM-111'))
+  })
+
+  it('places catalog GE prerequisites before the derived course they unlock', () => {
+    const biologyPlan = planForDegreeType('bs', 'bs-biology', '2026')
+    const terms = biologyPlan.years.flatMap(year => year.terms)
+    const bio301Term = terms.findIndex(term => term.slots.some(slot => progressKey(slot) === 'course:BIO-301'))
+    const completed = new Set([
+      'slot:ge-1a-lower-division',
+      'slot:ge-1b-lower-division',
+      'slot:ge-1c-lower-division',
+      'slot:ge-2-lower-division',
+    ])
+    const schedule = buildSuggestedSchedule(biologyPlan, completed, {
+      programId: 'bs-biology',
+      catalogVersion: '2026',
+    })
+    const bio301 = terms.flatMap(term => term.slots).find(slot => progressKey(slot) === 'course:BIO-301')
+
+    expect(bio301Term).toBeGreaterThanOrEqual(4)
+    expect(bio301).toBeDefined()
+    expect(schedule.isCourseReady(bio301!)).toBe(true)
   })
 
   it('keeps inferred lecture and lab corequisites in the same compacted term', () => {
@@ -247,7 +268,11 @@ describe('suggested scheduling', () => {
     const cinematicSlots = cinematicPlan.years.flatMap(year => year.terms.flatMap(term => term.slots))
     const verifiedComputerScienceSlots = curriculumPlan.years.flatMap(year => year.terms.flatMap(term => term.slots))
 
-    expect(cinematicSlots.map(progressKey)).toContain('slot:ge-1-lower-division')
+    expect(cinematicSlots.map(progressKey)).toEqual(expect.arrayContaining([
+      'slot:ge-1a-lower-division',
+      'slot:ge-1b-lower-division',
+      'slot:ge-1c-lower-division',
+    ]))
     expect(cinematicSlots.map(progressKey)).toContain('slot:ge-upper-4')
     expect(verifiedComputerScienceSlots.map(progressKey)).not.toContain('slot:ge-1-lower-division')
   })

@@ -202,6 +202,11 @@ describe('curriculum data', () => {
     expect(remainingPlanCredits(curriculumPlan, new Set([`course:${firstCourse.type === 'course' ? firstCourse.courseId : ''}`]))).toBe(101)
   })
 
+  it('extracts catalog GE-area prerequisites separately from course prerequisites', () => {
+    expect(getCourse('BIO-301')?.generalEducationPrerequisites).toEqual(['1a', '1b', '1c', '2'])
+    expect(getCourse('CST-300')?.generalEducationPrerequisites).toEqual(['1a', '1b', '1c'])
+  })
+
   it('keeps corequisites out of structured prerequisites', () => {
     const bio210 = getCourse('BIO-210')
     expect(prerequisiteCourseIds(bio210?.prerequisites ?? [])).toEqual(new Set(['CHEM-110', 'CHEM-110L']))
