@@ -64,7 +64,7 @@ courses:
           - courseId: MSCI-280
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( MSCI 280   with a C- or better) or (Instructor Consent)]"
+      - "[Prereq: ( MSCI 280 with a C- or better) or (Instructor Consent)]"
   MSCI-283:
     code: MSCI 283
     title: "SCUBA III: Occupational Diving Techniques"
@@ -82,7 +82,7 @@ courses:
           - courseId: MSCI-282
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( MSCI 282   with a C- or better) or (Instructor Consent)]"
+      - "[Prereq: ( MSCI 282 with a C- or better) or (Instructor Consent)]"
   MSCI-295:
     code: MSCI 295
     title: Special Topics
@@ -118,7 +118,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   MSCI-310:
     code: MSCI 310
     title: Small Boat Field Techniques
@@ -136,7 +136,7 @@ courses:
           - courseId: PHYS-220
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MSCI 270   and PHYS 220   with a C- or better)"
+      - "(Prereq: MSCI 270 and PHYS 220 with a C- or better)"
   MSCI-331:
     code: MSCI 331
     title: Ecological Physiology
@@ -160,7 +160,7 @@ courses:
               - courseId: PHYS-221
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BIO 210   and BIO 211   ) and ( PHYS 220   or PHYS 221   ) with a C- or better]"
+      - "[Prereq: ( BIO 210 and BIO 211 ) and ( PHYS 220 or PHYS 221 ) with a C- or better]"
   MSCI-337:
     code: MSCI 337
     title: Robotics for Ecological Research
@@ -184,7 +184,7 @@ courses:
               - courseId: CST-231
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( MATH 150   ) and ( PHYS 121   or PHYS 220   or CST 231   ) with a C- or better]"
+      - "[Prereq: ( MATH 150 ) and ( PHYS 121 or PHYS 220 or CST 231 ) with a C- or better]"
   MSCI-340:
     code: MSCI 340
     title: Marine Ecology
@@ -210,7 +210,7 @@ courses:
           - courseId: MSCI-340L
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: BIO 210   and BIO 211   and STAT 250   and MSCI 270   with a C- or better) and (Coreq: MSCI 340L   or by Instructor Consent)]"
+      - "[(Prereq: BIO 210 and BIO 211 and STAT 250 and MSCI 270 with a C- or better) and (Coreq: MSCI 340L or by Instructor Consent)]"
   MSCI-340L:
     code: MSCI 340L
     title: Marine Ecology Lab
@@ -236,7 +236,7 @@ courses:
           - courseId: MSCI-340
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: BIO 210   and BIO 211   and STAT 250   and MSCI 270   with a C- or better) and (Coreq: MSCI 340   )]"
+      - "[(Prereq: BIO 210 and BIO 211 and STAT 250 and MSCI 270 with a C- or better) and (Coreq: MSCI 340 )]"
   MSCI-341:
     code: MSCI 341
     title: Conservation Genetics
@@ -257,7 +257,7 @@ courses:
           - courseId: MATH-150
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BIO 210   and BIO 211   ) and ( MATH 150   ) with a C- or better]"
+      - "[Prereq: ( BIO 210 and BIO 211 ) and ( MATH 150 ) with a C- or better]"
   MSCI-345:
     code: MSCI 345
     title: Marine Biodiversity and Functional Morphology
@@ -294,7 +294,7 @@ courses:
               - courseId: MATH-150
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( GE   Area 1A and 1B and 1C and 2) and (( MATH 130   or MATH 150   ) and ( CHEM 109   or CHEM 110   ) and MSCI 270   and ( BIO 211   or BIO 230   or ENVS 240   )) with a C- or better) and (Prereq or Coreq: ( PHYS 220   or PHYS 221   with a C- or better))]"
+      - "[(Prereq: ( GE Area 1A and 1B and 1C and 2) and (( MATH 130 or MATH 150 ) and ( CHEM 109 or CHEM 110 ) and MSCI 270 and ( BIO 211 or BIO 230 or ENVS 240 )) with a C- or better) and (Prereq or Coreq: ( PHYS 220 or PHYS 221 with a C- or better))]"
   MSCI-350:
     code: MSCI 350
     title: Quantitative Marine Science
@@ -316,7 +316,7 @@ courses:
           - courseId: BIO-340
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: STAT 250)   and (Prereq or Coreq: MSCI 340   or BIO 340   ) with a C- or better]"
+      - "[(Prereq: STAT 250) and (Prereq or Coreq: MSCI 340 or BIO 340 ) with a C- or better]"
   MSCI-359S:
     code: MSCI 359S
     title: Marine Science Service Learning
@@ -340,7 +340,7 @@ courses:
           - courseId: ENVS-240
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: BIO 210   or BIO 211   or BIO 230   or ENVS 240   with a C- or better)"
+      - "(Prereq: BIO 210 or BIO 211 or BIO 230 or ENVS 240 with a C- or better)"
   MSCI-370:
     code: MSCI 370
     title: Biological Physical Oceanography
@@ -364,7 +364,7 @@ courses:
           - courseId: MSCI-345
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( BIO 211   and MSCI 270   and PHYS 220   ) with a C- or better) and (Prereq or Coreq: MSCI 345   with a C- or better)]"
+      - "[(Prereq: ( BIO 211 and MSCI 270 and PHYS 220 ) with a C- or better) and (Prereq or Coreq: MSCI 345 with a C- or better)]"
   MSCI-380:
     code: MSCI 380
     title: Scientific Diving Techniques
@@ -384,7 +384,7 @@ courses:
           - courseId: MSCI-283
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: MSCI 282   with a C- or better) and (Coreq or Prereq: MSCI 283   with a C- or better)]"
+      - "[(Prereq: MSCI 282 with a C- or better) and (Coreq or Prereq: MSCI 283 with a C- or better)]"
   MSCI-394:
     code: MSCI 394
     title: Marine Science Internship
@@ -457,7 +457,7 @@ courses:
           - courseId: MSCI-485
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: MSCI 300 or MSCI 340   with a C- or better) and (Coreq: MSCI 430   or MSCI 437   or MSCI 445   or MSCI 455   or MSCI 472   or MSCI 475   or MSCI 480   or MSCI 485   )]"
+      - "[(Prereq: MSCI 300 or MSCI 340 with a C- or better) and (Coreq: MSCI 430 or MSCI 437 or MSCI 445 or MSCI 455 or MSCI 472 or MSCI 475 or MSCI 480 or MSCI 485 )]"
   MSCI-430:
     code: MSCI 430
     title: Marine Experimental Physiology
@@ -479,7 +479,7 @@ courses:
               - courseId: BIO-330
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( STAT 250   and ( MSCI 331   or BIO 330   ) with a C- or better) and GWAR]"
+      - "[Prereq: ( STAT 250 and ( MSCI 331 or BIO 330 ) with a C- or better) and GWAR]"
   MSCI-437:
     code: MSCI 437
     title: Ocean Instrumentation Projects
@@ -498,7 +498,7 @@ courses:
           - courseId: PHYS-330
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: MSCI 337   or PHYS 330 with a C- or better) or (Instructor Consent)]"
+      - "[(Prereq: MSCI 337 or PHYS 330 with a C- or better) or (Instructor Consent)]"
   MSCI-445:
     code: MSCI 445
     title: Projects in Marine Ecology
@@ -506,7 +506,7 @@ courses:
     credits:
       minimum: 4
       maximum: 4
-    description: Lecture and field-based exploration of marine ecological concepts and theory using the diverse ecosystems of Monterey Bay as a living laboratory. Students witness and learn how organisms interact with one another and their environments and see how these factors govern the distribution and abundance of species within marine systems. Because of the research nature of this class, there may be some required fieldwork outside of class time. This group project-based course can fulfill the Marine Science major capstone requirement with co-enrollment in MSCI 410   .
+    description: Lecture and field-based exploration of marine ecological concepts and theory using the diverse ecosystems of Monterey Bay as a living laboratory. Students witness and learn how organisms interact with one another and their environments and see how these factors govern the distribution and abundance of species within marine systems. Because of the research nature of this class, there may be some required fieldwork outside of class time. This group project-based course can fulfill the Marine Science major capstone requirement with co-enrollment in MSCI 410 .
     offered:
       terms:
         - spring
@@ -522,7 +522,7 @@ courses:
               - courseId: BIO-340
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereqs: (( MSCI 340   or BIO 340   ) and GWAR with a C- or better)) and (Prereq or Coreq: ( MSCI 350   or ENVS 350   ))]"
+      - "[(Prereqs: (( MSCI 340 or BIO 340 ) and GWAR with a C- or better)) and (Prereq or Coreq: ( MSCI 350 or ENVS 350 ))]"
   MSCI-455:
     code: MSCI 455
     title: Marine Fish Ecology
@@ -548,7 +548,7 @@ courses:
               - courseId: ENVS-350
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( MSCI 345   and MSCI 340   with a C- or better) and (Prereq or Coreq: ( MSCI 370   and ( MSCI 350   or ENVS 350   ) with a C- or better)]"
+      - "[(Prereq: ( MSCI 345 and MSCI 340 with a C- or better) and (Prereq or Coreq: ( MSCI 370 and ( MSCI 350 or ENVS 350 ) with a C- or better)]"
   MSCI-465:
     code: MSCI 465
     title: Marine Megafauna
@@ -570,7 +570,7 @@ courses:
           - courseId: MSCI-340
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: MSCI 270   and MSCI 331   or BIO 330   and MSCI 340   with a C- or better) or (Instructor Consent Required)]"
+      - "[(Prereq: MSCI 270 and MSCI 331 or BIO 330 and MSCI 340 with a C- or better) or (Instructor Consent Required)]"
   MSCI-472:
     code: MSCI 472
     title: Biological Oceanography Projects
@@ -578,7 +578,7 @@ courses:
     credits:
       minimum: 4
       maximum: 4
-    description: This course is focused primarily on lecture and computing-based exploration of biological oceanographic concepts using the Monterey Bay as a model. It uses a group project-based approach to understanding the oceanographic system with a focus on biophysical coupling, aquatic optics, remote sensing, and mechanistic models. It may include one or more field trips. This course can fulfill the Marine Science major capstone requirement with co-enrollment in MSCI 410   .
+    description: This course is focused primarily on lecture and computing-based exploration of biological oceanographic concepts using the Monterey Bay as a model. It uses a group project-based approach to understanding the oceanographic system with a focus on biophysical coupling, aquatic optics, remote sensing, and mechanistic models. It may include one or more field trips. This course can fulfill the Marine Science major capstone requirement with co-enrollment in MSCI 410 .
     offered:
       terms:
         - spring
@@ -594,7 +594,7 @@ courses:
               - courseId: ENVS-350
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ENVS 332   and MSCI 370   and ( MSCI 350   or ENVS 350   ) with a C- or better or (Instructor Consent Required)]"
+      - "[Prereq: ENVS 332 and MSCI 370 and ( MSCI 350 or ENVS 350 ) with a C- or better or (Instructor Consent Required)]"
   MSCI-474:
     code: MSCI 474
     title: Marine Landscape Ecology
@@ -620,7 +620,7 @@ courses:
               - courseId: BIO-345
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ENVS 332   and MSCI 340   and ( MSCI 345   or BIO 345) and ( MSCI 350   ) with a C- or better]"
+      - "[Prereq: ENVS 332 and MSCI 340 and ( MSCI 345 or BIO 345) and ( MSCI 350 ) with a C- or better]"
   MSCI-475:
     code: MSCI 475
     title: Marine Conservation Biology
@@ -644,7 +644,7 @@ courses:
               - courseId: BIO-345
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: GWAR and ( MSCI 340   or BIO 340   or MSCI 345   or BIO 345) with a C- or better]"
+      - "[Prereq: GWAR and ( MSCI 340 or BIO 340 or MSCI 345 or BIO 345) with a C- or better]"
   MSCI-477:
     code: MSCI 477
     title: Global Change Biology
@@ -662,7 +662,7 @@ courses:
           - courseId: BIO-340
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MSCI 340   or BIO 340   with a C- or better)"
+      - "(Prereq: MSCI 340 or BIO 340 with a C- or better)"
   MSCI-480:
     code: MSCI 480
     title: Kelp Forest Ecology
@@ -685,7 +685,7 @@ courses:
               - courseId: BIO-345
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: MSCI 340   and MSCI 380   and ( MSCI 345   or BIO 345) with a C- or better]"
+      - "[Prereq: MSCI 340 and MSCI 380 and ( MSCI 345 or BIO 345) with a C- or better]"
   MSCI-485:
     code: MSCI 485
     title: Marine Biogeography of California
@@ -706,7 +706,7 @@ courses:
           - courseId: MSCI-345
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MSCI 340   and MSCI 380   and MSCI 345   with a C- or better)"
+      - "(Prereq: MSCI 340 and MSCI 380 and MSCI 345 with a C- or better)"
   MSCI-490:
     code: MSCI 490
     title: Marine Science Honors Capstone
@@ -728,7 +728,7 @@ courses:
           - courseId: MSCI-350
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: MSCI 340   and MSCI 345   and MSCI 350   with a C- or better)] (Instructor Consent Required)"
+      - "[(Prereq: MSCI 340 and MSCI 345 and MSCI 350 with a C- or better)] (Instructor Consent Required)"
   MSCI-495:
     code: MSCI 495
     title: Special Topics
@@ -784,7 +784,7 @@ courses:
     credits:
       minimum: 4
       maximum: 4
-    description: Explores the ecology of marine fishes and associated conservation and management. Focuses upon fish distribution and the environmental drivers underlying that distribution in California and other locales. Students will complete a semester-long project involving field sampling along the central coast using a suite of tools, including remotely operated vehicles, towed camera sleds, and SCUBA. Students must have completed coursework in marine biology and ecology. (Cross-listed with MSCI 455   ).
+    description: Explores the ecology of marine fishes and associated conservation and management. Focuses upon fish distribution and the environmental drivers underlying that distribution in California and other locales. Students will complete a semester-long project involving field sampling along the central coast using a suite of tools, including remotely operated vehicles, towed camera sleds, and SCUBA. Students must have completed coursework in marine biology and ecology. (Cross-listed with MSCI 455 ).
     offered:
       availability: periodic
   MSCI-572:

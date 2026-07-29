@@ -31,7 +31,7 @@ courses:
       - courseId: SPSY-636
       - courseId: MAE-621
     prerequisiteNotes:
-      - "[(Prereq: SPSY 550   ) and (Coreq: SPSY 564   and SPSY 636   and MAE 621   )]"
+      - "[(Prereq: SPSY 550 ) and (Coreq: SPSY 564 and SPSY 636 and MAE 621 )]"
   SPSY-520:
     code: SPSY 520
     title: Psychopathology in Schools
@@ -47,7 +47,7 @@ courses:
       - anyOf:
           - courseId: PSY-320
     prerequisiteNotes:
-      - "[(Prereq: PSY 320   ) or (Graduate Standing)]"
+      - "[(Prereq: PSY 320 ) or (Graduate Standing)]"
   SPSY-540:
     code: SPSY 540
     title: Counseling in Schools
@@ -62,7 +62,7 @@ courses:
     prerequisites:
       - courseId: SPSY-550
     prerequisiteNotes:
-      - "(Prereq: SPSY 550   )"
+      - "(Prereq: SPSY 550 )"
   SPSY-550:
     code: SPSY 550
     title: Role and Function of the School Psychologist
@@ -84,7 +84,7 @@ courses:
     prerequisites:
       - courseId: SPSY-550
     prerequisiteNotes:
-      - "(Prereq: SPSY 550   )"
+      - "(Prereq: SPSY 550 )"
   SPSY-564:
     code: SPSY 564
     title: Formal Assessment of Diverse Student Populations
@@ -103,7 +103,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: Introduction to the principles and application of behavior analysis with individuals with academic, social and/or behavioral needs. Cross list with SPED 566   .
+    description: Introduction to the principles and application of behavior analysis with individuals with academic, social and/or behavioral needs. Cross list with SPED 566 .
     offered:
       terms:
         - fall
@@ -150,7 +150,7 @@ courses:
       - courseId: SPSY-550
       - courseId: SPSY-660A
     prerequisiteNotes:
-      - "[(Prereq: SPSY 550   ) and (Coreq: SPSY 660A   )]"
+      - "[(Prereq: SPSY 550 ) and (Coreq: SPSY 660A )]"
   SPSY-615:
     code: SPSY 615
     title: Culturally and Linguistically Valid Assessment and Ethical Service Delivery
@@ -187,7 +187,7 @@ courses:
               - courseId: SPSY-564
               - courseId: SPED-564
     prerequisiteNotes:
-      - "[(Prereq: ( SPSY 564   OR SPED 564   ) AND SPSY 550   )]"
+      - "[(Prereq: ( SPSY 564 OR SPED 564 ) AND SPSY 550 )]"
   SPSY-642:
     code: SPSY 642
     title: Multicultural Community Partnerships
@@ -206,7 +206,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: This course explores educational policies in schools including educational law, resource allocations, interagency relationships, and tools for advocacy. The course focuses on understanding California and federal codes, case law, policies, and precedent and analysis of key legal concepts and application of law. An additional focus is the issues of and rights of migrant youth in schools. Students examine trends in law and the initiation of educational law to positively influence education. Crosslist with MAE 645   .
+    description: This course explores educational policies in schools including educational law, resource allocations, interagency relationships, and tools for advocacy. The course focuses on understanding California and federal codes, case law, policies, and precedent and analysis of key legal concepts and application of law. An additional focus is the issues of and rights of migrant youth in schools. Students examine trends in law and the initiation of educational law to positively influence education. Crosslist with MAE 645 .
     offered:
       availability: periodic
   SPSY-660:
@@ -233,7 +233,7 @@ courses:
       - courseId: SPSY-686
       - courseId: SPSY-636
     prerequisiteNotes:
-      - "(Prereqs: SPSY 550   and SPED 568   and MAE 621   and SPSY 540   and SPSY 564   and SPSY 500   and SW 564   and ED 510   and SPSY 686   and SPSY 636   )"
+      - "(Prereqs: SPSY 550 and SPED 568 and MAE 621 and SPSY 540 and SPSY 564 and SPSY 500 and SW 564 and ED 510 and SPSY 686 and SPSY 636 )"
   SPSY-660A:
     code: SPSY 660A
     title: "Practicum and Intervention: A"
@@ -257,7 +257,7 @@ courses:
       - courseId: SPSY-686
       - courseId: SPSY-636
     prerequisiteNotes:
-      - "(Prereq: SPSY 550   and SPED 568   and MAE 621   and SPSY 540   and SPSY 564   and SPSY 500   and SW 564   and ED 510   and SPSY 686   and SPSY 636   )"
+      - "(Prereq: SPSY 550 and SPED 568 and MAE 621 and SPSY 540 and SPSY 564 and SPSY 500 and SW 564 and ED 510 and SPSY 686 and SPSY 636 )"
   SPSY-660B:
     code: SPSY 660B
     title: "Practicum and Intervention: B"
@@ -272,7 +272,7 @@ courses:
     prerequisites:
       - courseId: SPSY-660A
     prerequisiteNotes:
-      - "(Prereq: SPSY 660A   )"
+      - "(Prereq: SPSY 660A )"
   SPSY-670:
     code: SPSY 670
     title: Internship in School Psychology I
@@ -290,7 +290,7 @@ courses:
       - courseId: SPSY-660B
       - courseId: SPSY-670A
     prerequisiteNotes:
-      - "[(Prereqs: SPSY 660   and SPSY 660A   and SPSY 660B   ) and (Coreq: SPSY 670A   )]"
+      - "[(Prereqs: SPSY 660 and SPSY 660A and SPSY 660B ) and (Coreq: SPSY 670A )]"
   SPSY-670A:
     code: SPSY 670A
     title: Internship in School Psychology I Seminar
@@ -308,7 +308,7 @@ courses:
       - courseId: SPSY-660B
       - courseId: SPSY-670
     prerequisiteNotes:
-      - "[(Prereq: SPSY 660   and SPSY 660A   and SPSY 660B   ) and (Coreq: SPSY 670   )]"
+      - "[(Prereq: SPSY 660 and SPSY 660A and SPSY 660B ) and (Coreq: SPSY 670 )]"
   SPSY-675:
     code: SPSY 675
     title: Internship in School Psychology I Seminar
@@ -321,7 +321,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Coreq: SPSY 670   )"
+      - "(Coreq: SPSY 670 )"
   SPSY-680:
     code: SPSY 680
     title: Internship in School Psychology II
@@ -339,7 +339,7 @@ courses:
       - courseId: SPSY-660B
       - courseId: SPSY-680A
     prerequisiteNotes:
-      - "[(Prereq: SPSY 660   and SPSY 660A   and SPSY 660B   ) and (Coreq: SPSY 680A   )]"
+      - "[(Prereq: SPSY 660 and SPSY 660A and SPSY 660B ) and (Coreq: SPSY 680A )]"
   SPSY-680A:
     code: SPSY 680A
     title: Internship in School Psychology II Seminar
@@ -357,7 +357,7 @@ courses:
       - courseId: SPSY-660B
       - courseId: SPSY-680
     prerequisiteNotes:
-      - "[(Prereq: SPSY 660   and SPSY 660A   and SPSY 660B   ) and (Coreq: SPSY 680   )]"
+      - "[(Prereq: SPSY 660 and SPSY 660A and SPSY 660B ) and (Coreq: SPSY 680 )]"
   SPSY-681:
     code: SPSY 681
     title: Advanced Behavior Supports
@@ -365,7 +365,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: Advanced instruction in the principles and application of behavior analysis with individuals with Mild/Moderate/Severe academic, social and/or behavioral needs. Crosslist with SPED 681   .
+    description: Advanced instruction in the principles and application of behavior analysis with individuals with Mild/Moderate/Severe academic, social and/or behavioral needs. Crosslist with SPED 681 .
     offered:
       availability: periodic
   SPSY-685:
@@ -380,7 +380,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Coreq: SPSY 680   )"
+      - "(Coreq: SPSY 680 )"
   SPSY-686:
     code: SPSY 686
     title: "Advocacy and Systems Change: Leadership Management and Communication Skills"

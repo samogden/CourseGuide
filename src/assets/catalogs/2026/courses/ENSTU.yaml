@@ -54,7 +54,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: This course covers the principles of government and economics, and applies these to policies, economics, and management of natural resources. Course materials emphasize fundamentals as well as current events in environmental economics and policy. The course covers principles in traditional micro and macro economics as well as ecological economics. The course informs students about the structure, process and dynamics of governmental systems, so they can be effective members of the active citizenry. Economic principles are applied at local, national, and international scales, to cover a broad suite of uses for ecological resources, and explore how decisions about these resources can lead to conservation or to over-exploitation. Economic and policy principles are applied to demonstrate how economic decisions can be managed within the existing regulatory framework, to implement socially preferred levels of resource use. (Recommend completion of GE   Area 2 and 1A and 1B prior to enrolling)
+    description: This course covers the principles of government and economics, and applies these to policies, economics, and management of natural resources. Course materials emphasize fundamentals as well as current events in environmental economics and policy. The course covers principles in traditional micro and macro economics as well as ecological economics. The course informs students about the structure, process and dynamics of governmental systems, so they can be effective members of the active citizenry. Economic principles are applied at local, national, and international scales, to cover a broad suite of uses for ecological resources, and explore how decisions about these resources can lead to conservation or to over-exploitation. Economic and policy principles are applied to demonstrate how economic decisions can be managed within the existing regulatory framework, to implement socially preferred levels of resource use. (Recommend completion of GE Area 2 and 1A and 1B prior to enrolling)
     offered:
       terms:
         - fall
@@ -88,7 +88,7 @@ courses:
           - courseId: ENVS-240
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq or Coreq: ( GE   Area 1A and 1B and 1C with a C- or better) and ( BIO 211   or ENVS 240   with a C- or better)]"
+      - "[(Prereq or Coreq: ( GE Area 1A and 1B and 1C with a C- or better) and ( BIO 211 or ENVS 240 with a C- or better)]"
   ENSTU-305:
     code: ENSTU 305
     title: "Air Pollution: Science, Policy, and Society"
@@ -101,7 +101,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and Area 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and Area 2 with a C- or better)"
   ENSTU-309:
     code: ENSTU 309
     title: Climate Change Science and Solutions
@@ -115,7 +115,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   ENSTU-349S:
     code: ENSTU 349S
     title: Environmental Interpretation and Outreach
@@ -128,7 +128,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 2 with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Area 1A and 1B and 2 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   ENSTU-350:
     code: ENSTU 350
@@ -154,7 +154,7 @@ courses:
               - courseId: STAT-250
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ENVS 201   and ENVS 240   and ( STAT 100   or STAT 250   ) with a C- or better)]"
+      - "[(Prereq: ENVS 201 and ENVS 240 and ( STAT 100 or STAT 250 ) with a C- or better)]"
   ENSTU-365:
     code: ENSTU 365
     title: Critical Pedagogy for Environmental Education
@@ -167,7 +167,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and ( GE   Area 5B)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better) and ( GE Area 5B)]"
   ENSTU-369S:
     code: ENSTU 369S
     title: Civic Ecology SL
@@ -180,7 +180,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "[Prereq: (Junior or Senior Standing) and ( GE   Area 5A and 5B)]"
+      - "[Prereq: (Junior or Senior Standing) and ( GE Area 5A and 5B)]"
     minimumStanding: junior
   ENSTU-375:
     code: ENSTU 375
@@ -194,7 +194,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and ( GE   Area 5A and 5B and 5C)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better) and ( GE Area 5A and 5B and 5C)]"
   ENSTU-376:
     code: ENSTU 376
     title: "Infrastructure Systems: Past, Present and Future"
@@ -207,7 +207,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and ( GE   Area 5A and 5B and 5C with a C- or better)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better) and ( GE Area 5A and 5B and 5C with a C- or better)]"
   ENSTU-384S:
     code: ENSTU 384S
     title: Social and Ecological Justice Service Learning
@@ -221,7 +221,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   ENSTU-387:
     code: ENSTU 387
@@ -235,7 +235,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   ENSTU-394:
     code: ENSTU 394
     title: Environmental Studies Internship
@@ -316,7 +316,7 @@ courses:
           - courseId: ENSTU-497
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: (GWAR and ENSTU 350   with a C- or better) or (Instructor Consent)) and (Coreq or Prereq: ENSTU 471   or ENSTU 472   or ENSTU 494   or ENSTU 497   )]"
+      - "[(Prereq: (GWAR and ENSTU 350 with a C- or better) or (Instructor Consent)) and (Coreq or Prereq: ENSTU 471 or ENSTU 472 or ENSTU 494 or ENSTU 497 )]"
   ENSTU-412:
     code: ENSTU 412
     title: Enviro Thought & Practice
@@ -353,7 +353,7 @@ courses:
           - courseId: ENSTU-410
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( ENSTU 350   with a D- or better) and ( GWAR   with a C- or better) and (Prereq or Coreq: ENSTU 375   or ENSTU 376   ) and (Coreq: ENSTU 410   )]"
+      - "[(Prereq: ( ENSTU 350 with a D- or better) and ( GWAR with a C- or better) and (Prereq or Coreq: ENSTU 375 or ENSTU 376 ) and (Coreq: ENSTU 410 )]"
   ENSTU-472:
     code: ENSTU 472
     title: Projects in Environmental Education
@@ -372,7 +372,7 @@ courses:
           - courseId: ENSTU-410
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( ENSTU 350   with a D- or better) and ( GWAR   with a C- or better) and (Coreq: ENSTU 410   )]"
+      - "[(Prereq: ( ENSTU 350 with a D- or better) and ( GWAR with a C- or better) and (Coreq: ENSTU 410 )]"
   ENSTU-494:
     code: ENSTU 494
     title: Environmental Studies Capstone Internship

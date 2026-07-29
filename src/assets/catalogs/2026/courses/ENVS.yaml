@@ -68,7 +68,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 2)"
+      - "(Prereq: GE Area 1A and 2)"
   ENVS-282:
     code: ENVS 282
     title: Mtry Bay:Case Sty Env Sci &Pol
@@ -95,7 +95,7 @@ courses:
       - anyOf:
           - courseId: ENVS-282
     prerequisiteNotes:
-      - "(Prereq or Coreq: ENVS 282   )"
+      - "(Prereq or Coreq: ENVS 282 )"
   ENVS-295:
     code: ENVS 295
     title: Special Topics
@@ -140,7 +140,7 @@ courses:
               - courseId: BIO-211
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( GE   Area 1A and 1B and 1C) and ( ENVS 240   or BIO 211   ) with a C- or better)]"
+      - "[(Prereq: ( GE Area 1A and 1B and 1C) and ( ENVS 240 or BIO 211 ) with a C- or better)]"
   ENVS-302:
     code: ENVS 302
     title: Career Development for Applied Environmental Science
@@ -160,7 +160,7 @@ courses:
     credits:
       minimum: 2
       maximum: 2
-    description: Mandatory orientation for ENVS 303L   . This classroom component of California Transect prepares students for the Summer field course ( ENVS 303L   ) by introducing topics in California’s scientific, cultural, and political history and current issues that will be examined in detail during the Summer term only field course ( ENVS 303L   ). May require one weekend field trip.
+    description: Mandatory orientation for ENVS 303L . This classroom component of California Transect prepares students for the Summer field course ( ENVS 303L ) by introducing topics in California’s scientific, cultural, and political history and current issues that will be examined in detail during the Summer term only field course ( ENVS 303L ). May require one weekend field trip.
     offered:
       terms:
         - spring
@@ -175,7 +175,7 @@ courses:
           - courseId: ENVS-303L
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( ENVS 240   or BIO 211   or GEOL 260   with a C- or better) and (Coreq: ENVS 303L   )]"
+      - "[Prereq: ( ENVS 240 or BIO 211 or GEOL 260 with a C- or better) and (Coreq: ENVS 303L )]"
   ENVS-303L:
     code: ENVS 303L
     title: California Transect Lab
@@ -188,7 +188,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Coreq: ENVS 303   )"
+      - "(Coreq: ENVS 303 )"
   ENVS-307:
     code: ENVS 307
     title: Energy Solutions and Climate Change
@@ -202,7 +202,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   ENVS-332:
     code: ENVS 332
     title: Intro to GIS/GPS
@@ -222,7 +222,7 @@ courses:
           - courseId: STAT-250
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: STAT 100   or STAT 250   with a C- or better)"
+      - "(Prereq: STAT 100 or STAT 250 with a C- or better)"
   ENVS-342:
     code: ENVS 342
     title: Plant Communities of CA
@@ -230,7 +230,7 @@ courses:
     credits:
       minimum: 4
       maximum: 4
-    description: Surveys terrestrial ecosystems across California emphasizing the role of climate, soils, water, and human impacts on plant distribution. Includes learning dominant and special status plant species to prepare students for roles in conservation and resource management. Field trips focus on ecosystems of the Central Coast region and may include one or more weekend field trips. Cross-listed with BIO 342   .
+    description: Surveys terrestrial ecosystems across California emphasizing the role of climate, soils, water, and human impacts on plant distribution. Includes learning dominant and special status plant species to prepare students for roles in conservation and resource management. Field trips focus on ecosystems of the Central Coast region and may include one or more weekend field trips. Cross-listed with BIO 342 .
     offered:
       terms:
         - spring
@@ -241,7 +241,7 @@ courses:
           - courseId: ENVS-240
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: BIO 211   or ENVS 240   with a C- or better)"
+      - "(Prereq: BIO 211 or ENVS 240 with a C- or better)"
   ENVS-350:
     code: ENVS 350
     title: Quantitative Field Methods
@@ -265,7 +265,7 @@ courses:
           - courseId: STAT-250
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( BIO 211   and BIO 211L   or ENVS 240   ) and ( STAT 250   ) with a C- or better) and (Prereq or Coreq: GWAR   )]"
+      - "[(Prereq: ( BIO 211 and BIO 211L or ENVS 240 ) and ( STAT 250 ) with a C- or better) and (Prereq or Coreq: GWAR )]"
   ENVS-355:
     code: ENVS 355
     title: Environmental Monitoring
@@ -286,7 +286,7 @@ courses:
               - courseId: GEOL-260
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: STAT 250   and ( CHEM 111   or GEOL 260   ) with a C- or better]"
+      - "[Prereq: STAT 250 and ( CHEM 111 or GEOL 260 ) with a C- or better]"
   ENVS-360:
     code: ENVS 360
     title: Natural History of California Wildlife
@@ -307,7 +307,7 @@ courses:
           - courseId: ENVS-240
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: ( BIO 211   and BIO 211L   ) or ENVS 240   with a C- or better)"
+      - "(Prereq: ( BIO 211 and BIO 211L ) or ENVS 240 with a C- or better)"
   ENVS-363:
     code: ENVS 363
     title: Field Natural History for Educators
@@ -325,7 +325,7 @@ courses:
               - courseId: ENVS-240
               - courseId: BIO-211
     prerequisiteNotes:
-      - "[Prereq: ( ENVS 240   or BIO 211   ) or (Instructor Consent Required)]"
+      - "[Prereq: ( ENVS 240 or BIO 211 ) or (Instructor Consent Required)]"
   ENVS-382S:
     code: ENVS 382S
     title: Climate Justice and Communication
@@ -338,7 +338,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "[Prereq: ( GE   Areas A1 and A2 and A3 with a C- or better) and ( GE   Area B1 or B2) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Areas A1 and A2 and A3 with a C- or better) and ( GE Area B1 or B2) and (Junior or Senior Standing)]"
     minimumStanding: junior
   ENVS-392:
     code: ENVS 392
@@ -364,7 +364,7 @@ courses:
               - courseId: GEOL-260
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( BIO 230   or ENVS 240   or BIO 211   or GEOL 260   ) with a C- or better) and (Junior or Senior Standing)]"
+      - "[(Prereq: ( BIO 230 or ENVS 240 or BIO 211 or GEOL 260 ) with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   ENVS-394:
     code: ENVS 394
@@ -448,7 +448,7 @@ courses:
           - courseId: ENVS-464
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: GWAR   with a C- or better) and (Coreq: ENVS 446   or ENVS 475   or BIO 448   or GEOL 460   or ENVS 436   or ENVS 464   )]"
+      - "[(Prereq: GWAR with a C- or better) and (Coreq: ENVS 446 or ENVS 475 or BIO 448 or GEOL 460 or ENVS 436 or ENVS 464 )]"
   ENVS-436:
     code: ENVS 436
     title: Remote Sensing
@@ -465,7 +465,7 @@ courses:
           - courseId: ENVS-332
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: ENVS 332   with a C- or better)"
+      - "(Prereq: ENVS 332 with a C- or better)"
   ENVS-440:
     code: ENVS 440
     title: Environmental Modeling
@@ -488,7 +488,7 @@ courses:
               - courseId: GEOL-360
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: MATH 150   and STAT 250 and ( BIO 340   or GEOL 360   ) with a C- or better)]"
+      - "[(Prereq: MATH 150 and STAT 250 and ( BIO 340 or GEOL 360 ) with a C- or better)]"
   ENVS-446:
     code: ENVS 446
     title: Landscape Ecology
@@ -513,7 +513,7 @@ courses:
           - courseId: ENVS-332
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BIO 340   and STAT 250   and GWAR   with a C- or better) and (Prereq or Coreq: ENVS 350   or MSCI 350   or ENVS 332   with a C- or better)]"
+      - "[Prereq: ( BIO 340 and STAT 250 and GWAR with a C- or better) and (Prereq or Coreq: ENVS 350 or MSCI 350 or ENVS 332 with a C- or better)]"
   ENVS-464:
     code: ENVS 464
     title: Wildlife Management and Conservation
@@ -541,7 +541,7 @@ courses:
               - courseId: ENVS-360
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( BIO 340   or ENVS 360   ) and STAT 250   and GWAR   with a C- or better) and (Prereq or Coreq: ENVS 350   or MSCI 350   or ENVS 332   with a C- or better)]"
+      - "[(Prereq: ( BIO 340 or ENVS 360 ) and STAT 250 and GWAR with a C- or better) and (Prereq or Coreq: ENVS 350 or MSCI 350 or ENVS 332 with a C- or better)]"
   ENVS-475:
     code: ENVS 475
     title: Projects in Natural Resource Management
@@ -565,7 +565,7 @@ courses:
               - courseId: ENVS-355
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BIO 340   and ENVS 332   and ( ENVS 350   or ENVS 355   ) with a C- or better) and (GWAR)]"
+      - "[Prereq: ( BIO 340 and ENVS 332 and ( ENVS 350 or ENVS 355 ) with a C- or better) and (GWAR)]"
   ENVS-483:
     code: ENVS 483
     title: Environmental Impact Assessment
@@ -585,7 +585,7 @@ courses:
               - courseId: BIO-211
                 minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: ( ENVS 240   or BIO 211   ) and GWAR   with a C- or better)"
+      - "(Prereq: ( ENVS 240 or BIO 211 ) and GWAR with a C- or better)"
   ENVS-486:
     code: ENVS 486
     title: Climate Change Applications
@@ -692,7 +692,7 @@ courses:
       - anyOf:
           - courseId: ENVS-332
     prerequisiteNotes:
-      - "[Prereq: ( ENVS 332   or equivalent) or (Instructor Consent Required)]"
+      - "[Prereq: ( ENVS 332 or equivalent) or (Instructor Consent Required)]"
   ENVS-540:
     code: ENVS 540
     title: Environmental Modeling
@@ -751,7 +751,7 @@ courses:
     prerequisites:
       - courseId: ENVS-550
     prerequisiteNotes:
-      - "(Prereq: ENVS 550   )"
+      - "(Prereq: ENVS 550 )"
   ENVS-564:
     code: ENVS 564
     title: Wildlife Management and Conservation
@@ -886,7 +886,7 @@ courses:
     prerequisites:
       - courseId: ENVS-560
     prerequisiteNotes:
-      - "(Prereq: ENVS 560   )"
+      - "(Prereq: ENVS 560 )"
   ENVS-695:
     code: ENVS 695
     title: Special Topics

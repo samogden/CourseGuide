@@ -30,7 +30,7 @@ courses:
           - courseId: ITAL-101
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: ITAL 101   with a C- or better)"
+      - "(Prereq: ITAL 101 with a C- or better)"
   ITAL-201:
     code: ITAL 201
     title: Intermediate Italian I
@@ -48,7 +48,7 @@ courses:
           - courseId: ITAL-102
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: ITAL 102   with a C- or better)"
+      - "(Prereq: ITAL 102 with a C- or better)"
   ITAL-297:
     code: ITAL 297
     title: Independent Study

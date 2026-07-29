@@ -100,7 +100,7 @@ courses:
           - courseId: BUS-203
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: BUS 203   with a C- or better)"
+      - "(Prereq: BUS 203 with a C- or better)"
   BUS-206:
     code: BUS 206
     title: Business Law
@@ -154,7 +154,7 @@ courses:
           - courseId: STAT-100
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: BUS 204   or STAT 100   or equivalent with a C- or better)"
+      - "(Prereq: BUS 204 or STAT 100 or equivalent with a C- or better)"
   BUS-300:
     code: BUS 300
     title: Major ProSeminar
@@ -170,7 +170,7 @@ courses:
           - courseId: BUS-203
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BUS 201   and BUS 203   ) and ( GE   Area 1A and 1B and 1C) with a C- or better and (Junior or Senior Standing)]"
+      - "[Prereq: ( BUS 201 and BUS 203 ) and ( GE Area 1A and 1B and 1C) with a C- or better and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-300S:
     code: BUS 300S
@@ -185,7 +185,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better)"
   BUS-301:
     code: BUS 301
     title: Principles of Business Analytics
@@ -203,7 +203,7 @@ courses:
           - courseId: BUS-204
           - courseId: STAT-100
     prerequisiteNotes:
-      - "(Prereq: BUS 204   or STAT 100   )"
+      - "(Prereq: BUS 204 or STAT 100 )"
   BUS-302:
     code: BUS 302
     title: Bus Milestone Experience
@@ -237,7 +237,7 @@ courses:
           - courseId: BUS-304
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: BUS 201   and BUS 202   and BUS 203   and ( BUS 204   or STAT 100   or equivalent) and BUS 205   ) with a C- or better) and (Prereq or Coreq: BUS 299   or BUS 301   ) and (Coreq: BUS 304   ) and (Business Majors Only)]"
+      - "[(Prereq: BUS 201 and BUS 202 and BUS 203 and ( BUS 204 or STAT 100 or equivalent) and BUS 205 ) with a C- or better) and (Prereq or Coreq: BUS 299 or BUS 301 ) and (Coreq: BUS 304 ) and (Business Majors Only)]"
   BUS-303:
     code: BUS 303
     title: Major Pro-seminar
@@ -251,7 +251,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: BUS 304   )"
+      - "(Coreq: BUS 304 )"
   BUS-304:
     code: BUS 304
     title: Business Communications & Critical Thinking
@@ -265,7 +265,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-305:
     code: BUS 305
@@ -280,7 +280,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 2 with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Area 2 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-306:
     code: BUS 306
@@ -299,7 +299,7 @@ courses:
           - courseId: GE-2
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: GE   2 with a C- or better) and (Junior or Senior Standing)]"
+      - "[(Prereq: GE 2 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-307:
     code: BUS 307
@@ -314,7 +314,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   BUS-308:
     code: BUS 308
     title: Information Systems for Decision Making
@@ -334,7 +334,7 @@ courses:
               - courseId: BUS-204
               - courseId: STAT-100
     prerequisiteNotes:
-      - "[(Prereq: ( BUS 204   or STAT 100   ) and ( BUS 301   or equivalent)]"
+      - "[(Prereq: ( BUS 204 or STAT 100 ) and ( BUS 301 or equivalent)]"
   BUS-309:
     code: BUS 309
     title: Principles of Operations Management
@@ -354,7 +354,7 @@ courses:
           - courseId: BUS-204
           - courseId: STAT-100
     prerequisiteNotes:
-      - "[Prereq: ( BUS 299   or BUS 301   or equivalent) and ( BUS 204   or STAT 100   equivalent)]"
+      - "[Prereq: ( BUS 299 or BUS 301 or equivalent) and ( BUS 204 or STAT 100 equivalent)]"
   BUS-310:
     code: BUS 310
     title: Entrepreneurship
@@ -374,7 +374,7 @@ courses:
     credits:
       minimum: 4
       maximum: 4
-    description: Explores operational systems in service industries such as banking, hospitality, financial services, and telecommunications. This course is also applicable to nonprofit organizations. Examines the customer service delivery, internal processes, and operational principles that govern service-based industries and nonprofit organizations. May be taken in place of BUS 309   or BUS 312.
+    description: Explores operational systems in service industries such as banking, hospitality, financial services, and telecommunications. This course is also applicable to nonprofit organizations. Examines the customer service delivery, internal processes, and operational principles that govern service-based industries and nonprofit organizations. May be taken in place of BUS 309 or BUS 312.
     offered:
       terms:
         - fall
@@ -395,7 +395,7 @@ courses:
               - courseId: HOSP-300
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: (( BUS 299   ) and ( BUS 300   or BUS 300S   or HOSP 300   ) and ( BUS 304   ) and ( BUS 305   ) with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: (( BUS 299 ) and ( BUS 300 or BUS 300S or HOSP 300 ) and ( BUS 304 ) and ( BUS 305 ) with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-321:
     code: BUS 321
@@ -412,7 +412,7 @@ courses:
           - courseId: BUS-306
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: BUS 306   with a C- or better and (Junior or Senior Standing)]"
+      - "[Prereq: BUS 306 with a C- or better and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-322:
     code: BUS 322
@@ -431,7 +431,7 @@ courses:
           - courseId: BUS-306
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: BUS 306   with a C- or better and (Junior or Senior Standing)]"
+      - "[Prereq: BUS 306 with a C- or better and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-323:
     code: BUS 323
@@ -450,7 +450,7 @@ courses:
           - courseId: BUS-306
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: BUS 306   with a C- or better and (Junior or Senior Standing) or Instructor Consent]"
+      - "[Prereq: BUS 306 with a C- or better and (Junior or Senior Standing) or Instructor Consent]"
     minimumStanding: junior
   BUS-330:
     code: BUS 330
@@ -469,7 +469,7 @@ courses:
           - courseId: BUS-305
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: BUS 305   with a C- or better and (Junior or Senior Standing) or Instructor Consent]"
+      - "[Prereq: BUS 305 with a C- or better and (Junior or Senior Standing) or Instructor Consent]"
     minimumStanding: junior
   BUS-331:
     code: BUS 331
@@ -488,7 +488,7 @@ courses:
           - courseId: BUS-305
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: BUS 305   with a C- or better and (Junior or Senior Standing)]"
+      - "[Prereq: BUS 305 with a C- or better and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-332:
     code: BUS 332
@@ -516,7 +516,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with C- or better) or (Instructor Consent)"
+      - "(Prereq: GE Area 1A and 1B and 1C with C- or better) or (Instructor Consent)"
   BUS-334:
     code: BUS 334
     title: The Impact of AI in Technology, Careers, and Society
@@ -545,7 +545,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   BUS-351:
     code: BUS 351
     title: Risk Management & Tax Planning
@@ -564,7 +564,7 @@ courses:
           - courseId: BUS-350
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BUS 307   or BUS 350   with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( BUS 307 or BUS 350 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-352:
     code: BUS 352
@@ -582,7 +582,7 @@ courses:
           - courseId: BUS-307
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BUS 307   with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( BUS 307 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-353:
     code: BUS 353
@@ -602,7 +602,7 @@ courses:
           - courseId: BUS-350
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BUS 307   or BUS 350   with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( BUS 307 or BUS 350 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-354:
     code: BUS 354
@@ -619,7 +619,7 @@ courses:
       - anyOf:
           - courseId: BUS-307
     prerequisiteNotes:
-      - "[Prereq: BUS 307   and (Junior or Senior Standing)]"
+      - "[Prereq: BUS 307 and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-355:
     code: BUS 355
@@ -636,7 +636,7 @@ courses:
           - courseId: BUS-307
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BUS 307   with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( BUS 307 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-356:
     code: BUS 356
@@ -654,7 +654,7 @@ courses:
           - courseId: BUS-305
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( BUS 305   ) and ( GE   Area 2) with a C- or better) and (Junior or Senior Standing))]"
+      - "[(Prereq: ( BUS 305 ) and ( GE Area 2) with a C- or better) and (Junior or Senior Standing))]"
     minimumStanding: junior
   BUS-357:
     code: BUS 357
@@ -671,7 +671,7 @@ courses:
           - courseId: BUS-307
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BUS 307   with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( BUS 307 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-358:
     code: BUS 358
@@ -707,7 +707,7 @@ courses:
           - courseId: BUS-301
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq or Coreq: BUS 299   or BUS 301   with a C- or better)"
+      - "(Prereq or Coreq: BUS 299 or BUS 301 with a C- or better)"
   BUS-364:
     code: BUS 364
     title: Cybersecurity and Privacy Management Strategies
@@ -723,7 +723,7 @@ courses:
           - courseId: BUS-299
           - courseId: BUS-301
     prerequisiteNotes:
-      - "(Prereq: BUS 299   or BUS 301   or Instructor Consent Required)"
+      - "(Prereq: BUS 299 or BUS 301 or Instructor Consent Required)"
   BUS-370:
     code: BUS 370
     title: Price Analysis
@@ -749,7 +749,7 @@ courses:
               - courseId: STAT-100
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: BUS 201   and BUS 202   and ( BUS 204   or STAT 100   ) and ( BUS 299   or equivalent) with a C- or better)]"
+      - "[(Prereq: BUS 201 and BUS 202 and ( BUS 204 or STAT 100 ) and ( BUS 299 or equivalent) with a C- or better)]"
   BUS-375:
     code: BUS 375
     title: Agribusiness Trading and Risk Management
@@ -771,7 +771,7 @@ courses:
               - courseId: STAT-100
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( BUS 204   or STAT 100   ) and BUS 202   with a C- or better) and (Junior or Senior Standing)]"
+      - "[(Prereq: ( BUS 204 or STAT 100 ) and BUS 202 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-383:
     code: BUS 383
@@ -792,7 +792,7 @@ courses:
           - courseId: BUS-205
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BUS 203   and BUS 205   with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( BUS 203 and BUS 205 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-384:
     code: BUS 384
@@ -811,7 +811,7 @@ courses:
           - courseId: BUS-383
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: BUS 383   with a C- or better and (Junior or Senior Standing)]"
+      - "[Prereq: BUS 383 with a C- or better and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-385:
     code: BUS 385
@@ -830,7 +830,7 @@ courses:
           - courseId: BUS-203
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: BUS 203   with a C- or better and (Junior or Senior Standing)]"
+      - "[Prereq: BUS 203 with a C- or better and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-395:
     code: BUS 395
@@ -854,7 +854,7 @@ courses:
               - courseId: BUS-300S
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: (( BUS 300   or BUS 300S   ) and ( BUS 304   and BUS 305   ) with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: (( BUS 300 or BUS 300S ) and ( BUS 304 and BUS 305 ) with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-397:
     code: BUS 397
@@ -892,7 +892,7 @@ courses:
           - courseId: BUS-307
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: BUS 304   and BUS 305   and BUS 306   with a C- or better) and (Junior or Senior Standing) and (Prereq or Coreq: BUS 307   )]"
+      - "[(Prereq: BUS 304 and BUS 305 and BUS 306 with a C- or better) and (Junior or Senior Standing) and (Prereq or Coreq: BUS 307 )]"
     minimumStanding: junior
   BUS-410:
     code: BUS 410
@@ -927,7 +927,7 @@ courses:
               - courseId: STAT-100
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: (( BUS 204   or STAT 100   ) and ( BUS 306   ) with a C- or better) and (Junior or Senior Standing)]"
+      - "[(Prereq: (( BUS 204 or STAT 100 ) and ( BUS 306 ) with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-422:
     code: BUS 422
@@ -944,7 +944,7 @@ courses:
           - courseId: BUS-306
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BUS 306   ) and ( GE   Area 2) with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( BUS 306 ) and ( GE Area 2) with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-423:
     code: BUS 423
@@ -962,7 +962,7 @@ courses:
           - courseId: BUS-306
           - courseId: BUS-422
     prerequisiteNotes:
-      - "(Prereq: BUS 306   and BUS 422   with C- or higher)"
+      - "(Prereq: BUS 306 and BUS 422 with C- or higher)"
   BUS-425:
     code: BUS 425
     title: Global Marketing
@@ -980,7 +980,7 @@ courses:
           - courseId: BUS-306
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BUS 306   with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( BUS 306 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-430:
     code: BUS 430
@@ -1051,7 +1051,7 @@ courses:
               - courseId: STAT-100
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: (( BUS 204   or STAT 100   ) and ( BUS 202   ) and ( BUS 299   or BUS 301   with a C- or better) and (Prereq or Coreq: BUS 309   ) with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: (( BUS 204 or STAT 100 ) and ( BUS 202 ) and ( BUS 299 or BUS 301 with a C- or better) and (Prereq or Coreq: BUS 309 ) with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-436:
     code: BUS 436
@@ -1068,7 +1068,7 @@ courses:
           - courseId: BUS-202
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: BUS 202   with a C- or better and (Junior or Senior Standing)]"
+      - "[(Prereq: BUS 202 with a C- or better and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-437:
     code: BUS 437
@@ -1097,7 +1097,7 @@ courses:
               - courseId: STAT-100
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( BUS 204   or STAT 100   ) and BUS 202   and ( BUS 299   or BUS 301   ) with a C- or better) and (Prereq or Coreq: BUS 309   with a C- or better) and (Junior or Senior Standing)]"
+      - "[(Prereq: ( BUS 204 or STAT 100 ) and BUS 202 and ( BUS 299 or BUS 301 ) with a C- or better) and (Prereq or Coreq: BUS 309 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-440:
     code: BUS 440
@@ -1126,7 +1126,7 @@ courses:
               - courseId: STAT-100
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: BUS 202   and ( BUS 204   or STAT 100   ) and ( BUS 299   or BUS 301   ) with a C- or better) and (Prereq or Coreq: BUS 309   with a C- or better) and (Junior or Senior Standing)]"
+      - "[(Prereq: BUS 202 and ( BUS 204 or STAT 100 ) and ( BUS 299 or BUS 301 ) with a C- or better) and (Prereq or Coreq: BUS 309 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-441:
     code: BUS 441
@@ -1155,7 +1155,7 @@ courses:
               - courseId: STAT-100
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: BUS 202   and ( BUS 204   or STAT 100   ) and ( BUS 299   or BUS 301   ) with a C- or better) and (Prereq or Coreq: BUS 309   with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: BUS 202 and ( BUS 204 or STAT 100 ) and ( BUS 299 or BUS 301 ) with a C- or better) and (Prereq or Coreq: BUS 309 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-442:
     code: BUS 442
@@ -1184,7 +1184,7 @@ courses:
               - courseId: STAT-100
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: BUS 202   and ( BUS 204   or STAT 100   ) and ( BUS 299   or BUS 301   ) with a C- or better) and (Prereq or Coreq: BUS 309   with a C- or better) and (Junior or Senior Standing)]"
+      - "[(Prereq: BUS 202 and ( BUS 204 or STAT 100 ) and ( BUS 299 or BUS 301 ) with a C- or better) and (Prereq or Coreq: BUS 309 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-451:
     code: BUS 451
@@ -1204,7 +1204,7 @@ courses:
           - courseId: BUS-310
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq or Coreq: BUS 307   and BUS 310   with a C- or better) and (Junior or Senior Standing)]"
+      - "[(Prereq or Coreq: BUS 307 and BUS 310 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-452:
     code: BUS 452
@@ -1222,7 +1222,7 @@ courses:
           - courseId: BUS-353
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BUS 353   with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( BUS 353 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-454:
     code: BUS 454
@@ -1242,7 +1242,7 @@ courses:
           - courseId: BUS-307
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: (( BUS 204   or Elementary Stats equivalent) and ( BUS 307   ) with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: (( BUS 204 or Elementary Stats equivalent) and ( BUS 307 ) with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-455:
     code: BUS 455
@@ -1259,7 +1259,7 @@ courses:
           - courseId: BUS-205
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: (( BUS 205   or Managerial Accounting equivalent) with a C- or better) and (Junior or Senior Standing)]"
+      - "[(Prereq: (( BUS 205 or Managerial Accounting equivalent) with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-460:
     code: BUS 460
@@ -1277,7 +1277,7 @@ courses:
           - courseId: BUS-308
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq or Coreq: BUS 308   with a c- or better) and (Junior or Senior Standing)]"
+      - "[(Prereq or Coreq: BUS 308 with a c- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-462:
     code: BUS 462
@@ -1293,7 +1293,7 @@ courses:
       - anyOf:
           - courseId: BUS-360
     prerequisiteNotes:
-      - "[(Prereq: BUS 360   ) or (Instructor Consent Required)]"
+      - "[(Prereq: BUS 360 ) or (Instructor Consent Required)]"
   BUS-463:
     code: BUS 463
     title: "E-Comm: Design & Development"
@@ -1311,7 +1311,7 @@ courses:
           - courseId: BUS-363
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BUS 308   and BUS 363 with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( BUS 308 and BUS 363 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-465:
     code: BUS 465
@@ -1330,7 +1330,7 @@ courses:
           - courseId: BUS-301
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq or Coreq: BUS 299   or BUS 301   with a C- or better)"
+      - "(Prereq or Coreq: BUS 299 or BUS 301 with a C- or better)"
   BUS-468:
     code: BUS 468
     title: Business Analytics
@@ -1347,7 +1347,7 @@ courses:
           - courseId: BUS-308
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq or Coreq: BUS 308   with a C- or better) and (Junior or Senior Standing)]"
+      - "[(Prereq or Coreq: BUS 308 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-469:
     code: BUS 469
@@ -1365,7 +1365,7 @@ courses:
           - courseId: BUS-308
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BUS 308   with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( BUS 308 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-470:
     code: BUS 470
@@ -1382,7 +1382,7 @@ courses:
           - courseId: BUS-310
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: BUS 310   with a C- or better and (Junior or Senior Standing)]"
+      - "[Prereq: BUS 310 with a C- or better and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-472:
     code: BUS 472
@@ -1417,7 +1417,7 @@ courses:
       - anyOf:
           - courseId: BUS-301
     prerequisiteNotes:
-      - "(Prereq: BUS 301   or equivalent)"
+      - "(Prereq: BUS 301 or equivalent)"
   BUS-481:
     code: BUS 481
     title: Accounting Systems
@@ -1435,7 +1435,7 @@ courses:
           - courseId: BUS-308
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( BUS 383   ) and ( BUS 308   ) with a C- or better) and (Junior or Senior Standing)]"
+      - "[(Prereq: ( BUS 383 ) and ( BUS 308 ) with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-482:
     code: BUS 482
@@ -1456,7 +1456,7 @@ courses:
           - courseId: BUS-384
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BUS 383   and BUS 384   with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( BUS 383 and BUS 384 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-483:
     code: BUS 483
@@ -1496,7 +1496,7 @@ courses:
           - courseId: BUS-384
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BUS 383   and BUS 384   with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( BUS 383 and BUS 384 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-487:
     code: BUS 487
@@ -1515,7 +1515,7 @@ courses:
           - courseId: BUS-304
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BUS 300S   and BUS 304   with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( BUS 300S and BUS 304 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-493:
     code: BUS 493
@@ -1534,7 +1534,7 @@ courses:
           - courseId: BUS-305
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BUS 305   ) and (GWAR) with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( BUS 305 ) and (GWAR) with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-494:
     code: BUS 494
@@ -1582,7 +1582,7 @@ courses:
           - courseId: BUS-307
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BUS 305   and BUS 306   and BUS 307   with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( BUS 305 and BUS 306 and BUS 307 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-498:
     code: BUS 498
@@ -1607,7 +1607,7 @@ courses:
           - courseId: BUS-307
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BUS 304   and BUS 305   and BUS 306   and BUS 307   with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( BUS 304 and BUS 305 and BUS 306 and BUS 307 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   BUS-499:
     code: BUS 499
@@ -1630,7 +1630,7 @@ courses:
           - courseId: BUS-307
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: BUS 305   and BUS 306   and BUS 307   with a C- or better) and (Senior Standing)]"
+      - "[(Prereq: BUS 305 and BUS 306 and BUS 307 with a C- or better) and (Senior Standing)]"
   BUS-568:
     code: BUS 568
     title: Business Intelligence and Analytics
@@ -1656,7 +1656,7 @@ courses:
     prerequisites:
       - courseId: BUS-468
     prerequisiteNotes:
-      - "(Prereq: BUS 468   )"
+      - "(Prereq: BUS 468 )"
   BUS-570:
     code: BUS 570
     title: Advanced Business Analytics and Visualization
@@ -1670,7 +1670,7 @@ courses:
     prerequisites:
       - courseId: BUS-468
     prerequisiteNotes:
-      - "(Prereq: BUS 468   )"
+      - "(Prereq: BUS 468 )"
   BUS-582:
     code: BUS 582
     title: Auditing & Assurance
@@ -1819,7 +1819,7 @@ courses:
       - anyOf:
           - courseId: BUS-204
     prerequisiteNotes:
-      - "(Prereq: BUS 204   or equivalent) (Restricted to MBA Majors Only)"
+      - "(Prereq: BUS 204 or equivalent) (Restricted to MBA Majors Only)"
   BUS-610:
     code: BUS 610
     title: Economics for Business
@@ -1911,7 +1911,7 @@ courses:
       - anyOf:
           - courseId: BUS-203
     prerequisiteNotes:
-      - "(Prereq: BUS 203   or equivalent) (Restricted to MBA students only)"
+      - "(Prereq: BUS 203 or equivalent) (Restricted to MBA students only)"
   BUS-652:
     code: BUS 652
     title: Financial Management
@@ -1925,7 +1925,7 @@ courses:
     prerequisites:
       - courseId: BUS-307
     prerequisiteNotes:
-      - "(Prereq: BUS 307   ) (Restricted to MBA Students Only)"
+      - "(Prereq: BUS 307 ) (Restricted to MBA Students Only)"
   BUS-661:
     code: BUS 661
     title: Innovation and Technology Management
@@ -2108,6 +2108,6 @@ courses:
     credits:
       minimum: 4
       maximum: 4
-    description: A capstone contributes to the disciplines or the professions by adding to technical/professional knowledge or by providing an original application of technical/professional knowledge in both management and information technology disciplines. Examples include a field study, a project, applied research, or a professional article of publishable quality. Students also master basic principles of strategic planning, including stakeholder management. Cross-listed as CST 699   .
+    description: A capstone contributes to the disciplines or the professions by adding to technical/professional knowledge or by providing an original application of technical/professional knowledge in both management and information technology disciplines. Examples include a field study, a project, applied research, or a professional article of publishable quality. Students also master basic principles of strategic planning, including stakeholder management. Cross-listed as CST 699 .
     offered:
       availability: periodic

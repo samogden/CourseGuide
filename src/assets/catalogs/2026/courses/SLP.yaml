@@ -80,7 +80,7 @@ courses:
     prerequisites:
       - courseId: SLP-611
     prerequisiteNotes:
-      - "(Prereq: SLP 611   )"
+      - "(Prereq: SLP 611 )"
   SLP-617:
     code: SLP 617
     title: Grand Rounds in Speech-Language Pathology
@@ -221,7 +221,7 @@ courses:
     prerequisites:
       - courseId: SLP-656
     prerequisiteNotes:
-      - "[(Prereq: SLP 656   ) and (Department Consent Required)]"
+      - "[(Prereq: SLP 656 ) and (Department Consent Required)]"
   SLP-656:
     code: SLP 656
     title: Neuroscience for the Speech-Language Pathologist

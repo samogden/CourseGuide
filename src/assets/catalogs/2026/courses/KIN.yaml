@@ -291,7 +291,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Coreq: KIN 180L   )"
+      - "(Coreq: KIN 180L )"
   KIN-180L:
     code: KIN 180L
     title: Backpacking & Hiking Lab
@@ -299,12 +299,12 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Required lab course for KIN 180   . Includes a three-day backpacking trip over a weekend and several day hikes on Fort Ord recreation lands. Requires course fee. Credit/ no credit.
+    description: Required lab course for KIN 180 . Includes a three-day backpacking trip over a weekend and several day hikes on Fort Ord recreation lands. Requires course fee. Credit/ no credit.
     offered:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Coreq: KIN 180   )"
+      - "(Coreq: KIN 180 )"
   KIN-195:
     code: KIN 195
     title: Special Topics
@@ -360,7 +360,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Coreq: KIN 254L   )"
+      - "(Coreq: KIN 254L )"
   KIN-254L:
     code: KIN 254L
     title: Kayaking Lab
@@ -368,12 +368,12 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Required lab course for KIN 254   . Requires field trips and course fee. Credit/no credit.
+    description: Required lab course for KIN 254 . Requires field trips and course fee. Credit/no credit.
     offered:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Coreq: KIN 254   )"
+      - "(Coreq: KIN 254 )"
   KIN-263:
     code: KIN 263
     title: Introduction to Human Sexuality
@@ -591,7 +591,7 @@ courses:
           - courseId: KIN-360
             minimumGrade: C-
     prerequisiteNotes:
-      - "[[Prereq: ( KIN 360   with a C- or better) or (Coreq: KIN 360   )]"
+      - "[[Prereq: ( KIN 360 with a C- or better) or (Coreq: KIN 360 )]"
   KIN-363:
     code: KIN 363
     title: Human Sexuality
@@ -636,7 +636,7 @@ courses:
           - courseId: KIN-370L
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Prereq or Coreq: KIN 370L   )]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better) and (Prereq or Coreq: KIN 370L )]"
   KIN-370L:
     code: KIN 370L
     title: Anatomy & Physiology I Lab
@@ -653,7 +653,7 @@ courses:
       - anyOf:
           - courseId: KIN-370
     prerequisiteNotes:
-      - "(Prereq or Coreq: KIN 370   )"
+      - "(Prereq or Coreq: KIN 370 )"
   KIN-371:
     code: KIN 371
     title: Anatomy & Physiology II
@@ -671,7 +671,7 @@ courses:
           - courseId: KIN-371L
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Prereq or Coreq: KIN 371L   )"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better) and (Prereq or Coreq: KIN 371L )"
   KIN-371L:
     code: KIN 371L
     title: Anatomy & Physiology II Lab
@@ -687,7 +687,7 @@ courses:
     prerequisites:
       - courseId: KIN-371
     prerequisiteNotes:
-      - "(Prereq orCoreq: KIN 371   )"
+      - "(Prereq orCoreq: KIN 371 )"
   KIN-373:
     code: KIN 373
     title: Health and Physical Education
@@ -701,7 +701,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: KIN 373L   )"
+      - "(Coreq: KIN 373L )"
   KIN-373L:
     code: KIN 373L
     title: Health and Physical Education Lab
@@ -709,13 +709,13 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Supervised activity for KIN 373   . Focuses on foundations of movement for children preschool to 8th grade from a growth and development perspective.
+    description: Supervised activity for KIN 373 . Focuses on foundations of movement for children preschool to 8th grade from a growth and development perspective.
     offered:
       terms:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: KIN 373   )"
+      - "(Coreq: KIN 373 )"
   KIN-375:
     code: KIN 375
     title: Motor Behavior
@@ -740,7 +740,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Coreq: KIN 382L   )"
+      - "(Coreq: KIN 382L )"
   KIN-382L:
     code: KIN 382L
     title: Wilderness Leadership Lab
@@ -748,12 +748,12 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Required lab for KIN 382   and includes a weeklong intensive backpacking and mountaineering expedition. Requires course fee. Credit/no credit.
+    description: Required lab for KIN 382 and includes a weeklong intensive backpacking and mountaineering expedition. Requires course fee. Credit/no credit.
     offered:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Coreq: KIN 382   )"
+      - "(Coreq: KIN 382 )"
   KIN-383:
     code: KIN 383
     title: Fdn of Adventure Education
@@ -766,7 +766,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Coreq: KIN 383L   )"
+      - "(Coreq: KIN 383L )"
   KIN-383L:
     code: KIN 383L
     title: Fdn of Adventure Education Lab
@@ -774,12 +774,12 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Required lab course for KIN 383   and includes five days of field activities. Requires course fee. Credit/no credit.
+    description: Required lab course for KIN 383 and includes five days of field activities. Requires course fee. Credit/no credit.
     offered:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Coreq: KIN 383   )"
+      - "(Coreq: KIN 383 )"
   KIN-384:
     code: KIN 384
     title: Wilderness Experience
@@ -792,7 +792,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Coreq: KIN 384L   )"
+      - "(Coreq: KIN 384L )"
   KIN-384L:
     code: KIN 384L
     title: Wilderness Experience Lab
@@ -800,12 +800,12 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Required lab course for KIN 384   , including a weeklong intensive field expedition to the San Rafael Wilderness during Spring Break. Requires course fee. Credit/no credit.
+    description: Required lab course for KIN 384 , including a weeklong intensive field expedition to the San Rafael Wilderness during Spring Break. Requires course fee. Credit/no credit.
     offered:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Coreq: KIN 384   )"
+      - "(Coreq: KIN 384 )"
   KIN-385:
     code: KIN 385
     title: Outdoor Edu/Rec Program Admin
@@ -818,7 +818,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Coreq: KIN 385L   )"
+      - "(Coreq: KIN 385L )"
   KIN-385L:
     code: KIN 385L
     title: Outdoor Ed/Rec Prog Admin Lab
@@ -826,12 +826,12 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Required lab course for KIN 385   and includes an intensive field expedition to a wilderness area in California during Spring Break. Credit/no credit.
+    description: Required lab course for KIN 385 and includes an intensive field expedition to a wilderness area in California during Spring Break. Credit/no credit.
     offered:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Coreq: KIN 385   )"
+      - "(Coreq: KIN 385 )"
   KIN-390:
     code: KIN 390
     title: Exercise Physiology
@@ -849,7 +849,7 @@ courses:
           - courseId: KIN-370
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better) and ( KIN 370   )]"
+      - "[(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better) and ( KIN 370 )]"
   KIN-395:
     code: KIN 395
     title: Special Topics
@@ -913,7 +913,7 @@ courses:
     prerequisites:
       - courseId: KIN-390
     prerequisiteNotes:
-      - "(Prereq: KIN 390   )"
+      - "(Prereq: KIN 390 )"
   KIN-440:
     code: KIN 440
     title: Phys & Biomech Anaerobic Exer
@@ -929,7 +929,7 @@ courses:
     prerequisites:
       - courseId: KIN-390
     prerequisiteNotes:
-      - "(Prereq: KIN 390   )"
+      - "(Prereq: KIN 390 )"
   KIN-450:
     code: KIN 450
     title: Exer Prescript for Special Pop
@@ -998,7 +998,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   KIN-490:
     code: KIN 490
     title: Evolutionary Medicine
@@ -1036,7 +1036,7 @@ courses:
           - courseId: KIN-300
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: KIN 300   with a C- or better)"
+      - "(Prereq: KIN 300 with a C- or better)"
   KIN-499:
     code: KIN 499
     title: Senior Capstone

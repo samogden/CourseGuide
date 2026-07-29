@@ -26,7 +26,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1C with a C- or better)"
+      - "(Prereq: GE Area 1C with a C- or better)"
   SW-405:
     code: SW 405
     title: Social Work Case Management
@@ -44,7 +44,7 @@ courses:
           - courseId: SW-205
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and ( GWAR   ) and ( SW 205   ) with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 and ( GWAR ) and ( SW 205 ) with a C- or better)"
   SW-406:
     code: SW 406
     title: Social Work with Groups
@@ -62,7 +62,7 @@ courses:
           - courseId: SW-205
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and ( GWAR   ) and ( SW 205   ) with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 and ( GWAR ) and ( SW 205 ) with a C- or better)"
   SW-415:
     code: SW 415
     title: Social Work with Children, Youth and Families
@@ -79,7 +79,7 @@ courses:
           - courseId: SW-205
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and ( GWAR   ) and ( SW 205   ) with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 and ( GWAR ) and ( SW 205 ) with a C- or better)"
   SW-425:
     code: SW 425
     title: Social Welfare Policy
@@ -95,7 +95,7 @@ courses:
           - courseId: SW-205
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and ( GWAR   ) and ( SW 205   ) with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 and ( GWAR ) and ( SW 205 ) with a C- or better)"
   SW-435:
     code: SW 435
     title: Introduction to Substance Use Disorders
@@ -112,7 +112,7 @@ courses:
           - courseId: SW-205
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and ( GWAR   ) and ( SW 205   ) with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 and ( GWAR ) and ( SW 205 ) with a C- or better)"
   SW-455:
     code: SW 455
     title: Social Work with Older Adults
@@ -129,7 +129,7 @@ courses:
           - courseId: SW-205
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and ( GWAR   ) and ( SW 205   ) with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 and ( GWAR ) and ( SW 205 ) with a C- or better)"
   SW-495:
     code: SW 495
     title: Special Topics
@@ -188,7 +188,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "[(Coreq: SW 596   ) and (Restricted to MSW Students)]"
+      - "[(Coreq: SW 596 ) and (Restricted to MSW Students)]"
   SW-530:
     code: SW 530
     title: "Generalist Practice: Groups"
@@ -205,7 +205,7 @@ courses:
           - courseId: SW-598
           - courseId: SW-540
     prerequisiteNotes:
-      - "[(Coreq: SW 598   ) and (Prereq or Coreq: SW 540   ) and (Restricted to MSW Students)]"
+      - "[(Coreq: SW 598 ) and (Prereq or Coreq: SW 540 ) and (Restricted to MSW Students)]"
   SW-531:
     code: SW 531
     title: "Generalist Practice III: Community and Organizational Practice"
@@ -220,7 +220,7 @@ courses:
     prerequisites:
       - courseId: SW-501
     prerequisiteNotes:
-      - "[(Prereq: SW 501   ) and (Restricted to MSW Students)]"
+      - "[(Prereq: SW 501 ) and (Restricted to MSW Students)]"
   SW-540:
     code: SW 540
     title: Cross-Cultural Human Behavior in the Social Environment
@@ -261,7 +261,7 @@ courses:
     prerequisites:
       - courseId: SW-550
     prerequisiteNotes:
-      - "(Prereq: SW 550   ) (Restricted to MSW Students)"
+      - "(Prereq: SW 550 ) (Restricted to MSW Students)"
   SW-560:
     code: SW 560
     title: Community Research Methods
@@ -275,7 +275,7 @@ courses:
     prerequisites:
       - courseId: SW-550
     prerequisiteNotes:
-      - "(Prereq: SW 550   ) (Restricted to MSW Students)"
+      - "(Prereq: SW 550 ) (Restricted to MSW Students)"
   SW-562:
     code: SW 562
     title: Social Work in the Latino Community
@@ -291,7 +291,7 @@ courses:
     prerequisites:
       - courseId: SW-540
     prerequisiteNotes:
-      - "(Prereq: SW 540   ) (Restricted to MSW Students)"
+      - "(Prereq: SW 540 ) (Restricted to MSW Students)"
   SW-563:
     code: SW 563
     title: Social Work Conflict Resolution
@@ -307,7 +307,7 @@ courses:
     prerequisites:
       - courseId: SW-540
     prerequisiteNotes:
-      - "(Prereq: SW 540   ) (Restricted to MSW Students)"
+      - "(Prereq: SW 540 ) (Restricted to MSW Students)"
   SW-564:
     code: SW 564
     title: Trauma-Informed Practice
@@ -323,7 +323,7 @@ courses:
     prerequisites:
       - courseId: SW-540
     prerequisiteNotes:
-      - "(Prereq: SW 540   ) (Restricted to MSW Students)"
+      - "(Prereq: SW 540 ) (Restricted to MSW Students)"
   SW-565:
     code: SW 565
     title: School Social Work
@@ -340,7 +340,7 @@ courses:
           - courseId: SW-696
           - courseId: SW-698
     prerequisiteNotes:
-      - "[(Prereq: SW 540   ) and (Coreq: SW 696   or SW 698   )] (Restricted to MSW Students)"
+      - "[(Prereq: SW 540 ) and (Coreq: SW 696 or SW 698 )] (Restricted to MSW Students)"
   SW-566:
     code: SW 566
     title: Crafting a Grant Proposal
@@ -356,7 +356,7 @@ courses:
     prerequisites:
       - courseId: SW-540
     prerequisiteNotes:
-      - "(Prereq: SW 540   ) (Restricted to MSW Students)"
+      - "(Prereq: SW 540 ) (Restricted to MSW Students)"
   SW-567:
     code: SW 567
     title: Forensic Social Work
@@ -422,7 +422,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Coreq: SW 520   or SW 530   ) (Restricted to MSW Students)"
+      - "(Coreq: SW 520 or SW 530 ) (Restricted to MSW Students)"
   SW-597:
     code: SW 597
     title: Independent Study
@@ -450,7 +450,7 @@ courses:
       - courseId: SW-596
       - courseId: SW-530
     prerequisiteNotes:
-      - "[(Prereq: SW 596   ) AND (Coreq: SW 530   ) AND (Restricted to MSW Students)]"
+      - "[(Prereq: SW 596 ) AND (Coreq: SW 530 ) AND (Restricted to MSW Students)]"
   SW-600:
     code: SW 600
     title: Applied Social Work Research Project
@@ -466,7 +466,7 @@ courses:
       - courseId: SW-550
       - courseId: SW-696
     prerequisiteNotes:
-      - "[((Prereq: SW 550   ) AND (Restricted to MSW Students)) AND (Coreq: SW 696   )]"
+      - "[((Prereq: SW 550 ) AND (Restricted to MSW Students)) AND (Coreq: SW 696 )]"
   SW-610:
     code: SW 610
     title: Social Work Practice in Behavioral Health
@@ -483,7 +483,7 @@ courses:
       - courseId: SW-520
       - courseId: SW-540
     prerequisiteNotes:
-      - "[(Prereq: SW 520   and SW 540   ) and (Restricted to MSW Students)]"
+      - "[(Prereq: SW 520 and SW 540 ) and (Restricted to MSW Students)]"
   SW-611:
     code: SW 611
     title: Social Work with Children Youth & Families
@@ -499,7 +499,7 @@ courses:
     prerequisites:
       - courseId: SW-540
     prerequisiteNotes:
-      - "[(Prereq: SW 540   ) and (Restricted to MSW Students)]"
+      - "[(Prereq: SW 540 ) and (Restricted to MSW Students)]"
   SW-612:
     code: SW 612
     title: Gerontological Social Work
@@ -515,7 +515,7 @@ courses:
     prerequisites:
       - courseId: SW-540
     prerequisiteNotes:
-      - "[(Prereq: SW 540   ) and (Restricted to MSW Students)]"
+      - "[(Prereq: SW 540 ) and (Restricted to MSW Students)]"
   SW-620:
     code: SW 620
     title: "Advanced Generalist Practice: Engagement and Assessment"
@@ -528,7 +528,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "[(Coreq: SW 696   )) and (Restricted to MSW students)]"
+      - "[(Coreq: SW 696 )) and (Restricted to MSW students)]"
   SW-621:
     code: SW 621
     title: DSM Analysis & Application
@@ -555,7 +555,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "[(Coreq: SW 698   ) and (Restricted to MSW Students)]"
+      - "[(Coreq: SW 698 ) and (Restricted to MSW Students)]"
   SW-660:
     code: SW 660
     title: Substance Use Interventions
@@ -582,7 +582,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Coreq: SW 630   )"
+      - "(Coreq: SW 630 )"
   SW-662:
     code: SW 662
     title: Advanced Family System Theories and Interventions
@@ -596,7 +596,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[(Coreq: SW 620   or SW 630   ) AND (Restricted to MSW Students)]"
+      - "[(Coreq: SW 620 or SW 630 ) AND (Restricted to MSW Students)]"
   SW-663:
     code: SW 663
     title: Crisis Intervention
@@ -612,7 +612,7 @@ courses:
     prerequisites:
       - courseId: SW-540
     prerequisiteNotes:
-      - "[(Prereq: SW 540   ) AND (Restricted to MSW Students)]"
+      - "[(Prereq: SW 540 ) AND (Restricted to MSW Students)]"
   SW-664:
     code: SW 664
     title: Advanced Models of Clinical Practice
@@ -626,7 +626,7 @@ courses:
       - courseId: SW-540
       - courseId: SW-530
     prerequisiteNotes:
-      - "[(Prereq: SW 520   and SW 540   ) AND (Coreq: SW 530   ) AND (Restricted to MSW Students)]"
+      - "[(Prereq: SW 520 and SW 540 ) AND (Coreq: SW 530 ) AND (Restricted to MSW Students)]"
   SW-666:
     code: SW 666
     title: Integrated Health Care
@@ -642,7 +642,7 @@ courses:
     prerequisites:
       - courseId: SW-540
     prerequisiteNotes:
-      - "[(Prereq: SW 540   ) AND (Restricted to MSW Students)]"
+      - "[(Prereq: SW 540 ) AND (Restricted to MSW Students)]"
   SW-669:
     code: SW 669
     title: Veterans & Military Families
@@ -658,7 +658,7 @@ courses:
     prerequisites:
       - courseId: SW-540
     prerequisiteNotes:
-      - "[(Prereq: SW 540   ) AND (Restricted to MSW Students)]"
+      - "[(Prereq: SW 540 ) AND (Restricted to MSW Students)]"
   SW-670:
     code: SW 670
     title: Social Policy & Advocacy
@@ -673,7 +673,7 @@ courses:
     prerequisites:
       - courseId: SW-570
     prerequisiteNotes:
-      - "[(Prereq: SW 570   ) AND (Restricted to MSW Students)]"
+      - "[(Prereq: SW 570 ) AND (Restricted to MSW Students)]"
   SW-695:
     code: SW 695
     title: Special Topics
@@ -701,7 +701,7 @@ courses:
       - courseId: SW-598
       - courseId: SW-620
     prerequisiteNotes:
-      - "[(Prereq: SW 596   AND SW 598   ) AND (Coreq: SW 620   ) AND (Restricted to MSW Students)]"
+      - "[(Prereq: SW 596 AND SW 598 ) AND (Coreq: SW 620 ) AND (Restricted to MSW Students)]"
   SW-697:
     code: SW 697
     title: Independent Study
@@ -730,4 +730,4 @@ courses:
       - courseId: SW-696
       - courseId: SW-630
     prerequisiteNotes:
-      - "[(Prereq: SW 596   AND SW 598   AND SW 696   ) AND (Coreq: SW 630   ) AND (Restricted to MSW Students)]"
+      - "[(Prereq: SW 596 AND SW 598 AND SW 696 ) AND (Coreq: SW 630 ) AND (Restricted to MSW Students)]"

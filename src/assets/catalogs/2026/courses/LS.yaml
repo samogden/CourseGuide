@@ -104,7 +104,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   LS-311:
     code: LS 311
     title: Educational Issues and the Latino Community
@@ -118,7 +118,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   LS-350:
     code: LS 350
@@ -133,7 +133,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   LS-363:
     code: LS 363
     title: Immigrants & Equity Issues in Education
@@ -141,13 +141,13 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: Focus on multicultural concepts of culturally diverse groups. Students examine differing perspectives and experiences of immigrants, including 5 Southeast Asian groups in U.S., including their historical struggles and how power determines social, economic and political stratification associated with race, gender, sexual orientation and abilities. Consideration of how these factors impact equity, access, schools/schooling, and teaching and learning. (Crosslisted/Equivalent with ES 363   )
+    description: Focus on multicultural concepts of culturally diverse groups. Students examine differing perspectives and experiences of immigrants, including 5 Southeast Asian groups in U.S., including their historical struggles and how power determines social, economic and political stratification associated with race, gender, sexual orientation and abilities. Consideration of how these factors impact equity, access, schools/schooling, and teaching and learning. (Crosslisted/Equivalent with ES 363 )
     offered:
       terms:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   LS-380:
     code: LS 380
     title: Teaching for Social Change
@@ -161,7 +161,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   LS-383:
     code: LS 383
     title: Innov Approaches to Schooling
@@ -175,7 +175,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   LS-384:
     code: LS 384
     title: Issues in Comparative and International Education
@@ -189,7 +189,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   LS-386S:
     code: LS 386S
     title: Service Learning for Social Change in Education
@@ -207,7 +207,7 @@ courses:
           - courseId: LS-242S
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and ( LS 242S   or equivalent) and (LS majors only)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better) and ( LS 242S or equivalent) and (LS majors only)]"
   LS-390:
     code: LS 390
     title: Culturally Sustaining Literature for Elementary and Middle Grades
@@ -221,7 +221,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   LS-395:
     code: LS 395
     title: Special Topics
@@ -265,7 +265,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   LS-400:
     code: LS 400
     title: Senior Capstone
@@ -283,4 +283,4 @@ courses:
           - courseId: LS-300
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: LS 300   with a C- or better) and (Senior Standing)]"
+      - "[(Prereq: LS 300 with a C- or better) and (Senior Standing)]"

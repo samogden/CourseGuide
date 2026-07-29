@@ -96,7 +96,7 @@ courses:
     credits:
       minimum: 4
       maximum: 4
-    description: "Econ Anlys of Public Policy II: A continuation of MPP 610   , this course shares the objective of applying economic principles to policy issues. This course focuses on the tools of macroeconomic analysis and the role of government in the economy. Topics covered include public finance, externalities and public goods, social insurance and redistribution, and taxation in theory and practice."
+    description: "Econ Anlys of Public Policy II: A continuation of MPP 610 , this course shares the objective of applying economic principles to policy issues. This course focuses on the tools of macroeconomic analysis and the role of government in the economy. Topics covered include public finance, externalities and public goods, social insurance and redistribution, and taxation in theory and practice."
     offered:
       availability: periodic
   MPP-630:

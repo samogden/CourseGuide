@@ -14,7 +14,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   LING-393:
     code: LING 393
     title: Language, Power, and Literacy in Education
@@ -22,7 +22,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: This course explores the dynamics of language, power, and literacy in a multilingual and multicultural society. Building on a range of home literacy practices, this course investigates approaches to bridging home language for the development of oral language, reading, and writing across academic genres in the elementary setting. Students will employ the tools gained in LING 392   to assess the development of reading and writing, as well as identify text complexity and the knowledge of reader variables to support developing literacy.
+    description: This course explores the dynamics of language, power, and literacy in a multilingual and multicultural society. Building on a range of home literacy practices, this course investigates approaches to bridging home language for the development of oral language, reading, and writing across academic genres in the elementary setting. Students will employ the tools gained in LING 392 to assess the development of reading and writing, as well as identify text complexity and the knowledge of reader variables to support developing literacy.
     offered:
       terms:
         - fall
@@ -32,4 +32,4 @@ courses:
           - courseId: LING-392
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: LING 392   with a C- or better)"
+      - "(Prereq: LING 392 with a C- or better)"

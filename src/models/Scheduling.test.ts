@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { curriculumPlan, planForDegreeType, progressKey, transferAssumedCourseIds, type CurriculumPlan } from './Curriculum'
+import { catalogVersions, courseCorequisiteIds, curriculumPlan, planForDegreeType, progressKey, transferAssumedCourseIds, type CurriculumPlan } from './Curriculum'
 import { buildCompactedSchedule, buildRegistrationPlan, buildSuggestedSchedule, sortSlotsForPresentation } from './Scheduling'
 
 describe('suggested scheduling', () => {
@@ -16,6 +16,46 @@ describe('suggested scheduling', () => {
     expect(secondSpring?.slots.map(progressKey)).toContain('course:CST-338')
     expect(secondSpring?.slots.map(progressKey)).not.toContain('course:CST-349')
     expect(thirdFall?.slots.map(progressKey)).toContain('course:CST-349')
+  })
+
+  it('keeps derived programs usable when prerequisites are outside their program requirements', () => {
+    const biologyPlan = planForDegreeType('bs', 'bs-biology', '2026')
+
+    expect(() => buildCompactedSchedule(biologyPlan, new Set(), 15, 'bs', {
+      programId: 'bs-biology',
+      catalogVersion: '2026',
+    })).not.toThrow()
+  })
+
+  it('keeps inferred lecture and lab corequisites in the same compacted term', () => {
+    const biologyPlan = planForDegreeType('bs', 'bs-biology', '2026')
+    const compacted = buildCompactedSchedule(biologyPlan, new Set(), 15, 'bs', {
+      programId: 'bs-biology',
+      catalogVersion: '2026',
+    })
+    const biology211Term = compacted.terms.find(term => term.slots.some(slot => progressKey(slot) === 'course:BIO-211'))
+
+    expect(courseCorequisiteIds('BIO-211')).toContain('BIO-211L')
+    expect(biology211Term?.slots.map(progressKey)).toContain('course:BIO-211L')
+  })
+
+  it('keeps inferred lecture and lab corequisites together in derived roadmaps', () => {
+    const biologyPlan = planForDegreeType('bs', 'bs-biology', '2026')
+    const biology211Term = biologyPlan.years
+      .flatMap(year => year.terms)
+      .find(term => term.slots.some(slot => progressKey(slot) === 'course:BIO-211'))
+
+    expect(biology211Term?.slots.map(progressKey)).toContain('course:BIO-211L')
+  })
+
+  it('builds a compacted schedule for every catalog program', () => {
+    for (const programId of Object.keys(catalogVersions['2026'].programs)) {
+      const plan = planForDegreeType('bs', programId, '2026')
+      expect(() => buildCompactedSchedule(plan, new Set(), 15, 'bs', {
+        programId,
+        catalogVersion: '2026',
+      })).not.toThrow()
+    }
   })
 
   it('allows junior-standing courses in the first AS-T transfer term', () => {

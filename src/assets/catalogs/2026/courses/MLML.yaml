@@ -236,7 +236,7 @@ courses:
     prerequisites:
       - courseId: MLML-603
     prerequisiteNotes:
-      - "[(Prereq: (Graduate Standing) and ( MLML 603   )]"
+      - "[(Prereq: (Graduate Standing) and ( MLML 603 )]"
   MLML-605:
     code: MLML 605
     title: Aquaculture
@@ -302,7 +302,7 @@ courses:
               - courseId: MS-242
               - courseId: MLML-642
     prerequisiteNotes:
-      - "[Prereq: (Graduate Standing) and (MS 242 or MLML 642   )]"
+      - "[Prereq: (Graduate Standing) and (MS 242 or MLML 642 )]"
   MLML-612:
     code: MLML 612
     title: Advanced Topics in Marine Vertebrates
@@ -330,7 +330,7 @@ courses:
           - courseId: MS-242
           - courseId: MLML-642
     prerequisiteNotes:
-      - "[Prereq: (Graduate Standing) and (MS 242 or MLML 642   recommended)]"
+      - "[Prereq: (Graduate Standing) and (MS 242 or MLML 642 recommended)]"
   MLML-614:
     code: MLML 614
     title: Physiological Ecology of Marine Animals
@@ -385,7 +385,7 @@ courses:
               - courseId: MS-242
               - courseId: MLML-642
     prerequisiteNotes:
-      - "[Prereq: (Graduate Standing) and (MS 242 or MLML 642   )]"
+      - "[Prereq: (Graduate Standing) and (MS 242 or MLML 642 )]"
   MLML-641:
     code: MLML 641
     title: Advanced Geological Oceanography
@@ -465,7 +465,7 @@ courses:
               - courseId: MS-241
               - courseId: MLML-641
     prerequisiteNotes:
-      - "[Prereq: (Graduate Standing) and (MS 241 or MLML 641   )]"
+      - "[Prereq: (Graduate Standing) and (MS 241 or MLML 641 )]"
   MLML-650:
     code: MLML 650
     title: Laboratory Analysis for Marine Scientists
@@ -494,7 +494,7 @@ courses:
               - courseId: MS-243
               - courseId: MLML-643
     prerequisiteNotes:
-      - "[Prereq: (Graduate Standing) and (MS 243 or MLML 643   )]"
+      - "[Prereq: (Graduate Standing) and (MS 243 or MLML 643 )]"
   MLML-653:
     code: MLML 653
     title: Marine Pollution
@@ -508,7 +508,7 @@ courses:
     prerequisites:
       - courseId: MLML-643
     prerequisiteNotes:
-      - "[Prereq: (Graduate Standing) and ( MLML 643   ) and (Instructor Consent Required)]"
+      - "[Prereq: (Graduate Standing) and ( MLML 643 ) and (Instructor Consent Required)]"
   MLML-661:
     code: MLML 661
     title: Mixing, Estuarine, and Sediment Transport
@@ -527,7 +527,7 @@ courses:
               - courseId: MS-204
               - courseId: MLML-604
     prerequisiteNotes:
-      - "[Prereq: (Graduate Standing) and (MS 204 or MLML 604   ) and (MS 242 or MLML 642   ) and (Instructor Consent Required)]"
+      - "[Prereq: (Graduate Standing) and (MS 204 or MLML 604 ) and (MS 242 or MLML 642 ) and (Instructor Consent Required)]"
   MLML-663:
     code: MLML 663
     title: Data Analysis in Marine Science
@@ -542,7 +542,7 @@ courses:
     prerequisites:
       - courseId: MLML-604
     prerequisiteNotes:
-      - "[Prereq: (Graduate Standing) and ( MLML 604   )]"
+      - "[Prereq: (Graduate Standing) and ( MLML 604 )]"
   MLML-671:
     code: MLML 671
     title: Population Biology
@@ -571,7 +571,7 @@ courses:
               - courseId: MS-242
               - courseId: MLML-642
     prerequisiteNotes:
-      - "[Prereq: (Graduate Standing) and (MS 242 or MLML 642   )]"
+      - "[Prereq: (Graduate Standing) and (MS 242 or MLML 642 )]"
   MLML-673:
     code: MLML 673
     title: Marine Environmental Studies of the Gulf of California

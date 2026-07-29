@@ -41,7 +41,7 @@ courses:
           - courseId: PANM-202
             minimumGrade: C-
     prerequisiteNotes:
-      - "[((Prereq: ( GE   Area 1A and 1B and 1C and 2 and GWAR   with a C- or better) and ( PANM 202   )) or Department Consent Required]"
+      - "[((Prereq: ( GE Area 1A and 1B and 1C and 2 and GWAR with a C- or better) and ( PANM 202 )) or Department Consent Required]"
   PANM-422:
     code: PANM 422
     title: Program Planning and Evaluation
@@ -54,7 +54,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 and GWAR with a C- or better) or (Department Consent Required)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 and GWAR with a C- or better) or (Department Consent Required)]"
   PANM-432:
     code: PANM 432
     title: Advanced Program Evaluation
@@ -67,7 +67,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "[(Prereq: ( GE   Area 1A and 1B and 1C and 2 and GWAR with a C- or better) or (Department Consent Required)]"
+      - "[(Prereq: ( GE Area 1A and 1B and 1C and 2 and GWAR with a C- or better) or (Department Consent Required)]"
   PANM-442:
     code: PANM 442
     title: Community Economic Development
@@ -80,7 +80,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 and GWAR with a C- or better) or Department Consent Required]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 and GWAR with a C- or better) or Department Consent Required]"
   PANM-452:
     code: PANM 452
     title: Technology in Nonprofit/Public Administration
@@ -93,7 +93,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 and GWAR with a C- or better) or Department Consent Required]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 and GWAR with a C- or better) or Department Consent Required]"
   PANM-497:
     code: PANM 497
     title: Independent Study

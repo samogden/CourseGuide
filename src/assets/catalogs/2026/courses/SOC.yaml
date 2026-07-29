@@ -60,7 +60,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SOC-302:
     code: SOC 302
     title: Sociological Theory
@@ -74,7 +74,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SOC-312:
     code: SOC 312
     title: Sociology of Gender
@@ -87,7 +87,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SOC-315:
     code: SOC 315
     title: Marriage and Family
@@ -100,7 +100,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SOC-317:
     code: SOC 317
     title: Social Movements
@@ -114,7 +114,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SOC-320:
     code: SOC 320
     title: Labor and Labor Movements
@@ -127,7 +127,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SOC-325:
     code: SOC 325
     title: Sociology of Latinos
@@ -153,7 +153,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SOC-333:
     code: SOC 333
     title: Sociology of Deviance
@@ -171,7 +171,7 @@ courses:
           - courseId: SOC-100
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SOC 100   with a C- or better)"
+      - "(Prereq: SOC 100 with a C- or better)"
   SOC-338:
     code: SOC 338
     title: Social Psychology
@@ -185,7 +185,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   SOC-340:
     code: SOC 340
     title: Subcultures and Power
@@ -216,7 +216,7 @@ courses:
           - courseId: STAT-100
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: STAT 100   with a C- or better)"
+      - "(Prereq: STAT 100 with a C- or better)"
   SOC-365:
     code: SOC 365
     title: Technology and Society
@@ -230,7 +230,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SOC-374:
     code: SOC 374
     title: Sociology Internship
@@ -273,7 +273,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SOC-400:
     code: SOC 400
     title: Capstone Proposal
@@ -298,7 +298,7 @@ courses:
               - courseId: SBS-362
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( SOC 300   and SOC 302   and ( SSCI 321   or SBS 362   ) with a C- or better) and ( GE   Area 1A and 1B and 1C and 2 with a C- or better)]"
+      - "[Prereq: ( SOC 300 and SOC 302 and ( SSCI 321 or SBS 362 ) with a C- or better) and ( GE Area 1A and 1B and 1C and 2 with a C- or better)]"
   SOC-402:
     code: SOC 402
     title: Capstone Seminar
@@ -318,4 +318,4 @@ courses:
           - courseId: SSCI-377
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( SOC 400   and SSCI 377   ) with a C- or better) and ( GE   Area 1A and 1B and 1C and 2 with a C- or better)]"
+      - "[Prereq: ( SOC 400 and SSCI 377 ) with a C- or better) and ( GE Area 1A and 1B and 1C and 2 with a C- or better)]"

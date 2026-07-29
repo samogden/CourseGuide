@@ -120,7 +120,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SL-491S:
     code: SL 491S
     title: Topics in Civic Engage
@@ -152,7 +152,7 @@ courses:
           - courseId: SL-490
             minimumGrade: C-
     prerequisiteNotes:
-      - "[[Prereq: ( GE   Area 1A and 1B and 1C and 2 with C- or better) and (Coreq: SL 490   )]"
+      - "[[Prereq: ( GE Area 1A and 1B and 1C and 2 with C- or better) and (Coreq: SL 490 )]"
   SL-493S:
     code: SL 493S
     title: Advanced Participatory Action Research Practicum
@@ -165,7 +165,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with C- or better"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with C- or better"
   SL-495S:
     code: SL 495S
     title: Special Topics in Service Learning

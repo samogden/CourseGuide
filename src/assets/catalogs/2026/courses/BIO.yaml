@@ -108,13 +108,13 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Optional supplemental problem-solving workshop for BIO 210   in an active-learning setting.
+    description: Optional supplemental problem-solving workshop for BIO 210 in an active-learning setting.
     offered:
       terms:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: BIO 210   )"
+      - "(Coreq: BIO 210 )"
   BIO-210L:
     code: BIO 210L
     title: Molecular and Cell Biology and Animal Physiology Lab
@@ -131,7 +131,7 @@ courses:
       - anyOf:
           - courseId: BIO-210
     prerequisiteNotes:
-      - "(Prereq or Coreq: BIO 210   )"
+      - "(Prereq or Coreq: BIO 210 )"
   BIO-211:
     code: BIO 211
     title: Ecology, Evolution, Biodiversity and Plants
@@ -153,7 +153,7 @@ courses:
           - courseId: BIO-211L
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: MATH 130   or MATH 150   ) with a C- or better) and (Coreq: BIO 211L   )]"
+      - "[(Prereq: MATH 130 or MATH 150 ) with a C- or better) and (Coreq: BIO 211L )]"
   BIO-211D:
     code: BIO 211D
     title: Workshop for BIO 211
@@ -161,13 +161,13 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Optional supplemental problem-solving workshop for BIO 211   in an active-learning setting.
+    description: Optional supplemental problem-solving workshop for BIO 211 in an active-learning setting.
     offered:
       terms:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: BIO 211   )"
+      - "(Coreq: BIO 211 )"
   BIO-211L:
     code: BIO 211L
     title: Ecology, Evolution, Biodiversity and Plants Lab
@@ -175,13 +175,13 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Required lab course for BIO 211   . Focuses on biodiversity, evolution, plant biology and doing scientific research in ecology and plant physiology. Lab course fee may be charged.
+    description: Required lab course for BIO 211 . Focuses on biodiversity, evolution, plant biology and doing scientific research in ecology and plant physiology. Lab course fee may be charged.
     offered:
       terms:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: BIO 211   )"
+      - "(Coreq: BIO 211 )"
   BIO-292:
     code: BIO 292
     title: Professional Development for Scientists
@@ -239,7 +239,7 @@ courses:
           - courseId: BIO-340
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better) AND (Coreq: BIO 320   or BIO 341L   or BIO 340   )]"
+      - "[(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better) AND (Coreq: BIO 320 or BIO 341L or BIO 340 )]"
   BIO-306:
     code: BIO 306
     title: Biotechnology for Agriculture
@@ -252,7 +252,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with C- or better) and ( GE   Area 5B)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 with C- or better) and ( GE Area 5B)]"
   BIO-306L:
     code: BIO 306L
     title: Biotechnology for Agriculture Lab
@@ -273,7 +273,7 @@ courses:
           - courseId: BIO-306
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: BIO 106   or BIO 230   with a C- or better) and (Coreq: BIO 306   )]"
+      - "[(Prereq: BIO 106 or BIO 230 with a C- or better) and (Coreq: BIO 306 )]"
   BIO-310:
     code: BIO 310
     title: Biochemistry I
@@ -298,7 +298,7 @@ courses:
               - courseId: CHEM-312
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BIO 210   and BIO 211   ) and ( CHEM 211   or CHEM 312   ) with a C- or better]"
+      - "[Prereq: ( BIO 210 and BIO 211 ) and ( CHEM 211 or CHEM 312 ) with a C- or better]"
   BIO-310L:
     code: BIO 310L
     title: Biochemistry Lab
@@ -306,7 +306,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Optional lab course for BIO 310   . Lab course fee may be charged.
+    description: Optional lab course for BIO 310 . Lab course fee may be charged.
     offered:
       availability: periodic
     prerequisites:
@@ -320,7 +320,7 @@ courses:
           - courseId: CHEM-310
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: BIO 310   or CHEM 310   with a C- or better) or (Coreq: BIO 310   or CHEM 310   )]"
+      - "[(Prereq: BIO 310 or CHEM 310 with a C- or better) or (Coreq: BIO 310 or CHEM 310 )]"
   BIO-311:
     code: BIO 311
     title: Genetics
@@ -344,7 +344,7 @@ courses:
           - courseId: BIO-211L
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and ( BIO 210   and BIO 210L   ) and ( BIO 211   and BIO 211L   )]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better) and ( BIO 210 and BIO 210L ) and ( BIO 211 and BIO 211L )]"
   BIO-312:
     code: BIO 312
     title: Concepts in Genomics
@@ -378,7 +378,7 @@ courses:
           - courseId: BIO-211
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: BIO 210   and BIO 211   with a C- or better)"
+      - "(Prereq: BIO 210 and BIO 211 with a C- or better)"
   BIO-322:
     code: BIO 322
     title: Plant Pathology
@@ -401,7 +401,7 @@ courses:
           - courseId: ENVS-240
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( BIO 210   and BIO 211   ) or BIO 106   or ENVS 240   with C- or better]"
+      - "[(Prereq: ( BIO 210 and BIO 211 ) or BIO 106 or ENVS 240 with C- or better]"
   BIO-330:
     code: BIO 330
     title: Vertebrate Physiology
@@ -432,7 +432,7 @@ courses:
               - courseId: PHYS-221
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BIO 210   and BIO 210L   ) and ( BIO 211   and BIO 211L   ) and ( PHYS 150   or PHYS 220   or PHYS 221   ) with a C- or better]"
+      - "[Prereq: ( BIO 210 and BIO 210L ) and ( BIO 211 and BIO 211L ) and ( PHYS 150 or PHYS 220 or PHYS 221 ) with a C- or better]"
   BIO-332:
     code: BIO 332
     title: Plant Physiology
@@ -457,7 +457,7 @@ courses:
           - courseId: BIO-306L
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: [( BIO 210   and BIO 211)]   or [( BIO 106   )) and (Prereq or Coreq: BIO 306   and BIO 306L   )] with C- or better]"
+      - "[Prereq: [( BIO 210 and BIO 211)] or [( BIO 106 )) and (Prereq or Coreq: BIO 306 and BIO 306L )] with C- or better]"
   BIO-340:
     code: BIO 340
     title: Ecology
@@ -482,7 +482,7 @@ courses:
               - courseId: BIO-211
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BIO 230   or ENVS 240   or BIO 211   ) and ( MATH 150   ) and ( GE   Area 1A and 1B and 1C and 2) with a C- or better]"
+      - "[Prereq: ( BIO 230 or ENVS 240 or BIO 211 ) and ( MATH 150 ) and ( GE Area 1A and 1B and 1C and 2) with a C- or better]"
   BIO-341:
     code: BIO 341
     title: Evolution Bio & Pop Genetics
@@ -502,7 +502,7 @@ courses:
           - courseId: BIO-211
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: BIO 210   and BIO 211   with a C- or better)"
+      - "(Prereq: BIO 210 and BIO 211 with a C- or better)"
   BIO-341L:
     code: BIO 341L
     title: Evolution and Population Genetics Laboratory
@@ -510,7 +510,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Students will participate in laboratory activities, in silico and in vitro, that demonstrate evolutionary processes in action such as mutation, genetic drift, gene flow, and natural selection. Students will conduct an open-ended research project using an in silico instance of evolution. These activities will support learning in the lecture portion of BIO 341   .
+    description: Students will participate in laboratory activities, in silico and in vitro, that demonstrate evolutionary processes in action such as mutation, genetic drift, gene flow, and natural selection. Students will conduct an open-ended research project using an in silico instance of evolution. These activities will support learning in the lecture portion of BIO 341 .
     offered:
       terms:
         - fall
@@ -532,7 +532,7 @@ courses:
           - courseId: MSCI-341
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: BIO 210   and BIO 210L   and BIO 211   and BIO 211L   with a C- or better) and (Coreq: BIO 341   or BIO 311   or MSCI 341   )]"
+      - "[(Prereq: BIO 210 and BIO 210L and BIO 211 and BIO 211L with a C- or better) and (Coreq: BIO 341 or BIO 311 or MSCI 341 )]"
   BIO-342:
     code: BIO 342
     title: Plant Communities of CA
@@ -540,7 +540,7 @@ courses:
     credits:
       minimum: 4
       maximum: 4
-    description: Surveys terrestrial ecosystems across California emphasizing the role of climate, soils, water, and human impacts on plant distribution. Includes learning dominant and special status species to prepare students for roles in conservation and resource management. Field trips focus on ecosystems of the Central Coast region and may include one or more weekend field trips. Cross-listed with ENVS 342   . .
+    description: Surveys terrestrial ecosystems across California emphasizing the role of climate, soils, water, and human impacts on plant distribution. Includes learning dominant and special status species to prepare students for roles in conservation and resource management. Field trips focus on ecosystems of the Central Coast region and may include one or more weekend field trips. Cross-listed with ENVS 342 . .
     offered:
       terms:
         - spring
@@ -553,7 +553,7 @@ courses:
           - courseId: ENVS-240
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: BIO 211   or BIO 230   or ENVS 240   with a C- or better)"
+      - "(Prereq: BIO 211 or BIO 230 or ENVS 240 with a C- or better)"
   BIO-344L:
     code: BIO 344L
     title: Environmental Biotechnology Lab
@@ -575,7 +575,7 @@ courses:
           - courseId: BIO-211L
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BIO 210   and BIO 210L   ) and ( BIO 211   and BIO 211L   ) with a C- or better]"
+      - "[Prereq: ( BIO 210 and BIO 210L ) and ( BIO 211 and BIO 211L ) with a C- or better]"
   BIO-347:
     code: BIO 347
     title: Working with Marine Mammals
@@ -587,7 +587,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   BIO-356:
     code: BIO 356
     title: Zoology Specimen Preparation
@@ -607,7 +607,7 @@ courses:
           - courseId: ENVS-240
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BIO 211   and BIO 211L   ) or (BIO 230 or ENVS 240   with a C- or better]"
+      - "[Prereq: ( BIO 211 and BIO 211L ) or (BIO 230 or ENVS 240 with a C- or better]"
   BIO-360:
     code: BIO 360
     title: Natural History of California Wildlife
@@ -631,7 +631,7 @@ courses:
               - courseId: ENVS-240
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BIO 211   and BIO 211L   ) or ( BIO 230   or ENVS 240   ) with a C- or better]"
+      - "[Prereq: ( BIO 211 and BIO 211L ) or ( BIO 230 or ENVS 240 ) with a C- or better]"
   BIO-362:
     code: BIO 362
     title: Field Ornithology
@@ -652,7 +652,7 @@ courses:
               - courseId: ENVS-240
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BIO 211   and BIO 211L   ) or (BIO 230 or ENVS 240   ) with a C- or better]"
+      - "[Prereq: ( BIO 211 and BIO 211L ) or (BIO 230 or ENVS 240 ) with a C- or better]"
   BIO-364:
     code: BIO 364
     title: Mammalogy
@@ -675,7 +675,7 @@ courses:
           - courseId: ENVS-240
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BIO 211   and BIO 211L   ) or BIO 230   or ENVS 240   with a C- or better]"
+      - "[Prereq: ( BIO 211 and BIO 211L ) or BIO 230 or ENVS 240 with a C- or better]"
   BIO-366:
     code: BIO 366
     title: The Biology of Birds
@@ -693,7 +693,7 @@ courses:
           - courseId: BIO-211
           - courseId: ENVS-240
     prerequisiteNotes:
-      - "(Prereq: ( BIO 210   AND BIO 211   ) or ENVS 240   )"
+      - "(Prereq: ( BIO 210 AND BIO 211 ) or ENVS 240 )"
   BIO-370:
     code: BIO 370
     title: Developmental Biology
@@ -711,7 +711,7 @@ courses:
           - courseId: BIO-211
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: BIO 210   and BIO 211   with a C- or better)"
+      - "(Prereq: BIO 210 and BIO 211 with a C- or better)"
   BIO-378S:
     code: BIO 378S
     title: Health Sciences Service Learning
@@ -731,7 +731,7 @@ courses:
           - courseId: BIO-211
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BIO 210   and BIO 211   ) with a C- or better]"
+      - "[Prereq: ( BIO 210 and BIO 211 ) with a C- or better]"
   BIO-379S:
     code: BIO 379S
     title: Biology Service Learning
@@ -753,7 +753,7 @@ courses:
           - courseId: BIO-106
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BIO 210   and BIO 211   ) or ( BIO 106   ) with a C- or better]"
+      - "[Prereq: ( BIO 210 and BIO 211 ) or ( BIO 106 ) with a C- or better]"
   BIO-380:
     code: BIO 380
     title: Practical Computing for Scientists
@@ -780,7 +780,7 @@ courses:
               - courseId: ENVS-240
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: STAT 250   and [( BIO 211   and BIO 211L   ) or (BIO 230 or ENVS 240   )] with a C- or better]"
+      - "[Prereq: STAT 250 and [( BIO 211 and BIO 211L ) or (BIO 230 or ENVS 240 )] with a C- or better]"
   BIO-392:
     code: BIO 392
     title: Biology Seminar Series
@@ -798,7 +798,7 @@ courses:
           - courseId: BIO-211
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: BIO 211   with a C- or better)"
+      - "(Prereq: BIO 211 with a C- or better)"
   BIO-394:
     code: BIO 394
     title: Biology Internship
@@ -816,7 +816,7 @@ courses:
           - courseId: BIO-211
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: BIO 211   with a C- or better and Instructor Consent)"
+      - "(Prereq: BIO 211 with a C- or better and Instructor Consent)"
   BIO-395:
     code: BIO 395
     title: Special Topics
@@ -860,7 +860,7 @@ courses:
               - courseId: BIO-341
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: GWAR   and ( BIO 311   or BIO 341   ) with a C- or better)"
+      - "[(Prereq: GWAR and ( BIO 311 or BIO 341 ) with a C- or better)"
   BIO-412:
     code: BIO 412
     title: Comparative Genomics
@@ -877,7 +877,7 @@ courses:
           - courseId: BIO-311
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: (GWAR and BIO 311   ) with a C- or better]"
+      - "[Prereq: (GWAR and BIO 311 ) with a C- or better]"
   BIO-413:
     code: BIO 413
     title: Molecular Genetics
@@ -894,7 +894,7 @@ courses:
           - courseId: BIO-311
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: (GWAR and BIO 311   ) with a C- or better]"
+      - "[Prereq: (GWAR and BIO 311 ) with a C- or better]"
   BIO-414:
     code: BIO 414
     title: Molecular Cell Biology
@@ -911,7 +911,7 @@ courses:
           - courseId: BIO-311
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: (GWAR and BIO 311   ) with a C- or better]"
+      - "[Prereq: (GWAR and BIO 311 ) with a C- or better]"
   BIO-416:
     code: BIO 416
     title: Immunology
@@ -926,7 +926,7 @@ courses:
           - courseId: BIO-320
           - courseId: CHEM-310
     prerequisiteNotes:
-      - "(Prereq: BIO 311   or BIO 320   or CHEM 310   )"
+      - "(Prereq: BIO 311 or BIO 320 or CHEM 310 )"
   BIO-420:
     code: BIO 420
     title: Marine Invertebrate Zoology
@@ -949,7 +949,7 @@ courses:
           - courseId: BIO-370
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: MSCI 345   or BIO 330   or BIO 341   or BIO 370   with a C- or better]"
+      - "[Prereq: MSCI 345 or BIO 330 or BIO 341 or BIO 370 with a C- or better]"
   BIO-421:
     code: BIO 421
     title: Advanced Microbiology
@@ -967,7 +967,7 @@ courses:
           - courseId: BIO-322
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: BIO 320   or BIO 322   with a C- or better]"
+      - "[Prereq: BIO 320 or BIO 322 with a C- or better]"
   BIO-430:
     code: BIO 430
     title: Marine Experimental Physiology
@@ -989,7 +989,7 @@ courses:
               - courseId: BIO-310
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: STAT 250   and ( MSCI 331   or BIO 310   ) and GWAR) with a C- or better]"
+      - "[(Prereq: STAT 250 and ( MSCI 331 or BIO 310 ) and GWAR) with a C- or better]"
   BIO-441:
     code: BIO 441
     title: Biology of Fishes
@@ -1010,7 +1010,7 @@ courses:
           - courseId: MSCI-340
           - courseId: MSCI-345
     prerequisiteNotes:
-      - "(Prereq or Coreq: BIO 340   or BIO 341   or BIO 330   or MSCI 331   or MSCI 340   or MSCI 345   )"
+      - "(Prereq or Coreq: BIO 340 or BIO 341 or BIO 330 or MSCI 331 or MSCI 340 or MSCI 345 )"
   BIO-444:
     code: BIO 444
     title: Molecular Ecology & Evolution
@@ -1032,7 +1032,7 @@ courses:
               - courseId: MSCI-341
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: GWAR and ( BIO 311   or BIO 341   or MSCI 341   ) with a C- or better]"
+      - "[Prereq: GWAR and ( BIO 311 or BIO 341 or MSCI 341 ) with a C- or better]"
   BIO-448:
     code: BIO 448
     title: Freshwater Ecology
@@ -1056,7 +1056,7 @@ courses:
               - courseId: MSCI-350
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: BIO 340   and GWAR and ( ENVS 350   or ENVS 332   or MSCI 350   ) with a C- or better]"
+      - "[Prereq: BIO 340 and GWAR and ( ENVS 350 or ENVS 332 or MSCI 350 ) with a C- or better]"
   BIO-449:
     code: BIO 449
     title: Community Ecology
@@ -1077,7 +1077,7 @@ courses:
               - courseId: MSCI-340
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BIO 340   or MSCI 340   ) AND STAT 250   with a C- or better]"
+      - "[Prereq: ( BIO 340 or MSCI 340 ) AND STAT 250 with a C- or better]"
   BIO-461:
     code: BIO 461
     title: Eukaryotic Molecular Biology
@@ -1096,7 +1096,7 @@ courses:
           - courseId: BIO-311
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: BIO 311   with a C- or better) or (Coreq: BIO 311   )]"
+      - "[(Prereq: BIO 311 with a C- or better) or (Coreq: BIO 311 )]"
   BIO-491:
     code: BIO 491
     title: Biology Honors Capstone
@@ -1142,7 +1142,7 @@ courses:
           - courseId: BIO-461
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: GWAR with a C- or better) and (Prereq or Coreq: BIO 420   or BIO 421   or BIO 425   or BIO 430   or BIO 444   or BIO 448   or BIO 449   or BIO 461   )]"
+      - "[(Prereq: GWAR with a C- or better) and (Prereq or Coreq: BIO 420 or BIO 421 or BIO 425 or BIO 430 or BIO 444 or BIO 448 or BIO 449 or BIO 461 )]"
   BIO-493:
     code: BIO 493
     title: Biology Education Capstone
@@ -1165,7 +1165,7 @@ courses:
               - courseId: BIO-330
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: GWAR and BIO 311   and ( BIO 341   or BIO 330   ) with a C- or better]"
+      - "[Prereq: GWAR and BIO 311 and ( BIO 341 or BIO 330 ) with a C- or better]"
   BIO-494:
     code: BIO 494
     title: Advanced Biology Internship
@@ -1241,7 +1241,7 @@ courses:
           - courseId: ENVS-550
           - courseId: ENVS-550
     prerequisiteNotes:
-      - "[(Prereq: ENVS 550   ) or (Coreq: ENVS 550   )]"
+      - "[(Prereq: ENVS 550 ) or (Coreq: ENVS 550 )]"
   BIO-595:
     code: BIO 595
     title: Special Topics

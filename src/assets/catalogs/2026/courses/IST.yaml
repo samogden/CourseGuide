@@ -111,7 +111,7 @@ courses:
       - courseId: IST-522
       - courseId: IST-524
     prerequisiteNotes:
-      - "(Prereq: IST 522   and IST 524   )"
+      - "(Prereq: IST 522 and IST 524 )"
   IST-530:
     code: IST 530
     title: Intro to Project Management
@@ -203,7 +203,7 @@ courses:
     prerequisites:
       - courseId: IST-524
     prerequisiteNotes:
-      - "(Prereq: IST 524   )"
+      - "(Prereq: IST 524 )"
   IST-624:
     code: IST 624
     title: Research Design & Methods
@@ -226,7 +226,7 @@ courses:
       - courseId: IST-522
       - courseId: IST-526
     prerequisiteNotes:
-      - "(Prereq: IST 522   and IST 526   )"
+      - "(Prereq: IST 522 and IST 526 )"
   IST-630:
     code: IST 630
     title: Project Mgmt Practicum
@@ -313,4 +313,4 @@ courses:
       - courseId: IST-622
       - courseId: IST-626
     prerequisiteNotes:
-      - "(Prereq: IST 622   and IST 626   )"
+      - "(Prereq: IST 622 and IST 626 )"

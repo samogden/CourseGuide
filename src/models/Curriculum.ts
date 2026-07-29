@@ -141,9 +141,16 @@ export interface Course {
   description?: string
   offeredTerms?: readonly AcademicTerm[]
   prerequisites: unknown[]
+  corequisites: unknown[]
   prerequisiteNotes: string[]
   placeholder: boolean
   minimumStanding?: 'junior'
+}
+
+function inferredCorequisites(notes: readonly string[]): { courseId: string }[] {
+  return [...new Set(notes.flatMap(note => [...note.matchAll(/Coreq:\s*([A-Z]+)\s*(\d+[A-Z]*)/g)]
+    .map(match => canonicalCourseId(`${match[1]}-${match[2]}`))))]
+    .map(courseId => ({ courseId }))
 }
 
 export interface PlanCreditSummary {
@@ -298,6 +305,7 @@ const catalogEntries: Course[] = Object.entries(parsedCatalog.courses).map(([id,
     description: course.description,
     offeredTerms: course.offered && 'terms' in course.offered ? course.offered.terms : undefined,
     prerequisites: course.prerequisites ?? [],
+    corequisites: [...(course.corequisites ?? []), ...inferredCorequisites(course.prerequisiteNotes ?? [])],
     prerequisiteNotes: course.prerequisiteNotes ?? [],
     placeholder: course.placeholder,
     minimumStanding: course.minimumStanding,
@@ -388,14 +396,30 @@ function deriveRoadmap(programId: string, catalogVersion: string): CurriculumPla
     const slots: PlanSlot[] = []
     const candidates = [...requiredCourseIds].sort((left, right) => Number(left.startsWith('FYS-')) * -1 || left.localeCompare(right))
     for (const courseId of candidates) {
+      if (!requiredCourseIds.has(courseId)) continue
       const course = getCourse(courseId)
-      if (!course || !isCourseOffered(courseId, term) || credits + course.units > 15) continue
-      if (course.minimumStanding === 'junior' && termIndex < 4) continue
-      const requiredEarlier = [...prerequisiteCourseIds(course.prerequisites)].filter(prerequisiteId => requiredCourseIds.has(prerequisiteId) || scheduled.has(prerequisiteId))
-      if (!requiredEarlier.every(prerequisiteId => scheduled.has(prerequisiteId))) continue
-      slots.push({ type: 'course', courseId, credits: course.units, category: derivedCategory(courseId) })
-      credits += course.units
-      requiredCourseIds.delete(courseId)
+      const corequisiteIds = course ? courseCorequisiteIds(courseId).filter(corequisiteId => requiredCourseIds.has(corequisiteId)) : []
+      const bundleCourseIds = [courseId, ...corequisiteIds]
+      const bundleCourses = bundleCourseIds.map(candidateId => getCourse(candidateId))
+      if (bundleCourses.some(candidate => !candidate) || bundleCourses.some((_, index) => !isCourseOffered(bundleCourseIds[index], term))) continue
+      if (credits + bundleCourses.reduce((total, candidate) => total + candidate!.units, 0) > 15) continue
+      if (bundleCourses.some(candidate => candidate!.minimumStanding === 'junior' && termIndex < 4)) continue
+      const canScheduleBundle = bundleCourseIds.every(candidateId => {
+        const candidate = getCourse(candidateId)
+        if (!candidate) return false
+        const corequisites = new Set(courseCorequisiteIds(candidateId))
+        const requiredEarlier = [...prerequisiteCourseIds(candidate.prerequisites)]
+          .filter(prerequisiteId => !corequisites.has(prerequisiteId) && (requiredCourseIds.has(prerequisiteId) || scheduled.has(prerequisiteId)))
+        return requiredEarlier.every(prerequisiteId => scheduled.has(prerequisiteId))
+      })
+      if (!canScheduleBundle) continue
+      for (const bundleCourseId of bundleCourseIds) {
+        const bundleCourse = getCourse(bundleCourseId)
+        if (!bundleCourse) continue
+        slots.push({ type: 'course', courseId: bundleCourseId, credits: bundleCourse.units, category: derivedCategory(bundleCourseId) })
+        credits += bundleCourse.units
+        requiredCourseIds.delete(bundleCourseId)
+      }
     }
     terms.push({ term, slots })
   }
@@ -551,6 +575,10 @@ export function candidateCourseIds(requirements: Requirement[]): Set<string> {
 
 export function getCourse(value: string): Course | undefined {
   return coursesById.get(canonicalCourseId(value))
+}
+
+export function courseCorequisiteIds(courseId: string): string[] {
+  return [...new Set(prerequisiteCourseIds(getCourse(courseId)?.corequisites ?? []))]
 }
 
 export function isCourseOffered(courseId: string, term: AcademicTerm): boolean {

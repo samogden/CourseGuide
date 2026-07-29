@@ -26,7 +26,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1C with a C- or better)"
+      - "(Prereq: GE Area 1C with a C- or better)"
   PH-407:
     code: PH 407
     title: Multicultural Health Education
@@ -40,7 +40,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and GWAR with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 and GWAR with a C- or better)"
   PH-408:
     code: PH 408
     title: Principles of Epidemiology
@@ -54,7 +54,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Areas 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Areas 1A and 1B and 1C and 2 with a C- or better)"
   PH-417:
     code: PH 417
     title: Global Women’s Health and Social Issues
@@ -68,7 +68,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   PH-427:
     code: PH 427
     title: Topics in Health Education
@@ -80,7 +80,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and GWAR with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 and GWAR with a C- or better)"
   PH-437:
     code: PH 437
     title: Topics in Health Policy
@@ -92,7 +92,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and GWAR   with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 and GWAR with a C- or better)"
   PH-447:
     code: PH 447
     title: Food Policy, Culture & Health
@@ -105,7 +105,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   PH-457:
     code: PH 457
     title: Health Systems & Policy
@@ -117,7 +117,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 and GWAR with a C- or better)"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 and GWAR with a C- or better)"
   PH-467:
     code: PH 467
     title: Social Entrepreneurship of Change
@@ -129,7 +129,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and GWAR with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 and GWAR with a C- or better)"
   PH-477:
     code: PH 477
     title: Diseases of Poverty & Wealth
@@ -141,7 +141,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and GWAR with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 and GWAR with a C- or better)"
   PH-487:
     code: PH 487
     title: Sexual Health Education and Training
@@ -154,7 +154,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and GWAR with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 and GWAR with a C- or better)"
   PH-495:
     code: PH 495
     title: Special Topics

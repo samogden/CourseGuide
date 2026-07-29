@@ -64,7 +64,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: In the course, you will be introduced to the role of modern policing in the liberal and neoliberal world order. We look at how state violence works through local, national, and transnational systems of law and security. We ask, what role does policing play in maintaining unequal social orders including race, class, gender, caste and others? How have movements resisted and sought to transform and/or abolish policing in their societies? (Crosslisted/Equivalent with ES 236   )
+    description: In the course, you will be introduced to the role of modern policing in the liberal and neoliberal world order. We look at how state violence works through local, national, and transnational systems of law and security. We ask, what role does policing play in maintaining unequal social orders including race, class, gender, caste and others? How have movements resisted and sought to transform and/or abolish policing in their societies? (Crosslisted/Equivalent with ES 236 )
     offered:
       terms:
         - fall
@@ -95,7 +95,7 @@ courses:
           - courseId: GS-206
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( GS 206   with a C- or better) and ( GE   GE Area 1A and 1B and 1C and 2 with a C- or better)]"
+      - "[Prereq: ( GS 206 with a C- or better) and ( GE GE Area 1A and 1B and 1C and 2 with a C- or better)]"
   GS-316:
     code: GS 316
     title: Approaches/ Global Histories
@@ -108,7 +108,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   GS-317:
     code: GS 317
     title: "Global Migrant Workers: Ethnic Experiences, Resistance, and Empowerment"
@@ -121,7 +121,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   GS-318:
     code: GS 318
     title: Quantitative Reasoning in Global Perspectives
@@ -134,7 +134,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   GS-325:
     code: GS 325
     title: Geography of International Development
@@ -147,7 +147,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   GS-327:
     code: GS 327
     title: Politics of the Middle East
@@ -160,7 +160,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   GS-331:
     code: GS 331
     title: Global Social Protest
@@ -173,7 +173,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   GS-336:
     code: GS 336
     title: "Cultural Geography: Place, Power, and Positioning"
@@ -186,7 +186,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   GS-339S:
     code: GS 339S
     title: Sweat/Service/Solidarity SL
@@ -199,7 +199,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   GS-342:
     code: GS 342
     title: "Economic Thought: History and Contemporary Interpretations"
@@ -212,7 +212,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   GS-350:
     code: GS 350
     title: Global Gender Issues
@@ -235,7 +235,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   GS-362:
     code: GS 362
     title: Global Literatures
@@ -249,7 +249,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   GS-363:
     code: GS 363
@@ -275,7 +275,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   GS-374:
     code: GS 374
     title: Global Studies Internship
@@ -298,7 +298,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   GS-385:
     code: GS 385
@@ -311,7 +311,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   GS-390:
     code: GS 390
     title: Global Politics
@@ -323,7 +323,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   GS-395:
     code: GS 395
     title: Special Topics

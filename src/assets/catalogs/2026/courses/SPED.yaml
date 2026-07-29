@@ -32,7 +32,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Usually taken with SPED 560   . When taken concurrently it applies towards the Master of Arts in Education.
+    description: Usually taken with SPED 560 . When taken concurrently it applies towards the Master of Arts in Education.
     offered:
       availability: periodic
   SPED-561:
@@ -113,7 +113,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: SPED 567A   or SPED 567B   )"
+      - "(Coreq: SPED 567A or SPED 567B )"
   SPED-567A:
     code: SPED 567A
     title: "Initial Semester Practicum: Mild Moderate Support Needs"
@@ -127,7 +127,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: SPED 567   )"
+      - "(Coreq: SPED 567 )"
   SPED-567B:
     code: SPED 567B
     title: "Initial Semester Practicum: Extensive Support Needs"
@@ -141,7 +141,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[Coreq: SPED 567   ]"
+      - "[Coreq: SPED 567 ]"
   SPED-568:
     code: SPED 568
     title: Meth Cul/Ling Div Students with Disabilities
@@ -186,7 +186,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: SPED 577A   or SPED 577B   )"
+      - "(Coreq: SPED 577A or SPED 577B )"
   SPED-577A:
     code: SPED 577A
     title: "Final Semester Practicum: Mild Moderate Support Needs"
@@ -214,7 +214,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: SPED 577   )"
+      - "(Coreq: SPED 577 )"
   SPED-578:
     code: SPED 578
     title: Seminar in Behavior Analysis
@@ -288,7 +288,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: Advanced instruction in the principles and application of behavior analysis with individuals with Mild/Moderate/Severe academic, social and/or behavioral needs. Crosslist with SPSY 681   .
+    description: Advanced instruction in the principles and application of behavior analysis with individuals with Mild/Moderate/Severe academic, social and/or behavioral needs. Crosslist with SPSY 681 .
   SPED-682:
     code: SPED 682
     title: Adv Assessment/Curriculum for Children w Learning Challenges

@@ -30,7 +30,7 @@ courses:
           - courseId: SPAN-101
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 101   with a C- or better)"
+      - "(Prereq: SPAN 101 with a C- or better)"
   SPAN-103:
     code: SPAN 103
     title: Intensive BeginingSpanish I &II
@@ -38,7 +38,7 @@ courses:
     credits:
       minimum: 4
       maximum: 8
-    description: An intensive course designed for beginning students. Emphasis on the development of communicative skills, basic structures, and cultural competence. Covers the equivalent of SPAN 101   and SPAN 102   in one semester. Requires active participation in instructor-coordinated multimedia and online activities as a mandatory component.
+    description: An intensive course designed for beginning students. Emphasis on the development of communicative skills, basic structures, and cultural competence. Covers the equivalent of SPAN 101 and SPAN 102 in one semester. Requires active participation in instructor-coordinated multimedia and online activities as a mandatory component.
     offered:
       availability: periodic
   SPAN-200:
@@ -68,7 +68,7 @@ courses:
           - courseId: SPAN-102
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 102   with a C- or better)"
+      - "(Prereq: SPAN 102 with a C- or better)"
   SPAN-202:
     code: SPAN 202
     title: Intermediate Spanish II
@@ -85,7 +85,7 @@ courses:
           - courseId: SPAN-201
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 201   with a C- or better)"
+      - "(Prereq: SPAN 201 with a C- or better)"
   SPAN-212:
     code: SPAN 212
     title: Spanish For Spanish Speakers I
@@ -105,7 +105,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: This course serves as an introduction to Chicanx poetry and narrative by representative contemporary writers, considering their literary, cultural and historical contexts. The course also explores the place and evolution of the Chicanx literary tradition within the United States and Latin America. Genres such as Chicana feminist literature, Chicanx detective fiction, Chicana solidarity fiction, and Chicanx young adult literature will also be considered. Taught in English. (Crosslisted/Equivalent with ES 260   )
+    description: This course serves as an introduction to Chicanx poetry and narrative by representative contemporary writers, considering their literary, cultural and historical contexts. The course also explores the place and evolution of the Chicanx literary tradition within the United States and Latin America. Genres such as Chicana feminist literature, Chicanx detective fiction, Chicana solidarity fiction, and Chicanx young adult literature will also be considered. Taught in English. (Crosslisted/Equivalent with ES 260 )
     offered:
       terms:
         - spring
@@ -155,7 +155,7 @@ courses:
           - courseId: WLC-300
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: WLC 300   with a C- or better)"
+      - "(Prereq: WLC 300 with a C- or better)"
   SPAN-301:
     code: SPAN 301
     title: Comp/Oral Practice
@@ -174,7 +174,7 @@ courses:
           - courseId: SPAN-202
           - courseId: SPAN-212
     prerequisiteNotes:
-      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   or equivalent)"
+      - "(Prereq: SPAN 201 or SPAN 202 or SPAN 212 or equivalent)"
   SPAN-301S:
     code: SPAN 301S
     title: Service Learning in the Chicano / Latino Community
@@ -193,7 +193,7 @@ courses:
           - courseId: SPAN-212
           - courseId: SPAN-301
     prerequisiteNotes:
-      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   or SPAN 301   or Instructor Consent)"
+      - "(Prereq: SPAN 201 or SPAN 202 or SPAN 212 or SPAN 301 or Instructor Consent)"
   SPAN-303:
     code: SPAN 303
     title: Advanced Spanish Grammar
@@ -214,7 +214,7 @@ courses:
           - courseId: SPAN-212
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+      - "(Prereq: SPAN 201 or SPAN 202 or SPAN 212 with a C- or better)"
   SPAN-304:
     code: SPAN 304
     title: Intro To Hispanic Literature
@@ -235,7 +235,7 @@ courses:
           - courseId: SPAN-212
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+      - "(Prereq: SPAN 201 or SPAN 202 or SPAN 212 with a C- or better)"
   SPAN-305:
     code: SPAN 305
     title: Spanish for The Professions
@@ -256,7 +256,7 @@ courses:
           - courseId: SPAN-212
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+      - "(Prereq: SPAN 201 or SPAN 202 or SPAN 212 with a C- or better)"
   SPAN-306:
     code: SPAN 306
     title: Culture/Civilization of Span Ltn Amer
@@ -277,7 +277,7 @@ courses:
           - courseId: SPAN-212
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+      - "(Prereq: SPAN 201 or SPAN 202 or SPAN 212 with a C- or better)"
   SPAN-307:
     code: SPAN 307
     title: History and Culture of Mexico
@@ -329,7 +329,7 @@ courses:
           - courseId: SPAN-212
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+      - "(Prereq: SPAN 201 or SPAN 202 or SPAN 212 with a C- or better)"
   SPAN-312:
     code: SPAN 312
     title: Current Topics for Spanish Speakers
@@ -347,7 +347,7 @@ courses:
           - courseId: SPAN-102
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and ( SPAN 102   )) or (Department Consent)]"
+      - "[(Prereq: ( GE Area 1A and 1B and 1C with a C- or better) and ( SPAN 102 )) or (Department Consent)]"
   SPAN-313:
     code: SPAN 313
     title: Intro to Spanish Linguistics
@@ -368,7 +368,7 @@ courses:
           - courseId: SPAN-212
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+      - "(Prereq: SPAN 201 or SPAN 202 or SPAN 212 with a C- or better)"
   SPAN-314:
     code: SPAN 314
     title: Spanish Applied Linguistics
@@ -390,7 +390,7 @@ courses:
           - courseId: SPAN-212
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+      - "(Prereq: SPAN 201 or SPAN 202 or SPAN 212 with a C- or better)"
   SPAN-315:
     code: SPAN 315
     title: "Introduction to Translation: Spanish/English"
@@ -411,7 +411,7 @@ courses:
           - courseId: SPAN-212
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+      - "(Prereq: SPAN 201 or SPAN 202 or SPAN 212 with a C- or better)"
   SPAN-316:
     code: SPAN 316
     title: Cultures and Civilizations of Spain
@@ -432,7 +432,7 @@ courses:
           - courseId: SPAN-212
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+      - "(Prereq: SPAN 201 or SPAN 202 or SPAN 212 with a C- or better)"
   SPAN-317:
     code: SPAN 317
     title: Spanish Popular Music
@@ -449,7 +449,7 @@ courses:
           - courseId: SPAN-202
           - courseId: SPAN-212
     prerequisiteNotes:
-      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   or equivalent) (Department Consent Required)"
+      - "(Prereq: SPAN 201 or SPAN 202 or SPAN 212 or equivalent) (Department Consent Required)"
   SPAN-320:
     code: SPAN 320
     title: "Introduction to Interpretation: Spanish/English"
@@ -472,7 +472,7 @@ courses:
           - courseId: SPAN-312
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 201   or SPAN 340   or SPAN 212   or SPAN 312   with a C- or better or equivalent)"
+      - "(Prereq: SPAN 201 or SPAN 340 or SPAN 212 or SPAN 312 with a C- or better or equivalent)"
   SPAN-321:
     code: SPAN 321
     title: "Masterpieces of Hispanic Literature: Spain"
@@ -493,7 +493,7 @@ courses:
           - courseId: SPAN-362
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 301   or SPAN 304   or SPAN 362   with a C- or better)"
+      - "(Prereq: SPAN 301 or SPAN 304 or SPAN 362 with a C- or better)"
   SPAN-322:
     code: SPAN 322
     title: "Masterpieces of Hispanic Literature: Latin America & the Caribbean"
@@ -514,7 +514,7 @@ courses:
           - courseId: SPAN-362
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 301   or SPAN 304   or SPAN 362   with a C- or better)"
+      - "(Prereq: SPAN 301 or SPAN 304 or SPAN 362 with a C- or better)"
   SPAN-323:
     code: SPAN 323
     title: Hispanic Sociolinguistics
@@ -535,7 +535,7 @@ courses:
           - courseId: SPAN-212
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+      - "(Prereq: SPAN 201 or SPAN 202 or SPAN 212 with a C- or better)"
   SPAN-325:
     code: SPAN 325
     title: Hispanic Cinema
@@ -573,7 +573,7 @@ courses:
           - courseId: SPAN-301
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 301   with a C- or better)"
+      - "(Prereq: SPAN 301 with a C- or better)"
   SPAN-336:
     code: SPAN 336
     title: LGBTQ/ Queer Hispanic Experiences
@@ -591,7 +591,7 @@ courses:
           - courseId: SPAN-202
           - courseId: SPAN-212
     prerequisiteNotes:
-      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   or equivalent)"
+      - "(Prereq: SPAN 201 or SPAN 202 or SPAN 212 or equivalent)"
   SPAN-337:
     code: SPAN 337
     title: Popular Culture in Spain
@@ -607,7 +607,7 @@ courses:
           - courseId: SPAN-301
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 301   with a C- or better)"
+      - "(Prereq: SPAN 301 with a C- or better)"
   SPAN-340:
     code: SPAN 340
     title: "Language for Professions: Spanish"
@@ -625,7 +625,7 @@ courses:
           - courseId: SPAN-102
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( GE   Area 1A and 1B and 1C and 2) and ( SPAN 102   or equivalent) with a C- or better)]"
+      - "[(Prereq: ( GE Area 1A and 1B and 1C and 2) and ( SPAN 102 or equivalent) with a C- or better)]"
   SPAN-345:
     code: SPAN 345
     title: Bilingualism in the Spanish-Speaking World
@@ -646,7 +646,7 @@ courses:
           - courseId: SPAN-212
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+      - "(Prereq: SPAN 201 or SPAN 202 or SPAN 212 with a C- or better)"
   SPAN-350:
     code: SPAN 350
     title: "World Culture and Language: Spanish"
@@ -660,7 +660,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SPAN-362:
     code: SPAN 362
     title: Latin American Literature in Translation
@@ -673,7 +673,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   SPAN-365:
     code: SPAN 365
@@ -687,7 +687,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SPAN-370:
     code: SPAN 370
     title: The Chicanx Community
@@ -695,12 +695,12 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: This course will critically examine cultural, social, economic, and political aspects relevant to the local Chicanx community in a historical and contemporary context, and will incorporate literary and community studies. Taught in English. (Crosslisted/Equivalent with ES 370   )
+    description: This course will critically examine cultural, social, economic, and political aspects relevant to the local Chicanx community in a historical and contemporary context, and will incorporate literary and community studies. Taught in English. (Crosslisted/Equivalent with ES 370 )
     offered:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SPAN-374:
     code: SPAN 374
     title: Spanish Internship
@@ -764,7 +764,7 @@ courses:
           - courseId: SPAN-304
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 304   with a C- or better)"
+      - "(Prereq: SPAN 304 with a C- or better)"
   SPAN-426:
     code: SPAN 426
     title: Narrativa Hispanoamericana
@@ -781,7 +781,7 @@ courses:
           - courseId: SPAN-304
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 304   with a C- or better)"
+      - "(Prereq: SPAN 304 with a C- or better)"
   SPAN-427:
     code: SPAN 427
     title: Latin American Women Writers
@@ -798,7 +798,7 @@ courses:
           - courseId: SPAN-304
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 304   with a C- or better)"
+      - "(Prereq: SPAN 304 with a C- or better)"
   SPAN-428:
     code: SPAN 428
     title: La Literatura Afrolatina
@@ -815,7 +815,7 @@ courses:
           - courseId: SPAN-304
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 304   with a C- or better)"
+      - "(Prereq: SPAN 304 with a C- or better)"
   SPAN-495:
     code: SPAN 495
     title: Special Topics

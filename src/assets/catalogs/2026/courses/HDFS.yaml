@@ -72,7 +72,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better and (HDFS Majors Only)]"
+      - "[(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better and (HDFS Majors Only)]"
   HDFS-302:
     code: HDFS 302
     title: Research Methods in HDFS
@@ -86,7 +86,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (HDFS Majors only)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better) and (HDFS Majors only)]"
   HDFS-303:
     code: HDFS 303
     title: Professional Development in HDFS
@@ -100,7 +100,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (HDFS Majors Only)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better) and (HDFS Majors Only)]"
   HDFS-307:
     code: HDFS 307
     title: Family Theories and Interactions
@@ -114,7 +114,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   HDFS-310:
     code: HDFS 310
     title: Parenting Across the Lifespan
@@ -140,7 +140,7 @@ courses:
           - courseId: PSY-340
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+      - "[Prereq: ( HDFS 200 or HDFS 350 or HDFS 360 or PSY 100 or PSY 340 or equivalent) and ( GE Area 1A and 1B and 1C with a C- or better)]"
   HDFS-315:
     code: HDFS 315
     title: Risk and Resiliency in Families
@@ -166,7 +166,7 @@ courses:
           - courseId: PSY-340
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+      - "[Prereq: ( HDFS 200 or HDFS 350 or HDFS 360 or PSY 100 or PSY 340 or equivalent) and ( GE Area 1A and 1B and 1C with a C- or better)]"
   HDFS-321:
     code: HDFS 321
     title: Diverse Families
@@ -180,7 +180,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   HDFS-322:
     code: HDFS 322
     title: Immigrant Families Across the Lifespan
@@ -188,13 +188,13 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: Students critically examine the interdisciplinary research literature on diverse immigrant families in the US within a global context and explore contemporary and historical immigration issues that affect families and children’s development. In addition, students apply their learning in these areas toward maximizing strengths and functioning of immigrant families across the lifespan. (Crosslisted/Equivalent with ES 322   )
+    description: Students critically examine the interdisciplinary research literature on diverse immigrant families in the US within a global context and explore contemporary and historical immigration issues that affect families and children’s development. In addition, students apply their learning in these areas toward maximizing strengths and functioning of immigrant families across the lifespan. (Crosslisted/Equivalent with ES 322 )
     offered:
       terms:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   HDFS-340:
     code: HDFS 340
     title: Close Relationships and Family Development
@@ -220,7 +220,7 @@ courses:
           - courseId: PSY-340
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+      - "[Prereq: ( HDFS 200 or HDFS 350 or HDFS 360 or PSY 100 or PSY 340 or equivalent) and ( GE Area 1A and 1B and 1C with a C- or better)]"
   HDFS-341:
     code: HDFS 341
     title: "Family Violence: Identification, Prevention, and Intervention"
@@ -246,7 +246,7 @@ courses:
           - courseId: PSY-340
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+      - "[Prereq: ( HDFS 200 or HDFS 350 or HDFS 360 or PSY 100 or PSY 340 or equivalent) and ( GE Area 1A and 1B and 1C with a C- or better)]"
   HDFS-342:
     code: HDFS 342
     title: Human Development, Technology and the Media
@@ -272,7 +272,7 @@ courses:
           - courseId: PSY-340
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+      - "[Prereq: ( HDFS 200 or HDFS 350 or HDFS 360 or PSY 100 or PSY 340 or equivalent) and ( GE Area 1A and 1B and 1C with a C- or better)]"
   HDFS-344:
     code: HDFS 344
     title: Death and Dying
@@ -297,7 +297,7 @@ courses:
           - courseId: PSY-340
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+      - "[Prereq: ( HDFS 200 or HDFS 350 or HDFS 360 or PSY 100 or PSY 340 or equivalent) and ( GE Area 1A and 1B and 1C with a C- or better)]"
   HDFS-345:
     code: HDFS 345
     title: Addiction and Recovery in Families
@@ -324,7 +324,7 @@ courses:
               - courseId: PSY-340
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: GE   Areas 1A and 1B and 1C with a C- or better) and ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   )]"
+      - "[(Prereq: GE Areas 1A and 1B and 1C with a C- or better) and ( HDFS 200 or HDFS 350 or HDFS 360 or PSY 100 or PSY 340 )]"
   HDFS-350:
     code: HDFS 350
     title: "Lifespan Development: Transition and Change"
@@ -338,7 +338,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   HDFS-353:
     code: HDFS 353
     title: Cross-Cultural Human Development
@@ -352,7 +352,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   HDFS-355:
     code: HDFS 355
     title: Behavioral and Emotional Disorders of Childhood and Adolescence
@@ -378,7 +378,7 @@ courses:
           - courseId: PSY-340
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+      - "[Prereq: ( HDFS 200 or HDFS 350 or HDFS 360 or PSY 100 or PSY 340 or equivalent) and ( GE Area 1A and 1B and 1C with a C- or better)]"
   HDFS-356:
     code: HDFS 356
     title: Infancy and Early Childhood
@@ -404,7 +404,7 @@ courses:
           - courseId: PSY-340
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+      - "[Prereq: ( HDFS 200 or HDFS 350 or HDFS 360 or PSY 100 or PSY 340 or equivalent) and ( GE Area 1A and 1B and 1C with a C- or better)]"
   HDFS-358:
     code: HDFS 358
     title: Middle Childhood
@@ -430,7 +430,7 @@ courses:
           - courseId: PSY-340
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+      - "[Prereq: ( HDFS 200 or HDFS 350 or HDFS 360 or PSY 100 or PSY 340 or equivalent) and ( GE Area 1A and 1B and 1C with a C- or better)]"
   HDFS-360:
     code: HDFS 360
     title: Child Development
@@ -444,7 +444,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   HDFS-360S:
     code: HDFS 360S
     title: Child Development/Service Learning
@@ -458,7 +458,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Areas 1A and 1B and 1C and 2A with a C- or better)"
+      - "(Prereq: GE Areas 1A and 1B and 1C and 2A with a C- or better)"
   HDFS-365:
     code: HDFS 365
     title: Adolescence
@@ -484,7 +484,7 @@ courses:
           - courseId: PSY-340
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+      - "[Prereq: ( HDFS 200 or HDFS 350 or HDFS 360 or PSY 100 or PSY 340 or equivalent) and ( GE Area 1A and 1B and 1C with a C- or better)]"
   HDFS-371:
     code: HDFS 371
     title: Adulthood & Aging
@@ -509,7 +509,7 @@ courses:
           - courseId: PSY-340
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+      - "[Prereq: ( HDFS 200 or HDFS 350 or HDFS 360 or PSY 100 or PSY 340 or equivalent) and ( GE Area 1A and 1B and 1C with a C- or better)]"
   HDFS-377:
     code: HDFS 377
     title: Geriatrics & Gerontology
@@ -534,7 +534,7 @@ courses:
           - courseId: PSY-340
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+      - "[Prereq: ( HDFS 200 or HDFS 350 or HDFS 360 or PSY 100 or PSY 340 or equivalent) and ( GE Area 1A and 1B and 1C with a C- or better)]"
   HDFS-380S:
     code: HDFS 380S
     title: Service Learning Human Dev
@@ -556,7 +556,7 @@ courses:
           - courseId: HDFS-400A
             minimumGrade: C-
     prerequisiteNotes:
-      - "[((Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better) and ( HDFS 302   and HDFS 303   ) and (HDFS majors only)) and (Coreq: HDFS 400A   )]"
+      - "[((Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better) and ( HDFS 302 and HDFS 303 ) and (HDFS majors only)) and (Coreq: HDFS 400A )]"
   HDFS-382:
     code: HDFS 382
     title: Program Development and Evaluation in HDFS
@@ -574,7 +574,7 @@ courses:
           - courseId: HDFS-302
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: HDFS 302   and ( GE   Area 1A and 1B and 1C with a C- or better) and (HDFS Majors only)]"
+      - "[Prereq: HDFS 302 and ( GE Area 1A and 1B and 1C with a C- or better) and (HDFS Majors only)]"
   HDFS-395:
     code: HDFS 395
     title: Special Topics
@@ -586,7 +586,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HDFS-397:
     code: HDFS 397
     title: Independent Study
@@ -598,7 +598,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HDFS-397S:
     code: HDFS 397S
     title: Independent Study SL
@@ -610,7 +610,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HDFS-400A:
     code: HDFS 400A
     title: Pre-Capstone
@@ -632,7 +632,7 @@ courses:
           - courseId: HDFS-380S
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and ( HDFS 302   and HDFS 303   ) and (HDFS Majors only) and (Coreq: HDFS 380S   )]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C with a C- or better) and ( HDFS 302 and HDFS 303 ) and (HDFS Majors only) and (Coreq: HDFS 380S )]"
   HDFS-400B:
     code: HDFS 400B
     title: Capstone Seminar
@@ -652,4 +652,4 @@ courses:
           - courseId: HDFS-380S
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereqs: ( GE   Area 1A and 1B and 1C with a C- or better) and ( HDFS 400A   ) and ( HDFS 380S)   and (HDFS majors only)]"
+      - "[Prereqs: ( GE Area 1A and 1B and 1C with a C- or better) and ( HDFS 400A ) and ( HDFS 380S) and (HDFS majors only)]"

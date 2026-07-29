@@ -20,13 +20,13 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Various laboratory exercises and training in psychology. Concurrent enrollment in PSY 100   is required. The lab component of the course provides students with opportunities to experience psychological research first hand by participating in psychological studies on campus.
+    description: Various laboratory exercises and training in psychology. Concurrent enrollment in PSY 100 is required. The lab component of the course provides students with opportunities to experience psychological research first hand by participating in psychological studies on campus.
     offered:
       terms:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: PSY 100   )"
+      - "(Coreq: PSY 100 )"
   PSY-200:
     code: PSY 200
     title: Introduction to Research Methods
@@ -44,7 +44,7 @@ courses:
       - courseId: STAT-100
       - courseId: PSY-200L
     prerequisiteNotes:
-      - "[(Prereq: PSY 100   and STAT 100   ) and (Coreq: PSY 200L   )]"
+      - "[(Prereq: PSY 100 and STAT 100 ) and (Coreq: PSY 200L )]"
   PSY-200L:
     code: PSY 200L
     title: Intro Methods Lab
@@ -62,7 +62,7 @@ courses:
       - courseId: STAT-100
       - courseId: PSY-200
     prerequisiteNotes:
-      - "[(Prereq: PSY 100   and STAT 100   ) and (Coreq: PSY 200   )]"
+      - "[(Prereq: PSY 100 and STAT 100 ) and (Coreq: PSY 200 )]"
   PSY-295:
     code: PSY 295
     title: Special Topics
@@ -92,7 +92,7 @@ courses:
       - courseId: PSY-200
       - courseId: PSY-200L
     prerequisiteNotes:
-      - "(Prereq: PSY 100   and PSY 200   and PSY 200L   )"
+      - "(Prereq: PSY 100 and PSY 200 and PSY 200L )"
   PSY-301:
     code: PSY 301
     title: Advanced Psychological Statistics
@@ -114,7 +114,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-301L
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 301L   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 301L )]"
   PSY-301L:
     code: PSY 301L
     title: Advanced Psychological Statistics Lab
@@ -122,7 +122,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Computer laboratory to accompany PSY 301   . Various advanced research laboratory exercises and training in statistics and computer data analyses.
+    description: Computer laboratory to accompany PSY 301 . Various advanced research laboratory exercises and training in statistics and computer data analyses.
     offered:
       terms:
         - fall
@@ -136,7 +136,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-301
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 301   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 301 )]"
   PSY-302:
     code: PSY 302
     title: Advanced Research Methods
@@ -164,7 +164,7 @@ courses:
           - courseId: PSY-302L
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) and (Coreq: PSY 302L   )]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C with a C- or better) and (( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) and (Coreq: PSY 302L )]"
   PSY-302L:
     code: PSY 302L
     title: Advanced Research Methods Lab
@@ -172,7 +172,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Computer laboratory to accompany PSY 302   . Various advanced research laboratory exercises and training in statistics and computer data analyses.
+    description: Computer laboratory to accompany PSY 302 . Various advanced research laboratory exercises and training in statistics and computer data analyses.
     offered:
       terms:
         - fall
@@ -186,7 +186,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-302
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 302   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 302 )]"
   PSY-305:
     code: PSY 305
     title: Psychometrics
@@ -208,7 +208,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-305L
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 305L   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 305L )]"
   PSY-305L:
     code: PSY 305L
     title: Psychometrics Lab
@@ -216,7 +216,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Computer laboratory to accompany PSY 305   . Various advanced research laboratory exercises and training in statistics and computer data analyses.
+    description: Computer laboratory to accompany PSY 305 . Various advanced research laboratory exercises and training in statistics and computer data analyses.
     offered:
       terms:
         - fall
@@ -230,7 +230,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-305
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 305   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 305 )]"
   PSY-310:
     code: PSY 310
     title: Biological Psychology
@@ -252,7 +252,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-310L
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 310L   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 310L )]"
   PSY-310L:
     code: PSY 310L
     title: Biological Psychology Lab
@@ -260,7 +260,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: This is a laboratory course to accompany PSY 310   that involves supplemental activities in biological psychology, including basic neuroanatomy and laboratory skill training exercises.
+    description: This is a laboratory course to accompany PSY 310 that involves supplemental activities in biological psychology, including basic neuroanatomy and laboratory skill training exercises.
     offered:
       terms:
         - fall
@@ -274,7 +274,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-310
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 310   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 310 )]"
   PSY-315:
     code: PSY 315
     title: Psychopharmacology
@@ -295,7 +295,7 @@ courses:
           - courseId: PSY-200L
           - courseId: PSY-300
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   ))]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 ))]"
   PSY-320:
     code: PSY 320
     title: Psychopathology
@@ -317,7 +317,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-320L
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 320L   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 320L )]"
   PSY-320L:
     code: PSY 320L
     title: Psychopathology Lab
@@ -325,7 +325,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Laboratory course to accompany PSY 320   (Psychopathology). This course will consist of supplemental activities that will enhance understanding of research methods in Clinical Science. Empirical article review and research writing are required.
+    description: Laboratory course to accompany PSY 320 (Psychopathology). This course will consist of supplemental activities that will enhance understanding of research methods in Clinical Science. Empirical article review and research writing are required.
     offered:
       terms:
         - fall
@@ -339,7 +339,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-320
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 320   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 320 )]"
   PSY-321:
     code: PSY 321
     title: Clinical and Counseling Psychology
@@ -361,7 +361,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-321L
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND Coreq: PSY 321L   )]]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND Coreq: PSY 321L )]]"
   PSY-321L:
     code: PSY 321L
     title: Clinical and Counseling Psychology Lab
@@ -369,7 +369,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Laboratory to accompany PSY 321   . Students will be required to complete supplemental activities and exercises in Clinical Science and practical application of helping skills.
+    description: Laboratory to accompany PSY 321 . Students will be required to complete supplemental activities and exercises in Clinical Science and practical application of helping skills.
     offered:
       terms:
         - fall
@@ -383,7 +383,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-321
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND Coreq: PSY 321   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND Coreq: PSY 321 )]"
   PSY-329:
     code: PSY 329
     title: Health Psychology
@@ -405,7 +405,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-329L
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 329L   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 329L )]"
   PSY-329L:
     code: PSY 329L
     title: Health Psychology Lab
@@ -413,7 +413,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Laboratory course to accompany Health Psychology ( PSY 329   ). This course will consist of supplemental activities that will enhance understanding of research methods in Health Psychology. Empirical article review and research writing are required.
+    description: Laboratory course to accompany Health Psychology ( PSY 329 ). This course will consist of supplemental activities that will enhance understanding of research methods in Health Psychology. Empirical article review and research writing are required.
     offered:
       terms:
         - fall
@@ -427,7 +427,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-329
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 329   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 329 )]"
   PSY-330:
     code: PSY 330
     title: Cognitive Psychology
@@ -449,7 +449,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-330L
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 330L   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 330L )]"
   PSY-330L:
     code: PSY 330L
     title: Cognitive Psychology Lab
@@ -457,7 +457,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Laboratory to accompany PSY 330   . Various advanced research laboratory exercises, computer demonstrations of research experiments, discussion and/or oral presentation of cognitive material.
+    description: Laboratory to accompany PSY 330 . Various advanced research laboratory exercises, computer demonstrations of research experiments, discussion and/or oral presentation of cognitive material.
     offered:
       terms:
         - fall
@@ -471,7 +471,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-330
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 330   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 330 )]"
   PSY-331:
     code: PSY 331
     title: Human Memory
@@ -491,7 +491,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-331L
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 331L   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 331L )]"
   PSY-331L:
     code: PSY 331L
     title: Human Memory Lab
@@ -499,7 +499,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Laboratory to accompany PSY 331   . Various advanced research laboratory exercises, computer demonstrations of research experiments, discussion and/or oral presentation of memory material.
+    description: Laboratory to accompany PSY 331 . Various advanced research laboratory exercises, computer demonstrations of research experiments, discussion and/or oral presentation of memory material.
     offered:
       availability: periodic
     prerequisites:
@@ -511,7 +511,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-331
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 331   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 331 )]"
   PSY-333:
     code: PSY 333
     title: Cognitive Neuroscience
@@ -533,7 +533,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-333L
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 333L   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 333L )]"
   PSY-333L:
     code: PSY 333L
     title: Cognitive Neuroscience Lab
@@ -541,7 +541,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Laboratory to accompany PSY 333   . Various advanced research laboratory exercises, computer demonstrations of research experiments, discussion and/or oral presentation of cognitive neuroscience material.
+    description: Laboratory to accompany PSY 333 . Various advanced research laboratory exercises, computer demonstrations of research experiments, discussion and/or oral presentation of cognitive neuroscience material.
     offered:
       terms:
         - fall
@@ -555,7 +555,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-333
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 333   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 333 )]"
   PSY-334:
     code: PSY 334
     title: Sensation & Perception
@@ -575,7 +575,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-334L
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 334L   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 334L )]"
   PSY-334L:
     code: PSY 334L
     title: Sensation & Perception Lab
@@ -583,7 +583,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Laboratory to accompany PSY 334   . Various advanced research laboratory exercises, computer demonstrations of research experiments, discussion and/or oral presentation of sensation and perception material.
+    description: Laboratory to accompany PSY 334 . Various advanced research laboratory exercises, computer demonstrations of research experiments, discussion and/or oral presentation of sensation and perception material.
     offered:
       availability: periodic
     prerequisites:
@@ -595,7 +595,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-334
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 334   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 334 )]"
   PSY-335:
     code: PSY 335
     title: Bilingual Cognition
@@ -616,7 +616,7 @@ courses:
           - courseId: PSY-200L
           - courseId: PSY-300
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   ))"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 ))"
   PSY-336:
     code: PSY 336
     title: Human Factors Psychology
@@ -638,7 +638,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-336L
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 336L   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 336L )]"
   PSY-336L:
     code: PSY 336L
     title: Human Factors Psychology Lab
@@ -660,7 +660,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-336
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 336   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 336 )]"
   PSY-340:
     code: PSY 340
     title: Developmental Psychology
@@ -682,7 +682,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-340L
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 340L   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 340L )]"
   PSY-340L:
     code: PSY 340L
     title: Developmental Psychology Lab
@@ -690,7 +690,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Application laboratory to accompany PSY 340   . Various advanced research laboratory exercises and training in experimentation and data analyses.
+    description: Application laboratory to accompany PSY 340 . Various advanced research laboratory exercises and training in experimentation and data analyses.
     offered:
       terms:
         - fall
@@ -704,7 +704,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-340
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 340   )]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 )) AND (Coreq: PSY 340 )]"
   PSY-346:
     code: PSY 346
     title: Cognitive Development
@@ -723,7 +723,7 @@ courses:
           - courseId: PSY-200L
           - courseId: PSY-300
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   ))]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 ))]"
   PSY-347:
     code: PSY 347
     title: Social & Emotional Development
@@ -744,7 +744,7 @@ courses:
           - courseId: PSY-200L
           - courseId: PSY-300
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   ))]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 ))]"
   PSY-348:
     code: PSY 348
     title: How to Love
@@ -765,7 +765,7 @@ courses:
           - courseId: PSY-200L
           - courseId: PSY-300
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   ))]"
+      - "[(Prereq: ( PSY 100 AND STAT 100 AND PSY 200 AND PSY 200L ) OR ( PSY 300 ))]"
   PSY-350:
     code: PSY 350
     title: Social Psychology
@@ -787,7 +787,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-350L
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   and STAT 100   and PSY 200   and PSY 200L   ) OR ( PSY 300   )) and (Coreq: PSY 350L   )]"
+      - "[(Prereq: ( PSY 100 and STAT 100 and PSY 200 and PSY 200L ) OR ( PSY 300 )) and (Coreq: PSY 350L )]"
   PSY-350L:
     code: PSY 350L
     title: Social Psychology Lab
@@ -795,7 +795,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: "Social Psychology Lab: This is a laboratory course to accompany PSY 350   that involves supplemental activities in social psychology, including writing, research and laboratory skill training exercises."
+    description: "Social Psychology Lab: This is a laboratory course to accompany PSY 350 that involves supplemental activities in social psychology, including writing, research and laboratory skill training exercises."
     offered:
       terms:
         - fall
@@ -809,7 +809,7 @@ courses:
           - courseId: PSY-300
           - courseId: PSY-350
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   and STAT 100   and PSY 200   and PSY 200L   ) OR ( PSY 300   )) and (Coreq: PSY 350   )]"
+      - "[(Prereq: ( PSY 100 and STAT 100 and PSY 200 and PSY 200L ) OR ( PSY 300 )) and (Coreq: PSY 350 )]"
   PSY-352:
     code: PSY 352
     title: Theories of Personality
@@ -828,7 +828,7 @@ courses:
           - courseId: PSY-200L
           - courseId: PSY-300
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   and STAT 100   and PSY 200   and PSY 200L   ) OR ( PSY 300   ))]"
+      - "[(Prereq: ( PSY 100 and STAT 100 and PSY 200 and PSY 200L ) OR ( PSY 300 ))]"
   PSY-353:
     code: PSY 353
     title: Social Psychology of Gender
@@ -847,7 +847,7 @@ courses:
           - courseId: PSY-200L
           - courseId: PSY-300
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   and STAT 100   and PSY 200   and PSY 200L   ) OR ( PSY 300   ))]"
+      - "[(Prereq: ( PSY 100 and STAT 100 and PSY 200 and PSY 200L ) OR ( PSY 300 ))]"
   PSY-355:
     code: PSY 355
     title: Social Psychology and Social Justice
@@ -866,7 +866,7 @@ courses:
           - courseId: PSY-200L
           - courseId: PSY-300
     prerequisiteNotes:
-      - "[(Prereq: ( PSY 100   and STAT 100   and PSY 200   and PSY 200L   ) OR ( PSY 300   ))]"
+      - "[(Prereq: ( PSY 100 and STAT 100 and PSY 200 and PSY 200L ) OR ( PSY 300 ))]"
   PSY-357:
     code: PSY 357
     title: Psychology of Liberation and Healing
@@ -874,7 +874,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: Grounded in liberation psychology, the readings and class discussions explore practices to heal oneself and our communities amidst historical and contemporary oppression. Emphasis will be placed on how Communities of Color have resisted oppression and worked to heal disconnections. The course creates an opportunity for hands-on research experience and an opportunity to catalyze social change by planting “seeds” in order to sow liberation. (Crosslisted/Equivalent with ES 357   )
+    description: Grounded in liberation psychology, the readings and class discussions explore practices to heal oneself and our communities amidst historical and contemporary oppression. Emphasis will be placed on how Communities of Color have resisted oppression and worked to heal disconnections. The course creates an opportunity for hands-on research experience and an opportunity to catalyze social change by planting “seeds” in order to sow liberation. (Crosslisted/Equivalent with ES 357 )
     offered:
       terms:
         - fall
@@ -884,7 +884,7 @@ courses:
           - courseId: PSY-100
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and ( PSY 100   )]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better) and ( PSY 100 )]"
   PSY-374:
     code: PSY 374
     title: Psychology Leadership Internship
@@ -915,7 +915,7 @@ courses:
           - courseId: PSY-200L
           - courseId: PSY-300
     prerequisiteNotes:
-      - "[(Prereq: (PSY 100   and STAT 100   and PSY 200   and PSY 200L   ) or ( PSY 300   ))]"
+      - "[(Prereq: (PSY 100 and STAT 100 and PSY 200 and PSY 200L ) or ( PSY 300 ))]"
   PSY-395:
     code: PSY 395
     title: Special Topics
@@ -955,7 +955,7 @@ courses:
       - courseId: PSY-302
       - courseId: PSY-302L
     prerequisiteNotes:
-      - "[(Prereq: PSY 300   and PSY 302   and PSY 302L   ) and (Senior Standing)]"
+      - "[(Prereq: PSY 300 and PSY 302 and PSY 302L ) and (Senior Standing)]"
   PSY-451:
     code: PSY 451
     title: Professional Development in Preparation for Graduate School in Psychology
@@ -970,7 +970,7 @@ courses:
     prerequisites:
       - courseId: PSY-300
     prerequisiteNotes:
-      - "(Prereq: PSY 300   ) and (Senior Standing)"
+      - "(Prereq: PSY 300 ) and (Senior Standing)"
   PSY-452:
     code: PSY 452
     title: Professional Development in Preparation for Psychology Careers
@@ -985,7 +985,7 @@ courses:
     prerequisites:
       - courseId: PSY-300
     prerequisiteNotes:
-      - "(Prereq: PSY 300   ) (Senior Standing Required)"
+      - "(Prereq: PSY 300 ) (Senior Standing Required)"
   PSY-497:
     code: PSY 497
     title: Independent Study

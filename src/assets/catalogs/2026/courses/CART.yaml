@@ -80,7 +80,7 @@ courses:
     prerequisites:
       - courseId: CART-200
     prerequisiteNotes:
-      - "(Prereq: CART 200   )"
+      - "(Prereq: CART 200 )"
   CART-211:
     code: CART 211
     title: Picturing the Environment
@@ -289,7 +289,7 @@ courses:
     prerequisites:
       - courseId: CART-200
     prerequisiteNotes:
-      - "(Prereq: CART 200   )"
+      - "(Prereq: CART 200 )"
   CART-275:
     code: CART 275
     title: Women Filmmakers
@@ -342,7 +342,7 @@ courses:
           - courseId: CART-200
           - courseId: CART-305
     prerequisiteNotes:
-      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+      - "[(Prereq: CART 200 ) or (Prereq or Coreq: CART 305 )]"
   CART-303:
     code: CART 303
     title: Media, Power, and Society
@@ -373,7 +373,7 @@ courses:
     prerequisites:
       - courseId: CART-200
     prerequisiteNotes:
-      - "(Prereq: CART 200   )"
+      - "(Prereq: CART 200 )"
   CART-310:
     code: CART 310
     title: Sound Design
@@ -391,7 +391,7 @@ courses:
           - courseId: CART-200
           - courseId: CART-305
     prerequisiteNotes:
-      - "[(Prereq: CART 210   ) and ((Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+      - "[(Prereq: CART 210 ) and ((Prereq: CART 200 ) or (Prereq or Coreq: CART 305 )]"
   CART-311:
     code: CART 311
     title: Women Filmmakers
@@ -415,7 +415,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Areas 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Areas 1A and 1B and 1C and 2 with a C- or better)"
   CART-315:
     code: CART 315
     title: Visual Design
@@ -468,7 +468,7 @@ courses:
           - courseId: CART-200
           - courseId: CART-305
     prerequisiteNotes:
-      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+      - "[(Prereq: CART 200 ) or (Prereq or Coreq: CART 305 )]"
   CART-323:
     code: CART 323
     title: Visual Effects and Compositing
@@ -503,7 +503,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better)"
   CART-330:
     code: CART 330
     title: Elements of Cinema
@@ -521,7 +521,7 @@ courses:
           - courseId: CART-200
           - courseId: CART-305
     prerequisiteNotes:
-      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+      - "[(Prereq: CART 200 ) or (Prereq or Coreq: CART 305 )]"
   CART-333:
     code: CART 333
     title: Art of Producing
@@ -539,7 +539,7 @@ courses:
           - courseId: CART-200
           - courseId: CART-305
     prerequisiteNotes:
-      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+      - "[(Prereq: CART 200 ) or (Prereq or Coreq: CART 305 )]"
   CART-340:
     code: CART 340
     title: Screenwriting
@@ -569,7 +569,7 @@ courses:
           - courseId: CART-200
           - courseId: CART-305
     prerequisiteNotes:
-      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+      - "[(Prereq: CART 200 ) or (Prereq or Coreq: CART 305 )]"
   CART-342:
     code: CART 342
     title: Acting for Directors
@@ -586,7 +586,7 @@ courses:
           - courseId: CART-200
           - courseId: CART-305
     prerequisiteNotes:
-      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+      - "[(Prereq: CART 200 ) or (Prereq or Coreq: CART 305 )]"
   CART-345:
     code: CART 345
     title: Acting for the Screen
@@ -615,7 +615,7 @@ courses:
           - courseId: CART-200
           - courseId: CART-305
     prerequisiteNotes:
-      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+      - "[(Prereq: CART 200 ) or (Prereq or Coreq: CART 305 )]"
   CART-375:
     code: CART 375
     title: Cinematography
@@ -633,7 +633,7 @@ courses:
           - courseId: CART-200
           - courseId: CART-305
     prerequisiteNotes:
-      - "(Prereq: CART 200   or CART 305   )"
+      - "(Prereq: CART 200 or CART 305 )"
   CART-376:
     code: CART 376
     title: Documentary Production
@@ -651,7 +651,7 @@ courses:
           - courseId: CART-200
           - courseId: CART-305
     prerequisiteNotes:
-      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+      - "[(Prereq: CART 200 ) or (Prereq or Coreq: CART 305 )]"
   CART-395:
     code: CART 395
     title: Special Topics
@@ -669,7 +669,7 @@ courses:
           - courseId: CART-200
           - courseId: CART-305
     prerequisiteNotes:
-      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+      - "[(Prereq: CART 200 ) or (Prereq or Coreq: CART 305 )]"
   CART-396:
     code: CART 396
     title: Cinematic Arts Internship
@@ -708,7 +708,7 @@ courses:
       - anyOf:
           - courseId: CART-200
     prerequisiteNotes:
-      - "[Prereq: ( CART 200   ) and (Junior or Senior Standing)]"
+      - "[Prereq: ( CART 200 ) and (Junior or Senior Standing)]"
     minimumStanding: junior
   CART-404:
     code: CART 404
@@ -747,7 +747,7 @@ courses:
           - courseId: CART-200
           - courseId: CART-305
     prerequisiteNotes:
-      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+      - "[(Prereq: CART 200 ) or (Prereq or Coreq: CART 305 )]"
   CART-425:
     code: CART 425
     title: Docu-Fiction Filmmaking
@@ -764,7 +764,7 @@ courses:
           - courseId: CART-200
           - courseId: CART-305
     prerequisiteNotes:
-      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+      - "[(Prereq: CART 200 ) or (Prereq or Coreq: CART 305 )]"
   CART-440:
     code: CART 440
     title: Advanced Screenwriting
@@ -779,7 +779,7 @@ courses:
     prerequisites:
       - courseId: CART-240
     prerequisiteNotes:
-      - "(Prereq: CART 240   )"
+      - "(Prereq: CART 240 )"
   CART-461:
     code: CART 461
     title: Advanced Editing
@@ -794,7 +794,7 @@ courses:
     prerequisites:
       - courseId: CART-361
     prerequisiteNotes:
-      - "(Prereq: CART 361   )"
+      - "(Prereq: CART 361 )"
   CART-475:
     code: CART 475
     title: Advanced Cinematography
@@ -837,7 +837,7 @@ courses:
               - courseId: CART-376
               - courseId: CART-424
     prerequisiteNotes:
-      - "[(Prereq: CART 200   or CART 305   )] and (Prereq or Coreq: CART 330   and ( CART 318   or CART 321   or CART 341   or CART 375   or CART 376   or CART 424   ) and Senior Standing]"
+      - "[(Prereq: CART 200 or CART 305 )] and (Prereq or Coreq: CART 330 and ( CART 318 or CART 321 or CART 341 or CART 375 or CART 376 or CART 424 ) and Senior Standing]"
   CART-491:
     code: CART 491
     title: Capstone Completion & Assessment
@@ -845,7 +845,7 @@ courses:
     credits:
       minimum: 4
       maximum: 4
-    description: Students complete the Capstone project as conceived and planned in CART 490   . Students complete the Cinematic Arts and Technology MLO processes of production, postproduction, and distribution. Completed projects are presented to the public at the Cinematic Arts and Technology Capstone Festival.
+    description: Students complete the Capstone project as conceived and planned in CART 490 . Students complete the Cinematic Arts and Technology MLO processes of production, postproduction, and distribution. Completed projects are presented to the public at the Cinematic Arts and Technology Capstone Festival.
     offered:
       terms:
         - fall
@@ -854,4 +854,4 @@ courses:
       - courseId: CART-301
       - courseId: CART-490
     prerequisiteNotes:
-      - "(Prereq: CART 301   AND CART 490   )"
+      - "(Prereq: CART 301 AND CART 490 )"

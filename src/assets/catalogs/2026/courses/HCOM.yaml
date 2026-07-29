@@ -124,7 +124,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: Explores the social history of music and dance throughout the African Diaspora. Students learn specific styles from Cuba, Puerto Rico, Brazil and the United States including Afro-Cuban liturgical dance, rumba, salsa, samba, and hip hop. Students dance the music they study. Students become familiar with basic concepts in African Diaspora music and dance; identify and analyze trends therein; and develop a choreography based on the movements taught in class. (Crosslisted/Equivalent with ES 220   )
+    description: Explores the social history of music and dance throughout the African Diaspora. Students learn specific styles from Cuba, Puerto Rico, Brazil and the United States including Afro-Cuban liturgical dance, rumba, salsa, samba, and hip hop. Students dance the music they study. Students become familiar with basic concepts in African Diaspora music and dance; identify and analyze trends therein; and develop a choreography based on the movements taught in class. (Crosslisted/Equivalent with ES 220 )
     offered:
       terms:
         - fall
@@ -146,7 +146,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: Students study the literary expressions of Native peoples of the Americas. The course engages the literature as aesthetic, spiritual, and political expression. Examines the indigenous ways of being and knowing represented in the texts. Cultural aesthetics are studied within social and historical contexts, including but not limited to colonization, removals, assimilation, and resistance. Questions of cultural identity and sovereignty are central. (Crosslisted/Equivalent with ES 224   )
+    description: Students study the literary expressions of Native peoples of the Americas. The course engages the literature as aesthetic, spiritual, and political expression. Examines the indigenous ways of being and knowing represented in the texts. Cultural aesthetics are studied within social and historical contexts, including but not limited to colonization, removals, assimilation, and resistance. Questions of cultural identity and sovereignty are central. (Crosslisted/Equivalent with ES 224 )
     offered:
       terms:
         - fall
@@ -169,7 +169,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: Students focus on multicultural poetry as artistic and cultural representation. Students read works by poets of many cultures, watch poets read and talk about their work on video, and create their own original poetry. Students develop the tools to do literary and cultural analysis of poetry, as well as write their own poems. (Crosslisted/Equivalent with ES 229   )
+    description: Students focus on multicultural poetry as artistic and cultural representation. Students read works by poets of many cultures, watch poets read and talk about their work on video, and create their own original poetry. Students develop the tools to do literary and cultural analysis of poetry, as well as write their own poems. (Crosslisted/Equivalent with ES 229 )
     offered:
       terms:
         - fall
@@ -214,7 +214,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: This course provides students with an introduction to the study of race, ethnicity and culture in the United States. The course reviews the main ideas and key debates in Ethnic Studies, paying attention to the ways in which race and ethnicity intersect with other social identities such as gender, sexual orientation, class, nationality, and citizenship/legal status. Students who complete the course will be equipped with the analytic tools to apply a framework of race/ethnicity to better interpret, engage, and transform the world around them. (Crosslisted/Equivalent with ES 243   )
+    description: This course provides students with an introduction to the study of race, ethnicity and culture in the United States. The course reviews the main ideas and key debates in Ethnic Studies, paying attention to the ways in which race and ethnicity intersect with other social identities such as gender, sexual orientation, class, nationality, and citizenship/legal status. Students who complete the course will be equipped with the analytic tools to apply a framework of race/ethnicity to better interpret, engage, and transform the world around them. (Crosslisted/Equivalent with ES 243 )
     offered:
       terms:
         - fall
@@ -226,7 +226,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: Introduces students to the experiences of Chicana/o communities in the United States and in a transnational context. Students learn about Chicanos/as in relationship to issues of race, ethnicity, citizenship, class, gender, and other social formations. Students are introduced to Chicano/a historical experiences with an emphasis on understanding the struggles and social movements for justice and equality that have been foundational to the development of Chicano/a identities. (Crosslisted/Equivalent with ES 246   )
+    description: Introduces students to the experiences of Chicana/o communities in the United States and in a transnational context. Students learn about Chicanos/as in relationship to issues of race, ethnicity, citizenship, class, gender, and other social formations. Students are introduced to Chicano/a historical experiences with an emphasis on understanding the struggles and social movements for justice and equality that have been foundational to the development of Chicano/a identities. (Crosslisted/Equivalent with ES 246 )
     offered:
       terms:
         - spring
@@ -237,7 +237,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: Examines how historical, cultural, and social processes have influenced the development of African diaspora communities in the United States, Latin America, the Caribbean, Europe, and Asia. Special attention will be given to the impact of race and culture on the formation of diasporic communities. (Crosslisted/Equivalent with ES 247   )
+    description: Examines how historical, cultural, and social processes have influenced the development of African diaspora communities in the United States, Latin America, the Caribbean, Europe, and Asia. Special attention will be given to the impact of race and culture on the formation of diasporic communities. (Crosslisted/Equivalent with ES 247 )
     offered:
       terms:
         - spring
@@ -311,7 +311,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-301:
     code: HCOM 301
     title: Ways Of Knowing
@@ -325,7 +325,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   HCOM-302:
     code: HCOM 302
     title: Religion and Law
@@ -366,7 +366,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   HCOM-306:
     code: HCOM 306
     title: Gender and Communication
@@ -379,7 +379,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-307S:
     code: HCOM 307S
     title: Soc Impct Of Mass Media SL
@@ -393,7 +393,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   HCOM-308:
     code: HCOM 308
@@ -421,7 +421,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-310:
     code: HCOM 310
     title: Free Speech & Responsibility
@@ -435,7 +435,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-312:
     code: HCOM 312
     title: Writing and Advocacy
@@ -449,7 +449,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-314:
     code: HCOM 314
     title: Dialogue Across Differences
@@ -462,7 +462,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "[Prereq: (Junior or Senior Standing) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+      - "[Prereq: (Junior or Senior Standing) and ( GE Area 1A and 1B and 1C with a C- or better)]"
     minimumStanding: junior
   HCOM-315:
     code: HCOM 315
@@ -476,7 +476,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-316:
     code: HCOM 316
     title: Media Ethics
@@ -489,7 +489,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-317S:
     code: HCOM 317S
     title: Advanced Composition, Composition Theories, Service Learning
@@ -502,7 +502,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   HCOM-319:
     code: HCOM 319
@@ -516,7 +516,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-320:
     code: HCOM 320
     title: Grammar, Usage, and Power
@@ -529,7 +529,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-321:
     code: HCOM 321
     title: Introduction to Rhetoric and Culture
@@ -543,7 +543,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-322:
     code: HCOM 322
     title: Asian American Literature
@@ -556,7 +556,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-323:
     code: HCOM 323
     title: American Drama
@@ -569,7 +569,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-324:
     code: HCOM 324
     title: African American Narratives
@@ -582,7 +582,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-325:
     code: HCOM 325
     title: Narratives of American Immigration
@@ -595,7 +595,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-327:
     code: HCOM 327
     title: Survey American Literature
@@ -609,7 +609,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-328:
     code: HCOM 328
     title: Latina Life Stories
@@ -622,7 +622,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-329:
     code: HCOM 329
     title: Auto/Biografias
@@ -635,7 +635,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-330:
     code: HCOM 330
     title: Intro Creative Writing
@@ -649,7 +649,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-332:
     code: HCOM 332
     title: Poetry Writing Workshop
@@ -669,7 +669,7 @@ courses:
               - courseId: HCOM-339S
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C) and ( HCOM 330   or HCOM 339S   ) with a C- or better]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C) and ( HCOM 330 or HCOM 339S ) with a C- or better]"
   HCOM-333:
     code: HCOM 333
     title: Women’s Writing Workshop
@@ -689,7 +689,7 @@ courses:
               - courseId: HCOM-339S
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C) and ( HCOM 330   or HCOM 339S   ) with a C- or better]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C) and ( HCOM 330 or HCOM 339S ) with a C- or better]"
   HCOM-334:
     code: HCOM 334
     title: Fiction/Creative NonFiction Writing
@@ -709,7 +709,7 @@ courses:
               - courseId: HCOM-339S
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C) and ( HCOM 330   or HCOM 339S   ) with a C- or better]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C) and ( HCOM 330 or HCOM 339S ) with a C- or better]"
   HCOM-335:
     code: HCOM 335
     title: Amer Ethnic Lit & Culture
@@ -723,7 +723,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   HCOM-336:
     code: HCOM 336
     title: Poetry and Gender
@@ -736,7 +736,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-337:
     code: HCOM 337
     title: Women’s Literature
@@ -749,7 +749,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-338:
     code: HCOM 338
     title: Multicultural Adolescent Lit
@@ -762,7 +762,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   AArea 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE AArea 1A and 1B and 1C with a C- or better)"
   HCOM-339S:
     code: HCOM 339S
     title: Creative Writing and Service Learning
@@ -775,7 +775,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   HCOM-340S:
     code: HCOM 340S
@@ -790,7 +790,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   HCOM-341:
     code: HCOM 341
@@ -811,7 +811,7 @@ courses:
               - courseId: HCOM-339S
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( HCOM 330   or HCOM 339S   ) and ( GE   Area 1A and 1B and 1C) with a C- or better]"
+      - "[Prereq: ( HCOM 330 or HCOM 339S ) and ( GE Area 1A and 1B and 1C) with a C- or better]"
   HCOM-342:
     code: HCOM 342
     title: Feminist Theories & Methods
@@ -824,7 +824,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-343:
     code: HCOM 343
     title: Race and Gender Justice
@@ -838,7 +838,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   HCOM-344:
     code: HCOM 344
     title: Chicana/Latina Experiences
@@ -851,7 +851,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-345:
     code: HCOM 345
     title: Chicanx Life & Culture
@@ -864,7 +864,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-346:
     code: HCOM 346
     title: African American Life/History
@@ -877,7 +877,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-348:
     code: HCOM 348
     title: Race, Colonialism, and Film
@@ -890,7 +890,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-349:
     code: HCOM 349
     title: Environmental Philosophy and Communication
@@ -903,7 +903,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-350S:
     code: HCOM 350S
     title: Oral Hist/Comm Mem SL
@@ -916,7 +916,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   HCOM-352:
     code: HCOM 352
@@ -930,7 +930,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-353:
     code: HCOM 353
     title: California At Crossroads
@@ -944,7 +944,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   HCOM-354:
     code: HCOM 354
     title: Critical Public Histories
@@ -956,7 +956,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-356:
     code: HCOM 356
     title: Digital Multicultural U.S. Histories
@@ -969,7 +969,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: ( GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: ( GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-357:
     code: HCOM 357
     title: Constitutional Law
@@ -982,7 +982,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-358:
     code: HCOM 358
     title: Critical Perspective on Law in Society
@@ -995,7 +995,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-359:
     code: HCOM 359
     title: Law, Politics and LGBTQ History
@@ -1008,7 +1008,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-361:
     code: HCOM 361
     title: Crime and Communities
@@ -1021,7 +1021,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-362:
     code: HCOM 362
     title: Constitutional History
@@ -1034,7 +1034,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   HCOM-363:
     code: HCOM 363
     title: Topics in Social History
@@ -1047,7 +1047,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-365:
     code: HCOM 365
     title: Chicanx Latinx History
@@ -1060,7 +1060,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-366:
     code: HCOM 366
     title: History of Religion in the United States
@@ -1072,7 +1072,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-367:
     code: HCOM 367
     title: Gender and United States History
@@ -1085,7 +1085,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-368:
     code: HCOM 368
     title: U.S. Civil War and Reconstruction
@@ -1097,7 +1097,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-369:
     code: HCOM 369
     title: Asian American History
@@ -1110,7 +1110,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   HCOM-370:
     code: HCOM 370
     title: Media and the Military
@@ -1135,7 +1135,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-372:
     code: HCOM 372
     title: Social Media Theory and Practice
@@ -1159,7 +1159,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-374:
     code: HCOM 374
     title: Popular Culture & Social Change
@@ -1198,7 +1198,7 @@ courses:
           - courseId: SPAN-312
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: SPAN 201   or SPAN 340   or SPAN 212   or SPAN 312   with a C- or better)"
+      - "(Prereq: SPAN 201 or SPAN 340 or SPAN 212 or SPAN 312 with a C- or better)"
   HCOM-383:
     code: HCOM 383
     title: Genres of Social Justice Writing
@@ -1211,7 +1211,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-387:
     code: HCOM 387
     title: Media Technology
@@ -1223,7 +1223,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-388:
     code: HCOM 388
     title: Pathways to Public Service
@@ -1237,7 +1237,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Areas 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Areas 1A and 1B and 1C with a C- or better)"
   HCOM-390:
     code: HCOM 390
     title: Magazine Writing
@@ -1250,7 +1250,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-391:
     code: HCOM 391
     title: Race and Ethnicity in the United States
@@ -1258,13 +1258,13 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: This course examines race and ethnicity, and the experiences of people of color in the United States. The course is intersectional and transnational, reflecting the global context of the U.S., and engaging other social categories such as class, gender, sexuality, and ability in studying people¿s experiences. Various ways race and ethnicity operate in culture and social life are surveyed, highlighting culture, institutions, and everyday life as sites where racial and ethnic dynamics are seen. (Crosslisted/Equivalent with ES 391   )
+    description: This course examines race and ethnicity, and the experiences of people of color in the United States. The course is intersectional and transnational, reflecting the global context of the U.S., and engaging other social categories such as class, gender, sexuality, and ability in studying people¿s experiences. Various ways race and ethnicity operate in culture and social life are surveyed, highlighting culture, institutions, and everyday life as sites where racial and ethnic dynamics are seen. (Crosslisted/Equivalent with ES 391 )
     offered:
       terms:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   HCOM-395:
     code: HCOM 395
     title: Special Topics
@@ -1355,7 +1355,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Areas 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Areas 1A and 1B and 1C with a C- or better)"
   HCOM-401:
     code: HCOM 401
     title: Real Property Law in California
@@ -1369,7 +1369,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Areas 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Areas 1A and 1B and 1C with a C- or better)"
   HCOM-403:
     code: HCOM 403
     title: Ethics and Communication
@@ -1382,7 +1382,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-404:
     code: HCOM 404
     title: Restorative Justice
@@ -1395,7 +1395,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-405:
     code: HCOM 405
     title: Philosophy and Sexualities
@@ -1408,7 +1408,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-406:
     code: HCOM 406
     title: Philosophy According to Movies
@@ -1421,7 +1421,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-408:
     code: HCOM 408
     title: Fact or Fiction?
@@ -1457,7 +1457,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-411:
     code: HCOM 411
     title: Media Law and Policy
@@ -1470,7 +1470,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-412:
     code: HCOM 412
     title: Multicultural Conflict Resolution
@@ -1483,7 +1483,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-419:
     code: HCOM 419
     title: Digital Publishing Practicum
@@ -1491,7 +1491,7 @@ courses:
     credits:
       minimum: 2
       maximum: 2
-    description: This course provides a combination of theoretical background and practical experience in scholarly journal editing and publishing. Students will work collaboratively to produce Writing Waves, a writing-research journal and HCOM GE   A2 course text. Students will engage in all aspects of the production of the journal include soliciting and evaluating submissions, editing, proofreading, document design, marketing, publicity, research, web design, and public relations, among others.
+    description: This course provides a combination of theoretical background and practical experience in scholarly journal editing and publishing. Students will work collaboratively to produce Writing Waves, a writing-research journal and HCOM GE A2 course text. Students will engage in all aspects of the production of the journal include soliciting and evaluating submissions, editing, proofreading, document design, marketing, publicity, research, web design, and public relations, among others.
     offered:
       terms:
         - spring
@@ -1507,7 +1507,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-422:
     code: HCOM 422
     title: SelTop Multicultural Rhetorics
@@ -1520,7 +1520,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-423:
     code: HCOM 423
     title: Religion and Public Life
@@ -1533,7 +1533,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-424:
     code: HCOM 424
     title: Latin American Media and Pop Culture
@@ -1546,7 +1546,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-426:
     code: HCOM 426
     title: Travel Narratives
@@ -1559,7 +1559,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "[Prereq: (Junior or Senior Standing) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+      - "[Prereq: (Junior or Senior Standing) and ( GE Area 1A and 1B and 1C with a C- or better)]"
     minimumStanding: junior
   HCOM-427:
     code: HCOM 427
@@ -1570,7 +1570,7 @@ courses:
       maximum: 4
     description: "Examines representative works by British writers from different periods: Medieval, Renaissance, Neo-Classical, Romantic, Realist, Modern and Post-Modern."
     prerequisiteNotes:
-      - "(Prereq: GE   AArea 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE AArea 1A and 1B and 1C with a C- or better)"
   HCOM-428:
     code: HCOM 428
     title: Contemporary Chicana Poetry
@@ -1583,7 +1583,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-429:
     code: HCOM 429
     title: BritLit& Engl Lang Perspective
@@ -1596,7 +1596,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-430:
     code: HCOM 430
     title: Literary Journal Publication
@@ -1626,7 +1626,7 @@ courses:
               - courseId: HCOM-339S
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( GE   Area 1A and 1B and 1C) and ( HCOM 330   or HCOM 339S   ) with a C- or better)]"
+      - "[(Prereq: ( GE Area 1A and 1B and 1C) and ( HCOM 330 or HCOM 339S ) with a C- or better)]"
   HCOM-432S:
     code: HCOM 432S
     title: Social Action Writing SL
@@ -1645,7 +1645,7 @@ courses:
               - courseId: HCOM-339S
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: (Junior or Senior Standing) and ( GE   Area 1A and 1B and 1C) and ( HCOM 330   or HCOM 339S   ) with a C- or better]"
+      - "[Prereq: (Junior or Senior Standing) and ( GE Area 1A and 1B and 1C) and ( HCOM 330 or HCOM 339S ) with a C- or better]"
     minimumStanding: junior
   HCOM-433:
     code: HCOM 433
@@ -1658,7 +1658,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "(Prereq: GE   AArea 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE AArea 1A and 1B and 1C with a C- or better)"
   HCOM-434:
     code: HCOM 434
     title: Creative Publishing and Critical Storytelling
@@ -1671,7 +1671,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-435:
     code: HCOM 435
     title: Community Media Project
@@ -1684,7 +1684,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-436:
     code: HCOM 436
     title: Literature of Sexualities
@@ -1696,7 +1696,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-437:
     code: HCOM 437
     title: Shakespeare
@@ -1709,7 +1709,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-439:
     code: HCOM 439
     title: Page to Stage
@@ -1733,7 +1733,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-443:
     code: HCOM 443
     title: Black Feminist Theory & Praxis
@@ -1746,7 +1746,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-445:
     code: HCOM 445
     title: Slavery & Race in the Americas
@@ -1759,7 +1759,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-451:
     code: HCOM 451
     title: Transnational Migrations
@@ -1772,7 +1772,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-452:
     code: HCOM 452
     title: Literature Into Film
@@ -1785,7 +1785,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-454:
     code: HCOM 454
     title: History of Victorian Britain
@@ -1795,7 +1795,7 @@ courses:
       maximum: 4
     description: This course examines the key social and ideological influences that shaped the dominant concerns of Victorian Britain. Among these concerns are the roles of men and women, industrialization, class struggle, sexuality, racial difference, poverty and disease, education, and social change. Drawing on a wide range of textual evidence, the course provides opportunities to explore and apply methods of socio-cultural historical research.
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-455:
     code: HCOM 455
     title: Paradigms Of Chicanx Comm
@@ -1808,7 +1808,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-470:
     code: HCOM 470
     title: Graduate Admissions Workshop
@@ -1859,7 +1859,7 @@ courses:
           - courseId: HCOM-300
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: HCOM 300   with a C- or better)"
+      - "(Prereq: HCOM 300 with a C- or better)"
   HCOM-476:
     code: HCOM 476
     title: Advanced Public Speaking Workshop
@@ -1873,7 +1873,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1C with C- or better)"
+      - "(Prereq: GE Area 1C with C- or better)"
   HCOM-477:
     code: HCOM 477
     title: Communication in Everyday Life
@@ -1926,7 +1926,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   HCOM-495:
     code: HCOM 495
     title: Special Topics
@@ -1971,5 +1971,5 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "[(Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+      - "[(Prereq: ( GE Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior

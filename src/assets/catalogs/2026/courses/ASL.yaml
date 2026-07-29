@@ -30,7 +30,7 @@ courses:
           - courseId: ASL-101
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: ASL 101   with a C- or better)"
+      - "(Prereq: ASL 101 with a C- or better)"
   ASL-201:
     code: ASL 201
     title: Intermediate ASL I
@@ -48,7 +48,7 @@ courses:
           - courseId: ASL-102
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: ASL 102   with C- or better)"
+      - "(Prereq: ASL 102 with C- or better)"
   ASL-297:
     code: ASL 297
     title: Independent Study
@@ -74,7 +74,7 @@ courses:
           - courseId: ASL-202
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: ASL 202   with a C- or better)"
+      - "(Prereq: ASL 202 with a C- or better)"
   ASL-302:
     code: ASL 302
     title: Adv American Sign II
@@ -82,7 +82,7 @@ courses:
     credits:
       minimum: 4
       maximum: 4
-    description: A continuation of ASL 301   .
+    description: A continuation of ASL 301 .
     offered:
       availability: periodic
     prerequisites:
@@ -90,7 +90,7 @@ courses:
           - courseId: ASL-301
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: ASL 301   with a C- or better)"
+      - "(Prereq: ASL 301 with a C- or better)"
   ASL-395:
     code: ASL 395
     title: "Special Topics: Deaf Culture"

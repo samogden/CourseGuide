@@ -62,7 +62,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1C with a C- or better)"
+      - "(Prereq: GE Area 1C with a C- or better)"
   CHHS-215:
     code: CHHS 215
     title: Introduction to Human Services
@@ -126,7 +126,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   CHHS-301:
     code: CHHS 301
     title: Writing for Professional Development
@@ -140,7 +140,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   CHHS-302:
     code: CHHS 302
     title: Professional Communication for the Health & Human Services Professions
@@ -154,7 +154,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   CHHS-305:
     code: CHHS 305
@@ -191,7 +191,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   CHHS-384:
     code: CHHS 384
     title: Quantitative Analysis of Survey Data
@@ -205,7 +205,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   CHHS-385:
     code: CHHS 385
     title: Research Methods in the Social Sciences
@@ -219,7 +219,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 2 with a C- or better)"
+      - "(Prereq: GE Area 2 with a C- or better)"
   CHHS-395:
     code: CHHS 395
     title: Special Topics
@@ -257,7 +257,7 @@ courses:
           - courseId: PANM-202
             minimumGrade: C-
     prerequisiteNotes:
-      - "[((Prereq: CHHS 300   with a C- or better) and (Junior or Senior Standing)) and (Prereq or Coreq: CHHS 302   and CHHS 384   and SW 205   and PH 207   and PANM 202   ) with a C- or better)]"
+      - "[((Prereq: CHHS 300 with a C- or better) and (Junior or Senior Standing)) and (Prereq or Coreq: CHHS 302 and CHHS 384 and SW 205 and PH 207 and PANM 202 ) with a C- or better)]"
     minimumStanding: junior
   CHHS-397:
     code: CHHS 397
@@ -288,7 +288,7 @@ courses:
           - courseId: CHHS-496A
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: CHHS 396S   with a C- or better) and (Coreq: CHHS 496A   )]"
+      - "[(Prereq: CHHS 396S with a C- or better) and (Coreq: CHHS 496A )]"
   CHHS-400B:
     code: CHHS 400B
     title: Senior Capstone-B
@@ -308,7 +308,7 @@ courses:
           - courseId: CHHS-496B
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: CHHS 400A   with a C- or better) and (Coreq: CHHS 496B   )]"
+      - "[(Prereq: CHHS 400A with a C- or better) and (Coreq: CHHS 496B )]"
   CHHS-401:
     code: CHHS 401
     title: Senior Capstone
@@ -330,7 +330,7 @@ courses:
           - courseId: CHHS-496B
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: CHHS 396S   and CHHS 496A   with a C- or better) and (Coreq: CHHS 496B   )]"
+      - "[(Prereq: CHHS 396S and CHHS 496A with a C- or better) and (Coreq: CHHS 496B )]"
   CHHS-411:
     code: CHHS 411
     title: Community Engaged Research
@@ -344,7 +344,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: CHHS 496A   )"
+      - "(Coreq: CHHS 496A )"
   CHHS-445:
     code: CHHS 445
     title: Principles of Grantsmanship
@@ -358,7 +358,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2) and (GWAR) with a C- or better) or (Department Consent)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2) and (GWAR) with a C- or better) or (Department Consent)]"
   CHHS-450:
     code: CHHS 450
     title: Introduction to Policy Analysis
@@ -372,7 +372,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   CHHS-462:
     code: CHHS 462
     title: Equity, Justice & Public Trust
@@ -386,7 +386,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better)) and (GWAR) with a C- or better)"
+      - "(Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better)) and (GWAR) with a C- or better)"
   CHHS-495:
     code: CHHS 495
     title: Special Topics
@@ -416,7 +416,7 @@ courses:
           - courseId: CHHS-411
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: CHHS 396S   with a C- or better) and (Coreq: CHHS 411   )]"
+      - "[(Prereq: CHHS 396S with a C- or better) and (Coreq: CHHS 411 )]"
   CHHS-496B:
     code: CHHS 496B
     title: Senior Field Practicum Seminar-B
@@ -436,7 +436,7 @@ courses:
           - courseId: CHHS-401
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: CHHS 496A   with a C- or better) and (Coreq: CHHS 401   )]"
+      - "[(Prereq: CHHS 496A with a C- or better) and (Coreq: CHHS 401 )]"
   CHHS-497:
     code: CHHS 497
     title: Independent Study

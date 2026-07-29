@@ -28,7 +28,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better"
   NURS-326:
     code: NURS 326
     title: Professional Development for Nursing Practice
@@ -52,7 +52,7 @@ courses:
     offered:
       availability: periodic
     prerequisiteNotes:
-      - "[Prereq; ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Department of Nursing consent required)]"
+      - "[Prereq; ( GE Area 1A and 1B and 1C and 2 with a C- or better) and (Department of Nursing consent required)]"
   NURS-375:
     code: NURS 375
     title: Health Policy, Politics and Power
@@ -78,7 +78,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[(Prereq: GE   Areas 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+      - "[(Prereq: GE Areas 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   NURS-395:
     code: NURS 395
@@ -109,7 +109,7 @@ courses:
           - courseId: NURS-301
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( NURS 301   ) and ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( NURS 301 ) and ( GE Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   NURS-430:
     code: NURS 430
@@ -178,4 +178,4 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"

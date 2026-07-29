@@ -3,6 +3,7 @@ import {
   activeProgramRequirements,
   defaultCatalogVersion,
   candidateCourseIds,
+  courseCorequisiteIds,
   directRequirementCourseIds,
   getCourse,
   isCourseOffered,
@@ -319,6 +320,15 @@ export function buildCompactedSchedule(
   const baseSchedule = buildSuggestedSchedule(plan, completed, selection)
   const completedCourseIds = completedCourseIdsFor(selection, completed)
   const orderedSlots = plan.years.flatMap(year => year.terms.flatMap(term => term.slots))
+  const plannedConcreteCourseIds = new Set([
+    ...orderedSlots.flatMap(slot => slot.type === 'course' ? [slot.courseId] : []),
+    ...baseSchedule.assignments.values(),
+  ])
+  const assumedExternalPrerequisiteIds = new Set(
+    [...plannedConcreteCourseIds]
+      .flatMap(courseId => [...prerequisiteCourseIds(getCourse(courseId)?.prerequisites ?? [])])
+      .filter(courseId => !plannedConcreteCourseIds.has(courseId)),
+  )
   const originalOrder = new Map(orderedSlots.map((slot, index) => [progressKey(slot), index]))
   const completedSlots = orderedSlots.filter(slot => isSlotCompleted(slot, completed, baseSchedule.assignments))
   const remaining = orderedSlots.filter(slot => !isSlotCompleted(slot, completed, baseSchedule.assignments))
@@ -330,7 +340,7 @@ export function buildCompactedSchedule(
 
   while (completedSlots.length > 0 || remaining.length > 0) {
     const term: 'fall' | 'spring' = termIndex % 2 === 0 ? 'fall' : 'spring'
-    const availableBeforeTerm = new Set([...completedCourseIds, ...scheduledCourseIds])
+    const availableBeforeTerm = new Set([...completedCourseIds, ...assumedExternalPrerequisiteIds, ...scheduledCourseIds])
     const scheduledThisTerm: PlanSlot[] = []
     const courseIdsThisTerm: string[] = []
     let credits = 0
@@ -346,9 +356,10 @@ export function buildCompactedSchedule(
 
     while (madeProgress) {
       madeProgress = false
-      const candidate = [...remaining]
+      const candidateBundle = [...remaining]
         .sort((left, right) => (originalOrder.get(progressKey(left)) ?? 0) - (originalOrder.get(progressKey(right)) ?? 0))
-        .find(slot => credits + slot.credits <= maximumCredits && canCompactSlot(
+        .map(slot => compactedCorequisiteBundle(slot, remaining, baseSchedule.assignments))
+        .find(bundle => credits + bundle.reduce((total, slot) => total + slot.credits, 0) <= maximumCredits && bundle.every(slot => canCompactSlot(
           slot,
           term,
           termIndex,
@@ -359,17 +370,19 @@ export function buildCompactedSchedule(
           baseSchedule.courseOptions,
           previousChoiceByKey,
           scheduledChoiceTerms,
-        ))
-      if (!candidate) continue
+        )))
+      if (!candidateBundle) continue
 
-      remaining.splice(remaining.indexOf(candidate), 1)
-      scheduledThisTerm.push(candidate)
-      credits += candidate.credits
-      const key = progressKey(candidate)
-      if (candidate.type === 'choice') scheduledChoiceTerms.set(key, termIndex)
-      const courseId = baseSchedule.assignments.get(key) ?? (candidate.type === 'course' ? candidate.courseId : undefined)
-      if (courseId) courseIdsThisTerm.push(courseId)
-      else if (candidate.type === 'choice') courseIdsThisTerm.push(...candidate.alternatives.filter(alternative => getCourse(alternative)))
+      for (const candidate of candidateBundle) {
+        remaining.splice(remaining.indexOf(candidate), 1)
+        scheduledThisTerm.push(candidate)
+        credits += candidate.credits
+        const key = progressKey(candidate)
+        if (candidate.type === 'choice') scheduledChoiceTerms.set(key, termIndex)
+        const courseId = baseSchedule.assignments.get(key) ?? (candidate.type === 'course' ? candidate.courseId : undefined)
+        if (courseId) courseIdsThisTerm.push(courseId)
+        else if (candidate.type === 'choice') courseIdsThisTerm.push(...candidate.alternatives.filter(alternative => getCourse(alternative)))
+      }
       madeProgress = true
     }
 
@@ -387,6 +400,17 @@ export function buildCompactedSchedule(
     courseOptions: baseSchedule.courseOptions,
     selectedTargetKeys: baseSchedule.selectedTargetKeys,
   }
+}
+
+function compactedCorequisiteBundle(slot: PlanSlot, remaining: readonly PlanSlot[], assignments: ReadonlyMap<string, string>): PlanSlot[] {
+  const courseId = assignments.get(progressKey(slot)) ?? (slot.type === 'course' ? slot.courseId : undefined)
+  if (!courseId) return [slot]
+  const corequisiteIds = new Set(courseCorequisiteIds(courseId))
+  return [slot, ...remaining.filter(candidate => {
+    if (candidate === slot) return false
+    const candidateCourseId = assignments.get(progressKey(candidate)) ?? (candidate.type === 'course' ? candidate.courseId : undefined)
+    return Boolean(candidateCourseId && (corequisiteIds.has(candidateCourseId) || courseCorequisiteIds(candidateCourseId).includes(courseId)))
+  })]
 }
 
 /** Category used consistently for course colors and left-to-right presentation. */
@@ -483,7 +507,8 @@ function isCompactedCourseAvailable(
   const course = getCourse(courseId)
   if (!course || !isCourseOffered(courseId, term)) return false
   if (course.minimumStanding === 'junior' && degreeType !== 'ast-to-bs' && termIndex < 4) return false
-  return prerequisitesMet([...course.prerequisites, ...additionalPrerequisites], completedCourseIds)
+  const completedWithCorequisites = new Set([...completedCourseIds, ...courseCorequisiteIds(courseId)])
+  return prerequisitesMet([...course.prerequisites, ...additionalPrerequisites], completedWithCorequisites)
 }
 
 function buildPathAssignments(

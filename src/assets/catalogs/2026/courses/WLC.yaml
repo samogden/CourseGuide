@@ -114,7 +114,7 @@ courses:
           - courseId: JAPN-201
           - courseId: SPAN-201
     prerequisiteNotes:
-      - "[Prereq: ( JAPN 201   or equivalent) or ( SPAN 201   or equivalent) and (Department Consent Required)]"
+      - "[Prereq: ( JAPN 201 or equivalent) or ( SPAN 201 or equivalent) and (Department Consent Required)]"
   WLC-395:
     code: WLC 395
     title: Special Topics
@@ -153,7 +153,7 @@ courses:
           - courseId: JAPN-403
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( SPAN 300   or JAPN 403   with a C- or better) and (Junior or Senior Standing)]"
+      - "[(Prereq: ( SPAN 300 or JAPN 403 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   WLC-420:
     code: WLC 420

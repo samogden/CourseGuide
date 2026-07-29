@@ -90,4 +90,4 @@ courses:
     prerequisites:
       - courseId: RSCH-301
     prerequisiteNotes:
-      - "(Prereq: RSCH 301   )"
+      - "(Prereq: RSCH 301 )"

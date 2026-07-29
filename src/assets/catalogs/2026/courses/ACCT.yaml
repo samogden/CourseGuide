@@ -17,7 +17,7 @@ courses:
       - courseId: BUS-203
       - courseId: ACCT-312
     prerequisiteNotes:
-      - "[(Prereq: BUS 203   ) and (Coreq: ACCT 312   )]"
+      - "[(Prereq: BUS 203 ) and (Coreq: ACCT 312 )]"
   ACCT-312:
     code: ACCT 312
     title: Financial Accounting and Reporting II
@@ -34,7 +34,7 @@ courses:
       - courseId: BUS-203
       - courseId: ACCT-311
     prerequisiteNotes:
-      - "[(Prereq: BUS 203   ) and (Coreq: ACCT 311   )]"
+      - "[(Prereq: BUS 203 ) and (Coreq: ACCT 311 )]"
   ACCT-313:
     code: ACCT 313
     title: Financial Accounting and Reporting III
@@ -51,7 +51,7 @@ courses:
       - courseId: ACCT-311
       - courseId: ACCT-314
     prerequisiteNotes:
-      - "[(Prereq: ACCT 311   ) and (Coreq: ACCT 314   )]"
+      - "[(Prereq: ACCT 311 ) and (Coreq: ACCT 314 )]"
   ACCT-314:
     code: ACCT 314
     title: Financial Accounting and Reporting IV
@@ -68,7 +68,7 @@ courses:
       - courseId: ACCT-311
       - courseId: ACCT-313
     prerequisiteNotes:
-      - "[(Prereq: ACCT 311   ) and (Coreq: ACCT 313   )]"
+      - "[(Prereq: ACCT 311 ) and (Coreq: ACCT 313 )]"
   ACCT-320:
     code: ACCT 320
     title: Accounting Systems
@@ -85,7 +85,7 @@ courses:
       - courseId: BUS-203
       - courseId: ACCT-330
     prerequisiteNotes:
-      - "[(Prereq: BUS 203   ) and (Coreq: ACCT 330   )]"
+      - "[(Prereq: BUS 203 ) and (Coreq: ACCT 330 )]"
   ACCT-330:
     code: ACCT 330
     title: Accounting Analytics
@@ -102,7 +102,7 @@ courses:
       - courseId: BUS-203
       - courseId: ACCT-320
     prerequisiteNotes:
-      - "[(Prereq: BUS 203   ) and (Coreq: ACCT 320   )]"
+      - "[(Prereq: BUS 203 ) and (Coreq: ACCT 320 )]"
   ACCT-350:
     code: ACCT 350
     title: Financial Statement Analysis
@@ -116,7 +116,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   ACCT-410:
     code: ACCT 410
     title: Tax Regulations
@@ -134,7 +134,7 @@ courses:
       - courseId: ACCT-312
       - courseId: ACCT-420
     prerequisiteNotes:
-      - "[(Prereq: ACCT 311   and ACCT 312   ) and (Coreq: ACCT 420   )]"
+      - "[(Prereq: ACCT 311 and ACCT 312 ) and (Coreq: ACCT 420 )]"
   ACCT-420:
     code: ACCT 420
     title: Tax Compliance and Planning
@@ -152,7 +152,7 @@ courses:
       - courseId: ACCT-312
       - courseId: ACCT-410
     prerequisiteNotes:
-      - "[(Prereq: ACCT 311   and ACCT 312   ) and (Coreq: ACCT 410   )]"
+      - "[(Prereq: ACCT 311 and ACCT 312 ) and (Coreq: ACCT 410 )]"
   ACCT-450:
     code: ACCT 450
     title: Audit and Assurance Services
@@ -170,7 +170,7 @@ courses:
       - courseId: ACCT-312
       - courseId: ACCT-460
     prerequisiteNotes:
-      - "[(Prereq: ACCT 311   and ACCT 312   ) and (Coreq: ACCT 460   )]"
+      - "[(Prereq: ACCT 311 and ACCT 312 ) and (Coreq: ACCT 460 )]"
   ACCT-460:
     code: ACCT 460
     title: Audit and Assurance Reporting
@@ -188,7 +188,7 @@ courses:
       - courseId: ACCT-312
       - courseId: ACCT-450
     prerequisiteNotes:
-      - "[(Prereq: ACCT 311   and ACCT 312   ) and (Coreq: ACCT 450   )]"
+      - "[(Prereq: ACCT 311 and ACCT 312 ) and (Coreq: ACCT 450 )]"
   ACCT-495:
     code: ACCT 495
     title: Special Topics
@@ -233,7 +233,7 @@ courses:
       - courseId: ACCT-330
       - courseId: ACCT-350
     prerequisiteNotes:
-      - "(Prereq: ACCT 311   and ACCT 312   and ACCT 320   and ACCT 330   and ACCT 350   )"
+      - "(Prereq: ACCT 311 and ACCT 312 and ACCT 320 and ACCT 330 and ACCT 350 )"
   ACCT-631:
     code: ACCT 631
     title: Accounting Data Management
@@ -270,7 +270,7 @@ courses:
     prerequisites:
       - courseId: ACCT-631
     prerequisiteNotes:
-      - "(Prereq: ACCT 631   )"
+      - "(Prereq: ACCT 631 )"
   ACCT-641:
     code: ACCT 641
     title: Accounting Ethics
@@ -294,4 +294,4 @@ courses:
       - courseId: ACCT-631
       - courseId: ACCT-632
     prerequisiteNotes:
-      - "(Prereq: ACCT 631   and ACCT 632   )"
+      - "(Prereq: ACCT 631 and ACCT 632 )"

@@ -112,7 +112,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: Examines Native American societies and cultures in North America, more precisely, the geographic areas of Mexico, the United States and Canada. Emphasizes the development of Native American societies over time, their influence on North America and the broader global community, and Native American relationships with US political and social institutions. Gender, identity, and comparative indigenous world views will be central themes. (Crosslisted/Equivalent with ES 249   )
+    description: Examines Native American societies and cultures in North America, more precisely, the geographic areas of Mexico, the United States and Canada. Emphasizes the development of Native American societies over time, their influence on North America and the broader global community, and Native American relationships with US political and social institutions. Gender, identity, and comparative indigenous world views will be central themes. (Crosslisted/Equivalent with ES 249 )
     offered:
       terms:
         - fall
@@ -146,7 +146,7 @@ courses:
           - courseId: STAT-100
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and ( STAT 100   with a C- or better)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C with a C- or better) and ( STAT 100 with a C- or better)]"
   SSCI-303:
     code: SSCI 303
     title: Social Science Career Exploration
@@ -172,7 +172,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SSCI-305:
     code: SSCI 305
     title: Indigenous Histories
@@ -199,7 +199,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   SSCI-316:
     code: SSCI 316
@@ -213,7 +213,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   SSCI-320:
     code: SSCI 320
     title: Archaeology of Colonialism
@@ -227,7 +227,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SSCI-321:
     code: SSCI 321
     title: Survey Research in the Social Sciences
@@ -245,7 +245,7 @@ courses:
           - courseId: STAT-100
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and ( STAT 100 with a C- or better   )]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C with a C- or better) and ( STAT 100 with a C- or better )]"
   SSCI-322:
     code: SSCI 322
     title: Asian American Women’s History
@@ -258,7 +258,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SSCI-323:
     code: SSCI 323
     title: Southwestern Archaeology
@@ -282,7 +282,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SSCI-325:
     code: SSCI 325
     title: Art of the Aztec Empire
@@ -322,7 +322,7 @@ courses:
           - courseId: STAT-100
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and ( STAT 100   with a C- or better)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C with a C- or better) and ( STAT 100 with a C- or better)]"
   SSCI-332:
     code: SSCI 332
     title: The Rise & Fall of Civilizations
@@ -346,7 +346,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SSCI-333L:
     code: SSCI 333L
     title: Forensic Anthropology Lab
@@ -370,7 +370,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SSCI-337:
     code: SSCI 337
     title: Global Travel and Tourism
@@ -393,7 +393,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   SSCI-343:
     code: SSCI 343
     title: History of Capitalist Commodities and Drugs
@@ -407,7 +407,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   SSCI-345:
     code: SSCI 345
     title: Cultural Anthropology
@@ -421,7 +421,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   SSCI-346:
     code: SSCI 346
@@ -457,7 +457,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SSCI-353:
     code: SSCI 353
     title: Race, Class and Gender in the American West
@@ -470,7 +470,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SSCI-354:
     code: SSCI 354
     title: "Rest vs West: Guns, Pirates, and Modernity"
@@ -484,7 +484,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SSCI-355:
     code: SSCI 355
     title: Archaeological Thought and Practice
@@ -497,7 +497,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SSCI-356:
     code: SSCI 356
     title: "People, Places, & Environment: An Introduction to Geography"
@@ -511,7 +511,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SSCI-357:
     code: SSCI 357
     title: History of Empires Through the Eyes of Interlopers and Intermediaries
@@ -524,7 +524,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   SSCI-360S:
     code: SSCI 360S
     title: Mission Archaeology
@@ -537,7 +537,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   SSCI-361:
     code: SSCI 361
@@ -576,7 +576,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
   SSCI-364:
     code: SSCI 364
     title: The Japanese Internment Camps
@@ -589,7 +589,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SSCI-366:
     code: SSCI 366
     title: "Research Methods for SSCI: Quantitative Emphasis"
@@ -607,7 +607,7 @@ courses:
           - courseId: STAT-100
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: STAT 100   with a C- or better)"
+      - "(Prereq: STAT 100 with a C- or better)"
   SSCI-369:
     code: SSCI 369
     title: Ed for Leadership/Public Servi
@@ -628,7 +628,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SSCI-374:
     code: SSCI 374
     title: Social Sciences Internship
@@ -655,7 +655,7 @@ courses:
           - courseId: SSCI-361
           - courseId: ENVS-332
     prerequisiteNotes:
-      - "(Prereq: SSCI 361   or ENVS 332   )"
+      - "(Prereq: SSCI 361 or ENVS 332 )"
   SSCI-377:
     code: SSCI 377
     title: Academic Publishing in the Social Sciences
@@ -669,7 +669,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B with a C- or better) and (Junior or Senior Standing)]"
+      - "(Prereq: GE Area 1A and 1B with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   SSCI-378:
     code: SSCI 378
@@ -693,7 +693,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   SSCI-381:
     code: SSCI 381
@@ -730,7 +730,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SSCI-386:
     code: SSCI 386
     title: Social and Political Histories of California
@@ -744,7 +744,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SSCI-388:
     code: SSCI 388
     title: Crisis and Development in Mexican Society
@@ -769,7 +769,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   SSCI-395:
     code: SSCI 395
     title: Special Topics
@@ -825,7 +825,7 @@ courses:
           - courseId: SSCI-366
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( SSCI 300   with a C- or better) and ( SSCI 321   or SSCI 362   or SSCI 366   with a C- or better)]"
+      - "[Prereq: ( SSCI 300 with a C- or better) and ( SSCI 321 or SSCI 362 or SSCI 366 with a C- or better)]"
   SSCI-402:
     code: SSCI 402
     title: Senior Capstone Seminar II
@@ -851,7 +851,7 @@ courses:
           - courseId: SSCI-366
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( SSCI 300   and SSCI 400   with a C- or better) and ( SSCI 321   or SSCI 362   or SSCI 366   with a C- or better) and (GWAR with a C- or better)]"
+      - "[Prereq: ( SSCI 300 and SSCI 400 with a C- or better) and ( SSCI 321 or SSCI 362 or SSCI 366 with a C- or better) and (GWAR with a C- or better)]"
   SSCI-450:
     code: SSCI 450
     title: Congress/Intrnshp/Adm/Leg/Oper

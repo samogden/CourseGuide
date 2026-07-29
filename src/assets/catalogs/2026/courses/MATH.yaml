@@ -8,13 +8,13 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: This co-requisite course contains topics which directly support the content in MATH 100   . It contains support for mathematical skills and knowledge used in MATH 100   , supplemental instruction on MATH 100   content, and study skill development.
+    description: This co-requisite course contains topics which directly support the content in MATH 100 . It contains support for mathematical skills and knowledge used in MATH 100 , supplemental instruction on MATH 100 content, and study skill development.
     offered:
       terms:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: MATH 100   )"
+      - "(Coreq: MATH 100 )"
   MATH-15:
     code: MATH 15
     title: Support Course for MATH 115
@@ -22,13 +22,13 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: This co-requisite course contains topics which directly support the content in MATH 115   . It contains support for mathematical skills and knowledge used in MATH 115   , supplemental instruction on MATH 115   content, and study skill development.
+    description: This co-requisite course contains topics which directly support the content in MATH 115 . It contains support for mathematical skills and knowledge used in MATH 115 , supplemental instruction on MATH 115 content, and study skill development.
     offered:
       terms:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: MATH 115   )"
+      - "(Coreq: MATH 115 )"
   MATH-30:
     code: MATH 30
     title: Support Course for MATH 130
@@ -36,13 +36,13 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: This co-requisite course contains topics which directly support the content in MATH 130   . It contains support for mathematical skills and knowledge used in MATH 130   , supplemental instruction on MATH 130   content, and study skill development.
+    description: This co-requisite course contains topics which directly support the content in MATH 130 . It contains support for mathematical skills and knowledge used in MATH 130 , supplemental instruction on MATH 130 content, and study skill development.
     offered:
       terms:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: MATH 130   )"
+      - "(Coreq: MATH 130 )"
   MATH-99:
     code: MATH 99
     title: Mathematics Review II
@@ -107,7 +107,7 @@ courses:
           - courseId: MATH-130
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 130   with a C- or better)"
+      - "(Prereq: MATH 130 with a C- or better)"
   MATH-151:
     code: MATH 151
     title: Calculus II
@@ -125,7 +125,7 @@ courses:
           - courseId: MATH-150
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 150   with a C- or better)"
+      - "(Prereq: MATH 150 with a C- or better)"
   MATH-170:
     code: MATH 170
     title: Discrete Mathematics
@@ -143,7 +143,7 @@ courses:
           - courseId: MATH-130
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 130   with a C- or better)"
+      - "(Prereq: MATH 130 with a C- or better)"
   MATH-195:
     code: MATH 195
     title: Special Topics
@@ -215,7 +215,7 @@ courses:
           - courseId: MATH-151
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 151   with a C- or better)"
+      - "(Prereq: MATH 151 with a C- or better)"
   MATH-265:
     code: MATH 265
     title: Differential Equations and Linear Algebra
@@ -232,7 +232,7 @@ courses:
           - courseId: MATH-151
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 151   with a C- or better)"
+      - "(Prereq: MATH 151 with a C- or better)"
   MATH-270:
     code: MATH 270
     title: Mathematics for Computing
@@ -252,7 +252,7 @@ courses:
           - courseId: MATH-170
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 150   and MATH 170   with a C- or better)"
+      - "(Prereq: MATH 150 and MATH 170 with a C- or better)"
   MATH-294:
     code: MATH 294
     title: Mathematics Introductory Internship
@@ -306,7 +306,7 @@ courses:
           - courseId: MATH-322
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( GE   Area 1A and 1B and 1C) and ( MATH 151   ) with a C- or better and (Prereq or Coreq: MATH 170   or MATH 322   with a C- or better)]"
+      - "[(Prereq: ( GE Area 1A and 1B and 1C) and ( MATH 151 ) with a C- or better and (Prereq or Coreq: MATH 170 or MATH 322 with a C- or better)]"
   MATH-308:
     code: MATH 308
     title: Elementary Mathematics from an Advanced Perspective A
@@ -324,7 +324,7 @@ courses:
           - courseId: MATH-100
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: MATH 100   and ( GE   Area 1A and 1B and 1C and 2) with a C- or better)]"
+      - "[(Prereq: MATH 100 and ( GE Area 1A and 1B and 1C and 2) with a C- or better)]"
   MATH-309:
     code: MATH 309
     title: Elementary Math - Adv Viewpt B
@@ -342,7 +342,7 @@ courses:
           - courseId: MATH-308
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 308   with a C- or better)"
+      - "(Prereq: MATH 308 with a C- or better)"
   MATH-320:
     code: MATH 320
     title: Applied Probability and Statistics
@@ -359,7 +359,7 @@ courses:
           - courseId: MATH-150
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 150   with a C- or better)"
+      - "(Prereq: MATH 150 with a C- or better)"
   MATH-322:
     code: MATH 322
     title: Foundations of Modern Math
@@ -381,7 +381,7 @@ courses:
           - courseId: MATH-170
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 151   or ( MATH 150   and MATH 170)   with a C- or better)"
+      - "(Prereq: MATH 151 or ( MATH 150 and MATH 170) with a C- or better)"
   MATH-325:
     code: MATH 325
     title: Number Theory
@@ -398,7 +398,7 @@ courses:
           - courseId: MATH-322
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 322   with a C- or better)"
+      - "(Prereq: MATH 322 with a C- or better)"
   MATH-326:
     code: MATH 326
     title: History of Mathematics
@@ -417,7 +417,7 @@ courses:
           - courseId: MATH-322
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: MATH 151   ) or (Prereq or Coreq: MATH 322   with C- or better)]"
+      - "[(Prereq: MATH 151 ) or (Prereq or Coreq: MATH 322 with C- or better)]"
   MATH-329:
     code: MATH 329
     title: College Geometry
@@ -436,7 +436,7 @@ courses:
           - courseId: MATH-322
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 151   with a C- or better) and (Coreq: MATH 322   )"
+      - "(Prereq: MATH 151 with a C- or better) and (Coreq: MATH 322 )"
   MATH-330:
     code: MATH 330
     title: Advanced Linear Algebra
@@ -458,7 +458,7 @@ courses:
               - courseId: MATH-265
                 minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: ( MATH 230   or MATH 265)   and MATH 322   with a C- or better)"
+      - "(Prereq: ( MATH 230 or MATH 265) and MATH 322 with a C- or better)"
   MATH-340:
     code: MATH 340
     title: Ordinary Differential Equations
@@ -476,7 +476,7 @@ courses:
           - courseId: MATH-265
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: MATH 240   or MATH 265   ) with a C- or better]"
+      - "[(Prereq: MATH 240 or MATH 265 ) with a C- or better]"
   MATH-350:
     code: MATH 350
     title: Complex Analysis
@@ -492,7 +492,7 @@ courses:
           - courseId: MATH-250
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 250   with a C- or better)"
+      - "(Prereq: MATH 250 with a C- or better)"
   MATH-361S:
     code: MATH 361S
     title: Mathematics Tutors
@@ -508,7 +508,7 @@ courses:
       - anyOf:
           - courseId: MATH-130
     prerequisiteNotes:
-      - "[Prereq: (Junior or Senior Standing) and ( GE   Area 4B) and ( MATH 130   or equivalent)]"
+      - "[Prereq: (Junior or Senior Standing) and ( GE Area 4B) and ( MATH 130 or equivalent)]"
     minimumStanding: junior
   MATH-362S:
     code: MATH 362S
@@ -532,7 +532,7 @@ courses:
           - courseId: BUS-204
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: (Junior or Senior Standing) and ( GE   Area 4B) and ( MATH 320   or STAT 100   or STAT 250   or BUS 204   with a C- or better)]"
+      - "[Prereq: (Junior or Senior Standing) and ( GE Area 4B) and ( MATH 320 or STAT 100 or STAT 250 or BUS 204 with a C- or better)]"
     minimumStanding: junior
   MATH-370:
     code: MATH 370
@@ -551,7 +551,7 @@ courses:
           - courseId: MATH-170
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 151   or MATH 170   with a C- or better)"
+      - "(Prereq: MATH 151 or MATH 170 with a C- or better)"
   MATH-374:
     code: MATH 374
     title: Mathematical Modeling
@@ -567,7 +567,7 @@ courses:
           - courseId: MATH-151
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 151   with a C- or better)"
+      - "(Prereq: MATH 151 with a C- or better)"
   MATH-375:
     code: MATH 375
     title: Numerical Analysis for Mathematics and Statistics
@@ -585,7 +585,7 @@ courses:
           - courseId: CST-231
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 151   and CST 231   with a C- or better)"
+      - "(Prereq: MATH 151 and CST 231 with a C- or better)"
   MATH-376:
     code: MATH 376
     title: Partial Differential Equations
@@ -605,7 +605,7 @@ courses:
           - courseId: MATH-240
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 265   or ( MATH 230   and MATH 240   ) with a C- or better)"
+      - "(Prereq: MATH 265 or ( MATH 230 and MATH 240 ) with a C- or better)"
   MATH-385:
     code: MATH 385
     title: Enumerative Combinatorics
@@ -623,7 +623,7 @@ courses:
           - courseId: MATH-322
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 170   or MATH 322   with a C- or better)"
+      - "(Prereq: MATH 170 or MATH 322 with a C- or better)"
   MATH-386:
     code: MATH 386
     title: Graph Theory and Its Applications
@@ -641,7 +641,7 @@ courses:
           - courseId: MATH-151
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 170   or MATH 151   with a C- or better)"
+      - "(Prereq: MATH 170 or MATH 151 with a C- or better)"
   MATH-394:
     code: MATH 394
     title: Mathematics Intermediate Internship
@@ -694,7 +694,7 @@ courses:
           - courseId: MATH-322
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 300   and MATH 322   with a C- or better)"
+      - "(Prereq: MATH 300 and MATH 322 with a C- or better)"
   MATH-401:
     code: MATH 401
     title: Graduate and Professional Studies Preparation for the Sciences
@@ -729,7 +729,7 @@ courses:
               - courseId: MATH-230
                 minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: ( MATH 265   or MATH 230   ) and MATH 322   with a C- or better)"
+      - "(Prereq: ( MATH 265 or MATH 230 ) and MATH 322 with a C- or better)"
   MATH-411:
     code: MATH 411
     title: Modern Algebra II
@@ -746,7 +746,7 @@ courses:
           - courseId: MATH-410
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 410   with a C- or better)"
+      - "(Prereq: MATH 410 with a C- or better)"
   MATH-420:
     code: MATH 420
     title: Mathematical Analysis I
@@ -765,7 +765,7 @@ courses:
           - courseId: MATH-322
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 250   and MATH 322   with a C- or better)"
+      - "(Prereq: MATH 250 and MATH 322 with a C- or better)"
   MATH-421:
     code: MATH 421
     title: Mathematical Analysis II
@@ -773,7 +773,7 @@ courses:
     credits:
       minimum: 4
       maximum: 4
-    description: A continuation of MATH 420   . A rigorous study of metric spaces, sequences, and complete metric spaces. Develops the understanding of the spaces of continuous functions, normed and inner product spaces. Introduces measure spaces, in particular, develops an understanding of Lebesgue measure and Lebesgue integrable functions.
+    description: A continuation of MATH 420 . A rigorous study of metric spaces, sequences, and complete metric spaces. Develops the understanding of the spaces of continuous functions, normed and inner product spaces. Introduces measure spaces, in particular, develops an understanding of Lebesgue measure and Lebesgue integrable functions.
     offered:
       availability: periodic
     prerequisites:
@@ -781,7 +781,7 @@ courses:
           - courseId: MATH-420
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 420   with a C- or better)"
+      - "(Prereq: MATH 420 with a C- or better)"
   MATH-494:
     code: MATH 494
     title: Mathematics Advanced Internship

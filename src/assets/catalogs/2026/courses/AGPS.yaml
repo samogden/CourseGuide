@@ -90,7 +90,7 @@ courses:
           - courseId: AGPS-128
           - courseId: BIO-106
     prerequisiteNotes:
-      - "[(Prereq or Coreq: AGPS 128   ) and (Prereq: BIO 106   )]"
+      - "[(Prereq or Coreq: AGPS 128 ) and (Prereq: BIO 106 )]"
   AGPS-209:
     code: AGPS 209
     title: Agriculture and the Environment
@@ -128,7 +128,7 @@ courses:
       - anyOf:
           - courseId: BIO-106
     prerequisiteNotes:
-      - "(Prereq or Coreq: BIO 106   )"
+      - "(Prereq or Coreq: BIO 106 )"
   AGPS-294:
     code: AGPS 294
     title: Agriculture Professional Experience
@@ -159,7 +159,7 @@ courses:
           - courseId: AGPS-128
           - courseId: AGPS-195
     prerequisiteNotes:
-      - "(Prereq: BIO 106   or AGPS 128   or AGPS 195   )"
+      - "(Prereq: BIO 106 or AGPS 128 or AGPS 195 )"
   AGPS-297:
     code: AGPS 297
     title: Independent Research in Agriculture
@@ -190,7 +190,7 @@ courses:
           - courseId: AGPS-390
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Coreq: AGPS 390   )]"
+      - "[(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better) and (Coreq: AGPS 390 )]"
   AGPS-302:
     code: AGPS 302
     title: Careers in Agriculture
@@ -246,7 +246,7 @@ courses:
               - courseId: CHEM-110L
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2) and ( AGPS 128   or CHEM 110L   ) with a C- or better]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2) and ( AGPS 128 or CHEM 110L ) with a C- or better]"
   AGPS-350:
     code: AGPS 350
     title: Research Methods in Crop and Soil Science
@@ -267,7 +267,7 @@ courses:
           - courseId: STAT-100
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: BIO 106   and AGPS 128   and STAT 100   with a C- or better)"
+      - "(Prereq: BIO 106 and AGPS 128 and STAT 100 with a C- or better)"
   AGPS-371:
     code: AGPS 371
     title: Weed Science and Technology
@@ -288,7 +288,7 @@ courses:
           - courseId: ENVS-240
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: BIO 106   or BIO 211   or ENVS 240   with C- or better)"
+      - "(Prereq: BIO 106 or BIO 211 or ENVS 240 with C- or better)"
   AGPS-372:
     code: AGPS 372
     title: Agricultural Entomology
@@ -309,7 +309,7 @@ courses:
           - courseId: ENVS-240
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: BIO 106   or BIO 211   or ENVS 240   with C- or better)"
+      - "(Prereq: BIO 106 or BIO 211 or ENVS 240 with C- or better)"
   AGPS-389S:
     code: AGPS 389S
     title: Agricultural Service Learning
@@ -322,7 +322,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with C- or better)"
   AGPS-390:
     code: AGPS 390
     title: Crop Management
@@ -346,7 +346,7 @@ courses:
               - courseId: ENVS-240
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BIO 106   or BIO 211   or ENVS 240)   and ( AGPS 128)   with C- or better]"
+      - "[Prereq: ( BIO 106 or BIO 211 or ENVS 240) and ( AGPS 128) with C- or better]"
   AGPS-394:
     code: AGPS 394
     title: Agriculture Internship
@@ -433,7 +433,7 @@ courses:
           - courseId: AGPS-390
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: AGPS 128   and AGPS 390   with C- or better)"
+      - "(Prereq: AGPS 128 and AGPS 390 with C- or better)"
   AGPS-416:
     code: AGPS 416
     title: Seed Production and Technology
@@ -449,7 +449,7 @@ courses:
       - courseId: BIO-322
       - courseId: BIO-332
     prerequisiteNotes:
-      - "(Prereq: BIO 322   and BIO 332   )"
+      - "(Prereq: BIO 322 and BIO 332 )"
   AGPS-470:
     code: AGPS 470
     title: Integrated Pest Management
@@ -471,7 +471,7 @@ courses:
               - courseId: AGPS-372
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: BIO 322   and ( AGPS 371   or AGPS 372   ) with C- or better]"
+      - "[Prereq: BIO 322 and ( AGPS 371 or AGPS 372 ) with C- or better]"
   AGPS-490:
     code: AGPS 490
     title: Projects in Crop Management
@@ -500,7 +500,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "[(Prereq: GWAR   with a C- or better) and (Instructor Consent Required)]"
+      - "[(Prereq: GWAR with a C- or better) and (Instructor Consent Required)]"
   AGPS-494:
     code: AGPS 494
     title: Senior Internship in Agriculture

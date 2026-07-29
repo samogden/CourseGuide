@@ -20,7 +20,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: Introduces the myriad of cultural influences on U.S. cuisines from various racial and ethnic groups via core concepts of ethnic studies. Explores the influence of cultural and historical traditions on the food landscape through an interdisciplinary lens focused on justice, equity, diversity, and inclusion. Examines the lived experiences of various ethnic groups while assessing the hierarchical social/organizational structures and power dynamics that restrict or inhibit opportunities for growth among unseen/hidden populations in the U.S. hospitality and tourism sector. (Crosslisted/Equivalent with ES 221   )
+    description: Introduces the myriad of cultural influences on U.S. cuisines from various racial and ethnic groups via core concepts of ethnic studies. Explores the influence of cultural and historical traditions on the food landscape through an interdisciplinary lens focused on justice, equity, diversity, and inclusion. Examines the lived experiences of various ethnic groups while assessing the hierarchical social/organizational structures and power dynamics that restrict or inhibit opportunities for growth among unseen/hidden populations in the U.S. hospitality and tourism sector. (Crosslisted/Equivalent with ES 221 )
     offered:
       terms:
         - fall
@@ -44,7 +44,7 @@ courses:
           - courseId: BUS-203
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( BUS 201   and BUS 203   ) and ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+      - "[(Prereq: ( BUS 201 and BUS 203 ) and ( GE Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   HOSP-312:
     code: HOSP 312
@@ -63,7 +63,7 @@ courses:
           - courseId: HOSP-200
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: HOSP 200   with a C- or better)"
+      - "(Prereq: HOSP 200 with a C- or better)"
   HOSP-323:
     code: HOSP 323
     title: Introduction to Event Planning and Management
@@ -97,7 +97,7 @@ courses:
           - courseId: ENSTU-280
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BUS 305   or ENVS 201   or ENSTU 280   with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( BUS 305 or ENVS 201 or ENSTU 280 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   HOSP-472:
     code: HOSP 472
@@ -117,7 +117,7 @@ courses:
           - courseId: HOSP-312
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: HOSP 200   and HOSP 312   with a C- or better)"
+      - "(Prereq: HOSP 200 and HOSP 312 with a C- or better)"
   HOSP-473:
     code: HOSP 473
     title: Sustainable Destination Planning and Management
@@ -136,7 +136,7 @@ courses:
           - courseId: HOSP-312
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: HOSP 200   and HOSP 312   with a C- or better)"
+      - "(Prereq: HOSP 200 and HOSP 312 with a C- or better)"
   HOSP-481:
     code: HOSP 481
     title: Sustainable Event Management
@@ -155,7 +155,7 @@ courses:
           - courseId: HOSP-312
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: HOSP 200   and HOSP 312   with a C- or better)"
+      - "(Prereq: HOSP 200 and HOSP 312 with a C- or better)"
   HOSP-482:
     code: HOSP 482
     title: Sustainable Lodging Management
@@ -174,7 +174,7 @@ courses:
           - courseId: HOSP-312
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq or Coreq: HOSP 300   and HOSP 312   with a C- or better) and (Junior or Senior Standing)]"
+      - "[(Prereq or Coreq: HOSP 300 and HOSP 312 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   HOSP-483:
     code: HOSP 483
@@ -194,7 +194,7 @@ courses:
           - courseId: HOSP-312
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: HOSP 200   and HOSP 312   with a C- or better)"
+      - "(Prereq: HOSP 200 and HOSP 312 with a C- or better)"
   HOSP-484:
     code: HOSP 484
     title: Strategic Hospitality Cost Management
@@ -207,7 +207,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Coreq: HOSP 483   )"
+      - "(Coreq: HOSP 483 )"
   HOSP-495:
     code: HOSP 495
     title: Special Topics
@@ -240,7 +240,7 @@ courses:
           - courseId: BUS-306
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BUS 304   and BUS 305   and BUS 306   with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( BUS 304 and BUS 305 and BUS 306 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   HOSP-498:
     code: HOSP 498
@@ -261,7 +261,7 @@ courses:
           - courseId: HOSP-312
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq or Coreq: HOSP 200   and HOSP 312   with a C- or better) and (Junior or Senior Standing)]"
+      - "[(Prereq or Coreq: HOSP 200 and HOSP 312 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   HOSP-499:
     code: HOSP 499
@@ -281,4 +281,4 @@ courses:
           - courseId: HOSP-312
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: HOSP 200   and HOSP 312   with a C- or better) and (Senior Standing)]"
+      - "[(Prereq: HOSP 200 and HOSP 312 with a C- or better) and (Senior Standing)]"

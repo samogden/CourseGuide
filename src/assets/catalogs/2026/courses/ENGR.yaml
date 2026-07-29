@@ -41,7 +41,7 @@ courses:
           - courseId: PHYS-205
           - courseId: MATH-151
     prerequisiteNotes:
-      - "[(Prereq: PHYS 205   ) and (Prereq or Coreq: MATH 151   )]"
+      - "[(Prereq: PHYS 205 ) and (Prereq or Coreq: MATH 151 )]"
   ENGR-140:
     code: ENGR 140
     title: Materials Science and Engineering
@@ -59,7 +59,7 @@ courses:
       - courseId: PHYS-205
       - courseId: ENGR-140L
     prerequisiteNotes:
-      - "[(Prereq: CHEM 110   and CHEM 110L   and PHYS 205   ) and (Coreq: ENGR 140L   )]"
+      - "[(Prereq: CHEM 110 and CHEM 110L and PHYS 205 ) and (Coreq: ENGR 140L )]"
   ENGR-140L:
     code: ENGR 140L
     title: Materials Science and Engineering Lab
@@ -67,7 +67,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: This course is the experimental exploration of the connections between the structure of materials and materials properties. Laboratories provide opportunities to directly observe the structures and behaviors discussed in the lecture course ( ENGR 140   ), to operate testing equipment, to analyze experimental data, and to prepare reports.
+    description: This course is the experimental exploration of the connections between the structure of materials and materials properties. Laboratories provide opportunities to directly observe the structures and behaviors discussed in the lecture course ( ENGR 140 ), to operate testing equipment, to analyze experimental data, and to prepare reports.
     offered:
       terms:
         - spring
@@ -77,7 +77,7 @@ courses:
       - courseId: PHYS-205
       - courseId: ENGR-140
     prerequisiteNotes:
-      - "[(Prereq: CHEM 110   and CHEM 110L   and PHYS 205   ) and (Coreq: ENGR 140   )]"
+      - "[(Prereq: CHEM 110 and CHEM 110L and PHYS 205 ) and (Coreq: ENGR 140 )]"
   ENGR-150:
     code: ENGR 150
     title: Engineering Graphics
@@ -103,7 +103,7 @@ courses:
     prerequisites:
       - courseId: ENGR-130
     prerequisiteNotes:
-      - "(Prereq: ENGR 130   )"
+      - "(Prereq: ENGR 130 )"
   ENGR-260:
     code: ENGR 260
     title: Circuit Analysis
@@ -119,7 +119,7 @@ courses:
       - courseId: PHYS-210
       - courseId: ENGR-260L
     prerequisiteNotes:
-      - "[(Prereq: PHYS 210   ) and (Coreq: ENGR 260L   )]"
+      - "[(Prereq: PHYS 210 ) and (Coreq: ENGR 260L )]"
   ENGR-260L:
     code: ENGR 260L
     title: Circuit Analysis Lab
@@ -135,7 +135,7 @@ courses:
       - courseId: PHYS-210
       - courseId: ENGR-260
     prerequisiteNotes:
-      - "[(Prereq: PHYS 210   ) and (Coreq: ENGR 260   )]"
+      - "[(Prereq: PHYS 210 ) and (Coreq: ENGR 260 )]"
   ENGR-294:
     code: ENGR 294
     title: Internship in Engineering
@@ -149,7 +149,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: ENGR 110   )"
+      - "(Coreq: ENGR 110 )"
   ENGR-301:
     code: ENGR 301
     title: Technical Writing in Engineering
@@ -162,7 +162,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   ENGR-310:
     code: ENGR 310
     title: Mechatronics
@@ -179,7 +179,7 @@ courses:
           - courseId: ENGR-370
           - courseId: ENGR-130
     prerequisiteNotes:
-      - "[(Prereq: ENGR 370   ) and (Prereq or Coreq: ENGR 130   )]"
+      - "[(Prereq: ENGR 370 ) and (Prereq or Coreq: ENGR 130 )]"
   ENGR-320:
     code: ENGR 320
     title: Machine Design
@@ -198,7 +198,7 @@ courses:
           - courseId: ENGR-330
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ENGR 240   ) and (Prereq or Coreq: ENGR 330   ) and ( GE   Area 1A and 1B and 1C and 2 with a C- or better)]"
+      - "[(Prereq: ENGR 240 ) and (Prereq or Coreq: ENGR 330 ) and ( GE Area 1A and 1B and 1C and 2 with a C- or better)]"
   ENGR-330:
     code: ENGR 330
     title: Dynamics
@@ -213,7 +213,7 @@ courses:
     prerequisites:
       - courseId: ENGR-130
     prerequisiteNotes:
-      - "(Prereq: ENGR 130   )"
+      - "(Prereq: ENGR 130 )"
   ENGR-335:
     code: ENGR 335
     title: Numerical Methods and Statistics for Engineering
@@ -228,7 +228,7 @@ courses:
     prerequisites:
       - courseId: MATH-265
     prerequisiteNotes:
-      - "(Prereq: MATH 265   )"
+      - "(Prereq: MATH 265 )"
   ENGR-340:
     code: ENGR 340
     title: Signals, Systems, and Transformations
@@ -247,7 +247,7 @@ courses:
           - courseId: MATH-265
           - courseId: CST-231
     prerequisiteNotes:
-      - "[(Prereq: ENGR 260   and ENGR 260L   ) and (Prereq or Coreq: MATH 265   and CST 231   )]"
+      - "[(Prereq: ENGR 260 and ENGR 260L ) and (Prereq or Coreq: MATH 265 and CST 231 )]"
   ENGR-350:
     code: ENGR 350
     title: Thermodynamics
@@ -265,7 +265,7 @@ courses:
       - courseId: CHEM-110
       - courseId: MATH-151
     prerequisiteNotes:
-      - "(Prereq: PHYS 210   and CHEM 110   and MATH 151   )"
+      - "(Prereq: PHYS 210 and CHEM 110 and MATH 151 )"
   ENGR-360:
     code: ENGR 360
     title: Fluid Dynamics
@@ -282,7 +282,7 @@ courses:
       - courseId: ENGR-330
       - courseId: MATH-265
     prerequisiteNotes:
-      - "(Prereq: ENGR 330   and MATH 265   )"
+      - "(Prereq: ENGR 330 and MATH 265 )"
   ENGR-370:
     code: ENGR 370
     title: Digital Logic Design
@@ -298,7 +298,7 @@ courses:
       - courseId: ENGR-260
       - courseId: ENGR-260L
     prerequisiteNotes:
-      - "(Prereq: ENGR 260   and ENGR 260L   )"
+      - "(Prereq: ENGR 260 and ENGR 260L )"
   ENGR-375:
     code: ENGR 375
     title: Feedback Control Systems
@@ -313,7 +313,7 @@ courses:
     prerequisites:
       - courseId: ENGR-340
     prerequisiteNotes:
-      - "(Prereq: ENGR 340   )"
+      - "(Prereq: ENGR 340 )"
   ENGR-380:
     code: ENGR 380
     title: Embedded Systems
@@ -328,7 +328,7 @@ courses:
     prerequisites:
       - courseId: ENGR-370
     prerequisiteNotes:
-      - "(Prereq: ENGR 370   )"
+      - "(Prereq: ENGR 370 )"
   ENGR-394:
     code: ENGR 394
     title: Internship in Engineering
@@ -350,7 +350,7 @@ courses:
           - courseId: ENGR-260L
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ENGR 130   and ENGR 260 and ENGR 260L   with a C- or better) and (Instructor Consent Required)]"
+      - "[(Prereq: ENGR 130 and ENGR 260 and ENGR 260L with a C- or better) and (Instructor Consent Required)]"
   ENGR-395:
     code: ENGR 395
     title: Special Topics
@@ -396,7 +396,7 @@ courses:
       - courseId: ENGR-310
       - courseId: ENGR-320
     prerequisiteNotes:
-      - "[(Prereq: ENGR 310   ) and (Coreq: ENGR 320   )]"
+      - "[(Prereq: ENGR 310 ) and (Coreq: ENGR 320 )]"
   ENGR-481:
     code: ENGR 481
     title: Mechatronics Design II
@@ -411,4 +411,4 @@ courses:
     prerequisites:
       - courseId: ENGR-480
     prerequisiteNotes:
-      - "(Prereq: ENGR 480   )"
+      - "(Prereq: ENGR 480 )"

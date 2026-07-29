@@ -16,7 +16,7 @@ courses:
           - courseId: CHIN-101
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CHIN 101   with a C- or better)"
+      - "(Prereq: CHIN 101 with a C- or better)"
   CHIN-197:
     code: CHIN 197
     title: Independent Study

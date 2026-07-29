@@ -20,7 +20,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Optional inquiry-based introductory chemistry lab can be taken concurrently or after CHEM 109   .
+    description: Optional inquiry-based introductory chemistry lab can be taken concurrently or after CHEM 109 .
     offered:
       terms:
         - fall
@@ -38,7 +38,7 @@ courses:
     credits:
       minimum: 4
       maximum: 4
-    description: Develops problem-solving skills related to the nature of matter, chemical reactions, stoichiometry, energy transformations, atomic and molecular structure, quantum theory, chemical bonding, and periodic properties. Students must complete an Introductory Chemistry course such as CHEM 109   , or have a passing score on CSUMB’s chemistry placement exam.
+    description: Develops problem-solving skills related to the nature of matter, chemical reactions, stoichiometry, energy transformations, atomic and molecular structure, quantum theory, chemical bonding, and periodic properties. Students must complete an Introductory Chemistry course such as CHEM 109 , or have a passing score on CSUMB’s chemistry placement exam.
     offered:
       terms:
         - fall
@@ -66,7 +66,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: CHEM 110   )"
+      - "(Coreq: CHEM 110 )"
   CHEM-110L:
     code: CHEM 110L
     title: Chemistry I Lab
@@ -74,13 +74,13 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Required lab course for CHEM 110   . Emphasizes qualitative and quantitative experiments, data analysis, and error propagation. Lab course fee may be charged.
+    description: Required lab course for CHEM 110 . Emphasizes qualitative and quantitative experiments, data analysis, and error propagation. Lab course fee may be charged.
     offered:
       terms:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: CHEM 110   )"
+      - "(Coreq: CHEM 110 )"
   CHEM-111:
     code: CHEM 111
     title: Chemistry II
@@ -107,7 +107,7 @@ courses:
               - courseId: MATH-150
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( CHEM 110   and CHEM 110L   ) and ( MATH 130   or MATH 150   ) with a C- or better) and (Coreq: CHEM 111L   )]"
+      - "[(Prereq: ( CHEM 110 and CHEM 110L ) and ( MATH 130 or MATH 150 ) with a C- or better) and (Coreq: CHEM 111L )]"
   CHEM-111L:
     code: CHEM 111L
     title: Chemistry II Lab
@@ -115,13 +115,13 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Required laboratory course for CHEM 111   . Emphasizes qualitative and quantitate experiments, data analysis, and error propagation. Lab course fee may be charged.
+    description: Required laboratory course for CHEM 111 . Emphasizes qualitative and quantitate experiments, data analysis, and error propagation. Lab course fee may be charged.
     offered:
       terms:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: CHEM 111   )"
+      - "(Coreq: CHEM 111 )"
   CHEM-195:
     code: CHEM 195
     title: Special Topics
@@ -165,7 +165,7 @@ courses:
           - courseId: CHEM-211L
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: CHEM 111   and CHEM 111L   with a C- or better) AND (Coreq or Prereq: CHEM 211L   with C- or better)]"
+      - "[(Prereq: CHEM 111 and CHEM 111L with a C- or better) AND (Coreq or Prereq: CHEM 211L with C- or better)]"
   CHEM-211L:
     code: CHEM 211L
     title: Organic Chemistry I Lab
@@ -173,7 +173,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Required lab course for CHEM 211   Organic Chemistry I. Emphasizes working safely with saturated and unsaturated hydrocarbons, halogenated compounds, alcohols and carbonyls, and the specialized equipment and techniques to run experiments on these and other organic molecules.
+    description: Required lab course for CHEM 211 Organic Chemistry I. Emphasizes working safely with saturated and unsaturated hydrocarbons, halogenated compounds, alcohols and carbonyls, and the specialized equipment and techniques to run experiments on these and other organic molecules.
     offered:
       terms:
         - fall
@@ -187,7 +187,7 @@ courses:
           - courseId: CHEM-211
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: CHEM 111   and CHEM 111L   with a C- or better) AND (Prereq OR Coreq: CHEM 211   with a C- or better)]"
+      - "[(Prereq: CHEM 111 and CHEM 111L with a C- or better) AND (Prereq OR Coreq: CHEM 211 with a C- or better)]"
   CHEM-212:
     code: CHEM 212
     title: Organic Chemistry II
@@ -204,7 +204,7 @@ courses:
           - courseId: CHEM-211
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CHEM 211   with a C- or better)"
+      - "(Prereq: CHEM 211 with a C- or better)"
   CHEM-212L:
     code: CHEM 212L
     title: Organic Chemistry II Lab
@@ -223,7 +223,7 @@ courses:
           - courseId: CHEM-212
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CHEM 211   with a C- or better) AND (Coreq or Prereq CHEM 212   with a C- or better)"
+      - "(Prereq: CHEM 211 with a C- or better) AND (Coreq or Prereq CHEM 212 with a C- or better)"
   CHEM-280:
     code: CHEM 280
     title: Molecular Modeling
@@ -270,7 +270,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   rea 1A and 1B and 1C and 2 and 5A with C- or better)"
+      - "(Prereq: GE rea 1A and 1B and 1C and 2 and 5A with C- or better)"
   CHEM-310:
     code: CHEM 310
     title: Biochemistry I
@@ -290,7 +290,7 @@ courses:
           - courseId: CHEM-312
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CHEM 211   or CHEM 312   with a C- or better)"
+      - "(Prereq: CHEM 211 or CHEM 312 with a C- or better)"
   CHEM-310L:
     code: CHEM 310L
     title: Biochemistry Lab
@@ -298,7 +298,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Optional lab course for CHEM 310   . Lab course fee may be charged. (Crosslisted with BIO 310L   )
+    description: Optional lab course for CHEM 310 . Lab course fee may be charged. (Crosslisted with BIO 310L )
     offered:
       availability: periodic
     prerequisites:
@@ -312,7 +312,7 @@ courses:
           - courseId: CHEM-310
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( BIO 310   or CHEM 310   with a C- or better) or (Coreq: BIO 310   or CHEM 310   )]"
+      - "[Prereq: ( BIO 310 or CHEM 310 with a C- or better) or (Coreq: BIO 310 or CHEM 310 )]"
   CHEM-312:
     code: CHEM 312
     title: Organic Chemistry II
@@ -333,7 +333,7 @@ courses:
           - courseId: CHEM-312L
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: CHEM 211   and CHEM 211L   with a C- or better) AND (Pre-req or Co-req: CHEM 312L   with a C- or better)]"
+      - "[(Prereq: CHEM 211 and CHEM 211L with a C- or better) AND (Pre-req or Co-req: CHEM 312L with a C- or better)]"
   CHEM-312L:
     code: CHEM 312L
     title: Organic Chemistry Lab II
@@ -354,7 +354,7 @@ courses:
           - courseId: CHEM-312
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: CHEM 211   and CHEM 211L   with a C- or better) AND (Coreq OR Prereq: CHEM 312   with a C- or better)]"
+      - "[(Prereq: CHEM 211 and CHEM 211L with a C- or better) AND (Coreq OR Prereq: CHEM 312 with a C- or better)]"
   CHEM-320:
     code: CHEM 320
     title: Environmental Chemistry
@@ -401,7 +401,7 @@ courses:
           - courseId: CHEM-320
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( CHEM 111   and CHEM 111L   and STAT 250   with a C- or better) or (Prereq or Coreq: CHEM 320   with a C- or better)]"
+      - "[Prereq: ( CHEM 111 and CHEM 111L and STAT 250 with a C- or better) or (Prereq or Coreq: CHEM 320 with a C- or better)]"
   CHEM-330:
     code: CHEM 330
     title: Physical Chemistry
@@ -420,7 +420,7 @@ courses:
           - courseId: CHEM-111L
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CHEM 111   and CHEM 111L   with a C- or better)"
+      - "(Prereq: CHEM 111 and CHEM 111L with a C- or better)"
   CHEM-330L:
     code: CHEM 330L
     title: Physical Chemistry Lab
@@ -437,7 +437,7 @@ courses:
           - courseId: CHEM-211
           - courseId: CHEM-330
     prerequisiteNotes:
-      - "[(Prereq: CHEM 211   or Instructor Consent) or (Coreq: CHEM 330   )]"
+      - "[(Prereq: CHEM 211 or Instructor Consent) or (Coreq: CHEM 330 )]"
   CHEM-350:
     code: CHEM 350
     title: Analytical & Instrumental Chemistry
@@ -461,7 +461,7 @@ courses:
           - courseId: CHEM-211
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: ( CHEM 111   and CHEM 111L   ) and [( CHEM 210   and CHEM 210L   ) or ( CHEM 211   ) with a C- or better]"
+      - "(Prereq: ( CHEM 111 and CHEM 111L ) and [( CHEM 210 and CHEM 210L ) or ( CHEM 211 ) with a C- or better]"
   CHEM-394:
     code: CHEM 394
     title: Chemistry Internship
@@ -513,7 +513,7 @@ courses:
           - courseId: BIO-310
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CHEM 310   or BIO 310   with a C- or better)"
+      - "(Prereq: CHEM 310 or BIO 310 with a C- or better)"
   CHEM-420:
     code: CHEM 420
     title: Bioorganic Chemistry Topics
@@ -531,7 +531,7 @@ courses:
           - courseId: BIO-310
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CHEM 310   or BIO 310   with a C- or better)"
+      - "(Prereq: CHEM 310 or BIO 310 with a C- or better)"
   CHEM-430:
     code: CHEM 430
     title: Environmental and Agricultural Chemistry Topics
@@ -552,7 +552,7 @@ courses:
               - courseId: CHEM-211
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( CHEM 350   ) and ( CHEM 210   or CHEM 211   ) with a C- or better]"
+      - "[Prereq: ( CHEM 350 ) and ( CHEM 210 or CHEM 211 ) with a C- or better]"
   CHEM-432:
     code: CHEM 432
     title: Aqueous Chemistry
@@ -580,7 +580,7 @@ courses:
           - courseId: AGPS-315
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CHEM 310   or CHEM 320   or CHEM 350   or BIO 310   or BIO 320   or MSCI 331   or AGPS 315   with a C- or better)"
+      - "(Prereq: CHEM 310 or CHEM 320 or CHEM 350 or BIO 310 or BIO 320 or MSCI 331 or AGPS 315 with a C- or better)"
   CHEM-440:
     code: CHEM 440
     title: Forensic Chemistry Topics
@@ -601,7 +601,7 @@ courses:
               - courseId: CHEM-211
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( CHEM 350   ) and ( CHEM 210   or CHEM 211   ) with a C- or better]"
+      - "[Prereq: ( CHEM 350 ) and ( CHEM 210 or CHEM 211 ) with a C- or better]"
   CHEM-450:
     code: CHEM 450
     title: Special Problems in Chemistry Laboratory
@@ -609,7 +609,7 @@ courses:
     credits:
       minimum: 1
       maximum: 2
-    description: Covers theory and practical application of instrumental methods of analysis, culminating in a faculty guided lab research project. Students submit a written report summarizing the research findings. May be repeated for a total of four (4) units. Depending on research topic, students must complete either CHEM 350   or BIO 310L   and or CHEM 312   .
+    description: Covers theory and practical application of instrumental methods of analysis, culminating in a faculty guided lab research project. Students submit a written report summarizing the research findings. May be repeated for a total of four (4) units. Depending on research topic, students must complete either CHEM 350 or BIO 310L and or CHEM 312 .
     offered:
       availability: periodic
   CHEM-495:

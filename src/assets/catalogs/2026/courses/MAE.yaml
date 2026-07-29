@@ -158,14 +158,14 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: This course develops student knowledge of cognitive assessment with the underlying frameworks of development and culture. Assessments of cognitive skills cannot be separated from these. Students in this course will be introduced to the assessment procedures of common cognitive assessments, The course will focus on cognitive function as a construct (e.g., cognitive factors, skills, abilities, and processes). Crosslist with SPSY 636   .
+    description: This course develops student knowledge of cognitive assessment with the underlying frameworks of development and culture. Assessments of cognitive skills cannot be separated from these. Students in this course will be introduced to the assessment procedures of common cognitive assessments, The course will focus on cognitive function as a construct (e.g., cognitive factors, skills, abilities, and processes). Crosslist with SPSY 636 .
     offered:
       availability: periodic
     prerequisites:
       - courseId: SPED-564
       - courseId: SPSY-550
     prerequisiteNotes:
-      - "(Prereq: SPED 564   and SPSY 550   )"
+      - "(Prereq: SPED 564 and SPSY 550 )"
   MAE-637:
     code: MAE 637
     title: Multicultural Curriculum
@@ -236,7 +236,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: This course explores educational policies in schools including educational law, resource allocations, interagency relationships, and tools for advocacy. The course focuses on understanding California and federal codes, case law, policies, and precedent and analysis of key legal concepts and application of law. An additional focus is the issues of and rights of migrant youth in schools. Students examine trends in law and the initiation of educational law to positively influence education. Crosslist with SPSY 645   .
+    description: This course explores educational policies in schools including educational law, resource allocations, interagency relationships, and tools for advocacy. The course focuses on understanding California and federal codes, case law, policies, and precedent and analysis of key legal concepts and application of law. An additional focus is the issues of and rights of migrant youth in schools. Students examine trends in law and the initiation of educational law to positively influence education. Crosslist with SPSY 645 .
     offered:
       terms:
         - spring
@@ -254,7 +254,7 @@ courses:
     prerequisites:
       - courseId: MAE-621
     prerequisiteNotes:
-      - "(Prereq: MAE 621   )"
+      - "(Prereq: MAE 621 )"
   MAE-690:
     code: MAE 690
     title: Action Thesis Advising

@@ -20,7 +20,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: This is a continuation of JAPN 101   . Students will continue to learn to use Japanese interpersonally and interpretively to communicate and present on familiar topics in daily situations. Students will learn basic communication strategies and demonstrate an increased appreciation of Japanese customs, practices, products, and perspectives, and are able to compare them with their own.
+    description: This is a continuation of JAPN 101 . Students will continue to learn to use Japanese interpersonally and interpretively to communicate and present on familiar topics in daily situations. Students will learn basic communication strategies and demonstrate an increased appreciation of Japanese customs, practices, products, and perspectives, and are able to compare them with their own.
     offered:
       terms:
         - fall
@@ -30,7 +30,7 @@ courses:
           - courseId: JAPN-101
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: JAPN 101   or equivalent with a C- or better)"
+      - "(Prereq: JAPN 101 or equivalent with a C- or better)"
   JAPN-185:
     code: JAPN 185
     title: Beg interpersonal and interpretive communication I
@@ -38,7 +38,7 @@ courses:
     credits:
       minimum: 1
       maximum: 2
-    description: This course focuses on interpersonal and interpretive communication in daily situations at beginning level and is a companion course for JAPN 101   and JAPN 102   .
+    description: This course focuses on interpersonal and interpretive communication in daily situations at beginning level and is a companion course for JAPN 101 and JAPN 102 .
     offered:
       terms:
         - fall
@@ -49,7 +49,7 @@ courses:
     credits:
       minimum: 1
       maximum: 2
-    description: This course focuses on interpersonal and interpretive communication in daily situations at beginning level and is a companion course for JAPN 101   and JAPN 102   .
+    description: This course focuses on interpersonal and interpretive communication in daily situations at beginning level and is a companion course for JAPN 101 and JAPN 102 .
     offered:
       terms:
         - spring
@@ -80,7 +80,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: This is a continuation of JAPN 102   . Students will continue to develop proficiency at an intermediate level of Japanese. Students will use the language to investigate, explain, and reflect on the relationships between the practices, products and perspectives of Japanese culture and compare them with their own.
+    description: This is a continuation of JAPN 102 . Students will continue to develop proficiency at an intermediate level of Japanese. Students will use the language to investigate, explain, and reflect on the relationships between the practices, products and perspectives of Japanese culture and compare them with their own.
     offered:
       terms:
         - fall
@@ -90,7 +90,7 @@ courses:
           - courseId: JAPN-102
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: JAPN 102   or equivalent with a C- or better)"
+      - "(Prereq: JAPN 102 or equivalent with a C- or better)"
   JAPN-211:
     code: JAPN 211
     title: Modern Japanese History
@@ -142,7 +142,7 @@ courses:
     credits:
       minimum: 1
       maximum: 2
-    description: This course focuses on interpersonal and interpretive communication in daily situations at intermediate level and is a companion course for JAPN 201   and JAPN 300   .
+    description: This course focuses on interpersonal and interpretive communication in daily situations at intermediate level and is a companion course for JAPN 201 and JAPN 300 .
     offered:
       terms:
         - fall
@@ -153,7 +153,7 @@ courses:
     credits:
       minimum: 1
       maximum: 2
-    description: This course focuses on interpersonal and interpretive communication in daily situations at intermediate level and is a companion course for JAPN 201   and JAPN 300   .
+    description: This course focuses on interpersonal and interpretive communication in daily situations at intermediate level and is a companion course for JAPN 201 and JAPN 300 .
     offered:
       terms:
         - spring
@@ -194,7 +194,7 @@ courses:
           - courseId: JAPN-201
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: JAPN 201   or equivalent with a C- or better)"
+      - "(Prereq: JAPN 201 or equivalent with a C- or better)"
   JAPN-301:
     code: JAPN 301
     title: Advanced Japanese Culture, Language and Communication
@@ -211,7 +211,7 @@ courses:
           - courseId: JAPN-201
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: JAPN 201   or equivalent with a C- or better)"
+      - "(Prereq: JAPN 201 or equivalent with a C- or better)"
   JAPN-302:
     code: JAPN 302
     title: History of Japan
@@ -228,7 +228,7 @@ courses:
           - courseId: JAPN-201
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: JAPN 201   or equivalent with a C- or better)"
+      - "(Prereq: JAPN 201 or equivalent with a C- or better)"
   JAPN-303:
     code: JAPN 303
     title: Business Japanese
@@ -245,7 +245,7 @@ courses:
           - courseId: JAPN-201
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: JAPN 201   or equivalent with C- or better)"
+      - "(Prereq: JAPN 201 or equivalent with C- or better)"
   JAPN-304:
     code: JAPN 304
     title: Introduction to Translation & Interpretation
@@ -262,7 +262,7 @@ courses:
           - courseId: JAPN-300
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: JAPN 300   or equivalent with a C- or better)"
+      - "(Prereq: JAPN 300 or equivalent with a C- or better)"
   JAPN-305:
     code: JAPN 305
     title: Introduction to Japanese Culture & Civilization
@@ -275,7 +275,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   JAPN-306:
     code: JAPN 306
     title: The Japanese Mind
@@ -288,7 +288,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   JAPN-307:
     code: JAPN 307
     title: Japan-American Experience
@@ -296,12 +296,12 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: This course focuses on Japanese-American experience from the 1860s to the present as an ongoing study in ethnographic assimilation, including early immigration and response; immigration and labor laws; property rights; and WWII internment. Students identify and evaluate the issues of the ethics of assimilation, racial and ethnic discrimination, educational opportunity, social justice, and cultural identity. Taught in English. (Crosslisted/Equivalent with ES 307   )
+    description: This course focuses on Japanese-American experience from the 1860s to the present as an ongoing study in ethnographic assimilation, including early immigration and response; immigration and labor laws; property rights; and WWII internment. Students identify and evaluate the issues of the ethics of assimilation, racial and ethnic discrimination, educational opportunity, social justice, and cultural identity. Taught in English. (Crosslisted/Equivalent with ES 307 )
     offered:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   JAPN-308:
     code: JAPN 308
     title: Japanese Pop-Culture
@@ -314,7 +314,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   JAPN-309:
     code: JAPN 309
     title: Masterpieces in Japanese Literature
@@ -327,7 +327,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   JAPN-310:
     code: JAPN 310
     title: Japanese Cinema
@@ -340,7 +340,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   JAPN-311:
     code: JAPN 311
     title: Social Issues In Japan
@@ -353,7 +353,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   JAPN-312:
     code: JAPN 312
     title: Advanced Japanese for Careers
@@ -370,7 +370,7 @@ courses:
           - courseId: JAPN-300
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: JAPN 300   or equivalent with a C- or better)"
+      - "(Prereq: JAPN 300 or equivalent with a C- or better)"
   JAPN-314:
     code: JAPN 314
     title: Japanese Visual Culture and Media
@@ -383,7 +383,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   JAPN-315:
     code: JAPN 315
     title: Japanese Business Culture
@@ -412,12 +412,12 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: This course examines the historical processes that have informed the food on our plates. In particular, we will look at food as a medium through which to understand the processes of migration, invention, colonialism, imperialism, and capitalism that have shaped much of the Asia-Pacific world, including Japan and the United States. Students will have a clear understanding of the processes of colonialism and globalization that informed the spread and invention of different food cultures and cuisines. (Crosslisted/Equivalent with ES 317   )
+    description: This course examines the historical processes that have informed the food on our plates. In particular, we will look at food as a medium through which to understand the processes of migration, invention, colonialism, imperialism, and capitalism that have shaped much of the Asia-Pacific world, including Japan and the United States. Students will have a clear understanding of the processes of colonialism and globalization that informed the spread and invention of different food cultures and cuisines. (Crosslisted/Equivalent with ES 317 )
     offered:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   JAPN-320S:
     code: JAPN 320S
     title: Japanese for the Global Community
@@ -434,7 +434,7 @@ courses:
           - courseId: JAPN-300
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: JAPN 300   or equivalent with a C- or better)"
+      - "(Prereq: JAPN 300 or equivalent with a C- or better)"
   JAPN-340:
     code: JAPN 340
     title: "Language for Professions: Japanese"
@@ -452,7 +452,7 @@ courses:
           - courseId: JAPN-102
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and ( JAPN 102   or equivalent) with C- or better]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better) and ( JAPN 102 or equivalent) with C- or better]"
   JAPN-350:
     code: JAPN 350
     title: "World Culture and Language: Japanese"
@@ -466,7 +466,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   JAPN-374:
     code: JAPN 374
     title: Japanese Internship
@@ -493,7 +493,7 @@ courses:
           - courseId: JAPN-300
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: JAPN 300   or equivalent with a C- or better)"
+      - "(Prereq: JAPN 300 or equivalent with a C- or better)"
   JAPN-395:
     code: JAPN 395
     title: Special Topics
@@ -540,7 +540,7 @@ courses:
           - courseId: JAPN-300
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: JAPN 300   or equivalent with a C- or better)"
+      - "(Prereq: JAPN 300 or equivalent with a C- or better)"
   JAPN-402:
     code: JAPN 402
     title: Japanese Literature
@@ -557,7 +557,7 @@ courses:
           - courseId: JAPN-300
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: JAPN 300   or equivalent with a C- or better)"
+      - "(Prereq: JAPN 300 or equivalent with a C- or better)"
   JAPN-403:
     code: JAPN 403
     title: Pre-Capstone
@@ -574,7 +574,7 @@ courses:
           - courseId: JAPN-300
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: JAPN 300   or equivalent with a C- or better)"
+      - "(Prereq: JAPN 300 or equivalent with a C- or better)"
   JAPN-404:
     code: JAPN 404
     title: Advanced Japanese for Presentational Communication
@@ -582,7 +582,7 @@ courses:
     credits:
       minimum: 2
       maximum: 2
-    description: This course aims to develop an advanced level of academic communication to finalize research projects using appropriate research methods. Students analyze and synthesize their research findings to orally present and to write academic papers using APA style. This course is a companion course for WLC 400   (Major Capstone). Taught in Japanese.
+    description: This course aims to develop an advanced level of academic communication to finalize research projects using appropriate research methods. Students analyze and synthesize their research findings to orally present and to write academic papers using APA style. This course is a companion course for WLC 400 (Major Capstone). Taught in Japanese.
     offered:
       terms:
         - spring
@@ -593,7 +593,7 @@ courses:
           - courseId: WLC-400
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: JAPN 300   or equivalent with a C- or better) and (Coreq: WLC 400   )]"
+      - "[(Prereq: JAPN 300 or equivalent with a C- or better) and (Coreq: WLC 400 )]"
   JAPN-405:
     code: JAPN 405
     title: Cultural Landscape of Japan
@@ -616,7 +616,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   JAPN-410:
     code: JAPN 410
     title: "Quakes and Nukes: (Un)Natural Japanese Environments"
@@ -629,7 +629,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   JAPN-420:
     code: JAPN 420
     title: Maximizing Study Abroad Experiences

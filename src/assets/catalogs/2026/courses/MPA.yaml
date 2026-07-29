@@ -28,7 +28,7 @@ courses:
       - anyOf:
           - courseId: MPA-100
     prerequisiteNotes:
-      - "(Prereq: MPA 100   or equivalent)"
+      - "(Prereq: MPA 100 or equivalent)"
   MPA-102:
     code: MPA 102
     title: Chromatic Harmony
@@ -44,7 +44,7 @@ courses:
       - anyOf:
           - courseId: MPA-101
     prerequisiteNotes:
-      - "(Prereq: MPA 101   or equivalent)"
+      - "(Prereq: MPA 101 or equivalent)"
   MPA-104:
     code: MPA 104
     title: Musicianship I
@@ -60,7 +60,7 @@ courses:
       - anyOf:
           - courseId: MPA-100
     prerequisiteNotes:
-      - "(Prereq or Coreq for MPA Majors and Minors: MPA 100   )"
+      - "(Prereq or Coreq for MPA Majors and Minors: MPA 100 )"
   MPA-105:
     code: MPA 105
     title: Musicianship II
@@ -77,7 +77,7 @@ courses:
           - courseId: MPA-104
           - courseId: MPA-100
     prerequisiteNotes:
-      - "[(Prereq: MPA 104   ) and (Prereq or Coreq: MPA 100   )]"
+      - "[(Prereq: MPA 104 ) and (Prereq or Coreq: MPA 100 )]"
   MPA-106:
     code: MPA 106
     title: Musicianship III
@@ -94,7 +94,7 @@ courses:
           - courseId: MPA-105
           - courseId: MPA-102
     prerequisiteNotes:
-      - "[(Prereq: MPA 105   ) and (Prereq or Coreq: MPA 102   )]"
+      - "[(Prereq: MPA 105 ) and (Prereq or Coreq: MPA 102 )]"
   MPA-107:
     code: MPA 107
     title: Musicianship IV
@@ -111,7 +111,7 @@ courses:
           - courseId: MPA-106
           - courseId: MPA-102
     prerequisiteNotes:
-      - "[(Prereq: MPA 106   ) and (Prereq or Coreq: MPA 102   )]"
+      - "[(Prereq: MPA 106 ) and (Prereq or Coreq: MPA 102 )]"
   MPA-108:
     code: MPA 108
     title: Introduction to Music Production
@@ -183,7 +183,7 @@ courses:
       - anyOf:
           - courseId: MPA-110
     prerequisiteNotes:
-      - "(Prereq: MPA 110   or equivalent)"
+      - "(Prereq: MPA 110 or equivalent)"
   MPA-216:
     code: MPA 216
     title: Stage Design and Technology
@@ -272,7 +272,7 @@ courses:
       - anyOf:
           - courseId: MPA-100
     prerequisiteNotes:
-      - "(Prereq: MPA 100   ) or (Instructor Consent)"
+      - "(Prereq: MPA 100 ) or (Instructor Consent)"
   MPA-295:
     code: MPA 295
     title: Special Topics
@@ -307,7 +307,7 @@ courses:
     prerequisites:
       - courseId: MPA-304
     prerequisiteNotes:
-      - "[Prereq: (Junior Standing) and (Coreq: MPA 304   )]"
+      - "[Prereq: (Junior Standing) and (Coreq: MPA 304 )]"
   MPA-301:
     code: MPA 301
     title: Music for Children
@@ -333,7 +333,7 @@ courses:
     prerequisites:
       - courseId: MPA-300
     prerequisiteNotes:
-      - "(Prereq: MPA 300   )"
+      - "(Prereq: MPA 300 )"
   MPA-304:
     code: MPA 304
     title: Writing About Music
@@ -348,7 +348,7 @@ courses:
     prerequisites:
       - courseId: MPA-300
     prerequisiteNotes:
-      - "[(Prereq: Junior Standing) and (Coreq: MPA 300   )]"
+      - "[(Prereq: Junior Standing) and (Coreq: MPA 300 )]"
   MPA-305:
     code: MPA 305
     title: Measuring Music
@@ -362,7 +362,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   MPA-306:
     code: MPA 306
     title: History of Electronic Music
@@ -378,7 +378,7 @@ courses:
       - anyOf:
           - courseId: MPA-101
     prerequisiteNotes:
-      - "[(Prereq: MPA 101   and (Junior or Senior Standing)]"
+      - "[(Prereq: MPA 101 and (Junior or Senior Standing)]"
     minimumStanding: junior
   MPA-307:
     code: MPA 307
@@ -394,7 +394,7 @@ courses:
     prerequisites:
       - courseId: MPA-305
     prerequisiteNotes:
-      - "(Prereq: MPA 305   )"
+      - "(Prereq: MPA 305 )"
   MPA-308:
     code: MPA 308
     title: Mixing & Mastering
@@ -409,7 +409,7 @@ courses:
     prerequisites:
       - courseId: MPA-305
     prerequisiteNotes:
-      - "(Prereq: MPA 305   )"
+      - "(Prereq: MPA 305 )"
   MPA-309:
     code: MPA 309
     title: Global Percussion
@@ -445,7 +445,7 @@ courses:
     prerequisites:
       - courseId: MPA-100
     prerequisiteNotes:
-      - "(Prereq: MPA 100   )"
+      - "(Prereq: MPA 100 )"
   MPA-314:
     code: MPA 314
     title: Arts Management and Music Business Ethics
@@ -471,7 +471,7 @@ courses:
     prerequisites:
       - courseId: MPA-305
     prerequisiteNotes:
-      - "(Prereq: MPA 305   )"
+      - "(Prereq: MPA 305 )"
   MPA-317S:
     code: MPA 317S
     title: Community Involvement Service Learning
@@ -484,7 +484,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   MPA-318:
     code: MPA 318
     title: Tonal Analysis
@@ -537,7 +537,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   MPA-323:
     code: MPA 323
     title: Guitar I
@@ -566,7 +566,7 @@ courses:
       - anyOf:
           - courseId: MPA-323
     prerequisiteNotes:
-      - "[(Prereq: MPA 323   ) or (Instructor Consent)]"
+      - "[(Prereq: MPA 323 ) or (Instructor Consent)]"
   MPA-325:
     code: MPA 325
     title: Video Game Music
@@ -606,7 +606,7 @@ courses:
       - anyOf:
           - courseId: MPA-330
     prerequisiteNotes:
-      - "(Prereq: MPA 330   ) or (Instructor Consent)"
+      - "(Prereq: MPA 330 ) or (Instructor Consent)"
   MPA-335:
     code: MPA 335
     title: Reflections on American Music
@@ -620,7 +620,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   MPA-336:
     code: MPA 336
     title: Jazz History
@@ -678,7 +678,7 @@ courses:
     prerequisites:
       - courseId: MPA-100
     prerequisiteNotes:
-      - "(Prereq: MPA 100   )"
+      - "(Prereq: MPA 100 )"
   MPA-345:
     code: MPA 345
     title: Jazz Improvisation
@@ -739,7 +739,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   MPA-367:
     code: MPA 367
     title: Music of Latin America and the Caribbean
@@ -764,7 +764,7 @@ courses:
     prerequisites:
       - courseId: MPA-100
     prerequisiteNotes:
-      - "(Prereq: MPA 100   )"
+      - "(Prereq: MPA 100 )"
   MPA-369:
     code: MPA 369
     title: Post-Production Audio
@@ -779,7 +779,7 @@ courses:
     prerequisites:
       - courseId: MPA-305
     prerequisiteNotes:
-      - "(Prereq: MPA 305   )"
+      - "(Prereq: MPA 305 )"
   MPA-370:
     code: MPA 370
     title: Acoustic Composition
@@ -795,7 +795,7 @@ courses:
       - anyOf:
           - courseId: MPA-100
     prerequisiteNotes:
-      - "[(Prereq: MPA 100   ) or (Instructor Consent)]"
+      - "[(Prereq: MPA 100 ) or (Instructor Consent)]"
   MPA-371:
     code: MPA 371
     title: Composition Seminar
@@ -826,7 +826,7 @@ courses:
     prerequisites:
       - courseId: MPA-100
     prerequisiteNotes:
-      - "(Prereq: MPA 100   )"
+      - "(Prereq: MPA 100 )"
   MPA-373:
     code: MPA 373
     title: Advanced Chromatic Theory
@@ -865,7 +865,7 @@ courses:
     prerequisites:
       - courseId: MPA-100
     prerequisiteNotes:
-      - "(Prereq: MPA 100   )"
+      - "(Prereq: MPA 100 )"
   MPA-390:
     code: MPA 390
     title: Musical Theater Production
@@ -921,7 +921,7 @@ courses:
       - anyOf:
           - courseId: MPA-100
     prerequisiteNotes:
-      - "[(Prereq; MPA 100   ) or (Instructor Consent)]"
+      - "[(Prereq; MPA 100 ) or (Instructor Consent)]"
   MPA-401:
     code: MPA 401
     title: Conducting
@@ -936,7 +936,7 @@ courses:
     prerequisites:
       - courseId: MPA-100
     prerequisiteNotes:
-      - "(Prereq: MPA 100   )"
+      - "(Prereq: MPA 100 )"
   MPA-402:
     code: MPA 402
     title: New Music Ensemble
@@ -952,7 +952,7 @@ courses:
       - anyOf:
           - courseId: MPA-100
     prerequisiteNotes:
-      - "[(Prereq: MPA 100   ) or (Instructor Consent)]"
+      - "[(Prereq: MPA 100 ) or (Instructor Consent)]"
   MPA-405:
     code: MPA 405
     title: Ensembles
@@ -981,7 +981,7 @@ courses:
           - courseId: MPA-307
           - courseId: MPA-308
     prerequisiteNotes:
-      - "(Prereq: MPA 307   or MPA 308   )"
+      - "(Prereq: MPA 307 or MPA 308 )"
   MPA-416:
     code: MPA 416
     title: Folklorico Ensemble
@@ -998,7 +998,7 @@ courses:
       - anyOf:
           - courseId: MPA-100
     prerequisiteNotes:
-      - "[(Prereq: MPA 100   ) or (Instructors Consent)]"
+      - "[(Prereq: MPA 100 ) or (Instructors Consent)]"
   MPA-417:
     code: MPA 417
     title: Jazz Ensemble
@@ -1015,7 +1015,7 @@ courses:
       - anyOf:
           - courseId: MPA-100
     prerequisiteNotes:
-      - "[(Prereq: MPA 100   ) or (Instructor Consent)]"
+      - "[(Prereq: MPA 100 ) or (Instructor Consent)]"
   MPA-418:
     code: MPA 418
     title: Live Sound
@@ -1030,7 +1030,7 @@ courses:
     prerequisites:
       - courseId: MPA-307
     prerequisiteNotes:
-      - "(Prereq: MPA 307   )"
+      - "(Prereq: MPA 307 )"
   MPA-419:
     code: MPA 419
     title: MIDI, Synthesis, & Digital Signal Processing
@@ -1045,7 +1045,7 @@ courses:
     prerequisites:
       - courseId: MPA-305
     prerequisiteNotes:
-      - "(Prereq: MPA 305   )"
+      - "(Prereq: MPA 305 )"
   MPA-475A:
     code: MPA 475A
     title: Senior Capstone I
@@ -1060,7 +1060,7 @@ courses:
     prerequisites:
       - courseId: MPA-300
     prerequisiteNotes:
-      - "[(Prereq: MPA 300   ) and (Senior Standing)]"
+      - "[(Prereq: MPA 300 ) and (Senior Standing)]"
   MPA-475B:
     code: MPA 475B
     title: Senior Capstone II
@@ -1076,7 +1076,7 @@ courses:
       - courseId: MPA-300
       - courseId: MPA-475A
     prerequisiteNotes:
-      - "[(Prereq: MPA 300   and MPA 475A   ) and (Senior Standing)]"
+      - "[(Prereq: MPA 300 and MPA 475A ) and (Senior Standing)]"
   MPA-495:
     code: MPA 495
     title: Special Topics

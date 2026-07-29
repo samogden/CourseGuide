@@ -30,12 +30,12 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: "We will examine policy & how it connects to local, national, & international contexts; analyze policy research & how it’s defined, theoretically framed, & studied; look at language policy at different levels: international, national, state, and local; explore special topics and application of language policy in our lives and research; pay attention to the impact of policy in education and the role of teachers in the language policy-making process. Course is taught bilingually (Spanish/English). (Crosslisted/Equivalent with ES 314   )"
+    description: "We will examine policy & how it connects to local, national, & international contexts; analyze policy research & how it’s defined, theoretically framed, & studied; look at language policy at different levels: international, national, state, and local; explore special topics and application of language policy in our lives and research; pay attention to the impact of policy in education and the role of teachers in the language policy-making process. Course is taught bilingually (Spanish/English). (Crosslisted/Equivalent with ES 314 )"
     offered:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   ED-374:
     code: ED 374
     title: PE for Elem Sch Child
@@ -97,7 +97,7 @@ courses:
           - courseId: ED-538
           - courseId: ED-538
     prerequisiteNotes:
-      - "[(Prereq: ED 538   ) or (Coreq: ED 538   )]"
+      - "[(Prereq: ED 538 ) or (Coreq: ED 538 )]"
   ED-540:
     code: ED 540
     title: Science Methods
@@ -148,7 +148,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: "Reading & Writing Strategies for Monolingual & Bilingual Learners: This course for the Reading Certificate will continue the foundation gained in MAE 630   &nbsp;and will further develop candidates’ skills in curriculum and evidence-based teaching methods required to create self-sufficient and independent readers from elementary school through high school."
+    description: "Reading & Writing Strategies for Monolingual & Bilingual Learners: This course for the Reading Certificate will continue the foundation gained in MAE 630 &nbsp;and will further develop candidates’ skills in curriculum and evidence-based teaching methods required to create self-sufficient and independent readers from elementary school through high school."
     offered:
       availability: periodic
   ED-592:
@@ -206,7 +206,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: ED 601A   )"
+      - "(Coreq: ED 601A )"
   ED-601A:
     code: ED 601A
     title: Stage1 Elem Teaching Seminar
@@ -220,7 +220,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: ED 601   )"
+      - "(Coreq: ED 601 )"
   ED-602:
     code: ED 602
     title: Stg I Stdnt Teaching Sem
@@ -246,7 +246,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: ED 603A   ) and (Department Consent Required)"
+      - "(Coreq: ED 603A ) and (Department Consent Required)"
   ED-603A:
     code: ED 603A
     title: Stage2 Elem Teaching Seminar
@@ -264,7 +264,7 @@ courses:
       - courseId: ED-601A
       - courseId: ED-603
     prerequisiteNotes:
-      - "[(Prereq: ED 601   and ED 601A   ) and (Coreq: ED 603   )]"
+      - "[(Prereq: ED 601 and ED 601A ) and (Coreq: ED 603 )]"
   ED-604:
     code: ED 604
     title: Stg II Stdnt Teaching Sem
@@ -309,7 +309,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Coreq: ED 624   )"
+      - "(Coreq: ED 624 )"
   ED-605A:
     code: ED 605A
     title: "Secondary Curriculum & Instruction: Science"
@@ -326,7 +326,7 @@ courses:
       - courseId: ED-628
       - courseId: ED-624
     prerequisiteNotes:
-      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 624 ]"
+      - "[(Prereq: ED 607 and ED 628 ) and (Coreq: ED 624 ]"
   ED-605B:
     code: ED 605B
     title: "Secondary Curriculum and Instruction: Math"
@@ -343,7 +343,7 @@ courses:
       - courseId: ED-628
       - courseId: ED-624
     prerequisiteNotes:
-      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 624   )]"
+      - "[(Prereq: ED 607 and ED 628 ) and (Coreq: ED 624 )]"
   ED-605C:
     code: ED 605C
     title: "Secondary Curriculum and Instruction: World Language"
@@ -360,7 +360,7 @@ courses:
       - courseId: ED-628
       - courseId: ED-624
     prerequisiteNotes:
-      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 624   )]"
+      - "[(Prereq: ED 607 and ED 628 ) and (Coreq: ED 624 )]"
   ED-605D:
     code: ED 605D
     title: "Secondary Curriculum and Instruction: Social Science"
@@ -377,7 +377,7 @@ courses:
       - courseId: ED-628
       - courseId: ED-624
     prerequisiteNotes:
-      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 624   )]"
+      - "[(Prereq: ED 607 and ED 628 ) and (Coreq: ED 624 )]"
   ED-605E:
     code: ED 605E
     title: "Secondary Curriculum and Instruction: English"
@@ -394,7 +394,7 @@ courses:
       - courseId: ED-628
       - courseId: ED-624
     prerequisiteNotes:
-      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 624   )]"
+      - "[(Prereq: ED 607 and ED 628 ) and (Coreq: ED 624 )]"
   ED-606:
     code: ED 606
     title: Secondry Curric & Inst Pt II
@@ -422,7 +422,7 @@ courses:
       - courseId: ED-628
       - courseId: ED-605A
     prerequisiteNotes:
-      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 605A   )]"
+      - "[(Prereq: ED 607 and ED 628 ) and (Coreq: ED 605A )]"
   ED-606B:
     code: ED 606B
     title: Secondary Curriculum and Instruction Pt II - Math
@@ -439,7 +439,7 @@ courses:
       - courseId: ED-628
       - courseId: ED-605B
     prerequisiteNotes:
-      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 605B   )]"
+      - "[(Prereq: ED 607 and ED 628 ) and (Coreq: ED 605B )]"
   ED-606C:
     code: ED 606C
     title: Secondary Curriculum and Instruction Pt II - World Languages
@@ -455,7 +455,7 @@ courses:
       - courseId: ED-628
       - courseId: ED-605C
     prerequisiteNotes:
-      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 605C   )]"
+      - "[(Prereq: ED 607 and ED 628 ) and (Coreq: ED 605C )]"
   ED-606D:
     code: ED 606D
     title: Secondary Curriculum and Instruction Pt II - History/Social Studies
@@ -472,7 +472,7 @@ courses:
       - courseId: ED-628
       - courseId: ED-605D
     prerequisiteNotes:
-      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 605D   )]"
+      - "[(Prereq: ED 607 and ED 628 ) and (Coreq: ED 605D )]"
   ED-606E:
     code: ED 606E
     title: Secondary Curriculum and Instruction Pt II - English
@@ -489,7 +489,7 @@ courses:
       - courseId: ED-628
       - courseId: ED-605E
     prerequisiteNotes:
-      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 605E   )]"
+      - "[(Prereq: ED 607 and ED 628 ) and (Coreq: ED 605E )]"
   ED-607:
     code: ED 607
     title: Adolescent Development & Learning
@@ -499,7 +499,7 @@ courses:
       maximum: 3
     description: This course is designed to provide the prospective secondary school teacher with foundations of educational psychology useful for teaching and essential skills of instructional planning. The course includes principles of teaching, learning and assessment, curriculum and curriculum theory, instructional planning, and cognitive psychology.
     prerequisiteNotes:
-      - "(Coreq: ED 628   )"
+      - "(Coreq: ED 628 )"
   ED-609:
     code: ED 609
     title: Math Methods
@@ -573,13 +573,13 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: Furthers study of approaches to the development of language and literacy at the elementary school level. Continues analysis of the theoretical foundations of literacy development and the skills and strategies for teaching and assessing reading and writing across the school curriculum. Includes four hours of classroom experience and two hours of fieldwork weekly for the first 10 weeks of an academic semester. Cross-listed with ED 627   .
+    description: Furthers study of approaches to the development of language and literacy at the elementary school level. Continues analysis of the theoretical foundations of literacy development and the skills and strategies for teaching and assessing reading and writing across the school curriculum. Includes four hours of classroom experience and two hours of fieldwork weekly for the first 10 weeks of an academic semester. Cross-listed with ED 627 .
     offered:
       availability: periodic
     prerequisites:
       - courseId: ED-616
     prerequisiteNotes:
-      - "(Prereq: ED 616   )"
+      - "(Prereq: ED 616 )"
   ED-619:
     code: ED 619
     title: Visual and Perf Arts C and I K8
@@ -617,7 +617,7 @@ courses:
       - courseId: ED-628
       - courseId: ED-624A
     prerequisiteNotes:
-      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 624A   )]"
+      - "[(Prereq: ED 607 and ED 628 ) and (Coreq: ED 624A )]"
   ED-624A:
     code: ED 624A
     title: Stage I Supervised Secondary Teaching Seminar
@@ -634,7 +634,7 @@ courses:
       - courseId: ED-628
       - courseId: ED-624
     prerequisiteNotes:
-      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 624   )]"
+      - "[(Prereq: ED 607 and ED 628 ) and (Coreq: ED 624 )]"
   ED-625:
     code: ED 625
     title: Stage II Secondary Supervised Teaching
@@ -662,7 +662,7 @@ courses:
           - courseId: ED-606E
           - courseId: ED-625A
     prerequisiteNotes:
-      - "[(Prereq: ED 624   and ED 624A   and (( ED 605A   and ED 606A   ) or ( ED 605B   and ED 606B   ) or ( ED 605C   and ED 606C   ) or ( ED 605D   and ED 606D   ) or ( ED 605E   and ED 606E   )) and (Coreq: ED 625A   )]"
+      - "[(Prereq: ED 624 and ED 624A and (( ED 605A and ED 606A ) or ( ED 605B and ED 606B ) or ( ED 605C and ED 606C ) or ( ED 605D and ED 606D ) or ( ED 605E and ED 606E )) and (Coreq: ED 625A )]"
   ED-625A:
     code: ED 625A
     title: Stage II Supervised Secondary Teaching Seminar
@@ -690,7 +690,7 @@ courses:
           - courseId: ED-606E
           - courseId: ED-625
     prerequisiteNotes:
-      - "[(Prereq: ED 624   and ED 624A   and (( ED 605A   and ED 606A   ) or ( ED 605B   and ED 606B   ) or ( ED 605C   and ED 606C   ) or ( ED 605D   and ED 606D   ) or ( ED 605E   and ED 606E   )) and (Coreq: ED 625   )]"
+      - "[(Prereq: ED 624 and ED 624A and (( ED 605A and ED 606A ) or ( ED 605B and ED 606B ) or ( ED 605C and ED 606C ) or ( ED 605D and ED 606D ) or ( ED 605E and ED 606E )) and (Coreq: ED 625 )]"
   ED-627:
     code: ED 627
     title: Secon Lang & Lit Develop
@@ -703,7 +703,7 @@ courses:
       - courseId: ED-607
       - courseId: ED-628
     prerequisiteNotes:
-      - "(Prereq: ED 607   and ED 628   )"
+      - "(Prereq: ED 607 and ED 628 )"
   ED-628:
     code: ED 628
     title: Secon Pedagogy Ling Diverse
@@ -713,7 +713,7 @@ courses:
       maximum: 3
     description: Examines issues and solutions involved in the education of students from diverse language backgrounds. Explores the theoretical foundations of language acquisition as well as strategies and approaches for working effectively with English learners.
     prerequisiteNotes:
-      - "(Coreq: ED 607   )"
+      - "(Coreq: ED 607 )"
   ED-629:
     code: ED 629
     title: Culture and Education of Latino Students
@@ -786,7 +786,7 @@ courses:
       - courseId: ED-607
       - courseId: ED-628
     prerequisiteNotes:
-      - "(Prereq: ED 607   and ED 628   )"
+      - "(Prereq: ED 607 and ED 628 )"
   ED-644:
     code: ED 644
     title: Supervised Teach & Related Top

@@ -14,7 +14,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: PHYS 121L   )"
+      - "(Coreq: PHYS 121L )"
   PHYS-121L:
     code: PHYS 121L
     title: Integrated Phy Science Lab
@@ -22,13 +22,13 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: Required lab course for PHYS 121   . Lab course fee may be charged.
+    description: Required lab course for PHYS 121 . Lab course fee may be charged.
     offered:
       terms:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: PHYS 121   )"
+      - "(Coreq: PHYS 121 )"
   PHYS-195:
     code: PHYS 195
     title: Special Topics
@@ -53,7 +53,7 @@ courses:
     prerequisites:
       - courseId: MATH-150
     prerequisiteNotes:
-      - "(Prereq: MATH 150   )"
+      - "(Prereq: MATH 150 )"
   PHYS-210:
     code: PHYS 210
     title: Physics for Engineers II
@@ -70,7 +70,7 @@ courses:
           - courseId: PHYS-205
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: PHYS 205   with C- or better)"
+      - "(Prereq: PHYS 205 with C- or better)"
   PHYS-220:
     code: PHYS 220
     title: Physics I
@@ -93,7 +93,7 @@ courses:
               - courseId: MATH-150
                 minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CHEM 110   and ( MATH 130   or MATH 150   ) with a C- or better)"
+      - "(Prereq: CHEM 110 and ( MATH 130 or MATH 150 ) with a C- or better)"
   PHYS-221:
     code: PHYS 221
     title: Physics II
@@ -115,7 +115,7 @@ courses:
           - courseId: PHYS-220
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 130   or MATH 150   ) and PHYS 220   with a C- or better)"
+      - "(Prereq: MATH 130 or MATH 150 ) and PHYS 220 with a C- or better)"
   PHYS-395:
     code: PHYS 395
     title: Special Topics

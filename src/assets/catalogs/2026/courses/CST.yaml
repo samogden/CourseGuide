@@ -56,7 +56,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: CST 202L   )"
+      - "(Coreq: CST 202L )"
   CST-202L:
     code: CST 202L
     title: Drawing for Digital Media Lab
@@ -64,7 +64,7 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: "Drawing for Digital Media Lab: This lab is offered as a co-requisite with the CST 202   lecture section. Students will use studio and digital tools to complete projects that relate directly to the lecture content. Students are expected to be comfortable with studio drawing tools as well as digital image software and have an ability to functionally adapt to new software. Students must take the lab during the same semester as the lecture. Students are expected to supply their own studio drawing materials, such as pencils, tablets of drawing paper, etc."
+    description: "Drawing for Digital Media Lab: This lab is offered as a co-requisite with the CST 202 lecture section. Students will use studio and digital tools to complete projects that relate directly to the lecture content. Students are expected to be comfortable with studio drawing tools as well as digital image software and have an ability to functionally adapt to new software. Students must take the lab during the same semester as the lecture. Students are expected to supply their own studio drawing materials, such as pencils, tablets of drawing paper, etc."
     offered:
       terms:
         - fall
@@ -143,7 +143,7 @@ courses:
           - courseId: CST-201
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 201   with a C- or better)"
+      - "(Prereq: CST 201 with a C- or better)"
   CST-230:
     code: CST 230
     title: Media Tools II
@@ -160,7 +160,7 @@ courses:
       - anyOf:
           - courseId: CST-201
     prerequisiteNotes:
-      - "(Prereq: CST 201   or equivalent)"
+      - "(Prereq: CST 201 or equivalent)"
   CST-231:
     code: CST 231
     title: Problem Solving/Programming
@@ -213,7 +213,7 @@ courses:
           - courseId: MATH-170
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 231   and MATH 170   with a C- or better)"
+      - "(Prereq: CST 231 and MATH 170 with a C- or better)"
   CST-238:
     code: CST 238
     title: Introduction to Data Structures
@@ -236,7 +236,7 @@ courses:
               - courseId: MATH-150
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: CST 231)   and (Coreq or Prereq: MATH 130   or MATH 150   ) with a C- or better]"
+      - "[(Prereq: CST 231) and (Coreq or Prereq: MATH 130 or MATH 150 ) with a C- or better]"
   CST-251:
     code: CST 251
     title: Web Tools
@@ -266,7 +266,7 @@ courses:
           - courseId: CST-251
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 251   with a C- or better)"
+      - "(Prereq: CST 251 with a C- or better)"
   CST-263:
     code: CST 263
     title: Intro to Database Systems
@@ -338,7 +338,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   CST-302:
     code: CST 302
@@ -352,7 +352,7 @@ courses:
       terms:
         - spring
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
     minimumStanding: junior
   CST-304:
     code: CST 304
@@ -371,7 +371,7 @@ courses:
           - courseId: CST-227
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 227   with a C- or better)"
+      - "(Prereq: CST 227 with a C- or better)"
   CST-311:
     code: CST 311
     title: Introduction to Computer Networks
@@ -391,7 +391,7 @@ courses:
           - courseId: MATH-130
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 238   and MATH 130   with a C- or better)"
+      - "(Prereq: CST 238 and MATH 130 with a C- or better)"
   CST-312:
     code: CST 312
     title: Network Security
@@ -410,7 +410,7 @@ courses:
           - courseId: MATH-170
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 311   and MATH 170   with a C- or better)"
+      - "(Prereq: CST 311 and MATH 170 with a C- or better)"
   CST-315:
     code: CST 315
     title: Introduction to Cybersecurity
@@ -430,7 +430,7 @@ courses:
           - courseId: MATH-130
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 238   and MATH 130   with a C- or better)"
+      - "(Prereq: CST 238 and MATH 130 with a C- or better)"
   CST-316:
     code: CST 316
     title: Computing for Designers
@@ -454,7 +454,7 @@ courses:
       terms:
         - fall
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   CST-320:
     code: CST 320
     title: Intro to Digital Games
@@ -472,7 +472,7 @@ courses:
           - courseId: CST-238
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 238   with a C- or better)"
+      - "(Prereq: CST 238 with a C- or better)"
   CST-321:
     code: CST 321
     title: Game Design and Interactive Media I
@@ -489,7 +489,7 @@ courses:
           - courseId: CST-227
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 227   with a C- or better)"
+      - "(Prereq: CST 227 with a C- or better)"
   CST-322:
     code: CST 322
     title: Environment Modeling
@@ -517,7 +517,7 @@ courses:
           - courseId: CST-202
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 202   with a C- or better)"
+      - "(Prereq: CST 202 with a C- or better)"
   CST-325:
     code: CST 325
     title: Graphics Programming
@@ -537,7 +537,7 @@ courses:
           - courseId: MATH-130
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 238   and MATH 130   with a C- or better)"
+      - "(Prereq: CST 238 and MATH 130 with a C- or better)"
   CST-326:
     code: CST 326
     title: Game Development
@@ -554,7 +554,7 @@ courses:
           - courseId: CST-238
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 238   with a C- or better)"
+      - "(Prereq: CST 238 with a C- or better)"
   CST-327:
     code: CST 327
     title: Experimental Typography
@@ -571,7 +571,7 @@ courses:
           - courseId: CST-304
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 304   with a C- or better)"
+      - "(Prereq: CST 304 with a C- or better)"
   CST-328:
     code: CST 328
     title: Digital Art and Design
@@ -585,7 +585,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   CST-329:
     code: CST 329
     title: Reasoning with Logic
@@ -603,7 +603,7 @@ courses:
           - courseId: MATH-170
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( GE   Area 1A and 1B and 1C and 2) and ( MATH 170   ) with a C- or better)]"
+      - "[(Prereq: ( GE Area 1A and 1B and 1C and 2) and ( MATH 170 ) with a C- or better)]"
   CST-330:
     code: CST 330
     title: Media Tools II
@@ -620,7 +620,7 @@ courses:
       - anyOf:
           - courseId: CST-201
     prerequisiteNotes:
-      - "(Prereq: CST 201   or equivalent)"
+      - "(Prereq: CST 201 or equivalent)"
   CST-333:
     code: CST 333
     title: Topics In Object-Oriented Prog
@@ -635,7 +635,7 @@ courses:
           - courseId: CST-231
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 231   with a C- or better)"
+      - "(Prereq: CST 231 with a C- or better)"
   CST-334:
     code: CST 334
     title: Operating Systems
@@ -655,7 +655,7 @@ courses:
           - courseId: CST-238
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 237   and CST 238   with a C- or better)"
+      - "(Prereq: CST 237 and CST 238 with a C- or better)"
   CST-336:
     code: CST 336
     title: Internet Programming
@@ -673,7 +673,7 @@ courses:
           - courseId: CST-238
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 238   with a C- or better)"
+      - "(Prereq: CST 238 with a C- or better)"
   CST-337:
     code: CST 337
     title: Computer Architecture
@@ -693,7 +693,7 @@ courses:
           - courseId: MATH-170
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 231   and MATH 170   with a C- or better)"
+      - "(Prereq: CST 231 and MATH 170 with a C- or better)"
   CST-338:
     code: CST 338
     title: Software Design
@@ -716,7 +716,7 @@ courses:
               - courseId: MATH-150
                 minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 238   and ( MATH 130   or MATH 150   ) with a C- or better)"
+      - "(Prereq: CST 238 and ( MATH 130 or MATH 150 ) with a C- or better)"
   CST-341:
     code: CST 341
     title: Intro Instructional Design
@@ -744,7 +744,7 @@ courses:
           - courseId: CST-227
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 227   with a C- or better)"
+      - "(Prereq: CST 227 with a C- or better)"
   CST-346:
     code: CST 346
     title: Human-Computer Interaction
@@ -806,7 +806,7 @@ courses:
           - courseId: CST-251
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 251   with a C- or better)"
+      - "(Prereq: CST 251 with a C- or better)"
   CST-351:
     code: CST 351
     title: Web Design
@@ -825,7 +825,7 @@ courses:
           - courseId: CST-251
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 201   and CST 251   with a C- or better)"
+      - "(Prereq: CST 201 and CST 251 with a C- or better)"
   CST-352:
     code: CST 352
     title: Web Scripting
@@ -841,7 +841,7 @@ courses:
           - courseId: CST-252
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 252   with a C- or better)"
+      - "(Prereq: CST 252 with a C- or better)"
   CST-362S:
     code: CST 362S
     title: Technology & Communities SL
@@ -870,7 +870,7 @@ courses:
           - courseId: MATH-130
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 238   and MATH 130   with a C- or better)"
+      - "(Prereq: CST 238 and MATH 130 with a C- or better)"
   CST-370:
     code: CST 370
     title: Design and Analysis of Algorithms
@@ -890,7 +890,7 @@ courses:
           - courseId: MATH-170
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 238   and MATH 170   with a C- or better)"
+      - "(Prereq: CST 238 and MATH 170 with a C- or better)"
   CST-373:
     code: CST 373
     title: Ethics in Comm & Tech
@@ -917,7 +917,7 @@ courses:
           - courseId: CST-227
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 227   with a C- or better or (Instructor Consent)"
+      - "(Prereq: CST 227 with a C- or better or (Instructor Consent)"
   CST-377:
     code: CST 377
     title: Business of Design
@@ -934,7 +934,7 @@ courses:
           - courseId: CST-348
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 348   with a C- or better)"
+      - "(Prereq: CST 348 with a C- or better)"
   CST-380:
     code: CST 380
     title: Mobile and Ubiquitous Computing
@@ -951,7 +951,7 @@ courses:
           - courseId: CST-238
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 238   with a C- or better)"
+      - "(Prereq: CST 238 with a C- or better)"
   CST-381:
     code: CST 381
     title: Foundations of Data Science for AI
@@ -968,7 +968,7 @@ courses:
           - courseId: CST-319
           - courseId: BIO-380
     prerequisiteNotes:
-      - "(Prereq: CST 319   or BIO 380   )"
+      - "(Prereq: CST 319 or BIO 380 )"
   CST-383:
     code: CST 383
     title: Introduction to Data Science
@@ -1000,7 +1000,7 @@ courses:
                   - courseId: BUS-204
                     minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( CST 238   or BIO 380   or ( CST 319   and ( STAT 100   or STAT 250   or MATH 320   or BUS 204   )) with a C- or better]"
+      - "[Prereq: ( CST 238 or BIO 380 or ( CST 319 and ( STAT 100 or STAT 250 or MATH 320 or BUS 204 )) with a C- or better]"
   CST-390:
     code: CST 390
     title: Portfolio Development
@@ -1079,7 +1079,7 @@ courses:
           - courseId: CST-496
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: CST 404   or CST 421   or CST 451   with a C- or better or Instructor Consent) and (Coreq: CST 496   )]"
+      - "[(Prereq: CST 404 or CST 421 or CST 451 with a C- or better or Instructor Consent) and (Coreq: CST 496 )]"
   CST-401:
     code: CST 401
     title: Capstone Lab
@@ -1098,7 +1098,7 @@ courses:
           - courseId: CST-496
             minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: CST 400   with a C- or better and (Exclude Freshman and Sophomore and Junior) and (Coreq: CST 496   )]"
+      - "[Prereq: CST 400 with a C- or better and (Exclude Freshman and Sophomore and Junior) and (Coreq: CST 496 )]"
   CST-404:
     code: CST 404
     title: Publication Design
@@ -1115,7 +1115,7 @@ courses:
           - courseId: CST-304
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 304   with a C- or better)"
+      - "(Prereq: CST 304 with a C- or better)"
   CST-406:
     code: CST 406
     title: Graphic Identity
@@ -1132,7 +1132,7 @@ courses:
           - courseId: CST-304
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 304   with a C- or better)"
+      - "(Prereq: CST 304 with a C- or better)"
   CST-412:
     code: CST 412
     title: Network Administration
@@ -1149,7 +1149,7 @@ courses:
           - courseId: CST-311
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 311   with a C- or better)"
+      - "(Prereq: CST 311 with a C- or better)"
   CST-415:
     code: CST 415
     title: Advanced Cybersecurity
@@ -1168,7 +1168,7 @@ courses:
           - courseId: CST-315
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 311   and CST 315   with a C- or better)"
+      - "(Prereq: CST 311 and CST 315 with a C- or better)"
   CST-421:
     code: CST 421
     title: Game Design & Interactive Media II
@@ -1185,7 +1185,7 @@ courses:
           - courseId: CST-321
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 321   with a C- or better)"
+      - "(Prereq: CST 321 with a C- or better)"
   CST-422:
     code: CST 422
     title: Level Design
@@ -1202,7 +1202,7 @@ courses:
           - courseId: CST-322
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 322   with a C- or better)"
+      - "(Prereq: CST 322 with a C- or better)"
   CST-423:
     code: CST 423
     title: Character Animation
@@ -1219,7 +1219,7 @@ courses:
           - courseId: CST-323
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 323   with a C- or better)"
+      - "(Prereq: CST 323 with a C- or better)"
   CST-426:
     code: CST 426
     title: Advanced Game Development
@@ -1237,7 +1237,7 @@ courses:
           - courseId: CST-326
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 325   and CST 326   with a C- or better)"
+      - "(Prereq: CST 325 and CST 326 with a C- or better)"
   CST-438:
     code: CST 438
     title: Software Engineering
@@ -1255,7 +1255,7 @@ courses:
           - courseId: CST-338
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 338   with a C- or better)"
+      - "(Prereq: CST 338 with a C- or better)"
   CST-446:
     code: CST 446
     title: User Research and Experience Design
@@ -1275,7 +1275,7 @@ courses:
           - courseId: CST-348
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 346   and CST 348   with a C- or better)"
+      - "(Prereq: CST 346 and CST 348 with a C- or better)"
   CST-451:
     code: CST 451
     title: Web Production
@@ -1283,7 +1283,7 @@ courses:
     credits:
       minimum: 4
       maximum: 4
-    description: Web-based design and project management continuing the development of skills and techniques introduced in CST 351   . Includes integration of current web technologies and techniques to produce a fully functional website for a client. Topics include Content Management Systems, Project Management, and Usability and Testing.
+    description: Web-based design and project management continuing the development of skills and techniques introduced in CST 351 . Includes integration of current web technologies and techniques to produce a fully functional website for a client. Topics include Content Management Systems, Project Management, and Usability and Testing.
     offered:
       availability: periodic
     prerequisites:
@@ -1291,7 +1291,7 @@ courses:
           - courseId: CST-351
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 351   with a C- or better)"
+      - "(Prereq: CST 351 with a C- or better)"
   CST-461S:
     code: CST 461S
     title: Communication Design Service Learning
@@ -1310,7 +1310,7 @@ courses:
           - courseId: CST-421
           - courseId: CST-404
     prerequisiteNotes:
-      - "[Prereq: (Junior or Senior Standing) and (Coreq: CST 451   or CST 421   or CST 404   )]"
+      - "[Prereq: (Junior or Senior Standing) and (Coreq: CST 451 or CST 421 or CST 404 )]"
     minimumStanding: junior
   CST-462S:
     code: CST 462S
@@ -1325,7 +1325,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   CST-463:
     code: CST 463
     title: Advanced Machine Learning
@@ -1342,7 +1342,7 @@ courses:
           - courseId: CST-383
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 383   with a C- or better)"
+      - "(Prereq: CST 383 with a C- or better)"
   CST-481:
     code: CST 481
     title: Introduction to Deep Learning
@@ -1358,7 +1358,7 @@ courses:
       - anyOf:
           - courseId: CST-381
     prerequisiteNotes:
-      - "(Prereq: CST 381   or equivalent)"
+      - "(Prereq: CST 381 or equivalent)"
   CST-482:
     code: CST 482
     title: AI in Practice
@@ -1376,7 +1376,7 @@ courses:
           - courseId: CST-381
           - courseId: CST-481
     prerequisiteNotes:
-      - "[(Prereq: CST 381   ) and (Prereq or Coreq: CST 481   )]"
+      - "[(Prereq: CST 381 ) and (Prereq or Coreq: CST 481 )]"
   CST-489:
     code: CST 489
     title: Capstone Project Planning
@@ -1431,7 +1431,7 @@ courses:
     credits:
       minimum: 1
       maximum: 4
-    description: Working closely with faculty advisor(s), students finish their capstone project independent of the regular CST 400   / CST 401   sequence. The Capstone Independent Study is offered when there is a compelling reason the student can not participate the CST 400   / CST 401   class.
+    description: Working closely with faculty advisor(s), students finish their capstone project independent of the regular CST 400 / CST 401 sequence. The Capstone Independent Study is offered when there is a compelling reason the student can not participate the CST 400 / CST 401 class.
     offered:
       terms:
         - fall
@@ -1455,7 +1455,7 @@ courses:
           - courseId: CST-348
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: CST 346   and CST 348   with a C- or better)"
+      - "(Prereq: CST 346 and CST 348 with a C- or better)"
   CST-499:
     code: CST 499
     title: Computer Science Capstone
@@ -1475,7 +1475,7 @@ courses:
               - courseId: CST-334
               - courseId: CST-370
     prerequisiteNotes:
-      - "(Prereq: CST 349   and ( CST 334   or CST 370   ))"
+      - "(Prereq: CST 349 and ( CST 334 or CST 370 ))"
   CST-500:
     code: CST 500
     title: Graduate Proseminar

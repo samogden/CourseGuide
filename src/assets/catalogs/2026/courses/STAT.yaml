@@ -8,13 +8,13 @@ courses:
     credits:
       minimum: 1
       maximum: 1
-    description: This co-requisite course contains topics which directly support the content in STAT 100   . It contains support for mathematical skills and knowledge used in STAT 100   , supplemental instruction on STAT 100   content, and study skill development.
+    description: This co-requisite course contains topics which directly support the content in STAT 100 . It contains support for mathematical skills and knowledge used in STAT 100 , supplemental instruction on STAT 100 content, and study skill development.
     offered:
       terms:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: STAT 100   )"
+      - "(Coreq: STAT 100 )"
   STAT-100:
     code: STAT 100
     title: Introduction to Statistics
@@ -76,7 +76,7 @@ courses:
           - courseId: MATH-150
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 150   with a C- or better)"
+      - "(Prereq: MATH 150 with a C- or better)"
   STAT-250D:
     code: STAT 250D
     title: Support Course for STAT 250
@@ -90,7 +90,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Coreq: STAT 250   )"
+      - "(Coreq: STAT 250 )"
   STAT-294:
     code: STAT 294
     title: Statistics and Data Science Introductory Internship
@@ -150,7 +150,7 @@ courses:
               - courseId: BUS-204
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2) and ( MATH 320   or STAT 250   or STAT 100   or BUS 204   ) with a C- or better]"
+      - "[Prereq: ( GE Area 1A and 1B and 1C and 2) and ( MATH 320 or STAT 250 or STAT 100 or BUS 204 ) with a C- or better]"
   STAT-320:
     code: STAT 320
     title: Nonparametric Statistics
@@ -173,7 +173,7 @@ courses:
           - courseId: BUS-204
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: STAT 100   or STAT 250   or MATH 320   or BUS 204   with a C- or better)"
+      - "(Prereq: STAT 100 or STAT 250 or MATH 320 or BUS 204 with a C- or better)"
   STAT-325:
     code: STAT 325
     title: Experimental Design and Analysis
@@ -196,7 +196,7 @@ courses:
           - courseId: BUS-204
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 320   or STAT 250   or STAT 100   or BUS 204   with a C- or better)"
+      - "(Prereq: MATH 320 or STAT 250 or STAT 100 or BUS 204 with a C- or better)"
   STAT-330:
     code: STAT 330
     title: Sampling Design and Analysis
@@ -219,7 +219,7 @@ courses:
           - courseId: BUS-204
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 320   or STAT 250   or STAT 100   or BUS 204   with a C- or better)"
+      - "(Prereq: MATH 320 or STAT 250 or STAT 100 or BUS 204 with a C- or better)"
   STAT-335:
     code: STAT 335
     title: Data Simulation and Analysis
@@ -242,7 +242,7 @@ courses:
           - courseId: BUS-204
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: MATH 320   or STAT 250   or STAT 100   or BUS 204   with a C- or better)"
+      - "(Prereq: MATH 320 or STAT 250 or STAT 100 or BUS 204 with a C- or better)"
   STAT-394:
     code: STAT 394
     title: Statistics and Data Science Intermediate Internship
@@ -297,7 +297,7 @@ courses:
           - courseId: STAT-410
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( MATH 300   with a C- or better) and (Senior Standing)) and (Prereq or Coreq: STAT 410   with a C- or better)]"
+      - "[(Prereq: ( MATH 300 with a C- or better) and (Senior Standing)) and (Prereq or Coreq: STAT 410 with a C- or better)]"
   STAT-410:
     code: STAT 410
     title: Generalized Linear Models
@@ -326,7 +326,7 @@ courses:
           - courseId: STAT-335
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: STAT 250   or MATH 320   or STAT 310   or STAT 320   or STAT 325   or STAT 330   or STAT 335   with a C- or better)"
+      - "(Prereq: STAT 250 or MATH 320 or STAT 310 or STAT 320 or STAT 325 or STAT 330 or STAT 335 with a C- or better)"
   STAT-420:
     code: STAT 420
     title: Statistical Theory I
@@ -352,7 +352,7 @@ courses:
               - courseId: STAT-250
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( MATH 320   or STAT 250   ) and ( MATH 170   or MATH 322   ) and MATH 250   ) with a C- or better]"
+      - "[(Prereq: ( MATH 320 or STAT 250 ) and ( MATH 170 or MATH 322 ) and MATH 250 ) with a C- or better]"
   STAT-421:
     code: STAT 421
     title: Statistical Theory II
@@ -374,7 +374,7 @@ courses:
               - courseId: MATH-230
                 minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: STAT 420   and ( MATH 265   or MATH 230   ) with a C- or better)"
+      - "(Prereq: STAT 420 and ( MATH 265 or MATH 230 ) with a C- or better)"
   STAT-440:
     code: STAT 440
     title: Bayesian Inference
@@ -399,7 +399,7 @@ courses:
               - courseId: BUS-204
                 minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( MATH 151   ) and ( MATH 320   or STAT 250   or STAT 100   or BUS 204   ) with a C- or better)]"
+      - "[(Prereq: ( MATH 151 ) and ( MATH 320 or STAT 250 or STAT 100 or BUS 204 ) with a C- or better)]"
   STAT-494:
     code: STAT 494
     title: Statistics and Data Science Advanced Internship

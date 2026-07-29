@@ -34,4 +34,4 @@ courses:
           - courseId: GS-300
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: EGS 300   or HCOM 300   or GS 300   with a C- or better)"
+      - "(Prereq: EGS 300 or HCOM 300 or GS 300 with a C- or better)"

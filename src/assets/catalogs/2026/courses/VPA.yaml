@@ -149,7 +149,7 @@ courses:
     prerequisites:
       - courseId: VPA-215
     prerequisiteNotes:
-      - "(Prereq: VPA 215   )"
+      - "(Prereq: VPA 215 )"
   VPA-285:
     code: VPA 285
     title: Intro to Photojournalism
@@ -269,7 +269,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   VPA-309:
     code: VPA 309
     title: Materials and Methods
@@ -288,7 +288,7 @@ courses:
           - courseId: VPA-405
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( VPA 300   with a C- or better) and (Must be a VPA major in Senior Standing)) and (Co-req: VPA 405   )]"
+      - "[(Prereq: ( VPA 300 with a C- or better) and (Must be a VPA major in Senior Standing)) and (Co-req: VPA 405 )]"
   VPA-310:
     code: VPA 310
     title: Mixed Media
@@ -335,7 +335,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[Prereq: (Junior or Senior Standing) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+      - "[Prereq: (Junior or Senior Standing) and ( GE Area 1A and 1B and 1C with a C- or better)]"
     minimumStanding: junior
   VPA-315:
     code: VPA 315
@@ -433,7 +433,7 @@ courses:
           - courseId: VPA-229
           - courseId: VPA-310
     prerequisiteNotes:
-      - "[Prereq: ( VPA 229   and VPA 310   ) and (Junior or Senior Standing)]"
+      - "[Prereq: ( VPA 229 and VPA 310 ) and (Junior or Senior Standing)]"
     minimumStanding: junior
   VPA-337:
     code: VPA 337
@@ -452,7 +452,7 @@ courses:
               - courseId: VPA-306S
               - courseId: VPA-320S
     prerequisiteNotes:
-      - "[Prereq: ( VPA 306S   or VPA 320S   ) and (Junior or Senior Standing)]"
+      - "[Prereq: ( VPA 306S or VPA 320S ) and (Junior or Senior Standing)]"
     minimumStanding: junior
   VPA-347:
     code: VPA 347
@@ -545,7 +545,7 @@ courses:
           - courseId: VPA-405A
           - courseId: VPA-405B
     prerequisiteNotes:
-      - "[(Prereq: (Senior Standing) and (Department Consent Required)) and (Coreq: VPA 405A   or VPA 405B   )]"
+      - "[(Prereq: (Senior Standing) and (Department Consent Required)) and (Coreq: VPA 405A or VPA 405B )]"
   VPA-401:
     code: VPA 401
     title: Installation & Performance Art
@@ -588,7 +588,7 @@ courses:
           - courseId: VPA-398
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( VPA 300   with a C- or better) and (Coreq or Prereq: VPA 309   ) and (Coreq: VPA 398   ) and (VPA Majors in Senior Standing) and (Department Consent Required)]"
+      - "[(Prereq: ( VPA 300 with a C- or better) and (Coreq or Prereq: VPA 309 ) and (Coreq: VPA 398 ) and (VPA Majors in Senior Standing) and (Department Consent Required)]"
   VPA-405B:
     code: VPA 405B
     title: Senior Capstone II
@@ -607,7 +607,7 @@ courses:
           - courseId: VPA-398
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: ( VPA 405A   with a C- or better) and (Coreq: VPA 398   ) and (VPA Majors in Senior Standing)] and (Department Consent Required)"
+      - "[(Prereq: ( VPA 405A with a C- or better) and (Coreq: VPA 398 ) and (VPA Majors in Senior Standing)] and (Department Consent Required)"
   VPA-495:
     code: VPA 495
     title: Special Topics

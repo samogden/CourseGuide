@@ -26,7 +26,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[(Prereq: GE   Areas 1A and 1B and 1C and 2) and (IDS majors only)]"
+      - "[(Prereq: GE Areas 1A and 1B and 1C and 2) and (IDS majors only)]"
   IDS-313S:
     code: IDS 313S
     title: Interdisciplinary Studies Service Learning
@@ -40,7 +40,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "[(Prereq: GE   Areas 1A and 1B and 1C and 2) and (IDS Majors Only)]"
+      - "[(Prereq: GE Areas 1A and 1B and 1C and 2) and (IDS Majors Only)]"
   IDS-395:
     code: IDS 395
     title: Special Topics
@@ -80,4 +80,4 @@ courses:
     prerequisites:
       - courseId: IDS-300
     prerequisiteNotes:
-      - "[(Prereq: GE   Areas 1A and 1B and 1C and 2) and ( IDS 300   ) and (IDS majors only)]"
+      - "[(Prereq: GE Areas 1A and 1B and 1C and 2) and ( IDS 300 ) and (IDS majors only)]"

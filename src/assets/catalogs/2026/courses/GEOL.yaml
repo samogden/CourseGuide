@@ -52,7 +52,7 @@ courses:
         - fall
         - spring
     prerequisiteNotes:
-      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
   GEOL-360:
     code: GEOL 360
     title: Geomorphic Systems
@@ -71,7 +71,7 @@ courses:
           - courseId: STAT-250
             minimumGrade: C-
     prerequisiteNotes:
-      - "[(Prereq: GEOL 260   and ( GE   Area 1A and 1B and 1C and 2) with a C- or better)) and (Prereq or Coreq: STAT 250   with a C- or better)]"
+      - "[(Prereq: GEOL 260 and ( GE Area 1A and 1B and 1C and 2) with a C- or better)) and (Prereq or Coreq: STAT 250 with a C- or better)]"
   GEOL-460:
     code: GEOL 460
     title: River Hydrology, Assmt&Monitor
@@ -88,4 +88,4 @@ courses:
           - courseId: GEOL-360
             minimumGrade: C-
     prerequisiteNotes:
-      - "(Prereq: GEOL 360   with a C- or better)"
+      - "(Prereq: GEOL 360 with a C- or better)"
