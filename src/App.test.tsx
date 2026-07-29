@@ -49,6 +49,25 @@ describe('planner', () => {
     expect(screen.getByRole('button', { name: /check math 130 readiness/i })).toBeInTheDocument()
   })
 
+  it('keeps the compacted plan available after direct MATH 150 placement with a minor', () => {
+    render(<App />)
+    fireEvent.change(screen.getByLabelText('Minor'), { target: { value: 'biology' } })
+    fireEvent.click(screen.getByRole('button', { name: /MATH 130 or MATH 150/i }))
+    fireEvent.click(screen.getByRole('button', { name: 'Select' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Compacted' }))
+
+    expect(screen.getByLabelText('Compacted schedule settings')).toBeInTheDocument()
+  })
+
+  it('keeps the compacted plan available when a completed MATH 150 implies direct placement with a minor', () => {
+    localStorage.setItem('courseguide-completed-v1', '["course:MATH-150"]')
+    render(<App />)
+    fireEvent.change(screen.getByLabelText('Minor'), { target: { value: 'biology' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Compacted' }))
+
+    expect(screen.getByLabelText('Compacted schedule settings')).toBeInTheDocument()
+  })
+
   it('offers the MATH 130 readiness self-evaluation from the math-placement choice', () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: /MATH 130 or MATH 150/i }))

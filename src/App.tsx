@@ -403,15 +403,25 @@ function App() {
   )
   const selectedMathPlacementCourse = activeTargetCourses.get('slot:freshman-math-placement-choice')
   const usesMathPlacementChoice = activeProgramId === 'bs-computer-science' && degreeType === 'bs'
+  // A completed MATH 150 is equivalent to selecting the direct-placement
+  // route, even when it was recorded from the original spring plan block.
+  const completedMath150 = completed.has('course:MATH-150')
+  const directMath150Placement = usesMathPlacementChoice && (selectedMathPlacementCourse === 'MATH-150' || completedMath150)
   const activePlan = usesMathPlacementChoice
-    ? mathPlacementDisplayPlan(basePlan, selectedMathPlacementCourse === 'MATH-150')
+    ? mathPlacementDisplayPlan(basePlan, directMath150Placement)
     : basePlan
   // Resolve the displayed choice to the recommended MATH 130 route unless
   // the student explicitly chooses direct MATH 150 placement.
   const effectiveTargetCourses = new Map(activeTargetCourses)
   if (usesMathPlacementChoice && !selectedMathPlacementCourse) {
-    effectiveTargetCourses.set('slot:freshman-math-placement-choice', 'MATH-130')
+    effectiveTargetCourses.set('slot:freshman-math-placement-choice', directMath150Placement ? 'MATH-150' : 'MATH-130')
   }
+  // Direct MATH 150 placement represents the same preparation competency as
+  // MATH 130 for downstream scheduling (notably MATH 170), even though MATH
+  // 130 is omitted from the displayed plan.
+  const assumedPlanCourseIds = new Set<string>(degreeType === 'ast-to-bs' ? transferAssumedCourseIds : [])
+  if (directMath150Placement) assumedPlanCourseIds.add('MATH-130')
+  const assumedPlanCourses = assumedPlanCourseIds.size > 0 ? { assumedCompletedCourseIds: assumedPlanCourseIds } : {}
   const planCredits = summarizePlanCredits(activePlan)
   const requirementSelectionKeyForSlot = (slot: PlanSlot): string | null => {
     const scope = targetScopeForSlot(slot, activeConcentrationId, activeMinorId)
@@ -432,7 +442,7 @@ function App() {
     includeProgramRequirements: activeRoadmap?.status === 'derived',
     reservedCourseIds: reservedRequirementCourseIds,
     targetCourses: effectiveTargetCourses,
-    ...(degreeType === 'ast-to-bs' ? { assumedCompletedCourseIds: transferAssumedCourseIds } : {}),
+    ...assumedPlanCourses,
   })
   const registrationPlan = buildRegistrationPlan(activePlan, completed, {
     programId: activeProgramId,
@@ -443,7 +453,7 @@ function App() {
     reservedCourseIds: reservedRequirementCourseIds,
     targetCourses: effectiveTargetCourses,
     currentTerm: registrationTerm,
-    ...(degreeType === 'ast-to-bs' ? { assumedCompletedCourseIds: transferAssumedCourseIds } : {}),
+    ...assumedPlanCourses,
   })
   const compactedSchedule = buildCompactedSchedule(activePlan, completed, compactedCreditLimit, degreeType, {
     programId: activeProgramId,
@@ -453,7 +463,7 @@ function App() {
     includeProgramRequirements: activeRoadmap?.status === 'derived',
     reservedCourseIds: reservedRequirementCourseIds,
     targetCourses: effectiveTargetCourses,
-    ...(degreeType === 'ast-to-bs' ? { assumedCompletedCourseIds: transferAssumedCourseIds } : {}),
+    ...assumedPlanCourses,
   })
   const compactedYears = Array.from(new Set(compactedSchedule.terms.map(term => term.year))).map(year => ({
     year,
