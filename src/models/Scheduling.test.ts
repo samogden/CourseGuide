@@ -18,6 +18,17 @@ describe('suggested scheduling', () => {
     expect(thirdFall?.slots.map(progressKey)).toContain('course:CST-349')
   })
 
+  it('uses course-number bands as a placement floor in derived roadmaps', () => {
+    const biologyPlan = planForDegreeType('bs', 'bs-biology', '2026')
+    const termIndexByCourse = new Map(biologyPlan.years.flatMap(year => year.terms).flatMap((term, index) =>
+      term.slots.filter(slot => slot.type === 'course').map(slot => [slot.courseId, index] as const),
+    ))
+
+    expect(termIndexByCourse.get('CHEM-110')).toBe(0)
+    expect(termIndexByCourse.get('BIO-210')).toBeGreaterThanOrEqual(2)
+    expect(termIndexByCourse.get('BIO-311')).toBeGreaterThanOrEqual(4)
+  })
+
   it('keeps derived programs usable when prerequisites are outside their program requirements', () => {
     const biologyPlan = planForDegreeType('bs', 'bs-biology', '2026')
 

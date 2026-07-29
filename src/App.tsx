@@ -21,6 +21,17 @@ const programStorageKey = 'courseguide-program-v1'
 const requirementCoursesStorageKey = 'courseguide-requirement-courses-v1'
 const RegistrationPlanner = lazy(() => import('./components/RegistrationPlanner').then(module => ({ default: module.RegistrationPlanner })))
 
+/** Sort program names by discipline, not their B.A./B.S. credential prefix. */
+function programSortTitle(title: string): string {
+  return title.replace(/^B\.[AS]\.?(?:\s+|$)/i, '').trim()
+}
+
+/** Normalizes inconsistent source punctuation and presents the credential after the discipline. */
+function displayProgramTitle(title: string): string {
+  const match = title.match(/^B\.([AS])\.?(?:\s+)(.+)$/i)
+  return match ? `${match[2]}, B.${match[1].toUpperCase()}.` : title
+}
+
 function targetCourseKey(catalogVersion: string, programId: string, degreeType: DegreeType, scope: string, slotKey: string): string {
   return `${catalogVersion}/${programId}/${degreeType}/${scope}:${slotKey}`
 }
@@ -345,6 +356,7 @@ function App() {
   const activeProgramId = activeCatalog.programs[selectedProgramId] ? selectedProgramId : Object.keys(activeCatalog.programs)[0] ?? 'bs-computer-science'
   const activeProgram = activeCatalog.programs[activeProgramId]
   const activeRoadmap = roadmapForProgram(activeProgramId, degreeType, selectedCatalogVersion)
+  const isAlphaRoadmap = activeRoadmap?.status === 'derived'
   const activeConcentrationId = selectedConcentration && activeProgram.concentrations[selectedConcentration] ? selectedConcentration : null
   const availableMinors = minorsForCatalog(selectedCatalogVersion)
   const activeMinorId = selectedMinor && availableMinors[selectedMinor] ? selectedMinor : null
@@ -480,9 +492,9 @@ function App() {
   }
 
   return (
-    <main className="planner">
+    <main className={`planner${isAlphaRoadmap ? ' is-alpha-roadmap' : ''}`}>
       <header className="planner-header">
-        <div><p className="eyebrow">{activeProgram.title}</p><h1>Curriculum planner</h1><p>Explore the suggested course sequence and mark completed coursework.</p></div>
+        <div><p className="eyebrow">{displayProgramTitle(activeProgram.title)}{isAlphaRoadmap ? ' · Alpha' : ''}</p><h1>Curriculum planner</h1><p>Explore the suggested course sequence and mark completed coursework.</p></div>
         <div className="header-actions">
           <button className="reset-button" type="button" onClick={resetPlanner}>Reset planner</button>
         </div>
@@ -518,8 +530,17 @@ function App() {
         <label className="catalog-picker">Major
           <select value={activeProgramId} aria-label="Major" onChange={event => setSelectedProgramId(event.target.value)}>
             {Object.entries(activeCatalog.programs)
-              .sort(([, left], [, right]) => left.title.localeCompare(right.title))
-              .map(([programId, program]) => <option key={programId} value={programId}>{program.title}</option>)}
+              .sort(([leftId, left], [rightId, right]) => {
+                const leftAlpha = roadmapForProgram(leftId, degreeType, selectedCatalogVersion)?.status === 'derived'
+                const rightAlpha = roadmapForProgram(rightId, degreeType, selectedCatalogVersion)?.status === 'derived'
+                return Number(leftAlpha) - Number(rightAlpha) ||
+                  programSortTitle(left.title).localeCompare(programSortTitle(right.title)) ||
+                  left.title.localeCompare(right.title)
+              })
+              .map(([programId, program]) => {
+                const isAlpha = roadmapForProgram(programId, degreeType, selectedCatalogVersion)?.status === 'derived'
+                return <option key={programId} value={programId}>{displayProgramTitle(program.title)}{isAlpha ? ' (Alpha)' : ''}</option>
+              })}
           </select>
         </label>
         <label className="catalog-picker">Minor
@@ -553,7 +574,7 @@ function App() {
       </section>
       {activeView === 'registration' && <Suspense fallback={<p className="planner-loading">Loading registration planner…</p>}><RegistrationPlanner plan={registrationPlan} currentTerm={registrationTerm} onCurrentTermChange={setRegistrationTerm} onCourseSelect={setSelectedSlot} /></Suspense>}
       {activeView === 'roadmap' && suggestedSchedule.suggestions.size > 0 && <section className="next-term" aria-live="polite"><strong>Suggested schedule:</strong> {suggestedSchedule.credits} credits. <strong>{remainingCredits} planned credits remain</strong> — about {semestersAtFifteen} semesters at 15 credits per term, or {semestersAtEighteen} at 18.</section>}
-      {activeRoadmap?.status === 'derived' && <section className="derived-roadmap-notice" aria-label="Derived roadmap notice"><strong>Planning estimate:</strong> This roadmap was generated from catalog requirements. Verify course sequencing with an advisor before registering.</section>}
+      {isAlphaRoadmap && <section className="derived-roadmap-notice" aria-label="Derived roadmap notice"><strong>Alpha planning estimate — not department-verified:</strong> This roadmap was generated from catalog requirements, prerequisite chains, and course-level placement rules. Verify course sequencing with an advisor before registering.</section>}
       {activeView === 'compacted' && <section className="compacted-controls" aria-label="Compacted schedule settings">
         <label htmlFor="compacted-credit-limit">Maximum credits per term <strong>{compactedCreditLimit}</strong></label>
         <input id="compacted-credit-limit" type="range" min="12" max="18" value={compactedCreditLimit} onChange={event => setCompactedCreditLimit(Number(event.target.value))} />

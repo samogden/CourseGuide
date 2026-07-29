@@ -184,6 +184,30 @@ describe('planner', () => {
     expect(localStorage.getItem('courseguide-additional-courses-v1')).toContain('ART 200')
   })
 
+  it('marks catalog-derived programs as Alpha and displays the stronger warning', () => {
+    render(<App />)
+    fireEvent.change(screen.getByLabelText('Major'), { target: { value: 'bs-biology' } })
+
+    expect(screen.getByLabelText('Major')).toHaveDisplayValue('Biology, B.S. (Alpha)')
+    expect(screen.getByText(/biology, b\.s\. · alpha/i)).toBeInTheDocument()
+    expect(screen.getByLabelText('Derived roadmap notice')).toHaveTextContent('Alpha planning estimate — not department-verified')
+    expect(document.querySelector('.planner')).toHaveClass('is-alpha-roadmap')
+  })
+
+  it('sorts verified majors first and Alpha majors by program name without degree prefixes', () => {
+    render(<App />)
+    const labels = Array.from((screen.getByLabelText('Major') as HTMLSelectElement).options).map(option => option.text)
+    const firstAlpha = labels.findIndex(label => label.endsWith('(Alpha)'))
+    const alphaLabels = labels.slice(firstAlpha)
+
+    expect(firstAlpha).toBeGreaterThan(0)
+    expect(labels).toContain('Computer Science, B.S.')
+    expect(labels).toContain('Accounting, B.S. (Alpha)')
+    expect(labels.slice(0, firstAlpha).every(label => !label.endsWith('(Alpha)'))).toBe(true)
+    expect(alphaLabels).toEqual([...alphaLabels].sort((left, right) =>
+      left.replace(/, B\.[AS]\. \(Alpha\)$/i, '').localeCompare(right.replace(/, B\.[AS]\. \(Alpha\)$/i, ''))))
+  })
+
   it('adds variable-credit coursework to a derived program requirement', () => {
     render(<App />)
     fireEvent.change(screen.getByLabelText('Major'), { target: { value: 'ba-cinematic-arts-and-technology' } })

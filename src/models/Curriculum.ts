@@ -571,6 +571,21 @@ interface DerivedOptionSlot {
 }
 
 /**
+ * Draft roadmaps use catalog number bands as a conservative placement floor:
+ * 100-level in freshman year, 200-level in sophomore year, and so on.
+ * x95–x99 special-topics/independent-study courses are excluded because their
+ * numbers do not reliably indicate a student's academic progression.
+ */
+function minimumTermIndexForCourseLevel(courseId: string): number {
+  const courseNumber = Number(getCourse(courseId)?.code.match(/\d{3}/)?.[0] ?? 0)
+  if (!Number.isFinite(courseNumber) || courseNumber % 100 >= 95) return 0
+  if (courseNumber >= 400) return 6
+  if (courseNumber >= 300) return 4
+  if (courseNumber >= 200) return 2
+  return 0
+}
+
+/**
  * CSUMB's catalog-wide GE pattern. Staff-verified roadmaps keep their own
  * placement; this is applied only while generating a draft roadmap.
  */
@@ -678,6 +693,7 @@ function deriveRoadmap(programId: string, catalogVersion: string): CurriculumPla
       const bundleCourses = bundleCourseIds.map(candidateId => getCourse(candidateId))
       if (bundleCourses.some(candidate => !candidate) || bundleCourses.some((_, index) => !isCourseOffered(bundleCourseIds[index], term))) continue
       if (credits + bundleCourses.reduce((total, candidate) => total + candidate!.units, 0) > 15) continue
+      if (bundleCourseIds.some(candidateId => termIndex < minimumTermIndexForCourseLevel(candidateId))) continue
       if (bundleCourses.some(candidate => candidate!.minimumStanding === 'junior' && termIndex < 4)) continue
       const canScheduleBundle = bundleCourseIds.every(candidateId => {
         const candidate = getCourse(candidateId)

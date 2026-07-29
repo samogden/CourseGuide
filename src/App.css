@@ -1,4 +1,8 @@
 .planner { margin: 0 auto; max-width: 1280px; padding: 2rem; text-align: left; }
+/* Unverified, catalog-derived roadmaps are intentionally visually distinct. */
+.planner.is-alpha-roadmap { background: #fff1f2; box-shadow: 0 0 0 100vmax #fff1f2; clip-path: inset(0 -100vmax); }
+.planner.is-alpha-roadmap .eyebrow { color: #be123c; }
+.planner.is-alpha-roadmap .credit-summary { background: #fff7f8; border-color: #fecdd3; }
 .planner-header { align-items: end; display: flex; gap: 2rem; justify-content: space-between; margin-bottom: 1rem; }
 .planner-header p { margin: 0; }
 .header-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: flex-end; }
