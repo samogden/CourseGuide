@@ -384,6 +384,7 @@ function deriveRoadmap(programId: string, catalogVersion: string): CurriculumPla
   const requiredCourseIds = new Set(program.requirements
     .filter(requirement => requirement.completion.kind === 'all')
     .flatMap(requirementCourseIds))
+  const plannedRequiredCourseIds = new Set(requiredCourseIds)
   const deferredCourseIds = [...requiredCourseIds].filter(courseId => getCourse(courseId)?.code.endsWith('499'))
   deferredCourseIds.forEach(courseId => requiredCourseIds.delete(courseId))
   const scheduled = new Set<string>()
@@ -408,8 +409,8 @@ function deriveRoadmap(programId: string, catalogVersion: string): CurriculumPla
         const candidate = getCourse(candidateId)
         if (!candidate) return false
         const corequisites = new Set(courseCorequisiteIds(candidateId))
-        const requiredEarlier = [...prerequisiteCourseIds(candidate.prerequisites)]
-          .filter(prerequisiteId => !corequisites.has(prerequisiteId) && (requiredCourseIds.has(prerequisiteId) || scheduled.has(prerequisiteId)))
+          const requiredEarlier = [...prerequisiteCourseIds(candidate.prerequisites)]
+          .filter(prerequisiteId => !corequisites.has(prerequisiteId) && plannedRequiredCourseIds.has(prerequisiteId))
         return requiredEarlier.every(prerequisiteId => scheduled.has(prerequisiteId))
       })
       if (!canScheduleBundle) continue
@@ -421,6 +422,9 @@ function deriveRoadmap(programId: string, catalogVersion: string): CurriculumPla
         requiredCourseIds.delete(bundleCourseId)
       }
     }
+    slots.forEach(slot => {
+      if (slot.type === 'course') scheduled.add(slot.courseId)
+    })
     terms.push({ term, slots })
   }
 

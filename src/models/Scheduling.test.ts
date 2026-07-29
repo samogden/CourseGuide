@@ -48,6 +48,15 @@ describe('suggested scheduling', () => {
     expect(biology211Term?.slots.map(progressKey)).toContain('course:BIO-211L')
   })
 
+  it('does not place required prerequisite courses in the same derived term', () => {
+    const biologyPlan = planForDegreeType('bs', 'bs-biology', '2026')
+    const termIndex = new Map(biologyPlan.years.flatMap(year => year.terms).flatMap((term, index) =>
+      term.slots.filter(slot => slot.type === 'course').map(slot => [slot.courseId, index] as const),
+    ))
+
+    expect(termIndex.get('CHEM-111')).toBeGreaterThan(termIndex.get('CHEM-110') ?? -1)
+  })
+
   it('builds a compacted schedule for every catalog program', () => {
     for (const programId of Object.keys(catalogVersions['2026'].programs)) {
       const plan = planForDegreeType('bs', programId, '2026')
@@ -193,7 +202,7 @@ describe('suggested scheduling', () => {
       minimumCredits: 4,
       courseIds: expect.arrayContaining(['CART-205', 'CART-208', 'CART-215']),
     })
-    expect(cinematicPlan.years[1].terms[1].slots.some(slot =>
+    expect(cinematicPlan.years.flatMap(year => year.terms.flatMap(term => term.slots)).some(slot =>
       slot.type === 'requirement' && slot.slotId.includes('research-and-development'),
     )).toBe(true)
   })
