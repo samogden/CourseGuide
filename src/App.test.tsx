@@ -36,6 +36,16 @@ describe('planner', () => {
     expect(fys145).toHaveClass('is-suggested', 'is-standard')
   })
 
+  it('uses MATH 150 direct placement to remove the freshman-spring MATH 150 block', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /MATH 130 or MATH 150/i }))
+    fireEvent.click(screen.getByRole('button', { name: 'Select' }))
+
+    expect(screen.getByRole('button', { name: /MATH 130 or MATH 150/i })).toHaveTextContent('MATH 150')
+    expect(screen.queryAllByRole('button', { name: /^MATH 150$/i })).toHaveLength(0)
+    expect(localStorage.getItem('courseguide-target-courses-v1')).toContain('freshman-math-placement-choice')
+  })
+
   it('offers the MATH 130 readiness self-evaluation from course details', () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: /MATH 130/i }))

@@ -5,7 +5,7 @@ import { CourseCell, CourseModal, type RequirementCourseSelection } from './comp
 import { ReadinessAssessment } from './components/ReadinessAssessment'
 import { TransferReadiness } from './components/TransferReadiness'
 import { getAssessmentPack } from './models/Assessments'
-import { appendMinorToPlan, availableGeneralEducationAreas, catalogVersions, defaultCatalogVersion, degreeYearLabel, getCourse, getMinor, minorsForCatalog, planForDegreeType, prerequisitesMet, progressKey, remainingPlanCredits, roadmapForProgram, summarizePlanCredits, transferAssumedCourseIds, type AcademicTerm, type DegreeType, type PlanSlot } from './models/Curriculum'
+import { appendMinorToPlan, availableGeneralEducationAreas, catalogVersions, defaultCatalogVersion, degreeYearLabel, getCourse, getMinor, minorsForCatalog, planForDegreeType, prerequisitesMet, progressKey, remainingPlanCredits, roadmapForProgram, summarizePlanCredits, transferAssumedCourseIds, type AcademicTerm, type CurriculumPlan, type DegreeType, type PlanSlot } from './models/Curriculum'
 import { buildCompactedSchedule, buildRegistrationPlan, buildSuggestedSchedule, sortSlotsForPresentation } from './models/Scheduling'
 import { buildPreparationTerms, preparationCredits } from './models/TransferPreparation'
 
@@ -44,7 +44,36 @@ function targetScopeForSlot(slot: PlanSlot, concentrationId: string | null, mino
   return minorId ? `${baseScope}/minor-${minorId}` : baseScope
 }
 
-function linkedChoiceSlots(plan: ReturnType<typeof planForDegreeType>, slot: PlanSlot): PlanSlot[] {
+/**
+ * CS offers a supported direct-placement route into MATH 150. Preserve the
+ * verified roadmap's MATH 130 default internally, but present it as a choice;
+ * selecting MATH 150 removes its now-redundant spring block.
+ */
+function mathPlacementDisplayPlan(plan: CurriculumPlan, directMath150: boolean): CurriculumPlan {
+  return {
+    ...plan,
+    years: plan.years.map(year => ({
+      ...year,
+      terms: year.terms.map(term => ({
+        ...term,
+        slots: term.slots
+          .filter(slot => !(directMath150 && slot.type === 'course' && slot.courseId === 'MATH-150'))
+          .map(slot => slot.type === 'course' && slot.courseId === 'MATH-130'
+            ? {
+                type: 'choice' as const,
+                slotId: 'freshman-math-placement-choice',
+                alternatives: ['MATH-130', 'MATH-150'],
+                credits: directMath150 ? 4 : slot.credits,
+                category: slot.category,
+                guidance: 'Choose MATH 130 for the recommended preparation sequence, or begin directly with MATH 150 if appropriately prepared.',
+              }
+            : slot),
+      })),
+    })),
+  }
+}
+
+function linkedChoiceSlots(plan: CurriculumPlan, slot: PlanSlot): PlanSlot[] {
   if (slot.type !== 'choice' || slot.alternatives.length !== 2) return []
   const alternativesKey = [...slot.alternatives].sort().join('|')
   return plan.years.flatMap(year => year.terms.flatMap(term => term.slots))
@@ -361,8 +390,7 @@ function App() {
   const availableMinors = minorsForCatalog(selectedCatalogVersion)
   const activeMinorId = selectedMinor && availableMinors[selectedMinor] ? selectedMinor : null
   const activeMinor = getMinor(activeMinorId, selectedCatalogVersion)
-  const activePlan = appendMinorToPlan(planForDegreeType(degreeType, activeProgramId, selectedCatalogVersion, activeConcentrationId), activeMinor)
-  const planCredits = summarizePlanCredits(activePlan)
+  const basePlan = appendMinorToPlan(planForDegreeType(degreeType, activeProgramId, selectedCatalogVersion, activeConcentrationId), activeMinor)
   const activeTargetScopes = new Set(
     ['general', activeConcentrationId]
       .filter((scope): scope is string => Boolean(scope))
@@ -373,6 +401,18 @@ function App() {
       .filter(([key]) => [...activeTargetScopes].some(scope => key.startsWith(`${selectedCatalogVersion}/${activeProgramId}/${degreeType}/${scope}:`)))
       .map(([key, courseId]) => [key.slice(key.indexOf(':') + 1), courseId]),
   )
+  const selectedMathPlacementCourse = activeTargetCourses.get('slot:freshman-math-placement-choice')
+  const usesMathPlacementChoice = activeProgramId === 'bs-computer-science' && degreeType === 'bs'
+  const activePlan = usesMathPlacementChoice
+    ? mathPlacementDisplayPlan(basePlan, selectedMathPlacementCourse === 'MATH-150')
+    : basePlan
+  // Resolve the displayed choice to the recommended MATH 130 route unless
+  // the student explicitly chooses direct MATH 150 placement.
+  const effectiveTargetCourses = new Map(activeTargetCourses)
+  if (usesMathPlacementChoice && !selectedMathPlacementCourse) {
+    effectiveTargetCourses.set('slot:freshman-math-placement-choice', 'MATH-130')
+  }
+  const planCredits = summarizePlanCredits(activePlan)
   const requirementSelectionKeyForSlot = (slot: PlanSlot): string | null => {
     const scope = targetScopeForSlot(slot, activeConcentrationId, activeMinorId)
     return scope ? targetCourseKey(selectedCatalogVersion, activeProgramId, degreeType, scope, progressKey(slot)) : null
@@ -391,7 +431,7 @@ function App() {
     minorId: activeMinorId,
     includeProgramRequirements: activeRoadmap?.status === 'derived',
     reservedCourseIds: reservedRequirementCourseIds,
-    targetCourses: activeTargetCourses,
+    targetCourses: effectiveTargetCourses,
     ...(degreeType === 'ast-to-bs' ? { assumedCompletedCourseIds: transferAssumedCourseIds } : {}),
   })
   const registrationPlan = buildRegistrationPlan(activePlan, completed, {
@@ -401,7 +441,7 @@ function App() {
     minorId: activeMinorId,
     includeProgramRequirements: activeRoadmap?.status === 'derived',
     reservedCourseIds: reservedRequirementCourseIds,
-    targetCourses: activeTargetCourses,
+    targetCourses: effectiveTargetCourses,
     currentTerm: registrationTerm,
     ...(degreeType === 'ast-to-bs' ? { assumedCompletedCourseIds: transferAssumedCourseIds } : {}),
   })
@@ -412,7 +452,7 @@ function App() {
     minorId: activeMinorId,
     includeProgramRequirements: activeRoadmap?.status === 'derived',
     reservedCourseIds: reservedRequirementCourseIds,
-    targetCourses: activeTargetCourses,
+    targetCourses: effectiveTargetCourses,
     ...(degreeType === 'ast-to-bs' ? { assumedCompletedCourseIds: transferAssumedCourseIds } : {}),
   })
   const compactedYears = Array.from(new Set(compactedSchedule.terms.map(term => term.year))).map(year => ({
