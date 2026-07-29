@@ -1,0 +1,872 @@
+schemaVersion: 1
+prefix: ED
+courses:
+  ED-212S:
+    code: ED 212S
+    title: Federal, State, and Local Governments and their Impact on Public Schooling
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "This course examines historical events and philosophical bases of American education including the development of the US and California Constitutions. Students will examine their impact through civic participation. Major emphasis on political and legislative activities, social issues, and economic developments affecting the schools. We will study the primary sources of law that most directly affect our educational system: constitutional, statutory, judicial, and administrative with an emphasis on Federal and state regulations. The objective is to provide students the information and knowledge necessary for effective civic decision-making."
+    offered:
+      terms:
+        - fall
+        - spring
+  ED-300:
+    code: ED 300
+    title: CSET Multiple Subjects Prep Course
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: "Multiple Subjects test preparation course will review the test format and analyze the question types. Strategies and techniques for the multiple-choice and constructed-response questions will be discussed with short reviews in selected areas. This course is designed to help students apply their knowledge to meet exam requirements in each of the exam subtests including: Subtest I - History/Social Science and Reading, Language and Literature, Subtest II - Science and Math, and Subtest III"
+    offered:
+      availability: periodic
+  ED-314:
+    code: ED 314
+    title: Language and Education Policy for Linguistically Diverse Students
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "We will examine policy & how it connects to local, national, & international contexts; analyze policy research & how it’s defined, theoretically framed, & studied; look at language policy at different levels: international, national, state, and local; explore special topics and application of language policy in our lives and research; pay attention to the impact of policy in education and the role of teachers in the language policy-making process. Course is taught bilingually (Spanish/English). (Crosslisted/Equivalent with ES 314   )"
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  ED-374:
+    code: ED 374
+    title: PE for Elem Sch Child
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Studies movement in the life of all children and the ways in which various types of activities can affect the development of the child from birth to 13 years in the psychomotor, affective, and cognitive domains, with emphasis placed on practical experience. Meets the physical education and health requirements of the California Commission on Teacher Credentialing for candidates enrolled in the multiple subject program.
+    offered:
+      availability: periodic
+  ED-510:
+    code: ED 510
+    title: Providing Behavior Supports in the Classroom
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course covers Positive Behavior Intervention and Support (PBIS) strategies for promoting appropriate student behavior in classroom settings. The role of the teacher in developing and aligning classroom behavior supports within the broader context of school-wide PBIS systems will be addressed. Additionally, advanced tiers of support for addressing varying levels of student behavioral needs will be covered. Includes both coursework and fieldwork.
+    offered:
+      terms:
+        - fall
+        - spring
+  ED-520:
+    code: ED 520
+    title: Reading Instruction Competence Assessment (RICA) Prep Course
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Reviews the Reading Instruction Competence Assessment (RICA) test format and analyzes the question types. Strategies and techniques for the multiple-choice and constructed-response questions are discussed with short reviews in selected areas. Designed to help candidates apply their knowledge to meet exam requirements.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Admitted in Multiple Subject Credential or SPED teaching program)"
+  ED-538:
+    code: ED 538
+    title: Intro to Classrm Tech Level 1
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Meets the California Commission on Teacher Credentialing Level 1 technology requirements for candidates enrolled in the multiple subject, single subject and SPED programs. Focuses on knowledge of basic technology applications and their use in K-12 classrooms. (Commission requirements may also be met through examination.)
+    offered:
+      availability: periodic
+  ED-538B:
+    code: ED 538B
+    title: Assistive Technology in the Classroom
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This course focuses on providing candidates with knowledge of assistive technology, including low and high tech equipment and materials, to facilitate communication, curriculum access, and skill development of students with disabilities. The course meets the requirements of the California Commission on Teacher Credentialing revised Special Education Standard Six.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: ED-538
+          - courseId: ED-538
+    prerequisiteNotes:
+      - "[(Prereq: ED 538   ) or (Coreq: ED 538   )]"
+  ED-540:
+    code: ED 540
+    title: Science Methods
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Supports candidates in becoming inquiring, analytical, and reflective science educators to build students¿ scientific literacy, agency, and access. Examines science teaching based on contemporary theory, practice, and the Next Generation Science Standards (NGSS). Develops skill in science teaching through practice with hands-on, inquiry-based approaches. Provides experience with structuring equitable science lessons for a diverse student body. Includes both coursework and fieldwork.
+    offered:
+      terms:
+        - fall
+        - spring
+  ED-550:
+    code: ED 550
+    title: Health and Physical Education
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Focuses on Health & Physical Education (PE) topics as they relate to teaching and learning environments. Provides an overview of the Health & PE Content Standards and context for how these are addressed in schools and classrooms. Explores theories, organization, methods, and materials for teaching Health & PE. Identifies current Health & PE issues facing individuals, families, and communities in the social and school context. Includes both coursework and fieldwork.
+    offered:
+      terms:
+        - fall
+        - spring
+  ED-555:
+    code: ED 555
+    title: CPR & First Aid Training
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    offered:
+      availability: periodic
+  ED-570:
+    code: ED 570
+    title: Classroom Management
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Required introductory course for teacher credential programs (MS & SS). Practical application of teaching theory, methodology, and pedagogy for K-12 schools. Includes observation, participation, planning, and practice teaching in a local K-12 schools.
+    offered:
+      availability: periodic
+  ED-590:
+    code: ED 590
+    title: Reading & Writing Strategies for Monolingual & Bilingual Learners
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "Reading & Writing Strategies for Monolingual & Bilingual Learners: This course for the Reading Certificate will continue the foundation gained in MAE 630   &nbsp;and will further develop candidates’ skills in curriculum and evidence-based teaching methods required to create self-sufficient and independent readers from elementary school through high school."
+    offered:
+      availability: periodic
+  ED-592:
+    code: ED 592
+    title: Advanced Literacy Assessment, Evaluation, Instructional Planning & Delivery
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "(Formerly titled Reading Academy) Advanced Literacy Assessment, Evaluation, Instructional Planning & Delivery: This course for the Reading Certificate provides an advanced framework for using assessment data in an effective and efficient balanced, comprehensive program of reading instruction. The course presents a variety of informal and formal assessments to diagnose students’ strengths and needs; including instruction and practice in administering assessments, evaluating results and planning appropriate intervention, and implementing targeted instruction based on identified student needs."
+    offered:
+      availability: periodic
+  ED-595:
+    code: ED 595
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 8
+    description: In-depth study in a particular topic in education. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  ED-597:
+    code: ED 597
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Advanced study in a topic selected by the student and a faculty member.
+    offered:
+      availability: periodic
+  ED-600:
+    code: ED 600
+    title: Field Supervision
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Candidates will address issues of classroom management skills, lesson planning, assessment, and the social context of education. This course provides supervision to candidates in field placements and requires candidates to explore and reflect on school-wide policies, classroom environments, classroom management and procedures, and lesson planning. Requires course and fieldwork.
+    offered:
+      terms:
+        - fall
+        - spring
+  ED-601:
+    code: ED 601
+    title: Stage I Supv Elem Teaching
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 8
+    description: Includes observation, participation, planning, and practice teaching in a program approved, public school classroom. Field experience will follow the district calendar.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: ED 601A   )"
+  ED-601A:
+    code: ED 601A
+    title: Stage1 Elem Teaching Seminar
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Addresses issues and strategies for teaching in classrooms with diverse students. Seminar sessions will address concerns and solutions to problems encountered in Stage I teaching and links theory to practice. Requires coursework and field placement.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: ED 601   )"
+  ED-602:
+    code: ED 602
+    title: Stg I Stdnt Teaching Sem
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Discusses issues, concerns, and problems arising from student teaching for analysis and problem solving. Links theory to practice.
+    offered:
+      terms:
+        - fall
+        - spring
+  ED-603:
+    code: ED 603
+    title: Stage 2 Supv Elem Teaching
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 7
+    description: Continues teacher candidates’ field-based experiences in a program-approved, public school classroom. Candidates work toward full responsibility for planning and instruction in all subjects supported by their Cooperating Teachers and Clinical Coaches. Clinical experience will follow the district calendar.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: ED 603A   ) and (Department Consent Required)"
+  ED-603A:
+    code: ED 603A
+    title: Stage2 Elem Teaching Seminar
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Continues teacher candidates’ field-based experiences in a program-approved, public school classroom. Candidates work toward full responsibility for planning and instruction in all subjects supported by their Cooperating Teachers and Clinical Coaches. Field experience will follow the district calendar.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: ED-601
+      - courseId: ED-601A
+      - courseId: ED-603
+    prerequisiteNotes:
+      - "[(Prereq: ED 601   and ED 601A   ) and (Coreq: ED 603   )]"
+  ED-604:
+    code: ED 604
+    title: Stg II Stdnt Teaching Sem
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Discuss issues, concerns, and problems arising from student teaching for analysis and problem solving. Links theory to practice.
+  ED-604A:
+    code: ED 604A
+    title: Bilingual Field Experience - Elementary
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 6
+    description: Students will apply theoretical understandings regarding bilingual approaches for students and the adaptation of both curriculum and the environment to meet individual needs and abilities. Includes observation, participation, planning and practice teaching in K-6 bilingual public school classrooms. Field experience will follow the K-6 teacher calendar.
+    offered:
+      terms:
+        - fall
+        - spring
+  ED-604B:
+    code: ED 604B
+    title: Bilingual Field Experience - Secondary
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 6
+    description: Students will apply theoretical understandings regarding bilingual approaches for students and the adaptation of both curriculum and the environment to meet individual needs and abilities. Includes observation, participation, planning and practice teaching in 6-12 bilingual public school classrooms. Field experience will follow the 6-12 teacher calendar.
+    offered:
+      terms:
+        - fall
+        - spring
+  ED-605:
+    code: ED 605
+    title: Secondry Curric & Instr Pt I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Covers approaches to teaching subject matter content in secondary schools. Separate sections for English, foreign language (Spanish and Japanese), math, science, and social science.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Coreq: ED 624   )"
+  ED-605A:
+    code: ED 605A
+    title: "Secondary Curriculum & Instruction: Science"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Covers approaches to teaching subject matter content in secondary schools. The course is designed to enable candidates to be conversant with current pedagogical research and methods employed by 6-12 grade classroom teachers in their specific subject area.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: ED-607
+      - courseId: ED-628
+      - courseId: ED-624
+    prerequisiteNotes:
+      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 624 ]"
+  ED-605B:
+    code: ED 605B
+    title: "Secondary Curriculum and Instruction: Math"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Covers approaches to teaching subject matter content in secondary schools. The course is designed to enable candidates to be conversant with current pedagogical research and methods employed by 6-12 grade classroom teachers in their specific subject area.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: ED-607
+      - courseId: ED-628
+      - courseId: ED-624
+    prerequisiteNotes:
+      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 624   )]"
+  ED-605C:
+    code: ED 605C
+    title: "Secondary Curriculum and Instruction: World Language"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Covers approaches to teaching subject matter content in secondary schools. The course is designed to enable candidates to be conversant with current pedagogical research and methods employed by 6-12 grade classroom teachers in their specific subject area.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: ED-607
+      - courseId: ED-628
+      - courseId: ED-624
+    prerequisiteNotes:
+      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 624   )]"
+  ED-605D:
+    code: ED 605D
+    title: "Secondary Curriculum and Instruction: Social Science"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Covers approaches to teaching subject matter content in secondary schools. The course is designed to enable candidates to be conversant with current pedagogical research and methods employed by 6-12 grade classroom teachers in their specific subject area.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: ED-607
+      - courseId: ED-628
+      - courseId: ED-624
+    prerequisiteNotes:
+      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 624   )]"
+  ED-605E:
+    code: ED 605E
+    title: "Secondary Curriculum and Instruction: English"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Covers approaches to teaching subject matter content in secondary schools. The course is designed to enable candidates to be conversant with current pedagogical research and methods employed by 6-12 grade classroom teachers in their specific subject area.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: ED-607
+      - courseId: ED-628
+      - courseId: ED-624
+    prerequisiteNotes:
+      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 624   )]"
+  ED-606:
+    code: ED 606
+    title: Secondry Curric & Inst Pt II
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Continues covering approaches to teaching subject content in secondary schools. Separate sections for English, foreign language (Spanish and Japanese), math, science, and social science.
+    offered:
+      terms:
+        - fall
+  ED-606A:
+    code: ED 606A
+    title: Secondary Curriculum and Instruction Pt II - Science
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Continues covering approaches to teaching Science in secondary schools. Includes both coursework and fieldwork weekly.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: ED-607
+      - courseId: ED-628
+      - courseId: ED-605A
+    prerequisiteNotes:
+      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 605A   )]"
+  ED-606B:
+    code: ED 606B
+    title: Secondary Curriculum and Instruction Pt II - Math
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Continues covering approaches to teaching Mathematics in secondary schools. Includes both coursework and fieldwork weekly.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: ED-607
+      - courseId: ED-628
+      - courseId: ED-605B
+    prerequisiteNotes:
+      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 605B   )]"
+  ED-606C:
+    code: ED 606C
+    title: Secondary Curriculum and Instruction Pt II - World Languages
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Continues covering approaches to teaching World Languages in secondary schools. Includes both coursework and fieldwork weekly.
+    offered:
+      availability: periodic
+    prerequisites:
+      - courseId: ED-607
+      - courseId: ED-628
+      - courseId: ED-605C
+    prerequisiteNotes:
+      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 605C   )]"
+  ED-606D:
+    code: ED 606D
+    title: Secondary Curriculum and Instruction Pt II - History/Social Studies
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: ontinues covering approaches to teaching History/Social Sciences in secondary schools. Includes both coursework and fieldwork weekly.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: ED-607
+      - courseId: ED-628
+      - courseId: ED-605D
+    prerequisiteNotes:
+      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 605D   )]"
+  ED-606E:
+    code: ED 606E
+    title: Secondary Curriculum and Instruction Pt II - English
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Continues covering approaches to teaching English Language Arts in secondary schools. Includes both coursework and fieldwork weekly.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: ED-607
+      - courseId: ED-628
+      - courseId: ED-605E
+    prerequisiteNotes:
+      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 605E   )]"
+  ED-607:
+    code: ED 607
+    title: Adolescent Development & Learning
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is designed to provide the prospective secondary school teacher with foundations of educational psychology useful for teaching and essential skills of instructional planning. The course includes principles of teaching, learning and assessment, curriculum and curriculum theory, instructional planning, and cognitive psychology.
+    prerequisiteNotes:
+      - "(Coreq: ED 628   )"
+  ED-609:
+    code: ED 609
+    title: Math Methods
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces candidates to theory and practice for teaching mathematics in elementary classrooms. Furthers candidates’ understanding of standards, principles, and effective math teaching practices. Candidates practice how concepts are developed concretely, symbolically, and abstractly for a diverse student body through experiences that focus on planning and rehearsing. Includes both coursework and fieldwork.
+    offered:
+      terms:
+        - fall
+        - spring
+  ED-610:
+    code: ED 610
+    title: Methods and Inquiry for Bilingual Teachers
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course prepares bilingual teacher candidates for teaching Spanish-speaking students. Includes an examination of program models for bilingual instruction, methods for teaching reading and content areas in bilingual settings, materials and assessment. Conducted in both Spanish and English.
+  ED-611:
+    code: ED 611
+    title: Teaching and Learning
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces the learning process in public schools. Outlines the foundations of educational psychology and child development useful for teaching, as well as principles of teaching, learning and assessment; curriculum and curriculum theory; and instructional planning. Candidates will examine the connection between human development learning strategies and cultural context, and the psychological principles underlying culturally congruent pedagogy.
+    offered:
+      terms:
+        - fall
+        - spring
+  ED-612:
+    code: ED 612
+    title: Pedagogy for Ling Diversity
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Contextualizes the education of students from culturally/linguistically diverse backgrounds within historical, social, and political factors. Connects teaching with the background of students and schooling to social justice issues. Blends classroom experience with theory, strategies, and the local community. Explores the foundations of language acquisition and develops approaches for working with emergent bilinguals.
+    offered:
+      terms:
+        - fall
+        - spring
+  ED-615:
+    code: ED 615
+    title: Social Studies & Visual/Performing Arts Methods
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Focuses on implementation and integration of CA History-Social Science and Visual/Performing Arts Standards, including the application of content, literacy, equity, citizenship, and inquiry. Explores pedagogy and content knowledge about the history of diverse cultural groups, focusing on historically marginalized and disenfranchised communities. Provides experience in lesson design, curriculum alignment, and cultural proficiency. Includes both coursework and fieldwork.
+    offered:
+      terms:
+        - fall
+        - spring
+  ED-616:
+    code: ED 616
+    title: Lang/Literacy Curriculum I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces approaches to the development of language and literacy at the elementary school level. Analyzes the theoretical foundations of literacy development and skills and strategies for teaching reading and writing across the school curriculum.
+    offered:
+      availability: periodic
+  ED-617:
+    code: ED 617
+    title: Lang/Literacy Curriculum II
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Furthers study of approaches to the development of language and literacy at the elementary school level. Continues analysis of the theoretical foundations of literacy development and the skills and strategies for teaching and assessing reading and writing across the school curriculum. Includes four hours of classroom experience and two hours of fieldwork weekly for the first 10 weeks of an academic semester. Cross-listed with ED 627   .
+    offered:
+      availability: periodic
+    prerequisites:
+      - courseId: ED-616
+    prerequisiteNotes:
+      - "(Prereq: ED 616   )"
+  ED-619:
+    code: ED 619
+    title: Visual and Perf Arts C and I K8
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: "Visual and Perf Arts C and I K8: Addresses California Curriculum Standards and methods for teaching visual and performing arts in elementary school classrooms, including integrating the arts with oter academic content. Satisfies a requirement for the Multiple Subjects Preliminary Credential."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to Multiple Subject Credential)
+  ED-620:
+    code: ED 620
+    title: Pros:Multicultr/Biling Ed
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    offered:
+      availability: periodic
+  ED-624:
+    code: ED 624
+    title: Stage I Supervised Secondary Teaching
+    teachingStatus: active
+    credits:
+      minimum: 8
+      maximum: 12
+    description: Includes observation, participation, planning, and practice teaching. Requires the equivalent of a half-time (or full-time for interns) daily placement in program-approved secondary classrooms following the 6-12 school year schedule for teachers. Includes fieldwork.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: ED-607
+      - courseId: ED-628
+      - courseId: ED-624A
+    prerequisiteNotes:
+      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 624A   )]"
+  ED-624A:
+    code: ED 624A
+    title: Stage I Supervised Secondary Teaching Seminar
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course addresses theoretical and practical foundations for critical and social justice pedagogy. Students gain insight in educational, instructional and curricular frameworks to achieve equity and engagement, focusing on historically marginalized and disenfranchised communities. Through education theory and best practice, students examine issues impacting field sites and use critical reflection to inform and transform approaches to educating youth.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: ED-607
+      - courseId: ED-628
+      - courseId: ED-624
+    prerequisiteNotes:
+      - "[(Prereq: ED 607   and ED 628   ) and (Coreq: ED 624   )]"
+  ED-625:
+    code: ED 625
+    title: Stage II Secondary Supervised Teaching
+    teachingStatus: active
+    credits:
+      minimum: 8
+      maximum: 12
+    description: Includes observation, participation, planning, and practice teaching. Requires the equivalent of a half-time (or full-time for interns) daily placement in program-approved secondary classrooms following the 6-12 school year schedule for teachers. Includes fieldwork.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: ED-624
+          - courseId: ED-624A
+          - courseId: ED-605A
+          - courseId: ED-606A
+          - courseId: ED-605B
+          - courseId: ED-606B
+          - courseId: ED-605C
+          - courseId: ED-606C
+          - courseId: ED-605D
+          - courseId: ED-606D
+          - courseId: ED-605E
+          - courseId: ED-606E
+          - courseId: ED-625A
+    prerequisiteNotes:
+      - "[(Prereq: ED 624   and ED 624A   and (( ED 605A   and ED 606A   ) or ( ED 605B   and ED 606B   ) or ( ED 605C   and ED 606C   ) or ( ED 605D   and ED 606D   ) or ( ED 605E   and ED 606E   )) and (Coreq: ED 625A   )]"
+  ED-625A:
+    code: ED 625A
+    title: Stage II Supervised Secondary Teaching Seminar
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course addresses issues, concerns, and solutions related to supervised teaching as well topics such as obtaining a teaching position, mandatory reporting, The California Commission on Teacher Credentialing, induction, and procedures for formatting and submitting the Performance Assessment for California Teachers.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: ED-624
+          - courseId: ED-624A
+          - courseId: ED-605A
+          - courseId: ED-606A
+          - courseId: ED-605B
+          - courseId: ED-606B
+          - courseId: ED-605C
+          - courseId: ED-606C
+          - courseId: ED-605D
+          - courseId: ED-606D
+          - courseId: ED-605E
+          - courseId: ED-606E
+          - courseId: ED-625
+    prerequisiteNotes:
+      - "[(Prereq: ED 624   and ED 624A   and (( ED 605A   and ED 606A   ) or ( ED 605B   and ED 606B   ) or ( ED 605C   and ED 606C   ) or ( ED 605D   and ED 606D   ) or ( ED 605E   and ED 606E   )) and (Coreq: ED 625   )]"
+  ED-627:
+    code: ED 627
+    title: Secon Lang & Lit Develop
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides grade 6-12 teachers with the expertise that they need to teach reading and writing in multicultural and multiethnic classrooms across content areas. Includes approaches and guidelines for teaching students who are struggling readers and writers including former and current English Learners. Includes both coursework and fieldwork.
+    prerequisites:
+      - courseId: ED-607
+      - courseId: ED-628
+    prerequisiteNotes:
+      - "(Prereq: ED 607   and ED 628   )"
+  ED-628:
+    code: ED 628
+    title: Secon Pedagogy Ling Diverse
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examines issues and solutions involved in the education of students from diverse language backgrounds. Explores the theoretical foundations of language acquisition as well as strategies and approaches for working effectively with English learners.
+    prerequisiteNotes:
+      - "(Coreq: ED 607   )"
+  ED-629:
+    code: ED 629
+    title: Culture and Education of Latino Students
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: An examination of the impact of historical, social, political and economic forces on educational experiences for Latino students in the U.S. in particular those of Mexican origin. Explores issues of immigration, migration, language and culture with respect to educational attainment.
+  ED-634:
+    code: ED 634
+    title: Literacy for Linguistically Diverse Learners
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Using sociocultural, critical, and culturally sustaining pedagogical frameworks, candidates examine and apply theories of literacy instruction, instructional strategies, and assessment for culturally and linguistically diverse classrooms. Candidates design and teach integrated English language development literacy lessons, and assess the literacy strategies and skills of their diverse learners. Includes both coursework and fieldwork.
+    offered:
+      terms:
+        - fall
+        - spring
+  ED-635:
+    code: ED 635
+    title: Biliteracy for Span/Eng
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    offered:
+      availability: periodic
+  ED-638:
+    code: ED 638
+    title: Tech as Tool for Creativity
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    offered:
+      availability: periodic
+  ED-639:
+    code: ED 639
+    title: Science Methods in K-12 Schools
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides prospective and current teachers with knowledge and skills for implementing science instruction in K-12 classrooms in keeping with the Next Generation Science Standards. Includes the integration of science and engineering practices with cross-cutting concepts and major disciplinary core ideas. Common core literacy standards are also explored for implementation in science classrooms. Participants will enact curriculum that balances science facts, concepts, and investigations.
+    offered:
+      availability: periodic
+  ED-641:
+    code: ED 641
+    title: Special Topics-Supervised Teac
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    offered:
+      availability: periodic
+  ED-643:
+    code: ED 643
+    title: Educational Measurement and Evaluation
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides current and prospective educators with essentials of descriptive and inferential statistics and measurement principles and guidelines for the purpose of planning, preparing, administering, and evaluating instructional assessments, Includes use and interpretation of standardized tests.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: ED-607
+      - courseId: ED-628
+    prerequisiteNotes:
+      - "(Prereq: ED 607   and ED 628   )"
+  ED-644:
+    code: ED 644
+    title: Supervised Teach & Related Top
+    teachingStatus: active
+    credits:
+      minimum: 6
+      maximum: 6
+    offered:
+      availability: periodic
+  ED-647:
+    code: ED 647
+    title: Literacy Field Studies
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Candidates for the reading certificate will demonstrate expertise with analyzing assessment data results to develop and administer an effective and appropriate intervention plan for beginning readers, English language learners and students with reading difficulties.
+    offered:
+      availability: periodic
+  ED-675:
+    code: ED 675
+    title: Health for Elementary School Child
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: "Health for Elementary School Children: Addresses California Curriculum Standards and methods for teaching health in elementary school classrooms. Satisfies a requirement for the Multiple Subjects Preliminary Credential."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to Multiple Subject Credential)
+  ED-676:
+    code: ED 676
+    title: PE for Elem School Child
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: "PE for Elementary School Children: Addresses California Curriculum Standards and methods for teaching physical education in elementary school classrooms. Satisfies a requirement for the Multiple Subjects Preliminary Credential."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to Multiple Subject Credential)
+  ED-686:
+    code: ED 686
+    title: Social Studies Methods for Diverse K-12 Classrooms
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Approaches to teaching Social Studies in the K-12 school environment include review of curriculum trends, subject matter frameworks and standards (especially those issued by the State of California), selection and organization of content and instructional materials, and teaching and assessment techniques appropriate in elementary, middle school and high school settings. Each section will be taught by a faculty member who is an experienced teacher in the field.
+    offered:
+      availability: periodic
+  ED-695:
+    code: ED 695
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 8
+    description: In-depth study in a particular topic in education. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  ED-697:
+    code: ED 697
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select advanced topic of study and number of credits.
+    offered:
+      availability: periodic
+  ED-699:
+    code: ED 699
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select advanced topic of study and number of credits.
+    offered:
+      availability: periodic

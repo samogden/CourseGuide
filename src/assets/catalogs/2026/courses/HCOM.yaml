@@ -1,0 +1,1975 @@
+schemaVersion: 1
+prefix: HCOM
+courses:
+  HCOM-25:
+    code: HCOM 25
+    title: Writing and Reading Success Workshop
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This course provides additional support for students enrolled in HCOM 125. Students will deepen their understanding of critical writing and reading through workshops.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: HCOM 125)"
+  HCOM-110:
+    code: HCOM 110
+    title: Fundamentals of Speaking and Listening
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course introduces students to foundational concepts and skills that support effective and ethical speaking and listening, in public contexts. Students receive a brief introduction to rhetorical theory and learn how the practices of public speaking and listening prepare them to be engaged citizens in their communities. Students are provided multiple opportunities to practice speaking and listening through in-class performance assignments. The course also emphasizes the skill of listening to, and integrating, multiple perspectives through group discussion.
+    offered:
+      terms:
+        - fall
+        - spring
+  HCOM-120:
+    code: HCOM 120
+    title: Critical Reading and Writing
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course introduces students to college-level reading and writing. Students learn to think critically in response to the diverse genres, rhetorical situations, and perspectives that they encounter at the university and beyond. They develop and apply flexible processes for conducting research, synthesizing and integrating sources, and composing texts.
+    offered:
+      terms:
+        - fall
+        - spring
+  HCOM-125:
+    code: HCOM 125
+    title: Writing and Reading for College Success
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Using critically sustaining pedagogy and antiracist instructional and grading tools, this course leverages student’s lived experience, knowledge and assets to further develop their writing, reading and critical thinking skills. Through a deeper understanding of diverse rhetorics, students will learn to analyze the context and culture of writing, research topics, synthesize sources, and make fact-based arguments based in critical cultural wealth. This includes the analysis of systems of power, privilege and social constructs and the ways these systems may champion some forms of communication over others.
+    offered:
+      terms:
+        - fall
+        - spring
+  HCOM-170:
+    code: HCOM 170
+    title: Introduction to Mass Communication
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course introduces students to the historical, social, legal, economic, political and technological aspects of mass communication, including media such as radio, newspapers, television, and the internet. Students also are introduced to mass communication theories, such as gatekeeping, agenda-setting, and framing.
+    offered:
+      terms:
+        - fall
+        - spring
+  HCOM-195:
+    code: HCOM 195
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Humanities and Communication. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  HCOM-196:
+    code: HCOM 196
+    title: Field Studies
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Opportunities for independent field research projects involving oral history, social action writing, archival research, or investigative journalism.
+    offered:
+      availability: periodic
+  HCOM-197:
+    code: HCOM 197
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic
+  HCOM-200:
+    code: HCOM 200
+    title: Critical Thinking & Ethics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course equips students to interpret and critically assess the arguments, messages, and narratives that surround us. Students learn to comprehend and analyze a variety of public and cultural texts (e.g., political speeches, social movement campaigns, films and television shows, advertisements, architectural designs, fashion choices), evaluate arguments¿ supporting evidence, and reflect on the role of values, ideologies, and ethics in shaping our worlds. The course also offers an introduction to theories of communication ethics. Students identify and interpret communication dilemmas in interpersonal, small group, intercultural, organizational or mass media contexts; they analyze ethical controversies in these contexts and evaluate the communicative options suggested by different ethical frameworks.
+    offered:
+      terms:
+        - fall
+        - spring
+  HCOM-202:
+    code: HCOM 202
+    title: Philosophy of Human Nature
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Human beings are not all the same, but there are situations in which we expect people generally to feel and do very similar things. This core of similarity leads to an idea of human nature. This course surveys the variety and range of accounts of human nature. It is designed within the critical tradition of analytic philosophy and logic. It also delves into moral and political reflections concerning the relation between human nature and the nature of society, the state, and government.
+    offered:
+      terms:
+        - fall
+        - spring
+  HCOM-220:
+    code: HCOM 220
+    title: Afro Cuba Hip Hop - Music and Dance in the Black Atlantic
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores the social history of music and dance throughout the African Diaspora. Students learn specific styles from Cuba, Puerto Rico, Brazil and the United States including Afro-Cuban liturgical dance, rumba, salsa, samba, and hip hop. Students dance the music they study. Students become familiar with basic concepts in African Diaspora music and dance; identify and analyze trends therein; and develop a choreography based on the movements taught in class. (Crosslisted/Equivalent with ES 220   )
+    offered:
+      terms:
+        - fall
+  HCOM-222:
+    code: HCOM 222
+    title: Introduction to Literary Analysis
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course prepares students to critically engage arguments made by and about literary texts. Students are introduced to the study of literature through critical reading and analysis in multiple literary genres. Students will learn terminology and methods for literary analysis and evaluation as well as discussion of social, intellectual, and historical influences on literary works.
+    offered:
+      terms:
+        - fall
+  HCOM-224:
+    code: HCOM 224
+    title: American Indigenous Literatures and Cultures
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students study the literary expressions of Native peoples of the Americas. The course engages the literature as aesthetic, spiritual, and political expression. Examines the indigenous ways of being and knowing represented in the texts. Cultural aesthetics are studied within social and historical contexts, including but not limited to colonization, removals, assimilation, and resistance. Questions of cultural identity and sovereignty are central. (Crosslisted/Equivalent with ES 224   )
+    offered:
+      terms:
+        - fall
+  HCOM-225:
+    code: HCOM 225
+    title: Literature,Film & Culture
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces literary and film analysis through readings and viewings of selected global and/or American writers and films. Examines these authors’ cultural heritage and traditions. Develops analytical and critical reading and viewing ability of literature and film through discussion of themes, characters, techniques, images, and structures. Explores the symbiotic relationship between literature and film in transmitting cultural values.
+    offered:
+      terms:
+        - fall
+        - spring
+  HCOM-229:
+    code: HCOM 229
+    title: Multicultural Poetry
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students focus on multicultural poetry as artistic and cultural representation. Students read works by poets of many cultures, watch poets read and talk about their work on video, and create their own original poetry. Students develop the tools to do literary and cultural analysis of poetry, as well as write their own poems. (Crosslisted/Equivalent with ES 229   )
+    offered:
+      terms:
+        - fall
+        - spring
+  HCOM-230:
+    code: HCOM 230
+    title: Environmental Creative Writing
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students explore environmental cross-cultural literature as artistic and socially conscious representations. Students read works by writers of diverse cultures and watch films and videos regarding environmental issues. Students develop the tools to do literary, cultural and environmental analysis. Students create original pieces about the environment using the basic elements of creative nonfiction, poetry and fiction.
+    offered:
+      terms:
+        - fall
+  HCOM-231:
+    code: HCOM 231
+    title: Latinx Creative Wrtg Wrkshp
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students study the fiction, creative nonfiction, and poetry of leading contemporary Latinx authors with an emphasis on the historical, cultural, and socioeconomic influences on their work. Students use the work of these authors as models to create their own original pieces, incorporating the elements of craft.
+    offered:
+      terms:
+        - spring
+  HCOM-242:
+    code: HCOM 242
+    title: Intro to Women’s and Gender Studies
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces the basic concepts and perspectives in multicultural, interdisciplinary, women’s, and gender studies. Students explore key theoretical frameworks, historical context, and current issues related to sex and gender in society, integrated with analysis of how these issues intersect with issues of race, class, and other social identities.
+    offered:
+      terms:
+        - fall
+  HCOM-243:
+    code: HCOM 243
+    title: Introduction to Ethnic Studies
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course provides students with an introduction to the study of race, ethnicity and culture in the United States. The course reviews the main ideas and key debates in Ethnic Studies, paying attention to the ways in which race and ethnicity intersect with other social identities such as gender, sexual orientation, class, nationality, and citizenship/legal status. Students who complete the course will be equipped with the analytic tools to apply a framework of race/ethnicity to better interpret, engage, and transform the world around them. (Crosslisted/Equivalent with ES 243   )
+    offered:
+      terms:
+        - fall
+        - spring
+  HCOM-246:
+    code: HCOM 246
+    title: Introduction to Mexican American Studies
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces students to the experiences of Chicana/o communities in the United States and in a transnational context. Students learn about Chicanos/as in relationship to issues of race, ethnicity, citizenship, class, gender, and other social formations. Students are introduced to Chicano/a historical experiences with an emphasis on understanding the struggles and social movements for justice and equality that have been foundational to the development of Chicano/a identities. (Crosslisted/Equivalent with ES 246   )
+    offered:
+      terms:
+        - spring
+  HCOM-247:
+    code: HCOM 247
+    title: African Legacy Worldwide
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examines how historical, cultural, and social processes have influenced the development of African diaspora communities in the United States, Latin America, the Caribbean, Europe, and Asia. Special attention will be given to the impact of race and culture on the formation of diasporic communities. (Crosslisted/Equivalent with ES 247   )
+    offered:
+      terms:
+        - spring
+  HCOM-251:
+    code: HCOM 251
+    title: Introduction to US History
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Covers a time period from the Colonial Era, the War of Independence and the Early Republic, Manifest Destiny and expansion westward, the Civil War and Reconstruction, Immigration at the turn-of-the-century and the response of Nativists, Industrialization and Urbanization, through the Progressive Era. It takes a multicultural perspective and looks at the histories of diverse peoples in the struggle to realize democracy and freedom, and it deepens understanding of the cultural, economic, political and social dynamics that characterized each era. This course meets the GE Requirement for Area D-US History and the Subject Matter Requirement for the Multiple Subject Teaching Credential for U.S. History.
+    offered:
+      terms:
+        - spring
+  HCOM-260S:
+    code: HCOM 260S
+    title: Politics & Participation
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores struggles for social and political justice at the national, state and local levels, and how the U.S. and California Constitutions shape the form and directions of those struggles. In the process, students explore the history and contemporary meaning of democratic participation through exploring their own civic identities, critical study of civic ideals and institutions, and participation in civic action though ethical service and informed advocacy.
+    offered:
+      terms:
+        - fall
+        - spring
+  HCOM-265:
+    code: HCOM 265
+    title: Histories of Democracy
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: The course explores the changing meaning of democracy and freedom from a multicultural perspective. It covers major events between the Colonial and Civil Rights eras, with particular focus on the 1860s-1960s. It includes the origins, key developments, and philosophies of civic and democratic institutions, and the social justice movements that have shaped democracy in the United States over time.
+    offered:
+      terms:
+        - fall
+        - spring
+  HCOM-280:
+    code: HCOM 280
+    title: Introduction to Reporting
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students learn how to identify sources and conduct interviews, gather and evaluate data to craft stories for the broad public across multiple platforms. Students build the core skills of news writing, basic reporting and editing, feature writing, law and ethics — and covering news from diverse communities.
+    offered:
+      terms:
+        - fall
+  HCOM-290:
+    code: HCOM 290
+    title: "Tacos, Territories, and Transnationalism: Research Methods"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This research course will introduce students to various humanities-based research methodologies through U.S.- Mexico Border scholarship as a site for scholastic inquiry. Students will learn various research methodologies and identify an aspect of border theory, transborder lived experience, and/or current political rhetorics to build a research project to practice course concepts.
+    offered:
+      terms:
+        - fall
+  HCOM-300:
+    code: HCOM 300
+    title: Major ProSeminar
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Introduces multidisciplinary approaches to humanities and communication. Explores content in the major learning outcomes and investigates areas of specialization a variety of concentrations.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-301:
+    code: HCOM 301
+    title: Ways Of Knowing
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Surveys the changing relationships among knowledge, truth, and reality in different cultural and historical contexts; investigates, evaluates, and apply different ways of knowing such as analytic, rational, creative, spiritual, emotional, and intersubjective to substantive topics or themes.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  HCOM-302:
+    code: HCOM 302
+    title: Religion and Law
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this introductory course, students will explore the relationship of religion and spirituality to law and legal institutions in the U.S. and internationally. Students will explore such issues as marriage, reproductive rights, and others through the study of law codes, court decisions, religious texts, and faith traditions.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
+  HCOM-303:
+    code: HCOM 303
+    title: Academic and Professional Writing
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, you will learn the theory and practice of academic and professional writing. You will explore the intersections of academic and professional writing with racism, colonialism, social justice, equity, and accessibility and practice writing that responds to diverse audiences and contexts.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE Area 1A and 1B and 1C with a C- or better)"
+  HCOM-304:
+    code: HCOM 304
+    title: Relational Ethics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students survey ethical decision-making processes through various relational philosophical frameworks. They also investigate, evaluate, and apply relational communication guidelines to the ethical dilemmas examined in interpersonal, small group, intercultural, and organizational situations.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  HCOM-306:
+    code: HCOM 306
+    title: Gender and Communication
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores theoretical explanations for the construction of gender. Identifies and examines the ways individuals communicate their gender identity to themselves and to others; identifies, examines, and analyzes the construction and communication of gender in media, interpersonal, intercultural, or rhetorical contexts in order to ethically and effectively interact with others.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-307S:
+    code: HCOM 307S
+    title: Soc Impct Of Mass Media SL
+    teachingStatus: active
+    credits:
+      minimum: 5
+      maximum: 5
+    description: Explores the relationship between mass media and contemporary social problems. Issues such as media violence, mass media ownership and control, media portrayals of nation, race, class, gender and sexual orientation will be explored from the consumer’s perspective. Outcomes include raising awareness of the impact of media messages, deconstructing media representations of race/class/gender identities, developing effective media literacy tools, and critically analyzing the cultural products we consume and create. Involves students in media literacy programs in local schools and community organizations.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  HCOM-308:
+    code: HCOM 308
+    title: Philosophy of Law
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "This course will introduce students to the themes and ideas which are foundational to the philosophy of the law. It will look at the various historical foundations of the laws and how they developed into the modern US legal system. Topics will include: the ancient historical roots of the law, the goals of the law, the justification for law, the relationship between law and morality, and critical perspectives on law. This course will introduce students to classical legal theory and modern challenges in feminist, Marxist, and critical race interventions."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE Areas A1 and A2 and A3 and B4 with a C- or better)"
+  HCOM-309:
+    code: HCOM 309
+    title: Interracial Communication
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Studies the rhetorical construction of racial identity in the U.S. and its impact on contemporary interracial communication; investigates and evaluates options for navigating interracial communication dilemmas ethically and effectively.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-310:
+    code: HCOM 310
+    title: Free Speech & Responsibility
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Surveys the history of free speech in the United States; examines past and present controversies such as obscenity, hate speech, and media sensationalism; identifies, evaluates, and assesses rights and responsibilities surrounding the freedom of expression from various philosophical perspectives.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-312:
+    code: HCOM 312
+    title: Writing and Advocacy
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "This class immerses students in academic writing and the construction and evaluation of public advocacy. Our aim is to combine passion and civility while developing a more sophisticated grounding in practice and theory. Students will develop listening and critical thinking skills, and apply and evaluate public arguments through research-based oral and written communication. The class should change your views of what public argument is and what it can do in the world. By course’s end, you will be a better critic: you will write more clearly, speak more effectively, and analyze, interpret, and evaluate the messages around you more soundly. N.B.."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-314:
+    code: HCOM 314
+    title: Dialogue Across Differences
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Dialogue is a mode of communication intended to engage differences. People dialogue in order to increase awareness and understanding of different perspectives, to learn more about the world and our roles and responsibilities in it, and to build trust in relationships. Students learn and apply dialogic theory and skills in varied communication contexts.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "[Prereq: (Junior or Senior Standing) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+    minimumStanding: junior
+  HCOM-315:
+    code: HCOM 315
+    title: Media for Social Change
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines social transformation and the role of media initiatives and communication strategies in local and global contexts. Explores how media can promote social justice and democracy, teach sustainable living, foster dialogues on diversity, catalyze peace building, advocate for equality, and promote conversations on issues of social exclusion.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-316:
+    code: HCOM 316
+    title: Media Ethics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Develops media literacy and related knowledge, skills, and abilities. Explores the ethical implications of various social and economic forces on media production, distribution, and access, as well as on the content, context, consumption, and effects of media messages. Topics include media’s role in democracy, what citizens have a right to expect from media and how media reflect and reinforce their social contexts.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-317S:
+    code: HCOM 317S
+    title: Advanced Composition, Composition Theories, Service Learning
+    teachingStatus: active
+    credits:
+      minimum: 5
+      maximum: 5
+    description: In a service learning context, students deepen communication skills, engage contemporary composition theories, and develop advanced written communication skills in a variety of genres. Students apply theories in area schools and literacy programs.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  HCOM-319:
+    code: HCOM 319
+    title: Global Communication and Culture
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course offers students a critical understanding of the role of media and communication technologies in the processes of globalization. Drawing from historical and contemporary perspectives students will discuss the social, cultural and political implications of media’s use and dissemination across the globe, and particularly in relation to issues such as identity formation, community belonging, people’s empowerment and political action around global challenges.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-320:
+    code: HCOM 320
+    title: Grammar, Usage, and Power
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces the basic elements and diverse linguistic attributes of the English language, and language theories, including universals and differences. Commonly practiced grammatical concepts and conventions and theories of language acquisition are studied and applied within the contexts of imperialism and post-colonial analysis. Explores the dynamics of current issues in language, including the roles of grammar in the schools, language in advertising, and variations in language usage.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-321:
+    code: HCOM 321
+    title: Introduction to Rhetoric and Culture
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course examines the role of communication in contemporary society. Students are introduced to rhetorical theories as tools to analyze and critique a variety of cultural and public texts such as literature, political speeches, social movement campaigns, films, television, and advertisements. The course develops understanding of rhetorical concepts, ability to interpret and critically analyze the diverse messages that surround us, and skill in using written and oral communication to establish community and/or advocate for change in the world.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-322:
+    code: HCOM 322
+    title: Asian American Literature
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Develops students’ critical and analytical reading ability of literature from the perspective of the Asian American experience. Grounds the discussion of Asian American experiences, literatures, and cultures in history and theory.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-323:
+    code: HCOM 323
+    title: American Drama
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines the history of American drama. Explores the diverse cultures that have contributed to the shaping of the American drama. Introduces students to literary analysis through the study of the dialogical relationship between the “logical core” and the “non-logical texture.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-324:
+    code: HCOM 324
+    title: African American Narratives
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines the development of African American and African diaspora literature. Explores the quintessential role African American and African diaspora literature and culture have played in the development of American mainstream literature, culture, and identity. Looks at vernacular tradition, the call and response practice, and the lyrics of the blues-infused, African American literary expression.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-325:
+    code: HCOM 325
+    title: Narratives of American Immigration
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores immigration to the United States from different cultural perspectives. Integrates a historiographic approach as the primary method for reading and critically interpreting immigrant narratives; uses historical events such as The Great Depression, World War I and II, and the Civil Rights Movement as markers for analyzing the texts.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-327:
+    code: HCOM 327
+    title: Survey American Literature
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines American literature through different historical periods, literary genres, and cultural movements. Develops ability to compare and contrast social, historical, and cultural experiences represented in literature. Students gain cross-cultural knowledge of American literary history, an introduction to literary theory, and further development of literary analysis skills.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-328:
+    code: HCOM 328
+    title: Latina Life Stories
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores intersections of ethnicity, race, gender, sexuality, and class through autobiographical and testimonial writings by Chicana, Mexican-origin, Puerto Rican, Cuban, Dominican, and mixed-heritage Latinas in the U.S. Students produce multimedia digital stories about their own lives and identities.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-329:
+    code: HCOM 329
+    title: Auto/Biografias
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: A course on Latinx identities as explored through life writing from multiple genres including memoir, testimonio, visual autobiography, and poetry. Students read and analyze written texts and films, and create their own autobiographical projects.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-330:
+    code: HCOM 330
+    title: Intro Creative Writing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: An introductory creative writing course that focuses on ethnicity, gender, and “witness” writing. Examination of the writing process, what roadblocks create silence, how to remove them. Cross-cultural readings in multicultural poetry, fiction, and nonfiction.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-332:
+    code: HCOM 332
+    title: Poetry Writing Workshop
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Poems with “duende,” as Federico GarcÃ­a Lorca says, are poems that “burn the blood like powdered glass.” An intermediate level course that explores forms of poetry, both traditional and contemporary. Students analyze the creative process; move toward publishing poems.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: HCOM-330
+                minimumGrade: C-
+              - courseId: HCOM-339S
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C) and ( HCOM 330   or HCOM 339S   ) with a C- or better]"
+  HCOM-333:
+    code: HCOM 333
+    title: Women’s Writing Workshop
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: An intermediate level creative writing workshop that examines women’s lives, and their relationship to the writing process. Includes in-class writing exercises, cross-cultural readings, discussions of the writing process, and creative writing. For women and men honing their craft of writing poetry, fiction, life-stories.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: HCOM-330
+                minimumGrade: C-
+              - courseId: HCOM-339S
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C) and ( HCOM 330   or HCOM 339S   ) with a C- or better]"
+  HCOM-334:
+    code: HCOM 334
+    title: Fiction/Creative NonFiction Writing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: An intermediate-level creative writing workshop that focuses on fiction writing and creative non-fiction. Students explore forms of fiction, and move toward publication.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: HCOM-330
+                minimumGrade: C-
+              - courseId: HCOM-339S
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C) and ( HCOM 330   or HCOM 339S   ) with a C- or better]"
+  HCOM-335:
+    code: HCOM 335
+    title: Amer Ethnic Lit & Culture
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This learning experience takes a comparative approach to the examination of American ethnic literature and cultures. It is designed to develop students’ ability to compare and contrast the social, historical, and cultural experiences as they are represented in literature. The interdisciplinarity nature of the course is accentuated not only through the introduction to the use of language and literary analysis, but also through the discussion of history, philosophy, culture, and social justice.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  HCOM-336:
+    code: HCOM 336
+    title: Poetry and Gender
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: A literature course in contemporary multicultural poetry, with a focus on gender issues. “A new kind of man/a new kind of woman,” (in the words of poet Muriel Rukeyser) names a central theme of 20th century American literature and life the re-imagining of women’s and men’s lives. Students examine poets’ perspectives of gender shifts.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-337:
+    code: HCOM 337
+    title: Women’s Literature
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines, through literature, how women writers are rewriting the myths and scripts of their/our lives, and how writing is a way of taking action. Explores how women have moved from repression to resistance, from silence to voice, from socially constructed divisiveness toward community.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-338:
+    code: HCOM 338
+    title: Multicultural Adolescent Lit
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines multicultural adolescent literature through the study of issues related to identity, race, culture, equity, and social justice/injustice over time. In particular, the course will provide opportunities to discuss the difficulties that young people have in coming to terms with these complicated issues. Required course for the Single Subject in English Waiver concentration, meeting the Multicultural Adolescent Literature Requirement.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   AArea 1A and 1B and 1C with a C- or better)"
+  HCOM-339S:
+    code: HCOM 339S
+    title: Creative Writing and Service Learning
+    teachingStatus: active
+    credits:
+      minimum: 5
+      maximum: 5
+    description: Develops service learning sensitivity, creative writing competency and craft. Students develop original pieces and age-appropriate interdisciplinary creative projects for SL partners in the schools.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  HCOM-340S:
+    code: HCOM 340S
+    title: Topics in Social Movements Service Learning
+    teachingStatus: active
+    credits:
+      minimum: 5
+      maximum: 5
+    description: Engages topical study of social movements in the service learning environment. Introduces various models of political organizing in movements that have addressed societal inequities from class, race, ethnic, gender, sexual orientation, and other positionalities, and students apply these models to contemporary problems of inequity. The service learning component connects students with community organizations in order to be participant observers in contemporary organizing strategies.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  HCOM-341:
+    code: HCOM 341
+    title: Poetry & Pop Culture
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: An intermediate poetry class in which students examine the relationship between poetry and popular culture. Students will read and write within the landscape of pop-culture poetics and will develop an in-depth knowledge of the influence that media, music, popularity and style have in relation to contemporary poetry. With use of elements of craft, students will foster the skills to compose original works that exist as a part of the literary discussion of pop-culture poetry today.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: HCOM-330
+                minimumGrade: C-
+              - courseId: HCOM-339S
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( HCOM 330   or HCOM 339S   ) and ( GE   Area 1A and 1B and 1C) with a C- or better]"
+  HCOM-342:
+    code: HCOM 342
+    title: Feminist Theories & Methods
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores modes of analysis that engage the intersectionality of gender, sexuality, race/ethnicity, economic class, and (dis)ability. Readings and activities will ponder the ways that different feminist theoretical paradigms work to advance social justice.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-343:
+    code: HCOM 343
+    title: Race and Gender Justice
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course examines how social and cultural contexts impact the formation and enforcement of laws, policies, and legal doctrine. We ask, how does the law define criminals, families, citizens, the nation, and gender? Rather than being clear-cut and timeless, the law defines these categories in ways that are racialized, gendered, classed, and historically contingent. Within this context, we examine how different racialized and gendered communities are denied, seek, and achieve justice.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  HCOM-344:
+    code: HCOM 344
+    title: Chicana/Latina Experiences
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Offers an intensive introduction to the roots, forms, and impacts of Chicana and Latina feminist discourses. Explores critical analyses of historical and contemporary Chicana/Latina life experiences while presenting theoretical frameworks such as transnationalism, intersectionality, and gender studies.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-345:
+    code: HCOM 345
+    title: Chicanx Life & Culture
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Intensive introduction to Chicanx and Latinx cultural formations and experiences that have contributed to the shaping of Chicanx and Latinx communities and identities.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-346:
+    code: HCOM 346
+    title: African American Life/History
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: An introduction to the historical and cultural narratives that shape African American identities and experiences. The course focuses on such themes as African roots of African-American culture, freedom and inequality, black folklore and artistic expressions, migration, family and kinship, community and identity.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-348:
+    code: HCOM 348
+    title: Race, Colonialism, and Film
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students analyze the ways that film and literature have portrayed issues of colonialism, post-colonialism, race, culture, equity, power relationships, and identity. Includes films and literature from various countries and time periods and examines historical, social, political, and artistic backgrounds for each text.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-349:
+    code: HCOM 349
+    title: Environmental Philosophy and Communication
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This class explores diverse environmental philosophies, and traces contemporary environmental groups’ use of strategic communication. We study digital campaigns, branding tactics, public education programs, and theories of environmental justice. The course highlights a range of regional, national, and global case studies such as food systems, gas pipeline construction, commercial fish farms, climate change, and freshwater politics. Emphasizes the rhetorical foundations of environmental thought.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-350S:
+    code: HCOM 350S
+    title: Oral Hist/Comm Mem SL
+    teachingStatus: active
+    credits:
+      minimum: 5
+      maximum: 5
+    description: Through the intersection of Oral History and Service Learning theories, methods, practices, and reflections HCOM 350S is designed to address the gathering, exploration, and representation of individual and collective memory. The course seeks to foster greater cross-cultural awareness and a more inclusive public appreciation of the past, present, and future of interconnected cultural communities. This class is part of a multi-year oral history project to record and preserve local history and memory.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  HCOM-352:
+    code: HCOM 352
+    title: History According To Movies
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Critical examination of how historical subjects, people, places and events have been depicted in film. Explores such themes as the politics of representation and the role of film in shaping historical memory.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-353:
+    code: HCOM 353
+    title: California At Crossroads
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Critical historical examination of contemporary issues shaping 21st century California, such as cultural diversity, immigration, the state’s relationship to the global economy and the environment.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  HCOM-354:
+    code: HCOM 354
+    title: Critical Public Histories
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Through partnership with local organizations and hands-on research projects, explores the theory and practice of public history through a critical examination of historical interpretation as framed for diverse public audiences in archives, museums, tourist sites, historic preservation efforts and in popular media representations.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-356:
+    code: HCOM 356
+    title: Digital Multicultural U.S. Histories
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Critically examines multicultural histories of the United States using the tools of the digital humanities.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: ( GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-357:
+    code: HCOM 357
+    title: Constitutional Law
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduction to constitutional law through an in-depth examination of select U.S. Supreme Court cases. Close attention to how constitutional law has shaped and been shaped by the experience of ordinary people and the impact of the court’s decisions on the social, political, and economic histories of the United States from a multicultural perspective. Offers built-in assessment in the concentration Pre-Law.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-358:
+    code: HCOM 358
+    title: Critical Perspective on Law in Society
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Broadly introduces law in society from interdisciplinary global perspectives. Focuses on intersections of law with everyday life and how law is shaped by and shapes its social context. Special attention to how race, ethnicity, class, gender and sexual orientation relate to law and legal systems.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-359:
+    code: HCOM 359
+    title: Law, Politics and LGBTQ History
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines multicultural and intersectional histories of gay, lesbian, bisexual, transgender, and queer people and communities in the United States. Emphasis on the social, political and legal dimensions of those histories.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-361:
+    code: HCOM 361
+    title: Crime and Communities
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores relationship of the criminal justice system to various kinds of communities; includes a focus on the intersection of criminal justice with race, ethnicity, class, age, sexuality, sexual orientation, and gender identity.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-362:
+    code: HCOM 362
+    title: Constitutional History
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Intensive study of the U.S and California Constitutions from a historical perspective, focusing on the relationship of social, political, and economic transformation to constitutional jurisprudence. The course explores the relationship of the states to the federal government, civil rights and liberties, and the contested meanings of freedom, liberty and equality under the law. Provides opportunities for students to use historical perspectives to understand and advocate for solutions connected.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  HCOM-363:
+    code: HCOM 363
+    title: Topics in Social History
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Often described as history from the bottom up, social history has become critical to how many historians have approached the history of ordinary people. This course introduces students to commonly used theories, methods and practices in social history scholarship and historical writing with a primary emphasis on the history of the United States.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-365:
+    code: HCOM 365
+    title: Chicanx Latinx History
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Advanced introduction to the historical experiences of people of Mexican and Latin American descent in the U.S. Explores a variety of forces which have shaped and continue to shape the lives of these communities. Emphasizes the historical and sociological method used to analyze these experiences, with primary focus on the 20th century.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-366:
+    code: HCOM 366
+    title: History of Religion in the United States
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduce students to the history of various religious traditions in the United States, particularly the intersection of religion with nationalism, legal and political institutions, identity formation, and the struggle over the meaning of religion in diverse multicultural communities.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-367:
+    code: HCOM 367
+    title: Gender and United States History
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course explores the role of gender in shaping the historical experiences and analysis of those experiences by historians of the United States with an emphasis on the intersection of gender with other social categories, including race, ethnicity, class, and sexual orientation among others.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-368:
+    code: HCOM 368
+    title: U.S. Civil War and Reconstruction
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "This course explores the causes, course, and consequences of the American Civil War, from the 1840s to 1877, organized around four broad themes: the crisis of union and disunion in an expanding republic; slavery, race, and emancipation; the experience of modern, total war for individuals and society; and the political and social challenges of Reconstruction. The course explores national, sectional, racial, constitutional, individual, social, intellectual, and/or moral dimensions of the period."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-369:
+    code: HCOM 369
+    title: Asian American History
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: A survey of the major events, people, places and themes that have shaped Asian migration, racialization and resistance in the U.S. from the 1800s to the present. Provides both macro and micro vantage points, both national and transnational, revealing how changes in the world economy, legislation and racial attitudes reveal the interconnectedness between different Asian groups, between Asians and other groups and possibilities for conflict, resistance and agency in different historical contexts.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  HCOM-370:
+    code: HCOM 370
+    title: Media and the Military
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course is designed to provide both practical and theoretical frameworks in which to analyze communication and media work with the U.S. military. Students who wish to pursue careers in media, or with the military will learn practical skills for navigating media issues with the U.S. military. The course also is suitable for those who wish to participate in theoretical discussions about media representation of the military and military topics such as gender, race, and sexuality.
+    offered:
+      terms:
+        - fall
+  HCOM-371:
+    code: HCOM 371
+    title: Community Journalism Studies
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course explores the roles we play today as both consumers and producers of media across multiple platforms. Students engage in the study of journalism’s role in reflecting a community voice and facilitating dialogue for community betterment, and are introduced to the craft of journalistic storytelling.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-372:
+    code: HCOM 372
+    title: Social Media Theory and Practice
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: An introduction to the history, theory, technology, and uses of social media, using both research-based and practical approaches. The class will draw from science and technology studies, communication theory, cultural studies, and media studies to critically evaluate the impact of social media on relationships, activism, branding, politics, news media, and identity. Students will study and use a variety of digital social networks (commercial social media platforms, blogs, wikis, and forums) and examine and utilize the commercial and marketing applications of those networks. They will understand the landscape of social media, learn best practices, and create and propagate content.
+    offered:
+      terms:
+        - spring
+  HCOM-373:
+    code: HCOM 373
+    title: Introduction to Public Relations
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces students to the history, evolution, principles and basic practices of modern public relations. Students study theories of the public and public relations and build skills in crafting and distributing effective communication campaigns.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-374:
+    code: HCOM 374
+    title: Popular Culture & Social Change
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course explores popular culture as a force that both reflects and shapes social change. Through film, television, music, fashion, memes, and digital platforms, students examine how popular culture negotiates questions of identity, power, and ideology in everyday life. Readings and case studies highlight how popular culture participates in movements for social justice, reproduces or resists systems of inequality, and circulates globally across different cultural contexts. Students will engage with cultural theory while analyzing how audiences and fan practices transform pop culture into a site of creativity, resistance, and community.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  HCOM-381:
+    code: HCOM 381
+    title: Periodismo en Español / Journalism in Spanish
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: In this course students learn the process of bilingual reporting, develop writing skills in the Spanish language, and produce digital content within the contexts of journalism, public relations, and organizations-both local and global-that focus on Spanish-speaking communities. Students report stories, engage with diverse voices, and create media content, all while developing their cultural and linguistic competence. This course is taught in Spanish.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-201
+            minimumGrade: C-
+          - courseId: SPAN-340
+            minimumGrade: C-
+          - courseId: SPAN-212
+            minimumGrade: C-
+          - courseId: SPAN-312
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 201   or SPAN 340   or SPAN 212   or SPAN 312   with a C- or better)"
+  HCOM-383:
+    code: HCOM 383
+    title: Genres of Social Justice Writing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Intermediate level writing and research course where students engage in theory and practice of professional and technical genres for social advocacy. Students use primary and secondary research methods and collaborate to produce proposals, reports, visual and multimedia communication, and other professional and technical texts for community advocacy and outreach.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-387:
+    code: HCOM 387
+    title: Media Technology
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course introduces students to the technology used in modern journalism. This includes mobile reporting, social media, podcasting and other digital tools for reporting and community engagement.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-388:
+    code: HCOM 388
+    title: Pathways to Public Service
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course provides students an opportunity to explore pathways in public service and a career in government, public sectors, and nonprofit organizations. Topics include an introduction of public service work, how to prepare for public service jobs, the application process, professional development in the career path, as well as the social impact of public service work on our local communities.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Areas 1A and 1B and 1C with a C- or better)"
+  HCOM-390:
+    code: HCOM 390
+    title: Magazine Writing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Prepares students to report and write magazine articles about social issues. Outcomes include learning intermediate journalistic and creative nonfiction interviewing, reporting techniques, and writing short feature and in-depth magazine stories. Focuses on training students to create a magazine story from conception and pitch, through delivering the final copy for publication.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-391:
+    code: HCOM 391
+    title: Race and Ethnicity in the United States
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course examines race and ethnicity, and the experiences of people of color in the United States. The course is intersectional and transnational, reflecting the global context of the U.S., and engaging other social categories such as class, gender, sexuality, and ability in studying people¿s experiences. Various ways race and ethnicity operate in culture and social life are surveyed, highlighting culture, institutions, and everyday life as sites where racial and ethnic dynamics are seen. (Crosslisted/Equivalent with ES 391   )
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  HCOM-395:
+    code: HCOM 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Humanities and Communication.
+    offered:
+      availability: periodic
+  HCOM-395S:
+    code: HCOM 395S
+    title: Special Topic:Service Learning
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: With faculty sponsorship and oversight, students design, develop, and teach a particular topic in Human Communication.
+    offered:
+      terms:
+        - spring
+  HCOM-396:
+    code: HCOM 396
+    title: Field Studies
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Opportunities for independent field research projects involving oral history, social action writing, archival research, or investigative journalism.
+    offered:
+      availability: periodic
+  HCOM-397:
+    code: HCOM 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      terms:
+        - fall
+        - spring
+  HCOM-397S:
+    code: HCOM 397S
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      terms:
+        - fall
+        - spring
+  HCOM-398:
+    code: HCOM 398
+    title: Legal Studies Internship
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Opportunity for independent internship involving any area of legal studies.
+    offered:
+      terms:
+        - fall
+  HCOM-399:
+    code: HCOM 399
+    title: Pathways to the Legal Profession
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course provides students an opportunity to explore pathways to law school and a career in the legal profession. Topics include a critical look at the role of lawyers in society, how to prepare for law school, the application process, and the Law School Admissions Test (LSAT), as well as what to expect from the law school experience and what it means to practice law in such areas as civil litigation, criminal justice, civil legal aid, and others.
+    offered:
+      terms:
+        - fall
+  HCOM-400:
+    code: HCOM 400
+    title: Immigration Law
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course offers an overview of immigration law in the U.S and current issues related to immigration justice such as the border wall and migrant camp. It introduces the history of immigration law and its constitutional base, including the discrimination ones, as well as different categories of immigration laws, regulations, and landmark cases. It covers basic processes of naturalization, admission, expatriation, and deportation by different federal agencies. The course introduces different types of visas, and their relationships to legal/illegal status in the U.S. Students will learn key terms, legal cases, and laws related to immigrant rights. The course also offers helpful information (“not legal advice”) about DACA undocumented students’ rights to education and equal opportunities. The course reviews U.S. laws that protect human rights and provide humanitarian relief through asylum and refugee. Students will deepen their understanding of immigrants’ contribution to this nation, raise awareness and judgment on immigration justice, and be familiar with important immigration laws and regulations.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Areas 1A and 1B and 1C with a C- or better)"
+  HCOM-401:
+    code: HCOM 401
+    title: Real Property Law in California
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course provides an advanced overview of real estate laws in California, and its relationship to housing crises throughout the state’s history. This course covers key topics in real estate laws, including real property rights, different types of real estate, sales contract, land transaction process, government policies, marketing, mortgage, rental laws, and real estate licensing laws. Students will acquire essential knowledge of real estate terms and definitions, such as deed, zoning, escrow, and CC&R. Students will also obtain skills to detect, study, and solve social justice issues in real estate including housing shortage, gentrification, and discrimination. This course can meet the 45 hour course requirement by California Department of Real Estate as the elective (along with two other 45 hour courses - Real Estate Principle and Real Estate Practice, can be taken online or at community colleges), to be eligible to take the California real estate salesperson exam.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Areas 1A and 1B and 1C with a C- or better)"
+  HCOM-403:
+    code: HCOM 403
+    title: Ethics and Communication
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course examines theories, perspectives, and practices that address ethical implications of communication in a variety of contexts.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-404:
+    code: HCOM 404
+    title: Restorative Justice
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students explore diverse models of justice as philosophies and practices. The epistemological, ethical, political, and spiritual dimensions of restorative justice are studied in cross-cultural contexts.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-405:
+    code: HCOM 405
+    title: Philosophy and Sexualities
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students explore the social construction of sexuality. Epistemological, ethical, political, and spiritual dimensions of sexuality are studied in cross-cultural contexts.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-406:
+    code: HCOM 406
+    title: Philosophy According to Movies
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces classical philosophical questions, such as the nature of good and evil, reality, and efforts to understanding self and community, through stories and film. Visual media integrate with classical and contemporary readings in philosophy enabling students to learn about the problems, methods and insights in philosophical analysis.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-408:
+    code: HCOM 408
+    title: Fact or Fiction?
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students will develop skills in media literacy to better determine the validity of news sources and information, with special attention given to online sources. Local, national and global topics and news sources will be explored to broaden students’ information gathering practices. Students will analyze how events impact their daily lives.
+    offered:
+      terms:
+        - fall
+        - spring
+  HCOM-409:
+    code: HCOM 409
+    title: Communication Theory
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students will learn theories of human communication, mass communication, new media and technology. Focus is on the relationships among communication theory, research, and practice. Topics include intra- and interpersonal communication, public communication, mass media, and contemporary issues associated with mediated communication. This is a research/theory intensive course.
+    offered:
+      terms:
+        - fall
+  HCOM-410:
+    code: HCOM 410
+    title: Public Relations Ethics and Practices
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students study public relations models and theories, as well as practical public relations skills to better interact with myriad publics. Participants explore multiple ethical frameworks and apply them to the numerous issues facing public relations professionals.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-411:
+    code: HCOM 411
+    title: Media Law and Policy
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students develop an understanding of laws and policies regulating media industries, and those related to the public as both producers and consumers of media content, by examining legal cases and contemporary case studies. The course covers the 1st Amendment, the FCC, defamation, privacy, fair use, social media and more.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-412:
+    code: HCOM 412
+    title: Multicultural Conflict Resolution
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores theories and methods of conflict resolution. Participants apply multicultural approaches to problem solving in personal, professional, and social contexts.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-419:
+    code: HCOM 419
+    title: Digital Publishing Practicum
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course provides a combination of theoretical background and practical experience in scholarly journal editing and publishing. Students will work collaboratively to produce Writing Waves, a writing-research journal and HCOM GE   A2 course text. Students will engage in all aspects of the production of the journal include soliciting and evaluating submissions, editing, proofreading, document design, marketing, publicity, research, web design, and public relations, among others.
+    offered:
+      terms:
+        - spring
+  HCOM-420:
+    code: HCOM 420
+    title: Advanced Studies in Rhetorical Theory
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students interpret, analyze, and evaluate a selection of rhetorical theories or theoreticians in comparative, cultural, global, historical, and political frameworks. They consider their roles as practitioners, consumers, and critics of rhetoric; they apply elements derived from their study of the theories to rhetorical topics. The specific content will vary each semester.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-422:
+    code: HCOM 422
+    title: SelTop Multicultural Rhetorics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores in-depth a selection of one or more rhetorical traditions outside the traditional Western rhetorical canon; utilizes interdisciplinary methodologies to investigate and analyze the cultural concept and role of rhetoric in relationship to epistemology, ethics, spirituality, economics, and politics; examines developments in cultural rhetorical traditions in relationship to cross-cultural encounters, including but not limited to colonialism and postcolonialism.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-423:
+    code: HCOM 423
+    title: Religion and Public Life
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: In this course, we will examine ways in which religion plays a significant role in public life, constituting both community and controversy in various contexts. We will use rhetorical and critical cultural studies perspectives to analyze explicit and implicit connections between religion and our political and social institutions and practices.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-424:
+    code: HCOM 424
+    title: Latin American Media and Pop Culture
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: A bilingual English/Spanish course that explores the role and impact of multiple media platforms and cultural products in Latin America, along with the intersecting political and social movements, and technological advancements. Through an interdisciplinary framework students will critically examine mass media and pop culture in the 20th and 21st centuries and advance their Spanish language skills through readings, discussion, lecture and writing.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-426:
+    code: HCOM 426
+    title: Travel Narratives
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Travel narratives have played a powerful role in shaping social inequality by relating journeys to home audiences, portraying the “other,” and revealing the culture and “self” of the traveler. This course examines the historical, literary, and cultural significance of narratives that convey and reinforce themes of discovery, conquest, colonization, exploration, and tourism in the Americas.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "[Prereq: (Junior or Senior Standing) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+    minimumStanding: junior
+  HCOM-427:
+    code: HCOM 427
+    title: Survey of British Literature
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Examines representative works by British writers from different periods: Medieval, Renaissance, Neo-Classical, Romantic, Realist, Modern and Post-Modern."
+    prerequisiteNotes:
+      - "(Prereq: GE   AArea 1A and 1B and 1C with a C- or better)"
+  HCOM-428:
+    code: HCOM 428
+    title: Contemporary Chicana Poetry
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Analyzes the works of Chicana poets of the 20th and 21st centuries, among them Lorna Dee Cervantes, Pat Mora, Ana Castillo, Sandra Cisneros, Demetria Martinez, and Diana Garcia. From the rural to the urban experience, students study the historical, cultural, and political determinants that define the work as Chicana.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-429:
+    code: HCOM 429
+    title: BritLit& Engl Lang Perspective
+    teachingStatus: active
+    credits:
+      minimum: 6
+      maximum: 6
+    description: Examines works by British writers from Anglo-Saxon, Medieval, Renaissance, Neo-Classical, Romantic, Realist, Modern, and Post-Modern literary periods. Explores literature as both literary and linguistic text. Applies postcolonial approaches to literature and explores current linguistic theories and sociolinguistic approaches.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-430:
+    code: HCOM 430
+    title: Literary Journal Publication
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Students will learn all aspects of literary journal publication, including calls for submission, thematic focus, editorial practice, layout, publication and marketing. Students will produce an edition of the campus literary journal, In the Ords.
+    offered:
+      availability: periodic
+  HCOM-432:
+    code: HCOM 432
+    title: Social Action Writing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: An intermediate level creative writing and research intensive course. Students do collaborative research and interviews in the community. They create poetry, fiction, creative nonfiction, and mixed media work towards a final public presentation.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: HCOM-330
+                minimumGrade: C-
+              - courseId: HCOM-339S
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( GE   Area 1A and 1B and 1C) and ( HCOM 330   or HCOM 339S   ) with a C- or better)]"
+  HCOM-432S:
+    code: HCOM 432S
+    title: Social Action Writing SL
+    teachingStatus: active
+    credits:
+      minimum: 5
+      maximum: 5
+    description: Intermediate level Service Learning creative writing course in which students apply craft to a particular public issue, responding to a community need. Students do collaborative research and interviews, co-creating knowledge with community. They produce poetry, fiction, and creative nonfiction, and visual representations of their writings. End-of-semester project is used to engage and educate a larger audience.
+    offered:
+      availability: periodic
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: HCOM-330
+                minimumGrade: C-
+              - courseId: HCOM-339S
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: (Junior or Senior Standing) and ( GE   Area 1A and 1B and 1C) and ( HCOM 330   or HCOM 339S   ) with a C- or better]"
+    minimumStanding: junior
+  HCOM-433:
+    code: HCOM 433
+    title: Life Histories & Creative Narrative
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Multicultural approaches to the study and creation of life histories including analyzing narratives, informed creative storytelling, oral history, and public interpretation.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: GE   AArea 1A and 1B and 1C with a C- or better)"
+  HCOM-434:
+    code: HCOM 434
+    title: Creative Publishing and Critical Storytelling
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: An advanced course in the creation of journalistic products that critically explore contemporary topics and public issues. These productions, strategically designed for community engagement, include interactive visual stories, podcasts, and infographics.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-435:
+    code: HCOM 435
+    title: Community Media Project
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores the technical, journalistic, and social empowerment aspects of mass media products. Students help a community group create a media project, such as a newsletter, public service campaign, or website. Outcomes include applying advanced concepts of visual communication and journalistic production, as well as digital media techniques.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-436:
+    code: HCOM 436
+    title: Literature of Sexualities
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students analyze literary criticism that offers criteria for defining straight, cisgender, asexual, gay, lesbian, bisexual, intersex, transsexual, transgender and other sexual ways of being in literary tradition(s). We explore canonized, non-canonical, and marginalized texts in relationship to issues of sexuality and authorship, content, genre, and form. As well, students come to understand the long-standing politicization and censorship of the sexualized body in literature.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-437:
+    code: HCOM 437
+    title: Shakespeare
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Analyzes Shakespeare’s plays from classical, modern, postmodern, and postcolonial perspectives, and meanings in the colonial and postcolonial world. Covers Shakespeare’s plays from comedies and histories to tragedies and romances. Explores the symbiotic relationship between literature and film.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-439:
+    code: HCOM 439
+    title: Page to Stage
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: An introduction to the art of spoken word and reading/performing poems. Including dramatic techniques, theatrical methods, voice control, public speaking, slam, collaboration and writing with an audience in mind. This course will examine the works of accomplished spoken word artists and will call on students to produce, workshop and perform their own poems. This course will shatter the wall between page and stage and will in fact, link the two!
+    offered:
+      terms:
+        - spring
+  HCOM-440:
+    code: HCOM 440
+    title: Leadership and Multicultural Communities
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Study of leadership theories and practices within multicultural settings. Explores how cultural values and worldviews shape leadership definitions, styles, and communication. Emphasis on deliberative and decision-making processes, conflict resolution, and ethics.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-443:
+    code: HCOM 443
+    title: Black Feminist Theory & Praxis
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores the development of black feminism as both a conceptual framework and from a political practice. Examines black feminism from a comparative perspective and within a global context. Special attention will be given to black feminist thought and activism in Africa, the United States, England, and Brazil.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-445:
+    code: HCOM 445
+    title: Slavery & Race in the Americas
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines the cultural, social, and political dimensions of slavery and race relations in Latin America, the Caribbean, and the United States. Readings and class discussions explore the development of slavery in countries such as Cuba, Haiti, and Brazil. Examines the impact of nationalist ideologies on contemporary racial dynamics in the region.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-451:
+    code: HCOM 451
+    title: Transnational Migrations
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines recent theories related to migration including nationalism and the nation, transnationalism, diaspora, borders/borderlands, and globalization. Surveys key theories and compares histories of specific transnational communities, focusing primarily on migrations between Asia/Asia Pacific and the Americas.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-452:
+    code: HCOM 452
+    title: Literature Into Film
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course explores how filmmakers translate literature into film, including depiction of characters, genres, and specific texts. Addresses how both literature and films examined represent race, ethnicity, class, gender, sexuality, ability and other social identities; evaluates strengths and limitations of each form.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-454:
+    code: HCOM 454
+    title: History of Victorian Britain
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course examines the key social and ideological influences that shaped the dominant concerns of Victorian Britain. Among these concerns are the roles of men and women, industrialization, class struggle, sexuality, racial difference, poverty and disease, education, and social change. Drawing on a wide range of textual evidence, the course provides opportunities to explore and apply methods of socio-cultural historical research.
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-455:
+    code: HCOM 455
+    title: Paradigms Of Chicanx Comm
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores emerging intellectual paradigms in the Chicanx community and traces their antecedents and relationships. Provides an intensive foundation in Chicanx studies theory and emergent issues.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-470:
+    code: HCOM 470
+    title: Graduate Admissions Workshop
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Students will get specialized mentoring in preparation for graduate school admissions to have a better understanding of the types of graduate programs that align with an interdisciplinary major. Students will prepare or revise writing samples, statements of purpose and applications.
+    offered:
+      availability: periodic
+  HCOM-471:
+    code: HCOM 471
+    title: Professional Writing Workshop
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: In this course, students will be able to strengthen their writing skills for a variety of professional contexts. They will learn how to write cover letters, white papers, and business emails, while developing their academic writing. They will also have the opportunity to workshop writing assignments for other classes during the semester.
+    offered:
+      terms:
+        - fall
+        - spring
+  HCOM-474:
+    code: HCOM 474
+    title: Practical Research Skills
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Students will develop research skills that help them solve real-world issues and problems. Students will develop their critical thinking and communication skills, as well as how to ask meaningful questions, evaluate sources, synthesize and integrate information to communicate to a broad audience.
+    offered:
+      terms:
+        - fall
+  HCOM-475:
+    code: HCOM 475
+    title: Senior Capstone
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students examine a select theme and produce a major senior project integrating that theme with their overall studies in the HCOM major. Students present their project in a public Capstone Festival. Required for all HCOM majors.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: HCOM-300
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: HCOM 300   with a C- or better)"
+  HCOM-476:
+    code: HCOM 476
+    title: Advanced Public Speaking Workshop
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: In this course, students will be able to strengthen their public speaking skills for a variety of professional contexts. They will learn how to craft and deliver presentations in face-to-face and digital formats. They will also have the opportunity to workshop speaking assignments for other classes during the semester.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1C with C- or better)"
+  HCOM-477:
+    code: HCOM 477
+    title: Communication in Everyday Life
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Students will further develop skills for facilitating successful interpersonal and small group communication in a professional, educational, family or social setting. Interpersonal language skills, active listening, nonverbal communication, the role of communication in conflict, and the power of effective communication to strengthen interpersonal relationships and to build cultural competencies are emphasized.
+    offered:
+      terms:
+        - fall
+        - spring
+  HCOM-486:
+    code: HCOM 486
+    title: HCOM Internship
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Independent internship working in sites relevant to disciplines in the Humanities and Communication. Students experience 60 hours at the site.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Instructors Consent Required)
+  HCOM-487:
+    code: HCOM 487
+    title: HCOM Internship
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Independent internship working in sites relevant to the disciplines in the Humanities and Communication. Students experience 30 hours at the site.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Instructor Consent Required)
+  HCOM-488:
+    code: HCOM 488
+    title: Investigative Reporting
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Prepares students to conduct in-depth and investigative reporting. Outcomes include learning advanced journalistic interviewing techniques, information gathering, and critical understanding of news sources. Focuses on the journalistic exploration of current social, economic, political, and environmental issues. Requires instructor consent.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HCOM-495:
+    code: HCOM 495
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Humanities and Communication. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  HCOM-496:
+    code: HCOM 496
+    title: Field Studies
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Opportunities for independent field research projects involving oral history, social action writing, archival research, or investigative journalism.
+    offered:
+      availability: periodic
+  HCOM-497:
+    code: HCOM 497
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      terms:
+        - fall
+        - spring
+  HCOM-498:
+    code: HCOM 498
+    title: Legal Aid Internship
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Internship with a legal aid organization in the local community. Explores such issues as legal ethics, the justice gap and access to legal services while providing hands on training.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "[(Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior

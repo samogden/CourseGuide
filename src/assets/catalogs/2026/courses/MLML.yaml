@@ -1,0 +1,678 @@
+schemaVersion: 1
+prefix: MLML
+courses:
+  MLML-405:
+    code: MLML 405
+    title: Marine Science Diving
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "MS 105: Marine Science Diving - Skin and SCUBA diving course. Pool training culminates in ten ocean dives. Topics covered include diving physics, physiology, diving environments, night diving, and research diving. Successful completion gives NAUI and MLML certification. Not for major credit. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: Senior or Graduate Standing)"
+  MLML-503:
+    code: MLML 503
+    title: Marine Ecology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 103: Marine Ecology- Field-oriented introduction to the interrelationships between marine and estuarine organisms and their environment; emphasis on quantitative data collection and analysis. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: Senior or Graduate Standing)"
+  MLML-512:
+    code: MLML 512
+    title: Marine Birds and Mammals
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 112: Marine Birds & Mammals - Systematics, morphology, ecology, and biology of marine birds and mammals. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+  MLML-513:
+    code: MLML 513
+    title: Marine Ichthyology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 113: Marine Ichthyology - A description of the taxonomy, morphology, and ecology of marine fishes. Field and laboratory work concentrate on the structure, function, and habits of marine fishes and the ecological interactions of these fishes with their biotic and abiotic surroundings. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Senior or Graduate Standing)"
+  MLML-514:
+    code: MLML 514
+    title: Physical Ecology of Marine Animals
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 114: Physical Ecology of Marine Animals - This course examines the adaptations that animals have evolved to live in marine environments to deal with environmental gradients in water, temperature, salinity, oxygen, exercise, and nutrients as well as short-term physiological responses to environmental changes. Topics covered include energy metabolism, sensory systems, respiration, circulation, thermoregulation, osmoregulation. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "[Prereq: (Instructor Consent) and (Introductory Biology) and (an upper-division vertebrate biology course, e.g. physiology, ecology, or similar)]"
+  MLML-524:
+    code: MLML 524
+    title: Marine Invertebrate Zoology I
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 124: Marine Invertebrate Zoology I - A field-oriented introduction to the structure, systematics, evolution, and life histories of the major and minor marine phyla. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Senior or Graduate Standing)"
+  MLML-525:
+    code: MLML 525
+    title: Mar Invert Zoo II
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 4
+    description: "MLML125: Marine Invertebrate Zoology II - A field-oriented introduction to the structure, systematics, evolution, and life histories of the minor invertebrate phyla. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Instructor Consent Required)"
+  MLML-531:
+    code: MLML 531
+    title: Marine Botany
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 131: Marine Botany - Covers plants of the sea, marshes, and dunes emphasizing the morphology, taxonomy, and natural history of seaweeds and vascular plants. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior or Post Bac or Graduate Standing)"
+  MLML-535:
+    code: MLML 535
+    title: Physiology of Marine Algae
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 135: Physiology of Marine Algae - Students gain an understanding of the adaptations of marine algae to their environment. Requires field trips for specimen collection and shipboard experiments. Focuses on the biology of seaweeds and phytoplankton. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior or Post Bac or Graduate Standing)"
+  MLML-541:
+    code: MLML 541
+    title: Geological Oceanography
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 141: Geological Oceanography - A study of the structures, physiography, and sediments of the sea bottom and shoreline. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: Senior or Graduate Standing)"
+  MLML-542:
+    code: MLML 542
+    title: Physical Oceanography
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 142: Physical Oceanography - An introduction to the nature and causes of various oceanic motions, including currents, waves, tides, and mixing; and the physical properties of seawater. Limited use of calculus. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior or Post Bac or Graduate Standing)"
+  MLML-543:
+    code: MLML 543
+    title: Chemical Oceanography
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 143: Chemical Oceanography - An introduction to the theoretical and practical aspects of the chemistry of the oceans including major salts, dissolved gases, nutrient ions, carbonate system, transient tracers, and shipboard sampling techniques. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "[(Prereq: (Senior or Graduate Standing) and (Instructor Consent Required)]"
+  MLML-544:
+    code: MLML 544
+    title: Biological Oceanography
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 144: Biological Oceanography - The ocean as an ecological system. Emphasis is on the complexity of environmental influences on plankton, the transfer of organic matter between trophic levels, and nutrient cycles. Laboratory sessions include methods in sampling, shipboard techniques, identification of the plankton, and current analytical techniques. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Senior or Graduate Standing)"
+  MLML-575:
+    code: MLML 575
+    title: Topics in Marine Science
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: "MS 575: Topics in Marine Science - The study of a selected area in the marine sciences. The subjects vary depending on student demand and availability of instructors. Can be repeated for credit when topics change. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "[(Prereq: (Senior or Graduate Standing) and (Instructor Consent)]"
+  MLML-580:
+    code: MLML 580
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: "MS 180: Independent Study. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Senior or Graduate Standing)"
+  MLML-601:
+    code: MLML 601
+    title: Library Research Methods in Marine Science
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: "MS 201: Library Research Methods in Marine Science - Students gain an advanced understanding of the nature of scientific information. Lectures, discussions, and assignments provide the framework for using and evaluating a variety of information sources in marine and ocean sciences. Strong emphasis placed on developing critical skills to interweave knowledge of the history of science into the context of bibliographic tools including the digital realm. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Senior or Graduate Standing)"
+  MLML-602:
+    code: MLML 602
+    title: Oceanographic Instrumentation
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 202: Oceanographic Instrumentation - Principles of instruments used in oceanographic research, introduction to electronics, and applications of instrument measurements. Emphasis varies from CTD profilers, current meters, radiometry, and chemical measurement. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "[(Prereq: (Senior or Graduate Standing) and Instructor Consent Required)]"
+  MLML-603:
+    code: MLML 603
+    title: Advanced Marine Ecology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 203: Advanced Marine Ecology is the study of factors determining the distribution and abundance of marine organisms. This course focuses on the major ecological processes determining the structure and diversity of species assemblages at several scales, primarily at that of the community. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "[Prereq: (Instructor Consent Required) and Graduate Standing and (Ecology and Statistics)]"
+  MLML-604:
+    code: MLML 604
+    title: Sampling and Experimental Design
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 204: Sampling and Experimental Design. Basic design of experiments and field sampling. Biases and problems of sampling marine biota. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: MLML-603
+    prerequisiteNotes:
+      - "[(Prereq: (Graduate Standing) and ( MLML 603   )]"
+  MLML-605:
+    code: MLML 605
+    title: Aquaculture
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 205: Theoretical and technical aspects of commercial and conservation aquaculture including water quality, pathobiology, nutrition, physiology, reproduction, environmental impacts, and regulations. Includes field trips to aquaculture facilities and hands-on practice. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Graduate Standing) and (Instructor Consent Required)"
+  MLML-606:
+    code: MLML 606
+    title: Molecular Biological Techniques
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 206: Molecular Biological Techniques - A laboratory-based overview of concepts and techniques for the isolation, characterization, and analysis of DNA and RNA. An overview of standard methods (amplification, cloning, and sequencing), as well as selected specialized techniques (analysis of gene expression). Lectures focus on application in the marine sciences. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Senior or Graduate Standing)"
+  MLML-608:
+    code: MLML 608
+    title: Scientific Methods
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 208: Scientific Methods - Information and skills for graduate students beginning their research careers, such as the philosophy of science, scientific writing, design of experiments and sampling programs, and using the library and other resources. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "[(Prereq: (Senior or Graduate Standing) and (Instructor Consent Required)]"
+  MLML-610:
+    code: MLML 610
+    title: Advanced Marine Mammals, Birds & Turtles
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 210: Advanced Marine Mammals, Birds & Turtles. This course examines the biology of marine mammals, birds and turtles. Topics include systematics and evolution, adaptations to the marine environment, diving physiology and behavior, communication and echolocation, ecology, and conservation. This class consists of lectures, discussions of recent literature, and laboratory exercises. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB&rsquo;s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Graduate Standing)"
+  MLML-611:
+    code: MLML 611
+    title: Ecology of Marine Turtles, Birds, and Mammals
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 211: Ecology of Marine Turtles, Birds, and Mammals - Community approach to the ecology of marine birds and mammals using experimental sampling methodology. Examines the distribution, abundance, trophic ecology, and behavior of birds and mammals in Elkhorn Slough and Monterey Bay. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: MS-242
+              - courseId: MLML-642
+    prerequisiteNotes:
+      - "[Prereq: (Graduate Standing) and (MS 242 or MLML 642   )]"
+  MLML-612:
+    code: MLML 612
+    title: Advanced Topics in Marine Vertebrates
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 212: Advanced Topics in Marine Vertebrates - Advanced consideration of the ecology, physiology, and phylogeny of fishes, birds, reptiles, or mammals, emphasizing current literature and research. Topics and emphasis vary with term and instructor. May be repeated once for credit. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Senior or Graduate Standing)"
+  MLML-613:
+    code: MLML 613
+    title: Advanced Marine Ichthyology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 213: Advanced Marine Ichthyology - Advanced examination of: 1. Systematics and Taxonomy, 2. Structure, Function, and Physiology, 3. Habitats and Adaptations, and 4. Behavior, Life history, and Population Ecology. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures. MLML 503/MS 103 recommended as prerequisite."
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: MS-242
+          - courseId: MLML-642
+    prerequisiteNotes:
+      - "[Prereq: (Graduate Standing) and (MS 242 or MLML 642   recommended)]"
+  MLML-614:
+    code: MLML 614
+    title: Physiological Ecology of Marine Animals
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 214: Physiological Ecology of Marine Animals. Examines the adaptations animals have evolved to live in marine environments to deal with gradients in water, temperature, salinity, oxygen, exercise, nutrients as well as short-term physiological responses to environmental changes. Topics include metabolism, sensory systems, respiration, circulation, thermoregulation, osmoregulation. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "[Prereq: (Introductory Biology) and (An upper-division vertebrate biology course, e.g., physiology, ecology, or similar) and (Graduate Standing) and (Instructor Consent Required)]"
+  MLML-621:
+    code: MLML 621
+    title: Advanced Topics in Marine Invertebrates
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 4
+    description: "MS 221: Advanced Topics in Marine Invertebrates - Advanced considerations of the ecology, physiology, and phylogeny of the various invertebrate phyla emphasizing current literature and research. Topics and emphasis vary from term to term. May be repeated once for credit. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Instructor Consent)"
+  MLML-631:
+    code: MLML 631
+    title: Biology of Seaweeds
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 231: Biology of Seaweeds - Discussions on marine macroalgal biology with extensive reading of original literature. Ecologically oriented individual research projects involving laboratory culture and field experimentation. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Senior or Graduate Standing)"
+  MLML-633:
+    code: MLML 633
+    title: Advanced Topics in Marine Ecology
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: "MS 233: Advanced Topics in Marine Ecology - Selected topics and current issues in marine ecology. The subjects vary depending on student demand and availability of instructors. Can be repeated for credit when topics change. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: MS-242
+              - courseId: MLML-642
+    prerequisiteNotes:
+      - "[Prereq: (Graduate Standing) and (MS 242 or MLML 642   )]"
+  MLML-641:
+    code: MLML 641
+    title: Advanced Geological Oceanography
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 241: Geological Oceanography (also known as Marine Geology) is the study of the past and present geological processes that occur on earth’s largest habitat: the oceans. Topics covered include: types and composition of marine rocks and sediments, the shape of the ocean basins, processes occurring in the earth’s lithosphere and how they are interpreted within the broad theory of Plate Tectonics and interactions between geological processes, oceanography and biology in different marine habitats. Includes California’s regional geology with visits on local outcrops. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: Graduate Standing) and (Instructor Consent Required)"
+  MLML-642:
+    code: MLML 642
+    title: Advanced Physical Oceanography
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 242: Advanced Physical Oceanography. A comprehensive review of the physical processes involved in ocean transport and mixing on a global scale and in coastal regions. Laboratory component involves the collection, processing, and interpretation of oceanographic data. Students discuss recent scientific literature on the physical dynamics of the climate system and the role of physical processes in interdisciplinary problems in oceanography. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: Graduate Standing) and (Instructor Consent Required)"
+  MLML-643:
+    code: MLML 643
+    title: Advanced Chemical Oceanography
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 243: Comprehensive study of biogeochemical cycling in the oceans, including major salts, dissolved gases, nutrient ions, carbonate parameters, and transient chemical tracers. Students will participate in field expeditions and laboratory experiments to apply their knowledge to real-world oceanographic problems. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Graduate Standing) and (Instructor Consent Required)"
+  MLML-644:
+    code: MLML 644
+    title: Advanced Biological Oceanography
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 244: Advanced Biological Oceanography. Comprehensive study of the ocean as an ecological system. Emphasis on the complexity of environmental influences on plankton, the transfer of organic matter between trophic levels and nutrient cycles. Laboratory sessions include methods in sampling, shipboard techniques, identification of the plankton, and current analytical techniques. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Graduate Standing) and (Instructor Consent Required)"
+  MLML-646:
+    code: MLML 646
+    title: Geology of the Monterey Bay Region
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 246: Geology of the Monterey Bay Region - Geology, tectonics, and active naturally occurring processes in the Monterey Bay region and in the Monterey Bay National Marine Sanctuary. The geologic and tectonic history of Central California, plate tectonic processes, representative stratigraphy, and geomorphology of the Monterey Bay region. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "[(Prereq: (Senior or Graduate Standing) and (Instructor Consent Required)]"
+  MLML-648:
+    code: MLML 648
+    title: Marine Benthic Habitat Techniques
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 248: Marine Benthic Habitat Techniques. Collection and interpretation of geophysical data used to characterize marine benthic habitats. Basic geophysical principals will be reviewed. Application of techniques to identify and characterize marine benthic habitats, including echosounders, multibeam bathymetry and backscatter, sidescan sonar, seismic profiling, and GIS. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: MS-241
+              - courseId: MLML-641
+    prerequisiteNotes:
+      - "[Prereq: (Graduate Standing) and (MS 241 or MLML 641   )]"
+  MLML-650:
+    code: MLML 650
+    title: Laboratory Analysis for Marine Scientists
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 250: Theory and practice with standard and state-of-the-art laboratory techniques in marine sciences for dissolved and particulate constituents of seawater including spectroscopy, flow injection techniques, gas chromatography, ICP-MS, electrochemistry, chemical sensors and chemometrics. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Graduate Standing) and (Instructor Consent Required)"
+  MLML-651:
+    code: MLML 651
+    title: Marine Geochemistry
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 251: Marine Geochemistry- Geochemical processes in the oceans: thermodynamics of low-temperature aqueous reactions, weathering, oxidation-reduction and biologically mediated reactions, and processes occurring at the sea floor and air-sea interface. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: MS-243
+              - courseId: MLML-643
+    prerequisiteNotes:
+      - "[Prereq: (Graduate Standing) and (MS 243 or MLML 643   )]"
+  MLML-653:
+    code: MLML 653
+    title: Marine Pollution
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 253: General aquatic chemistry principles and in-depth analysis of the sources, transport and fate of various contaminants in the marine environment. Topics include nutrients, trace metals, persistent organic pollutants, microplastics, hydrocarbons, radioactive substances and carbon dioxide with accompanying practical experience in the field and laboratory. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisites:
+      - courseId: MLML-643
+    prerequisiteNotes:
+      - "[Prereq: (Graduate Standing) and ( MLML 643   ) and (Instructor Consent Required)]"
+  MLML-661:
+    code: MLML 661
+    title: Mixing, Estuarine, and Sediment Transport
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 261: Mixing, Estuarine, and Sediment Transport - Dynamical processes in estuarine and coastal systems, with an emphasis on flow, friction, sediment transport, mixing and diffusion of mass and biogeochemical constituents (nutrients and oxygen, others). Discussion of recent literature. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisites:
+      - allOf:
+          - courseId: MS-242
+          - courseId: MLML-642
+          - anyOf:
+              - courseId: MS-204
+              - courseId: MLML-604
+    prerequisiteNotes:
+      - "[Prereq: (Graduate Standing) and (MS 204 or MLML 604   ) and (MS 242 or MLML 642   ) and (Instructor Consent Required)]"
+  MLML-663:
+    code: MLML 663
+    title: Data Analysis in Marine Science
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 263: Data Analysis Techniques in Marine Science - Introduction to using observational oceanographic data, with hands-on practice in scientific programming for data analysis. Lecture, discussion, and practical experience including the use of existing programs and subroutine libraries. Semester project required. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: MLML-604
+    prerequisiteNotes:
+      - "[Prereq: (Graduate Standing) and ( MLML 604   )]"
+  MLML-671:
+    code: MLML 671
+    title: Population Biology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "MS 271: Population Biology - Principles of interaction among marine organisms that result in the alteration of population structures. Techniques for assessment and management of populations. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "[(Prereq: (Senior or Graduate Standing) and (Instructor Consent Required)]"
+  MLML-672:
+    code: MLML 672
+    title: Subtidal Ecology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 272: Subtidal Ecology - The ecology of near-shore rocky subtidal populations and communities with emphasis on kelp forests. Lectures and discussions of original literature. Fieldwork with SCUBA including group projects on underwater research techniques and community analysis, and individual research on ecological questions chosen by the student. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: MS-242
+              - courseId: MLML-642
+    prerequisiteNotes:
+      - "[Prereq: (Graduate Standing) and (MS 242 or MLML 642   )]"
+  MLML-673:
+    code: MLML 673
+    title: Marine Environmental Studies of the Gulf of California
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 273: Marine Environmental Studies of the Gulf of California - A comparative analysis of the marine environment of the Gulf of California through background lectures, readings, proposal writing, intensive field research in the Gulf, and writing a scientific paper based on the results. Topics vary depending on instructors. Course is taught in conjunction with a similar course at the Universidad Autonoma de Baja California Sur, La Paz, Mexico. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "[(Prereq: (Senior or Graduate Standing) and (Instructor Consent Required)]"
+  MLML-674:
+    code: MLML 674
+    title: Advanced Topics in Oceanography
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: "MS 274: Advanced Topics in Oceanography - Study of selected areas in oceanography. Subjects vary depending on student demand and availability of instructors. May be repeated once for credit when topic changes. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "[Prereq: (Graduate Standing) and (Instructor Consent Required)]"
+  MLML-680:
+    code: MLML 680
+    title: Scientific Writing
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "MS 280: Scientific Writing - Techniques and strategies of scientific writing used for proposals, journal submissions, and abstracts for meetings. Students develop their writing skills by preparing, editing, and rewriting manuscripts. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "[(Prereq: (Senior or Graduate Standing) and (Instructor Consent Required)]"
+  MLML-681:
+    code: MLML 681
+    title: Coastal Dynamics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "MS 281: Coastal Dynamics - Addresses the oceanographic dynamics of coastal environments, with an emphasis on eastern boundary current systems influenced by coastal upwelling. The course focuses on how physical and geological oceanography interact with each other and how both affect coastal ecosystem dynamics. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "[(Prereq: (Senior or Graduate Standing) and (Instructor Consent Required)]"
+  MLML-685:
+    code: MLML 685
+    title: Graduate Seminar in Marine Science
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: "MS 285: Graduate Seminar in Marine Science - Seminar topics change each semester. Each student will be required to give at least one seminar. May be repeated once for credit when topic changes. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: (Graduate Standing) and (Instructor Consent Required)]"
+  MLML-697:
+    code: MLML 697
+    title: Research in Marine Science
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: "MS 297: Research in Marine Science - Independent investigations of an advanced nature for the graduate student with adequate preparation. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Senior or Graduate Standing)"
+  MLML-698:
+    code: MLML 698
+    title: Research in Marine Science
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: "MS 298: Research in Marine Science - Independent investigations of an advanced nature for the graduate student with adequate preparation. Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Senior or Graduate Standing)"
+  MLML-699:
+    code: MLML 699
+    title: Masters Thesis
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: "MS 299: Masters Thesis- Offered through Moss Landing Marine Laboratories (MLML); contact CSUMB’s Department of Marine Science for MLML registration procedures."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[(Prereq: (Senior or Graduate Standing) and (Instructor Consent Required)]"

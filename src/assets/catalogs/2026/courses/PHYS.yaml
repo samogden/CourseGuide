@@ -1,0 +1,139 @@
+schemaVersion: 1
+prefix: PHYS
+courses:
+  PHYS-121:
+    code: PHYS 121
+    title: Integrated Physical Science
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "Introduces the basic principles of physical science and the application of these principles in modern society. Topics include: nature, properties, and reactions of matter; objects at rest and in motion, energy and power, fluids, heat, light, sound, and electricity. For non-science majors."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: PHYS 121L   )"
+  PHYS-121L:
+    code: PHYS 121L
+    title: Integrated Phy Science Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Required lab course for PHYS 121   . Lab course fee may be charged.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: PHYS 121   )"
+  PHYS-195:
+    code: PHYS 195
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in PHYS. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  PHYS-205:
+    code: PHYS 205
+    title: Physics for Engineers I
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course is intended for students majoring in physical sciences and engineering. Students are introduced to the general principles of mechanics at an elementary level. Specific topics include kinematics, Newton’s laws of motion, work and energy, momentum, gravitation, simple harmonic motion, fluids, mechanical wave and sound. Elementary applications of these principles are introduced using a problem-solving approach.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: MATH-150
+    prerequisiteNotes:
+      - "(Prereq: MATH 150   )"
+  PHYS-210:
+    code: PHYS 210
+    title: Physics for Engineers II
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course is second semester of a two-semester sequence of calculus-based general physics intended for students majoring in physical sciences and engineering. Core topics include electricity, magnetism, circuits, Maxwell’s equations, geometrical optics, optical instruments and wave optics. Require quantitative analysis of real-world situations. Elementary applications of these principles are introduced using a problem-solving approach.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: PHYS-205
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: PHYS 205   with C- or better)"
+  PHYS-220:
+    code: PHYS 220
+    title: Physics I
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Emphasizes motion, mechanics, energy, and fluids using active and experiential learning.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: CHEM-110
+            minimumGrade: C-
+          - anyOf:
+              - courseId: MATH-130
+                minimumGrade: C-
+              - courseId: MATH-150
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CHEM 110   and ( MATH 130   or MATH 150   ) with a C- or better)"
+  PHYS-221:
+    code: PHYS 221
+    title: Physics II
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Covers topics in electricity, magnetism, and optics. Emphasizes active and experiential learning and practical applications.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-130
+            minimumGrade: C-
+          - courseId: MATH-150
+            minimumGrade: C-
+          - courseId: PHYS-220
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 130   or MATH 150   ) and PHYS 220   with a C- or better)"
+  PHYS-395:
+    code: PHYS 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Physics. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  PHYS-530:
+    code: PHYS 530
+    title: Electronics for Grad Research
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Provides a practical foundation in basic electronic circuit design, construction, and repair to assist science graduate students who may need to select, use, repair, or invent electronic equipment to complete their graduate thesis project.
+    offered:
+      terms:
+        - fall

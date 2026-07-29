@@ -1,0 +1,159 @@
+schemaVersion: 1
+prefix: FYS
+courses:
+  FYS-100:
+    code: FYS 100
+    title: First Year Seminar
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 6
+    description: Provides an introduction to academic life at CSUMB and a foundation to learning as a lifelong process. Students identify the knowledge, skills, and abilities they will need to meet their personal, social, academic, and professional goals. As students meet course goals and outcomes, they start their transition to university life. Required for all entering first-year students and transfers with 29 or fewer semester units. Students should enroll in this course during their first semester at CSUMB.
+    offered:
+      terms:
+        - spring
+  FYS-111:
+    code: FYS 111
+    title: Introduction to Environmental Communication
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is designed to provide students with foundations in effective oral communication and will aid in student’s understanding and development in stating, organizing and researching ideas, and presenting them to an audience. In addition, this course will provide a common transition experience for entering students introducing them to the CSUMB Vision and engaging them with a sense of belonging to the CSUMB student and academic community. The seminar style format will allow students to speak openly and directly to both the instructor and each other during every class session throughout the semester. Through this process, students will strengthen the faculties of active and critical listening abilities and problem solve about topics in environmental and marine science, as well as deepen their understanding of their goals as they develop their intended pathway while at CSUMB.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - (Freshman Standing Required)
+  FYS-124:
+    code: FYS 124
+    title: Introduction to Environmental Science
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This interdisciplinary introduction to environmental science course introduces science as a method of studying and understanding the natural world through offering an overview of topics needed to understand key environmental challenges of today’s world. Promotes critical thinking, problem solving, scientific and environmental literacy. Not open to students with credit in ENVS 201   .
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - (Freshman Standing Required)
+  FYS-131:
+    code: FYS 131
+    title: Business to the Rescue?
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students critically analyze roles businesses play in creating positive and negative social impacts. Compare and evaluate narratives of business impacts and data from media, case studies and corporate sources, with attention to questions of power, equity and social responsibility. Assess business impacts on societal grand challenges and on local communities. Exercise critical thinking and creativity to design responsible business innovations. Develop familiarity with CSUMB resources that support academic, personal and professional success. Learn by doing, build networks and cultivate a sense of belonging on campus.
+    offered:
+      terms:
+        - fall
+        - spring
+  FYS-143:
+    code: FYS 143
+    title: Philosophy of Nonviolence
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "The purpose of this class is twofold: 1) to introduce students to the academic model used at CSUMB, and, 2) to introduce students to the theory, philosophy, and practice of nonviolence and how that strategy has brought about significant cultural change from South Africa in the early 20th century to Egypt in the 21st Century. Through an examination of the Core Values, Vision Statement, Academic Goals, Major Fields, and potential career pathways, students create an academic plan for the first two years of study. Students also learn about the philosophy, principles, and methods of nonviolence to see how that practice has brought about social change for millions of persecuted, oppressed, and marginalized people in various cultural and global settings throughout the world."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Freshman Standing)
+  FYS-145:
+    code: FYS 145
+    title: Digital Media & Culture
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This section of First Year Seminar explores how social media impacts our culture from a social, political, and economic perspective. The course also develops a framework of best practices for college student success and introduces the various professional disciplines of computing and design.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - (Freshman Standing)
+  FYS-147:
+    code: FYS 147
+    title: "Literature of Healing: The Representation of Mental Illness in Latinx Literature"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course will help familiarize students with the diversity, life and vision of CSUMB while also serving as an introduction to Latinx literature with a particular focus on the reading and analysis of U.S. Latinx writers whose literary works have included representations of mental illness. This course will critically examine narratives that, rather than stigmatizing mental illness, encourage engagement with a topic traditionally considered taboo in Latinx culture. These texts will also be read as tools to promote academic success while engaging with U.S. Latinx culture and history as a whole.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - (Freshman Standing Required)
+  FYS-148:
+    code: FYS 148
+    title: "Schooling the Public Imagination: From Hogwarts to Stand and Deliver"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This interdisciplinary course introduces students to the study of U.S. popular culture as a means of examining how it mirrors, distorts, and shapes experiences, perceptions, and assumptions about schools and schooling. Further considered is how books, television, film, and popular music have impacted personal educational histories and that of disparate groups. This course is further designed to orient students to the university and develop fundamental academic skills that promote success at CSUMB.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - (Freshman Standing)
+  FYS-156:
+    code: FYS 156
+    title: Technology and Society
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This FYS course will focus on the nature and impact of technology on society, paying particular attention to computing while using previous technological advances as a basis for comparison. We will consider the social, political, historic, economic and philosophic contexts that both shaped and have been shaped by technological change. Students will explore the emerging field of technology and society studies and will learn techniques borrowed from sociology, psychology, and philosophy.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Freshman Standing Required)
+  FYS-179:
+    code: FYS 179
+    title: Myths and Realities of Asia
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course serves as an introduction to the land, people, and ideas of Asia. We examine common myths and realities surrounding understandings of Asia and dive into a range of cultural icons (including the barbarian, the samurai, and the foreign devil), using the critical lenses of global history/studies, race, gender, and ethnicity. We will also identify ways in which stereotypes of Asia (and Asians) continue to influence our world today
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - (Freshman Standing Required)
+  FYS-183:
+    code: FYS 183
+    title: Eat, Love, Learn
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students receive an introduction to CSUMB while exploring concepts of well-being, applying theoretical models to personal engagement in behaviors that promote and detract from well-being. Students use evolutionary and neurobiological models to develop health and well being around eating, loving, and learning.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - (Freshman Standing)
+  FYS-191:
+    code: FYS 191
+    title: Comp. Ethnic Experiences
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Using texts from several genres including short stories and poems, as well as film and other cultural forms, students examine ethnic American experiences. Students explore how human experiences may be mediated by social differences, and how affinities between ethnic groups are rendered visible when we approach works comparatively. A first year seminar, the course integrates these topics with orientation, academic planning and skill development to support student success in the university. (Crosslisted/Equivalent with ES 191   )
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Freshman Standing)

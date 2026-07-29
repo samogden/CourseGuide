@@ -1,0 +1,366 @@
+schemaVersion: 1
+prefix: GS
+courses:
+  GS-197:
+    code: GS 197
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic
+  GS-206:
+    code: GS 206
+    title: Understanding Globalization
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Globalization is an uneven process. It is the intensification of economic, political, social and cultural relations across international borders. Students will understand the history and the key features of the pro and anti-globalization debates. They will follow how popular struggles for social justice and equity have shaped the global order.
+    offered:
+      terms:
+        - fall
+        - spring
+  GS-214:
+    code: GS 214
+    title: "Global History I: Ancient Times to 1500"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores the history of humankind from the early city states of the Middle East through the advent of global connections around 1500. Focuses on the major civilizations (China, India, Middle East, Americas, Europe) as expressed through the arts, religion and trade relations.
+    offered:
+      terms:
+        - fall
+        - spring
+  GS-215:
+    code: GS 215
+    title: Global History II - World History Since 1500
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores the history of humankind from roughly 1500 to 2000. Highlights the processes of globalization on the diverse populations of the world as expressed through the arts, religion, intellectual discourses, economic activity, and cultural self determination. Explores issues of the rise of European domination and the era of revolutions and independence movements.
+    offered:
+      terms:
+        - fall
+  GS-225:
+    code: GS 225
+    title: Global Voices
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course examines the global issues and topics through analysis and interpretation of works of art, film, literature, and performance from around the world. Many of the works present the perspectives of those who are caught in the challenging world of “global flows and disjunctures”, where people, ideas, money, and technologies move quickly around the world, but in unequal and random ways that cause poverty, violence, social dysfunction, and humanitarian crises.
+    offered:
+      terms:
+        - spring
+  GS-236:
+    code: GS 236
+    title: Global Policing
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In the course, you will be introduced to the role of modern policing in the liberal and neoliberal world order. We look at how state violence works through local, national, and transnational systems of law and security. We ask, what role does policing play in maintaining unequal social orders including race, class, gender, caste and others? How have movements resisted and sought to transform and/or abolish policing in their societies? (Crosslisted/Equivalent with ES 236   )
+    offered:
+      terms:
+        - fall
+  GS-251:
+    code: GS 251
+    title: Intro to Global Economics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Covers basic micro and macroeconomic principles in relation to policies and real-world case studies from gender, ethical, and global perspectives. Students learn key economic concepts that affect their lives, along with the social/cultural contexts of major economic thinkers who coined those economic principles. It presents social scientific methods of inquiry in multiple social science lenses. Students learn feminist, environmental, and Global South perspectives.
+    offered:
+      terms:
+        - spring
+  GS-300:
+    code: GS 300
+    title: Major ProSeminar
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students acquire a basic foundation in globalization and social theories and methods through exploration of current issues. Required entry into the Global Studies major.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: GS-206
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( GS 206   with a C- or better) and ( GE   GE Area 1A and 1B and 1C and 2 with a C- or better)]"
+  GS-316:
+    code: GS 316
+    title: Approaches/ Global Histories
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines the application of historical approaches to themes related to past and contemporary societies. This course focuses particularly on global histories, which set historical problems beyond the frame of nations or regions.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  GS-317:
+    code: GS 317
+    title: "Global Migrant Workers: Ethnic Experiences, Resistance, and Empowerment"
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course examines the connections of global migrant workers in the U.S. and the global contexts via systems focus. It examines how globalization, global labor migration, global supply chains, and global civil society organizations have affected working conditions and labor rights from the 20th to early 21st centuries and how workers fight back. It provides intersectional analysis, or connections among race/ethnicity, gender and class, using real-life case studies to demonstrate that migration is a complex globalization process that transcends national boundaries.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  GS-318:
+    code: GS 318
+    title: Quantitative Reasoning in Global Perspectives
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This class focuses on quantitative approaches to complement global case-study design so students can use quantitative reasoning to understand real-world problems/issues relevant to their lives. Students study the basic elements of human inquiry, research design process, concepts, and critical understanding of statistics. Variable-oriented analyses complement national/global case studies by stressing the importance of historical trends from US and global data sources. In-class workshops explore case studies supported by quantitative analyses and seen through multiple conceptual lenses.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  GS-325:
+    code: GS 325
+    title: Geography of International Development
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: When we think of “development” often we think of idealized notions like progress or quality of life. In this class, we examine what international development looks like on the ground and how it is experienced differentially across space, gender, race, and class. We explore the inequalities that have resulted from economic globalization and development frameworks, and think critically about past, present, and proposed development interventions, as well as various ways that resistance to dominant development regimes has emerged in different socio-economic and political contexts.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  GS-327:
+    code: GS 327
+    title: Politics of the Middle East
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this class we will examine the relationship between power, knowledge, and authority, centered on the post-9/11 Middle East (broadly defined). Typically, when we think of power and authority we think of hard power (military force, for example), but in this course we will also examine the impacts and violence of “soft power” in relation to the region. Throughout, we will be asking ourselves who gets to be an authority on “the Middle East,” and we will examine issues around identity, sovereignty, imperialism, and territory in a post-9/11 world.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  GS-331:
+    code: GS 331
+    title: Global Social Protest
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Theoretical, and empirical understanding of emergence and processes of global unrest and global campaigns for social justice (Arab Spring, climate change), weighing opportunities and constraints in mobilizing against inequality.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  GS-336:
+    code: GS 336
+    title: "Cultural Geography: Place, Power, and Positioning"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Cultural geography is the study of the relationship between culture and place. We examine different places and social groups with respect to issues such as dis/ability, ethnicity, gender, race, sexuality, and how the processes and practices of othering, colonialism, imperialism, nationalism, and religion shape the lives of people in different locales and contexts, fostering senses of belonging and exclusion. We explore how spaces and places are culturally, and unequally, made.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  GS-339S:
+    code: GS 339S
+    title: Sweat/Service/Solidarity SL
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This class examines labor rights, global contexts of labor issues, challenges to labor mobilization and how to overcome them. These themes are contextualized in labor history and legislation including the impacts of neoliberalism on the U.S. and other countries. Students examine the intersectionality of their cultural identities (including class, race/ethnicity, gender, sexual orientation) and their places in global processes. Students earn UDSL credits by servicing the needs of workers, local labor unions, and labor organizations in the Monterey tri-county region.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  GS-342:
+    code: GS 342
+    title: "Economic Thought: History and Contemporary Interpretations"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores political economy from historical, critical, global, indigenous, and feminist perspectives. Students analyze relationships among economic systems and cultural, political and social institutions. Issues include global economic and environmental crises, labor activism, labor migration, informal work and precarity, coloniality, poverty and inequality, global public health, wars, refugees, and resistance. Students assess assumptions and critically apply theories and methods to local/global events.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  GS-350:
+    code: GS 350
+    title: Global Gender Issues
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: How are gender roles and sexual hierarchies produced, reinforced, and challenged in local and transnational contexts? We consider how global capitalism, religion, and cultural politics affect beauty, love, reproduction, and labor and will evaluate the effects and discourse of multicultural transnational feminist and sexual rights movements. The goal of this class is to familiarize you with some key debates and to engage you in critical discussion. Focus on Global South.
+    offered:
+      availability: periodic
+  GS-351:
+    code: GS 351
+    title: "Global Econ: Theory & Ethics"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "This course covers two components: 1. the fundamental principles of neoclassical micro and macro economics; 2. the global, gender and inter-disciplinary perspectives to examine the values and critique the assumptions of neoclassical framework. Focusing on ethical implications, we examine real-life applications, case studies and responses from feminist, Global South, informal economy, environmentalist, and other alternative perspectives."
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  GS-362:
+    code: GS 362
+    title: Global Literatures
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is a reading and writing course based on postcolonial or global literatures of the Global South. This course facilitates knowledge and understanding of plural worldviews, examined through a global/historical lens in colonial, postcolonial, decolonizing, translocal contexts. The learning outcomes of GWAR, global literatures, and global self-awareness are achieved by reading, discussing, and writing about the plural contexts of everyday lives portrayed in postcolonial literatures.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  GS-363:
+    code: GS 363
+    title: "Comparative Settler Colonialism: Land, the ‘Logic of Elimination,’ and Structures of Race"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Settler colonial studies analyzes the relationships between indigenous peoples, settlers, and land, and the ways race, gender, and capitalism continue to structure these relationships. In addition to understanding settler frameworks and theory, we examine Indigenous knowledge systems, resistance, and resurgence. Settler societies work to erase indigenous ones and transform land into extractive resources, but indigenous communities remain - for them land is life and existence is resistance.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
+  GS-370:
+    code: GS 370
+    title: Global Political Economy
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines origins of global economy. Analyzes and evaluates the interrelationship among global, political, and economic conditions. Studies global economy through 1) historical development, 2) current patterns of changes, 3) effects of globalization on the quality of life, 4) solutions and alternatives to inequity, and 5) the students’ place in the global economy. Examines major structures, processes, and effects of evolving global economy.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  GS-374:
+    code: GS 374
+    title: Global Studies Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Students engage in internship experiences within the Global Studies major.
+    offered:
+      availability: periodic
+  GS-379:
+    code: GS 379
+    title: Ethics of Corporate Social Responsibility
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students explore the ethics and responsibilities of Corporate Social Responsibility (CSR), a western concept applied globally since the 1990s. Historical contexts and events that gave rise to this corporate response to public concerns about labor standards and working environment are examined in multiple perspectives and case studies. CSR intent to enhance business-society relations is measured against realities in the workplace and NGO standards on workers and the environment in global economy.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  GS-385:
+    code: GS 385
+    title: Global Ecology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Integrates study of earth systems with social systems by examining global natural and social systems. Combines perspectives, concepts, and methods of physical, biological, and social sciences in a holistic analysis and evaluation of issues related to resource access, use, pollution, and conservation by human communities locally and globally.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  GS-390:
+    code: GS 390
+    title: Global Politics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Introduces students to the main political concepts and ideologies of global politics. Explores the global realm of: 1) interstate and transnational political relations; 2) Western and non-Western schools of thought about international politics; 3) gendered discourses of international relations including contributions from women, especially Global South; 4) environmental politics; and 5) the structure and role of intergovernmental organizations and 6) global security discourses."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  GS-395:
+    code: GS 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Global Studies. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  GS-396:
+    code: GS 396
+    title: Field Studies
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Individualizes student placement for field study as related to Global Studies.
+    offered:
+      availability: periodic
+  GS-397:
+    code: GS 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic
+  GS-597:
+    code: GS 597
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic

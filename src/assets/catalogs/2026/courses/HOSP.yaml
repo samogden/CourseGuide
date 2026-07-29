@@ -1,0 +1,284 @@
+schemaVersion: 1
+prefix: HOSP
+courses:
+  HOSP-200:
+    code: HOSP 200
+    title: Introduction to Sustainable Hospitality & Tourism
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this engaging introductory course, students gain a strong understanding of the core principles of sustainable hospitality and tourism. Explore current and emerging trends in sustainable tourism and examine business models that integrate sustainability into hospitality and tourism operations, including the triple bottom line approach (profit, people, planet). Learn about resource management and environmental conservation practices, engage in insightful discussions on industry challenges, such as overtourism, climate change, and cultural preservation. Immersive field experiences and industry-expert guest speakers enrich students’ education and expose them to the many career opportunities in the growing field of sustainable hospitality and tourism.
+    offered:
+      terms:
+        - fall
+        - spring
+  HOSP-221:
+    code: HOSP 221
+    title: Shifting Flavor Landscapes & Unseen/Hidden Populations
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces the myriad of cultural influences on U.S. cuisines from various racial and ethnic groups via core concepts of ethnic studies. Explores the influence of cultural and historical traditions on the food landscape through an interdisciplinary lens focused on justice, equity, diversity, and inclusion. Examines the lived experiences of various ethnic groups while assessing the hierarchical social/organizational structures and power dynamics that restrict or inhibit opportunities for growth among unseen/hidden populations in the U.S. hospitality and tourism sector. (Crosslisted/Equivalent with ES 221   )
+    offered:
+      terms:
+        - fall
+        - spring
+  HOSP-300:
+    code: HOSP 300
+    title: Current Issues in Sustainable Hospitality and Tourism Management
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Develops writing, oral and critical analysis skills needed to link sustainability to ethics in hospitality management. Covers current issues that involve hospitality and tourism management, ethics and society. Students develop a learning plan that integrates their Sustainable Hospitality and Tourism Management concentration, capstone and internship interests, and personal and professional goals.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-201
+            minimumGrade: C-
+          - courseId: BUS-203
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( BUS 201   and BUS 203   ) and ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  HOSP-312:
+    code: HOSP 312
+    title: Sustainable Hospitality Operations Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course provides a comprehensive focus on sustainable hospitality operations management, with a particular emphasis on delivering exceptional customer service, implementing responsible initiatives, and tackling unique operational challenges. Students will actively participate in generating innovative ideas for improving and optimizing hospitality operations. The course aims to equip students with the knowledge and skills necessary to successfully navigate the dynamic landscape of sustainable hospitality while ensuring the highest standards of customer service and environmental responsibility.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: HOSP-200
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: HOSP 200   with a C- or better)"
+  HOSP-323:
+    code: HOSP 323
+    title: Introduction to Event Planning and Management
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course serves as an introduction to the exciting and dynamic field of Meetings and Event Management. It provides students with a comprehensive understanding of the principles, practices, and skills required to plan, execute, and evaluate successful meetings, conferences, and events of various sizes and purposes. Through a combination of theoretical knowledge and practical experience, students will develop the foundational skills necessary to excel in the industry.
+    offered:
+      terms:
+        - fall
+        - spring
+  HOSP-471:
+    code: HOSP 471
+    title: Sustainable Tourism Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Focuses on sustainable hospitality and tourism management practices and issues and implications on tourism organizations. This course examines the principles of sustainable development, the sustainable travel market and market trends. Students will use strategies to understand sustainability and the financial implications of hospitality and tourism businesses. In addition, this course will provide an overview of ethics, sustainable economics, and corporate social responsibility.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-305
+            minimumGrade: C-
+          - courseId: ENVS-201
+            minimumGrade: C-
+          - courseId: ENSTU-280
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 305   or ENVS 201   or ENSTU 280   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  HOSP-472:
+    code: HOSP 472
+    title: Environmental Systems and Tourism Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course explores the complex relationship between environmental systems and the tourism industry, with a focus on eco-friendly practices, resource conservation, and responsible management in the hospitality and tourism sectors. Students will acquire a comprehensive understanding of various environmental systems, encompassing ecosystems, biodiversity, climate, and natural resources, and their significance in the tourism context. Through immersive case studies, students examine tourism management strategies, including destination planning, marketing, and visitor management with a central theme of sustainability and environmental stewardship. Students will be equipped to integrate sustainability principles, enhancing guest experiences and making a positive impact on both the industry and the environment.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: HOSP-200
+            minimumGrade: C-
+          - courseId: HOSP-312
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: HOSP 200   and HOSP 312   with a C- or better)"
+  HOSP-473:
+    code: HOSP 473
+    title: Sustainable Destination Planning and Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course is designed to provide students with a comprehensive understanding of the principles, practices, and challenges involved in creating and managing sustainable tourism destinations, businesses, and experiences. Using case studies to critically examine stakeholders, management approaches, and governance structures within the context of global sustainability. Tourism being a major contributor to the global GDP, sustainable management practices are central to a rapidly evolving field that seeks to balance the economic, environmental, and socio-cultural dimensions of tourism to ensure long-term benefits for both tourists and host communities.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: HOSP-200
+            minimumGrade: C-
+          - courseId: HOSP-312
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: HOSP 200   and HOSP 312   with a C- or better)"
+  HOSP-481:
+    code: HOSP 481
+    title: Sustainable Event Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course is designed to equip students with a comprehensive understanding of planning, organizing, and executing events while prioritizing environmental sustainability and social responsibility. Students will learn international sustainable event standards, eco-friendly procurement, energy conservation, waste reduction, ethical event planning practices, and communication strategies for sustainable event management through real-world case studies and project-based learning. By the course’s end, students will possess the knowledge and tools to plan and manage events that are memorable, successful, environmentally responsible, and socially conscious.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: HOSP-200
+            minimumGrade: C-
+          - courseId: HOSP-312
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: HOSP 200   and HOSP 312   with a C- or better)"
+  HOSP-482:
+    code: HOSP 482
+    title: Sustainable Lodging Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Offers a comprehensive approach to the operation of lodging properties. Focuses on sustainable and responsible initiatives, technological change, and unique operational challenges. Reviews history and conceptual development of hotels and resorts, future considerations, and outlook for the industry in issues such as the hiring and management of employees and the development of sustainable opportunities.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: HOSP-300
+            minimumGrade: C-
+          - courseId: HOSP-312
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq or Coreq: HOSP 300   and HOSP 312   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  HOSP-483:
+    code: HOSP 483
+    title: Sustainable Food and Beverage Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Focuses on the operational aspects of Food and Beverage businesses, with a strong emphasis on guest satisfaction. Students explore the history, trends, and managerial aspects of F&B operations; familiarization with restaurant operations from a safety/sanitation viewpoint; menu development (emphasis on nutrition and sourcing of local products); and application of cost management principles. The course emphasizes sustainable and strategic perspectives.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: HOSP-200
+            minimumGrade: C-
+          - courseId: HOSP-312
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: HOSP 200   and HOSP 312   with a C- or better)"
+  HOSP-484:
+    code: HOSP 484
+    title: Strategic Hospitality Cost Management
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Investigates cost control principles and their management and application to hospitality operation costs, including exploration of food, beverage, labor, and material cost controls from a sustainable and strategic perspective. Active problem solving and practical applications, such as income statements and balance sheets, are used.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Coreq: HOSP 483   )"
+  HOSP-495:
+    code: HOSP 495
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in the major. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  HOSP-497:
+    code: HOSP 497
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Independent study under the direction of a faculty member. The student must prepare a study proposal approved by the appropriate faculty member and major advisor prior to registration.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-304
+            minimumGrade: C-
+          - courseId: BUS-305
+            minimumGrade: C-
+          - courseId: BUS-306
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 304   and BUS 305   and BUS 306   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  HOSP-498:
+    code: HOSP 498
+    title: Hospitality and Tourism Internship
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Structured professional work experience offers students an experience tailored to their objectives. Faculty approval is essential for objectives, internship sites, and agreements. Students engage in ongoing collaboration with faculty during their internships. In accordance with the College of Business policy, only paid internships are accepted. A minimum commitment of 200 hours of work during the term is obligatory, and faculty approval is a prerequisite. Securing an internship position prior to the course’s commencement is required.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: HOSP-200
+            minimumGrade: C-
+          - courseId: HOSP-312
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq or Coreq: HOSP 200   and HOSP 312   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  HOSP-499:
+    code: HOSP 499
+    title: Strategic Management in Sustainable Hospitality and Tourism (Senior Capstone)
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Capstone course integrating all core courses into a comprehensive analysis, case study, simulation, and/or applied research project in sustainable hospitality and tourism.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: HOSP-200
+            minimumGrade: C-
+          - courseId: HOSP-312
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: HOSP 200   and HOSP 312   with a C- or better) and (Senior Standing)]"

@@ -1,0 +1,25 @@
+schemaVersion: 1
+prefix: HSP
+courses:
+  HSP-650:
+    code: HSP 650
+    title: Social Policy Analysis
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Develops theoretical perspectives on social policy, social justice, and social change, and a framework for analyzing and developing social policies. Introduces students to a selection of social problems and the social programs and policies designed to address them, and provides students with an opportunity to explore a social policy area of their choosing.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MPP Majors)
+  HSP-651:
+    code: HSP 651
+    title: Health Policy Analysis&Advocac
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores the complexity of health policy analysis and advocacy in the context of rapidly changing roles and expectations for healthcare institutions and providers; the interface between public health and the private medical sector; and a comparative analysis of publicly and privately financed U.S. and non-U.S. healthcare systems. Critical and historical analyses of U.S. and non-U.S. health policy form the basis of a health policy analysis assignment.
+    offered:
+      availability: periodic

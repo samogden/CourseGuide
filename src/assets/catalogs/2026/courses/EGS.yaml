@@ -1,0 +1,37 @@
+schemaVersion: 1
+prefix: EGS
+courses:
+  EGS-300:
+    code: EGS 300
+    title: Ethnic & Gender Studies Major ProSeminar
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Provides an introduction to and overview of Ethnic and Gender Studies major with a focus on learning about the related academic fields, and application in the social world and the professions.
+    offered:
+      terms:
+        - fall
+        - spring
+  EGS-475:
+    code: EGS 475
+    title: Senior Capstone
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students research and develop a Capstone project over one semester that demonstrates knowledge of theoretical, methodological, and ethical components of Ethnic and Gender Studies and/or Global Studies, applied to a relevant issue or topic. Students’ senior project demonstrates that they have met the MLOs of their major program.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: EGS-300
+            minimumGrade: C-
+          - courseId: HCOM-300
+            minimumGrade: C-
+          - courseId: GS-300
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: EGS 300   or HCOM 300   or GS 300   with a C- or better)"

@@ -1,0 +1,174 @@
+schemaVersion: 1
+prefix: MPP
+courses:
+  MPP-500:
+    code: MPP 500
+    title: MPP Masters Seminar
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Provides students with an introduction to the MPP program and an organizing vehicle to develop their Individualized Learning Plan (ILP) for designing their path to graduation. This seminar will also help students begin to develop ideas for policy internships and projects.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MPP Majors)
+  MPP-510:
+    code: MPP 510
+    title: Intr Pol Anlys & Public Action
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces students to the field of policy studies and the methods of policy analysis. Faculty, students, and guests discuss policy problems facing diverse communities; explore models of social change, social justice, and market justice; and incorporate ideas of sustainability and “outcomes-based” assessment into comparative analyses of issues facing international policymakers and global communities. Students apply knowledge of multiple disciplines to analyze case studies of complex policy issues.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MPP Majors)
+  MPP-520:
+    code: MPP 520
+    title: Congressional & Pres Politics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Seeks to explain the real world of policymaking by looking at several factors: key policy actors; mass media, groups, and public opinion; bargaining strategies; and sources of conflict and cooperation in congressional-presidential relations. Draws on case studies, guest speakers, and Leon Panetta’s 30 years of public service experience in Washington, D.C."
+    offered:
+      availability: periodic
+  MPP-530:
+    code: MPP 530
+    title: Appl Policy Res & Quant Analys
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces students to basic policy research methods and quantitative tools used in policy analysis. Quantitative techniques may include computer modeling and simulation, linear programming and optimization, decision theory, and statistical and econometric analysis of policy-relevant data.
+    offered:
+      availability: periodic
+  MPP-540:
+    code: MPP 540
+    title: Collab Ldrship & Ethic Policy
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces students to the theory and practice of collaborative and ethical leadership as they apply to the processes of local, state, national, and international policymaking. Explores the role of community stakeholders as advocates and leaders of public policy initiatives and collaborative policy analysis activities. Provides a framework for ethical consideration and reflection as a foundation to all policy analysis, development, and implementation.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MPP Majors)
+  MPP-600A:
+    code: MPP 600A
+    title: Appl Pol Analysis Res Sem
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Provides students with an opportunity to apply the methods, approaches, and perspectives studied throughout the program to a selected public policy issue affecting the agencies in which they are placed. Under the supervision of their advisors and the seminar instructor, students develop a policy analysis, case study, and recommendation for model legislation to address an identified problem.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MPP Majors)
+  MPP-600B:
+    code: MPP 600B
+    title: App Pol Analysis Res Sem
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Provides students with an opportunity to apply the methods, approaches, and perspectives studied throughout the program to a selected public policy issue affecting the agencies in which they are placed. Under the supervision of their advisors and the seminar instructor, students develop a policy analysis, case study, and recommendation for model legislation to address an identified problem.
+    offered:
+      availability: periodic
+  MPP-610:
+    code: MPP 610
+    title: Economic Analysis of PublicPol
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Economic Analysis of Public Policy I: This course is designed to help students apply important economic principles to current policy issues. Students focus on the tools of microeconomic analysis and develop skills in the application of economic reasoning to policy problems. Classical microeconomic reasoning will be integrated with critical perspectives. Included are such key principles and concepts as consumer choice, the production decisions of firms, the function of prices in allocating scarce resources, the pricing of public goods, the role and behavior of markets, market failure, and externalities. (Restricted to MPP Majors)"
+    offered:
+      availability: periodic
+  MPP-620:
+    code: MPP 620
+    title: Econ Anlys of Public Policy II
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Econ Anlys of Public Policy II: A continuation of MPP 610   , this course shares the objective of applying economic principles to policy issues. This course focuses on the tools of macroeconomic analysis and the role of government in the economy. Topics covered include public finance, externalities and public goods, social insurance and redistribution, and taxation in theory and practice."
+    offered:
+      availability: periodic
+  MPP-630:
+    code: MPP 630
+    title: Strategic Mgmt & Sys Analysis
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Provides students with the theory and practice of strategic management of organizations within systems. Explores organizational structures, goals, and behavior needed for effective individual and group functioning in organizational settings. Emphasizes interrelationships and interdependencies between levels of government and across community-based organizations. Case studies highlight examples of systems-oriented management and leadership.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MPP Majors)
+  MPP-640:
+    code: MPP 640
+    title: Fin Mgmt & Public Nonprof Budg
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Provides students with the basic concepts, terminology, and tools essential for financial, management, analysis, and budgeting in the public and nonprofit sectors. Case studies examine interactions between public budgeting at the state and local levels, and the increasing shift of responsibilities and funding to community-based nonprofit organizations for delivery of services. Requires basic familiarity with Excel software.
+    offered:
+      availability: periodic
+  MPP-695:
+    code: MPP 695
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Studies a particular topic in Masters in Public Policy. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  MPP-696A:
+    code: MPP 696A
+    title: Prof Policy Internship Seminar
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides students with the opportunity to continue developing knowledge and skills in their graduate internship as they complete work on their master’s projects. The internship provides each student with the opportunity to participate as a working member of the staff in the daily policy-related activities of a local, state, federal, or international public agency, or a nongovernmental organization.
+    offered:
+      availability: periodic
+  MPP-696B:
+    code: MPP 696B
+    title: Prof Pol Internship Sem
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides students with the opportunity to continue developing knowledge and skills in their graduate internship as they complete work on their master’s projects. The internship provides each student with the opportunity to participate as a working member of the staff in the daily policy-related activities of a local, state, federal, or international public agency, or a nongovernmental organization.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MPP Majors)
+  MPP-696C:
+    code: MPP 696C
+    title: Prof Policy Internshp Sem 3rd
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    offered:
+      availability: periodic
+  MPP-697:
+    code: MPP 697
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select advanced topic of study and number of credits.
+    offered:
+      availability: periodic

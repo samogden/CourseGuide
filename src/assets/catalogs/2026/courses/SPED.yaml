@@ -1,0 +1,355 @@
+schemaVersion: 1
+prefix: SPED
+courses:
+  SPED-550:
+    code: SPED 550
+    title: Foundations/Practices for EdSp
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This introductory course focuses on practical applications of teaching and assessing students with disabilities. Addresses eligibility and characteristics of exceptionalities, classroom behavior support, lesson plans, law, IEPs, assessment and instructional strategies for working with students with mild to severe disabilities in inclusive settings. Prerequisite for the Mild to Moderate and Moderate to Severe Education Specialist Credential Intern Programs.
+    offered:
+      terms:
+        - fall
+        - spring
+  SPED-560:
+    code: SPED 560
+    title: Inclusionary Practices
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides participants with the required competencies to assist in teaching students with disabilities, and information needed to serve students with disabilities in inclusive educational settings. Includes the exploration of educational laws, IEPs, service delivery systems, modification of instructional methods, educational technology and assessment processes to support inclusion of students with exceptionalities in general education environments. Includes both coursework and fieldwork.
+    offered:
+      terms:
+        - fall
+        - spring
+  SPED-560S:
+    code: SPED 560S
+    title: InclusionPract w/Svc Learning
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Usually taken with SPED 560   . When taken concurrently it applies towards the Master of Arts in Education.
+    offered:
+      availability: periodic
+  SPED-561:
+    code: SPED 561
+    title: Teaching Reading and Language to Students with Disabilities
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Covers the required competencies to assist in teaching exceptional students how to read. Students will use direct instruction techniques to teach basic language skills and reading to pupils with disabilities. These interactive small-group instructional skills may be used in a broad range of instructional settings with or without scripted programs. Students will also understand reading curriculum and instruction in order to effectively teach these topics to students with disabilities.
+  SPED-562:
+    code: SPED 562
+    title: Curr Dvlpmt/Pref Practices
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Based on current research which introduces important contemporary issues, such as the relationship between identification, assessment, and program planning for students with mild to severe disabilities. Covers formal and informal assessment, instructional strategies, curriculum design, and modifications which are relevant, age-appropriate and structured to ensure student success and independence in general ed and other learner-centered environments. Includes both coursework and fieldwork.
+    offered:
+      terms:
+        - fall
+        - spring
+  SPED-563:
+    code: SPED 563
+    title: Math Methods and Supervision (P-12) for the Education Specialist
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This class provides an overview of teaching and learning school mathematics P-12, incorporating curriculum, historical, sociocultural, autobiographical, identity, disability, and research methodologies. The course includes a focus on instructional materials, listening to children, how children construct mathematical knowledge, and the implications of behavioral, developmental, and learning characteristics of P-12 students labeled with mild, moderate, and extensive support needs. Students will implement these methods in their clinical placements and receive supervision from the instructor. The course will also introduce information about the role of technology and challenges in teaching school mathematics.
+    offered:
+      terms:
+        - spring
+  SPED-564:
+    code: SPED 564
+    title: Formal and Informal Assessment for Students with Mild to Moderate Disabilities
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examines the role of assessment in curriculum and instruction for students with Mild to Moderate disabilities. The course ties assessment to preferred practices in order to meet the educational goals of the individual to ensure success. Includes both coursework and fieldwork. Required for the Mild to Moderate Credential Program only.
+    offered:
+      terms:
+        - fall
+        - spring
+  SPED-565:
+    code: SPED 565
+    title: Supv Field Exp - General Ed
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Provides prospective special educators with opportunities to investigate how general educators plan, implement, modify, and monitor instruction. Students reflect on preferred practices; study the Ca Standards for the Tchg Prof and the TPEs; analyze pedagogical skills appropriate to the core curriculum; and responsiveness to student needs and characteristics. To include online, hybrid and face to face. (This course may be waived with verif of Gen Ed Tchg Cred)
+    offered:
+      availability: periodic
+  SPED-566:
+    code: SPED 566
+    title: Behavior Intervention and Support
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduction to the principles and application of behavior analysis with individuals with academic, social and/or behavioral needs. Includes both coursework and fieldwork.
+    offered:
+      terms:
+        - fall
+        - spring
+  SPED-567:
+    code: SPED 567
+    title: Initial Semester Seminar
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 5
+    description: Seminar course for candidates enrolled in the first semester practicum experience in either the Preliminary Mild to Moderate or Moderate to Severe credential program. Seminar topics include common first year experiences for special educators, mandatory reporting, parent and family perspectives, typical and atypical development, professional dispositions and approaches to teaching students with mild to severe disabilities. Includes both coursework and fieldwork.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: SPED 567A   or SPED 567B   )"
+  SPED-567A:
+    code: SPED 567A
+    title: "Initial Semester Practicum: Mild Moderate Support Needs"
+    teachingStatus: active
+    credits:
+      minimum: 5
+      maximum: 10
+    description: This field experience course is required for all candidates in the Preliminary Mild to Moderate Support Needs Credential Program during their initial semester. This field experience requirement, along with the SPED 567 seminar, provides practical field experience opportunities teaching students with mild/moderate support needs in K-12 public and non-public school settings. Additionally, the course provides candidates with knowledge of typical and atypical human development.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: SPED 567   )"
+  SPED-567B:
+    code: SPED 567B
+    title: "Initial Semester Practicum: Extensive Support Needs"
+    teachingStatus: active
+    credits:
+      minimum: 5
+      maximum: 10
+    description: This field experience course is required for all candidates in the Preliminary Extensive Support Needs Credential Program during their initial semester. This field experience requirement, along with the SPED 567 seminar, provides practical field experience opportunities teaching students with extensive support needs in K-12 public and non-public school settings. Additionally, the course provides candidates with knowledge of typical and atypical human development.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Coreq: SPED 567   ]"
+  SPED-568:
+    code: SPED 568
+    title: Meth Cul/Ling Div Students with Disabilities
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course introduces and examines strategies that support students with disabilities from diverse populations. Candidates will explore the needs of minoritized populations. The students in focus are from culturally and linguistically diverse backgrounds and/or emergent bilinguals with and without disabilities. The course goal is to prepare special educators to make effective pedagogical decisions when teaching students from culturally and linguistically diverse backgrounds and/or emergent bilinguals.
+  SPED-571:
+    code: SPED 571
+    title: Teaching Social-Communicative Skills to Students with Disabilities
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is designed to prepare teachers to teach social-communicative skills to students with disabilities, including students with Autism Spectrum Disorder. Topics covered include implementing evidence-based practices to teach various modes of communication including verbal and augmentative and alternative communication such as picture exchange and speech generating devices. Strategies for teaching the social aspects of communication are also covered. Includes both coursework and fieldwork.
+    offered:
+      terms:
+        - fall
+        - spring
+  SPED-574:
+    code: SPED 574
+    title: Teaching and Assessing Students with Extensive Support Needs
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is designed to prepare teachers to conduct and interpret assessments and to implement evidence-based strategies to address the needs of students with Extensive Support Needs across a variety of skills. Topics covered include formal and informal assessment, functional academics, teaching meaningful daily living, academic and vocational skills, and supporting students with movement, mobility, sensory and specialized health care needs. Includes both coursework and fieldwork.
+    offered:
+      terms:
+        - spring
+  SPED-577:
+    code: SPED 577
+    title: Final Semester Seminar
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 5
+    description: This final field experience seminar is required for all candidates during their final semester in the program. This course supplements the practical field experiences within the full range of service delivery options available for educating students with mild/mod or mod/severe disabilities in K-12 public and non-public school settings. Candidates also develop their Transition Plan for the Clear Credential. Includes both coursework and fieldwork.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: SPED 577A   or SPED 577B   )"
+  SPED-577A:
+    code: SPED 577A
+    title: "Final Semester Practicum: Mild Moderate Support Needs"
+    teachingStatus: active
+    credits:
+      minimum: 6
+      maximum: 10
+    description: This field experience course is required for all candidates in the Preliminary Mild Moderate Support Needs Credential Program during their final semester. This field experience requirement, along with the SPED 577 seminar, provides practical field experience opportunities teaching students with mild/moderate support needs in K-12 public and non-public school settings. Additionally, students begin to plan for their professional clear credential.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: SPED 577)"
+  SPED-577B:
+    code: SPED 577B
+    title: "Final Semester Practicum: Extensive Support Needs"
+    teachingStatus: active
+    credits:
+      minimum: 6
+      maximum: 10
+    description: This field experience course is required for all candidates in the Preliminary Extensive Support Needs Credential Program during their final semester. This field experience requirement, along with the SPED 577 seminar, provides practical field experience opportunities teaching students with extensive support needs in K-12 public and non-public school settings. Additionally, students begin to plan for their professional clear credential.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: SPED 577   )"
+  SPED-578:
+    code: SPED 578
+    title: Seminar in Behavior Analysis
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This seminar focuses on in-depth practical experience in professional application of Applied Behavior Analysis. Students conduct case study projects working directly with K-12 students; developing and monitoring Behavior Intervention Plans; conducting experimental analyses related to intervention and instruction programs; and conducting data analysis procedures to monitor student progress. Includes both coursework and fieldwork.
+    offered:
+      terms:
+        - spring
+  SPED-579:
+    code: SPED 579
+    title: Professionalism and Supervision in Behavior Analysis
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course provides instruction in the ethical and professional conduct of behavior analysts, along with effective supervision and management approaches to overseeing others in the process of conducting assessment procedures and implementing intervention and instructional strategies derived from the field of behavior analysis. (Crosslisted with SPSY 579)
+    offered:
+      availability: periodic
+  SPED-585:
+    code: SPED 585
+    title: Transition and Career Development for Students with Disabilities - Kindergarten to Adult
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Emphasis of the course is to provide conceptual and practical considerations for students with disabilities who have mild/moderate and extensive support needs, including students with traumatic brain injury. Content includes a focus on career education or academic training, vocational preparation, social skills instruction, daily living skills, self-advocacy, and self-determination. Includes both coursework and fieldwork.
+    offered:
+      terms:
+        - fall
+        - spring
+  SPED-595:
+    code: SPED 595
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 5
+    description: Special topic courses study particular topics in field experiences. It provides practical experience teaching students with Mild/ Moderate or Moderate/ Severe disabilities in public and non-public school (K-12) settings.
+    offered:
+      availability: periodic
+  SPED-597:
+    code: SPED 597
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic
+  SPED-680:
+    code: SPED 680
+    title: Preliminary Induction
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This course serves as the preliminary induction course for the Education Specialist Induction Program.Students will develop their Individualized Learning Plan (ILP) and Electronic Portfolio to document progress during their induction process. The course assists students in working collaboratively with their course instructor and district mentor in the development, implementation, and evaluation of the ILP through advising and support activities.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - (Restricted to MAE Majors)
+  SPED-681:
+    code: SPED 681
+    title: Advanced Behavior Supports
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Advanced instruction in the principles and application of behavior analysis with individuals with Mild/Moderate/Severe academic, social and/or behavioral needs. Crosslist with SPSY 681   .
+  SPED-682:
+    code: SPED 682
+    title: Adv Assessment/Curriculum for Children w Learning Challenges
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Candidates demonstrate the ability to adapt general ed curric; use and eval a variety of group instruct strat; analyze student perform. data; and design, implement, and evaluate an instructional unit with sequences for effective teaching of concepts, rules, and strategies in any area. Each candidate demonstrates knowledge and skills in validated practices that maximize academic learning time, teacher-directed instruction, student success, and content coverage.
+    offered:
+      availability: periodic
+  SPED-683:
+    code: SPED 683
+    title: Advanced Collab/Consultation
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Special ed professionals develop communication and collaboration skills. This course covers the use of effective communication, management skills & Individual Induction Plan development. Integrated service delivery models are addressed, along with school restructuring & reform efforts designed to impact systems change.
+    offered:
+      terms:
+        - fall
+  SPED-684:
+    code: SPED 684
+    title: Cur/Rsch/Policy/Practice
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: An advanced seminar for reviewing & analyzing literature related to issues in the field of special education. Students critique current research in fields including communication disorders, learning disabilities, bilingual learning disabilities, intellectual disability, deaf & hearing impaired, blind & visually impaired, autism, traumatic brain injury, other health impaired, emotional disturbance, and severe handicapping conditions.
+    offered:
+      availability: periodic
+  SPED-686:
+    code: SPED 686
+    title: "Advocacy and Systems Change: Promoting Leadership Management and Communication Skills"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course covers issues related to the use of effective communication, leadership and management skills in special education. Multiple integrated service delivery models are addressed, along with issues in school restructuring and reform efforts designed to impact systems change.
+    offered:
+      availability: periodic
+  SPED-689:
+    code: SPED 689
+    title: Induction / Professional Growth
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This course serves as the final induction course for the Teacher Induction Program. Teacher Induction students will demonstrate program competency through the development of a comprehensive professional e-portfolio.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - (Restricted to MAE Majors)
+  SPED-697:
+    code: SPED 697
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select advanced topic of study and number of credits.
+    offered:
+      availability: periodic

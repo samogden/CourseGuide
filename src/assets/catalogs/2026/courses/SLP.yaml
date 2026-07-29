@@ -1,0 +1,326 @@
+schemaVersion: 1
+prefix: SLP
+courses:
+  SLP-571:
+    code: SLP 571
+    title: Autism Spectrum Disorders (ASD)
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course will provide an overview of the etiology and characteristics related to Autism Spectrum Disorders (ASD) and related disorders. Students will learn current evidence-based practices for speech and language diagnosis, assessment, and treatment for ASD and other neurological disorders. Current literature on pertinent social and legal issues will be discussed and analyzed.
+    offered:
+      availability: periodic
+  SLP-601:
+    code: SLP 601
+    title: Professional SLP Seminar I
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Clinical concepts/processes will be introduced including conducting file reviews, understanding clinical terminology and general disorder areas, identifying positive and negative clinician traits/dispositions, writing behavioral objectives, data collection procedures, general treatment and teaching strategies, and preparing for the first clinical experience.
+    offered:
+      availability: periodic
+  SLP-602:
+    code: SLP 602
+    title: Professional SLP Seminar II
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Students will be introduced to clinical concepts/processes related to the treatment and diagnosis of various communicative disorders. Specifically, students will obtain experiences in test administration, scoring, interpretation, and oral/written communication of assessment results. Students will practice using assessment results to prepare lesson plans that include measurable treatment goals and strategies/techniques to implement in intervention.
+    offered:
+      availability: periodic
+    prerequisites:
+      - courseId: SLP-601
+    prerequisiteNotes:
+      - "(Prereq: SLP 601)"
+  SLP-603:
+    code: SLP 603
+    title: Professional Seminar III
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This course will engage students in critical analysis and problem solving of issues related to the field of speech-language pathology. Students will hone skills in case management, data collection, progress monitoring, and interprofessional interactions / communication.
+    offered:
+      availability: periodic
+    prerequisites:
+      - courseId: SLP-602
+    prerequisiteNotes:
+      - "(Prereq: SLP 602)"
+  SLP-610:
+    code: SLP 610
+    title: Collaborative Intervention, Consultation, and Advocacy for Systemic Change
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course focuses on consultation, intervention, and advocacy strategies grounded in bilingual and bicultural expertise. Participants will learn how to support culturally responsive Multi-Tiered Systems of Support (MTSS), adapt evidence-based practices for DLLs, and advocate for inclusive policies and instructional models. The course emphasizes collaboration with families, educators, and community partners to bridge cross-cultural understanding and support student well-being. Participants will explore professional development, leadership, and systems-level change, integrating family engagement strategies that honor linguistic and cultural identities. Advanced bilingual communication skills will be applied in real-world consultation and advocacy scenarios.
+  SLP-611:
+    code: SLP 611
+    title: Clinical Practicum Children/Adults I
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Initial supervised practice in diagnosis and treatment of communicative disorders in children/adults. Students will engage in a variety of activities, which may include case history review, interview, test administration, data analysis, treatment plan design/implementation, report presentation, staffing, educational support, counseling, prevention of communicative disorders, and the enhancement of speech, language, hearing, and communicative effectiveness.
+    offered:
+      availability: periodic
+  SLP-612:
+    code: SLP 612
+    title: Clinical Practicum Children/Adults II
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Development of competence in diagnosis and treatment of communicative disorders in children/adults through supervised practice. Students will engage in a variety of activities, which may include case history review, interview, test administration, data analysis, treatment plan design/implementation, report presentation, staffing, educational support, counseling, prevention of communicative disorders, and the enhancement of speech, language, hearing, and communicative effectiveness.
+    offered:
+      availability: periodic
+    prerequisites:
+      - courseId: SLP-611
+    prerequisiteNotes:
+      - "(Prereq: SLP 611   )"
+  SLP-617:
+    code: SLP 617
+    title: Grand Rounds in Speech-Language Pathology
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students will present client cases to faculty and peers. Students will include description and analysis of assessment and intervention procedures appropriate. Students will be encouraged to engage in reflective practices and problem solving in client case management.
+    offered:
+      availability: periodic
+  SLP-619:
+    code: SLP 619
+    title: "Supervised Clinical Experience: Externship"
+    teachingStatus: active
+    credits:
+      minimum: 9
+      maximum: 9
+    description: "Students will develop clinical skills through a supervised full-time clinical internship that includes a minimum of 200 clock hours. Specifically, supervised activities including case history review, interview, test administration, data analysis, treatment plan design/implementation, and report presentation. May also include: staffing, educational support, counseling, prevention of communicative disorders, and the enhancement of speech, language, hearing, and communicative effectiveness."
+    offered:
+      availability: periodic
+  SLP-620:
+    code: SLP 620
+    title: Bilingual Coaching and Professional Portfolio
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This culminating seminar provides individualized coaching and guided practice to support candidates’ integration of bilingual competencies into their professional practice. Candidates work with bilingual supervisors or coaches to refine their bilingual communication, consultation, and advocacy skills. The course ensures that candidates receive structured bilingual supervision during practicum or internship experiences.
+    offered:
+      terms:
+        - fall
+  SLP-621:
+    code: SLP 621
+    title: Research and Evidence-Based Practice in SLP
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is designed for graduate students in the SLP program. Students examine frameworks, processes, and compositional approaches to designing qualitative and quantitative research studies. Students will be able to critically evaluate and analyze research in the field and develop a research proposal.
+    offered:
+      availability: periodic
+  SLP-625:
+    code: SLP 625
+    title: "Law & Ethics: Speech Language Practitioner"
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course will familiarize students with the state and federal laws specific to special education and other legal considerations for the field of speech-language pathology. Emphasis will be on ethical obligations (in alignment with ASHAs Code of Ethics) and client advocacy. Students will be provided with opportunities to explore interdisciplinary and collaborative practices pertaining to various settings.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Department Consent Required)
+  SLP-627:
+    code: SLP 627
+    title: Counseling for the Speech-Language Pathologist
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Counseling within the context of communication disorders will be explored. Students examine the emotional, practical, and theoretical perspectives of the full range of communication disorders across the lifespan for patients and caregivers. Interviewing and counseling techniques for individuals, families and groups is surveyed. The implications of multicultural and linguistic diversity for effective counseling are considered throughout the course. Ethical and professional issues relevant to counseling are discussed.
+    offered:
+      availability: periodic
+  SLP-629:
+    code: SLP 629
+    title: Augmentative and Alternative Communication (AAC)
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "This course will cover: alternative and augmentative communication (AAC), AAC systems, its users and stakeholders, and the impact of AAC systems on communication; the assessment of individuals who may benefit from AAC; providing intervention using AAC systems; and service delivery to individuals requiring AAC, including advocacy, role of the SLP on teams working with these clients and the training of communication partners using AAC systems."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Department Consent Required)
+  SLP-641:
+    code: SLP 641
+    title: Articulation and Phonology Disorders
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Candidates will gain knowledge in the areas of typical and atypical articulation development, along with phonological disorders, resulting from a variety of etiologies, will be presented and discussed. Introduction to evaluation tools, interpretation of results, and intervention methods will investigate.
+    offered:
+      availability: periodic
+  SLP-642:
+    code: SLP 642
+    title: Culturally Sustaining Practice in SLP
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will understand language development, variation, and processing in bilingual individuals. Students will learn assessment and intervention practices/challenges associated with atypical patterns of language and literacy learning for bilingual/English learner students. Students will develop intercultural clinical competence and gain knowledge and skills related to ASHA Code of Ethics regarding Cultural Competence.
+    offered:
+      availability: periodic
+  SLP-651:
+    code: SLP 651
+    title: "Language Disorders: Infants and Preschool"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This class is designed to prepare students for clinical interactions with human infants, toddlers, and preschoolers who have or are at risk for language disorders. Students will be introduced to current knowledge about typical development of language and other communication skills. That knowledge will then serve as a foundation for examining the ways in which clinically significant disorders are manifested in young children. Models of assessment and intervention will be presented, and specific applications will be discussed.
+    offered:
+      availability: periodic
+  SLP-652:
+    code: SLP 652
+    title: "Language Disorders: School-age and Adolescents"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This class is designed to develop an understanding of school-age children (ages 5-21) with typical and disordered language. Students will examine assessment and intervention strategies within the school system including collaborative transdisciplinary models, Response-to-Intervention, integration of California curriculum-based standards in Individual Education Plans (IEPs), including language influences for diverse speakers and clinically significant etiologies.
+    offered:
+      availability: periodic
+  SLP-653:
+    code: SLP 653
+    title: "Language Disorders: Adults"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will gain in-depth knowledge of acquired language disorders in adults. Evidence-based assessment procedures and treatment strategies will be introduced with a focus on functional outcomes. Students will gain experience with data collection, interpretation of assessment results, lesson plan development, and oral / written dissemination of report results.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Department Consent Required)
+  SLP-654:
+    code: SLP 654
+    title: Cognitive-Linguistic Disorders in Adults
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course will focus on acquired language and cognitive disorders in adults, secondary to cerebrovascular accident, traumatic brain injury, and dementia. Evidence-based assessment procedures and treatment strategies will be introduced with a focus on functional outcomes. Students will gain experience with data collection, interpretation of assessment results, lesson plan development, and oral / written dissemination of report results.
+    offered:
+      availability: periodic
+    prerequisites:
+      - courseId: SLP-656
+    prerequisiteNotes:
+      - "[(Prereq: SLP 656   ) and (Department Consent Required)]"
+  SLP-656:
+    code: SLP 656
+    title: Neuroscience for the Speech-Language Pathologist
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course will provide an in-depth exploration of the nervous system including the neurological structures and pathways involved in human communication. Students will study the neurological structure and function of the related neurological systems related to speech, language, and cognitive functions. Application to typical and related disorders will be reviewed.
+    offered:
+      availability: periodic
+  SLP-657:
+    code: SLP 657
+    title: Motor Speech
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course reviews anatomy, physiology, and neurological bases of motor speech disorders, including dysarthria and apraxia across the lifespan. Students examine etiologies, features, and differential diagnosis with emphasis on evidence-based evaluation and intervention. Content covers assessment tools, neural substrates, clinical protocols, case management, social determinants of health, treatment outcomes, prognosis, and case-based application.
+    offered:
+      availability: periodic
+    prerequisites:
+      - courseId: SLP-656
+    prerequisiteNotes:
+      - "(Prereq: SLP 656)"
+  SLP-658:
+    code: SLP 658
+    title: Dysphagia
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Typical anatomy and physiology of swallowing and related disorders across the lifespan will be covered. Assessment techniques for dysphagia through the different phases of swallowing will be discussed. Evidence-based practice considerations are incorporated along with interdisciplinary approaches to the assessment and treatment of swallowing disorders are discussed. Opportunities for both coursework and field work.
+    offered:
+      availability: periodic
+    prerequisites:
+      - courseId: SLP-656
+    prerequisiteNotes:
+      - "(Prereq: SLP 656)"
+  SLP-661:
+    code: SLP 661
+    title: Voice Disorders
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: The nature of voice disorders across the lifespan, including symptomatology, development, and etiology. Introduction to evaluation tools and instrumentation, interpretation of results, and evidence-based intervention techniques will be explored. Includes both coursework and fieldwork.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Department Consent Required)
+  SLP-662:
+    code: SLP 662
+    title: Cleft Palate and Craniofacial Anomalies
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This course will review the anatomy and physiology of craniofacial features. The etiology of craniofacial disorders and anomalies will be explored. Students will engage in evidence-based practices for evaluation and intervention of clefts and craniofacial anomalies.
+    offered:
+      availability: periodic
+  SLP-664:
+    code: SLP 664
+    title: Stuttering and Other Fluency Disorders
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course examines the nature, characteristics, and multifactorial bases of fluency disorders, with emphasis on stuttering across the lifespan. Students will analyze current theories of onset and development and apply evidence-based practices for assessment, differential diagnosis, and treatment. Cultural and linguistic diversity, counseling principles, treatment outcomes, and factors influencing prognosis will also be addressed.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Department Consent Required)
+  SLP-665:
+    code: SLP 665
+    title: Aural Rehabilitation
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course will provide an advanced level of knowledge and principles used in the assessment and remediation of persons with auditory impairments and will be taught with a clinical emphasis. Theoretical, methodological, and technical issues related to facilitating communication in individuals who are deaf or hard-of-hearing.
+    offered:
+      availability: periodic
+  SLP-670:
+    code: SLP 670
+    title: Culminating Experience
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Candidates will complete their culminating experience, which may take the form of a thesis, project, or written comprehensive examination. Students must complete an oral defense of their work. Students must continuously enroll in this course until completion of the culminating experience.
+    offered:
+      availability: periodic
+  SLP-695:
+    code: SLP 695
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Special topic courses focus on a specific area of practice for speech-language pathologists. These courses will vary by topic and provide students with up to date evidence based research and practice implications on the given topic.
+    offered:
+      availability: periodic

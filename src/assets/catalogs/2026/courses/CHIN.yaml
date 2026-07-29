@@ -1,0 +1,82 @@
+schemaVersion: 1
+prefix: CHIN
+courses:
+  CHIN-102:
+    code: CHIN 102
+    title: Beg Chinese II (Mandarin)
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Continues work on the four basic skills within a proficiency format. Emphasizes building lexicon in spoken and written forms, and using context and strategies to ascertain meaning without knowing the structures and lexicon of an authentic text.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: CHIN-101
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CHIN 101   with a C- or better)"
+  CHIN-197:
+    code: CHIN 197
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Allows lower-division students to independently study a particular aspect of Chinese culture and language. A written proposal for the study/research must be approved in advance by the sponsoring faculty member and the program chair. Number of credits depends on the nature of the student’s academic goals and the consent of the faculty advisor.
+    offered:
+      availability: periodic
+  CHIN-297:
+    code: CHIN 297
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Individual study of a particular aspect of the culture, language, or civilization of the Chinese-speaking world. A written proposal for the study/research must be approved in advance by the sponsoring faculty member and the program chair. Number of credits depends on the nature of the student’s academic goals and the consent of the faculty advisor.
+    offered:
+      availability: periodic
+  CHIN-301:
+    code: CHIN 301
+    title: Adv Chinese I (Mandarin)
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Concentrates on language mastery using spoken and written materials such as newspaper articles, modern expository prose, TV, plays, and movies.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Coreq: CHIN 202)"
+  CHIN-302:
+    code: CHIN 302
+    title: Adv Chinese II (Mandarin)
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Continues concentration on language mastery using spoken and written materials such as newspaper articles, modern expository prose, TV, plays, and movies.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Coreq: CHIN 202)"
+  CHIN-305:
+    code: CHIN 305
+    title: History/Culture of China/Tibet
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    offered:
+      availability: periodic
+  CHIN-395:
+    code: CHIN 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Provides orientation and preparation for a study-abroad experience in the Chinese mainland.
+    offered:
+      availability: periodic

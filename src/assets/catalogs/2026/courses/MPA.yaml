@@ -1,0 +1,1109 @@
+schemaVersion: 1
+prefix: MPA
+courses:
+  MPA-100:
+    code: MPA 100
+    title: Music Fundamentals
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduction to Common Western Notation and literate sonic creativity through calligraphy, composition, performance, and the descriptive and prescriptive use of fundamental pitch and rhythm elements. Problems of written and aural expression and interpretation, across a variety of historical and cultural contexts, genres, and styles. Theoretical concepts form a descriptive and analytic framework for the critique of musical works against articulated aesthetic conventions.
+    offered:
+      terms:
+        - fall
+        - spring
+  MPA-101:
+    code: MPA 101
+    title: Diatonic Harmony
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Brief review of concepts covered in Music 100 (Music Fundamentals), figured bass theory and realization in four parts, roman numeral and chord function theory, complete cadential formulae and period phrase structure, non-chord tones, and four-part chorale voice-leading principles. Introduction to digital engraving using a computer.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MPA-100
+    prerequisiteNotes:
+      - "(Prereq: MPA 100   or equivalent)"
+  MPA-102:
+    code: MPA 102
+    title: Chromatic Harmony
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Non-dominant 7th chords, secondary dominants, modulation to closely related keys through common chord and alternate techniques, and analysis of small binary and ternary forms. Continued development of digital engraving using a computer.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: MPA-101
+    prerequisiteNotes:
+      - "(Prereq: MPA 101   or equivalent)"
+  MPA-104:
+    code: MPA 104
+    title: Musicianship I
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Pitch topics include melodies with leaps within the primary triads, common melodic patterns, simple phrase structures, tendency tones, melodies in harmonic context, diatonic intervals through the octave, identification of triad and V7 chord qualities and inversions, and harmonic progressions with primary chords and their inversions; rhythm topics include common time signatures and patterns. Students perform and sight-read exercises. Individual sight-singing, rhythmic, and dictation examinations.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: MPA-100
+    prerequisiteNotes:
+      - "(Prereq or Coreq for MPA Majors and Minors: MPA 100   )"
+  MPA-105:
+    code: MPA 105
+    title: Musicianship II
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Pitch topics include major and minor keys including leaps within all diatonic triads and the V7 chord, expanded phrase structure within simple melodic forms, and common diatonic chord progressions with inversions. Rhythmic topics include simple and compound rhythmic patterns using the subdivision of the beat, as well as triplets. Students perform and sight-read exercises. Individual sight-singing, rhythmic, and dictation examinations.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MPA-104
+          - courseId: MPA-100
+    prerequisiteNotes:
+      - "[(Prereq: MPA 104   ) and (Prereq or Coreq: MPA 100   )]"
+  MPA-106:
+    code: MPA 106
+    title: Musicianship III
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Pitch topics include melodic chromaticism, secondary dominants, modulation to closely related keys, and harmonic progressions with all inversions possible; rhythmic topics include triplets at the subdivision and beat level, duplets and quartolets at the beat level in compound meter, and syncopation. Students perform and sight-read exercises. Individual sight-singing, rhythmic, and dictation examinations.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: MPA-105
+          - courseId: MPA-102
+    prerequisiteNotes:
+      - "[(Prereq: MPA 105   ) and (Prereq or Coreq: MPA 102   )]"
+  MPA-107:
+    code: MPA 107
+    title: Musicianship IV
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Pitch topics include modulations to distant keys, mode mixture, non-dominant 7th chords, Neapolitan and augmented 6th chords, extended and altered chords, diatonic modes, non-diatonic and synthetic scales (whole-tone, pentatonic, octatonic), and post-tonal materials; rhythmic topics include irregular beat divisions, polyrhythms, as well as asymmetrical and mixed meters. Students perform and sight-read exercises. Individual sight-singing, rhythmic, and dictation examinations.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MPA-106
+          - courseId: MPA-102
+    prerequisiteNotes:
+      - "[(Prereq: MPA 106   ) and (Prereq or Coreq: MPA 102   )]"
+  MPA-108:
+    code: MPA 108
+    title: Introduction to Music Production
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Through making their own music, students gain an understanding of fundamental aspects of music production with a focus on digital audio workstation and recording equipment basics.
+    offered:
+      terms:
+        - fall
+        - spring
+  MPA-110:
+    code: MPA 110
+    title: Keyboard I
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Introduction to music literacy and technique at the keyboard in a group setting, through five-finger exercises, major scales, and pieces from a variety of traditions in monophonic, polyphonic, and homophonic textures.
+    offered:
+      terms:
+        - fall
+        - spring
+  MPA-114:
+    code: MPA 114
+    title: Introduction to Music Business
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: The course presents an overview of the economics of the music industry with a focus on topics relevant to the individual artist and career paths within the field.
+    offered:
+      terms:
+        - fall
+        - spring
+  MPA-208:
+    code: MPA 208
+    title: Music of the Beatles
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course surveys the career of the Beatles, mainly focusing on the years that they were active as a recording band (1963-1970), but also including events leading up to their formation, as well as an overview of four members’ solo careers. Additionally, the course interprets the role of the Beatles as a groundbreaking multimedia phenomenon, through a close critical reading of their official cinematography and the development of their multimedia company, Apple Corps.
+    offered:
+      availability: periodic
+  MPA-209:
+    code: MPA 209
+    title: African Drumming
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    offered:
+      availability: periodic
+  MPA-210:
+    code: MPA 210
+    title: Keyboard II
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Continued development of music literacy and technique at the keyboard in a group setting, through major and minor scales in parallel motion, simple chord progressions in sharp and flat keys, and both solo and 4-hand repertoire from various musical traditions.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MPA-110
+    prerequisiteNotes:
+      - "(Prereq: MPA 110   or equivalent)"
+  MPA-216:
+    code: MPA 216
+    title: Stage Design and Technology
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Emphasizes technical training including lighting, audio, projection, and scenic elements. Students work on planning and presenting concepts for a variety of live events, including music, theater, dance, and conference/lectures.
+    offered:
+      availability: periodic
+  MPA-220:
+    code: MPA 220
+    title: From Gregorian Chant to Hip-Hop
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores the meaning of music as a human phenomenon throughout history and across cultures.
+    offered:
+      terms:
+        - fall
+        - spring
+  MPA-225:
+    code: MPA 225
+    title: Ballet Folklorico
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Teaches the historical and cultural roots, traditions, and basic techniques of different styles of Mexican dance.
+    offered:
+      availability: periodic
+  MPA-229:
+    code: MPA 229
+    title: African Dancing
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    offered:
+      availability: periodic
+  MPA-233:
+    code: MPA 233
+    title: Expressive Arts
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores the expressive nature of the human being through the study of visual art, music, dance, and theater. Examines myth and ritual through history as it relates to today. Students receive four weeks of study in each area.
+    offered:
+      terms:
+        - spring
+  MPA-239:
+    code: MPA 239
+    title: "Contemporary Musical Theater: Little Johnny Jones to The Color Purple"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Surveys the development of American musical theater from the early 20th century to the present. Examines composers, songs, narrative, and cultural/social/political references that impacted American musical theater history.
+    offered:
+      terms:
+        - fall
+        - spring
+  MPA-241:
+    code: MPA 241
+    title: Introduction to Theater
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: A theater appreciation course that explores the development of theater as a mirror to the development of human society and culture from the ancient Greeks to the present.
+    offered:
+      availability: periodic
+  MPA-261:
+    code: MPA 261
+    title: String Ensemble
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: "Study of works for string ensembles culminating in a public performance. Prerequisite: Must be able to read music and play a violin, viola, cello or double bass."
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: MPA-100
+    prerequisiteNotes:
+      - "(Prereq: MPA 100   ) or (Instructor Consent)"
+  MPA-295:
+    code: MPA 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Study in a particular topic in music and performing arts. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  MPA-297:
+    code: MPA 297
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic
+  MPA-300:
+    code: MPA 300
+    title: Major ProSeminar
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: "This course focuses on music as a profession and academic discipline. Featuring critical group discussions, the core elements of study include research skills across music subdisciplines (including basic research, citation, and methodologies) and guest presentations to stimulate research ideas. Students learn about professional practices and work towards their MPA 475: Senior Capstone project by choosing a research area, mapping an emphasis pathway, and conducting literature reviews."
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: MPA-304
+    prerequisiteNotes:
+      - "[Prereq: (Junior Standing) and (Coreq: MPA 304   )]"
+  MPA-301:
+    code: MPA 301
+    title: Music for Children
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Provides an overview of musical materials, concepts, and skills appropriate for teaching music in elementary school classrooms. Teaches music fundamentals with the applied development of basic skills on such instruments as guitar and piano.
+    offered:
+      terms:
+        - spring
+  MPA-303:
+    code: MPA 303
+    title: Proseminar II
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Critical group discussion of music as both profession and academic discipline. Students continue literature review work toward a chosen research topic for capstone and begin formulating potential theses. Introduction to basic research and citation skills, and to music’s subdisciplines, their methodologies, and their citation strategies. Guest presentations complement discussion and provoke students to consider new research areas.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: MPA-300
+    prerequisiteNotes:
+      - "(Prereq: MPA 300   )"
+  MPA-304:
+    code: MPA 304
+    title: Writing About Music
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduction to reading and writing strategies for music’s academic and professional contexts. Course discussions and assignments close a loop between reading – through the comprehension, evaluation, and analysis of texts of varied genre and purpose – and writing – through focused writing and critique, with emphasis on development, structure, paragraphing, tone, mechanics, the function and citation of sources, scope, and the joy of writing as both creative act and vehicle for self-reflection.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: MPA-300
+    prerequisiteNotes:
+      - "[(Prereq: Junior Standing) and (Coreq: MPA 300   )]"
+  MPA-305:
+    code: MPA 305
+    title: Measuring Music
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Interdisciplinary inquiry into the quantitative dimension of sound and music. Topics include sound waves, sound perception, tuning, harmonic spectra (via Fourier analysis), music computation, and music notation, with creative and digital signal processing applications. Students design music notations and learn to edit and program electronic music with contemporary software tools.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  MPA-306:
+    code: MPA 306
+    title: History of Electronic Music
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduction to the history and contemporary practice of electronic music through exploration of historically significant works and technologies.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: MPA-101
+    prerequisiteNotes:
+      - "[(Prereq: MPA 101   and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  MPA-307:
+    code: MPA 307
+    title: Recording in the Studio
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduction to analog and digital audio production techniques. Topics include microphone design and pickup patterns, analog electronics, live instrumental and vocal tracking, concepts from acoustics and psychoacoustics, session management, and introductory mixing with industry-standard software applications. Students create original music and must play an instrument or sing in group recording sessions outside of class meeting times.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: MPA-305
+    prerequisiteNotes:
+      - "(Prereq: MPA 305   )"
+  MPA-308:
+    code: MPA 308
+    title: Mixing & Mastering
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examines advanced mixing topics including signal routing, inserts, auxiliary sends, equalization, signal processing, and digital editing.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: MPA-305
+    prerequisiteNotes:
+      - "(Prereq: MPA 305   )"
+  MPA-309:
+    code: MPA 309
+    title: Global Percussion
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Explores percussion rhythms from around the globe through performance.
+    offered:
+      availability: periodic
+  MPA-310:
+    code: MPA 310
+    title: Gospel Choir
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Performance and study of the historical evolution of contemporary gospel music in America culminating in public performance. Off-campus and/or outside-of-regular-class-time performances may be required.
+    offered:
+      terms:
+        - fall
+        - spring
+  MPA-312:
+    code: MPA 312
+    title: Music in Film
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Exploration of composers, aesthetic considerations, and developments of music in film from the silent era to the present. Introduces feature films whose groundbreaking, innovative use of music plays establishes them as examples of Richard Wagner’s revolutionary concept of total artwork.
+    offered:
+      availability: periodic
+    prerequisites:
+      - courseId: MPA-100
+    prerequisiteNotes:
+      - "(Prereq: MPA 100   )"
+  MPA-314:
+    code: MPA 314
+    title: Arts Management and Music Business Ethics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores contemporary arts management from legal, structural, ethical, and technological perspectives. Confronts issues of fairness, authorship, authenticity, and appropriation. Provides a broad and detailed understanding of the music industry.
+    offered:
+      terms:
+        - spring
+  MPA-316:
+    code: MPA 316
+    title: Sound Art Practicum
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Practice-based introduction to composition and performance in the gallery-based sound installation and Fluxus instruction score traditions. Students create, workshop, and publicly present instruction score performances, as well as generative, multi-channel audio installations, through weekly presentation and critique.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: MPA-305
+    prerequisiteNotes:
+      - "(Prereq: MPA 305   )"
+  MPA-317S:
+    code: MPA 317S
+    title: Community Involvement Service Learning
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Fosters the development of arts education programs in local communities. Students employ a combination of community organizing skills and arts teaching strategies to facilitate arts education programs at specific sites. Students provide one-on-one or group tutoring to facilitate arts education. Students become self-reflective, culturally aware, and responsive community participants through reciprocal service and learning projects.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  MPA-318:
+    code: MPA 318
+    title: Tonal Analysis
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduction to hypermetric analysis and phrase rhythm in tonal music. Complete movements or entire shorter works of the 18th and 19th centuries are analyzed through a variety of theoretical approaches.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  MPA-319:
+    code: MPA 319
+    title: Post-Tonal Analysis
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduction to Late Romantic and Modernist harmonic and rhythmic structures and techniques. Introduction to hypermetric analysis and strategies for large-scale formal organization in post-tonal music. Complete movements, or entire shorter works of the 19th, 20th, and 21st centuries, are analyzed through a variety of theoretical approaches.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  MPA-320:
+    code: MPA 320
+    title: Chorale
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Study and performance of vocal repertoire for small ensembles including solo song, oratorio, opera, and other ensemble music. Emphasizes the development of effective performance skills culminating in public performance. Off-campus and/or outside-of-regular-class-time performances may be required.
+    offered:
+      terms:
+        - fall
+        - spring
+  MPA-321:
+    code: MPA 321
+    title: Monterey Jazz Festival
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores the Monterey Jazz Festival as an institution that musically reflects and shapes cultural values in the United States. Topics include the intersection of jazz with a wide variety of cultural values and social issues involving gender, race, class, politics, religion, sexuality, and more embedded within particular historical and cultural contexts. Students study jazz in live and mediated performance contexts and engage in ethnomusicological fieldwork at the Monterey Jazz Festival.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  MPA-323:
+    code: MPA 323
+    title: Guitar I
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Explores fundamental techniques for guitar in solo/and or group settings.
+    offered:
+      terms:
+        - fall
+        - spring
+  MPA-324:
+    code: MPA 324
+    title: Guitar II
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Explores intermediate/advanced techniques for guitar in solo/and or group settings.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MPA-323
+    prerequisiteNotes:
+      - "[(Prereq: MPA 323   ) or (Instructor Consent)]"
+  MPA-325:
+    code: MPA 325
+    title: Video Game Music
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explore the history of video game sound from a technical and aesthetic perspective. Significant games and composers are discussed in detail, and students will read literature from a variety of disciplines to gain a better understanding of the semiotic and logistical impacts of sound on the experience of video games.
+    offered:
+      terms:
+        - spring
+  MPA-330:
+    code: MPA 330
+    title: Voice Training I
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Explores the basic techniques of tone production, breathing, and related skills in interpreting vocal music of various periods and styles building to public performance. Off-campus and/or outside-of-regular-class-time performances may be required.
+    offered:
+      terms:
+        - fall
+        - spring
+  MPA-332:
+    code: MPA 332
+    title: Voice Training II
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Explores intermediate/advanced techniques of vocal production, expressive interpretation, and vocal repertoire from various music styles and periods building to public performance. Off-campus and/or outside-of-regular-class-time performances may be required.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MPA-330
+    prerequisiteNotes:
+      - "(Prereq: MPA 330   ) or (Instructor Consent)"
+  MPA-335:
+    code: MPA 335
+    title: Reflections on American Music
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This survey course is designed to provide an overview of American popular music from 1900 to the present. The course focuses on a broad spectrum of popular music, including sacred and secular genres. Through lectures, listening sessions, and film screenings, course content emphasizes the social, economic, cultural, technological, political, and aesthetic development of American popular music.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  MPA-336:
+    code: MPA 336
+    title: Jazz History
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: An overview of jazz development from its roots in African music and American spirituals to the funeral bands of New Orleans with an examination of the work and stylistic contributions of the great jazz originators like King Oliver, Charlie Parker, John Coltrane, and Miles Davis. Emphasis on the social, cultural, and economic circumstances that influenced jazz.
+    offered:
+      terms:
+        - spring
+  MPA-337:
+    code: MPA 337
+    title: "Music History I: 500-1750"
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: A stylistic survey of music of the tonal era, 500-1750, with emphasis on aural and visual analysis of the principal musical styles of the standard western music repertoire.
+    offered:
+      terms:
+        - fall
+  MPA-338:
+    code: MPA 338
+    title: "Music History II: 1750-1900"
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: A stylistic survey of music of the tonal era, 1750-1900, with emphasis on aural and visual analysis of the principal musical styles of the standard western music repertoire.
+    offered:
+      terms:
+        - spring
+  MPA-339:
+    code: MPA 339
+    title: History of Song
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Surveys the solo vocal repertoire from the early Renaissance to the present, with special emphasis on extant repertoire of the Classical and Romantic eras.
+    offered:
+      availability: periodic
+  MPA-340:
+    code: MPA 340
+    title: Music Production & Artistic Development
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Student bands and solo artists develop their songwriting, production skills, stage presence, and other assets required to be successful in the music business and work toward a final performance.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: MPA-100
+    prerequisiteNotes:
+      - "(Prereq: MPA 100   )"
+  MPA-345:
+    code: MPA 345
+    title: Jazz Improvisation
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Examines the technique and performance practice of jazz improvisation from 1927 to the present. Students gain greater understanding of, sensitivity to, and skills in the practice of improvisation. Particular emphasis is placed on each student acquiring and developing critical listening skills. All students must have a basic proficiency on their chosen musical instrument and a basic knowledge of scales, key signatures, intervals, and chords. Vocalists are welcome.
+    offered:
+      terms:
+        - fall
+  MPA-346:
+    code: MPA 346
+    title: Free Improvisation Ensemble
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Rehearsal and public performance of free and structured transidiomatic group improvisations with focus on student composition and the existing game piece and instruction score repertoire. Students perform, compose, and critique works and improvisations in weekly workshop rehearsals, in preparation for public performance. Any student with the ability to make sound can join the ensemble, and neither audition nor prior musical training is required.
+    offered:
+      terms:
+        - spring
+  MPA-347:
+    code: MPA 347
+    title: Latin Jazz Ensemble
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Advanced ensemble practicum in the Latin jazz tradition. Students rehearse music together in preparation for public performances.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[(Prereq: Junior or Senior Standing) or (Instructor Consent)]"
+    minimumStanding: junior
+  MPA-364:
+    code: MPA 364
+    title: Music of Mexico
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Music of Mexico explores a variety of musical styles that have emerged from the pre-Hispanic era to the present. From the indigenous influences on music throughout the Americas, to the musical styles brought by European and African immigrants, this course explores the geographic and political contexts reflected in Mexican music as a cultural icon.
+    offered:
+      availability: periodic
+  MPA-365:
+    code: MPA 365
+    title: Survey of Global Music
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces non-Western music and arts within global sociocultural context, with an emphasis on indigenous, folk, and classical music as art forms.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  MPA-367:
+    code: MPA 367
+    title: Music of Latin America and the Caribbean
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Provides an overview of the roots of musics from Latin America and the Caribbean and explores their development in the United States.
+    offered:
+      availability: periodic
+  MPA-368:
+    code: MPA 368
+    title: Songwriting
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Develops skills to compose songs with well-crafted lyrics, melodies, harmonies, and forms. Students explore different songwriting traditions and analyze a range of songs to explore the techniques of songwriters across genres.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: MPA-100
+    prerequisiteNotes:
+      - "(Prereq: MPA 100   )"
+  MPA-369:
+    code: MPA 369
+    title: Post-Production Audio
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Students will explore the creation of sound for on-screen media including film, television, and video games. Students will analyze existing examples of work across various media and use software and hardware to explore aspects of post-production audio including creating Foley, designing original sounds, editing, and mixing.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: MPA-305
+    prerequisiteNotes:
+      - "(Prereq: MPA 305   )"
+  MPA-370:
+    code: MPA 370
+    title: Acoustic Composition
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Explores the mechanics of music composition and instrumentation by examining dimensions such as melody, rhythm, and harmony. Examination and critical analysis of various musical works past and present through score study, critical listening, and group critique. Guest artists read student pieces.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: MPA-100
+    prerequisiteNotes:
+      - "[(Prereq: MPA 100   ) or (Instructor Consent)]"
+  MPA-371:
+    code: MPA 371
+    title: Composition Seminar
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Develops skills in composition, arranging, and orchestration including exploration of electroacoustic techniques, multimedia forms, and scoring. Group critique of in-progress composition projects. Guest artists read student pieces.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MPA-100
+    prerequisiteNotes:
+      - "[(Prereq: MPA 100 ) or (Instructor Consent Required)]"
+  MPA-372:
+    code: MPA 372
+    title: Screen Scoring
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Explores processes of critical viewing, listening, and composing as a way to comprehend and interpret aspects of music in film and perceive those aspects from multiple perspectives. Through technical exercises that involve click tracks, spotting, scoring under picture and the creative use of overlap cues, among others, students will learn how to develop and synchronize an engaging music score that supports visual events.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: MPA-100
+    prerequisiteNotes:
+      - "(Prereq: MPA 100   )"
+  MPA-373:
+    code: MPA 373
+    title: Advanced Chromatic Theory
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course provides an advanced investigation into the application of principles established in the music theory sequence through advanced musical analysis and composition that builds upon the theoretical principles and concepts presented in lower division music theory courses, including an array of secondary dominant functions, modulations using diatonic common chords, and other modulatory techniques, such as larger form terminology and analysis. Along with concepts related to mode mixtures and the Neapolitan Chords, students will practice augmented sixth chords and gain a deeper understanding of tonal harmony from the nineteenth century to the present. A general comprehension of chromatic harmony concepts and an introduction to composing software are highly recommended for this course.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  MPA-374:
+    code: MPA 374
+    title: Music Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Students complete an internship experience within the Music major.
+    offered:
+      availability: periodic
+  MPA-384:
+    code: MPA 384
+    title: Music in Context
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores select theoretical and methodological tools of musicology as a means to understand music from a broad spectrum of perspectives. Students will apply these tools through analysis of case studies of music across time, place, and culture.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: MPA-100
+    prerequisiteNotes:
+      - "(Prereq: MPA 100   )"
+  MPA-390:
+    code: MPA 390
+    title: Musical Theater Production
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Provides an overview of performance as well as technical and production support for live productions, capstones, staged readings, and other projects. Students participate in a full-scale musical production. Open auditions are held for all performance and technical roles.
+    offered:
+      terms:
+        - spring
+  MPA-395:
+    code: MPA 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in the music and performing arts major. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  MPA-396:
+    code: MPA 396
+    title: Field Studies
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Individualized&nbsp;student placement for field study as related to Music & Performing Arts.
+    offered:
+      availability: periodic
+  MPA-397:
+    code: MPA 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  MPA-400:
+    code: MPA 400
+    title: University Concert Choir
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Study, rehearsal, and preparation of professional-level materials for large choral ensemble performance. May include on- or off-campus performances outside of catalog rehearsal hours.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: MPA-100
+    prerequisiteNotes:
+      - "[(Prereq; MPA 100   ) or (Instructor Consent)]"
+  MPA-401:
+    code: MPA 401
+    title: Conducting
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Introduces ensemble conducting techniques.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: MPA-100
+    prerequisiteNotes:
+      - "(Prereq: MPA 100   )"
+  MPA-402:
+    code: MPA 402
+    title: New Music Ensemble
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Study, rehearsal, and public performance of music by contemporary composers.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: MPA-100
+    prerequisiteNotes:
+      - "[(Prereq: MPA 100   ) or (Instructor Consent)]"
+  MPA-405:
+    code: MPA 405
+    title: Ensembles
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Rehearsal and performance ensemble contributing music to campus and community events.
+    offered:
+      terms:
+        - fall
+        - spring
+  MPA-408:
+    code: MPA 408
+    title: Advanced Audio Production
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students build upon and apply the skills developed in earlier music technology courses to execute recording and live sound projects. Students develop their knowledge of tracking, mixing, live sound, and mastering and complete critical listening assignments.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MPA-307
+          - courseId: MPA-308
+    prerequisiteNotes:
+      - "(Prereq: MPA 307   or MPA 308   )"
+  MPA-416:
+    code: MPA 416
+    title: Folklorico Ensemble
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students will study folklorico musical literature, history, theory, and performance techniques through the performance of relevant repertoire.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MPA-100
+    prerequisiteNotes:
+      - "[(Prereq: MPA 100   ) or (Instructors Consent)]"
+  MPA-417:
+    code: MPA 417
+    title: Jazz Ensemble
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students will study jazz musical literature, related scales, proper instrumental techniques, appropriate history of musical works, musical genre, related music theory, musical interpretation, notation, related score analysis, performance techniques and their relation to other art forms.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MPA-100
+    prerequisiteNotes:
+      - "[(Prereq: MPA 100   ) or (Instructor Consent)]"
+  MPA-418:
+    code: MPA 418
+    title: Live Sound
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Students learn the tools and techniques of engineering sound for live musical performances through hands-on experience with industry standard gear and in campus venues.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: MPA-307
+    prerequisiteNotes:
+      - "(Prereq: MPA 307   )"
+  MPA-419:
+    code: MPA 419
+    title: MIDI, Synthesis, & Digital Signal Processing
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Students explore principles of MIDI, core sound synthesis techniques, and digital signal processing basics through sound design, composition, and audio engineering.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: MPA-305
+    prerequisiteNotes:
+      - "(Prereq: MPA 305   )"
+  MPA-475A:
+    code: MPA 475A
+    title: Senior Capstone I
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course allows students to conceptualize a Senior Capstone project that integrates the knowledge and skills gained throughout coursework in the Music and Performing Arts program by exploring possible forms the project might take and establishing a detailed plan for a project.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: MPA-300
+    prerequisiteNotes:
+      - "[(Prereq: MPA 300   ) and (Senior Standing)]"
+  MPA-475B:
+    code: MPA 475B
+    title: Senior Capstone II
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course allows students to finalizes a Senior Capstone project that integrates the knowledge and skills gained throughout coursework in the Music and Performing Arts program and present their completed project to the public.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: MPA-300
+      - courseId: MPA-475A
+    prerequisiteNotes:
+      - "[(Prereq: MPA 300   and MPA 475A   ) and (Senior Standing)]"
+  MPA-495:
+    code: MPA 495
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Study in a particular topic in music and performing arts. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  MPA-497:
+    code: MPA 497
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  MPA-498:
+    code: MPA 498
+    title: American Musical Theatre
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: The study of American musical theatre from the early 1900’s to present. Scene performance required.
+    offered:
+      availability: periodic

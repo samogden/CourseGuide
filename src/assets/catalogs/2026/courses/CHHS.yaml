@@ -1,0 +1,449 @@
+schemaVersion: 1
+prefix: CHHS
+courses:
+  CHHS-111:
+    code: CHHS 111
+    title: Intro to Issues in Health & Human Services
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces students to topics related in the health and human services profession with the context of an integrated reading, writing, and speaking course.
+    offered:
+      availability: periodic
+  CHHS-125:
+    code: CHHS 125
+    title: Writing as Healing
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces students to writing as a way of healing within the context of an integrated reading, writing, and speaking course. This course will explore the historical traditions of writing as healing as well as current practices of writing to heal with diverse populations.
+    offered:
+      availability: periodic
+  CHHS-203:
+    code: CHHS 203
+    title: Statistics for Social Science
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This is an introductory statistics course that focuses on the types of analyses used most frequently in the social sciences. While the course covers the basic steps in calculating and obtaining statistical results, emphasis is given to the interpretation of results and the acquisition of an intuitive understanding of the logic and limitations of inferential statistics when studying social phenomena.
+    offered:
+      availability: periodic
+  CHHS-204:
+    code: CHHS 204
+    title: Economics and Society
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This is an introductory course in applied microeconomics that exposes students to current social and public policy events through an economics perspective. The course introduces the basic principles of microeconomic analysis and applies them to explain how economists study important social issues such as discrimination, health-care, labor, housing, and land.
+    offered:
+      availability: periodic
+  CHHS-210:
+    code: CHHS 210
+    title: Literature of Social Protest
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Social protest movements have utilized a wide variety of literary genres to generate social concern and change. Students will learn to appreciate, analyze, and interpret multicultural works. Students will reflect on the human conditions that emerge across cultural boundaries. Students will explore these works in their social context, especially with a critical examination of the power structures. Students will be expected to apply their insights to issues in their own communities.
+    offered:
+      availability: periodic
+  CHHS-212:
+    code: CHHS 212
+    title: Ethics in Health Care
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Focuses on investigating and analyzing ethical issues related to health care within the context of an integrated reading, writing, and speaking course.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1C with a C- or better)"
+  CHHS-215:
+    code: CHHS 215
+    title: Introduction to Human Services
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Course provides an introduction to the human services including an overview of careers and settings, values and professional ethics, and theoretical approaches and skills utilized. Students will learn how the human services compares to related disciplines and will examine social issues, policy and services from historical, socio-economic, and global perspectives. Students will also be introduced to methods of inquiry in human services work.
+    offered:
+      availability: periodic
+  CHHS-225:
+    code: CHHS 225
+    title: Drugs, Society and Policy
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces students to the social, cultural, economic, and health aspects of drug use and abuse. We will discuss the influences drugs have on art, music, philosophy and social movements, and explore various perspectives on the use of psychoactive substances (both legal and illegal). Patterns of use among traditional societies and in modern settings will be reviewed especially as they relate to a variety of approaches (criminalization vs. human rights) to drug treatment and drug policy.
+    offered:
+      availability: periodic
+  CHHS-230:
+    code: CHHS 230
+    title: Social Justice and Global Health
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces students to the social epidemiology of health. Even in the wealthiest countries people who are less well off experience shorter life spans and more illness. We will explore the social justice and human rights aspects of attaining and maintaining health, as well as look critically at the “social determinants of health.” We will develop an understanding of the social, political and economic factors that contribute to health and develop strategies for improving the community’s health.
+    offered:
+      availability: periodic
+  CHHS-260S:
+    code: CHHS 260S
+    title: Social Justice and Health
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examines students’ and communities’ health, particularly as it relates to service and social responsibility, community and social justice and multicultural community building/civic engagement. Serving a marginalized population, students will engage in a minimum of 30 hours of service to develop an understanding of health disparities, the social determinants of health, and actions that individuals, communities, professionals, and institutions can take to foster equity and well-being.
+    offered:
+      availability: periodic
+  CHHS-295:
+    code: CHHS 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Explores a particular topic in collaborative health and human services. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  CHHS-300:
+    code: CHHS 300
+    title: Major ProSeminar
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces students to the CHHS academic and field programs, CSUMB upper division graduation requirements, and the core competencies for the major learning outcomes (MLOs) of the Collaborative Health and Human Services (CHHS) major. Students also prepare their Individualized Learning Plans (ILPs) and discover more about possible careers in health and human service fields.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  CHHS-301:
+    code: CHHS 301
+    title: Writing for Professional Development
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides developmental instruction in the areas of writing, reading, and speaking. Students will learn about process-based writing approaches as well as sentence-level techniques for composing, drafting and revising texts.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  CHHS-302:
+    code: CHHS 302
+    title: Professional Communication for the Health & Human Services Professions
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Develops writing and oral communication skills to increase competency in the health or human services professions. Builds confidence in writing for argumentation, applied research, advocacy, and reports. Students learn about themselves as writers, which assists them in the development of personal and professional writing and speaking skills. Compliments other critical thinking courses offered in the major.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  CHHS-305:
+    code: CHHS 305
+    title: Information Management for Health & Human Services
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students learn and apply computer skills to health and human service delivery. Emphasizes hands-on experience using computers for electronic communication and presentations, and to improve skills in the use of database management, spreadsheet, and presentation software. Students participate in online research, information resources evaluation, correct citation of Internet resources, and weekly online discussions. Introduces state-of-the-art health and human service software.
+    offered:
+      availability: periodic
+  CHHS-330:
+    code: CHHS 330
+    title: Collaborative Leadership & Community Building
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course introduces students to collaborative practice, social action, and political leadership. Students develop an understanding of the theories of community building, frameworks of collaboration and social entrepreneurship; and skills in interpersonal communication, teamwork, and building collaborative leadership skills necessary for guiding and motivating coalitions and partnerships successfully to achieve common goals.
+    offered:
+      terms:
+        - fall
+        - spring
+  CHHS-350:
+    code: CHHS 350
+    title: Professional Ethics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course aims to develop students knowledge and analytical abilities in the philosophy and rhetoric of ethics. Professional ethics involves an interplay of self, language, and culture. It aims to help students apply their intellectual and moral aptitudes to commonly encountered ethical problems across a variety of professional disciplines. By drawing connections across diverse professional cultures, students can participate in multicultural professional communities locally, regionally, and globally.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  CHHS-384:
+    code: CHHS 384
+    title: Quantitative Analysis of Survey Data
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This is a quantitative methods course that focuses on the types of quantitative analyses used most frequently in survey research. The course covers the basic steps in designing survey questionnaires, sampling, and calculating and reporting statistical results. Emphasis is given to creating descriptive statistics, understanding of the use and limitations of inferential statistics, and the interpretation of results when studying health, human services, and social phenomena using survey methods.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  CHHS-385:
+    code: CHHS 385
+    title: Research Methods in the Social Sciences
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This class is an introduction to the methods social scientists have developed to describe, explain, and better understand social phenomena. The methods of social research are used in a wide variety of fields ranging from public health to social welfare, from behavioral health to policy. This course introduces the language of research, ethical principles and challenges, and the elements of the research process within quantitative, qualitative, and mixed methods approaches. Students will use these theoretical underpinnings to begin to critically review literature relevant to their field or interests and determine how given methods are employed in research practice. Through required readings and exercises, students will learn to appreciate the potential and limits of each method and by having to design their own mixed methods research project as a final project.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 2 with a C- or better)"
+  CHHS-395:
+    code: CHHS 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Explores a particular topic in collaborative health and human services. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  CHHS-396S:
+    code: CHHS 396S
+    title: Junior Field Practicum Seminar SL
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces CHHS students to the experiential learning process through the Field Practice Program. Course content includes application of the CHHS MLOs and Upper Division Service Learning Outcomes in an internship within a community-based agency, developing self-reflection techniques and social awareness, and exploring the roles and responsibilities of health and human services professionals engaged in creating greater equity and social justice.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CHHS-300
+            minimumGrade: C-
+          - courseId: CHHS-302
+            minimumGrade: C-
+          - courseId: CHHS-384
+            minimumGrade: C-
+          - courseId: SW-205
+            minimumGrade: C-
+          - courseId: PH-207
+            minimumGrade: C-
+          - courseId: PANM-202
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[((Prereq: CHHS 300   with a C- or better) and (Junior or Senior Standing)) and (Prereq or Coreq: CHHS 302   and CHHS 384   and SW 205   and PH 207   and PANM 202   ) with a C- or better)]"
+    minimumStanding: junior
+  CHHS-397:
+    code: CHHS 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Offers students independent learning opportunities in a selected specialty area. May include fieldwork to meet the required number of hours.
+    offered:
+      availability: periodic
+  CHHS-400A:
+    code: CHHS 400A
+    title: Senior Capstone-A
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Applying the 7 MLOs of the CHHS major, students work individually with field mentors and the course instructor to design a field-based project that addresses a community need. In Senior Capstone-A, students study a health or social problem affecting the community, formulate it in a way that is conducive for analysis, identify its causes, justify the need for action through an applied community-based project. The culmination is a project proposal that is submitted to their field mentor and CHHS faculty for approval.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CHHS-396S
+            minimumGrade: C-
+          - courseId: CHHS-496A
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: CHHS 396S   with a C- or better) and (Coreq: CHHS 496A   )]"
+  CHHS-400B:
+    code: CHHS 400B
+    title: Senior Capstone-B
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Applying the 7 MLOs of the CHHS major, students work individually with field mentors and the course instructor to implement and evaluate a project that addresses a health or social problem in the community. In Senior Capstone-B, students implement the project plan they completed in Capstone-A. Students collect data to evaluate the impact of their projects in the community using appropriate evaluation designs and complete a final thesis report and presentation detailing the project’s findings and recommendations.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CHHS-400A
+            minimumGrade: C-
+          - courseId: CHHS-496B
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: CHHS 400A   with a C- or better) and (Coreq: CHHS 496B   )]"
+  CHHS-401:
+    code: CHHS 401
+    title: Senior Capstone
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This seminar supports the development, implementation and assessment of a community-based project that focuses on an issue of importance to the public agency or community organization where the student is placed. Students develop an in-depth analysis of the agency, its communities and partners, learn “best practices” for interventions, and present findings at the end of the course. The student-led project is intended to provide tangible, sustainable benefits to the communities served.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CHHS-396S
+            minimumGrade: C-
+          - courseId: CHHS-496A
+            minimumGrade: C-
+          - courseId: CHHS-496B
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: CHHS 396S   and CHHS 496A   with a C- or better) and (Coreq: CHHS 496B   )]"
+  CHHS-411:
+    code: CHHS 411
+    title: Community Engaged Research
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This is a project-based course that supports CHHS senior-level students’ development of a community-based applied research project. Students learn about an agency’s programs, develop an understanding of a health or social problem to be addressed, and develop basic applied research skills to implement a community-based intervention and provide action-oriented recommendations to an agency in support of its efforts to improve the community’s health and well-being.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: CHHS 496A   )"
+  CHHS-445:
+    code: CHHS 445
+    title: Principles of Grantsmanship
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course introduces students to fund development in public and nonprofit organizations. Students explore the theoretical bases and contexts of grantmaking; logic models and their relationship to successful grant seeking; and the cycle of prospecting, proposal writing, project implementation, evaluation, and reporting. Students gain experience in identifying and qualifying grant opportunities, and requesting funding, by developing a grant proposal for a project of their choosing.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2) and (GWAR) with a C- or better) or (Department Consent)]"
+  CHHS-450:
+    code: CHHS 450
+    title: Introduction to Policy Analysis
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides students with an opportunity to develop advanced policy analysis knowledge and skills through intensive case study and hands-on experience in formulating policy for specific health and human service issues.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  CHHS-462:
+    code: CHHS 462
+    title: Equity, Justice & Public Trust
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course examines the principles of democracy, equity, and justice in the public sector, and the impact of systemic racism, colonialism, and racialization on historically disadvantaged communities. Using contemporary media, literature and case studies, this course explores the duality of race and privilege in the United States and their role in shaping public policymaking and the implementation of public policies.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better)) and (GWAR) with a C- or better)"
+  CHHS-495:
+    code: CHHS 495
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Explores a particular topic in collaborative health and human services. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  CHHS-496A:
+    code: CHHS 496A
+    title: Senior Field Practicum Seminar-A
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students practice knowledge, skills, and attitudes within a local agency. Students conduct an in-depth analysis of the systems where they work, the relationships they develop in the organization and the populations they serve, and discuss their future roles as health and human service professionals.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CHHS-396S
+            minimumGrade: C-
+          - courseId: CHHS-411
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: CHHS 396S   with a C- or better) and (Coreq: CHHS 411   )]"
+  CHHS-496B:
+    code: CHHS 496B
+    title: Senior Field Practicum Seminar-B
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students continue to practice knowledge, skills, and attitudes within a local agency. Students conduct an in-depth analysis of the systems where they work, the relationships they develop in the organization and the populations they serve, and discuss their future roles as health and human service professionals.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CHHS-496A
+            minimumGrade: C-
+          - courseId: CHHS-401
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: CHHS 496A   with a C- or better) and (Coreq: CHHS 401   )]"
+  CHHS-497:
+    code: CHHS 497
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Offers students independent learning opportunities in a selected specialty area. May include fieldwork to meet the required number of hours.
+    offered:
+      availability: periodic

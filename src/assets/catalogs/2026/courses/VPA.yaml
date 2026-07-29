@@ -1,0 +1,660 @@
+schemaVersion: 1
+prefix: VPA
+courses:
+  VPA-195:
+    code: VPA 195
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in the visual and public art major. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  VPA-196:
+    code: VPA 196
+    title: Field Studies
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Field Studies opportunities. Topics of study, as well as number of credits, arranged between student and faculty member.
+    offered:
+      availability: periodic
+  VPA-197:
+    code: VPA 197
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Independent study opportunities. Topics of study, as well as number of credits, arranged between student and faculty member.
+    offered:
+      availability: periodic
+  VPA-203:
+    code: VPA 203
+    title: Introduction to Sculpture
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is designed to teach the beginning student the process of conceptualizing, researching, constructing and presenting a body of work as it relates to the genre of sculpture. Through an emphasis on observation, experimentation, and critical thinking students will learn how to create a personal style. The students will also learn ways to translate their ideas into contemporary artwork that communicates to diverse audiences. The students will be exposed to a variety of three- dimensional techniques as well as various possibilities of combining both traditional and non- traditional art materials. In addition to course projects, students are required to keep a sketchbook as a way of documenting their conceptual and visual ideas. Class lectures, demonstration, field trips individual critiques and group discussions supplement the studio experience.
+    offered:
+      terms:
+        - fall
+        - spring
+  VPA-205:
+    code: VPA 205
+    title: Introduction to Art Appreciation
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Loosely chronological in structure, this introductory course invites students to consider both the basic and the profound, in terms of the relationship between humanity and the visual arts. Examining individual and collaborative art-making, we will explore what we learn about ourselves, as humans, from the material cultures of other centuries, other societies, as well as that of our own.
+    offered:
+      terms:
+        - fall
+        - spring
+  VPA-206:
+    code: VPA 206
+    title: Street Art Excavations
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will learn about graffiti art, murals, stencil art, political art and random posters. Students will do independent and small group “archeological” explorations into the surrounding Tri-County area as well as research the internet and if possible their home cities.
+    offered:
+      terms:
+        - fall
+  VPA-208:
+    code: VPA 208
+    title: Power of Image
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This class is designed to provide a critical exploration of contemporary ethics within the field of visual, media, and public arts. Students will be actively engaged in learning skills of visual literacy and media analysis applied to both public arts and popular media.
+    offered:
+      availability: periodic
+  VPA-209:
+    code: VPA 209
+    title: Day of the Dead Workshop
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 4
+    description: This ceremony is a community building practice that helps integrate the past histories with the present memories of the students and faculty involving student-made altars, Aztec dancers, musicians, and a candle light procession.
+    offered:
+      terms:
+        - fall
+  VPA-210:
+    code: VPA 210
+    title: The Artist and Society
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course focuses on reading comprehension, writing, and oral communication skills within a framework of the visual arts. Students will consider the artist throughout history and across diverse cultures as a catalyst for social change and a standard bearer of new vision. We will examine art as a visual literacy and a voice of profound human expression. Through sound composition and comprehension practices, students will strengthen their own communication effectiveness.
+    offered:
+      terms:
+        - fall
+        - spring
+  VPA-215:
+    code: VPA 215
+    title: Beginning Drawing
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces entering students to the fundamentals of drawing, including line, perspective, composition, and beginning drawing skills.
+    offered:
+      terms:
+        - fall
+        - spring
+  VPA-217:
+    code: VPA 217
+    title: Color Theory
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: One of the tap-roots of visual expression, color is both physical and psychological. How we perceive colors, value, chroma, and hue depends upon their relationship to each other, and with our own perceptions of their temperature and emotion. This course will explore both the scientific properties of optical perception of color, and practical application of its uses for a variety of effects.
+    offered:
+      terms:
+        - fall
+        - spring
+  VPA-218:
+    code: VPA 218
+    title: Introduction to Painting
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students learn observational skills and develop painting techniques specific to acrylic media through intensive studio practices. Students learn basic painting techniques and fundamentals such as scale, proportion, composition, mark making, and basic color theory.
+    offered:
+      terms:
+        - fall
+        - spring
+  VPA-229:
+    code: VPA 229
+    title: Fabrika Screenprinting Lab I
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 4
+    description: This course is designed to teach the beginning student the process of conceptualizing, researching, constructing, and presenting a body of work as it relates to the genre of screenprinting. With an emphasis on cultural entrepreneurship, students develop and inform their personal aesthetic through observation, experimentation, and critical thinking. Students will learn to translate their ideas into contemporary artworks that communicate to diverse audiences.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: VPA-215
+    prerequisiteNotes:
+      - "(Prereq: VPA 215   )"
+  VPA-285:
+    code: VPA 285
+    title: Intro to Photojournalism
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces the use of photography as a tool in reporting and interpreting news for print and digital media. Students will gain an understanding of the history of photojournalism and the impact of photographic imagery in communication ideas and narratives.
+    offered:
+      availability: periodic
+  VPA-290:
+    code: VPA 290
+    title: Intro to Printmaking
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course will introduce several printmaking media and techniques, including monoprinting, etching, block printing, and serigraphy (screen printing). The technical aspects of each technique will be investigated through demonstrations, in-class work, readings, and slide lectures, which combine the history of printmaking with hands-on learning.
+    offered:
+      terms:
+        - spring
+  VPA-295:
+    code: VPA 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in the visual and public art major. May be repeated for credit when topics vary
+    offered:
+      availability: periodic
+  VPA-300:
+    code: VPA 300
+    title: VPA Major ProSeminar
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduction to the theories and models of the Visual and Public Art program and its Major Learning Outcomes. Through readings, lecture/discussions, history and research assignments, community arts projects, portfolio development, public art design, review and exhibition projects, introduces students to the field of public art. Provides insight and practices for careers in visual art, arts education, and museum management.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Must be a VPA major in Junior Standing)"
+  VPA-302:
+    code: VPA 302
+    title: VPA Visiting Artist Series
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students have opportunities to meet with visiting artists. Requires attending a minimum of three evening artist lectures, and developing artists’ profiles and written summary essays.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - (Junior or Senior Standing Required)
+    minimumStanding: junior
+  VPA-304:
+    code: VPA 304
+    title: Painting & Mural
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students study painting to develop individual portfolios, and team and large-scale collaborative class projects. Students work in a variety of materials and learn techniques for studio painting, murals, and other public art works. Contemporary issues in painting and site-specific art are discussed, and all students participate in the class critique process.
+    offered:
+      terms:
+        - fall
+        - spring
+  VPA-305:
+    code: VPA 305
+    title: Media Culture
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students develop skills of media analysis. Emphasis placed on the analysis of media representations and ethical approaches to socio-media. Forms of media include digital advertising, Internet, music videos, and popular culture materials influencing perception and identity. Provides theoretical approaches to a hands-on model of analysis and media intervention.
+    offered:
+      terms:
+        - fall
+  VPA-306S:
+    code: VPA 306S
+    title: Digital Public Art
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students learn digital approaches to public art making and make connections to community through critical and ethical inquiry that includes social and new genre public art practices. Students engage in project management, analysis of sites, and collaboration with local communities to conceptualize reciprocal service learning partnerships, and develop digital public artworks.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  VPA-307:
+    code: VPA 307
+    title: Diverse History of Contemporary Art
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Provides examples of contemporary and historical art movements reflective of diverse world communities and cultures. Emphasizes the examination of race, ethnicity, culture, gender, and sexuality in contemporary art. Students learn new skills of “seeing,” analyzing, and writing as they develop transferable knowledge, skills, and abilities that can be used in the understanding of their own ethnic or social culture, and the formation of cross-culture alliances.
+    offered:
+      terms:
+        - fall
+  VPA-308:
+    code: VPA 308
+    title: Ways Of Seeing
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Surveys the field of contemporary ethical theory in visual and public arts. Students follow controversial cases in public art. Uses guest artists, slide lectures, videos, and field trips as resources to understand and analyze cases.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  VPA-309:
+    code: VPA 309
+    title: Materials and Methods
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Students will gain a basic understanding of foundational exhibition practices and installation skills that lead to the creation of senior capstone projects.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: VPA-300
+            minimumGrade: C-
+          - courseId: VPA-405
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( VPA 300   with a C- or better) and (Must be a VPA major in Senior Standing)) and (Co-req: VPA 405   )]"
+  VPA-310:
+    code: VPA 310
+    title: Mixed Media
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides beginning and intermediate drawing skills using media. Students work from models, still life, landscape/outdoor fieldwork, photographs, and mixed media collage. Students study techniques, proportion, composition, light/shadow, perspective, color, and scale, and do collaborative drawing projects.
+    offered:
+      terms:
+        - fall
+        - spring
+  VPA-311:
+    code: VPA 311
+    title: Book Arts
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: “Books are portable magic”. This course teaches students the studio practice of hand-made book arts. Examining visual and literary communication in various cultural contexts, students will learn to make book forms originating from both the East and West. The course will include some basic printmaking methods such as embossment, monotype, relief printing and image transfer as ways to convey meaning through imagery and color. Altered books and found objects will be considered for use.
+    offered:
+      availability: periodic
+  VPA-312:
+    code: VPA 312
+    title: Vis Arts Ed For Teachers
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: In Visual Arts Education for Teachers,students will examine the context for learning, aspects of cognition and creativity, teaching pedagogy, and curriculum in the arts. Students will gain an understanding of traditional and contemporary arts through an approach that integrates diverse perspective with hands-on activities, curriculum development, and collaborative projects. There will be an emphasis on integrating arts into and across disciplines.
+    offered:
+      terms:
+        - fall
+  VPA-313:
+    code: VPA 313
+    title: Regional Art History
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: VPA 313 engages students in inquiry based learning as they investigate, analyze and describe, both in written and oral presentation format, the overlays of multiple cultures evidenced in early Central Coast art, 1875-1950. Based on the concept of cultural citizenship, the course examines both groups and individuals. While the content focus will be on the visual arts, the course will also examine literature and poetry as they serve to expand and enrich an understanding of regional expression.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: (Junior or Senior Standing) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+    minimumStanding: junior
+  VPA-315:
+    code: VPA 315
+    title: Life Drawing
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides beginning and intermediate drawing skill development using media that focuses on the human figure. Students work from models to explore a range of techniques studying proportion, composition, light/shadow, anatomy, and use of color. Includes class critiques and student presentations.
+    offered:
+      terms:
+        - fall
+  VPA-316:
+    code: VPA 316
+    title: Photography as Art
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Emphasizes photography as a means of artistic expression with a primary focus on photography as a means of image making much like other artistic mediums, e.g. painting, drawing, sculpture, and installation. Students study the technical, compositional, applied, and conceptual elements of photography as a visual language as well as gain an understanding of the history and uses of photography from the mid-19th century to contemporary photographic practice.
+    offered:
+      terms:
+        - fall
+  VPA-318:
+    code: VPA 318
+    title: Digital Photography as Art I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "Digital Photography as Art I: Students study the technical, compositional, and conceptual elements of photography as a visual language as well as gain an understanding of the history and uses of photography from the mid-19th century to contemporary photographic practice. Assignments and class critiques encourage lively and thoughtful dialogue among class participants."
+    offered:
+      terms:
+        - spring
+  VPA-320S:
+    code: VPA 320S
+    title: Museum Studies
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Through hands-on activities that consider community needs and facilitate public participation, this course examines the sociocultural importance of museums as society serving institutions that collect and preserve objects that are culturally, artistically and historically significant. Across reciprocal service learning partnerships with museums, students gain leadership skills and make connections to community through critical and ethical inquiry that includes research and education programming.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  VPA-325:
+    code: VPA 325
+    title: Curatorial Gallery Practices
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 4
+    description: "This course is an introduction to art gallery management, theory, and 2 and 3-dimensional design principles as they apply to gallery practices. Through hands-on participation, students curate exhibitions in the Student Gallery, and are responsible for all aspects of gallery management and exhibition design and installation: conceptualization of themes, selection of artwork, publicity and graphics. Students organize exhibition outreach events, such as gallery walk-throughs and panel discussions."
+    offered:
+      availability: periodic
+  VPA-326:
+    code: VPA 326
+    title: "Photo as Art II: Alternative"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Dedicated entirely to unconventional photographic processes, explores the photographic medium as a means for artistic expression. Includes applied non-silver printing techniques, polaroid manipulation, digital negatives, pinhole cameras, and liquid emulsions in the communication of ideas through visual imagery.
+    offered:
+      terms:
+        - spring
+  VPA-327:
+    code: VPA 327
+    title: Video as Art
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course provides an introduction to video imaging as art, and is designed to expand conceptual ideas and visual language by reconsidering the photographic image and its relationship to time. Students are encouraged to experiment with video-making tools, and use research and class discussions to explore their personal vision.
+    offered:
+      terms:
+        - spring
+  VPA-329:
+    code: VPA 329
+    title: Fabrika Screenprinting Lab II
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 4
+    description: This course is designed to teach the intermediate level student the process of conceptualizing, researching, constructing, and presenting a body of work as it relates to the genre of screenprinting. Students are exposed to advanced level screenprinting techniques, non-traditional printing surfaces, and learn to translate their ideas into contemporary artworks that communicate to diverse audiences. Students actively engage in class lectures, demonstrations, individual critiques, and group discussions.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: VPA-229
+          - courseId: VPA-310
+    prerequisiteNotes:
+      - "[Prereq: ( VPA 229   and VPA 310   ) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  VPA-337:
+    code: VPA 337
+    title: Community Infrastructure Practices
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 4
+    description: Students examine and participate in project based learning, community engagement, and professional practices through field study and hands-on activities that integrate studio research and emergent technologies. Focus is placed on the importance of sustainable and accessible community art practices that emphasize a cultural entrepreneurship mindset.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: VPA-306S
+              - courseId: VPA-320S
+    prerequisiteNotes:
+      - "[Prereq: ( VPA 306S   or VPA 320S   ) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  VPA-347:
+    code: VPA 347
+    title: Chicana/o-Black Art
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines Chicana/Chicano and Black artists, art movements, and social histories. Students work with images and text, applying theories of multiculturalism, feminism, colonialism, and hybridity. Topics include familial and cultural legacies, aesthetics, media, and cultural nationalism. In this hands-on and theory course, students explore issues of self-identification, race, and cross-cultural solidarity.
+    offered:
+      availability: periodic
+  VPA-369:
+    code: VPA 369
+    title: Fashion as Contemporary Wearable Sculpture
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course will examine the various artistic possibilities of cultural entrepreneurship and the complexities of cultural appropriation as viewed through a critical lens of concepts, practices, and politics. Students will learn the various methodologies and techniques that are required in the construction of garments. Emphasis will be placed on the exploration and research of traditional and contemporary approaches to fashion. Students engage in critical readings & constructive group critiques.
+    offered:
+      availability: periodic
+  VPA-370:
+    code: VPA 370
+    title: Whose Space? Museums, Cultural Institutions, and Community
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "This course is an investigation into the vital relationship between museums, cultural institutions, and communities. The success of museums is no longer measured by internal resources: collections, funding, facilities, and staff, but instead by the external value they create for individuals and the diverse communities in which they exist. The course examines the role of museums and cultural institutions as facilitators of social change."
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  VPA-374:
+    code: VPA 374
+    title: Visual&Public Art Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Students complete an internship experience within the Visual and Public Art major.
+    offered:
+      availability: periodic
+  VPA-395:
+    code: VPA 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Provides students with an opportunity to propose and implement individualized interdisciplinary learning activities.
+    offered:
+      availability: periodic
+  VPA-396:
+    code: VPA 396
+    title: Field Studies
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Provides students opportunities for independent work in the field with professional artists and includes visiting artist projects.
+    offered:
+      availability: periodic
+  VPA-397:
+    code: VPA 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: "Students pursue work in forms of public art including murals, installations, and performances, under the tutelage of practitioners in the field. Offers longterm project advisement and offsite project involvement. Note: students may enroll by faculty arrangement for critique or consultation on specified projects."
+    offered:
+      availability: periodic
+  VPA-398:
+    code: VPA 398
+    title: Senior Capstone Production
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Senior Capstone Production, a one-unit new core pathway course that focuses on Senior Capstone production and offers 1/1 individualized capstone support and sustained project advisement on studio practices that result in a major public performance, showing or distribution of artwork.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: VPA-405A
+          - courseId: VPA-405B
+    prerequisiteNotes:
+      - "[(Prereq: (Senior Standing) and (Department Consent Required)) and (Coreq: VPA 405A   or VPA 405B   )]"
+  VPA-401:
+    code: VPA 401
+    title: Installation & Performance Art
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: An interdisciplinary course (art, theater, and music) that focuses on the use of site-specific and time-based work, light as art, interactive outdoor public art installations, and contemporary performance both on and off the CSUMB campus. Each semester brings new and exciting projects that utilize both individual and collaborative working methodologies.
+    offered:
+      terms:
+        - spring
+  VPA-403:
+    code: VPA 403
+    title: Sculpture and 3D Design
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Individual and team projects using wood, metal, light, and “found” materials. Examples from public art projects explore the relationship between materials, site, content, and audience. Refining technical skills and building portfolios, students explore the role of cultural heritage, social positioning, and autobiographical narrative in their work. Cross-disciplinary projects include functional art, solar design, lighting design, and interactive sculpture.
+    offered:
+      terms:
+        - spring
+  VPA-405A:
+    code: VPA 405A
+    title: Senior Capstone I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "Senior Capstone students engage in applied practice and mastery of VPA MLOs through the conceptualization of capstone proposals that build upon learning in VPA 300: Major ProSeminar."
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: VPA-300
+            minimumGrade: C-
+          - courseId: VPA-309
+            minimumGrade: C-
+          - courseId: VPA-398
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( VPA 300   with a C- or better) and (Coreq or Prereq: VPA 309   ) and (Coreq: VPA 398   ) and (VPA Majors in Senior Standing) and (Department Consent Required)]"
+  VPA-405B:
+    code: VPA 405B
+    title: Senior Capstone II
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "Senior Capstone students engage in applied practice and mastery of VPA MLOs through the conceptualization, creation, and display of Senior Capstone projects that build upon learning in VPA 405A: Senior Capstone I."
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: VPA-405A
+            minimumGrade: C-
+          - courseId: VPA-398
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( VPA 405A   with a C- or better) and (Coreq: VPA 398   ) and (VPA Majors in Senior Standing)] and (Department Consent Required)"
+  VPA-495:
+    code: VPA 495
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Specialized study for a particular topic in visual and public art. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  VPA-497:
+    code: VPA 497
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 6
+    description: Assessment study for student portfolio review, please contact the academic program office for further information.
+    offered:
+      availability: periodic
+  VPA-497S:
+    code: VPA 497S
+    title: Independent Study Srv Lrn
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 6
+    description: Independent study in service learning to be determined by student in collaboration with the Institute of Visual and Public Art. Contact the academic program office for further information.
+    offered:
+      availability: periodic
+  VPA-596:
+    code: VPA 596
+    title: Field Studies
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select advanced topic of field study and number of credits. Contact the academic program office for instructor signature, registration code, and schedule number.
+    offered:
+      availability: periodic
+  VPA-597:
+    code: VPA 597
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: "Students pursue work in forms of public art including murals, installations, and performances, under the tutelage of practitioners in the field. Offers longterm project advisement and offsite project involvement. Note: students may enroll by faculty arrangement for critique or consultation on specific projects."
+    offered:
+      availability: periodic

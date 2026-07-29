@@ -1,0 +1,1019 @@
+schemaVersion: 1
+prefix: SSCI
+courses:
+  SSCI-100:
+    code: SSCI 100
+    title: Human Biocultural Evolution
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students are introduced to science as a method of studying and understanding human biology from an evolutionary perspective. Examines the foundations of life and evolutionary theory and the principles of genetics, human adaptation, and primate behavior. Explores the fossil record of human biocultural evolution over the last sixty million years. Students will also consider the anthropological understanding of the concept of human “races” today.
+    offered:
+      terms:
+        - fall
+        - spring
+  SSCI-101:
+    code: SSCI 101
+    title: Introduction to Anthropology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is a general introduction to the discipline of Anthropology and its distinct sub-fields. Anthropology is the study of the human experience; as such, it explores four major areas with emphasis on social and cultural dimensions. The course explores the central importance that the comparative approach has had in each of the sub-fields.
+    offered:
+      terms:
+        - fall
+        - spring
+  SSCI-102:
+    code: SSCI 102
+    title: Introduction to Archaeology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces archaeology and prehistory through an exploration of the primary theories, practices, and principles of contemporary scientific archaeology, and the methods by which archaeologists recover, discover, and interpret the natural and cultural worlds of the human past. Topics include archaeological approaches to human evolution, technology and innovation, art and cultural development, and the rise of civilization as seen through the lens of archaeological data and interpretation.
+    offered:
+      terms:
+        - fall
+        - spring
+  SSCI-110:
+    code: SSCI 110
+    title: Academic Writing in the Social Sciences
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will apply social scientific theories of communication to their study of reading and writing. We will practice multiple reading strategies, and students will analyze authors¿ rhetorical choices using a social scientific perspective. Students will develop research writing skills by creating social scientific research questions, locating relevant scholarly literature, reflecting on their research processes, and writing literature reviews. Course assignments will encompass formal and informal writing in a variety of genres, and for a variety of audiences. We will engage in a process of drafting, peer reviewing, and revising each paper.
+    offered:
+      terms:
+        - fall
+        - spring
+  SSCI-111:
+    code: SSCI 111
+    title: United States History to 1890
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examines US history through multiple and diverse perspectives. Introduces students to college-level reading and writing in history through an exploration of student responses to written and visual source materials covering the history of the US from pre-contact Native America to 1890. Central themes include race relations, class, ethnicity, and gender.
+    offered:
+      terms:
+        - fall
+  SSCI-114:
+    code: SSCI 114
+    title: Women and Social Change in the United States, 1890-Present
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examines women’s roles in causing and influencing social change in United States history, 1890 to the present. Focus will be American women’s impact on United States and California societies, national, global, and multi-ethnic social change, and political and constitutional issues.
+    offered:
+      terms:
+        - fall
+        - spring
+  SSCI-197:
+    code: SSCI 197
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and total number of credit hours.
+    offered:
+      availability: periodic
+  SSCI-211:
+    code: SSCI 211
+    title: Principles of American Democracy
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examines the principles of American Democracy. Focuses on the philosophies of the founding fathers, political and governmental structures, constitutional issues and tensions, the U.S. Supreme Court, values and principles of civil society, and the media¿s role in politics. Explores powers and procedures of the national, state, local and tribal governments.
+    offered:
+      terms:
+        - fall
+  SSCI-212S:
+    code: SSCI 212S
+    title: Citizen Action, Community Power, and Political Change
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students acquire knowledge of diverse peoples and politics of the United States in historical and contemporary social contexts through collaborative explorations of the intersections of race/ethnicity, gender, sexuality, class, and environment. They develop the skills to become their own historians, and to effectively use the tools of political action reflecting knowledge of the constitutions and political systems of California and the United States.
+    offered:
+      terms:
+        - fall
+        - spring
+  SSCI-249:
+    code: SSCI 249
+    title: Native American Societies
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examines Native American societies and cultures in North America, more precisely, the geographic areas of Mexico, the United States and Canada. Emphasizes the development of Native American societies over time, their influence on North America and the broader global community, and Native American relationships with US political and social institutions. Gender, identity, and comparative indigenous world views will be central themes. (Crosslisted/Equivalent with ES 249   )
+    offered:
+      terms:
+        - fall
+        - spring
+  SSCI-252:
+    code: SSCI 252
+    title: World Regional Geography
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Applies a geographical perspective to the study of environment, culture, human societies, and their interactions. Examines world regions using a thematic approach to population, language, religion, economic development, social customs, urbanization, and resource problems. Focuses on spatial concepts, principles, and contemporary issues.
+    offered:
+      terms:
+        - fall
+        - spring
+  SSCI-300:
+    code: SSCI 300
+    title: "SSCI Major ProSeminar: Theory"
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students acquire a basic foundation in social science and globalization theories and methods through exploration of current issues. Required entry level course offering for the Social and Behavioral Sciences major.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: STAT-100
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and ( STAT 100   with a C- or better)]"
+  SSCI-303:
+    code: SSCI 303
+    title: Social Science Career Exploration
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students will learn about career options in the social sciences, and will practice skills such as searching for jobs, writing resumes and cover letters, and interviewing. Students will also learn how the skills and knowledge gained in the SBS major can be transferred to the workplace.
+    offered:
+      terms:
+        - fall
+        - spring
+  SSCI-304:
+    code: SSCI 304
+    title: California Indian Societies
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course examines California Indian societies through the lens of the Social Sciences. Students will be introduced to and discuss various historical and contemporary issues confronting California Native American tribal communities in both urban and rural contexts. Key issues of concern for this course include regional distinctions, gender roles and relations, inter- and intra-tribal relations, differing historical eras and periods, economic and political systems, tribal relations with the State of California and the Federal government, laws and policies, and repatriation.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SSCI-305:
+    code: SSCI 305
+    title: Indigenous Histories
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores Indigenous Histories worldwide. Emphasis will be placed on peoplehood, traditional cultures and knowledge, sovereignty, global relations between Indigenous peoples, environmental issues, gender, participation in the United Nations, economic issues and political consciousness. Survivance will be central to the analysis of these histories.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  SSCI-315:
+    code: SSCI 315
+    title: Growth and Conflict in the United States to 1920
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examines the development of U.S. society, government institutions, and economic expansion from pre-contact Native America to 1920. Central themes focused on are race relations, political systems, social interactions, class, gender, and divergent points of view. Examines U.S. history through multiple disciplines and multi-cultural perspectives.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  SSCI-316:
+    code: SSCI 316
+    title: Visual Methodologies in the Arts and Sciences
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: An introduction to visual methodologies in the social sciences that explores and engages the production and analysis of ethnographic film, photography, and new media concerned with visual representation and the documentation of culture and society. Students explore the potentials of field photography to study, interpret, and investigate human social behavior and its consequences.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  SSCI-320:
+    code: SSCI 320
+    title: Archaeology of Colonialism
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Surveys the colonization of California from 1542 to 1848 from an ethnohistorical and archaeological perspective. Draws on firsthand accounts, primary documents, site visits to area missions, presidios, and adobes, and oral histories to explore the indigenous and colonial communities of California. Considers the consequences of colonial encounters and entanglements that shape contemporary interpretations of California’s past.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SSCI-321:
+    code: SSCI 321
+    title: Survey Research in the Social Sciences
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces the necessary tools, theoretical and methodological foundations of doing survey research, and reviews research processes employing quantitative methods. Students will critically examine methodological issues such as the nature and process of quantitative research, survey research strategies, survey research designs, formulating hypotheses and research questions, sampling strategies, creating survey questions, using secondary data, and presenting and reporting the results. Students will also learn related statistical software to analyze data.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: STAT-100
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and ( STAT 100 with a C- or better   )]"
+  SSCI-322:
+    code: SSCI 322
+    title: Asian American Women’s History
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course examines the social and cultural experiences of Asian American women from the late 1870s to the post-1965 era. Key themes include immigration, family, generation, labor, gender, and sexuality. Topics span from prostitution, flappers, military brides, and women’s organizing. Drawing from History, Women and Gender Studies, and Asian American Studies, students will read major scholarship, analyze primary documents, facilitate discussions, and partake in a public history project.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SSCI-323:
+    code: SSCI 323
+    title: Southwestern Archaeology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Ancient peoples and places of the American Southwest frame this exploration of the archaeologists and explorers who trekked the landscapes of Arizona, New Mexico, Colorado, and Utah for archaeology and science. Ancestral Pueblo peoples of the American Southwest and their cultural legacies are central to this exploration of ancient towns. This survey of the archaeology of the American Southwest spans Paleo-Indian origins and sedentary agricultural villages, chiefdoms, and state-level societies.
+    offered:
+      terms:
+        - fall
+  SSCI-324:
+    code: SSCI 324
+    title: Archaeological Science
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces methods, principles, and practices of lab and field approaches used by archaeologists. Explores how scientific inquiry and cultural resource management approaches contribute to our understanding of the human past. Students will learn how archaeologists reconstruct and interpret the lives of past peoples through the use of archaeological case studies, multimedia, and hands-on activities.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SSCI-325:
+    code: SSCI 325
+    title: Art of the Aztec Empire
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: The Aztec, or Aztlaneca Mexica, took to capturing and collecting the art and culture of all those domains that they conquered and subjugated. As a result, Aztec art, thought, and culture reflect an eclectic mixture of the many peoples and cultures of the empire. Explores the origins, art, language, and culture of a Mesoamerican civilization that was unique for its emphasis on human heart excision, but exclusively Mesoamerican in its art, architecture, and ideology.
+    offered:
+      terms:
+        - spring
+  SSCI-326S:
+    code: SSCI 326S
+    title: Museums in the Public Sphere
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: In recent years, historical societies and museums have proven increasingly essential sites for study, research and debate. Ethnographic collections have in turn evolved into invaluable repositories for community study and formal research into cross-cultural encounters for Indigenous peoples and diaspora communities the world over. This course will review issues and practices in the collection and study of material culture and the representation of community cultural histories through participatory engagement. Students pursue community partnerships bearing on representation, advocacy, community consultation, and museums as sources of cultural identity and revitalization.
+    offered:
+      terms:
+        - fall
+  SSCI-328:
+    code: SSCI 328
+    title: Social Science Theory Module
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Emphasizes in-depth theory-based analyses of topics and themes shared across the social sciences, but within special theoretical frameworks and paradigms of two disciplines. Specific disciplinary frameworks vary based on the disciplines of faculty teaching the course.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: STAT-100
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and ( STAT 100   with a C- or better)]"
+  SSCI-332:
+    code: SSCI 332
+    title: The Rise & Fall of Civilizations
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores the origins of human cultural development spanning the rise of civilization and the modern state. The domestication of plants and animals, early village life, the development of metallurgy and the arts, the origins of writing and the earliest dynastic traditions, and the rise of urbanism and the state in Africa, the Middle East, China, India, Europe, and the Americas.
+    offered:
+      terms:
+        - fall
+  SSCI-333:
+    code: SSCI 333
+    title: Forensic Anthropology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course combines cold case studies from archaeology, forensics, and biological anthropology in the analysis of the signs for blunt force trauma, strangulation, projectile wounds, dismemberment, disease, conflict-related violence, cannibalism, and mass murder. Peri-mortem and post-mortem indications from hard and soft anatomy underpin our examination of the coldest cases. The SBS 333L Forensic Anthropology Lab option constitutes a complimentary practicum, or hands-on approach to the study of human skeletal anatomy.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SSCI-333L:
+    code: SSCI 333L
+    title: Forensic Anthropology Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: The Forensic Anthropology Lab provides students with a hands-on approach to the study of human skeletal anatomy and forensic methods and approaches. While each lab will focus on hard or skeletal anatomy, both perimortem and post-mortem indications from both hard and soft anatomy will guide our examination of the coldest cases on record.
+    offered:
+      terms:
+        - spring
+  SSCI-335:
+    code: SSCI 335
+    title: Digital Ethnographies
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course explores interdisciplinary studies of virtual communities, with a particular emphasis on emerging work by cultural anthropologists. While emphasizing theoretical approaches to understand new social spaces, students participating in this course will learn how to apply ethnographic methodologies to study communities based on new media social networks as well as the visible manifestations of generational divides, creation of new linguistic spaces.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SSCI-337:
+    code: SSCI 337
+    title: Global Travel and Tourism
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course examines the history, significance, and outcomes of global travel and tourism. Students analyze the development and growth of travel and tourism with global, regional and local case studies to consider impacts on biological and cultural diversity and issues of authenticity and representation of people and places.
+    offered:
+      availability: periodic
+  SSCI-341:
+    code: SSCI 341
+    title: Global Crisis and Climate during the Early Modern World, 1400-1800
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: One of the last great catastrophes to befall only states and nations across the world was that of the Little Ice Age of the seventeenth century. As much as one third of the human population succumbed during this crisis as a consequence of climate change and global war. How did societies deal with this challenge and how did it affect later pathways of development? As part of a project-based learning approach, students will develop the skills for examining primary and secondary sources, writing book and literature reviews, and presenting findings from historical research.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  SSCI-343:
+    code: SSCI 343
+    title: History of Capitalist Commodities and Drugs
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course examines the transnational history of particular commodities such as sugar, tobacco, silver, tea, cotton, and opium. Students investigate the economic, political, and socio-cultural aspects of these commodities from 1400 to 1800 through a global lens and with attention to the historical process of capitalism and the industrial revolution. As part of a project-based learning approach, students learn to examine primary and secondary sources, write book and literature reviews, and present historical research.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  SSCI-345:
+    code: SSCI 345
+    title: Cultural Anthropology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examines the concept of culture as key to an understanding of the diversity and depth of the human experience. Emphasizes the comparative approach as a method to understanding cultural identity and the underpinnings of the relationships of power, equity, and social justice. The connections between informal and formal relations of power are in turn reviewed. Students will recognize and compare diverse approaches to ethical decision making in the context of the understanding of culture.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  SSCI-346:
+    code: SSCI 346
+    title: Anthropology of Time and Power
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course explores the concept of time as perceived across cultures throughout the world, and addresses just how anthropologists have studied time and its intrinsic relationship to power and control. Course content presents a crosscultural overview of concepts of time, and in so doing, explores the relationships of time and ritual; time as a structuring variable in human life; time, ecological conditions and social organization; and the interpretation of time across cultures and societies.
+    offered:
+      terms:
+        - spring
+  SSCI-348:
+    code: SSCI 348
+    title: Maya Civilization
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines the art, ideology, society, and culture of the ancient Maya dynastic tradition in comparative and cross-cultural terms and from the perspective of landmark archaeological projects, ethnohistorical studies, and glyph interpretation. Studies their respective significance in deciphering the larger Maya life way. Will review recent advancements in Maya glyph translation, astronomy, calendrical computation, as well as the literary, artistic, and historical traditions as conveyed through ancient texts and monuments.
+    offered:
+      terms:
+        - fall
+  SSCI-350:
+    code: SSCI 350
+    title: "Domination and Resistance: US since 1880"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students acquire knowledge of systems of power and resistance movements in the U.S. since 1880. They develop the ability to use contemporary critical theories of race, ethnicity, gender, sexuality, and ecology for understanding conquests, colonial power, imperialism, and resistance to domination. Satisfies state requirement in recent U.S. history for teaching credential subject matter preparation.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SSCI-353:
+    code: SSCI 353
+    title: Race, Class and Gender in the American West
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores the intersection of race, class, and gender in the American West in cultural, social, and political contexts. Examines the American West as a multi-ethnic region; the intersection of race, class and gender; and the impact of labor on diverse communities in that region. Central to the course are issues of power relationships, racial and gender equity, paid and unpaid labor, social and political movements, urbanization, and environmental changes.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SSCI-354:
+    code: SSCI 354
+    title: "Rest vs West: Guns, Pirates, and Modernity"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Francis Bacon argued that three inventions paper, gunpowder, and the magnetic compass would change the conditions of things throughout the world. Until recently, historians associated these inventions with the birth of the modern world and reasoned that it propelled the West along a different path. The Rest of the world fell behind and needed Europe to become modern. Ironically, Bacons three inventions were Chinese. This course examines why the paths of the West and the rest diverged between 1400 and 1800, through the perspective of economic, political, and military history.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SSCI-355:
+    code: SSCI 355
+    title: Archaeological Thought and Practice
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: A survey of anthropological theories that inform contemporary archaeological thought and practice in the United States. Students trace the evolution of archaeological theory and its application to our understanding of the past. Primary themes include evolutionary, environmental, structural, functional, economic, processual and post-processual approaches.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SSCI-356:
+    code: SSCI 356
+    title: "People, Places, & Environment: An Introduction to Geography"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces scientific principles of modern geography. Features both the cultural and environmental aspects of geography at global, regional, and local levels. Teaches perspectives that go beyond a concern with “where things are,” providing discussion and analysis of basic geographical theories and methods in the context of real world case studies.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SSCI-357:
+    code: SSCI 357
+    title: History of Empires Through the Eyes of Interlopers and Intermediaries
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Through a study of the global history of cross-cultural contacts, students examine how societies responded to local and global consequences of globalization. The course will explore the histories of interlopers and research how they fit in present-day nation-states or the multicultural heritages these entities claim in nationalist narratives. As part of a project-based learning approach, students learn to examine primary and secondary sources (including the collection of local, oral history sources), write book and literature reviews, and present historical research.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  SSCI-360S:
+    code: SSCI 360S
+    title: Mission Archaeology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: A Public Archaeology and community service learning lab and field program that places students on the front lines of an archaeological and/or ethnohistorical investigation of Mission era and other historic sites of the California central coast. Ethnohistorical and archival research methods in turn permit students to explore key issues in Mission and area studies, including ethnic studies, heritage management, and cultural representation and misappropriation.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  SSCI-361:
+    code: SSCI 361
+    title: Introduction to GIS
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Both as citizens and as participants in the labor force, university and college graduates are confronting issues and problems that require geographic knowledge and spatial perspectives–ranging from environmental degradation to local impacts of global economic change and effects of changing national demographics on the U.S. economy. Geographic Information Systems (GIS) is a powerful technology that deals with digital maps and images. As the development and application of GIS continue to grow in both public and private sectors, GIS education and training have become very popular around the world. The purpose of this course is to provide students with the theoretical background, methodological foundations, and software skills needed to conduct geographical research utilizing both primary and secondary data. Students gain practical experience in geospatial visualization & analysis through the use of location-based data, learn about the many services and benefits of GIS in communities, and become informed citizens and consumers.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
+  SSCI-362:
+    code: SSCI 362
+    title: "Research Methods: Qualitative Emphasis"
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course presents various research methods, primarily qualitative and some quantitative methods. It explores different paradigms and appropriate methodologies. It allows students to engage in the whole research process of research design, data collection and data analyses in the social sciences. Students learn how to make professional presentations of findings.
+    offered:
+      terms:
+        - fall
+        - spring
+  SSCI-363:
+    code: SSCI 363
+    title: Historical Methods
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course immerses students in the ways that historians develop work in their fields, create a written narrative, use sources, and become professional historians. Students engage the historical method through research, writing, oral communication, and analysis.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  SSCI-364:
+    code: SSCI 364
+    title: The Japanese Internment Camps
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course examines the incarceration of Japanese Americans in the U.S. during World War II. Key themes include civil rights, resistance, and justice. Topics include civil disobedience and legal challenges to internment, generational conflict and family life, reparations and solidarity building. Drawing from history and Asian American studies, students will analyze primary sources, participate in discussions, and partake in a public history project.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SSCI-366:
+    code: SSCI 366
+    title: "Research Methods for SSCI: Quantitative Emphasis"
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "This class uses multi-method approach to explore different paradigms and appropriate quantitative and some qualitative methodologies. Students engage in the research process: research design, hypothesis testing, data collection, data analysis and presentation of findings in written and oral formats. Students practice selecting appropriate research methods given different types of data. They can pilot test part of their capstone projects."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: STAT-100
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: STAT 100   with a C- or better)"
+  SSCI-369:
+    code: SSCI 369
+    title: Ed for Leadership/Public Servi
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Student leaders from each of the 23 California State University campuses examine politics and public service life in politics. Explores theories and strategies to attract thoughtful men and women to lives of public service in politics, to inspire them to a high standard of conduct, and to equip them with the practical skills of self-government.
+  SSCI-371:
+    code: SSCI 371
+    title: GIS Applications for the Social Sciences and Business
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces the fundamentals of GIS-supported applications in social sciences and business. Examples include census data analysis, city and regional planning, crime mapping, business site selection, marketing analysis, and social science education for K-12 schools.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SSCI-374:
+    code: SSCI 374
+    title: Social Sciences Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Students complete an internship experience within the SBS major.
+    offered:
+      availability: periodic
+  SSCI-375:
+    code: SSCI 375
+    title: Crime Analysis and Mapping
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Crime analysis and mapping are currently recognized as essential and vital functions in law enforcement. This course explores how GIS technology is used to provide strategic, tactical, and administrative crime analysis. Students address theories that explain the geographic distribution of crime and apply GIS techniques to identify crime patterns, monitor crime trends, forecast future crime events, prepare statistical crime reports, and develop crime prevention strategies.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SSCI-361
+          - courseId: ENVS-332
+    prerequisiteNotes:
+      - "(Prereq: SSCI 361   or ENVS 332   )"
+  SSCI-377:
+    code: SSCI 377
+    title: Academic Publishing in the Social Sciences
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This project-based learning experience provides instruction in the scholarly publication of social science research. Students serve as editors and contributors to Culture, Society, and Praxis , an online undergraduate journal of social scientific research and creative work. Students receive instruction on the scholarly publication process, and on adapting their own scholarly writing for a general audience. We will engage in weekly peer review sessions and revisions of drafts, with the goal of producing manuscripts suitable for submission to Culture, Society, and Praxis.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  SSCI-378:
+    code: SSCI 378
+    title: Revolution and People Power in the Modern World
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students acquire knowledge of revolutions and people’s mass movements for justice and human rights in the context of global developments since the start of the 20th century. Through specific case studies, they develop the analytical skills to understand how and why movements have succeeded or failed.
+    offered:
+      availability: periodic
+  SSCI-379:
+    code: SSCI 379
+    title: Tattoos, Makeup and Burkas
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "Tattoos Makeup and Burkas: This course provides students with an introduction to the western and non-western anthropological literature and film on cultural elements of distinction across cultures of the world. People all around the world use tattoos, piercing and makeup and dress codes are symbolic tools to represent their ideas of self, gender or as a means of gender, ethnicity, and class control domination. This course will challenge students to understand this phenomenon as a universal one, and to explore its ethical dimensions, fostering the knowledge, skills, and abilities required for them to recognize, and analyze the ethical problems inherent to symbolic representations of self, gender and power explored in the course."
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  SSCI-381:
+    code: SSCI 381
+    title: "US in Vietnam and Asia-Pacific: Peoples, Colonization, Conflicts, Resources"
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Analyzes the relations of the United States to Asia Pacific, especially Vietnam and the Philippines, from social, political-economy, cultural and historical perspectives. Key themes include colonization, conflicts, and resource exploitation in the Asia Pacific. Examines significant ethical concerns drawing from guest speakers, official documents, memoirs, fiction, poetry, films, photography, public and visual arts, and music.
+    offered:
+      terms:
+        - fall
+  SSCI-383:
+    code: SSCI 383
+    title: African Civilizations
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 4
+    description: A comparative survey of the ancient arts, cultures, and civilizations of sub-Saharan or Black Africa and Egypt. Reviews the archaeology and history of the spectacular civilizations of sub-Saharan African and their economic, technological, and cultural impact on the Middle East, Asia, Europe, and the Americas. Egypt, Axum, Meroe, Zimbabwe, Benin, Kush, Zulu, and the East and West African kingdoms will constitute the primary case studies, while discussions will review the emergence of the African Iron Age, the Black Pharaohs of Egypt, the spread of Islam, and the origins of the Atlantic slave trade.
+    offered:
+      terms:
+        - spring
+  SSCI-384S:
+    code: SSCI 384S
+    title: "Anthropology of Education: Cultural Contexts of Bilingual Education"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces the study of schooling in California with an emphasis on minority group perspectives, and thereby explores the concept of transnational cultural experiences. Explores the cultural similarities and differences within such immigrant groups and compares the learning experiences of U.S. and Mexican teachers and their students.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SSCI-386:
+    code: SSCI 386
+    title: Social and Political Histories of California
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Applies theories of race, ethnicity, gender, class, and qualitative methodologies to study the historical relationships of the diverse communities of California. Focuses on past and present human societies and their respective systems of governance and politics. Explores the ways in which history can aid in understanding present-day policy issues.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SSCI-388:
+    code: SSCI 388
+    title: Crisis and Development in Mexican Society
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Borrowing prominently from contemporary anthropological studies, this course explores the main issues confronting contemporary Mexican society, from emigration to the United States through to the impact that globalization, drugs, crime, and corruption have on indigenous and peasant communities. Students completing the course will develop an appreciation and familiarity with the principal aspects of contemporary life in diverse Mexican states and cultural areas, and their relevance in the US.
+    offered:
+      terms:
+        - fall
+  SSCI-389:
+    code: SSCI 389
+    title: Environmental History of California
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Applies theories of race, ethnicity, gender, class, and qualitative methodologies to study historical relationships between the human and nonhuman worlds of California. Focuses on past and present human societies and their respective relationships to the land. Explores the ways in which history can aid in understanding present-day policy issues.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SSCI-395:
+    code: SSCI 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select upper-division topics of study and total number of credit hours.
+    offered:
+      terms:
+        - fall
+        - spring
+  SSCI-397:
+    code: SSCI 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Student and faculty member select topic of study and total number of credit hours.
+    offered:
+      availability: periodic
+  SSCI-397S:
+    code: SSCI 397S
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credit hours. (Credit/No Credit Available)
+    offered:
+      availability: periodic
+  SSCI-400:
+    code: SSCI 400
+    title: Senior Capstone Seminar I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students complete a capstone proposal and major elements of a graduation portfolio. The portfolio provides evidence that a student is making satisfactory progress toward meeting Major Learning Outcomes in Social Theory, Research Methods, a Social Science concentration, and Application. Required for all students seeking a baccalaureate degree in the social and behavioral sciences.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SSCI-300
+            minimumGrade: C-
+          - courseId: SSCI-321
+            minimumGrade: C-
+          - courseId: SSCI-362
+            minimumGrade: C-
+          - courseId: SSCI-366
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( SSCI 300   with a C- or better) and ( SSCI 321   or SSCI 362   or SSCI 366   with a C- or better)]"
+  SSCI-402:
+    code: SSCI 402
+    title: Senior Capstone Seminar II
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students complete a capstone and a graduation portfolio. The portfolio provides evidence that a student has met Major Learning Outcomes in Social Theory, Research Methods, a Social Science concentration, and Application. Required for all students seeking a baccalaureate degree in the social and behavioral sciences.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SSCI-300
+            minimumGrade: C-
+          - courseId: SSCI-400
+            minimumGrade: C-
+          - courseId: SSCI-321
+            minimumGrade: C-
+          - courseId: SSCI-362
+            minimumGrade: C-
+          - courseId: SSCI-366
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( SSCI 300   and SSCI 400   with a C- or better) and ( SSCI 321   or SSCI 362   or SSCI 366   with a C- or better) and (GWAR with a C- or better)]"
+  SSCI-450:
+    code: SSCI 450
+    title: Congress/Intrnshp/Adm/Leg/Oper
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students are assigned to the office of a U.S. Representative who is a member of the California congressional delegation in Washington D.C. and spend a semester participating firsthand in American government. Participants examine administrative organization, methods, systems and procedures, problem solving, and systems analysis. Formerly known as SBSC 450.
+    offered:
+      terms:
+        - fall
+  SSCI-451:
+    code: SSCI 451
+    title: Congress/Intrnshp/Comm/Politic
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students are assigned to the office of a U.S. Representative who is a member of the California congressional delegation in Washington D.C. and spend a semester participating firsthand in American government. Students examine political processes by which public policy is formulated, adopted, and implemented; political activity; election of public officials; and the political organization of government. Formerly known as SBSC 451.
+    offered:
+      terms:
+        - fall
+  SSCI-452:
+    code: SSCI 452
+    title: Congress/Intrnship/Ldshp/Cmtee
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students are assigned to the office of a U.S. Representative who is a member of the California congressional delegation in Washington D.C. and spend a semester participating firsthand in American government. Participants examine the leadership of congressional committee operations and processes. Formerly known as SBSC 452.
+    offered:
+      terms:
+        - fall
+  SSCI-453:
+    code: SSCI 453
+    title: Congress/Intrnshp/Bud/Appropri
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students are assigned to the office of a U.S. Representative who is a member of the California congressional delegation in Washington D.C. and spend a semester participating firsthand in American government. Participants examine government budgets, budgetary process and analysis, intergovernmental fiscal relations, and monetary and fiscal policy. Formerly known as SBSC 453.
+    offered:
+      terms:
+        - fall
+  SSCI-454:
+    code: SSCI 454
+    title: Congress/Intrnshp/Role/Press
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students are assigned to the office of a U.S. Representative who is a member of the California congressional delegation in Washington D.C. and spend a semester participating firsthand in American government. Students examine the nature, extent, and influence of the press on the nation’s governmental process. Formerly known as SBSC 454.
+    offered:
+      terms:
+        - fall
+  SSCI-484S:
+    code: SSCI 484S
+    title: Anthropology of Space. Landscapes and Regions
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores the anthropological concepts of landscape and region and its current applications to land management and sustainable development. This course integrates an intensive two-week service learning and field research program requirement.
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  SSCI-495:
+    code: SSCI 495
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in Social & Behavioral Science. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  SSCI-497:
+    code: SSCI 497
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic
+  SSCI-550:
+    code: SSCI 550
+    title: Congress/Intrnshp/Adm/Leg/Oper
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students are assigned to the office of a U.S. Representative who is a member of the California congressional delegation in Washington D.C. and spend a semester participating firsthand in American government. Participants examine administrative organization, methods, systems and procedures, problem solving, and systems analysis.
+    offered:
+      availability: periodic
+  SSCI-551:
+    code: SSCI 551
+    title: Congress/Intrnshp/Comm/Politic
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students are assigned to the office of a U.S. Representative who is a member of the California congressional delegation in Washington D.C. and spend a semester participating firsthand in American government. Students examine political processes by which public policy is formulated, adopted, and implemented; political activity; election of public officials; and the political organization of government.
+    offered:
+      availability: periodic
+  SSCI-552:
+    code: SSCI 552
+    title: Congress/Intrnshp/Ldshp/Cmtee
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students are assigned to the office of a U.S. Representative who is a member of the California congressional delegation in Washington D.C. and spend a semester participating firsthand in American government. Participants examine the leadership of congressional committee operations and processes.
+    offered:
+      availability: periodic
+  SSCI-553:
+    code: SSCI 553
+    title: Congress/Intrnshp/Bud/Appropri
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    offered:
+      availability: periodic
+  SSCI-554:
+    code: SSCI 554
+    title: Congress/Intrnshp/Role/Press
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students are assigned to the office of a U.S. Representative who is a member of the California congressional delegation in Washington D.C. and spend a semester participating firsthand in American government. Students examine the nature, extent, and influence of the press on the nation’s governmental process.
+    offered:
+      availability: periodic
+  SSCI-569:
+    code: SSCI 569
+    title: Ed for Leadership/ Public Service
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Student leaders from each of the 23 California State University campuses examine politics and public service life in politics. Explores theories and strategies to attract thoughtful men and women to lives of public service in politics, to inspire them to a high standard of conduct, and to equip them with the practical skills of self-government.
+    offered:
+      availability: periodic
+  SSCI-595:
+    code: SSCI 595
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in Social & Behavioral Science. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  SSCI-597:
+    code: SSCI 597
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and total number of credit hours. Formerly known as SBSC 597.
+    offered:
+      availability: periodic

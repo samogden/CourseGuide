@@ -1,0 +1,105 @@
+schemaVersion: 1
+prefix: PANM
+courses:
+  PANM-202:
+    code: PANM 202
+    title: Introduction to Public Administration and Nonprofit Management
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course introduces the study and practice of public administration and nonprofit management. Students learn theoretical and practical approaches to public sector governance and the management of nonprofit organizations. Students explore inequities and social justice issues in contemporary U.S. society, particularly dimensions of race, ethnicity, and intersectionality in relation to public policies and administrative practices.
+    offered:
+      terms:
+        - fall
+        - spring
+  PANM-312:
+    code: PANM 312
+    title: Principles of Public Administration and Nonprofit Management
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course provides an overview of the principles, practices, and challenges of public administration and nonprofit management in the United States. Students will explore the structure and functions of public and nonprofit organizations, the role of leadership and ethics in decision-making, and the processes involved in policy implementation and program management.
+    offered:
+      terms:
+        - fall
+        - spring
+  PANM-412:
+    code: PANM 412
+    title: Public and Nonprofit Finance
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "This course will augment students’ knowledge, skills and attitudes in reading and understanding budgets and financial statements. Students will deepen their understanding of: the budgeting and financial reporting processes of public and nonprofit organizations; revenue-generating strategies and regulatory issues pertaining to these kinds of agencies; and the value of creating a culture of transparency and accountability in the public and nonprofit sectors."
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PANM-202
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[((Prereq: ( GE   Area 1A and 1B and 1C and 2 and GWAR   with a C- or better) and ( PANM 202   )) or Department Consent Required]"
+  PANM-422:
+    code: PANM 422
+    title: Program Planning and Evaluation
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course covers methods of program planning and evaluation in the public or nonprofit sector. Students learn how to develop programs, and apply tools of problem definition, needs assessments, evidence-based interventions, logic models and community readiness assessments. Students develop an understanding of the principles of process- and outcome-evaluations, including research designs, ethical considerations, and the social and political contexts of evaluation.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 and GWAR with a C- or better) or (Department Consent Required)]"
+  PANM-432:
+    code: PANM 432
+    title: Advanced Program Evaluation
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "Students learn to apply advanced methods in process and outcomes evaluations, as well as the purposes that evaluations serve: oversight and compliance, organizational improvement, and assessments of merit and worth. Emphasis is given to the critical assessment of the strengths and weaknesses of qualitative methods, randomized controlled trials, and quasi-experimental designs in different evaluation contexts."
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "[(Prereq: ( GE   Area 1A and 1B and 1C and 2 and GWAR with a C- or better) or (Department Consent Required)]"
+  PANM-442:
+    code: PANM 442
+    title: Community Economic Development
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course introduces students to community building, local development strategies and regional economic issues (especially focused on small and rural communities). Students will study the economic conditions that strengthen community opportunities for employment growth. Topics include community history and capacity for growth and job creation, the role of non-profit community-based organizations and public economic development agencies.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 and GWAR with a C- or better) or Department Consent Required]"
+  PANM-452:
+    code: PANM 452
+    title: Technology in Nonprofit/Public Administration
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course will explore the use of Geographic Information Systems, Social Media and other emerging technology to facilitate constituent engagement, fundraising, program planning and service delivery. Issues to be covered include cost-benefit analyses, data security/confidentiality, technological infrastructure development and resource management.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 and GWAR with a C- or better) or Department Consent Required]"
+  PANM-497:
+    code: PANM 497
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    offered:
+      availability: periodic

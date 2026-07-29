@@ -1,0 +1,186 @@
+schemaVersion: 1
+prefix: WLC
+courses:
+  WLC-195:
+    code: WLC 195
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in World Languages. May be repeated for credit when topics vary. (Letter Grade Available)
+    offered:
+      availability: periodic
+  WLC-197:
+    code: WLC 197
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic
+  WLC-201:
+    code: WLC 201
+    title: Intermediate World Languages
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Alternative assessment for the third semester of World Languages. Freshmen and Sophomore transfers attempting to satisfy the Language Requirement through assessment must enroll in WLC 201. Junior and senior transfers attempting to satisfy the Language Requirement through assessment, must also enroll in WLC 201. (Letter Grade Available)
+    offered:
+      availability: periodic
+  WLC-212:
+    code: WLC 212
+    title: Language and Culture for Heritage Speakers
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is for heritage speakers who have a moderate proficiency in their Heritage language, other than Spanish, but have completed little or no formal study of that language. The course emphasizes the linguistic and cultural aspects of language ability, and learning strategies; provides an introduction to linguistics, and second language acquisition; incorporates 21st Century Skills and National Standards; and encourages students to explore the social implications of language use. Students will demonstrate language proficiency through assessment. Conducted in English.
+    offered:
+      terms:
+        - spring
+  WLC-230:
+    code: WLC 230
+    title: "Academic Life in U.S: Cross Cultural Studies"
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Your study abroad experience in America is potentially a rich opportunity for you to enhance your language skills and deepen your understanding of other cultures, people and their practices. This course provides the resources to help you have meaningful American College experiences.
+    offered:
+      terms:
+        - fall
+  WLC-250:
+    code: WLC 250
+    title: Academic English Reading and Writing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course is offered to students who are non-native speakers of English and who wish to develop advanced academic reading and writing skills. These skills include understanding the structure and conventions of written work in various academic disciplines, analyzing and responding to assigned texts, and making effective choices in writing for specific academic situations. The course will cover strategies for reading, writing, and conducting research at an American university.
+    offered:
+      terms:
+        - fall
+        - spring
+  WLC-295:
+    code: WLC 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in World Languages. May be repeated for credit when topics vary. (Letter Grade Available)
+    offered:
+      availability: periodic
+  WLC-297:
+    code: WLC 297
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 4
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic
+  WLC-300:
+    code: WLC 300
+    title: WLC Major ProSeminar
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course introduces students to the Japanese Language and Culture, or Spanish Language and Hispanic Cultures majors. Students acquire knowledge and understanding needed to fulfill Major Learning Outcomes for the programs, including literature, culture and linguistics, and to develop individual learning plans. The course examines opportunities in related professional and career paths, such as graduate education and teaching credential preparation.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  WLC-360:
+    code: WLC 360
+    title: Foundations for Teaching World Languages
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course introduces the teaching profession to students who are interested in pursuing teaching world languages and cultures, including English, in various settings in the U.S. and around the world, using acquired world language proficiency as one of their career options. This course introduces research-based teaching practices in world language education that are essential for the effective learning and teaching of World languages. Students explore 21st-century skills of teaching and examine the importance of world languages and cultures to prepare them to become effective global citizens.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: JAPN-201
+          - courseId: SPAN-201
+    prerequisiteNotes:
+      - "[Prereq: ( JAPN 201   or equivalent) or ( SPAN 201   or equivalent) and (Department Consent Required)]"
+  WLC-395:
+    code: WLC 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: With faculty guidance, students design unique learning sequences that are pertinent to their learning plans and not covered in current courses. Students design a study proposal with appropriate faculty members and obtain authorization from their academic center. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  WLC-397:
+    code: WLC 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Individual study of a topic or subject of particular interest to the student. A written proposal for the study/research must be approved in advance by the sponsoring faculty member and the program chair. Number of credits depends on the nature of the student’s academic goals and the consent of the faculty advisor.
+    offered:
+      availability: periodic
+  WLC-400:
+    code: WLC 400
+    title: WLC Major Capstone
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students work with the instructor and WLC faculty advisors to research, synthesize, write and present their Capstone projects. Students will also complete a Graduation ePortfolio reflecting how each MLO was met. This course is required for all Japanese Language and Culture, and Spanish Language and Hispanic Cultures majors.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-300
+            minimumGrade: C-
+          - courseId: JAPN-403
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( SPAN 300   or JAPN 403   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  WLC-420:
+    code: WLC 420
+    title: Maximizing Study Abroad Experiences
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: "Your study abroad or study away experience offers a valuable chance to improve your language skills and deepen your understanding of other cultures, people, and practices. This course provides resources to help you prepare for your study abroad experiences and maximize your time abroad. Students will develop foundational knowledge of intercultural competence, language and culture learning strategies, and prepare for logistical and personal well-being during all three phases of study abroad: pre-departure, in-country, and re-entry. Students will develop basic information about their future host culture and consider what it means to be a global citizen. The course is conducted in English and is designed for students studying away from their home campus, including abroad and interstate."
+    offered:
+      terms:
+        - fall
+  WLC-497:
+    code: WLC 497
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    offered:
+      availability: periodic
+  WLC-595:
+    code: WLC 595
+    title: Comm-Based Instr Theor/Pr
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    offered:
+      availability: periodic

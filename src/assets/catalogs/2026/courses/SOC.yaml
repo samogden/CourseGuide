@@ -1,0 +1,321 @@
+schemaVersion: 1
+prefix: SOC
+courses:
+  SOC-100:
+    code: SOC 100
+    title: Introduction to Sociology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Sociology is the systematic study of human social behavior. Sociologists examine not only how social structures shape our daily interactions but also how society constructs social categories and social meanings. This course offers an overview of sociological theories, concepts and methodologies through readings and discussions. You will develop a deeper understanding of self and society by applying sociological concepts and methods in class and in lab projects.
+    offered:
+      terms:
+        - fall
+        - spring
+  SOC-120:
+    code: SOC 120
+    title: Thinking Sociologically
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course provides students with an introduction to the study and practice of sociological thinking. Drawing connections across diverse perspectives, students learn the fundamentals of social constructionism, logical fallacies, ethical reasoning, critical thinking, identify the source of (mis)information, assess its credibility, and evaluate arguments by weighing the evidence.
+    offered:
+      terms:
+        - fall
+        - spring
+  SOC-197:
+    code: SOC 197
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic
+  SOC-201:
+    code: SOC 201
+    title: Social Problems
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Every society grapples with problems. In this course, we will use sociological research and theory to examine social issues. We will study how some issues become labeled as social problems, and how groups of people try to address social problems. Students will apply their sociological knowledge to analyze social problems of interest to them.
+    offered:
+      terms:
+        - fall
+        - spring
+  SOC-300:
+    code: SOC 300
+    title: Sociology Major Proseminar
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This course introduces students to the Sociology major. Students learn the history of the discipline of Sociology, its subdisciplines, and its relationship to other social sciences. The course introduces the Major Learning Outcomes and discusses how they will be met. Students develop basic library research, citation, and career exploration skills.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SOC-302:
+    code: SOC 302
+    title: Sociological Theory
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students in this course learn classical sociological theories that are fundamental to the discipline of Sociology, as well as contemporary sociological theories that view social interaction through a wide range of perspectives. Students examine how theory informs sociological research, and apply theory to analyze a variety of social phenomena.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SOC-312:
+    code: SOC 312
+    title: Sociology of Gender
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will examine gender norms and socialization, gender identity and expression, and gendered structural inequality. Particular attention will be given to examining gender from an inter-sectional perspective that encompasses race, class, and sexual orientation. Modules will highlight the role of gender and gender inequality in social institutions such as the family, educational system, workplace, and government.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SOC-315:
+    code: SOC 315
+    title: Marriage and Family
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: The family is a central part of human social life. This course examines the family and its relationship with race, class, gender, and sexuality; changes in what we consider “a family” across cultures and historical periods; various forms that a family may take; and problems that may arise in families.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SOC-317:
+    code: SOC 317
+    title: Social Movements
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "This course will provide an overview of key theoretical concepts in the study of social movements, including framing, resource mobilization, political opportunity structure, strategy and tactics, coalitions, collective identity and emotions, and transnational movements. Students will apply these concepts to case studies of social movements: historical and modern, conservative and progressive, in both the United States and elsewhere in the world."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SOC-320:
+    code: SOC 320
+    title: Labor and Labor Movements
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This class is an introduction to work and unionization in the United States and transnationally, focusing on current issues such as intersectional labor organizing, low-wage and precarious work, and transnational labor mobilization. Students examine case studies of work and labor in the United States, with emphasis on comparative studies between the United States and other countries.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SOC-325:
+    code: SOC 325
+    title: Sociology of Latinos
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces students to the sociology of Latinos in North America with an emphasis on the vast cultural diversity and historical complexity of this significant US population. Reviews theories of race, ethnicity, and racialized immigration enforcement to address the racialization and marginalization of Latinos in the US. Extends the scope of this review to those sociological, economic, and political dynamics that underlie just how assimilation is deliberated.
+    offered:
+      terms:
+        - fall
+        - spring
+  SOC-330:
+    code: SOC 330
+    title: Sociology of Race and Ethnicity
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students in this course use sociological theories and concepts to study race and ethnicity. Students examine the sociological construction of race and ethnicity; the development of racial categories and stratification; racial and ethnic identities, and how they intersect with other identities; interactions among racial and ethnic groups; prejudice, discrimination, racism, power, and privilege; and the impact of inequality across various social institutions.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SOC-333:
+    code: SOC 333
+    title: Sociology of Deviance
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course examines the ways in which societies define deviance and their attitudes and beliefs. It employs a critical sociological approach to explore conformity/non-conformity and the relationship between individual liberty and social control. It also analyzes social reactions and outcomes of these definitions. Topics may include sexuality, suicide, prostitution, drug addiction, crime, and gender.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SOC-100
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SOC 100   with a C- or better)"
+  SOC-338:
+    code: SOC 338
+    title: Social Psychology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines various psychologies and sociologies, and identifies theoretical and methodological similarities between them. From a psychological paradigm, derives shared meanings about the interpretation of the Self. And, from a sociological paradigm reaches an understanding of the role of Self in society, as well as the role society has on shaping the Self. Students experience a set of tasks that allow them to discover the “role of the other.”
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  SOC-340:
+    code: SOC 340
+    title: Subcultures and Power
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course explores subcultures as spaces where people negotiate identity, belonging, and inequality. Students examine global case studies-from zoot suits and lowriders to punk, hip hop, graffiti, gaming, and hooliganism-through key sociological theories. Readings, films, and creative projects highlight how subcultures emerge, adapt, and are contested as practices of style, community, and cultural politics.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
+  SOC-360:
+    code: SOC 360
+    title: Population and Contemporary Issues
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course studies historical, contemporary, and anticipated population conditions and trends as they relate to social issues and organization of society. It explores the population processes (fertility, mortality, and migration) as they affect and are affected by various influences such as urbanization, family, and environment. Additional topics may include undocumented migration, US-Mexico border, and globalization.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: STAT-100
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: STAT 100   with a C- or better)"
+  SOC-365:
+    code: SOC 365
+    title: Technology and Society
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course offers a broad introduction to the social dimensions of emerging information and communication technologies. An emphasis is placed on the specific historical and cultural contexts that shape practices of technology. Attention is given to the diverse ways technology shapes social life, including culture, economy, education, and military. It also examines how social structures of gender, race, class, sexuality, and nation are reproduced or reconfigured by technology.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SOC-374:
+    code: SOC 374
+    title: Sociology Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Students complete an internship experience within the Sociology major.
+    offered:
+      availability: periodic
+  SOC-395:
+    code: SOC 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 4
+    description: Studies a particular topic in Sociology. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  SOC-397:
+    code: SOC 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 4
+    offered:
+      availability: periodic
+  SOC-399:
+    code: SOC 399
+    title: Contemporary Immigration in Global Perspective
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "Examines contemporary immigration issues and the relationships between immigrants and existing institutions and identities. Topics include: assimilation and integration, the children of immigrants and socio-economic mobility, transnational movements, undocumented immigration, racism and xenophobia within the immigration context, return, circular and onward migration, and the criminalization of immigrants."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SOC-400:
+    code: SOC 400
+    title: Capstone Proposal
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students in this course write research proposals that will guide their senior capstone projects. Students will create research questions, review relevant sociological literature, identify appropriate research methodologies, and develop plans for conducting original sociological research.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: SOC-300
+            minimumGrade: C-
+          - courseId: SOC-302
+            minimumGrade: C-
+          - anyOf:
+              - courseId: SSCI-321
+                minimumGrade: C-
+              - courseId: SBS-362
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( SOC 300   and SOC 302   and ( SSCI 321   or SBS 362   ) with a C- or better) and ( GE   Area 1A and 1B and 1C and 2 with a C- or better)]"
+  SOC-402:
+    code: SOC 402
+    title: Capstone Seminar
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students in this course will conduct original research and complete the senior capstone project. Students will present their research results in a paper and a formal presentation, following sociological disciplinary norms of written and oral communication.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SOC-400
+            minimumGrade: C-
+          - courseId: SSCI-377
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( SOC 400   and SSCI 377   ) with a C- or better) and ( GE   Area 1A and 1B and 1C and 2 with a C- or better)]"

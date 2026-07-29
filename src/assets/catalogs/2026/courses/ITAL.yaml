@@ -1,0 +1,81 @@
+schemaVersion: 1
+prefix: ITAL
+courses:
+  ITAL-101:
+    code: ITAL 101
+    title: Beginning Italian I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This class introduces the basics of the Italian language and culture with emphasis on the development of the basic communication skills in speaking, listening, reading, and writing. It requires active participation in instructor-coordinated multimedia and online activities as a mandatory component.
+    offered:
+      terms:
+        - fall
+        - spring
+  ITAL-102:
+    code: ITAL 102
+    title: Beginning Italian II
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this class students will continue the study of Italian language and culture with emphasis on the development of the basic communicative skills in speaking, listening, reading and writing. It requires active participation in instructor-coordinated multimedia and online activities as a mandatory component.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: ITAL-101
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: ITAL 101   with a C- or better)"
+  ITAL-201:
+    code: ITAL 201
+    title: Intermediate Italian I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will continue to develop proficiency in Italian at the intermediate level. Students will communicate interpersonally and interpretively and present on familiar topics in daily situations. Students will further develop communicative strategies and will continue the study of Italian language and culture. This course requires active participation in instructor-coordinated multimedia and online activities as a mandatory component.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: ITAL-102
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: ITAL 102   with a C- or better)"
+  ITAL-297:
+    code: ITAL 297
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Allows lower-division students to independently study a particular aspect of Italian culture and language. A written proposal for the study/research must be approved in advance by the sponsoring faculty member and the program chair. Number of credits depends on the nature of the student’s academic goals and the consent of the faculty advisor.
+    offered:
+      availability: periodic
+  ITAL-305:
+    code: ITAL 305
+    title: Intro Italian Culture & Civili
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Introduction to Italian culture, history, and geography, including art forms, literature, customs, traditions, economy, politics, music, fashion, food, and lifestyles. Challenges stereotypes, fosters cultural understanding, and strengthens ability to analyze, criticize, and discuss specific cultural topics. Encourages a comparative perspective reflecting the Italian social context, while contrasting Italian cultural issues with comparable US issues.
+    offered:
+      availability: periodic
+  ITAL-397:
+    code: ITAL 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Individual study of a particular aspect of Italian culture, language, or civilization. A written proposal for the study/research must be approved in advance by the sponsoring faculty member and the program chair. Number of credits depends on the nature of the student’s academic goals and the consent of the faculty advisor.
+    offered:
+      availability: periodic

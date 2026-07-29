@@ -1,0 +1,867 @@
+schemaVersion: 1
+prefix: SPAN
+courses:
+  SPAN-101:
+    code: SPAN 101
+    title: Beginning Spanish I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: An introduction to the Spanish language and Hispanic cultures, with emphasis on the development of the basic communicative skills (speaking, listening, reading, writing) and grammatical structures. Requires active participation in instructor-coordinated multimedia and online activities as a mandatory component.
+    offered:
+      terms:
+        - fall
+        - spring
+  SPAN-102:
+    code: SPAN 102
+    title: Beginning Spanish II
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Continues the study of the Spanish language and Hispanic cultures, with emphasis on the development of the basic communicative skills (speaking, listening, reading, writing) and grammatical structures. Requires active participation in instructor-coordinated multimedia and online activities as a mandatory component.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-101
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 101   with a C- or better)"
+  SPAN-103:
+    code: SPAN 103
+    title: Intensive BeginingSpanish I &II
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 8
+    description: An intensive course designed for beginning students. Emphasis on the development of communicative skills, basic structures, and cultural competence. Covers the equivalent of SPAN 101   and SPAN 102   in one semester. Requires active participation in instructor-coordinated multimedia and online activities as a mandatory component.
+    offered:
+      availability: periodic
+  SPAN-200:
+    code: SPAN 200
+    title: Beg Spanish Conversation
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Introduces Spanish conversation to support, develop, and strengthen skills in Spanish oral communication. Implements extensive speaking practice using everyday experiences.
+    offered:
+      availability: periodic
+  SPAN-201:
+    code: SPAN 201
+    title: Intermediate Spanish I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Reviews and develops the fundamentals of Spanish grammar and emphasizes the development of speaking, listening, reading, and writing skills by studying and discussing short reading selections. Also available online. Requires active participation in instructor-coordinated multimedia and online activities as a mandatory component.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-102
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 102   with a C- or better)"
+  SPAN-202:
+    code: SPAN 202
+    title: Intermediate Spanish II
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Continues to develop the fundamentals of Spanish grammar and emphasizes the development of speaking, listening, reading, and writing skills by studying and discussing short reading selections. Requires active participation in instructor-coordinated multimedia and online activities as a mandatory component.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-201
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 201   with a C- or better)"
+  SPAN-212:
+    code: SPAN 212
+    title: Spanish For Spanish Speakers I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is designed for heritage speakers (students who grew up speaking and/or listening to Spanish) and aims to welcome and nourish students’ linguistic resources and cultural heritages while expanding their speaking, listening, reading, and writing skills in Spanish through exploring Latinx popular cultures and literatures. Taught in Spanish.
+    offered:
+      terms:
+        - fall
+        - spring
+  SPAN-260:
+    code: SPAN 260
+    title: "Contemporary Chicanx Literature: Survey"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course serves as an introduction to Chicanx poetry and narrative by representative contemporary writers, considering their literary, cultural and historical contexts. The course also explores the place and evolution of the Chicanx literary tradition within the United States and Latin America. Genres such as Chicana feminist literature, Chicanx detective fiction, Chicana solidarity fiction, and Chicanx young adult literature will also be considered. Taught in English. (Crosslisted/Equivalent with ES 260   )
+    offered:
+      terms:
+        - spring
+  SPAN-262:
+    code: SPAN 262
+    title: Latin American Literature in Translation
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Critical study of representative authors from colonial times to the twentieth century. Introduces students to key works of such literary masters as Sor Juana Ines de la Cruz, Ruben Dario, Gabriela Mistral, Eduardo Mallea, Ernesto Sabato, Horacio Quiroga, Jose Marti, Jorge Luis Borges, Nicolas Guillen, Mariano Azuela, Juan Rulfo, etc. Taught in English.
+    offered:
+      availability: periodic
+  SPAN-295:
+    code: SPAN 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Spanish. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  SPAN-297:
+    code: SPAN 297
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic
+  SPAN-300:
+    code: SPAN 300
+    title: Pre-Capstone for Spanish Majors
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Directed toward Spanish majors preparing for their Capstone experience, this course aims to guide the student in the process of completing a capstone proposal and initiating the preliminary steps toward the graduation ePortfolio. The ePortfolio provides evidence that a student is making satisfactory progress toward meeting the Core requirements and Major Learning Outcomes (MLOs) for the Spanish B.A.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: WLC-300
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: WLC 300   with a C- or better)"
+  SPAN-301:
+    code: SPAN 301
+    title: Comp/Oral Practice
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This content-based course focuses on developing the three modes of communication - interpersonal, interpretive and presentational - with an emphasis on academic writing through readings and discussions. The use of authentic texts from Hispanic cultural and literary traditions allows learners to consolidate oral and written information. Taught in Spanish.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-201
+          - courseId: SPAN-202
+          - courseId: SPAN-212
+    prerequisiteNotes:
+      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   or equivalent)"
+  SPAN-301S:
+    code: SPAN 301S
+    title: Service Learning in the Chicano / Latino Community
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students will become involved in community projects of importance and relevance that engage them in matters relative to justice, compassion, diversity and social responsibility, and help them become effective multicultural community builders. The course is designed to help you enhance your skills in personal and professional communication as well as classroom discussions and oral presentations in Spanish.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-201
+          - courseId: SPAN-202
+          - courseId: SPAN-212
+          - courseId: SPAN-301
+    prerequisiteNotes:
+      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   or SPAN 301   or Instructor Consent)"
+  SPAN-303:
+    code: SPAN 303
+    title: Advanced Spanish Grammar
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Reviews all phases of communication skills with practice in understanding, speaking, and writing grammatically correct Spanish. Teaches specific components of Spanish grammar: the Spanish verbal system, the subjunctive, ser versus estar, and other problematic aspects of grammar. Taught in Spanish."
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-201
+            minimumGrade: C-
+          - courseId: SPAN-202
+            minimumGrade: C-
+          - courseId: SPAN-212
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+  SPAN-304:
+    code: SPAN 304
+    title: Intro To Hispanic Literature
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course introduces the principles of literary analysis, based on reading and discussion of Hispanic literary texts. Includes fiction, drama, essay, and poetry from Spain and Spanish America. Taught in Spanish.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-201
+            minimumGrade: C-
+          - courseId: SPAN-202
+            minimumGrade: C-
+          - courseId: SPAN-212
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+  SPAN-305:
+    code: SPAN 305
+    title: Spanish for The Professions
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Designed for students interested in developing a functional use of Spanish for the professions (business, education, law, medicine, social work, etc.), from a Hispanic cultural perspective. Students will have an opportunity to practice and develop their listening, speaking, reading, and writing skills. The Spanish-speaking world will provide the cultural context, and the area of business the content area. Taught in Spanish.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-201
+            minimumGrade: C-
+          - courseId: SPAN-202
+            minimumGrade: C-
+          - courseId: SPAN-212
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+  SPAN-306:
+    code: SPAN 306
+    title: Culture/Civilization of Span Ltn Amer
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course presents a historical and cultural overview of Hispanic Latin America from its pre-Columbian origins to the present through works of literature, art, music, and video clips. Taught in Spanish.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-201
+            minimumGrade: C-
+          - courseId: SPAN-202
+            minimumGrade: C-
+          - courseId: SPAN-212
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+  SPAN-307:
+    code: SPAN 307
+    title: History and Culture of Mexico
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course examines Mexico’s history and culture from indigenous periods to the arrival of Europeans and Spanish colonization, including the mission system of California, the independence movement, the Mexican-American war and the Mexican Revolution. Students will also analyze the culture and polemics of contemporary Mexico. Taught in English with readings in Spanish for Spanish majors.
+    offered:
+      availability: periodic
+  SPAN-308:
+    code: SPAN 308
+    title: Hist/Cultr Aztlan:SW US
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Covers the story of indigenous peoples of the southwestern United States: Aztlan, the Spanish colonial period, the Mexican period, and the acquisition and settlement by the United States. Seeks the exposition of indigenous and Hispanic historical and cultural foundations of the region and the confluence with other Asian and European influences. Taught in English with Spanish readings for Spanish majors."
+    offered:
+      terms:
+        - spring
+  SPAN-309:
+    code: SPAN 309
+    title: Hist & Polit Of Latn Amer
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Surveys Latin American history focusing on the development of political and social structures since the independence movements of the 19th century. Emphasizes Latin phenomenon as caudillismo, indigenismo, the Church and liberation theology, and the revolutionary movements in the 20th century. Taught in English.
+    offered:
+      availability: periodic
+  SPAN-310:
+    code: SPAN 310
+    title: Latinx Children’s Literature
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course critically examines U.S. Latinx children’s literature, including middle grade and young adult texts. The course considers the dialogue of representative texts with significant topics within Latinx and Latin American literature, such as the reinterpretation of traditional archetypes, translanguaging, immigration, and sexuality. These texts are also studied as instruments in the cultivation of a greater understanding of social justice in contexts related to children. Taught in Spanish.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-201
+            minimumGrade: C-
+          - courseId: SPAN-202
+            minimumGrade: C-
+          - courseId: SPAN-212
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+  SPAN-312:
+    code: SPAN 312
+    title: Current Topics for Spanish Speakers
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is designed for students who grew up in an environment where Spanish was spoken frequently and want to improve their language skills in Spanish. The course builds on what students have learned at home and guides them to engage in academic Spanish. Special attention is paid to developing vocabulary, strengthening composition skills, and analyzing texts, and increasing confidence through inspiring critical analysis of social themes relevant to Spanish-speaking communities.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-102
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and ( SPAN 102   )) or (Department Consent)]"
+  SPAN-313:
+    code: SPAN 313
+    title: Intro to Spanish Linguistics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Intro to Spanish Linguistics: Presents the principal branches of linguistic study, as it pertains to Spanish: the sound system (phonetics and phonology), the structure of words (morphology), and the structure of sentences (syntax). Additionally, attention is paid to bilingualism, especially Spanish in the US, and how Spanish is spoken/written differently by various social groups (sociolinguistics) and in various Spanish-speaking countries (dialectology). Taught in Spanish."
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-201
+            minimumGrade: C-
+          - courseId: SPAN-202
+            minimumGrade: C-
+          - courseId: SPAN-212
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+  SPAN-314:
+    code: SPAN 314
+    title: Spanish Applied Linguistics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course provides an introduction to basic concepts in Spanish Applied Linguistics, with the goal of preparing students to teach Spanish as a second language and/or as a heritage language. It explores pedagogical issues related to second and heritage language development, language teaching methodologies, pragmatics, linguistic variation, and the use of technology in language learning and instruction. Taught in Spanish.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-201
+            minimumGrade: C-
+          - courseId: SPAN-202
+            minimumGrade: C-
+          - courseId: SPAN-212
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+  SPAN-315:
+    code: SPAN 315
+    title: "Introduction to Translation: Spanish/English"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students perform introductory translation assignments from Spanish to English and vice versa. They develop an understanding of translation theory through reading and class discussion and come to understand communicative translation and compare it to a direct, word-for-word approach. Problematic grammatical, discursive, and pragmatic issues are analyzed and the grammar of Spanish is reviewed in detail. Taught in Spanish.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-201
+            minimumGrade: C-
+          - courseId: SPAN-202
+            minimumGrade: C-
+          - courseId: SPAN-212
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+  SPAN-316:
+    code: SPAN 316
+    title: Cultures and Civilizations of Spain
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Study of the cultures & civilizations of Spain through geography, history, sociology, and the arts of the Iberian Peninsula, with special reference to the ways of thinking and cultural products. Taught in Spanish.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-201
+            minimumGrade: C-
+          - courseId: SPAN-202
+            minimumGrade: C-
+          - courseId: SPAN-212
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+  SPAN-317:
+    code: SPAN 317
+    title: Spanish Popular Music
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: With the turn of the 21st century, Hispanic music has taken over the world. This course is designed to study this phenomenon paying special attention to the music produced in Spain. We will study Spanish popular music within its own historical, sociological, political, and philosophical contexts. We will highlight the intersections of music with gender, race, ethnicity, national identity, and social class, among others. The primary texts of the course will be music albums, music videos, and critical essays of cultural studies and popular music. The class is taught in Spanish.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-201
+          - courseId: SPAN-202
+          - courseId: SPAN-212
+    prerequisiteNotes:
+      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   or equivalent) (Department Consent Required)"
+  SPAN-320:
+    code: SPAN 320
+    title: "Introduction to Interpretation: Spanish/English"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course provides an overview of the fundamental skills needed to begin the study of bidirectional interpretation (including consecutive and simultaneous interpretation into English and Spanish) in the medical, educational, and legal fields. The course examines interpretation theory and practice through exploring basic interpreting techniques and incorporating introductory interpretation exercises. Taught in Spanish and English.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-201
+            minimumGrade: C-
+          - courseId: SPAN-340
+            minimumGrade: C-
+          - courseId: SPAN-212
+            minimumGrade: C-
+          - courseId: SPAN-312
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 201   or SPAN 340   or SPAN 212   or SPAN 312   with a C- or better or equivalent)"
+  SPAN-321:
+    code: SPAN 321
+    title: "Masterpieces of Hispanic Literature: Spain"
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Reading and discussion of selected masterworks of literature as they reflect the historical, political, and social context of the Peninsular Spanish experience. Students will be introduced to reading and writing critically, and discussing both form and content within these works. All discussions will be carried out in Spanish. Taught in Spanish.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-301
+            minimumGrade: C-
+          - courseId: SPAN-304
+            minimumGrade: C-
+          - courseId: SPAN-362
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 301   or SPAN 304   or SPAN 362   with a C- or better)"
+  SPAN-322:
+    code: SPAN 322
+    title: "Masterpieces of Hispanic Literature: Latin America & the Caribbean"
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Reading and discussion of selected masterworks of literature as they reflect the historical, political, and social context of the Latin American and Caribbean experience. Students are introduced to critically reading, writing, and discussing the form and content of these literary masterpieces. Taught in Spanish.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-301
+            minimumGrade: C-
+          - courseId: SPAN-304
+            minimumGrade: C-
+          - courseId: SPAN-362
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 301   or SPAN 304   or SPAN 362   with a C- or better)"
+  SPAN-323:
+    code: SPAN 323
+    title: Hispanic Sociolinguistics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course provides an introduction to basic concepts in sociolinguistics, focusing on the symbolic value of language as an expression of group identity based on region, gender, ethnicity, socioeconomic class, age, and other ways of defining group affiliation. The course also surveys topics such as linguistic variation, language contact, language attitudes, and language identity. Taught in Spanish.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-201
+            minimumGrade: C-
+          - courseId: SPAN-202
+            minimumGrade: C-
+          - courseId: SPAN-212
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+  SPAN-325:
+    code: SPAN 325
+    title: Hispanic Cinema
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course will examine the multiple ways that Hispanic and Brazilian filmmakers have seen Hispanic world, its people, religious beliefs and cultures for more than a century. This course provides the student with a range of perspectives on cultural developments in Spain, Brazil, Latin America and the Caribbean from the colonial to the modern period, using critical and literary texts as well as films. Taught in English.
+    offered:
+      terms:
+        - spring
+  SPAN-330:
+    code: SPAN 330
+    title: Hispanic Testimonials
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: A course on individual and collective memoirs, diaries, confessions and traveling accounts. Students read and analyze written texts and films, keep journals, and create life writing or multimedia production in Spanish. Taught in Spanish.
+    offered:
+      terms:
+        - spring
+  SPAN-335:
+    code: SPAN 335
+    title: Popular Culture in the Americas
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course proposes a hemispheric, interdisciplinary examination of intercultural dialog that influenced and shaped popular cultural production both in Latin America and the United States throughout the 20th and early 21st centuries. Hispanic cultural products and its manifestations (mass culture, high culture, popular culture) are examined by its intersections with history, race/ ethnicity, gender, social class, religion, migration/ exile, and hybrid identities. Taught in Spanish.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-301
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 301   with a C- or better)"
+  SPAN-336:
+    code: SPAN 336
+    title: LGBTQ/ Queer Hispanic Experiences
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course proposes an interdisciplinary examination of LGBTQ/ Queer experiences as seen in Hispanic cultures. This course presents a historical overview of gender and sexuality studies beginning with indigenous concepts of gender in Latin America and examines corresponding social-political movements of the 20th/21st centuries. LGBTQ and queer cultural products are examined with intersectional approaches to language, race/ ethnicity, migration/ exile, and hybrid identities. Taught in Spanish.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-201
+          - courseId: SPAN-202
+          - courseId: SPAN-212
+    prerequisiteNotes:
+      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   or equivalent)"
+  SPAN-337:
+    code: SPAN 337
+    title: Popular Culture in Spain
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course is designed to study popular culture in Spain within its own historical, sociological, political, and philosophical contexts. It will pay special attention to the intersections of popular culture with gender, race, ethnicity, national identity, and social class, among others. The primary materials of the course will be movies, comics, music, TV shows, and more. The class is taught in Spanish.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-301
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 301   with a C- or better)"
+  SPAN-340:
+    code: SPAN 340
+    title: "Language for Professions: Spanish"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is designed to develop a functional use of Spanish for the professions. Students will learn how to respond to a variety of situations that focus on professional matters such as customer service, telephone conversations, and effective communication as a member of the professional community. It also presents and expands on cultural practices with perspectives and concepts. Taught in Spanish.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-102
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( GE   Area 1A and 1B and 1C and 2) and ( SPAN 102   or equivalent) with a C- or better)]"
+  SPAN-345:
+    code: SPAN 345
+    title: Bilingualism in the Spanish-Speaking World
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course will first explore the nature of bilingualism, focusing on its neurolinguistic, psycholinguistic, and linguistic aspects. Students will examine the most important concepts and research questions in these areas. In addition, the class will focus on bilingualism in the United States and the Spanish-speaking world, including the examination of bilingual education programs (e.g., immersion programs) and important political matters connected to them. Taught in Spanish.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-201
+            minimumGrade: C-
+          - courseId: SPAN-202
+            minimumGrade: C-
+          - courseId: SPAN-212
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 201   or SPAN 202   or SPAN 212   with a C- or better)"
+  SPAN-350:
+    code: SPAN 350
+    title: "World Culture and Language: Spanish"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course focuses on language use related to the cultures of the Spanish-speaking world. It addresses culture-specific practices and concepts that cannot be translated into English. Students will also learn the use of Spanish to communicate at basic levels in culturally appropriate ways. Taught in English and Spanish. Spanish Language functions are taught in cultural context.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SPAN-362:
+    code: SPAN 362
+    title: Latin American Literature in Translation
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "Critical study of representative authors from colonial times to the twentieth century. Introduces students to key works by writers such as: Sor Juana Ines de la Cruz, Ruben Dario, Gabriela Mistral, Jorge Luis Borges, Juan Rulfo, etc. By exposing students to these literary texts, the course will focus on further developing academic writing and its genres (narrative, persuasive, expository). Taught in English."
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  SPAN-365:
+    code: SPAN 365
+    title: The Chicano Narrative
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Focuses on the reading and analysis of selected Chicano writers whose literary works have left a distinctive mark on Chicano Literature. Emphasizes the understanding of Chicano cosmology (society, culture, behavior and values) through the literary texts. Taught in English.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SPAN-370:
+    code: SPAN 370
+    title: The Chicanx Community
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course will critically examine cultural, social, economic, and political aspects relevant to the local Chicanx community in a historical and contemporary context, and will incorporate literary and community studies. Taught in English. (Crosslisted/Equivalent with ES 370   )
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SPAN-374:
+    code: SPAN 374
+    title: Spanish Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Students complete an internship experience within the Spanish major.
+    offered:
+      availability: periodic
+  SPAN-395:
+    code: SPAN 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic relative to the Spanish language or Hispanic cultures. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  SPAN-397:
+    code: SPAN 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Individual study of a particular aspect of the culture, language, or civilization of the Spanish-speaking world. A written proposal for the study/research must be approved in advance by the sponsoring faculty member and the program chair. Number of credits depends on the nature of the student’s academic goals and the consent of the faculty advisor.
+    offered:
+      availability: periodic
+  SPAN-420:
+    code: SPAN 420
+    title: Language & Cultural Internalization in the Hispanic Community
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Through the completion of a community project or study abroad experience, students will demonstrate that they have actively immersed themselves in authentic Hispanic cultural and linguistic environments and have internalized the language and cultural experience, from which they have developed personal understanding and new perspectives of Hispanic communities.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-301
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 301 or equivalent with a C- or better)"
+  SPAN-425:
+    code: SPAN 425
+    title: La Literatura Mexicana
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Exposes students to Mexican literature from its indigenous and Hispanic origins to its more contemporary expressions. Examines and discusses representative authors from all literary periods, including such literary icons as Sor Juana Ines de la Cruz, Manuel Gutierrez Najera, Mariano Azuela, Ignacio Altamirano, Rosario Castellanos, Juan Rulfo, Octavio Paz, Carlos Fuentes, Jose Agustin, and Laura Esquivel. Taught in Spanish.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-304
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 304   with a C- or better)"
+  SPAN-426:
+    code: SPAN 426
+    title: Narrativa Hispanoamericana
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course studies Spanish American writers of the 20th century by emphasizing short stories and novels from the last 50 years. Uses literary texts to gain an understanding of Latino cultures, societies, and values. Taught in Spanish.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-304
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 304   with a C- or better)"
+  SPAN-427:
+    code: SPAN 427
+    title: Latin American Women Writers
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course focuses on reading and analyzing works from Latin American women writers. Examines fiction by and about women from varied sociocultural backgrounds to discover the diversity and the commonality of female experience in different geographical regions. Students examine the narrative strategies employed by these writers in interpreting social, political, cultural, and religious forces that create gender, class, and ethnic barriers in Latin American society. Taught in Spanish.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-304
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 304   with a C- or better)"
+  SPAN-428:
+    code: SPAN 428
+    title: La Literatura Afrolatina
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course critically examines contemporary works of Afro-Latin American literature and U.S. Afro-Latinx literature in a variety of genres including poetry, film, and narrative. Students in the course will examine the literary, historical, and cultural contexts of the works studied, along with intersecting themes such as feminism, queer theory, globalization, speculative fiction, magical realism, detective fiction, mental health, and Latin American folk beliefs. Taught in Spanish.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: SPAN-304
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: SPAN 304   with a C- or better)"
+  SPAN-495:
+    code: SPAN 495
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    offered:
+      availability: periodic
+  SPAN-497:
+    code: SPAN 497
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Individual study of a particular aspect of the culture, language, or civilization of the Spanish-speaking world. A written proposal for the study/research must be approved in advance by the sponsoring faculty member and the program chair. Number of credits depends on the nature of the student’s academic goals and the consent of the faculty advisor.
+    offered:
+      availability: periodic
+  SPAN-595:
+    code: SPAN 595
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic relative to the Spanish language or Hispanic cultures. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  SPAN-596:
+    code: SPAN 596
+    title: Field Studies
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Individualizes student placement for in-depth field study.
+    offered:
+      availability: periodic
+  SPAN-597:
+    code: SPAN 597
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Individual study of a particular aspect of the culture, language, or civilization of the Spanish-speaking world. A written proposal for the study/research must be approved in advance by the sponsoring faculty member and the program chair. Number of credits depends on the nature of the student’s academic goals and the consent of the faculty advisor.
+    offered:
+      availability: periodic

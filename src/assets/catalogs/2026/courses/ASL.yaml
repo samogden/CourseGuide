@@ -1,0 +1,113 @@
+schemaVersion: 1
+prefix: ASL
+courses:
+  ASL-101:
+    code: ASL 101
+    title: Beg American Sign Lang I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will learn basic signs and hand parameters in American Sign Language (ASL) and practice visual comprehension, signing, and basic expressive and receptive skills with support in the laboratory setting. This class teaches the cultural aspects of ASL and the American Deaf community that requires students¿ active participation. In addition, instructor-coordinated multimedia and online activities are mandatory components.
+    offered:
+      terms:
+        - fall
+        - spring
+  ASL-102:
+    code: ASL 102
+    title: Beg American Sign Lang II
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will continue to learn basic conversation and hand parameters in American Sign Language and practice visual comprehension, signing, classifiers, and basic use of ASL Gloss with support in the laboratory setting. This class continues the study of cultural aspects of ASL and the American Deaf community that requires students¿ active participation. In addition, instructor-coordinated multimedia and online activities are mandatory components.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: ASL-101
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: ASL 101   with a C- or better)"
+  ASL-201:
+    code: ASL 201
+    title: Intermediate ASL I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will continue to learn conversational signs and hand parameters at the intermediate level in ASL and practice visual comprehension, signing and expanded classifier use with support in the laboratory setting. The class continues the study of the cultural aspects of ASL and the American Deaf community that requires students’ active participation. In addition, instructor-coordinated multimedia and online activities are mandatory components.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: ASL-102
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: ASL 102   with C- or better)"
+  ASL-297:
+    code: ASL 297
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic
+  ASL-301:
+    code: ASL 301
+    title: Adv American Sign I
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Taught in American Sign Language (ASL) for extensive study in developing visual comprehension, signing, writing with gloss system, and using expressive and receptive skills. Enhances understanding of deaf communities and deaf culture.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: ASL-202
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: ASL 202   with a C- or better)"
+  ASL-302:
+    code: ASL 302
+    title: Adv American Sign II
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: A continuation of ASL 301   .
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: ASL-301
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: ASL 301   with a C- or better)"
+  ASL-395:
+    code: ASL 395
+    title: "Special Topics: Deaf Culture"
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in American Sign Language. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  ASL-397:
+    code: ASL 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic

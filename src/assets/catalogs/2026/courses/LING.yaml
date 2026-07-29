@@ -1,0 +1,35 @@
+schemaVersion: 1
+prefix: LING
+courses:
+  LING-392:
+    code: LING 392
+    title: Nature of Language & Language Acquisition
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Nature of Language & Language Acquisition introduces the scientific study of language, which includes theoretical concepts (e.g. structural linguistics, sociolinguistics, language development in first and second language acquisition) and application of linguistics in reading and writing development. Students develop a knowledge base in linguistics, phonemic awareness, and syntax, and apply it in real-world educational settings.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  LING-393:
+    code: LING 393
+    title: Language, Power, and Literacy in Education
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course explores the dynamics of language, power, and literacy in a multilingual and multicultural society. Building on a range of home literacy practices, this course investigates approaches to bridging home language for the development of oral language, reading, and writing across academic genres in the elementary setting. Students will employ the tools gained in LING 392   to assess the development of reading and writing, as well as identify text complexity and the knowledge of reader variables to support developing literacy.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: LING-392
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: LING 392   with a C- or better)"

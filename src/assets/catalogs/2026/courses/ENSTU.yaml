@@ -1,0 +1,416 @@
+schemaVersion: 1
+prefix: ENSTU
+courses:
+  ENSTU-111:
+    code: ENSTU 111
+    title: Introduction to Environmental Communication
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course provides students with foundations in effective oral communication and will aid in student’s understanding and development in stating, organizing and researching ideas, and presenting them to an audience. The seminar style format will allow students to speak openly and directly to both the instructor and each other during every class session throughout the semester. Through this process, students will strengthen the faculties of active and critical listening abilities and problem solve about topics in environmental and marine science, as well as deepen their understanding of their goals as they develop their intended pathway while at CSUMB.
+    offered:
+      terms:
+        - fall
+        - spring
+  ENSTU-120:
+    code: ENSTU 120
+    title: Writing about the Environment
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This communication course is designed to develop and enhance critical reading, writing, and thinking. Student abilities related to written communication are at the heart of this course as we critically read and explore multiple perspectives on environmental topics. Students will write primarily expository and argumentative texts related to environmental topics that respond to a variety of rhetorical situations and contexts and incorporate college-level research.
+    offered:
+      terms:
+        - fall
+        - spring
+  ENSTU-130:
+    code: ENSTU 130
+    title: Science, Media, and Society
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This communication course examines the mediated intersection between science and society. It offers students the tools to comprehend and analyze science messages found in a variety of communication contexts, including science news messages found in a variety of print, broadcast, and online communication channels from a variety of sources. By examining how science is portrayed in public communication contexts regarding issues such as climate change, medical research, agricultural science, and engineering and technology, we will learn how to interpret and critically assess the science messages that surround us. For each topic, we will examine a variety of messages and evaluate the credibility of claims and sources, inductive and deductive reasoning, and identify fallacies. For each science message, we will reflect on the role of values, ideologies, and ethics involved in shaping our understanding of science and our world.
+    offered:
+      terms:
+        - fall
+        - spring
+  ENSTU-195:
+    code: ENSTU 195
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Environmental Studies. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  ENSTU-280:
+    code: ENSTU 280
+    title: Environmental Economics and Policy
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course covers the principles of government and economics, and applies these to policies, economics, and management of natural resources. Course materials emphasize fundamentals as well as current events in environmental economics and policy. The course covers principles in traditional micro and macro economics as well as ecological economics. The course informs students about the structure, process and dynamics of governmental systems, so they can be effective members of the active citizenry. Economic principles are applied at local, national, and international scales, to cover a broad suite of uses for ecological resources, and explore how decisions about these resources can lead to conservation or to over-exploitation. Economic and policy principles are applied to demonstrate how economic decisions can be managed within the existing regulatory framework, to implement socially preferred levels of resource use. (Recommend completion of GE   Area 2 and 1A and 1B prior to enrolling)
+    offered:
+      terms:
+        - fall
+        - spring
+  ENSTU-295:
+    code: ENSTU 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Environmental Studies. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  ENSTU-300:
+    code: ENSTU 300
+    title: Critical Thinking & Communication in Environmental Studies
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students develop written and oral communication and critical thinking skills in the context of writing a case study on a complex environmental issue. The case study integrates science and policy, and includes critical review and synthesis of relevant publications and literature, as well as the perspectives of diverse stakeholders, and stakeholder interviews.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: ENVS-240
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq or Coreq: ( GE   Area 1A and 1B and 1C with a C- or better) and ( BIO 211   or ENVS 240   with a C- or better)]"
+  ENSTU-305:
+    code: ENSTU 305
+    title: "Air Pollution: Science, Policy, and Society"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examines the scientific, policy, and social dimensions of air pollution. The course is grounded in the science of air pollution, including the fundamentals of air pollution chemistry, sources of indoor and outdoor air pollution, intersection with global climate change, and health implications. The course examines air pollution policy at local, state, national, and international scales with an emphasis on effective policy solutions. The course examines the social effects of air pollution, including environmental justice, as well as community-based, social scientific, arts, and humanities approaches to understanding air pollution in context.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and Area 2 with a C- or better)"
+  ENSTU-309:
+    code: ENSTU 309
+    title: Climate Change Science and Solutions
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examines the scientific and political dimensions of global climate change. Course is grounded in the science of climate change including the role of uncertainty, evidence and peer review relative to other ways of knowing about climate change. Focuses on effects of climate change on human health and food supply. Examines local, national and global implementation of policies to reduce atmospheric greenhouse gases and solutions that increase human health and well-being.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  ENSTU-349S:
+    code: ENSTU 349S
+    title: Environmental Interpretation and Outreach
+    teachingStatus: active
+    credits:
+      minimum: 5
+      maximum: 5
+    description: Focuses on techniques for communicating environmental messages to diverse audiences based primarily on the field of environmental interpretation. Students develop environmental messaging strategies and/or interpretive products for local organizations.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 2 with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  ENSTU-350:
+    code: ENSTU 350
+    title: Research Methods for Environmental Studies
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Overview of qualitative and quantitative research methods that environmental professionals use in understanding complex problems, drafting research proposals, and analyzing and presenting rigorous, reliable information. Students will engage in comprehensive explorations of social aspects of environmental topics and will understand the central role that information and research play in enacting appropriate change in natural and built environments with diverse populations.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: ENVS-201
+            minimumGrade: C-
+          - courseId: ENVS-240
+            minimumGrade: C-
+          - anyOf:
+              - courseId: STAT-100
+                minimumGrade: C-
+              - courseId: STAT-250
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ENVS 201   and ENVS 240   and ( STAT 100   or STAT 250   ) with a C- or better)]"
+  ENSTU-365:
+    code: ENSTU 365
+    title: Critical Pedagogy for Environmental Education
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores strategies for supporting equitable educational opportunities and access to natural environments for all. Lectures address diverse approaches (formal, informal, place-based, and participatory), settings (schools, parks, and museum/aquaria), and enabling policies and frameworks to support environmental education among diverse students and community members. A lab practicum supports experiential application of these concepts with community partners.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and ( GE   Area 5B)]"
+  ENSTU-369S:
+    code: ENSTU 369S
+    title: Civic Ecology SL
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This service-learning course focuses on local examples of how the processes and practices of civic ecology can heal damaged or threatened places while changing both individuals and the communities where they live. Students will work to understand the critical roles of nature and service, as points of intersect between the social and ecological sciences, and as they chart their course as responsible citizen-stewards.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: (Junior or Senior Standing) and ( GE   Area 5A and 5B)]"
+    minimumStanding: junior
+  ENSTU-375:
+    code: ENSTU 375
+    title: Sustainability Systems
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines applications of systems thinking to address complex environmental issues. Explores what a system is and connections that exist between and across various systems.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and ( GE   Area 5A and 5B and 5C)]"
+  ENSTU-376:
+    code: ENSTU 376
+    title: "Infrastructure Systems: Past, Present and Future"
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Course provides a basic overview of the history and present state of each of our utilities and of our building, transportation and agricultural infrastructure. Practical and ideal future scenarios as well as the integrative relationships between and among different utility systems are examined. Students will learn how our current infrastructure came about and what it would take to make improvements to it in a tractable manner.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and ( GE   Area 5A and 5B and 5C with a C- or better)]"
+  ENSTU-384S:
+    code: ENSTU 384S
+    title: Social and Ecological Justice Service Learning
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Uses an integrated social and ecological justice framework for developing an understanding of self and social awareness; service and social responsibility; community and social justice; multicultural community building; and civic engagement; deepens and critically applies learning through placements and activities with local community organizations.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  ENSTU-387:
+    code: ENSTU 387
+    title: Water Resource Assess/Law/Poli
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Evaluates development of water use/management throughout history. Critiques how geography, economics, culture, and politics guide people’s decision-making and use and management of water. Analyzes and compares U.S. and California constitutions based on historic, geographic, political, economic, and cultural context and influences relating to water regulation. Students participate in historically informed political project applying political participation in the local community.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  ENSTU-394:
+    code: ENSTU 394
+    title: Environmental Studies Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Students work with practicing professionals in the community in a volunteer or paid internship that requires critical thinking and specialized environmental knowledge and skills. Academic credit is awarded for documented learning that takes place during the internship and that meets individualized and core internship outcomes.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Instructor Consent Required)"
+  ENSTU-395:
+    code: ENSTU 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Environmental Studies. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Junior or Senior Standing)
+    minimumStanding: junior
+  ENSTU-397:
+    code: ENSTU 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Student and faculty member select independent project.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Instructor consent required)
+  ENSTU-402:
+    code: ENSTU 402
+    title: Honors Capstone Seminar
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Assists students in completion of faculty-guided Honors Capstone research project. Requires advisor-approved research proposal.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: (GWAR) and (Instructor Consent Required)]"
+  ENSTU-410:
+    code: ENSTU 410
+    title: Capstone Integration Seminar
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Assists students enrolled in a group capstone project course in preparing their final written report, poster, and/or oral presentation for their senior capstone process. Students will also complete their ENSTU e-portfolio. Students must co-enroll or have already taken an approved capstone project course.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: ENSTU-350
+            minimumGrade: C-
+          - courseId: ENSTU-471
+            minimumGrade: C-
+          - courseId: ENSTU-472
+            minimumGrade: C-
+          - courseId: ENSTU-494
+            minimumGrade: C-
+          - courseId: ENSTU-497
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: (GWAR and ENSTU 350   with a C- or better) or (Instructor Consent)) and (Coreq or Prereq: ENSTU 471   or ENSTU 472   or ENSTU 494   or ENSTU 497   )]"
+  ENSTU-412:
+    code: ENSTU 412
+    title: Enviro Thought & Practice
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In-depth exploration of environmental thought and culture including human values and relationships to the natural world from historical, cultural, and contemporary perspectives, with an emphasis on understanding and influencing environments at local and global scales. Students interpret themes from recent academic research and professional practice, including environmental history, sociology, planning studies, and environmental education. Students conduct an in-depth analysis of one approach.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GWAR with a C- or better)"
+  ENSTU-471:
+    code: ENSTU 471
+    title: Projects for Sustainable City Year
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Project-based class based on the needs of a regional city. Part of the Sustainable City Year Program. Projects will focus on regional sustainability issues and will vary from semester to semester.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: ENSTU-350
+            minimumGrade: C-
+          - courseId: ENSTU-375
+            minimumGrade: C-
+          - courseId: ENSTU-376
+            minimumGrade: C-
+          - courseId: ENSTU-410
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( ENSTU 350   with a D- or better) and ( GWAR   with a C- or better) and (Prereq or Coreq: ENSTU 375   or ENSTU 376   ) and (Coreq: ENSTU 410   )]"
+  ENSTU-472:
+    code: ENSTU 472
+    title: Projects in Environmental Education
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Project-based class with a regional environmental education partner. Projects will place students in learning environments where students will focus on sustainability and environmental topics. Projects will vary from year to year.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: ENSTU-350
+            minimumGrade: C-
+          - courseId: ENSTU-410
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( ENSTU 350   with a D- or better) and ( GWAR   with a C- or better) and (Coreq: ENSTU 410   )]"
+  ENSTU-494:
+    code: ENSTU 494
+    title: Environmental Studies Capstone Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Students work in a volunteer or paid internship that requires advanced environmental studies knowledge and skills, Academic credit is awarded for documented learning that takes place during the internship and that meets individualized and core internship outcomes.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Senior Standing) (Instructor Consent Required)"
+  ENSTU-495:
+    code: ENSTU 495
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Environmental Science. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Junior or Senior Standing)
+    minimumStanding: junior
+  ENSTU-497:
+    code: ENSTU 497
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Student and faculty member select topic of study and independent project.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Instructor consent required)

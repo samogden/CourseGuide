@@ -1,0 +1,899 @@
+schemaVersion: 1
+prefix: ENVS
+courses:
+  ENVS-185:
+    code: ENVS 185
+    title: Field Adventures in Applied Environmental Science
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This one-unit course is designed for first-year environmental science and environmental studies students and focuses on introducing students to field activities and faculty in the Department of Applied Environmental Science. Faculty will lead Saturday field excursions where students will explore terrestrial, freshwater, and coastal ecosystems of the Monterey Bay region.
+    offered:
+      availability: periodic
+  ENVS-195:
+    code: ENVS 195
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Environmental Science Technology & Policy. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  ENVS-196:
+    code: ENVS 196
+    title: Environmental Science Intro Research Practicum
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: This course engages students in locally-relevant research and introduces them to the research process. Through hands-on lab and/or field work, students develop proficiency in sampling, surveying, and analysis techniques, and gain understanding of the foundations and conventions of environmental science research. Students will also learn the importance of and explore opportunities for academic and career development in the sciences. This course may require field trips on weekends and dates when classes are not normally in session.
+    offered:
+      availability: periodic
+  ENVS-197:
+    code: ENVS 197
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Independent study for first-year students. Students must obtain the signature/approval of their independent study supervisor before enrolling in ENVS 197.
+    offered:
+      terms:
+        - fall
+        - spring
+  ENVS-201:
+    code: ENVS 201
+    title: Intro to Environmental Science
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This interdisciplinary introduction to environmental science course introduces science as a method of studying and understanding the natural world through offering an overview of topics needed to understand key environmental challenges of today’s world. Promotes critical thinking, problem solving, scientific and environmental literacy. For non-science majors and Environmental Studies majors.
+    offered:
+      terms:
+        - fall
+        - spring
+  ENVS-240:
+    code: ENVS 240
+    title: Environmental Biology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course focuses on the conservation of biodiversity, evolutionary processes that affect conservation and restoration, the ecological concepts that underlie many environmental issues. These concepts will be grounded in issues in sustainability with a focus on climate change. In addition, the systems nature of environmental issues will be woven through the course. Lab course fee may be charged.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 2)"
+  ENVS-282:
+    code: ENVS 282
+    title: Mtry Bay:Case Sty Env Sci &Pol
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduction to the major physical, chemical, biological, and geological features and processes of global oceanography, with emphasis on the Monterey Bay area. Discusses the human impacts on the region and the state and federal policies in-place that have been designed to protect the Monterey Bay area through the establishment of the Monterey Bay National Marine Sanctuary. For non-science majors.
+    offered:
+      terms:
+        - fall
+        - spring
+  ENVS-282L:
+    code: ENVS 282L
+    title: "Monterey Bay: Case Study in Environmental Science and Policy Lab"
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: A field-trip based course where students dig deeper into the science and policy of the Monterey Bay region by using hands-on activities to illustrate some of the concepts covered in the companion lecture course (ENVS 282). Students will gain experience in the field conducting sampling studies in local habitats and learn more about local natural resources, environmental concerns and human impacts on Monterey Bay ecosystems.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: ENVS-282
+    prerequisiteNotes:
+      - "(Prereq or Coreq: ENVS 282   )"
+  ENVS-295:
+    code: ENVS 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Environmental Science Technology & Policy. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  ENVS-297:
+    code: ENVS 297
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Student and faculty member select topic for research project.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Instructor Consent Required)
+  ENVS-300:
+    code: ENVS 300
+    title: Critical Thinking & Communication in Environmental Science
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students develop written and oral communication and critical thinking skills in the context of writing a case study on a complex environmental issue. The case study integrates science and policy, and includes critical review and synthesis of relevant publications and literature, as well as the perspectives of diverse stakeholders, and stakeholder interviews.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: ENVS-240
+                minimumGrade: C-
+              - courseId: BIO-211
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( GE   Area 1A and 1B and 1C) and ( ENVS 240   or BIO 211   ) with a C- or better)]"
+  ENVS-302:
+    code: ENVS 302
+    title: Career Development for Applied Environmental Science
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This course introduces juniors and seniors to the fundamentals of career planning and job search strategies. Emphasis is placed on developing resumes, cover letters, interviewing, networking strategies and career exploration. At the end of this course, students will have a better understanding of themselves and strategies that will be useful to navigate the job search process after graduation.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: GE Area 1A and 1B and 1C and 2 with a C- or better)"
+  ENVS-303:
+    code: ENVS 303
+    title: Calif Transect Orientation
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Mandatory orientation for ENVS 303L   . This classroom component of California Transect prepares students for the Summer field course ( ENVS 303L   ) by introducing topics in California’s scientific, cultural, and political history and current issues that will be examined in detail during the Summer term only field course ( ENVS 303L   ). May require one weekend field trip.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: ENVS-240
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: GEOL-260
+            minimumGrade: C-
+          - courseId: ENVS-303L
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( ENVS 240   or BIO 211   or GEOL 260   with a C- or better) and (Coreq: ENVS 303L   )]"
+  ENVS-303L:
+    code: ENVS 303L
+    title: California Transect Lab
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Two-week Summer field course. Students explore California’s unique ecosystems and landscapes using a case-studies framework emphasizing the interaction between natural processes and human impacts. Involves camping and hiking. Course fee charged for food, transportation, and camping.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: ENVS 303   )"
+  ENVS-307:
+    code: ENVS 307
+    title: Energy Solutions and Climate Change
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: The course helps students create their own knowledge and understanding of the many different factors that affect our current decision-making on generation and use of energy resources with a focus toward reducing energy and carbon intensity. After a basic grounding in energy and sustainability science, students will be exposed to a series of guest lecturers to help them develop a more in-depth understanding of the non-technology forces at play such as culture, media, economics, and politics. Students complete an original research paper that focuses on a specific local/regional industry that includes specific science-based recommendations on reducing carbon intensity. A key take away from this course is that many of the technologies and techniques to reduce or even eliminate carbon intensity already exist and can be put to use.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  ENVS-332:
+    code: ENVS 332
+    title: Intro to GIS/GPS
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Theory and application of spatial data acquisition, analysis, and display using an integrated, hands-on, project-based approach. Covers geographic information systems (GIS) and the Global Positioning System (GPS).
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: STAT-100
+            minimumGrade: C-
+          - courseId: STAT-250
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: STAT 100   or STAT 250   with a C- or better)"
+  ENVS-342:
+    code: ENVS 342
+    title: Plant Communities of CA
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Surveys terrestrial ecosystems across California emphasizing the role of climate, soils, water, and human impacts on plant distribution. Includes learning dominant and special status plant species to prepare students for roles in conservation and resource management. Field trips focus on ecosystems of the Central Coast region and may include one or more weekend field trips. Cross-listed with BIO 342   .
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: ENVS-240
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: BIO 211   or ENVS 240   with a C- or better)"
+  ENVS-350:
+    code: ENVS 350
+    title: Quantitative Field Methods
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Project-oriented course covers techniques in statistics, experimental design, and field methodology to characterize the ecological patterns in local ecosystems. Field-intensive course.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: BIO-211L
+            minimumGrade: C-
+          - courseId: ENVS-240
+            minimumGrade: C-
+          - courseId: STAT-250
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( BIO 211   and BIO 211L   or ENVS 240   ) and ( STAT 250   ) with a C- or better) and (Prereq or Coreq: GWAR   )]"
+  ENVS-355:
+    code: ENVS 355
+    title: Environmental Monitoring
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Project-oriented course covers techniques in experimental design, data analysis, and field and laboratory methods of soil and water analysis in the context of local soil and water chemistry problems. May include one or more weekend field trips.
+    offered:
+      availability: periodic
+    prerequisites:
+      - allOf:
+          - courseId: STAT-250
+            minimumGrade: C-
+          - anyOf:
+              - courseId: CHEM-111
+                minimumGrade: C-
+              - courseId: GEOL-260
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: STAT 250   and ( CHEM 111   or GEOL 260   ) with a C- or better]"
+  ENVS-360:
+    code: ENVS 360
+    title: Natural History of California Wildlife
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students learn about the ecology, evolution, and protection status of common or otherwise noteworthy mammals, birds, reptiles, amphibians, and fish of central California. Lab/field components provide students with experience conducting wildlife surveys/research and aid development of field observation and identification skills used in wildlife and environmental consulting professions.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: BIO-211L
+            minimumGrade: C-
+          - courseId: ENVS-240
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: ( BIO 211   and BIO 211L   ) or ENVS 240   with a C- or better)"
+  ENVS-363:
+    code: ENVS 363
+    title: Field Natural History for Educators
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students observe, identify and investigate the natural history in schoolyards, urban greenspaces and the diverse protected open spaces in California’s central coast. Students learn storytelling and digital tools to engage the public in exploring connections to nature such as becoming citizen scientists, restoring and conserving nature in urban greenspaces and regional parks, and educating the next generation with a sense of wonder and curiosity about the natural world. Course will include field trips including a possible weekend field trip.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: ENVS-240
+              - courseId: BIO-211
+    prerequisiteNotes:
+      - "[Prereq: ( ENVS 240   or BIO 211   ) or (Instructor Consent Required)]"
+  ENVS-382S:
+    code: ENVS 382S
+    title: Climate Justice and Communication
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Service-based course which explores issues of climate justice. Students learn communication tools to drive systemic change needed to mitigate climate change and its inequitable impacts.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Areas A1 and A2 and A3 with a C- or better) and ( GE   Area B1 or B2) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  ENVS-392:
+    code: ENVS 392
+    title: Environmental Science Seminar Series
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Upper-division seminar course based on lectures from science professionals from both academic and professional sectors. Includes reading and critical analysis of peer-reviewed literature, seminar and journal club discussion, and attendance in seminar series.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: BIO-230
+                minimumGrade: C-
+              - courseId: ENVS-240
+                minimumGrade: C-
+              - courseId: BIO-211
+                minimumGrade: C-
+              - courseId: GEOL-260
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( BIO 230   or ENVS 240   or BIO 211   or GEOL 260   ) with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  ENVS-394:
+    code: ENVS 394
+    title: Environmental Science Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Students work with practicing professionals in the community in a volunteer or paid internship that requires critical thinking and specialized science, policy, or technical skills. Academic credit is awarded for documented learning that takes place during the internship and that meets individualized and core internship outcomes.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Instructor Consent Required)
+  ENVS-395:
+    code: ENVS 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Earth Systems Science & Policy. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Junior or Senior Standing)
+    minimumStanding: junior
+  ENVS-397:
+    code: ENVS 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Student and faculty member select a specialized research project.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Instructors Consent Required)
+  ENVS-402:
+    code: ENVS 402
+    title: Honors Capstone Seminar
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Assists students in completion of faculty-guided Honors Capstone research project. Requires advisor-approved research proposal.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GWAR AND Senior Standing) (Instructor Consent Required)"
+  ENVS-410:
+    code: ENVS 410
+    title: Capstone Integration Seminar
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Assists students enrolled in a capstone project course in preparing their final written report, poster, and/or oral presentation for their Senior Capstone Project. Students must enroll concurrently in an approved ESTP Capstone Project Course.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: ENVS-446
+            minimumGrade: C-
+          - courseId: ENVS-475
+            minimumGrade: C-
+          - courseId: BIO-448
+            minimumGrade: C-
+          - courseId: GEOL-460
+            minimumGrade: C-
+          - courseId: ENVS-436
+            minimumGrade: C-
+          - courseId: ENVS-464
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: GWAR   with a C- or better) and (Coreq: ENVS 446   or ENVS 475   or BIO 448   or GEOL 460   or ENVS 436   or ENVS 464   )]"
+  ENVS-436:
+    code: ENVS 436
+    title: Remote Sensing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Applications of geospatial information technology and geodata manipulation and analysis in the management of natural resources, including remote sensing, aerial photography, image processing, georeferencing, georecertification, and quantitative information extraction from multispectral and other image data.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: ENVS-332
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: ENVS 332   with a C- or better)"
+  ENVS-440:
+    code: ENVS 440
+    title: Environmental Modeling
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Process of designing, building, and using computer models for use within applied environmental science. Covers key examples within ecological and hydrological modeling. Introduces students to different modeling paradigms, including: systems dynamics, statistical habitat selection, and simulated vs analytical solutions. Software usage draws from Stella, Excel, and the R programming language. Individual student projects."
+    offered:
+      availability: periodic
+    prerequisites:
+      - allOf:
+          - courseId: MATH-150
+            minimumGrade: C-
+          - courseId: STAT-250
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BIO-340
+                minimumGrade: C-
+              - courseId: GEOL-360
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: MATH 150   and STAT 250 and ( BIO 340   or GEOL 360   ) with a C- or better)]"
+  ENVS-446:
+    code: ENVS 446
+    title: Landscape Ecology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Theory and methods of landscape-level research, analysis, and management. Methods for detecting and characterizing landscape patterns; causes of landscape patterns; mechanisms by which landscape patterns change through time; implications of landscape patterns for populations, communities, and ecosystems; strategies for conservation and management issues at a landscape scale. Students read, discuss, and analyze scientific literature in landscape ecology and apply quantitative tools.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-340
+            minimumGrade: C-
+          - courseId: STAT-250
+            minimumGrade: C-
+          - courseId: ENVS-350
+            minimumGrade: C-
+          - courseId: MSCI-350
+            minimumGrade: C-
+          - courseId: ENVS-332
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BIO 340   and STAT 250   and GWAR   with a C- or better) and (Prereq or Coreq: ENVS 350   or MSCI 350   or ENVS 332   with a C- or better)]"
+  ENVS-464:
+    code: ENVS 464
+    title: Wildlife Management and Conservation
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students learn concepts from ecology and human dimensions that are applied to the management and conservation of terrestrial wildlife resources. Lab/field components provide students with experiences combining field and computational tools to address current and emerging threats to local wildlife populations and their habitats.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: STAT-250
+            minimumGrade: C-
+          - courseId: ENVS-350
+            minimumGrade: C-
+          - courseId: MSCI-350
+            minimumGrade: C-
+          - courseId: ENVS-332
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BIO-340
+                minimumGrade: C-
+              - courseId: ENVS-360
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( BIO 340   or ENVS 360   ) and STAT 250   and GWAR   with a C- or better) and (Prereq or Coreq: ENVS 350   or MSCI 350   or ENVS 332   with a C- or better)]"
+  ENVS-475:
+    code: ENVS 475
+    title: Projects in Natural Resource Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Applied group capstone course focused on collecting and analyzing data to address natural resource management issues on local public lands. Course will include discussion of relevant regulations and management issues. Course may focus on ephemeral wetland, grassland, chaparral or dune ecosystems depending on the needs of local resource managers. Field-intensive course.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: BIO-340
+            minimumGrade: C-
+          - courseId: ENVS-332
+            minimumGrade: C-
+          - anyOf:
+              - courseId: ENVS-350
+                minimumGrade: C-
+              - courseId: ENVS-355
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BIO 340   and ENVS 332   and ( ENVS 350   or ENVS 355   ) with a C- or better) and (GWAR)]"
+  ENVS-483:
+    code: ENVS 483
+    title: Environmental Impact Assessment
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: The theory and practice of environmental impact assessment and analysis. The process of preparing environmental documents (such as EAs, EISs, and EIRs) as mandated by state and federal statutes and regulations under NEPA and CEQA. Application of environmental assessment in urban, regional, and land use planning contexts. Processes of public participation and comment. Litigation and environmental mediation.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: ENVS-240
+                minimumGrade: C-
+              - courseId: BIO-211
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: ( ENVS 240   or BIO 211   ) and GWAR   with a C- or better)"
+  ENVS-486:
+    code: ENVS 486
+    title: Climate Change Applications
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Future environmental scientists will have to consider the effects of climate change on all aspects of their discipline. This course will help students prepare for their careers by familiarizing them with the challenges climate change imposes on the human and natural world, and the frameworks being developed to understand and deal with them. Topics include changes in hydrology (increased floods and droughts), fire severity and post-fire hazards, plant and animal ecology, and water security and quality.
+    offered:
+      terms:
+        - spring
+  ENVS-495:
+    code: ENVS 495
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Environmental Science Technology & Policy. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "Prereq: (Junior or Senior Standing)"
+    minimumStanding: junior
+  ENVS-496L:
+    code: ENVS 496L
+    title: Applied Field Skills
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: This course is designed for junior and senior environmental science and environmental studies students and focuses on introducing students to specific technical skills in field or lab environments.
+    offered:
+      availability: periodic
+  ENVS-497:
+    code: ENVS 497
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Student and faculty member select independent research project.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Senior Standing) (Instructor Consent Required)"
+  ENVS-500:
+    code: ENVS 500
+    title: Environmental Policy and Management
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This graduate seminar focuses on the complex relationship between science and environmental policy and management. It takes a case-study approach to understanding the process of developing and approving environmental policy, and in identifying and comparing major stakeholders, their interests, and their roles in the development and approval of policies that address current environmental problems.
+    offered:
+      terms:
+        - fall
+  ENVS-502:
+    code: ENVS 502
+    title: Scientific Writing
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This graduate seminar assists students in developing scientific writing skills including thesis, research, and proposal writing.
+    offered:
+      terms:
+        - spring
+  ENVS-505:
+    code: ENVS 505
+    title: Current Topics in Environmental Science
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 3
+    description: Students read and dissect contemporary papers from the primary scientific literature.
+    offered:
+      availability: periodic
+  ENVS-532:
+    code: ENVS 532
+    title: Advanced GIS&Spatial Analysis
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Theory and application of advanced spatial data acquisition, analysis, and display using an integrated, hands-on, project-based approach. Use of geographic information systems (GIS) for spatial analysis, hypothesis testing, and decision making. Theory and practice of advanced GIS topics and methods such as raster analysis, dynamic segmentation, geocoding, spatial statistics, and geodatabase design.
+    offered:
+      terms:
+        - spring
+  ENVS-536:
+    code: ENVS 536
+    title: Remote Sensing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Applications of geospatial information technology and geodata manipulation and analysis in the management of natural resources, including remote sensing, aerial photography, image processing, georeferencing, georecertification, and quantitative information extraction from multispectral and other image data.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: ENVS-332
+    prerequisiteNotes:
+      - "[Prereq: ( ENVS 332   or equivalent) or (Instructor Consent Required)]"
+  ENVS-540:
+    code: ENVS 540
+    title: Environmental Modeling
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Teaches the process of designing, building, and using computer models for use within applied environmental science. Covers key examples within ecological and hydrological modeling e.g. population dynamics, and water flow. Introduces students to different modeling paradigms, including: systems dynamics, statistical habitat selection, and simulated vs analytical solutions. Software usage draws from Stella, Excel, and R programming language. Includes individual student projects."
+    offered:
+      terms:
+        - fall
+  ENVS-546:
+    code: ENVS 546
+    title: Landscape Ecology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Theory and methods of landscape-level research, analysis, and management. Methods for detecting and characterizing landscape patterns; causes of landscape patterns; mechanisms by which landscape patterns change through time; implications of landscape patterns for populations, communities, and ecosystems; strategies for conservation and management issues at a landscape scale. Students read, discuss, and analyze scientific literature in landscape ecology and apply quantitative tools.
+    offered:
+      terms:
+        - fall
+  ENVS-548:
+    code: ENVS 548
+    title: Freshwater Ecology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: In-depth exploration of freshwater and estuarine ecosystems, including aquatic organisms and their taxonomy; the ecology of freshwater ecosystems; and the influences of biogeochemistry, water quality, hydrology, and geomorphology on biota. The course focuses on applying ecological and chemical knowledge to assessing and managing freshwater ecosystems. Will include weekend or odd-hour field trips with concurrent field/laboratory section.
+    offered:
+      terms:
+        - fall
+  ENVS-550:
+    code: ENVS 550
+    title: Research Methods
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Covers the key elements of applied scientific research, including data management, analytical software, scientific method, designing research questions, experimental design, statistical analysis & inference under multiple paradigms, communication of scientific results, and selected advanced analytical techniques. Emphasizes effective linkage between science and policy.
+    offered:
+      terms:
+        - fall
+  ENVS-560:
+    code: ENVS 560
+    title: Watershed Systems
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Develops interdisciplinary skills to address complex environmental issues. Skill sets will be in the fields of hydrology, fluvial geomorphology, water quality, and ecology. Topics include environmental policy/agency framework, current environmental issues, and physical/ecological processes in natural and impacted watershed systems. May require weekend field trips.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: ENVS-550
+    prerequisiteNotes:
+      - "(Prereq: ENVS 550   )"
+  ENVS-564:
+    code: ENVS 564
+    title: Wildlife Management and Conservation
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students learn concepts from ecology and human dimensions that are applied to the management and conservation of terrestrial wildlife resources. Lab/field components provide students with experiences combining field and computational tools to address current and emerging threats to local wildlife populations and their habitats.
+    offered:
+      terms:
+        - spring
+  ENVS-575:
+    code: ENVS 575
+    title: Projects in Natural Resource Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Applied project-oriented course focused on collecting and analyzing data to address natural resource management issues on local public lands. Course will include discussion of relevant regulations and management issues. Course may focus on ephemeral wetland, grassland, chaparral or dune ecosystems depending on the needs of local resource managers. Field-intensive course.
+    offered:
+      availability: periodic
+  ENVS-580:
+    code: ENVS 580
+    title: Environmental and Resource Economics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Course explores concepts of negative externalities as drivers of environmental problems and conflict in common pool resources. Students examine fundamental microeconomic principles including benefit-cost analysis, marginal net benefits, rational choice theory, inter-temporal distribution of net benefits, and institutional analysis framework via a case study approach.
+    offered:
+      terms:
+        - spring
+  ENVS-583:
+    code: ENVS 583
+    title: Environmental Impact Assessment
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: The theory and practice of environmental impact assessment and analysis. The process of preparing environmental documents (such as EAs, EISs, and EIRs) as mandated by state and federal statutes and regulations under NEPA and CEQA. Application of environmental assessment in urban, regional, and land use planning contexts. Processes of public participation and comment. Litigation and environmental mediation.
+    offered:
+      terms:
+        - spring
+  ENVS-586:
+    code: ENVS 586
+    title: Climate Change Applications
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Future environmental scientists will have to consider the effects of climate change on all aspects of their discipline. This course will help students prepare for their careers by familiarizing them with the challenges climate change imposes on the human and natural world, and the frameworks being developed to understand and deal with them. Topics include changes in hydrology (increased floods and droughts), fire severity and post-fire hazards, plant and animal ecology, and water security and quality.
+    offered:
+      terms:
+        - spring
+  ENVS-594:
+    code: ENVS 594
+    title: Graduate Internship
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Supervisor-mentored, 400-hour professional internship leading toward completion of the MS degree. Requires approval of the faculty advisor and program academic coordinator.
+    offered:
+      terms:
+        - fall
+        - spring
+  ENVS-595:
+    code: ENVS 595
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 0
+      maximum: 6
+    description: Studies a particular topic in Environmental Science Technology & Policy. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  ENVS-595L:
+    code: ENVS 595L
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in Environmental Science Technology & Policy. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  ENVS-596:
+    code: ENVS 596
+    title: Applied Field Skills
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: This course is designed for graduate environmental science and environmental studies students and focuses on introducing students to specific technical skills in field or lab environments.
+    offered:
+      availability: periodic
+  ENVS-597:
+    code: ENVS 597
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Instructors Consent Required)
+  ENVS-599:
+    code: ENVS 599
+    title: Masters Thesis
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Faculty-mentored, independent research leading toward completion of the MS thesis. May be repeated for a maximum of six credits that count toward the degree. Requires approval of the thesis advisor.
+    offered:
+      terms:
+        - fall
+        - spring
+  ENVS-660:
+    code: ENVS 660
+    title: Professional Environmental Science
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Addresses current environmental issues using advanced research methods and sound science. Students work in teams to complete applied research projects with regional stakeholders addressing real-world problems. Considers issues from multiple perspectives, including legal, political, diverse communities, and natural sciences. Students present project results in both written and oral formats, utilizing innovative visualizations to communicate technical science to stakeholders and/or decision makers.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: ENVS-560
+    prerequisiteNotes:
+      - "(Prereq: ENVS 560   )"
+  ENVS-695:
+    code: ENVS 695
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 0
+      maximum: 6
+    description: Studies a particular topic in Environmental Science Technology & Policy. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic

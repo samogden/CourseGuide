@@ -1,0 +1,287 @@
+schemaVersion: 1
+prefix: MAE
+courses:
+  MAE-600:
+    code: MAE 600
+    title: Seminar in Educational Psychology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: During this required introductory seminar the cultural and political contexts of learning are critically examined, especially with regard to providing effective educational experiences for diverse populations. Utilizing the lens of various research traditions, participants work to contrast differing perspectives and ways of knowing. In addition to building library research skills, students develop an annotated bibliography for their action research.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Restricted to MAE Majors)
+  MAE-601:
+    code: MAE 601
+    title: Knowing and Learning STEAM
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Focuses on the foundations of STEAM Education and the intersections between STEAM and environmental conservation. Highlights the historical and contemporary practices of integrating STEAM content across the PK-12 curriculum to implicate equity and sustainability in the field of STEAM. Candidates practice designing and implementing 3-Dimensional Learning experiences utilizing inquiry and engineering design, as well as incorporating principles of cultural inclusivity into STEAM experiences.
+    offered:
+      availability: periodic
+  MAE-602:
+    code: MAE 602
+    title: Design Thinking Toward Student Agency
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Develops candidates’ ability to evaluate and enhance their STEAM learning environments through collaborative engagement in inquiry-based, real-world learning situations. Provides practice with the selection and application of technology within STEAM learning experiences. With an emphasis on the principles of Maker Education and the Agency by Design Framework, candidates implement the Design Thinking Process to develop a unique, STEAM-focused project to conduct in their local community.
+    offered:
+      availability: periodic
+  MAE-602A:
+    code: MAE 602A
+    title: Design Thinking Toward Student Agency Project
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Engages candidates with community partners to build real-world connections and to analyze effective frameworks for STEAM learning within a community of practice. Through field days, implementation and analysis of the STEAM project, and/or presentation of the STEAM project, candidates’ future role(s) as change agents, STEAM program administrators, curricular leaders, and/or STEAM advocates are explored and cultivated.
+    offered:
+      availability: periodic
+  MAE-603:
+    code: MAE 603
+    title: STEAM Program Leadership
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Supports candidates in analyzing research on current trends and issues related to STEAM Education for social change. Engages candidates in critical dialogue about what it means to design, develop, and lead STEAM initiatives at the classroom, school, district, state, and/or national levels. Candidates develop a research paper proposal, conference proposal, or a professional development session to disseminate their findings and to deepen their STEAM program leadership skills.
+    offered:
+      availability: periodic
+  MAE-604:
+    code: MAE 604
+    title: Grant Writing, Management, and Program Evaluation
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Engages candidates in systematic research and study designed to improve the quality of grant writing and program evaluation within educational settings. Emphasizes competence in the language of grants, proposal development, funding sources and processes, designing and writing creative proposals, creating budgets, developing effective evaluation tools, and understanding fiscal management functions and regulations. Candidates develop a grant proposal for a current or new project.
+    offered:
+      availability: periodic
+  MAE-611:
+    code: MAE 611
+    title: Effective Practices in Instructional Coaching
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 3
+    description: "This course explores fundamental models and principles of mentoring, coaching, and evaluating teachers-in-practice. It reviews research on professional learning and professional development of educators. Topics include: systems thinking, evidence-based teaching practices, adult learning theory, using data to improve instruction, self and peer evaluation, effective communication, and ethics in coaching."
+    offered:
+      terms:
+        - fall
+  MAE-621:
+    code: MAE 621
+    title: Qualitative and Quantitative Research Methods
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "Advanced course in interpreting and applying education research methods. Emphasizes comparison of alternative philosophies of research, ways of formulating questions and hypotheses, research plans, and analysis procedures. Students evaluate existing studies, and investigate a range of research approaches, including but not limited to: quantitative, qualitative, mixed methods, and action research."
+    offered:
+      terms:
+        - fall
+  MAE-622:
+    code: MAE 622
+    title: Qualitative Research
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Gives students a conceptual overview of traditional qualitative research using ethnographic methods, with emphasis on helping students understand and the points of view of individuals living and working in multicultural settings. Moreover, as the basis for facilitating beneficial change in their classrooms, schools, or communities, participants use ethnographic and/or historical research skills to design their action thesis projects and complete their proposals.
+    offered:
+      availability: periodic
+  MAE-625:
+    code: MAE 625
+    title: Professional Literature Seminar
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Participants engage in in-depth and critical analysis of professional literature as they define and frame their interests or contextualize their projects. Students use online resources to identify important theoretical and empirical contributions that connect their research to existing professional literature. Emphasis is placed on learning the conventions of academic writing using the APA guide, as well as bringing out one’s voice in the writing process.
+    offered:
+      availability: periodic
+  MAE-630:
+    code: MAE 630
+    title: Emergent Literacy
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Utilizing a psycholinguistic perspective, students gain an advanced understanding of emergent literacy across the lifespan. Emphasis is placed on developing an advanced understanding of language language cueing systems, philosophies of reading and writing, assessment tools, current research into emergent lit., evaluation of appropriate learning materials/activities. Participants classroom teachers are encouraged to use their class for required fieldwork.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MAE Majors)
+  MAE-631:
+    code: MAE 631
+    title: Applied Linguistics & Language Acquisition
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "Applied Linguistics & Language Acquisition: Focuses on examining the nature and structure of languages, with an emphasis on mainstream American English. Participants survey recent theories and research on first language acquisition and bilingualism, especially in relation to the process of second language learning, in a social context. Students also examine how second language acquisition theories are applied in K-12 classrooms, through observing and practicing lessons in ELD and ESL settings. Contributes toward English Learner Authorization certification."
+    offered:
+      availability: periodic
+  MAE-634:
+    code: MAE 634
+    title: Literacy for Linguistically Diverse Learners
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Using sociocultural, critical, and culturally sustaining pedagogical frameworks, candidates examine and apply theories of literacy instruction, instructional strategies, and assessment for culturally and linguistically diverse classrooms. Candidates design and teach integrated English language development literacy lessons, and assess the literacy strategies and skills of their diverse learners. Includes both coursework and fieldwork.
+    offered:
+      terms:
+        - fall
+        - spring
+  MAE-635:
+    code: MAE 635
+    title: Biliteracy for Spanish/English
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Designed for teachers in designated Spanish/English bilingual classrooms. Participants learn the processes and effective strategies for teaching reading and writing to bilingual students as well as assessment of literacy. Taught in Spanish.
+    offered:
+      availability: periodic
+  MAE-636:
+    code: MAE 636
+    title: Culture, Cognition and Development
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course develops student knowledge of cognitive assessment with the underlying frameworks of development and culture. Assessments of cognitive skills cannot be separated from these. Students in this course will be introduced to the assessment procedures of common cognitive assessments, The course will focus on cognitive function as a construct (e.g., cognitive factors, skills, abilities, and processes). Crosslist with SPSY 636   .
+    offered:
+      availability: periodic
+    prerequisites:
+      - courseId: SPED-564
+      - courseId: SPSY-550
+    prerequisiteNotes:
+      - "(Prereq: SPED 564   and SPSY 550   )"
+  MAE-637:
+    code: MAE 637
+    title: Multicultural Curriculum
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students critically analyze curriculum frameworks and materials that are recommended for multicultural teaching. Furthermore, participants use different models of curriculum construction to design instructional activities and analyze the impact of their teaching on students. Finally, a collection of exemplary multicultural and bilingual teaching resources, as well as networks for finding additional resources, are developed.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MAE Majors)
+  MAE-638:
+    code: MAE 638
+    title: Technology as a Tool for Creativity, Equity & Excellence
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Participants explore current technologies and coming trends. “Technology” in this course is more than computers and digital media. Participants explore the issues created by these technologies. They look at tools that will help them use the potential of technology to support teaching and learning, and to develop thoughtful and powerful implementations of technologies in whatever educational setting they work.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MAE AND SPED Majors)
+  MAE-641:
+    code: MAE 641
+    title: Ed Measurement & Evaluation
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Theoretical and practical foundations in assessment with implications for standards-based instruction. Includes descriptive and some inferential statistics and educational measurement. Course work and fieldwork required.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Restricted to MAE Majors)
+  MAE-642:
+    code: MAE 642
+    title: Multicultural Community Partnerships
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course allows candidates to develop an awareness of the community surrounding their educational setting as well as the resources in schools, districts and counties that relate to forming multicultural family, school, and community partnerships. Additionally, candidates will develop a skill set to eliminate systemic forms of racism, sexism, classism, homophobia and ableism in order to provide equitable, challenging and safe school settings for all students. Includes coursework and fieldwork.
+    offered:
+      terms:
+        - spring
+  MAE-644:
+    code: MAE 644
+    title: Leadership in Curriculum & Instruction
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course provides advanced study in essential competencies of curriculum and instruction by building candidates’ capacity to lead the design, implementation, and improvement of coherent teaching and learning initiatives within an educational organization. Candidates will have the opportunity to connect course concepts with practice in their own context to support student success and the professional growth of colleagues.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Restricted to MAE Majors and SPED Majors)
+  MAE-645:
+    code: MAE 645
+    title: Educational Policy and Advocacy for Students and Families in P-12
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course explores educational policies in schools including educational law, resource allocations, interagency relationships, and tools for advocacy. The course focuses on understanding California and federal codes, case law, policies, and precedent and analysis of key legal concepts and application of law. An additional focus is the issues of and rights of migrant youth in schools. Students examine trends in law and the initiation of educational law to positively influence education. Crosslist with SPSY 645   .
+    offered:
+      terms:
+        - spring
+  MAE-670:
+    code: MAE 670
+    title: MAE Culminating Learning Experience
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This is the culminating learning experience for the Master of Arts in Education (MAE). Candidates complete either a Thesis or a Comprehensive Exam to demonstrate knowledge of the MAE curriculum and mastery of the MAE learning outcomes. The Thesis consists of an original research project that is founded in the literature and, upon completion, is of publishable quality. The Comprehensive Exam is a timed, written measure of the candidate’s proficiency in the MAE subject matter.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: MAE-621
+    prerequisiteNotes:
+      - "(Prereq: MAE 621   )"
+  MAE-690:
+    code: MAE 690
+    title: Action Thesis Advising
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students should register for one credit of this course every semester between completion of research methods and Capstone.
+    offered:
+      availability: periodic
+  MAE-695:
+    code: MAE 695
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 6
+    description: Courses that are offered on a trial basis, or courses that may only appear once, are offered as special topics. Anytime a special topics course is offered, it will have a title clarifying its general focus. Repeatable with each new special topic.
+    offered:
+      availability: periodic
+  MAE-697:
+    code: MAE 697
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic

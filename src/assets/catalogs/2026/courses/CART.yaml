@@ -1,0 +1,857 @@
+schemaVersion: 1
+prefix: CART
+courses:
+  CART-195:
+    code: CART 195
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in Cinematic Arts & Technology. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  CART-200:
+    code: CART 200
+    title: Introduction to Filmmaking
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This class covers fundamental aesthetic and technical principles of film production. Introductory skills in cinematography, editing, lighting and sound will be taught in conjunction with a critical and theoretical foundation of the moving image. To complement hands-on learning, students will develop their ability to analyze and critique films through screenings and discussion of works from a variety of genres.
+    offered:
+      terms:
+        - fall
+        - spring
+  CART-202:
+    code: CART 202
+    title: Fundamentals of Production Lighting
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students learn basics of production lighting design.
+    offered:
+      terms:
+        - fall
+  CART-205:
+    code: CART 205
+    title: Production Management
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Students learn the role and responsibilities of the production manager.
+    offered:
+      availability: periodic
+  CART-206:
+    code: CART 206
+    title: Marketing Strategies
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Seminar class provides overview of marketing, promotion, and press planning and execution.
+    offered:
+      terms:
+        - spring
+  CART-208:
+    code: CART 208
+    title: Business for Filmmakers
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 4
+    description: Seminar class provides overview of general business skills for film production.
+    offered:
+      availability: periodic
+  CART-210:
+    code: CART 210
+    title: Introduction to Sound Production
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course is an introduction to the theories and techniques of sound production for cinema. Through listening exercises, creative sound projects, and hands-on workshops, students will explore the expressive potential of sound while building technical skills in recording, editing, and mixing. Students will strengthen their ability to analyze and critique sound through discussion of works from a variety of genres.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: CART-200
+    prerequisiteNotes:
+      - "(Prereq: CART 200   )"
+  CART-211:
+    code: CART 211
+    title: Picturing the Environment
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: An exciting, multidisciplinary historical survey examining the depiction of the environment across the arts. Students will track artists’ adventures and how they shaped the way we understand our ecology and environment, communities and ourselves.
+    offered:
+      terms:
+        - fall
+  CART-212:
+    code: CART 212
+    title: "Charlie Don’t Surf: War, Culture & Cinema"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: The course examines representations of armed conflict in cinema across different cultures. Fictionalized accounts of war, documentaries and satires are viewed and analyzed, examining social and psychological effects of armed conflict, attitudes toward nationalism and heroism, power structures, the morality of violence, and the ethical responsibilities of the individual.
+    offered:
+      terms:
+        - spring
+  CART-215:
+    code: CART 215
+    title: Visual Design
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This introductory course explores spatial and temporal visual design through observation, traditional image-making, and digital tools. Students will develop aesthetic principles, visual communication methods, and a distinctive artistic voice through weekly hands-on exercises, critical discussions, and projects.
+    offered:
+      terms:
+        - fall
+        - spring
+  CART-216:
+    code: CART 216
+    title: Art of the Film Pitch
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: An introduction to the art of pitching film ideas in an engaging and effective way. Students will learn how to develop an effective film pitch, how to adapt that pitch to different pitching contexts, as well as performance and presentation strategies.
+    offered:
+      terms:
+        - spring
+  CART-217:
+    code: CART 217
+    title: Podcasting Workshop
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: An introduction to the fundamentals of podcast production focusing on audio storytelling techniques with practical skills in audio recording and editing.
+    offered:
+      terms:
+        - spring
+  CART-219:
+    code: CART 219
+    title: Storyboarding Workshop
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: "An introduction to the work of creating storyboards including, but not limited to: defining what storyboards are; determining how they function at different levels of production; drawing tips; building your own storyboards and receiving feedback."
+    offered:
+      terms:
+        - fall
+  CART-220:
+    code: CART 220
+    title: "Haunted Screens: Horror in Film"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Horror films are mirrors of social anxieties, playing an influential but disreputable role in contemporary culture. The course analyzes cinematic techniques used to induce responses of fear in an audience and examines the themes of international horror cinema. Students analyze how horror films represent identity, ideology, gender, sexuality, and violence. The course explores the audience’s fascination with fear, the evolution of horror and its role in creating contemporary mythologies.
+    offered:
+      terms:
+        - fall
+  CART-225:
+    code: CART 225
+    title: Distribution Workshop
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Intensive workshop course provides basic production skills in distribution. Students learn to prepare and deliver media for broadband distribution.
+    offered:
+      terms:
+        - spring
+  CART-228:
+    code: CART 228
+    title: Cinematic History 1849-1960
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Survey of film history from early cinema to 1960. Watch and understand film from the first flickering of projection through the golden age of Hollywood.
+    offered:
+      terms:
+        - fall
+        - spring
+  CART-230:
+    code: CART 230
+    title: The Art of Storytelling
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces students to the fundamentals of the art of storytelling. The course examines diverse narrative forms to explore the elements of story structure and the role of the narrative arts in the life of the individual and the culture.
+    offered:
+      terms:
+        - fall
+        - spring
+  CART-231:
+    code: CART 231
+    title: Movie Mania
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores film genres by theme that may change each semester, e.g. rock ‘n roll cinema, film noir, gangster movies, spaghetti westerns. Course outcomes foster independent, critical perspectives on the films viewed and help students develop a deepened understanding and appreciation of the art and craft of film making.
+    offered:
+      terms:
+        - fall
+        - spring
+  CART-233:
+    code: CART 233
+    title: "Petals, Leaves, and Roots: Storytelling through Botany"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course explores the intersection of botany and storytelling, examining how plants inspire and shape narratives across various media arts. Students will engage with the historical and contemporary roles of plants as both subjects and tools in creative expression. Through a blend of discussions and hands-on projects, participants will explore botanical themes while honing their storytelling and creative skills.
+    offered:
+      terms:
+        - fall
+        - spring
+  CART-235:
+    code: CART 235
+    title: Queer Film Theory
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Introduces students to queer film theory, its historical and cultural background, and its application as a tool for analyzing, interpreting, and critiquing films.
+    offered:
+      terms:
+        - spring
+  CART-240:
+    code: CART 240
+    title: Introduction to Screenwriting
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: An introduction to the craft of screenwriting for film, with an emphasis on the writing of short form narrative screenplays.
+    offered:
+      terms:
+        - fall
+        - spring
+  CART-251:
+    code: CART 251
+    title: Voice and Speech
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Students develop techniques for the expressive use of the voice in performance. Emphasizes the development of vocal range, the enhancement of vocal power, breath control, resonance, and articulation of language to convey emotion and meaning.
+    offered:
+      availability: periodic
+  CART-255:
+    code: CART 255
+    title: The Actor’s Process
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 4
+    description: Introduction to the creative process of the actor, and the elements of dramatic expression which develop a role for performance on film.
+    offered:
+      terms:
+        - fall
+  CART-260:
+    code: CART 260
+    title: Experiments in Sound
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This intensive workshop course examines the history and aesthetics of sound as an art form, and studies alternative approaches to the use of sound in film. Students will research history and key topics and present information to the class, and will create their own experimental sound projects.
+    offered:
+      terms:
+        - fall
+        - spring
+  CART-265:
+    code: CART 265
+    title: Script Supervisor Workshop
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Teaches the craft, role, and responsibilities of the script supervisor.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: CART-200
+    prerequisiteNotes:
+      - "(Prereq: CART 200   )"
+  CART-275:
+    code: CART 275
+    title: Women Filmmakers
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course examines films made by women and their unique contributions to content and form, focusing on narrative fiction, experimental, and documentary film. Through the lens of feminist film criticism, students examine how historical, cultural, and industrial factors shape the work of women filmmakers, and gain insight into how the filmmakers’ unique creative processes affect content and style.
+    offered:
+      terms:
+        - fall
+        - spring
+  CART-295:
+    code: CART 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Cinematic Arts and Technology.
+    offered:
+      terms:
+        - fall
+        - spring
+  CART-301:
+    code: CART 301
+    title: Practical Application
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: "Practical Application: Students develop collaborative production skills while working on interdisciplinary projects, including senior projects, campus-wide productions and community-based projects."
+    offered:
+      terms:
+        - fall
+        - spring
+  CART-302:
+    code: CART 302
+    title: Color Grading Workshop
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: An introduction to color grading in film. The class consists of lectures, screenings, and hands on exercises using color grading tools.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: CART-200
+          - courseId: CART-305
+    prerequisiteNotes:
+      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+  CART-303:
+    code: CART 303
+    title: Media, Power, and Society
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course provides a framework for understanding, interpreting and analyzing the creation of images and their impact on social and political structures. It asks students to evaluate media within a broader ethical, social, political, and economic context in order to better understand multiple perspectives. This is an advanced-level writing and oral communication course, incorporating the ethical and reasonable construction of argumentation into written papers and oral presentations.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  CART-305:
+    code: CART 305
+    title: Intermediate Filmmaking
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This class covers intermediate skills in cinematography, editing, lighting, and sound. Students work collaboratively in small crews, practicing industry-standard workflows and assuming key production roles to create short narrative and documentary films. Through screenings, analysis, and discussion, students contextualize their creative work within film theory and history to develop a practice that is both technically proficient and critically informed.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: CART-200
+    prerequisiteNotes:
+      - "(Prereq: CART 200   )"
+  CART-310:
+    code: CART 310
+    title: Sound Design
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students learn the art and technology of sound design for cinematic media. The course covers script analysis, the use of sound to create meaning, the recording of original sound, the acquisition of existing audio, sound editing, and sound mixing.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: CART-210
+          - courseId: CART-200
+          - courseId: CART-305
+    prerequisiteNotes:
+      - "[(Prereq: CART 210   ) and ((Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+  CART-311:
+    code: CART 311
+    title: Women Filmmakers
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines films made by women and their contributions to content and form. Focuses on women’s experiences in the roles of writer/director, producer, cinematographer and editor. Emphasis will be given to contemporary films.
+    offered:
+      terms:
+        - spring
+  CART-312:
+    code: CART 312
+    title: "Nature’s Creative Studio: Exploring Media Art, AI, and Outdoor Learning"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: The course is focused on creativity, media art, and the integration of AI technology, all within the context of outdoor learning. This course explores the representation of nature in art by combining traditional nature journaling with modern AI technologies. Students will analyze historical and contemporary artworks depicting nature, learn nature journaling techniques, and integrate AI tools into their artistic practice. The course aims to foster a deeper appreciation for nature and innovative artistic expression.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Areas 1A and 1B and 1C and 2 with a C- or better)"
+  CART-315:
+    code: CART 315
+    title: Visual Design
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduction to spatial and temporal visual design. Includes fundamentals of aesthetic principles. Outlines basic visualization techniques and design communication for moving-image media.
+    offered:
+      terms:
+        - fall
+        - spring
+  CART-318:
+    code: CART 318
+    title: Introduction to Animation
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course offers an introduction to the techniques, history, and cultural significance of animation. Students will explore, demonstrate, and apply basic skills in traditional and digital animation techniques. The course also covers basic pre-production and production. Projects in this course are both individual and collaborative. Incoming students need not be proficient at drawing, but should be familiar with basic digital media tools.
+    offered:
+      terms:
+        - fall
+        - spring
+  CART-319:
+    code: CART 319
+    title: Motion Graphics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course offers an introduction to motion graphics design and production. Topics covered include principles of spatial and temporal design for animation, film titles, compositing, on-screen graphics.
+    offered:
+      terms:
+        - fall
+  CART-321:
+    code: CART 321
+    title: Experimental Production
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This production course pushes the boundaries of cinematic expression through hands-on experimentation with visual media, focusing on the creative use of light, color, movement, time, and sound. Weekly projects combine handmade and digital methods, inspired by pioneers of early cinema and contemporary video artists. In an age of AI-generated imagery, the course emphasizes human observation, critical decision-making, and the development of each student’s unique artistic voice.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CART-200
+          - courseId: CART-305
+    prerequisiteNotes:
+      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+  CART-323:
+    code: CART 323
+    title: Visual Effects and Compositing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students create special effects for film and video by combining images from different sources such as live-action digital video, digitized film, computer generated 3-D, 2-D animations, painted backdrops, digital still photographs, and text. Topics include color keying, rotoscoping, matte painting, motion tracking, and lighting.
+    offered:
+      terms:
+        - spring
+  CART-326:
+    code: CART 326
+    title: Animation Techniques
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students will learn the fundamentals of making animated films through a series of hands-on workshops. This class will cover traditional hand-drawn animation, digital flash animation, and experimental animation techniques such as cut-outs, photo-montage, direct-techniques, installation/performance, and other hybrid techniques in animation production.
+    offered:
+      availability: periodic
+  CART-329:
+    code: CART 329
+    title: Contemporary Media History
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Survey of the history, aesthetics, production technologies and cultural impact of media arts from 1960 to present. Throughout this course students will watch, analyze and contextualize works from the some of the most exciting periods in Media History.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  CART-330:
+    code: CART 330
+    title: Elements of Cinema
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students are introduced to the principles of narrative theory as well as the expressive tools of cinema. Students analyze media to understand how framing, camera movement, mise en scene lighting and sound are used to express character and tell stories, applying this understanding during short exercises. Students build a repertoire of cinematic tools and techniques.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CART-200
+          - courseId: CART-305
+    prerequisiteNotes:
+      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+  CART-333:
+    code: CART 333
+    title: Art of Producing
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course explores the craft and techniques of film and television producing. The course introduces students to the language and practice of producing and filmmaking through lectures, analysis of contemporary industry practices, readings, and individual research assignments.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CART-200
+          - courseId: CART-305
+    prerequisiteNotes:
+      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+  CART-340:
+    code: CART 340
+    title: Screenwriting
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students learn techniques of dramatic writing for film and television with a focus on screenplay structure, plot, theme, and character development in both short form and long form narrative film and television.
+    offered:
+      terms:
+        - fall
+        - spring
+  CART-341:
+    code: CART 341
+    title: Film Directing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: A study of the theory and practice of directing the narrative film. Students plan and direct short films, with an emphasis on visual narrative techniques, and working with actors.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CART-200
+          - courseId: CART-305
+    prerequisiteNotes:
+      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+  CART-342:
+    code: CART 342
+    title: Acting for Directors
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 4
+    description: An intensive workshop course that develops skills and techniques for directing actors. Through participation in the acting process and directing exercises, students will learn how to establish collaborative relationships with actors and how to give effective direction.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: CART-200
+          - courseId: CART-305
+    prerequisiteNotes:
+      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+  CART-345:
+    code: CART 345
+    title: Acting for the Screen
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: An in-depth study of the craft and technique of acting for film, television, and other digital media. Students learn how to create and develop a character, explore the role of the actor as storyteller, and balance the creative process of the actor with the technical demands of performing on a film set.
+    offered:
+      terms:
+        - spring
+  CART-361:
+    code: CART 361
+    title: Intro to Editing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students learn digital editing and the concepts of digitizing, editing, and outputting content using industry-standard software packages. Includes script analysis and working with directors. Applies techniques and principles for editing various types of projects including music video, documentary, and narrative.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CART-200
+          - courseId: CART-305
+    prerequisiteNotes:
+      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+  CART-375:
+    code: CART 375
+    title: Cinematography
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students will explore the expressive possibilities of moving pictures, through aesthetic and formal investigations of lenses, shot duration, screen direction, camera movement and lighting. Students develop the skills required of a professional camera and lighting crew, with particular attention to the role of director of photography.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CART-200
+          - courseId: CART-305
+    prerequisiteNotes:
+      - "(Prereq: CART 200   or CART 305   )"
+  CART-376:
+    code: CART 376
+    title: Documentary Production
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Combines study of documentary history, theory, and practice. Students learn how to plan, organize, and produce documentaries. Students produce a short documentary on video.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CART-200
+          - courseId: CART-305
+    prerequisiteNotes:
+      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+  CART-395:
+    code: CART 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Project based course developing and producing content in collaboration with other courses, the community, university, or others.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CART-200
+          - courseId: CART-305
+    prerequisiteNotes:
+      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+  CART-396:
+    code: CART 396
+    title: Cinematic Arts Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Student-proposed internship in the field of Cinematic Arts and Technology.
+    offered:
+      availability: periodic
+  CART-397:
+    code: CART 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Student proposed course of study on select topic in Cinematic Arts and Technology as part of an approved Individualized Learning Plan.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Instructors Consent Required)
+  CART-399S:
+    code: CART 399S
+    title: Community-Based Media
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Working with community-based organizations, students will participate in service activities or projects with external communities and integrate the service experience with specific outcomes, written reflections, discussion, and evaluation.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CART-200
+    prerequisiteNotes:
+      - "[Prereq: ( CART 200   ) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  CART-404:
+    code: CART 404
+    title: Character Animation
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: An introduction to character animation in both two and three dimensions. Topics include creating strong silhouettes, blocking, splining, tweening, working with the graph editor and dope sheet.
+    offered:
+      availability: periodic
+  CART-422:
+    code: CART 422
+    title: Animated Short Films
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: In this course, each student devotes the entire semester to the development, production, and post-production of one animated film.
+    offered:
+      terms:
+        - fall
+  CART-424:
+    code: CART 424
+    title: Environmental Media Arts
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Through a series of explorations and adventures, students in the arts and sciences create media arts projects with environmental themes or science topics, while working across disciplines. Environments include urban communities, rural and agricultural settings, and military bases, as well as marine and wilderness areas.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CART-200
+          - courseId: CART-305
+    prerequisiteNotes:
+      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+  CART-425:
+    code: CART 425
+    title: Docu-Fiction Filmmaking
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Through film analysis, critical readings, and filmmaking projects, students will explore cinematic styles that call into question traditional categories of fiction and documentary: hybrid films, neo-realist features, documentary reenactments, and mockumentary."
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CART-200
+          - courseId: CART-305
+    prerequisiteNotes:
+      - "[(Prereq: CART 200   ) or (Prereq or Coreq: CART 305   )]"
+  CART-440:
+    code: CART 440
+    title: Advanced Screenwriting
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: A workshop-format class which guides students through the process of outlining and writing a feature length screenplay or television pilot. Extensive reading and writing required.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: CART-240
+    prerequisiteNotes:
+      - "(Prereq: CART 240   )"
+  CART-461:
+    code: CART 461
+    title: Advanced Editing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students learn form, style, pacing, and advanced techniques in editing including titles and effects work, and output in various formats.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: CART-361
+    prerequisiteNotes:
+      - "(Prereq: CART 361   )"
+  CART-475:
+    code: CART 475
+    title: Advanced Cinematography
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores advanced techniques in lighting, camera movement and lensing. Students expected to develop individual visual style while furthering skills in various camera crew roles.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: CART-375
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CART 375 with a C- or better)"
+  CART-490:
+    code: CART 490
+    title: Capstone Preproduction and Development
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students practice research skills, engage in creative writing, and develop marketing and pitching proposals. The major outcome is a pre-production portfolio.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: CART-200
+          - courseId: CART-305
+          - courseId: CART-330
+          - anyOf:
+              - courseId: CART-318
+              - courseId: CART-321
+              - courseId: CART-341
+              - courseId: CART-375
+              - courseId: CART-376
+              - courseId: CART-424
+    prerequisiteNotes:
+      - "[(Prereq: CART 200   or CART 305   )] and (Prereq or Coreq: CART 330   and ( CART 318   or CART 321   or CART 341   or CART 375   or CART 376   or CART 424   ) and Senior Standing]"
+  CART-491:
+    code: CART 491
+    title: Capstone Completion & Assessment
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students complete the Capstone project as conceived and planned in CART 490   . Students complete the Cinematic Arts and Technology MLO processes of production, postproduction, and distribution. Completed projects are presented to the public at the Cinematic Arts and Technology Capstone Festival.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: CART-301
+      - courseId: CART-490
+    prerequisiteNotes:
+      - "(Prereq: CART 301   AND CART 490   )"

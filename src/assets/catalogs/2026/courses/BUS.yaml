@@ -1,0 +1,2113 @@
+schemaVersion: 1
+prefix: BUS
+courses:
+  BUS-121:
+    code: BUS 121
+    title: "Writing That Matters: Humans and AI Together"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This first-year composition course develops foundational skills in reading, writing, and critical thinking, with a special emphasis on the ethical use of artificial intelligence (AI) in academic and professional contexts. Students will practice drafting, revising, and editing essays that integrate diverse perspectives and credible evidence. Through analysis of AI-generated texts alongside scholarly and journalistic sources, students strengthen their ability to evaluate arguments, detect fallacies, and write with clarity and purpose.
+    offered:
+      terms:
+        - fall
+        - spring
+  BUS-195:
+    code: BUS 195
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in the major. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  BUS-200:
+    code: BUS 200
+    title: Personal and Professional Responsibility in Business
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Personal & professional responsibility are the foundation of responsible businesses whose focus is balancing the quintuple bottom line (profit, people, planet, equity & ethics). Personal responsibility explores personal values, identity & career interests. Professional responsibility explores understanding stakeholders & community. Students will apply key concepts of personal & professional responsibility to the quintuple bottom line, using business communication & reading skills.
+    offered:
+      terms:
+        - fall
+        - spring
+  BUS-201:
+    code: BUS 201
+    title: Macro Economics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "Macroeconomics introduces students to the basic concepts of GDP, inflation, unemployment, trade-balance, consumer price index, and interest. Students apply these concepts to explain real life macroeconomic situations and discuss policy alternatives on topics such as: fairer distribution of income, sustainable economic growth, right mix of fiscal and monetary policies in booms or recessions, impact of trade wars on trade balances, causes of recessions & booms."
+    offered:
+      terms:
+        - fall
+        - spring
+  BUS-202:
+    code: BUS 202
+    title: Micro Economics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Microeconomics is the traditional social science that studies human behavior with respect to how resource allocation decisions are made at the individual, firm, and societal levels. Microeconomics focuses on behavioral theory which explains market behavior and its implications for public policy; income distribution; and contemporary problems of labor and business. Topics include economic issues that focus on equity, diversity, and ethics from a stakeholder perspective.
+    offered:
+      terms:
+        - fall
+        - spring
+  BUS-203:
+    code: BUS 203
+    title: Financial Accounting
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Accounting principles and practices related to the collection, classification, use, and reporting of economic events to stakeholders external to the entity. Students reflect on the ethical and compliance implications of financial reporting.
+    offered:
+      terms:
+        - fall
+        - spring
+  BUS-204:
+    code: BUS 204
+    title: Business Statistics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides an overview of mathematics skills and elementary statistical procedures used in business applications and applied research settings. Places special preparatory emphasis on quantitative reasoning skills. Develops proficiency in the use of data in tables, graphs, and elementary descriptive statistical applications; linear correlation and regression models; probability theory and probability distributions; hypothesis testing and statistical inference.
+    offered:
+      terms:
+        - fall
+        - spring
+  BUS-205:
+    code: BUS 205
+    title: Managerial Accounting
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores managers’ uses of internal accounting data for ethical decision making and control. Includes the theory and practice of budgeting, profit planning, cost-volume-profit relationships, breakeven analysis, identifying and tracking product costs, standard costs and variance analysis.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-203
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: BUS 203   with a C- or better)"
+  BUS-206:
+    code: BUS 206
+    title: Business Law
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examines the principles of law as they apply to everyday business, including ethical-social responsibility. Legal topics include forms of business entities, & legal issues, e.g., corporate governance, shareholders, board of directors & officers, mergers, issuance of securities & taxation. Other legal subjects include constitutional law, torts/Cybertorts, criminal law, agency/employment law, employment discrimination, & contracts and E-commerce.
+    offered:
+      terms:
+        - fall
+        - spring
+  BUS-232:
+    code: BUS 232
+    title: Finding Your Voice in the AI Era
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course develops fundamental oral communication skills for academic, professional, and civic contexts while cultivating an eco-centric approach to speaking and listening that values collective dialogue over individual performance. Students practice researching, organizing, delivering, and evaluating speeches while engaging with challenges of communication in the age of artificial intelligence. Through three major speeches (informative, persuasive, and reflective) and group deliberation, students learn that authentic communication creates shared understanding rather than competitive advantage, and that diverse voices enrich rather than threaten our collective discourse.
+    offered:
+      terms:
+        - fall
+        - spring
+  BUS-295:
+    code: BUS 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in the major. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  BUS-299:
+    code: BUS 299
+    title: Business Analytics Fundamentals
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides fundamentals of business analytics - how to frame and use analytics techniques to solve business problems using Excel to support business decisions. Topics include built-in Excel functions, scenario and what-if analyses using logical nested-IFs, data visualization using charts, database and analyses, automation using VBA, and introduction to SAS.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-204
+            minimumGrade: C-
+          - courseId: STAT-100
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: BUS 204   or STAT 100   or equivalent with a C- or better)"
+  BUS-300:
+    code: BUS 300
+    title: Major ProSeminar
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Students develop an Individualized Learning Plan that will guide their learning experiences at CSUMB and their continuing professional development.
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-201
+            minimumGrade: C-
+          - courseId: BUS-203
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 201   and BUS 203   ) and ( GE   Area 1A and 1B and 1C) with a C- or better and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-300S:
+    code: BUS 300S
+    title: Business Ethics in Action
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students apply social-scientific vocabulary, concepts, and theoretical perspectives to social issues such as inequality based on social class, race, gender or other factors; allocation of scarce resources; and climate change. Students analyze social issues using theories from the primary disciplines of economics, law, and psychology. Through resources and classroom exercises students examine how their identities and perspectives relate to various social issues via applied ethical constructs.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  BUS-301:
+    code: BUS 301
+    title: Principles of Business Analytics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course provides an introduction to business analytics. Students learn to analyze and interpret data to extract useful insights that support organizations in enhancing operational efficiency and strategic decision-making. Students use quantitative analysis to answer complex questions that can benefit individuals, businesses, and society at large. Topics include Excel functions, logical nested IFs, data visualization, pivot tables, database and queries, and automation using VBA.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-204
+          - courseId: STAT-100
+    prerequisiteNotes:
+      - "(Prereq: BUS 204   or STAT 100   )"
+  BUS-302:
+    code: BUS 302
+    title: Bus Milestone Experience
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students entering into the major will demonstrate their understanding of core concepts of financial and managerial accounting, micro- and macro-economics, and statistics. Core concepts will be reinforced through review and testing. Through an integrative case, students will actively participate to demonstrate critical business skills of teamwork, communication (oral and written), quantitative reasoning and critical thinking.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-201
+            minimumGrade: C-
+          - courseId: BUS-202
+            minimumGrade: C-
+          - courseId: BUS-203
+            minimumGrade: C-
+          - courseId: BUS-204
+            minimumGrade: C-
+          - courseId: STAT-100
+            minimumGrade: C-
+          - courseId: BUS-205
+            minimumGrade: C-
+          - courseId: BUS-299
+            minimumGrade: C-
+          - courseId: BUS-301
+            minimumGrade: C-
+          - courseId: BUS-304
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: BUS 201   and BUS 202   and BUS 203   and ( BUS 204   or STAT 100   or equivalent) and BUS 205   ) with a C- or better) and (Prereq or Coreq: BUS 299   or BUS 301   ) and (Coreq: BUS 304   ) and (Business Majors Only)]"
+  BUS-303:
+    code: BUS 303
+    title: Major Pro-seminar
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Prepares students to explore continuing education, professional opportunities, and specific career paths. Students develop an Individualized Learning Plan that will guide their learning experiences at CSUMB and their continuing professional development.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: BUS 304   )"
+  BUS-304:
+    code: BUS 304
+    title: Business Communications & Critical Thinking
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Enables upper division students to acquire and demonstrate critical thinking, business writing, and speaking skills; meets GWAR requirements. Students learn and demonstrate empathetic written and oral communication skills, problem-solving strategies, and analytical skills applicable to real world business issues and events.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-305:
+    code: BUS 305
+    title: Principles of Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students learn concepts of management including managerial roles, organizational and team dynamics, leadership and motivation, decision making, ethical and legal issues, communication, and responsible business. Individually and in teams, students explore how organizations do or do not function effectively in multi-cultural contexts.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 2 with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-306:
+    code: BUS 306
+    title: Principles of Marketing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Market opportunity identification, market and competitive analysis, consumer behavior measurement and analysis, use of marketing tools, strategic market planning and program development, organization and management of marketing and distribution value chain, product management, ethical and legal aspects of marketing along with corporate social responsibility, and applications of Internet marketing are studied.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: GE-2
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: GE   2 with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-307:
+    code: BUS 307
+    title: Finance
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Emphasizes the entrepreneur/manager raising funds at minimal cost and risk, and the allocation of those funds to increase shareholders’ wealth and company value. Encompasses financial statements, time value of money, bond/stock valuation, cost of capital, and related subjects. Reviews international aspects of financial management. Develops both the skills and ability to understand the impact of financial decision making to business and its stakeholders. Stresses ethical financial reporting.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  BUS-308:
+    code: BUS 308
+    title: Information Systems for Decision Making
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Designing effective Information Systems for organizational competitive advantage using data modeling techniques. Students learn quantitative and analytical concepts for decision making in business using data visualization and advanced tools such as nested IFs, macros, database functions, VBA, and SAS. Students understand and apply the data lifecycle process to create and implement complex spreadsheet-based information systems for tactical and strategic decision analysis.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: BUS-301
+          - anyOf:
+              - courseId: BUS-204
+              - courseId: STAT-100
+    prerequisiteNotes:
+      - "[(Prereq: ( BUS 204   or STAT 100   ) and ( BUS 301   or equivalent)]"
+  BUS-309:
+    code: BUS 309
+    title: Principles of Operations Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces principles of Operations Management. Emphasis is on applied analytical and quantitative skills using spreadsheets for optimal allocation of resources for an organization in a manufacturing or service industry. Major topics are operations strategies, project mgmt., linear programming/optimization, supply chain, facility location/layout, workforce and capacity planning, forecasting, inventory mgmt., enterprise resource planning, quality control, system reliability, and decision tools.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-299
+          - courseId: BUS-301
+          - courseId: BUS-204
+          - courseId: STAT-100
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 299   or BUS 301   or equivalent) and ( BUS 204   or STAT 100   equivalent)]"
+  BUS-310:
+    code: BUS 310
+    title: Entrepreneurship
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students exercise creativity and develop an entrepreneurial mindset useful for any career by learning to identify opportunities, developing innovative business concepts, and formulating effective strategies for execution. In addition, practical skills such as market research, financial analysis, and feasibility studies are honed to refine business ideas into viable ventures.
+    offered:
+      terms:
+        - fall
+        - spring
+  BUS-311:
+    code: BUS 311
+    title: Operations Management - Service Organizations
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores operational systems in service industries such as banking, hospitality, financial services, and telecommunications. This course is also applicable to nonprofit organizations. Examines the customer service delivery, internal processes, and operational principles that govern service-based industries and nonprofit organizations. May be taken in place of BUS 309   or BUS 312.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: BUS-299
+            minimumGrade: C-
+          - courseId: BUS-304
+            minimumGrade: C-
+          - courseId: BUS-305
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BUS-300
+                minimumGrade: C-
+              - courseId: BUS-300S
+                minimumGrade: C-
+              - courseId: HOSP-300
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: (( BUS 299   ) and ( BUS 300   or BUS 300S   or HOSP 300   ) and ( BUS 304   ) and ( BUS 305   ) with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-321:
+    code: BUS 321
+    title: "Electronic Commerce: Mrkting"
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Firms are experiencing dramatic shifts in standard business practices caused by the emergence of a global electronic marketplace and investment in web commercialization. Explores models firms are applying in a socially responsible and ethical manner. Focuses on the marketing issues in commercialization of computer-mediated environments (CMEs) like the WWW and emerging electronic media.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-306
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: BUS 306   with a C- or better and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-322:
+    code: BUS 322
+    title: Integrated Marketing Communications
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course explores the effective use of traditional communication methods such as advertising, sales promotion, public relations, direct marketing, sales, personal selling, events, and word of mouth (WOM) marketing. The course discusses social media marketing strategies including customer engagement, microblogging, blogs, video and photo marketing, mobile marketing, content marketing, and more. Other factors and considerations are discussed using the social media planning cycle.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-306
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: BUS 306   with a C- or better and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-323:
+    code: BUS 323
+    title: Service Marketing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Focuses on marketing as applied to service businesses. Topics include marketing a service vs. a manufactured product; marketing (planning, pricing, research, segmentation); customer loyalty; distribution channels; & advertising. Students identify a service industry, develop a marketing plan including situational & SWOT analyses, & action plans with success measures from a legal & ethical perspective.&nbsp;
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-306
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: BUS 306   with a C- or better and (Junior or Senior Standing) or Instructor Consent]"
+    minimumStanding: junior
+  BUS-330:
+    code: BUS 330
+    title: Human Resources Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines human resource management challenges confronting decision making in a rapidly challenging global environment. Focuses on motivation, cross-cultural communication, ethics, recruitment, selection, compensation, benefits, health and safety in the workplace, legal requirements and limitations, affirmative action, and career development.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-305
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: BUS 305   with a C- or better and (Junior or Senior Standing) or Instructor Consent]"
+    minimumStanding: junior
+  BUS-331:
+    code: BUS 331
+    title: Organizational Behavior
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores individual & organizational behavior within an institution’s environment. Includes personality, group dynamics, organization change, conflict resolution, multiculturalism, ethics, leadership, & motivation. Applies skills in communication, decision making, problem solving, teamwork, handling ambiguity, taking initiative, and interpersonal sensitivity, such as cross-cultural differences.&nbsp;
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-305
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: BUS 305   with a C- or better and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-332:
+    code: BUS 332
+    title: Global Responsible Business
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students critically evaluate the global business context with an emphasis on Responsible Business. Students explore the differences and commonalities between countries and regions in political, regulatory, cultural, and socio-economic spheres to give an insight into business practices and other institutional factors. Students develop an understanding of the nature of international business, its evolution and the driving forces that shape changes in global business.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: Junior or Senior Standing]"
+    minimumStanding: junior
+  BUS-333:
+    code: BUS 333
+    title: Sports Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Sports play an important role in individual lives and in society more broadly. Sports are a vehicle for lifelong physical fitness, a source of identity and camaraderie, and a form of live entertainment. In short, sports are big business. This course explores sports from the perspective of business and examines such topics as how profits are generated and distributed, the role of athletes in the sports economy, and the business of gender equity.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with C- or better) or (Instructor Consent)"
+  BUS-334:
+    code: BUS 334
+    title: The Impact of AI in Technology, Careers, and Society
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This interdisciplinary course (intended for students regardless of major) explores the intersection of artificial intelligence (AI) and business, focusing on technological advancements, sociopolitical and ethical implications. Students will examine how AI technologies are reshaping business practices, organizational structures, and societal norms. The course includes theoretical frameworks, use cases, empirical studies, and case analyses to understand AI’s impact on work, employment, power dynamics, ethics, and social inequality within business contexts.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Junior or Senior Standing Required)
+    minimumStanding: junior
+  BUS-350:
+    code: BUS 350
+    title: Financial Literacy
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Synthesize and connect quantitative reasoning, skills, and experiences across disciplines, emphasizing personal finance challenges, opportunities, and decision-making, allowing them to address new or complex situations relevant to their lives or careers. Understand and manage personal financial planning, money management, insurance, and investments; develop a plan for incorporating these concepts now and in the future; and extend ideas to develop a plan for giving back to the community.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  BUS-351:
+    code: BUS 351
+    title: Risk Management & Tax Planning
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Risk Management & Tax Planning introduces the student to the principles, procedures, terminology and applications of Federal Income Tax law all types of Insurance (Risk Management) that individuals and businesses pursue. This course is designed to provide the student with an understanding of fundamental concepts for income taxation and the management of risk through insurance.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-307
+            minimumGrade: C-
+          - courseId: BUS-350
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 307   or BUS 350   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-352:
+    code: BUS 352
+    title: Estate Planning & Professional Conduct
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Teaches a framework for identifying solutions to estate planning issues affecting both business and individuals, understanding property ownership, estate planning documents, lifetime and death transfer strategies, and an understanding of both tax and non-tax estate planning objectives and issues. Will also examine professional conduct and regulation of Certified Financial Planners subject to the CFP Board’s Code of Ethics and Professional Responsibility and Rules of Conduct.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-307
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 307   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-353:
+    code: BUS 353
+    title: Advanced Financial Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course examines financial aspects of firm decisions; presents theoretical underpinings for financial management, together with quantitative techniques used to analyze financial questions. Covers financial analysis and planning; valuation methods; determination of required return; effect of capital structure decisions; funding alternatives; and corporate risk management.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-307
+            minimumGrade: C-
+          - courseId: BUS-350
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 307   or BUS 350   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-354:
+    code: BUS 354
+    title: Investment
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: The course presents procedures and tools necessary to determine value and analyze risk/return characteristics of equity, fixed income securities, and alternative individual investments. Furthermore, it emphasizes responsible decisions and provides background for portfolio analysis and investment valuation. Although the ultimate objective of the course is to develop a conceptual/theoretical and applied background for investment decisions, emphasis will also be put on practical applications.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-307
+    prerequisiteNotes:
+      - "[Prereq: BUS 307   and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-355:
+    code: BUS 355
+    title: International Finance
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Provides an integrated view of int’l financial markets and the mgmt of multinational firms. Introduces students to markets for spot currency transactions, currency forwards, options, and swaps. Students learn tools for valuing instruments traded in these markets. Course focuses on the opportunities and challenges these markets present to multinational managers attempting to manage exposure to exchange rates, raise capital in int’l capital markets, and evaluate int’l capital budgeting projects.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-307
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 307   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-356:
+    code: BUS 356
+    title: Personal Financial Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Focuses on general financial planning principles, education planning, retirement savings and income planning. You will learn the discipline of personal finance and how to effectively utilize personal financial statements. Topics include how to successfully purchase and finance a home. HR management strategies and career planning will be explored. Students will be able to understand concepts of saving money, investing for the future, debt management, and being fiscally responsible.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-305
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( BUS 305   ) and ( GE   Area 2) with a C- or better) and (Junior or Senior Standing))]"
+    minimumStanding: junior
+  BUS-357:
+    code: BUS 357
+    title: Financial Markets & Institutions
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines depository institutions and other financial intermediaries, asset management companies, and other financial institutions. Analyzes money and capital markets and the institutions that operate within those markets. Through case studies, exercises, and field research, students face and solve problems faced by mid-level managers of these institutions.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-307
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 307   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-358:
+    code: BUS 358
+    title: Principles of Microeconomics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Theory of prices and markets; industrial organization; innovation and growth; limitations of markets and public policy; income distribution; and contemporary problems of labor and business, including issues of equity, diversity, and ethics from a stakeholder perspective.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  BUS-360:
+    code: BUS 360
+    title: Emerging Technology and Digital Organization
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: New technologies such as social media, big data analytics & Internet of Things are impacting the digital organizations. Students develop understanding of these technologies using tools such as SAS, IBM Watson, HTML5, web design & analytics that provide strategic advantages & explore issues such as security, privacy, encryption, & ethical issues.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-299
+            minimumGrade: C-
+          - courseId: BUS-301
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq or Coreq: BUS 299   or BUS 301   with a C- or better)"
+  BUS-364:
+    code: BUS 364
+    title: Cybersecurity and Privacy Management Strategies
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course introduces the policy and management aspects of cybersecurity for responsible organizations. The course will focus on understanding the business, technical, legal, and ethical issues related to cybersecurity and privacy, the cybersecurity challenges, the role of stakeholders, security metrics, and developing cybersecurity policies and processes to maintain confidentiality, integrity, and availability of the information, networks, computing systems, and applications managed by the organization.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-299
+          - courseId: BUS-301
+    prerequisiteNotes:
+      - "(Prereq: BUS 299   or BUS 301   or Instructor Consent Required)"
+  BUS-370:
+    code: BUS 370
+    title: Price Analysis
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Principles of price analysis will provide students an introduction to the application of statistical tools needed to conduct empirical work on market behavior. Students will learn how to empirically estimate demand/supply functions and the impact of pricing decisions. This application will then be extended to forecasting demand and supply conditions, and impacts on pricing decisions as a final project.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - allOf:
+          - courseId: BUS-201
+            minimumGrade: C-
+          - courseId: BUS-202
+            minimumGrade: C-
+          - courseId: BUS-299
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BUS-204
+                minimumGrade: C-
+              - courseId: STAT-100
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: BUS 201   and BUS 202   and ( BUS 204   or STAT 100   ) and ( BUS 299   or equivalent) with a C- or better)]"
+  BUS-375:
+    code: BUS 375
+    title: Agribusiness Trading and Risk Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces the fundamentals of risk management and trading, pricing, purchasing and procurement in the agricultural sector. Structure of financial commodity and produce markets and commonly used strategies such as hedging, and futures & options strategies, to manage risk are presented. Application of such strategies to manage financial risk and commodity/produce trading are simulated in the classroom environment.&nbsp;
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: BUS-202
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BUS-204
+                minimumGrade: C-
+              - courseId: STAT-100
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( BUS 204   or STAT 100   ) and BUS 202   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-383:
+    code: BUS 383
+    title: Intermediate Accounting I
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Transform information about asset, revenue, and expense related economic events into financial statements in accordance with generally accepted accounting principles. Use spreadsheet software and professional standards databases to prepare and analyze financial statements, including footnote disclosures.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-203
+            minimumGrade: C-
+          - courseId: BUS-205
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 203   and BUS 205   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-384:
+    code: BUS 384
+    title: Intermediate Accounting II
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Transform information about liability, equity, and cash flow related economic events into financial statements in accordance with generally accepted accounting principles. Use spreadsheet software and professional standards databases to analyze organizations’ financial statements, including footnote disclosures.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-383
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: BUS 383   with a C- or better and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-385:
+    code: BUS 385
+    title: Income Tax Fundamentals
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: U.S. Federal tax law compliance and planning for individuals and business entities. Also covers legal and ethical dilemmas that can arise in the practice of tax law and accounting.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-203
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: BUS 203   with a C- or better and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-395:
+    code: BUS 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in the major. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+    prerequisites:
+      - allOf:
+          - courseId: BUS-304
+            minimumGrade: C-
+          - courseId: BUS-305
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BUS-300
+                minimumGrade: C-
+              - courseId: BUS-300S
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: (( BUS 300   or BUS 300S   ) and ( BUS 304   and BUS 305   ) with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-397:
+    code: BUS 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Independent study under the direction of a faculty member. The student must prepare a study proposal approved by the appropriate faculty member and major advisor prior to registration.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  BUS-399S:
+    code: BUS 399S
+    title: "Business Pre-Capstone: Responsible Business Models for Community & Societal Impact"
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course allows students to learn and apply the principles of responsible business in a culminating experience of applied learning from all their previous courses. Students will engage in service learning with local organizations, individuals, and companies to cultivate understanding, empathy, and reflection as they seek to balance multiple “bottom line” considerations and reconcile tensions between profit and purpose. Students will analyze the external environment using tools from strategic management and then actively create innovative, responsible, and financially sustainable business models/concepts that contribute to social and/or environmental justice. Student teams will develop a business model/concept that positively and sustainably impacts a specific target community or market.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-304
+            minimumGrade: C-
+          - courseId: BUS-305
+            minimumGrade: C-
+          - courseId: BUS-306
+            minimumGrade: C-
+          - courseId: BUS-307
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: BUS 304   and BUS 305   and BUS 306   with a C- or better) and (Junior or Senior Standing) and (Prereq or Coreq: BUS 307   )]"
+    minimumStanding: junior
+  BUS-410:
+    code: BUS 410
+    title: New Venture Design
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: An intensive experience in designing a startup business. Participants will develop skills in teamwork and presentation and learn tools for designing a startup business or social enterprise, including business models, prototyping, market validation and feasibility, and pitching the business. The course requires participation in Startup Factory (typically the first weekend of the Spring semester) and two additional half day sessions. Course not restricted to Business majors.
+    offered:
+      terms:
+        - spring
+  BUS-421:
+    code: BUS 421
+    title: Marketing Research
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: A practical, comprehensive, applied, and managerial approach to both quantitative and qualitative marketing research. Explores a step-by-step framework to defining problems, understanding ethical research considerations, preparing a research design and sampling, information gathering, interpretation, and analysis and report preparation in a domestic and international context.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: BUS-306
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BUS-204
+                minimumGrade: C-
+              - courseId: STAT-100
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: (( BUS 204   or STAT 100   ) and ( BUS 306   ) with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-422:
+    code: BUS 422
+    title: Professional Selling and Sales Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Developing selling and communications skills is critical for business professionals. The course explores how to build and maintain mutually beneficial relationships among various organizational forms, customers, investors and stakeholders. This is a hands-on course that includes role-playing, presentations and guest speakers. The course addresses how to improve sales force effectiveness using analytic tools, and issues in recruiting, training, motivating, compensating and retaining salespeople.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-306
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 306   ) and ( GE   Area 2) with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-423:
+    code: BUS 423
+    title: Advanced Professional Selling
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course focuses on major account selling, coordination between a salesperson and other functional areas, team selling, career management, and personal productivity. It also provides negotiation techniques and strategies relevant to individual, group, and organizational decision making as well as the development of skills to enhance the resolution of personal and professional conflicts. The course employs student presentations, role plays, and exposure to advanced software tools.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-306
+          - courseId: BUS-422
+    prerequisiteNotes:
+      - "(Prereq: BUS 306   and BUS 422   with C- or higher)"
+  BUS-425:
+    code: BUS 425
+    title: Global Marketing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines the global marketing environment, the differences and similarities in societies and cultures with regard to the legal and ethical implications of marketing strategies, developing global readiness, and global marketing strategies. Each student engages in a specific country’s market analysis, developing marketing strategies and marketing of a specific product or service.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-306
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 306   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-430:
+    code: BUS 430
+    title: Introduction to Social Entrepreneurship
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Social entrepreneurship is a rapidly developing field in which business and nonprofit leaders design and grow financially sustainable enterprises to address socio-environmental problems. As the lines blur between nonprofit organizations, government agencies, and businesses, it is critical to understand emerging opportunities and challenges in this interdisciplinary field. This introductory course builds on human-centered design approaches to problem-solving and draws from mini-case studies, guest lectures/speaker experiences, and student inquiry and presentations.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  BUS-433:
+    code: BUS 433
+    title: Management of Nonprofit Organizations
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Covers the principles and practices of managing a not-for-profit organization. Knowledge areas include strategic planning, human resource management, ethics and social responsibility, volunteer development, and influences of multiple stakeholders. Students examine actual practices of community organizations in education, health care, social services, and the arts.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: Junior or Senior Standing]"
+    minimumStanding: junior
+  BUS-434:
+    code: BUS 434
+    title: Policy/Regulation in Environmental Agribusiness
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines the complex agribusiness policy and regulatory environment. Students survey governmental policies and regulations, and analyze their effect on local agribusiness. Explores the process by which policies and regulations are made and enforced. Students address specific ethical and stakeholder issues such as water and land use, pesticides, food and worker safety.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: Junior OR Senior Standing)"
+    minimumStanding: junior
+  BUS-435:
+    code: BUS 435
+    title: Supply Chain Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Provides an introduction to principles of supply chain management, risks & uncertainties associated with various stages of the supply chain, inventory management, forecasting, material resource planning, cost-price & value analysis, purchasing & procurement with ethical & social responsibility. Emphasis on using contemporary tools in spatial mapping, data visualization and data analytics such as Microsoft Excel, Geographical Information Systems (GIS), SAS, and SAP etc.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - allOf:
+          - courseId: BUS-202
+            minimumGrade: C-
+          - courseId: BUS-299
+            minimumGrade: C-
+          - courseId: BUS-301
+            minimumGrade: C-
+          - courseId: BUS-309
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BUS-204
+                minimumGrade: C-
+              - courseId: STAT-100
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: (( BUS 204   or STAT 100   ) and ( BUS 202   ) and ( BUS 299   or BUS 301   with a C- or better) and (Prereq or Coreq: BUS 309   ) with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-436:
+    code: BUS 436
+    title: Agribusiness Strategy
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces key issues in agricultural strategy and marketing, including market structure, performance measures, strategic positioning and market dynamics. Competitive analysis of agribusiness and food/fruit/vegetable markets in terms of dynamics of pricing, entry/exit, and strategic commitment are presented.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-202
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: BUS 202   with a C- or better and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-437:
+    code: BUS 437
+    title: Applied Logistics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Provides an introduction to the concepts of intermodal transportation of commodities and produce. Discussion includes modes of transportation, incoterms, transaction risks, warehousing, and distribution as applied to transportation and logistics. Application of shipping and logistics to perishable commodities and cold chains is emphasized using contemporary tools in spatial mapping, data visualization, and data analytics (Microsoft Excel, Geographical Information Systems (GIS), SAS, SAP, etc.).
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: BUS-202
+            minimumGrade: C-
+          - courseId: BUS-299
+            minimumGrade: C-
+          - courseId: BUS-301
+            minimumGrade: C-
+          - courseId: BUS-309
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BUS-204
+                minimumGrade: C-
+              - courseId: STAT-100
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( BUS 204   or STAT 100   ) and BUS 202   and ( BUS 299   or BUS 301   ) with a C- or better) and (Prereq or Coreq: BUS 309   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-440:
+    code: BUS 440
+    title: Enterprise Resource Planning
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduction to integrated information systems that help firms improve business processes; and provide managers with accurate, consistent, and current data for making informed strategic decisions. Application of Operations Management, Purchasing/Procurement, Logistics, Sales, and Marketing strategies in a cross-functional environment using hands-on practice using an ERP platform such as SAP, or ERPsim Games or @risk by Palisade.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: BUS-202
+            minimumGrade: C-
+          - courseId: BUS-299
+            minimumGrade: C-
+          - courseId: BUS-301
+            minimumGrade: C-
+          - courseId: BUS-309
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BUS-204
+                minimumGrade: C-
+              - courseId: STAT-100
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: BUS 202   and ( BUS 204   or STAT 100   ) and ( BUS 299   or BUS 301   ) with a C- or better) and (Prereq or Coreq: BUS 309   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-441:
+    code: BUS 441
+    title: Project Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Focuses on techniques for managing technical projects using design, planning, and manufacturing or services projects using hands-on practice in Microsoft Project, Microsoft Excel, and simulations (e.g., @risk by Palisade). Students learn to manage resources, and critical activities for timely completion of projects while recognizing the trade-offs.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - allOf:
+          - courseId: BUS-202
+            minimumGrade: C-
+          - courseId: BUS-299
+            minimumGrade: C-
+          - courseId: BUS-301
+            minimumGrade: C-
+          - courseId: BUS-309
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BUS-204
+                minimumGrade: C-
+              - courseId: STAT-100
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: BUS 202   and ( BUS 204   or STAT 100   ) and ( BUS 299   or BUS 301   ) with a C- or better) and (Prereq or Coreq: BUS 309   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-442:
+    code: BUS 442
+    title: Purchasing and Procurement
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Principles of procurement management in supply chain management and logistics. Topics include evaluating suppliers on standardized metrics, cost-price analysis, negotiation, risk management, strategic decisions, and developments in the project procurement and supply chain fields, global sourcing, and contract management. Emphasis on the application using Microsoft Excel and Enterprise Resource Planning platforms such as SAP, ERPSim, @risk by Palisade.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: BUS-202
+            minimumGrade: C-
+          - courseId: BUS-299
+            minimumGrade: C-
+          - courseId: BUS-301
+            minimumGrade: C-
+          - courseId: BUS-309
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BUS-204
+                minimumGrade: C-
+              - courseId: STAT-100
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: BUS 202   and ( BUS 204   or STAT 100   ) and ( BUS 299   or BUS 301   ) with a C- or better) and (Prereq or Coreq: BUS 309   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-451:
+    code: BUS 451
+    title: Venture Formation/Finance
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines venture formation and growth following completion of a business plan. Focuses on marketing, accounting, financial, and human resource management issues. Students examine startup and growth management issues faced by real-life ventures, and meet with entrepreneurs, and investors. Students also receive guidance on approaching potential sources of capital.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-307
+            minimumGrade: C-
+          - courseId: BUS-310
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq or Coreq: BUS 307   and BUS 310   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-452:
+    code: BUS 452
+    title: Fixed Income Analysis
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Course provides an advanced treatment of investments in the field of fixed income analysis. Topics include analyses of different bond types (zero-coupon, bullets, annuities, etc), accrued interest, day-counting rules (money market and bond market conventions), yield to maturity and bond returns, term structure of interest rates, interest rate sensitivity of fixed income securities, and managing interest rate risk. Spreadsheet modeling introduced. Course includes student presentations.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-353
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 353   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-454:
+    code: BUS 454
+    title: Advanced Agribusiness Credit & Finance
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Analyzes the economics of agribusiness operations, and identifies all the potential sources of financing. Performs financial analysis of agricultural projects, using the same methodology as top agricultural leaders in the region. Evaluates various credit and capital market alternatives in terms of their likely financial impacts on borrowers. Interact directly with providers of financing. Highly recommended: take BUS 434 before BUS 454."
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-204
+            minimumGrade: C-
+          - courseId: BUS-307
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: (( BUS 204   or Elementary Stats equivalent) and ( BUS 307   ) with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-455:
+    code: BUS 455
+    title: Agribusiness Finance
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces financial analysis for enterprises operating within agribusiness. Focuses on the time value of money, ethical financial reporting, financial statement analysis, agribusiness company valuation, financing, cost of capital and related subjects. Encompasses opportunity costs, capital budgeting, financial risk for the firm, and measures to mitigate and manage risk using various strategies.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-205
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: (( BUS 205   or Managerial Accounting equivalent) with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-460:
+    code: BUS 460
+    title: Emerging Technology and Digital Organization
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: New technologies such as social media, big data analytics & Internet of Things are impacting the digital organizations. Students develop understanding of these technologies using tools such as SAS, IBM Watson, HTML5, web design & analytics that provide strategic advantages & explore issues such as security, privacy, encryption, & ethical issues.&nbsp;
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-308
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq or Coreq: BUS 308   with a c- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-462:
+    code: BUS 462
+    title: Web 3.0 Technology and Emerging Opportunities
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Web 3.0 is the next evolution of the current web that utilizes technologies, including blockchain technology, cryptocurrency, distributed identity, virtual reality, the Internet of things, and Artificial Intelligence to provide users and organizations with intelligent, immersive, and private web applications. In this course, students learn how to implement and manage these technologies and how to exploit the emerging business opportunities associated with Web 3.0 in a responsible manner.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-360
+    prerequisiteNotes:
+      - "[(Prereq: BUS 360   ) or (Instructor Consent Required)]"
+  BUS-463:
+    code: BUS 463
+    title: "E-Comm: Design & Development"
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Investigates models of designing an electronic commerce initiative, a crucial channel for market expansion. Students gain hands-on experience using the hardware, software, & applications in developing an e-commerce site, & learn ethical & legal responsibilities for data handling. Focuses on learning various technology & design issues, & building a prototype of an e-commerce site.&nbsp;
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-308
+            minimumGrade: C-
+          - courseId: BUS-363
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 308   and BUS 363 with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-465:
+    code: BUS 465
+    title: Systems Analysis and Design
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces the concepts of planning, analysis, and design of modern information systems (IS). Covers structured analysis/design, rapid prototyping techniques, and project management. Investigates the complex nature of IS, dynamic and iterative nature of systems development life cycle (SDLC), and the challenges in the socio-technical process of designing and implementing successful IS.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-299
+            minimumGrade: C-
+          - courseId: BUS-301
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq or Coreq: BUS 299   or BUS 301   with a C- or better)"
+  BUS-468:
+    code: BUS 468
+    title: Business Analytics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Business Analytics (BA) refers to the use of technologies to collect & analyze complex info about an organization for data-driven decision making. BA helps in strategic & operational decision making by improving performance, optimizing customer relations, & monitoring business activity. Course provides an understanding of the BA capabilities using SAS for data visualization, decision support, text analytics, ethics, & other topics.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-308
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq or Coreq: BUS 308   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-469:
+    code: BUS 469
+    title: Database Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores relational database design & implementation using database tools. Discusses data management concepts & terminology currently in practice, fundamentals of relational database management, data sharing, retrieval, data dictionaries, & queries using SQL. Students apply database software to create & query databases to solve real-world problems. Covers ethical issues such as DB security and privacy.&nbsp;
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-308
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 308   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-470:
+    code: BUS 470
+    title: Responsible Global Business and Social Entrepreneurship
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course examines the concepts, theories, and practice of responsible business (People, Ethics, Equity, Planet, and Profit), including how social entrepreneurs create and manage social enterprises and sustainable businesses. Responsible business principles, frameworks, and tools are integrated to design responsible business models, strategies, and activities and are applied to the design, production, commercialization, and marketing of innovative social businesses and products.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-310
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: BUS 310   with a C- or better and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-472:
+    code: BUS 472
+    title: Advanced Business Analytics and Visualization
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course provides an introduction to the Python programming language for students without prior programming experience. We cover the fundamental topics of Python following project-based pedagogy. Students will learn how to (a) clean, analyze, visualize, and test and validate data using supervised and unsupervised machine learning methods and (b) write Python programs to create games, Twitter bots, social media archivers and crawlers, and automation scripts. The projects of this course will help students learn and use the Python program to solve real-world scientific and business problems.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-468
+            minimumGrade: C-
+          - courseId: BUS-469
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: BUS 468 or BUS 469 with a C- or better)"
+  BUS-474:
+    code: BUS 474
+    title: Artificial Intelligence and Applications
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Artificial Intelligence (AI) is a technology that is transforming every industry. AI uses huge amounts of data to develop models that facilitate/automate decision-making for individuals and organizations. This course will discuss the basics of AI and apply AI methods in organizations. Students will learn to apply AI techniques in several areas including marketing, accounting, supply chain, and human resource management using large language models. Students will also learn the responsible and ethical use of AI.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-301
+    prerequisiteNotes:
+      - "(Prereq: BUS 301   or equivalent)"
+  BUS-481:
+    code: BUS 481
+    title: Accounting Systems
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course helps students learn to design and use accounting systems. Students will create entity-relationship models of accounting systems, depict those systems in flowcharts and business process diagrams, use spreadsheet and database software to analyze and report accounting information, and design, evaluate, and implement internal controls over transaction processing and systems design and implementation.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-383
+            minimumGrade: C-
+          - courseId: BUS-308
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( BUS 383   ) and ( BUS 308   ) with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-482:
+    code: BUS 482
+    title: Financial Auditing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Roles and responsibilities of independent auditor. Generally accepted auditing practices and standards; professional ethics. Auditing procedures, planning the audit, work paper preparation, report writing, rendering an opinion on financial statements. Requires use of spreadsheet software.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-383
+            minimumGrade: C-
+          - courseId: BUS-384
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 383   and BUS 384   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-483:
+    code: BUS 483
+    title: Operational Auditing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Technical, ethical, and policy aspects of operational auditing. Effectiveness of audits in the for-profit and not-for-profit sectors. Issues in operational auditing and case studies of how those issues have been addressed.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-383
+            minimumGrade: C-
+          - courseId: BUS-384
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: (BUS 383 and BUS 384 with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-484:
+    code: BUS 484
+    title: Advanced Accounting I
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Concentrates on the underlying theory and application of business combinations, consolidated financial statements, foreign currency transactions, partnerships, segment and interim reporting, SEC reporting, accounting for non-profit organizations and estates and trusts. Explores current FASB and GASB rulings as well as the Sarbanes-Oxley Act, and ethical/legal issues on account reporting.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-383
+            minimumGrade: C-
+          - courseId: BUS-384
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 383   and BUS 384   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-487:
+    code: BUS 487
+    title: Ethics for Accountants
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Extends ethical frameworks introduced in prerequisite courses. Students learn how ethical reasoning and the core ethical values of integrity, objectivity, and independence are integrated into the professional practice of accounting. Ethical dimensions of accountability and responsibility are examined at the personal, institutional, and professional levels.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-300S
+            minimumGrade: C-
+          - courseId: BUS-304
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 300S   and BUS 304   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-493:
+    code: BUS 493
+    title: International Business
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Focuses on management concepts and practices across cultures and geographic boundaries; the impact of multinational corporations (MNCs) on the global economy; comparative leadership studies; global competitive strategies; intercultural communication; political risk analyses; negotiations; human resources across cultures; and ethics and social responsibility.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-305
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 305   ) and (GWAR) with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-494:
+    code: BUS 494
+    title: International Business & Entrepreneurship Consulting
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This project-based course allows students to apply international business knowledge and skills to a concrete business situation. Examples of experiential learning projects may include consulting projects for a corporate client or developing an international new venture.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  BUS-495:
+    code: BUS 495
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in the major. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  BUS-497:
+    code: BUS 497
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Independent study under the direction of a faculty member. The student must prepare a study proposal approved by the appropriate faculty member and major advisor prior to registration.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-305
+            minimumGrade: C-
+          - courseId: BUS-306
+            minimumGrade: C-
+          - courseId: BUS-307
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 305   and BUS 306   and BUS 307   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-498:
+    code: BUS 498
+    title: Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Provides a structured work experience. Course faculty must approve objectives, sites & internship agreements. Students work with course faculty throughout the internship. According to BUS school policy only paid internships are accepted. Students must work a minimum of 200 hours during the term. Course faculty approval required. Must secure an internship position before the course starts.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-304
+            minimumGrade: C-
+          - courseId: BUS-305
+            minimumGrade: C-
+          - courseId: BUS-306
+            minimumGrade: C-
+          - courseId: BUS-307
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BUS 304   and BUS 305   and BUS 306   and BUS 307   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  BUS-499:
+    code: BUS 499
+    title: Strategic Management-Senior Capstone
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This culminating course integrates all BUS core courses within a strategic management framework and applies this knowledge via experiential learning. Students apply business knowledge and the strategic management process to identify and provide solutions to business problems within a client organization.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-305
+            minimumGrade: C-
+          - courseId: BUS-306
+            minimumGrade: C-
+          - courseId: BUS-307
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: BUS 305   and BUS 306   and BUS 307   with a C- or better) and (Senior Standing)]"
+  BUS-568:
+    code: BUS 568
+    title: Business Intelligence and Analytics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: An executive leadership perspective to business intelligence & analytics (BI&A) that provides insights for evaluation, strategic alignment, planning & investment in BI&A resources & people; addresses the governance of processes for BI&A deployments in business & government. The course reinforces the role of analytics for sound ethical decision-making strategies for creating a culture of evidence-based organization performance and innovation.&nbsp;
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - Restricted to Senior and Graduate Level Standing Only
+  BUS-569:
+    code: BUS 569
+    title: Introduction to Data Mining
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Social media is generating vast amounts of structured and unstructured data for organizations at an incredible rate. Data mining techniques are utilized in organizations to store, manage, and analyze this data to get useful and actionable intelligence for decision making. Data mining applications are used widely in marketing, banking, fraud detection, and finance. Topics will include data warehousing, dimensional modeling and data mining.
+    offered:
+      availability: periodic
+    prerequisites:
+      - courseId: BUS-468
+    prerequisiteNotes:
+      - "(Prereq: BUS 468   )"
+  BUS-570:
+    code: BUS 570
+    title: Advanced Business Analytics and Visualization
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Social media technologies generate data which is unstructured in nature and require methodologies that can reveal hidden patterns and meaning. Data visualization can assist organizations in gaining valuable, actionable insight to allow an organization to better communicate and interact with its stakeholders. Topics range from text and stream mining, visualization, Hadoop, social media, NoSQL, GIS,and includes business case studies.
+    offered:
+      availability: periodic
+    prerequisites:
+      - courseId: BUS-468
+    prerequisiteNotes:
+      - "(Prereq: BUS 468   )"
+  BUS-582:
+    code: BUS 582
+    title: Auditing & Assurance
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Course focuses on auditing theory, practice, philosophy & environment of the auditing profession. Topics include general auditing standards, professional conduct & ethics, legal liability, audit evidence, audit planning, internal control, auditing sampling, risk assessment, & accounts assurance. Examines SOX and SEC requirements for public companies, applying critical thinking for ethical dilemmas faced by auditors.&nbsp;
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - Restricted to Senior and Graduate Level Standing Only
+  BUS-586:
+    code: BUS 586
+    title: Accounting Information Systems
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines the accounting data that is collected, stored, and processed by computer technology under GAAP accounting practices. Analyzes the efficiency & effectiveness of information technology infrastructure & the operations. Integrates SOX and discuss the ethics, fraud, documents flow, segregation of duties, computer processing, including the risk of cloud computing, and the related control activities in a corporation.&nbsp;
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - Restricted to Senior and Graduate Level Standing Only
+  BUS-588:
+    code: BUS 588
+    title: Ethics for Accounting Professionals
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines the AICPA Code of Professional Conduct as well as the additional requirements for auditors of public companies expressed in the Institute of Internal Auditors Codes of Ethics. Develops critical thinking frameworks to assess cases of ethical dilemmas frequently encountered by accounting professionals. Explores legal requirements & liabilities that govern the accounting profession.&nbsp;
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - Restricted to Senior and Graduate Level Standing Only
+  BUS-595:
+    code: BUS 595
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in the major. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  BUS-597:
+    code: BUS 597
+    title: "Independent Study: Grad Level"
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Graduate level independent study under the direction of a faculty member. The student must prepare a study proposal approved by the appropriate faculty member and graduate advisor prior to registration.
+    offered:
+      availability: periodic
+  BUS-600:
+    code: BUS 600
+    title: Graduate Proseminar
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduction to e-commerce, information technology for businesses, and research methodology. Cross-listed as CST 600.
+    offered:
+      terms:
+        - fall
+        - spring
+  BUS-601:
+    code: BUS 601
+    title: Responsible Business Communication
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: The course fosters proficiency in business writing/speaking with emphasis on grammar, sentence structure, critical thinking (thought formation), information literacy and presentation skills. Assignments introduce Responsible Business concepts, communication in real-world business situations and enable students to strengthen their ability to write and speak effectively in the workplace.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MBA Majors Only)
+  BUS-602:
+    code: BUS 602
+    title: Micro-Macro Economics
+    teachingStatus: active
+    credits:
+      minimum: 6
+      maximum: 6
+    description: "Students will become familiar with microeconomic as well as macroeconomic concepts relevant to managerial decision making. Topics will include: demand and supply analysis, consumer demand theory, production theory, price discrimination, perfect competition, externalities and public goods, risk aversion and risk sharing, hidden information and market signaling, moral hazard and incentives, rudimentary game theory, reputation and credibility, and transaction cost economics."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Restricted to MBA Majors Only)
+  BUS-603:
+    code: BUS 603
+    title: Macro Economics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: The course is designed to equip students with the principles and the analytical tools of Macroeconomics. Students will investigate the economic concepts of output, income, the nature and role of money; and the impact of government expenditure and taxation on the economy. Students will examine economic theory dealing with the aggregate economic problems of employment, inflation, business cycles and growth.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Restricted to MBA Majors Only)
+  BUS-604:
+    code: BUS 604
+    title: Micro Economics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "The primary goal is to explain and forecast the behavior of consumers and firms under various economic parameters and constraints. Topics include: supply and demand; individual and market demand; consumer behavior, production, cost functions, and competitive and monopolistic markets and strategies."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Restricted to MBA Majors Only)
+  BUS-605:
+    code: BUS 605
+    title: MBA Research Methods
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "The focus of this course is on assisting practitioners in solving business problems using various statistical and research methods. Topics include: basic descriptive and inferential statistics; appropriate interpretation of statistical results as they apply to the real-world presentation of data; research design and data analysis; inferential statistics; normal distribution using the z - test, t - testing, analysis of variance; and simple regression."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MBA Majors Only)
+  BUS-606:
+    code: BUS 606
+    title: Decision-making Methods for Managers
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: In this course, students will get exposure to and practice the use of quantitative tools for aiding managerial decision-making in the corporate and public sectors. Students will be introduced to several quantitative models proven effective in solving classes of business and public sector problems. Students will also become proficient in the use of Excel for managerial decision-making.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-204
+    prerequisiteNotes:
+      - "(Prereq: BUS 204   or equivalent) (Restricted to MBA Majors Only)"
+  BUS-610:
+    code: BUS 610
+    title: Economics for Business
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course teaches students the economic principles used in the business decision and strategy process. It will enable students to understand why firms and markets exist and how they function. How market conditions affect managerial business decisions concerning production, product pricing, and marketing strategy. Students will be introduced to Business Cycle Theory and how the macro economy impacts business decisions.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MBA students only)
+  BUS-625:
+    code: BUS 625
+    title: Organization and Responsible Leadership
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students analyze organizational effectiveness using theories of leadership, management and organizational behavior. Students study leadership in a responsible business (Profit, People, Planet, Ethics, and Equity) context. Students reflect upon their own leadership styles and those of other leaders to determine how to shape their own management practice to improve their effectiveness.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MBA students only)
+  BUS-626:
+    code: BUS 626
+    title: Marketing and Entrepreneurship
+    teachingStatus: active
+    credits:
+      minimum: 6
+      maximum: 6
+    description: Students integrate literature (research & practice), historical perspectives, analytical tools, & theoretical frameworks to design & conduct a market analysis. Students make marketing-related decisions based on identification & analysis of target markets, marketing mix variables, & market feasibility. Students identify & analyze high potential opportunities & develop a plan to exploit those opportunities. Students contribute to the startup or growth of entrepreneurial/intrapreneurial ventures.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Restricted to MBA students only)
+  BUS-631:
+    code: BUS 631
+    title: Global Business
+    teachingStatus: active
+    credits:
+      minimum: 6
+      maximum: 6
+    description: "Students develop an “outside/in” perspective: seeing the United States, U.S.-based companies, and foreign-headquartered multinational corporations from the perspective of multi-varied constituencies around the world. Many of the readings are from Africa to provide the diversity of thought needed to break the barriers of U.S.-centric thinking. International governance structures are highlighted in the course. A two-country negotiation case applies what students have learned."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Restricted to MBA students only)
+  BUS-632:
+    code: BUS 632
+    title: Organization & Leadership
+    teachingStatus: active
+    credits:
+      minimum: 6
+      maximum: 6
+    description: Students analyze organizational effectiveness using theories of leadership, management, and organizational behavior. Students study leadership within the context of sensitivity to cross-cultural differences, firm culture, and employee motivation. Students reflect upon their own leadership styles and that of other leaders to determine how to shape their own management practice to improve their effectiveness. Students apply frameworks for thinking strategically about human resources.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - (Restricted to MBA students only)
+  BUS-633:
+    code: BUS 633
+    title: Information Systems and Business Analytics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Uses an executive information systems perspective to explore the emerging technologies that impact enterprise strategy. Focus is on understanding business analytics and its role in managing processes, resources, and people. This course reinforces the role of business analytics for creating a culture of data-driven decision-making and also addresses ethical and data governance issues in embedding business analytics in managerial decision-making.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MBA students only)
+  BUS-648:
+    code: BUS 648
+    title: Accounting for Managers
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Introduces financial and managerial accounting as tools for responsible managers. Students learn to read, understand, and interpret financial statements as they evaluate organizations’ liquidity, profitability, and leverage. Students learn to use internal reports, budgets, and other accounting information to plan and control operations and make both tactical and strategic decisions.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-203
+    prerequisiteNotes:
+      - "(Prereq: BUS 203   or equivalent) (Restricted to MBA students only)"
+  BUS-652:
+    code: BUS 652
+    title: Financial Management
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will learn about the time value of money, project and security valuation. They will develop both the skills necessary to make financial decisions, and the ability to understand their impact on a responsible business and its stakeholders. This course will introduce and reinforce high-level financial concepts and principles that will serve as a foundation for financial management decisions.
+    offered:
+      availability: periodic
+    prerequisites:
+      - courseId: BUS-307
+    prerequisiteNotes:
+      - "(Prereq: BUS 307   ) (Restricted to MBA Students Only)"
+  BUS-661:
+    code: BUS 661
+    title: Innovation and Technology Management
+    teachingStatus: active
+    credits:
+      minimum: 6
+      maximum: 6
+    description: "Students study the importance of innovation for business success. Innovation is analyzed from three perspectives: products, processes, and organizations. Students understand the intricacies of developing new products, processes, and organizations. Students explore how information-based systems are used to address the challenges of adding value to organizations. Principles of operations management are examined to improve strategies, processes, and decision making to meet customer needs."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Restricted to MBA Majors Only)
+  BUS-662:
+    code: BUS 662
+    title: Marketing Management
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students apply marketing frameworks to develop integrated marketing strategies that leverage market opportunities or address identified problems. Students make responsible marketing decisions based on analyses of target markets, while considering contexts and elements of the marketing mix to offer value to customers.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MBA Majors Only)
+  BUS-670:
+    code: BUS 670
+    title: Database Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines database design and implementation using relational database management system tools. Discusses data management concepts and terminology currently in practice in the business world, including data and database administration, fundamentals of database management systems and models (network, hierarchical and relational), data sharing, retrieval, data dictionaries, data proliferation, data integrity, and queries using SQL.
+    offered:
+      availability: periodic
+  BUS-671:
+    code: BUS 671
+    title: Operations and Supply Chain Management
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course reviews operations strategies in a global environment for optimal allocation of resources (material and personnel) by firms to gain competitive advantage in the delivery of products (goods and services). Students will develop the ability to forecast demand; manage projects, inventory, revenue, supply chain risks, capacity planning, procurement, and customer relationship management.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MBA Majors Only)
+  BUS-681:
+    code: BUS 681
+    title: MBA Accounting
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Course examines accounting concepts, the accounting model, measurement processes, financial statements, financial analysis, the accounting cycle, monetary and fixed assets, inventory, current and long-term liabilities and equity structure. Students investigate internal reporting for use in planning and control, in making non-routine decisions and in formulating major plans and policies. Course covers cost-profit relationships, budgets, and standard variance analysis.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MBA Majors Only)
+  BUS-682:
+    code: BUS 682
+    title: Global Sustainable Business
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, you will gain an understanding of today’s global economy and the people, institutions, and environmental elements that underlie international and global commerce. You will expand your ability to manage diversity and national differences. You will learn how to manage a responsible firm’s quintuple bottom line (Profit, People, Planet, Ethics, and Equity) in a global context of interconnectedness.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MBA Majors Only)
+  BUS-684:
+    code: BUS 684
+    title: Doing Business in World Regions
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This is a faculty-supervised project to enhance global awareness and cultural sensitivity by applying business knowledge acquired in previous courses to an international responsible business issue. The requirement can be fulfilled either through a short study trip abroad (when available) or through a written assignment.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MBA Majors Only)
+  BUS-687:
+    code: BUS 687
+    title: Accounting and Finance
+    teachingStatus: active
+    credits:
+      minimum: 6
+      maximum: 6
+    description: "Students: read, understand, & use corp. financial statements & published accounting reports; examine alternative costing methods & how cost information can be used for decision making; explore both financial & non-financial performance measures for evaluating business strategies & business unit success; prepare & analyze financial statements & projections for an investment; create a corporation, and/or a proposed project; and evaluate resources of financing for new & existing ventures."
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MBA Majors Only)
+  BUS-691:
+    code: BUS 691
+    title: Business Strategy
+    teachingStatus: active
+    credits:
+      minimum: 6
+      maximum: 6
+    description: As the culminating experience of the MBA program, students integrate the knowledge from earlier courses and apply it in the same manner demanded of business, government, and non-profit general managers. As an experiential learning exercise, students plan, organize, implement, and control a business in a competitive, simulated market. Simulated internal and external data are analyzed to formulate the vision, mission, objectives, strategies, and policies needed to implement a business strategy.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MBA Majors Only)
+  BUS-692:
+    code: BUS 692
+    title: Professional Development Seminar
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students will prepare to use the MBA to promote their career by working on value clarification, goal setting, networking, resume and LinkedIn profiles, impression management, and interviewing. Students will create clear and meaningful goals for post-MBA graduation and have a plan to successfully execute them.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MBA Majors Only)
+  BUS-694:
+    code: BUS 694
+    title: Business Strategy and Entrepreneurship
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course addresses the formulation and implementation of a responsible business strategy to create, sustain and renew competitive advantage for both established firms and startups. As an application of the concepts, students will design and validate innovative entrepreneurial and corporate business models.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MBA Majors Only)
+  BUS-695:
+    code: BUS 695
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in the major; must have a research component. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  BUS-696:
+    code: BUS 696
+    title: Hybrid EMBA Study Sessions
+    teachingStatus: active
+    credits:
+      minimum: 0
+      maximum: 0
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MBA Majors Only)
+  BUS-697:
+    code: BUS 697
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 6
+    description: Graduate independent study under the direction of a tenure track faculty member. The student must prepare a study proposal approved by the appropriate faculty member and graduate adviser prior to registration. Must have a research component.
+    offered:
+      availability: periodic
+  BUS-698:
+    code: BUS 698
+    title: Responsible Business Capstone
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will integrate knowledge gained in previous courses and apply it to an experiential learning project focused on social entrepreneurship. They will deepen their understanding of responsible business by researching and writing a business plan for a social business venture of their choice.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MBA Majors Only)
+  BUS-699:
+    code: BUS 699
+    title: Graduate Capstone
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: A capstone contributes to the disciplines or the professions by adding to technical/professional knowledge or by providing an original application of technical/professional knowledge in both management and information technology disciplines. Examples include a field study, a project, applied research, or a professional article of publishable quality. Students also master basic principles of strategic planning, including stakeholder management. Cross-listed as CST 699   .
+    offered:
+      availability: periodic

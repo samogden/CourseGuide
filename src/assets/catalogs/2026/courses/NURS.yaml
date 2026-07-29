@@ -1,0 +1,181 @@
+schemaVersion: 1
+prefix: NURS
+courses:
+  NURS-300:
+    code: NURS 300
+    title: Professional Nursing Proseminar
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduction to contemporary issues in healthcare with an emphasis on strengthening written and oral communication skills in the discipline of nursing. Topics will include building resilience through practicing mindfulness techniques, professional identity formation, social determinants of health, health equities, structural racism, diversity, equity and inclusion and ethics.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Department of Nursing Consent Required)
+  NURS-301:
+    code: NURS 301
+    title: Pathophysiology for Clinical Practice
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Course builds upon student’s prior knowledge of disease processes throughout the lifespan including cellular function, genomics, and integrative body functions. Focus on pathophysiologic rationale for health related interventions. (Department of Nursing consent required.)
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better"
+  NURS-326:
+    code: NURS 326
+    title: Professional Development for Nursing Practice
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course critically examines the use of health information and communication technology to improve care coordination, quality and safety within complex healthcare systems, especially focused on vulnerable populations. Other content areas include accountability, telehealth, quality improvement principles, managing transitions among the four spheres of care, and relevant legal, ethical, and regulatory standards.
+    offered:
+      terms:
+        - fall
+        - spring
+  NURS-350:
+    code: NURS 350
+    title: Healthcare Assessment within the Latino Population
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course will enable student to integrate principles of cultural relevance using Spanish language skills in conducting physical/psychosocial assessments, history taking, and healthcare education amongst Latino sub-groups and their families. Students will apply language skills that are appropriate to communicate with patients¿ healthcare needs, especially anatomy. This course will serve as an introduction to understanding the various cultural sub-groups within the Latino population. Previous Spanish language courses encouraged, but not required. Spanish is taught within a professional and cultural context.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "[Prereq; ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Department of Nursing consent required)]"
+  NURS-375:
+    code: NURS 375
+    title: Health Policy, Politics and Power
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Focuses on understanding the influence of how health-related policies and local and global politics impact populations’ health and well-being. Emphasis on development of nurses’ individual and collective advocacy to advance equitable population health policy. Other content areas include accountability, legal, ethical and regulatory standards, cost-effectiveness of care and diversity, equity and inclusion.
+    offered:
+      terms:
+        - fall
+        - spring
+  NURS-385:
+    code: NURS 385
+    title: "Facing Mortality: Self-Reflection, Compassion, and Care"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course will examine issues of life and death from multiple perspectives, including financial, political, sociological, psychological and physiological contexts. The course will guide students through self-reflection activities to better understand both their own and the larger prevailing beliefs about death to live more fully with empathy and compassion. Through deepening students’ self-awareness, this course aims to universalize and humanize death, dying, grief and hope in contemporary society. Students will build skills to engage with themselves and others on issues of death, loss, and hope. This course is open to nursing and non-nursing majors.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[(Prereq: GE   Areas 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  NURS-395:
+    code: NURS 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in Nursing.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to NURS Majors Only)
+  NURS-402:
+    code: NURS 402
+    title: Comprehensive Health Assessment Across the Lifespan
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "This course advances students’ prior knowledge of health assessment including: history taking, therapeutic communication, physical examination/diagnostic testing, motivational interviewing, and applying principles of health promotion and patient education across the lifespan."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: NURS-301
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( NURS 301   ) and ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  NURS-430:
+    code: NURS 430
+    title: Research and Evidence-Based Practice for The Nursing Profession
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Emphasis on application of research methodology to utilize evidence by developing critical reasoning skills needed to comprehend formal scientific reports. Development of critical judgement skills to critique/appraise current/relevant healthcare research to effectively analyze and evaluate multiple perspectives for making sound clinical decisions. Communicate evidence effectively/ethically in written reports and oral presentations for nursing discipline.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Department of Nursing Consent Required)
+  NURS-440:
+    code: NURS 440
+    title: Nursing Leadership and Systems-Based Practice
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course expands nurses’ capacity for leadership on interdisciplinary teams through understanding nursing management models, leadership theories and best practices within complex, evolving healthcare systems. Content areas include the economics of healthcare delivery systems, collaborating across the continuum of care, and effective communication practices.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Department of Nursing Consent Required)
+  NURS-497:
+    code: NURS 497
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to NURS Majors Only)
+  NURS-498S:
+    code: NURS 498S
+    title: Community Health Nursing Practicum
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Application of population health, service learning, and multicultural community building concepts. Student applies global health, health promotion and disease prevention, and social determinants of health concepts in diverse, underserved local populations to build skills to engage in social change and contribute to community well-being. Student work focuses on social justice, cultural equity, health inequities, and civic responsibility. Requires 90 hours of service.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Department Consent Required)
+  NURS-499:
+    code: NURS 499
+    title: Community Health Nursing
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Theory course in community development, synthesizing community health nursing concepts necessary to manage and/or deliver care to individuals, families, and populations across lifespan. Student integrates concepts that inform practice in diverse local populations by applying global health, health promotion/disease prevention constructs. Focuses on social justice/equity, cultural equity, cultural humility and civic responsibility.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"

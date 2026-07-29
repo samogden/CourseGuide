@@ -1,0 +1,403 @@
+schemaVersion: 1
+prefix: SPSY
+courses:
+  SPSY-500:
+    code: SPSY 500
+    title: Year One School Psychology Clinical Practice
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 5
+    description: School Psychology candidates are required to spend time conducting interventions and evaluating data. The clinical experience is designed to orient students to the school psychology profession. The fall semester will focus on evidence based academic intervention and the spring will focus on mental health intervention.
+    offered:
+      terms:
+        - fall
+        - spring
+  SPSY-510:
+    code: SPSY 510
+    title: Assessment Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: This course provides practical experience on cognitive, academic, and statistical measures and prepares students to understand and learn the process of assessment. Students are expected to master the administration, scoring, and interpretation of specific cognitive and achievement measures to a high level. Training further develop and refine skills and to apply them to diverse individuals in a variety of settings.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: SPSY-550
+      - courseId: SPSY-564
+      - courseId: SPSY-636
+      - courseId: MAE-621
+    prerequisiteNotes:
+      - "[(Prereq: SPSY 550   ) and (Coreq: SPSY 564   and SPSY 636   and MAE 621   )]"
+  SPSY-520:
+    code: SPSY 520
+    title: Psychopathology in Schools
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This seminar is designed to facilitate understanding the diagnositc and educational basis of mental health disorders and disablities. This course targets future and current mental health professionals who work/will work with children and adolescents. A primary focus of the course will be on disorders that are typically observed by psychologists working in schools and other applied settings.It is designed to provide an overview of historical and current perspectives on childhood psychopathology, including current diagnostic and classification systems with with emphasis on specific disorders that overlap with special education identification. Students will build competencies toward understanding child and adolescent psychological disorders, including how assessment, decision making, and intervention can be unique to school systems. Illustrative lectures, discussions, case studies, applied activities, and student-led discussions and presentations will be used to facilitate learning.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-320
+    prerequisiteNotes:
+      - "[(Prereq: PSY 320   ) or (Graduate Standing)]"
+  SPSY-540:
+    code: SPSY 540
+    title: Counseling in Schools
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This graduate foundation course emphasizes the development, resilience, behavioral assessment, counseling, and functioning of children aged 0-22 years from a cross-cultural perspective utilizing an ecological framework. Special topics of counseling skills, family acculturation, immigration, generational conflicts, gender, ability, poverty, and human sexuality will be explored using a DisCrit framework. Students will engage in activities that help them to know and understand themselves as practitioners and counselors and thus be better able to engage students as experts of their own experiences, applying strategies that enhance self-awareness and self-regulation to manage the influence of personal biases and values in working with diverse students. Students will also be introduced to knowledge, values, and skills that help them understand engagement, assessment and counseling as dynamic and interactive processes of school psychology with, and on behalf of, diverse individuals, families, groups, organizations, and communities. Students will be instructed to critically evaluate and apply this knowledge in their work with these various populations. Activities and experiences in this course will focus on students gaining awareness about how their personal experiences and affective reactions may affect their engagement, assessment, counseling, and decision-making with respect to interventions in school psychological practice. Students will gain knowledge about evidence-based practices to providing counseling services within the school setting.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: SPSY-550
+    prerequisiteNotes:
+      - "(Prereq: SPSY 550   )"
+  SPSY-550:
+    code: SPSY 550
+    title: Role and Function of the School Psychologist
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course introduces to the practice of school psychology and provides an overview of the history and development of school psychology; roles of the school psych; direct and indirect service delivery; standards of practice, codes of conduct and ethical decision making; laws and legal issues that influence the practice of psychology; and applications of research to practice. Emphasis is placed on the practice of school psychology in the context of social justice in diverse school communities.
+  SPSY-560:
+    code: SPSY 560
+    title: Consultation and Intervention
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course examines the theory and practice of prevention, intervention, and consultation in schools. This course teaches students to design, implement, and evaluate school-based psychological services, reviews prevention models to promote academic success of all students; and introduces strategies for targeted intervention. Field-based experiences are required for assignment completion.
+    offered:
+      availability: periodic
+    prerequisites:
+      - courseId: SPSY-550
+    prerequisiteNotes:
+      - "(Prereq: SPSY 550   )"
+  SPSY-564:
+    code: SPSY 564
+    title: Formal Assessment of Diverse Student Populations
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examines the role of assessment in identification of disabilities and planning for implementing curriculum and instruction. Students learn to interpret and use assessment info taking into consideration the personal, cultural, linguistic, educational, and environmental background. The course ties assessment to preferred instructional practices in order to meet the individual educational program (IEP) goals to ensure success. Field-based experiences required.
+    offered:
+      terms:
+        - fall
+  SPSY-566:
+    code: SPSY 566
+    title: Behavior Intervention and Support
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduction to the principles and application of behavior analysis with individuals with academic, social and/or behavioral needs. Cross list with SPED 566   .
+    offered:
+      terms:
+        - fall
+  SPSY-578:
+    code: SPSY 578
+    title: Seminar in Behavior Analysis
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This seminar focuses on in-depth practical experience in professional application of Applied Behavior Analysis. Students conduct case study projects working directly with K-12 students; developing and monitoring Behavior Intervention Plans; conducting experimental analyses related to intervention and instruction programs; and conducting data analysis procedures to monitor student progress. Includes both coursework and fieldwork.
+    offered:
+      terms:
+        - spring
+  SPSY-579:
+    code: SPSY 579
+    title: Professionalism and Supervision in Behavior Analysis
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course provides instruction in the ethical and professional conduct of behavior analysts, along with effective supervision and management approaches to overseeing others in the process of conducting assessment procedures and implementing intervention and instructional strategies derived from the field of behavior analysis.
+  SPSY-595:
+    code: SPSY 595
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    offered:
+      availability: periodic
+  SPSY-611:
+    code: SPSY 611
+    title: Multi Tiered Assessment of Social Emotional Learning
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course teaches theoretical foundations of emotional and behavioral disorders; diagnostic/eligibility criteria for emotional and behavioral disorders; & social/emotional assessment instruments and procedures. Students will be introduced to early identification and intervention strategies for social/emotional functioning. Candidates will assess K-12 students and link interventions. Includes both coursework and fieldwork.&nbsp;
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: SPSY-550
+      - courseId: SPSY-660A
+    prerequisiteNotes:
+      - "[(Prereq: SPSY 550   ) and (Coreq: SPSY 660A   )]"
+  SPSY-615:
+    code: SPSY 615
+    title: Culturally and Linguistically Valid Assessment and Ethical Service Delivery
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course prepares participants to conduct fair, valid, and contextually grounded assessments of multilingual learners. Emphasis is placed on understanding typical bilingual development, second language acquisition stages, and differentiation from speech-language or learning disorders. Participants will learn to integrate qualitative and quantitative data, assess language proficiency, and select culturally and linguistically appropriate tools. The course includes legal and ethical mandates, with focus on state and federal compliance and professional standards. Participants will explore limitations of standardized tools and strategies to reduce assessment bias, including consultation practices that consider systemic and contextual variables.
+  SPSY-620:
+    code: SPSY 620
+    title: Bilingual Coaching and Professional Portfolio
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This culminating seminar provides individualized coaching and guided practice to support candidates’ integration of bilingual competencies into their professional practice. Candidates work with bilingual supervisors or coaches to refine their bilingual communication, consultation, and advocacy skills. The course ensures that candidates receive structured bilingual supervision during practicum or internship experiences.
+    offered:
+      terms:
+        - fall
+  SPSY-636:
+    code: SPSY 636
+    title: Cognitive Development in a Cultural Context
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course develops knowledge of cognitive assessment with the underlying frameworks of development, language, and culture. The course focuses on cognitive function as a construct (e.g., cognitive factors, skills, abilities, and processes). Includes both coursework and fieldwork.
+    offered:
+      availability: periodic
+    prerequisites:
+      - allOf:
+          - courseId: SPSY-550
+          - anyOf:
+              - courseId: SPSY-564
+              - courseId: SPED-564
+    prerequisiteNotes:
+      - "[(Prereq: ( SPSY 564   OR SPED 564   ) AND SPSY 550   )]"
+  SPSY-642:
+    code: SPSY 642
+    title: Multicultural Community Partnerships
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course allows candidates to develop an awareness of the community surrounding their educational setting as well as the resources in schools, districts and counties that relate to forming multicultural family, school, and community partnerships. Additionally, candidates will develop a skill set to eliminate systemic forms of racism, sexism, classism, homophobia and ableism in order to provide equitable, challenging and safe school settings for all students. Includes coursework and fieldwork.
+    offered:
+      terms:
+        - spring
+  SPSY-645:
+    code: SPSY 645
+    title: Educational Policy and Advocacy for Students and Families in P-12
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course explores educational policies in schools including educational law, resource allocations, interagency relationships, and tools for advocacy. The course focuses on understanding California and federal codes, case law, policies, and precedent and analysis of key legal concepts and application of law. An additional focus is the issues of and rights of migrant youth in schools. Students examine trends in law and the initiation of educational law to positively influence education. Crosslist with MAE 645   .
+    offered:
+      availability: periodic
+  SPSY-660:
+    code: SPSY 660
+    title: School Psychology Interventions with Practicum
+    teachingStatus: active
+    credits:
+      minimum: 6
+      maximum: 6
+    description: This course is a synthesis of all previous work and includes course work and supervised field work in schools and clinic. This includes researching assessment tools before using them, diagnosing cases, and preparing intervention strategies for home and school, consulting with others, and researching. Therefore, in addition to cases, attend group and individual supervisions, consult with one another, and research assessments and interventions when necessary.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: SPSY-550
+      - courseId: SPED-568
+      - courseId: MAE-621
+      - courseId: SPSY-540
+      - courseId: SPSY-564
+      - courseId: SPSY-500
+      - courseId: SW-564
+      - courseId: ED-510
+      - courseId: SPSY-686
+      - courseId: SPSY-636
+    prerequisiteNotes:
+      - "(Prereqs: SPSY 550   and SPED 568   and MAE 621   and SPSY 540   and SPSY 564   and SPSY 500   and SW 564   and ED 510   and SPSY 686   and SPSY 636   )"
+  SPSY-660A:
+    code: SPSY 660A
+    title: "Practicum and Intervention: A"
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 5
+    description: This course is a synthesis of all previous work and includes course work and supervised field work in schools and clinic. This includes researching assessment tools before using them, diagnosing cases, and preparing intervention strategies for home and school in consultation with others.. In addition to cases, students will attend group and individual supervisions, consult with one another, and research assessments and interventions when necessary.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: SPSY-550
+      - courseId: SPED-568
+      - courseId: MAE-621
+      - courseId: SPSY-540
+      - courseId: SPSY-564
+      - courseId: SPSY-500
+      - courseId: SW-564
+      - courseId: ED-510
+      - courseId: SPSY-686
+      - courseId: SPSY-636
+    prerequisiteNotes:
+      - "(Prereq: SPSY 550   and SPED 568   and MAE 621   and SPSY 540   and SPSY 564   and SPSY 500   and SW 564   and ED 510   and SPSY 686   and SPSY 636   )"
+  SPSY-660B:
+    code: SPSY 660B
+    title: "Practicum and Intervention: B"
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 5
+    description: This course builds upon SPSY 660A and further refines students skills as they move towards their year long internship.This includes researching assessment tools before using them, diagnosing cases, and preparing intervention strategies for home and school, consulting with others, and researching. Therefore, in addition to cases, attend group and individual supervisions, consult with one another, and research assessments and interventions when necessary.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: SPSY-660A
+    prerequisiteNotes:
+      - "(Prereq: SPSY 660A   )"
+  SPSY-670:
+    code: SPSY 670
+    title: Internship in School Psychology I
+    teachingStatus: active
+    credits:
+      minimum: 6
+      maximum: 6
+    description: As the culminating component in the school psych program, this field experience will be done in a public school setting under the supervision. Students will attend a seminar on campus to discuss their experiences, present psychological; evaluations and interventions, and engage in mutual problem solving relative to dilemmas and issues encountered in the field experience. Prerequisites include completion of all required courses and permission of the internship instructor.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: SPSY-660
+      - courseId: SPSY-660A
+      - courseId: SPSY-660B
+      - courseId: SPSY-670A
+    prerequisiteNotes:
+      - "[(Prereqs: SPSY 660   and SPSY 660A   and SPSY 660B   ) and (Coreq: SPSY 670A   )]"
+  SPSY-670A:
+    code: SPSY 670A
+    title: Internship in School Psychology I Seminar
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Seminar to accompany school psychology internship during first semester of the one-year internship. Focus on adaptive, ethical, and professional competence. Prerequisite includes completion of all required courses.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: SPSY-660
+      - courseId: SPSY-660A
+      - courseId: SPSY-660B
+      - courseId: SPSY-670
+    prerequisiteNotes:
+      - "[(Prereq: SPSY 660   and SPSY 660A   and SPSY 660B   ) and (Coreq: SPSY 670   )]"
+  SPSY-675:
+    code: SPSY 675
+    title: Internship in School Psychology I Seminar
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Seminar to accompany school psychology internship during Fall term only semester of the one-year internship. Focus on adaptive, ethical, and professional competence. Prerequisite includes completion of all required courses.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Coreq: SPSY 670   )"
+  SPSY-680:
+    code: SPSY 680
+    title: Internship in School Psychology II
+    teachingStatus: active
+    credits:
+      minimum: 8
+      maximum: 8
+    description: As the culminating component in the school psychology program, this field experience will be done in a public school setting under the supervision of a certified school psychologist. Students will also attend a seminar on campus to discuss their experiences, present psychological; evaluations and interventions, and engage in mutual problem solving relative to dilemmas and issues encountered in the field experience. Prerequisite includes completion of all required courses.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: SPSY-660
+      - courseId: SPSY-660A
+      - courseId: SPSY-660B
+      - courseId: SPSY-680A
+    prerequisiteNotes:
+      - "[(Prereq: SPSY 660   and SPSY 660A   and SPSY 660B   ) and (Coreq: SPSY 680A   )]"
+  SPSY-680A:
+    code: SPSY 680A
+    title: Internship in School Psychology II Seminar
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Seminar to accompany school psychology internship during second semester of the one-year internship. Focus on adaptive, ethical, and professional competence. Prerequisite includes completion of all required courses.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: SPSY-660
+      - courseId: SPSY-660A
+      - courseId: SPSY-660B
+      - courseId: SPSY-680
+    prerequisiteNotes:
+      - "[(Prereq: SPSY 660   and SPSY 660A   and SPSY 660B   ) and (Coreq: SPSY 680   )]"
+  SPSY-681:
+    code: SPSY 681
+    title: Advanced Behavior Supports
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Advanced instruction in the principles and application of behavior analysis with individuals with Mild/Moderate/Severe academic, social and/or behavioral needs. Crosslist with SPED 681   .
+    offered:
+      availability: periodic
+  SPSY-685:
+    code: SPSY 685
+    title: Internship in School Psychology II Seminar
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Seminar to accompany school psychology internship during Fall term only semester of the one-year internship. Focus on adaptive, ethical, and professional competence. Prerequisite includes completion of all required courses.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: SPSY 680   )"
+  SPSY-686:
+    code: SPSY 686
+    title: "Advocacy and Systems Change: Leadership Management and Communication Skills"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course covers issues related to the use of effective communication, leadership and management skills in special education. Multiple integrated service delivery models are addressed, along with issues in school restructuring and reform efforts designed to impact systems change. Includes both coursework and fieldwork.
+    offered:
+      terms:
+        - spring
+  SPSY-695:
+    code: SPSY 695
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    offered:
+      availability: periodic

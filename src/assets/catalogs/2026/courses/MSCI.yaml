@@ -1,0 +1,870 @@
+schemaVersion: 1
+prefix: MSCI
+courses:
+  MSCI-185:
+    code: MSCI 185
+    title: Adventures in Marine Science
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: There is no better place to study marine science than here in the southern Monterey Bay. This course will describe the many ways marine scientists (including each of the CSUMB Marine Science faculty) study the marine environment from sandy beaches to kelp forests to the deep sea. Lectures will describe the career alternatives for an MSCI graduate and detail how courses at CSUMB will prepare students for those careers. Activities will expose students to the ecosystems of the Monterey Bay and the approaches used to study those ecosystems.
+    offered:
+      terms:
+        - fall
+        - spring
+  MSCI-195:
+    code: MSCI 195
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in Marine Science. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  MSCI-270:
+    code: MSCI 270
+    title: Introduction to Oceanography
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduction to the major physical, chemical, biological, and geological features and processes of the Earth’s oceans and atmosphere. Special emphasis is placed on developing an integrated understanding of physical and biological processes and the interactions of people with the marine environment.
+    offered:
+      terms:
+        - fall
+        - spring
+  MSCI-280:
+    code: MSCI 280
+    title: "SCUBA I: Entry Level SCUBA"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "This course is intended for students with little or no SCUBA experience. Successful completion and mastery of all theoretical and practical skills presented qualifies students to be certified as a NAUI Open Water Scuba Diver. Topics and skills to be introduced: Applied Sciences (Physics, Physiology); Dive Equipment (Purpose, Care, Use); Dive Safety (Emergency Procedure & Prevention); Dive Environments; Variety of Dive Activities. This course requires that you pass a swim test during the first week of the semester, including: swim 400 yards in 12 minutes or less; swim a 25 yard swim on single breath without surfacing; tow a buddy 25 yards and tread water for 10 minutes."
+    offered:
+      terms:
+        - fall
+        - spring
+  MSCI-282:
+    code: MSCI 282
+    title: "SCUBA II: Emergency Management and Advanced SCUBA"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "This course grants divers the chance to gain more dive experience in the Monterey area while increasing awareness and proficiency with emergency mgmt and adv. dive techniques. Included in the course is training in dive first aid. Successful evaluation qualifies students for NAUI Adv. OW Scuba Diver, NAUI Rescue Diver certs and DAN DFA Pro or equivalent. Topics and skills to be introduced: Emergency Mgmt; Rescue Techniques; Problem Solving; Specific Dive Activities (Night, Navigation, Deeper); Dive First Aid. This course requires that you pass a swim test during the first week of the semester, including: swim 400 yards in 12 minutes or less; swim a 25 yard swim on single breath without surfacing; tow a buddy 25 yards and tread water for 10 minutes."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MSCI-280
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( MSCI 280   with a C- or better) or (Instructor Consent)]"
+  MSCI-283:
+    code: MSCI 283
+    title: "SCUBA III: Occupational Diving Techniques"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "This course provides divers with a deeper understanding of occupational diving - scientific & leadership diving skill sets. Skills introduced and evaluated are demonstrated by the student at a leadership level by the end of the course. Combo of pool and open water training are designed with this goal in mind. Final evaluation focuses on mastery of theoretical and practical skills. Successful evaluation qualifies students as a NAUI Master Diver. Topics and skills to be introduced: Adv. Applied Science; Specialized Gear; Dive Safety; Dive Environment. This course requires that you pass a swim test during the first week of the semester, including: swim 400 yards in 12 minutes or less; swim a 25 yard swim on single breath without surfacing; tow a buddy 25 yards and tread water for 10 minutes."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MSCI-282
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( MSCI 282   with a C- or better) or (Instructor Consent)]"
+  MSCI-295:
+    code: MSCI 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in Marine Science. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  MSCI-297:
+    code: MSCI 297
+    title: Independent Research
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Student and faculty member select independent research project.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Sophomore Standing) (Instructor Consent Required)"
+  MSCI-305:
+    code: MSCI 305
+    title: Marine Life of Monterey Bay
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: There is no better place to study marine science than here in the southern Monterey Bay. This course will 1) explore the many creatures that make the Bay a global destination (including white sharks, whales, otters and many others), 2) survey the different approaches used by scientists to study them (including SCUBA, remotely operated vehicles, E-DNA), 3) review the major threats to creatures in the Bay and beyond (including climate change, commercial fishing, marine debris), and 4) discuss the major management paradigms in place to manage the marine environment (including marine protected areas as well as federal and state statutes).
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  MSCI-310:
+    code: MSCI 310
+    title: Small Boat Field Techniques
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students use CSUMB’s small trailerable research vessels as platforms for off-shore environmental sampling, ROV operations, scuba diving, and other boat-based marine and fresh water research techniques. Prior CA boating safety course (valid CA boater card) required. A course fee may be required.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: MSCI-270
+            minimumGrade: C-
+          - courseId: PHYS-220
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MSCI 270   and PHYS 220   with a C- or better)"
+  MSCI-331:
+    code: MSCI 331
+    title: Ecological Physiology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: An in-depth examination of the major physiological adaptations of marine organisms, including thermoregulation, respiration, circulation, water balance, acid-base balance, metabolism and energetics. Emphasis will be placed on how organisms are adapted to optimize physiological function under a variety of environmental conditions. We will also focus on the effects of environmental change on marine organismal physiology in the context of climate change (global warming, acidification, hypoxia).
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - allOf:
+          - courseId: BIO-210
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+          - anyOf:
+              - courseId: PHYS-220
+                minimumGrade: C-
+              - courseId: PHYS-221
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BIO 210   and BIO 211   ) and ( PHYS 220   or PHYS 221   ) with a C- or better]"
+  MSCI-337:
+    code: MSCI 337
+    title: Robotics for Ecological Research
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Through a series of hands-on project modules, students develop practical skills in electronics, microcontroller programming, and robotics sufficient to design and build simple, programmable robots, sensor/datalogger systems, or other electronic devices for collecting environmental measurements in terrestrial, freshwater, or marine ecosystems. Course fee may be required.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - allOf:
+          - courseId: MATH-150
+            minimumGrade: C-
+          - anyOf:
+              - courseId: PHYS-121
+                minimumGrade: C-
+              - courseId: PHYS-220
+                minimumGrade: C-
+              - courseId: CST-231
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( MATH 150   ) and ( PHYS 121   or PHYS 220   or CST 231   ) with a C- or better]"
+  MSCI-340:
+    code: MSCI 340
+    title: Marine Ecology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course will provide an overview of key concepts in marine ecology and familiarize students with local marine ecosystems (rocky shores, kelp beds, estuarine wetlands, and mud flats). This class might have a required field trip during the weekend, depending on the timing of low tides during the semester.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-210
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: STAT-250
+            minimumGrade: C-
+          - courseId: MSCI-270
+            minimumGrade: C-
+          - courseId: MSCI-340L
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: BIO 210   and BIO 211   and STAT 250   and MSCI 270   with a C- or better) and (Coreq: MSCI 340L   or by Instructor Consent)]"
+  MSCI-340L:
+    code: MSCI 340L
+    title: Marine Ecology Lab
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course will provide an overview of key concepts in marine ecology and familiarize students with local marine ecosystems (rocky shores, kelp beds, estuarine wetlands, and mud flats).
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-210
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: STAT-250
+            minimumGrade: C-
+          - courseId: MSCI-270
+            minimumGrade: C-
+          - courseId: MSCI-340
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: BIO 210   and BIO 211   and STAT 250   and MSCI 270   with a C- or better) and (Coreq: MSCI 340   )]"
+  MSCI-341:
+    code: MSCI 341
+    title: Conservation Genetics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course will examine mechanisms and models of population genetics and evolutionary biology. The course will focus on how these methods get used and applied to conservation and management of marine resources.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-210
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: MATH-150
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BIO 210   and BIO 211   ) and ( MATH 150   ) with a C- or better]"
+  MSCI-345:
+    code: MSCI 345
+    title: Marine Biodiversity and Functional Morphology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examines the biodiversity, classification, and functional morphology of living marine organisms with an emphasis on Monterey Bay species, habitats, issues, and research.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: CHEM-109
+            minimumGrade: C-
+          - courseId: CHEM-110
+            minimumGrade: C-
+          - courseId: MSCI-270
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: BIO-230
+            minimumGrade: C-
+          - courseId: ENVS-240
+            minimumGrade: C-
+          - courseId: PHYS-220
+            minimumGrade: C-
+          - courseId: PHYS-221
+            minimumGrade: C-
+          - anyOf:
+              - courseId: MATH-130
+                minimumGrade: C-
+              - courseId: MATH-150
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( GE   Area 1A and 1B and 1C and 2) and (( MATH 130   or MATH 150   ) and ( CHEM 109   or CHEM 110   ) and MSCI 270   and ( BIO 211   or BIO 230   or ENVS 240   )) with a C- or better) and (Prereq or Coreq: ( PHYS 220   or PHYS 221   with a C- or better))]"
+  MSCI-350:
+    code: MSCI 350
+    title: Quantitative Marine Science
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: The course provides an introduction to the design and analysis of studies conducted in marine systems. Students will acquire training in the use of multiple statistical techniques and appropriate statistical packages that can be used to analyze data from the marine environment.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: STAT-250
+            minimumGrade: C-
+          - courseId: MSCI-340
+            minimumGrade: C-
+          - courseId: BIO-340
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: STAT 250)   and (Prereq or Coreq: MSCI 340   or BIO 340   ) with a C- or better]"
+  MSCI-359S:
+    code: MSCI 359S
+    title: Marine Science Service Learning
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Marine Science in the Community, a service learning course, introduces students to human and community social justice (and injustice) issues related to local and global ocean interfaces. Twenty-five hours of direct service with organizations involved in protecting marine environments will be the basis for class discussions on how class, ethnicity, language, economic and educational status relate to ocean health. Besides service, this class requires journaling, readings, and panel discussion.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-210
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: BIO-230
+            minimumGrade: C-
+          - courseId: ENVS-240
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: BIO 210   or BIO 211   or BIO 230   or ENVS 240   with a C- or better)"
+  MSCI-370:
+    code: MSCI 370
+    title: Biological Physical Oceanography
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Advanced biological and physical oceanographic topics from phytoplankton to fisheries across estuaries and the open ocean. Students will learn principles of biological and physical oceanography, with an emphasis on physical processes and their ecological implications.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: MSCI-270
+            minimumGrade: C-
+          - courseId: PHYS-220
+            minimumGrade: C-
+          - courseId: MSCI-345
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( BIO 211   and MSCI 270   and PHYS 220   ) with a C- or better) and (Prereq or Coreq: MSCI 345   with a C- or better)]"
+  MSCI-380:
+    code: MSCI 380
+    title: Scientific Diving Techniques
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "This course will provide an introduction to the techniques for conducting scientific research underwater using SCUBA, including transects, quadrats, behavioral observations, videography and photography, and many others. In addition to lectures and pool training sessions, there will be a significant number of open water dives. The course will provide the 100 hours of required training for scientific divers as prescribed by the American Academy of Underwater Sciences (AAUS). This course requires that you pass a swim test during the first week of the semester, including: swim 400 yards in 12 minutes or less; swim a 25 yard swim on single breath without surfacing; tow a buddy 25 yards and tread water for 10 minutes."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MSCI-282
+            minimumGrade: C-
+          - courseId: MSCI-283
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: MSCI 282   with a C- or better) and (Coreq or Prereq: MSCI 283   with a C- or better)]"
+  MSCI-394:
+    code: MSCI 394
+    title: Marine Science Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Students work with practicing professionals in the community in a volunteer or paid internship that requires critical thinking and specialized marine science or technical skills. Academic credit is awarded for documented learning that takes place during the internship and that meets individualized and core internship outcomes.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Junior OR Senior Standing) (Instructor Consent Required)"
+    minimumStanding: junior
+  MSCI-395:
+    code: MSCI 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Marine Science. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  MSCI-397:
+    code: MSCI 397
+    title: Independent Research
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Student and faculty member select independent research project. Instructor permission required.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Junior Standing) (Instructor Consent Required)"
+  MSCI-410:
+    code: MSCI 410
+    title: Marine Science Group Capstone
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Assists students enrolled in a capstone project course in preparing their final written report, poster, and/or oral presentation for their Senior Capstone Project. Students must enroll concurrently in an approved Capstone Project Course.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MSCI-300
+            minimumGrade: C-
+          - courseId: MSCI-340
+            minimumGrade: C-
+          - courseId: MSCI-430
+            minimumGrade: C-
+          - courseId: MSCI-437
+            minimumGrade: C-
+          - courseId: MSCI-445
+            minimumGrade: C-
+          - courseId: MSCI-455
+            minimumGrade: C-
+          - courseId: MSCI-472
+            minimumGrade: C-
+          - courseId: MSCI-475
+            minimumGrade: C-
+          - courseId: MSCI-480
+            minimumGrade: C-
+          - courseId: MSCI-485
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: MSCI 300 or MSCI 340   with a C- or better) and (Coreq: MSCI 430   or MSCI 437   or MSCI 445   or MSCI 455   or MSCI 472   or MSCI 475   or MSCI 480   or MSCI 485   )]"
+  MSCI-430:
+    code: MSCI 430
+    title: Marine Experimental Physiology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course uses a group project approach to address a real-world marine environmental physiology problem. This course will increase knowledge retention and integration of concepts in marine science, physiology and biology, and teach students what it is like to work in a research laboratory setting. Includes group capstone project option.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: STAT-250
+            minimumGrade: C-
+          - anyOf:
+              - courseId: MSCI-331
+                minimumGrade: C-
+              - courseId: BIO-330
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( STAT 250   and ( MSCI 331   or BIO 330   ) with a C- or better) and GWAR]"
+  MSCI-437:
+    code: MSCI 437
+    title: Ocean Instrumentation Projects
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This is a project-based course requiring previous experience with electronics and microcontroller programming for developing instrumentation such as tagging, biologging, or monitoring systems to investigate ocean organisms and their ecology. Lecture topics and exercises will cover a range of ocean instrumentation subjects and build on previous experience with electronics, mechanical design, and programming. In Lab, students work individually or in groups to design, build, and test new instrumentation for marine research or to evaluate and improve existing instrumentation, such as sensors, tag application and recovery mechanisms, automated sampling systems, or other electronic devices. Course project may be used as a course-based capstone project.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MSCI-337
+            minimumGrade: C-
+          - courseId: PHYS-330
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: MSCI 337   or PHYS 330 with a C- or better) or (Instructor Consent)]"
+  MSCI-445:
+    code: MSCI 445
+    title: Projects in Marine Ecology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Lecture and field-based exploration of marine ecological concepts and theory using the diverse ecosystems of Monterey Bay as a living laboratory. Students witness and learn how organisms interact with one another and their environments and see how these factors govern the distribution and abundance of species within marine systems. Because of the research nature of this class, there may be some required fieldwork outside of class time. This group project-based course can fulfill the Marine Science major capstone requirement with co-enrollment in MSCI 410   .
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: MSCI-350
+            minimumGrade: C-
+          - courseId: ENVS-350
+            minimumGrade: C-
+          - anyOf:
+              - courseId: MSCI-340
+                minimumGrade: C-
+              - courseId: BIO-340
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereqs: (( MSCI 340   or BIO 340   ) and GWAR with a C- or better)) and (Prereq or Coreq: ( MSCI 350   or ENVS 350   ))]"
+  MSCI-455:
+    code: MSCI 455
+    title: Marine Fish Ecology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Course explores the ecology of marine fishes and associated conservation and management efforts. Focuses upon fish distribution and the environmental drivers underlying that distribution in California and other locales. Students complete a semester-long project involving field sampling along the central coast using a suite of tools, including remotely operated vehicles, towed camera sleds, and SCUBA. Course project may be used as a course-based capstone project.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: MSCI-345
+            minimumGrade: C-
+          - courseId: MSCI-340
+            minimumGrade: C-
+          - courseId: MSCI-370
+            minimumGrade: C-
+          - anyOf:
+              - courseId: MSCI-350
+                minimumGrade: C-
+              - courseId: ENVS-350
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( MSCI 345   and MSCI 340   with a C- or better) and (Prereq or Coreq: ( MSCI 370   and ( MSCI 350   or ENVS 350   ) with a C- or better)]"
+  MSCI-465:
+    code: MSCI 465
+    title: Marine Megafauna
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: An examination of the diversity, evolutionary adaptations, and ecology of large marine predators, including marine mammals, birds, reptiles, and elasmobranchs. Marine megafauna capture much public interest, and as top predators exert a disproportionately large influence on marine ecosystems. This course will cover how these organisms are studied, and their ‘flagship species’ significance as ecosystem indicators, for ocean conservation, and general scientific discovery. Emphasis will be placed on marine megafauna species found in and around Monterey Bay.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: MSCI-270
+            minimumGrade: C-
+          - courseId: MSCI-331
+            minimumGrade: C-
+          - courseId: BIO-330
+            minimumGrade: C-
+          - courseId: MSCI-340
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: MSCI 270   and MSCI 331   or BIO 330   and MSCI 340   with a C- or better) or (Instructor Consent Required)]"
+  MSCI-472:
+    code: MSCI 472
+    title: Biological Oceanography Projects
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course is focused primarily on lecture and computing-based exploration of biological oceanographic concepts using the Monterey Bay as a model. It uses a group project-based approach to understanding the oceanographic system with a focus on biophysical coupling, aquatic optics, remote sensing, and mechanistic models. It may include one or more field trips. This course can fulfill the Marine Science major capstone requirement with co-enrollment in MSCI 410   .
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: ENVS-332
+            minimumGrade: C-
+          - courseId: MSCI-370
+            minimumGrade: C-
+          - anyOf:
+              - courseId: MSCI-350
+                minimumGrade: C-
+              - courseId: ENVS-350
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ENVS 332   and MSCI 370   and ( MSCI 350   or ENVS 350   ) with a C- or better or (Instructor Consent Required)]"
+  MSCI-474:
+    code: MSCI 474
+    title: Marine Landscape Ecology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Course covers the theory and application of landscape ecology to studies of the marine environment. Students will be introduced to the use of mapping and statistical tools that can be used in studies focused on understanding how marine landscapes drive patterns of species distribution and abundance.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - allOf:
+          - courseId: ENVS-332
+            minimumGrade: C-
+          - courseId: MSCI-340
+            minimumGrade: C-
+          - courseId: MSCI-350
+            minimumGrade: C-
+          - anyOf:
+              - courseId: MSCI-345
+                minimumGrade: C-
+              - courseId: BIO-345
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ENVS 332   and MSCI 340   and ( MSCI 345   or BIO 345) and ( MSCI 350   ) with a C- or better]"
+  MSCI-475:
+    code: MSCI 475
+    title: Marine Conservation Biology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course covers the science and issues surrounding the loss of marine species and habitats resulting from overexploitation, habitat loss, species introductions, climate change, and other threats. Students will examine the science behind management decisions, especially place-based management, and will learn about the numerous marine conservation biology relevant organizations around the Monterey Bay area.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: MSCI-340
+                minimumGrade: C-
+              - courseId: BIO-340
+                minimumGrade: C-
+              - courseId: MSCI-345
+                minimumGrade: C-
+              - courseId: BIO-345
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: GWAR and ( MSCI 340   or BIO 340   or MSCI 345   or BIO 345) with a C- or better]"
+  MSCI-477:
+    code: MSCI 477
+    title: Global Change Biology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course examines how the biosphere (plants, animals and ecosystems) is responding to unprecedented rates of anthropogenic climate change. Lectures cover physical drivers and biological consequences of climate change in Earths’ biomes from pole to pole, marine, aquatic and terrestrial. Emphasis is placed on reading and synthesizing scientific journal articles and interpretation of climate change data.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: MSCI-340
+            minimumGrade: C-
+          - courseId: BIO-340
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MSCI 340   or BIO 340   with a C- or better)"
+  MSCI-480:
+    code: MSCI 480
+    title: Kelp Forest Ecology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Focuses on local kelp forest ecosystems of Monterey Bay through lectures that are supplemented with SCUBA dives at local dive sites. Fieldwork will allow the class to qualitatively and quantitatively examine local kelp forest ecology through a group capstone project or individually directed research projects.
+    offered:
+      availability: periodic
+    prerequisites:
+      - allOf:
+          - courseId: MSCI-340
+            minimumGrade: C-
+          - courseId: MSCI-380
+            minimumGrade: C-
+          - anyOf:
+              - courseId: MSCI-345
+                minimumGrade: C-
+              - courseId: BIO-345
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: MSCI 340   and MSCI 380   and ( MSCI 345   or BIO 345) with a C- or better]"
+  MSCI-485:
+    code: MSCI 485
+    title: Marine Biogeography of California
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: SCUBA-based group capstone course involves the collection and analysis of data on fishes and invertebrates from across CA. Focuses on biogeographical patterns of the subtidal zone. This course requires field trips on weekends and dates when classes are not normally in session. Dive sites may be located inside many of CA’s marine protected areas. A final project combines data collected by each student into a single, comprehensive analysis. Course fee may be required.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: MSCI-340
+            minimumGrade: C-
+          - courseId: MSCI-380
+            minimumGrade: C-
+          - courseId: MSCI-345
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MSCI 340   and MSCI 380   and MSCI 345   with a C- or better)"
+  MSCI-490:
+    code: MSCI 490
+    title: Marine Science Honors Capstone
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Student works with advisor(s) to complete a Marine Science Honors Capstone project, including a written product and some form of presentation (including an oral presentation and/or a poster presentation). The precise structure of the course will vary among advisors. Students must have an approved research project prior to enrolling in this course.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MSCI-340
+            minimumGrade: C-
+          - courseId: MSCI-345
+            minimumGrade: C-
+          - courseId: MSCI-350
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: MSCI 340   and MSCI 345   and MSCI 350   with a C- or better)] (Instructor Consent Required)"
+  MSCI-495:
+    code: MSCI 495
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in Marine Science. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  MSCI-497:
+    code: MSCI 497
+    title: Independent Research
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Student and faculty member select an independent research project.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Senior Standing) (Instructor Consent Required)"
+  MSCI-530:
+    code: MSCI 530
+    title: Marine Experimental Physiology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course uses a group project approach to address a real-world marine environmental physiology problem. This course will increase knowledge retention and integration of concepts in marine science, physiology and biology, and teach students what it is like to work in a research laboratory setting.
+    offered:
+      terms:
+        - spring
+  MSCI-537:
+    code: MSCI 537
+    title: Ocean Instrumentation Projects
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This is a project-based course designed for graduate students interested in developing instrumentation such as tagging, biologging, or monitoring systems to investigate ocean organisms and their ecology. Lecture topics and exercises will cover a range of ocean instrumentation subjects and build on previous experience with electronics, mechanical design, and programming. In Lab, students work individually or in groups to design, build, and test new instrumentation for marine research or to evaluate and improve existing instrumentation, such as sensors, tag application and recovery mechanisms, automated sampling systems, or other electronic devices.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - (Graduate Standing) and (Instructor Consent Required)
+  MSCI-555:
+    code: MSCI 555
+    title: Marine Fish Ecology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores the ecology of marine fishes and associated conservation and management. Focuses upon fish distribution and the environmental drivers underlying that distribution in California and other locales. Students will complete a semester-long project involving field sampling along the central coast using a suite of tools, including remotely operated vehicles, towed camera sleds, and SCUBA. Students must have completed coursework in marine biology and ecology. (Cross-listed with MSCI 455   ).
+    offered:
+      availability: periodic
+  MSCI-572:
+    code: MSCI 572
+    title: Biological Oceanography Projects
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course is a lecture, field, and computing-based exploration of biological oceanographic concepts using the Monterey Bay as a model. It uses a group project-based approach to understanding the oceanographic system with a focus on bio-physical coupling, aquatic optics, remote sensing, and mechanistic models.
+    offered:
+      terms:
+        - spring
+  MSCI-574:
+    code: MSCI 574
+    title: Marine Landscape Ecology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Course covers the theory and application of landscape ecology to studies of the marine environment. Students will be introduced to the use of mapping and statistical tools that can be used in studies focused on understanding how marine landscapes drive patterns of species distribution and abundance.
+    offered:
+      availability: periodic
+  MSCI-575:
+    code: MSCI 575
+    title: Marine Conservation Biology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course covers the science and issues surrounding the loss of marine species and habitats resulting from overexploitation, habitat loss, species introductions, climate change, and other threats. Students will examine the science behind management decisions, especially place-based management, and will develop a project addressing marine conservation within the Monterey Bay area.
+    offered:
+      terms:
+        - fall
+  MSCI-585:
+    code: MSCI 585
+    title: Marine Biogeography of California
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Collection and analysis of data on fishes and invertebrates from across CA. Focuses on biogeographical patterns of the subtidal zone. This course requires field trips on weekends and dates when classes are not normally in session. Dive sites may be located inside many of CA’s marine protected areas. A final project combines data collected by each student into a single, comprehensive analysis. Course fee may be required.
+    offered:
+      terms:
+        - fall
+  MSCI-595:
+    code: MSCI 595
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in Marine Science. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  MSCI-597:
+    code: MSCI 597
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Instructor Consent Required)
+  MSCI-699:
+    code: MSCI 699
+    title: Marine Science Masters Thesis
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Faculty-mentored, independent research and writing leading toward completion of the MS thesis. Requires approval of the thesis advisor.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[(Prereq: Graduate Standing) and (Instructor Consent Required)]"

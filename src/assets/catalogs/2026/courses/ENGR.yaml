@@ -1,0 +1,414 @@
+schemaVersion: 1
+prefix: ENGR
+courses:
+  ENGR-110:
+    code: ENGR 110
+    title: Introduction to Engineering and Design
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course explores the branches of engineering, the functions of an engineer, and the industries in which engineers work. Explains the engineering education pathways and explores effective strategies for students to reach their full academic potential. Presents an introduction to the methods and tools of engineering problem solving and design including the interface of the engineer with society and engineering ethics. Develops communication skills and students collaborate through constructive, ethical participation in team tasks. Students will design, build, test, and present engineering projects designed to solve specified problems within given constraints. Additionally, the impact of engineering from a global, social, economic, and environmental perspective is presented through case studies.
+    offered:
+      terms:
+        - fall
+  ENGR-115:
+    code: ENGR 115
+    title: Introduction to Machining and Fabrication
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Introduces machining and fabrication through hands-on experience. Introduces basic machine shop safety, the use of measurement tools, hand tools, CNC mill, lathe, band saw, basic welding techniques, soldering, 3D printing, laser cutting, injection molding, and other common machining and fabrication tools. Using these tools, students complete an independent project. The course will lead to an understanding of possibilities, and limitations of fabrication techniques and safety around tools and equipment.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - (Engineering Students Only)
+  ENGR-130:
+    code: ENGR 130
+    title: Statics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "A first course in engineering mechanics: properties of forces, moments, couples and resultants; two- and three-dimensional force systems acting on engineering structures in equilibrium; analysis of trusses, and beams; distributed forces, shear and bending moment diagrams, center of gravity, centroids, friction, and area and mass moments of inertia. Optional additional topics include fluid statics, cables, Mohr’s circle and virtual work."
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: PHYS-205
+          - courseId: MATH-151
+    prerequisiteNotes:
+      - "[(Prereq: PHYS 205   ) and (Prereq or Coreq: MATH 151   )]"
+  ENGR-140:
+    code: ENGR 140
+    title: Materials Science and Engineering
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course presents the internal structures and resulting behaviors of materials used in engineering applications, including metals, ceramics, polymers, composites, and semiconductors. The emphasis is upon developing the ability both to select appropriate materials to meet engineering design criteria and to understand the effects of heat, stress, imperfections, and chemical environments upon material properties and performance.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: CHEM-110
+      - courseId: CHEM-110L
+      - courseId: PHYS-205
+      - courseId: ENGR-140L
+    prerequisiteNotes:
+      - "[(Prereq: CHEM 110   and CHEM 110L   and PHYS 205   ) and (Coreq: ENGR 140L   )]"
+  ENGR-140L:
+    code: ENGR 140L
+    title: Materials Science and Engineering Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This course is the experimental exploration of the connections between the structure of materials and materials properties. Laboratories provide opportunities to directly observe the structures and behaviors discussed in the lecture course ( ENGR 140   ), to operate testing equipment, to analyze experimental data, and to prepare reports.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: CHEM-110
+      - courseId: CHEM-110L
+      - courseId: PHYS-205
+      - courseId: ENGR-140
+    prerequisiteNotes:
+      - "[(Prereq: CHEM 110   and CHEM 110L   and PHYS 205   ) and (Coreq: ENGR 140   )]"
+  ENGR-150:
+    code: ENGR 150
+    title: Engineering Graphics
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course covers the principles of engineering drawings in visually communicating engineering designs and an introduction to computer-aided design (CAD). Topics include the development of visualization skills; orthographic projections; mechanical dimensioning and tolerancing practices; and the engineering design process. Assignments develop sketching and 2-D and 3-D CAD skills. The use of CAD software is an integral part of the course
+    offered:
+      terms:
+        - spring
+  ENGR-240:
+    code: ENGR 240
+    title: Strength of Materials
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is a study of stresses, strains and deformations associated with axial, torsional and flexural loading of bars, shafts and beams, as well as pressure loading of thin-walled pressure vessels. The course also covers stress and strain transformation, Mohr’s Circle, ductile and brittle failure theories, and the buckling of columns. Statically indeterminate systems are also studied.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: ENGR-130
+    prerequisiteNotes:
+      - "(Prereq: ENGR 130   )"
+  ENGR-260:
+    code: ENGR 260
+    title: Circuit Analysis
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: An introduction to the analysis of electrical circuits. Use of analytical techniques based on the application of circuit laws and network theorems. Analysis of DC and AC circuits containing resistors, capacitors, inductors, dependent sources, operational amplifiers, and/or switches. Natural and forced responses of first and second order RLC circuits; the use of phasors; AC power calculations; power transfer; and energy concepts.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: PHYS-210
+      - courseId: ENGR-260L
+    prerequisiteNotes:
+      - "[(Prereq: PHYS 210   ) and (Coreq: ENGR 260L   )]"
+  ENGR-260L:
+    code: ENGR 260L
+    title: Circuit Analysis Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: An introduction to the construction and measurement of electrical circuits. Basic use of electrical test and measurement instruments including multimeters, oscilloscopes, power supplies, and function generators. Use of circuit simulation software. Interpretation of measured and simulated data based on principles of circuit analysis for DC, transient, and sinusoidal steady-state (AC) conditions. Elementary circuit design. Practical considerations such as component value tolerance and non-ideal aspects of laboratory instruments. Construction and measurement of basic operational amplifier circuits.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: PHYS-210
+      - courseId: ENGR-260
+    prerequisiteNotes:
+      - "[(Prereq: PHYS 210   ) and (Coreq: ENGR 260   )]"
+  ENGR-294:
+    code: ENGR 294
+    title: Internship in Engineering
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students work with practicing professionals in the community in a volunteer or paid internship that requires engineering skills.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: ENGR 110   )"
+  ENGR-301:
+    code: ENGR 301
+    title: Technical Writing in Engineering
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course prepares students to effectively communicate technical information to a variety of audiences, as well as writing specialized forms such as abstracts, instructions, and proposals.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  ENGR-310:
+    code: ENGR 310
+    title: Mechatronics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Mechatronics uses concepts of electrical, mechanical, and software engineering. This course focuses on applying techniques for designing microprocessor-controlled electromechanical systems. Laboratory component provides hands-on experience in designing and building mechatronic systems.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: ENGR-370
+          - courseId: ENGR-130
+    prerequisiteNotes:
+      - "[(Prereq: ENGR 370   ) and (Prereq or Coreq: ENGR 130   )]"
+  ENGR-320:
+    code: ENGR 320
+    title: Machine Design
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is an introduction to the principles of mechanical design. Methods for determining static, fatigue, and surface failure are presented. Analysis and selection of machine components such as shafts, keys, couplings, bearings, gears, springs, power screws, and fasteners is covered.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: ENGR-240
+            minimumGrade: C-
+          - courseId: ENGR-330
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ENGR 240   ) and (Prereq or Coreq: ENGR 330   ) and ( GE   Area 1A and 1B and 1C and 2 with a C- or better)]"
+  ENGR-330:
+    code: ENGR 330
+    title: Dynamics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Fundamentals of kinematics and kinetics of particles and rigid bodies. Topics include kinematics of particle motion; Newton’s second law, work-energy and momentum methods; kinematics of planar motions of rigid bodies; work-energy and momentum principles for rigid body motion; Introduction to mechanical vibrations.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: ENGR-130
+    prerequisiteNotes:
+      - "(Prereq: ENGR 130   )"
+  ENGR-335:
+    code: ENGR 335
+    title: Numerical Methods and Statistics for Engineering
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "Formulation and solution of mathematical models for engineering systems. Numerical methods including: interpolation and polynomial approximation, numerical differentiation and integration, numerical solution of ordinary differential equations. Advanced methods in a numerical computing environment. Concepts in probability and statistics."
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: MATH-265
+    prerequisiteNotes:
+      - "(Prereq: MATH 265   )"
+  ENGR-340:
+    code: ENGR 340
+    title: Signals, Systems, and Transformations
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "The course covers the following topics: characterization and analysis of continuous-time signals and linear systems, time domain analysis using convolution, represent periodic signals using Fourier series, continuous and discrete time Fourier transform, frequency domain analysis using the Fourier series and the Fourier transform, the Laplace transform, Z transform, transfer functions and block diagrams, continuous-time filters, sampling of continuous time signals, examples of applications to communications and control systems."
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: ENGR-260
+          - courseId: ENGR-260L
+          - courseId: MATH-265
+          - courseId: CST-231
+    prerequisiteNotes:
+      - "[(Prereq: ENGR 260   and ENGR 260L   ) and (Prereq or Coreq: MATH 265   and CST 231   )]"
+  ENGR-350:
+    code: ENGR 350
+    title: Thermodynamics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Study of the first law of thermodynamics, properties of pure substances, entropy, the second law of thermodynamics, reversible and irreversible processes, availability (exergy), ideal vapor power cycles, ideal gas power cycles, and refrigeration and heat pump cycles.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: PHYS-210
+      - courseId: CHEM-110
+      - courseId: MATH-151
+    prerequisiteNotes:
+      - "(Prereq: PHYS 210   and CHEM 110   and MATH 151   )"
+  ENGR-360:
+    code: ENGR 360
+    title: Fluid Dynamics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Hydrostatics and fluid dynamics. Viscous flow, boundary layer concepts, lift and drag, laminar and turbulent flow, compressible flow. Experiments involving flow measurement and control, conservation equations, pressure and velocity distributions, dimension analysis, lift and drag.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: ENGR-330
+      - courseId: MATH-265
+    prerequisiteNotes:
+      - "(Prereq: ENGR 330   and MATH 265   )"
+  ENGR-370:
+    code: ENGR 370
+    title: Digital Logic Design
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course covers design and application aspects of digital logic circuits. Combinational and sequential logic circuits will be introduced, and case studies will illustrate how to incorporate digital logic design principles. The laboratory will teach students how to model and verify systems.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: ENGR-260
+      - courseId: ENGR-260L
+    prerequisiteNotes:
+      - "(Prereq: ENGR 260   and ENGR 260L   )"
+  ENGR-375:
+    code: ENGR 375
+    title: Feedback Control Systems
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Analysis, design, and implementation of feedback control for mechatronic systems. Includes an introduction to modeling of electro-mechanical systems; time-domain and frequency-domain approaches to control system design; and digital implementation of control algorithms.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: ENGR-340
+    prerequisiteNotes:
+      - "(Prereq: ENGR 340   )"
+  ENGR-380:
+    code: ENGR 380
+    title: Embedded Systems
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Fundamentals of embedded systems are introduced. Students write software for embedded systems and understand how to test these systems. Topics around hardware and firmware design will be covered and applied to a design project.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: ENGR-370
+    prerequisiteNotes:
+      - "(Prereq: ENGR 370   )"
+  ENGR-394:
+    code: ENGR 394
+    title: Internship in Engineering
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students work with practicing professionals in the community in a volunteer or paid internship that requires engineering skills. Academic credit is awarded for documented learning that takes place during the internship and that meets individualized and core internship outcomes.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: ENGR-130
+            minimumGrade: C-
+          - courseId: ENGR-260
+            minimumGrade: C-
+          - courseId: ENGR-260L
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ENGR 130   and ENGR 260 and ENGR 260L   with a C- or better) and (Instructor Consent Required)]"
+  ENGR-395:
+    code: ENGR 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Engineering.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Junior or Senior Standing)
+    minimumStanding: junior
+  ENGR-397:
+    code: ENGR 397
+    title: Independent Studies
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 3
+    description: Student and faculty member select a specialized research project.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Junior or Senior Standing)
+    minimumStanding: junior
+  ENGR-480:
+    code: ENGR 480
+    title: Mechatronics Design I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This is the first of a two-semester capstone sequence for mechatronic engineer students. Students develop solutions to a real-world problem through design principles. Initial design prototypes are assembled and tested to meet specified functionality requirements. Students work individually and in groups.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: ENGR-310
+      - courseId: ENGR-320
+    prerequisiteNotes:
+      - "[(Prereq: ENGR 310   ) and (Coreq: ENGR 320   )]"
+  ENGR-481:
+    code: ENGR 481
+    title: Mechatronics Design II
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This is a continuation of a capstone culminating experience for mechatronic engineer students. Students further develop their design ideas and produce fully tested prototypes. A public presentation is expected.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: ENGR-480
+    prerequisiteNotes:
+      - "(Prereq: ENGR 480   )"

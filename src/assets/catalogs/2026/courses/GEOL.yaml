@@ -1,0 +1,91 @@
+schemaVersion: 1
+prefix: GEOL
+courses:
+  GEOL-110:
+    code: GEOL 110
+    title: Introduction to Earth Science
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "Focuses on scientific investigation of the four main branches of Earth science: astronomy, geology, oceanography, and meteorology. Topics include Earth’s place in the solar system and universe, structure and composition of the solid Earth, processes that change the Earth (with an emphasis on plate tectonics), ocean and atmospheric processes, and climate change. Each topic is connected to processes and events occurring in California. Not intended for Liberal Studies Majors."
+    offered:
+      terms:
+        - fall
+        - spring
+  GEOL-210:
+    code: GEOL 210
+    title: Earth Science for Teachers
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Focuses on earth science content and scientific investigation and experimentation abilities required for the multiple-subject teaching credential. Topics include Earth’s atmosphere and water, structure and composition of the solid Earth, processes that change the Earth (with emphasis on plate tectonics and California geology), Earth’s resources, and Earth’s place in the solar system and universe.
+    offered:
+      terms:
+        - fall
+        - spring
+  GEOL-260:
+    code: GEOL 260
+    title: Geology/Hydrology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Lecture and field-based course introducing geology and hydrology in the context of natural hazards and natural resources. Includes plate tectonics, mineral and rock ID, rock structure, geologic time, landslides, earthquakes, flooding, soil, rivers, and water resources. Students gain topographic survey experience. Field-intensive course.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE Area 1A and 2)"
+  GEOL-310:
+    code: GEOL 310
+    title: Natural Disasters and Human Impacts
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces geologic catastrophes, such as earthquake, volcanic eruption, landslide, tsunami, severe weather, flood, and wildfire, with emphasis on the relationship between humans and natural hazards. Examine physical processes that cause these natural Earth events. Discussion of historical events and societal impacts. Students will assess risk and evaluate mitigation alternatives.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  GEOL-360:
+    code: GEOL 360
+    title: Geomorphic Systems
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This is a lecture and field-based course introducing landscape monitoring and analysis. Topics include theories of landscape equilibrium and evolution, weathering, erosion, hillslope processes, river processes, landslides, active tectonics, coastal processes, and coastal response to climate change. These theories are applied to natural hazard topics and restoration of disturbed lands. May include one or more weekend field trips. Field-intensive course. Prior experience with spreadsheets and GIS is recommended.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: GEOL-260
+            minimumGrade: C-
+          - courseId: STAT-250
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: GEOL 260   and ( GE   Area 1A and 1B and 1C and 2) with a C- or better)) and (Prereq or Coreq: STAT 250   with a C- or better)]"
+  GEOL-460:
+    code: GEOL 460
+    title: River Hydrology, Assmt&Monitor
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Lecture and field-based course introducing advanced topics in watershed processes. Students apply the theories of hydrology, flood frequency, hydraulics, and sediment transport to topics in watershed and river management. Students gain experience in hydrologic and geomorphic monitoring techniques. May include one or more weekend field trips. Field-intensive course.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: GEOL-360
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: GEOL 360   with a C- or better)"

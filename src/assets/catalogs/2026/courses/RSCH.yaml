@@ -1,0 +1,93 @@
+schemaVersion: 1
+prefix: RSCH
+courses:
+  RSCH-200:
+    code: RSCH 200
+    title: Undergraduate Research I
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Introduces students to scholarly research and prepares them for undergraduate research opportunities. Students will be exposed to research methodologies, literature reviews, ethics in research, plagiarism, and other critical research themes. Students will build relevant professional skills, such as public speaking, and faculty panels will help demystify the research environment.
+    offered:
+      terms:
+        - spring
+  RSCH-294:
+    code: RSCH 294
+    title: Introductory Undergraduate Research Experience
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Supports students¿ mentored undergraduate research experiences, strengthens academic and professional skills, and explores research-based academic and career pathways. Introduces norms and precepts of academic research, including research ethics and conduct. Students develop writing and professional communication skills; create resumes and professional products; and present their research at research conferences and symposia. Students must be accepted into the UROC Researchers program.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Instructor consent required)
+  RSCH-295:
+    code: RSCH 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    offered:
+      availability: periodic
+  RSCH-300:
+    code: RSCH 300
+    title: Undergraduate Research II
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Prepares students for the rigors of undergraduate research and increases their content knowledge. Students write a research report, participate in journal clubs, and engage in activities designed to bolster their capabilities for scholarly research. Guided activities help students refine their career goals and field of study. Students explore graduate programs and graduate school admissions requirements.
+    offered:
+      terms:
+        - fall
+  RSCH-301:
+    code: RSCH 301
+    title: Undergraduate Research III
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Prepares students to conduct independent research and strengthens their communication skills . Students develop research proposal, prepare and present research talks, engage in scholarly peer review,and develop professionalism. Students investigate graduate programs and prepare for the Graduate Record Examination.
+    offered:
+      terms:
+        - spring
+  RSCH-394:
+    code: RSCH 394
+    title: Intermediate Undergraduate Research Experience
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: The UROC research program augments student’s mentored undergraduate research experiences, strengthens academic and professional skills, and helps prepare students for research-based graduate programs and careers. Students practice writing and professional communication skills; refine professional development and research products; engage in training and leadership activities; and present their research at conferences and symposia. Students must be accepted into the UROC Researchers program.
+    prerequisiteNotes:
+      - (Instructor consent required)
+  RSCH-395:
+    code: RSCH 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    offered:
+      availability: periodic
+  RSCH-400:
+    code: RSCH 400
+    title: Undergraduate Research IV
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: "Fosters advanced academic skills, such as leadership and academic ownership, that will prepare students for a successful transition to graduate school. Students present their research at regional and national conferences, and develop peer-reviewed publications. Students also develop their graduate school application package: personal statement, research statement, cover letter, curriculum vitae, and scholarship/fellowship applications."
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: RSCH-301
+    prerequisiteNotes:
+      - "(Prereq: RSCH 301   )"

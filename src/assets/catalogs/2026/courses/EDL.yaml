@@ -1,0 +1,56 @@
+schemaVersion: 1
+prefix: EDL
+courses:
+  EDL-610:
+    code: EDL 610
+    title: Leadership in P-12 Educational Organizations
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Embodies concepts and techniques of leadership, analysis of factors and practices and procedures of individual and group leadership as applied to educational settings. Students are introduced to the importance of vision and the process for developing, sustaining and communicating vision to achieve higher student achievement by actively and meaningfully including stakeholders. This emphasis is in response to the professional standards that guide the development and practice of ed leaders.
+    offered:
+      terms:
+        - fall
+  EDL-630:
+    code: EDL 630
+    title: Resource Leadership in P-12 Educational Organizations
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course examines the legal, political and organizational dimensions of equitable resource leadership in primary and secondary educational settings. Students engage in analysis of law, policy and practice to better understand the processes, constraints and opportunities for structuring educational organizations in ways that align fiscal, human, capital and community resources with learning-focused opportunities for student success.
+    offered:
+      terms:
+        - spring
+  EDL-650:
+    code: EDL 650
+    title: Professional Learning and Growth Leadership
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides school leaders with preparation in skills for providing purpose and direction for individuals and groups, shaping school culture and values, facilitating the development of shared strategic vision for the school, formulating goals and planning change efforts with staff, and setting priorities for one’s school in the context of community and district priorities for student and staff needs.
+    offered:
+      terms:
+        - fall
+  EDL-660:
+    code: EDL 660
+    title: Field Experience
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: The Field Experience course ties coursework to practice. By engaging in field experience activities aligned with the California Administrator Performance Expectations, students will experience and reflect upon the challenges and opportunities that regularly face school leaders. The field experience provides intentionally planned and supervised real world opportunities for aspiring administrators to positively impact learning for all students.
+    offered:
+      terms:
+        - fall
+        - spring
+  EDL-695:
+    code: EDL 695
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 8
+    description: In-depth study in a particular topic in education. May be repeated for credit when topics vary.

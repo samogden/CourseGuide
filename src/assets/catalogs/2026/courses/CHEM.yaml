@@ -1,0 +1,636 @@
+schemaVersion: 1
+prefix: CHEM
+courses:
+  CHEM-109:
+    code: CHEM 109
+    title: Introductory Chemistry
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: A study of the basic principles of chemistry with special emphasis on problem solving and quantitative literacy, and biological and environmental applications of chemistry.
+    offered:
+      terms:
+        - fall
+        - spring
+  CHEM-109L:
+    code: CHEM 109L
+    title: Intro Chemistry Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Optional inquiry-based introductory chemistry lab can be taken concurrently or after CHEM 109   .
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CHEM-109
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq or Coreq: CHEM 109 with a C- or better)"
+  CHEM-110:
+    code: CHEM 110
+    title: Chemistry I
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Develops problem-solving skills related to the nature of matter, chemical reactions, stoichiometry, energy transformations, atomic and molecular structure, quantum theory, chemical bonding, and periodic properties. Students must complete an Introductory Chemistry course such as CHEM 109   , or have a passing score on CSUMB’s chemistry placement exam.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-130
+            minimumGrade: C-
+          - courseId: MATH-150
+            minimumGrade: C-
+          - courseId: CHEM-110L
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq or Coreq: MATH 130 or MATH 150 with a C- or better) and (Coreq: CHEM 110L )]"
+  CHEM-110D:
+    code: CHEM 110D
+    title: Supplemental Workshop for CHEM 110
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Optional supplemental problem-solving workshop in an active-learning setting. Designed for students who have completed high school chemistry or introductory chemistry but want additional support to succeed in General Chemistry in an active-learning setting.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: CHEM 110   )"
+  CHEM-110L:
+    code: CHEM 110L
+    title: Chemistry I Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Required lab course for CHEM 110   . Emphasizes qualitative and quantitative experiments, data analysis, and error propagation. Lab course fee may be charged.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: CHEM 110   )"
+  CHEM-111:
+    code: CHEM 111
+    title: Chemistry II
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Develops problem-solving skills related to solutions, phase changes, gas laws, thermodynamics, kinetics, chemical equilibrium, acids and bases, organic chemistry, biochemistry, electrochemistry, metal complexation, and nuclear chemistry.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: CHEM-110
+            minimumGrade: C-
+          - courseId: CHEM-110L
+            minimumGrade: C-
+          - courseId: CHEM-111L
+            minimumGrade: C-
+          - anyOf:
+              - courseId: MATH-130
+                minimumGrade: C-
+              - courseId: MATH-150
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( CHEM 110   and CHEM 110L   ) and ( MATH 130   or MATH 150   ) with a C- or better) and (Coreq: CHEM 111L   )]"
+  CHEM-111L:
+    code: CHEM 111L
+    title: Chemistry II Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Required laboratory course for CHEM 111   . Emphasizes qualitative and quantitate experiments, data analysis, and error propagation. Lab course fee may be charged.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: CHEM 111   )"
+  CHEM-195:
+    code: CHEM 195
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 0
+      maximum: 4
+    description: Studies a particular topic in Chemistry. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  CHEM-197:
+    code: CHEM 197
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      terms:
+        - fall
+        - spring
+  CHEM-211:
+    code: CHEM 211
+    title: Organic Chemistry I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Nomenclature, structure, bonding, reactivity, and formation of saturated and unsaturated hydrocarbons, halogenated compounds, alcohols and carbonyls. Includes introduction to organic structure of biomolecules.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CHEM-111
+            minimumGrade: C-
+          - courseId: CHEM-111L
+            minimumGrade: C-
+          - courseId: CHEM-211L
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: CHEM 111   and CHEM 111L   with a C- or better) AND (Coreq or Prereq: CHEM 211L   with C- or better)]"
+  CHEM-211L:
+    code: CHEM 211L
+    title: Organic Chemistry I Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Required lab course for CHEM 211   Organic Chemistry I. Emphasizes working safely with saturated and unsaturated hydrocarbons, halogenated compounds, alcohols and carbonyls, and the specialized equipment and techniques to run experiments on these and other organic molecules.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CHEM-111
+            minimumGrade: C-
+          - courseId: CHEM-111L
+            minimumGrade: C-
+          - courseId: CHEM-211
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: CHEM 111   and CHEM 111L   with a C- or better) AND (Prereq OR Coreq: CHEM 211   with a C- or better)]"
+  CHEM-212:
+    code: CHEM 212
+    title: Organic Chemistry II
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Synthesis, reactions, and analysis of organic compounds, with applications to biology, biogeochemistry, and environmental science.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CHEM-211
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CHEM 211   with a C- or better)"
+  CHEM-212L:
+    code: CHEM 212L
+    title: Organic Chemistry II Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Synthesis, reactions, and analysis of organic compounds, with applications to biology, biogeochemistry, and environmental science.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CHEM-211
+            minimumGrade: C-
+          - courseId: CHEM-212
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CHEM 211   with a C- or better) AND (Coreq or Prereq CHEM 212   with a C- or better)"
+  CHEM-280:
+    code: CHEM 280
+    title: Molecular Modeling
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Computational chemistry uses computer simulation to assist in solving complex chemical problems. It implements methods of theoretical chemistry, incorporated into efficient computer programs, to calculate the structures, the interactions, and the properties of molecules.
+    offered:
+      terms:
+        - fall
+        - spring
+  CHEM-295:
+    code: CHEM 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Chemistry. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  CHEM-297:
+    code: CHEM 297
+    title: Independent Research
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Student and faculty member select topic for a research project. (Instructor Consent Required)
+    offered:
+      terms:
+        - fall
+        - spring
+  CHEM-305:
+    code: CHEM 305
+    title: General, Organic, and Biochemistry in Agriculture and Environmental Science
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course will develop an understanding of the chemistry of everyday living with an emphasis on molecules encountered in agriculture and both marine and terrestrial environmental settings. Topics include the fundamentals of chemical reactivity, structure in two and three dimensions, the movement of electrons, stoichiometry, and the relationships between structure and function. These tools will be used to introduce the biochemistry of metabolism.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   rea 1A and 1B and 1C and 2 and 5A with C- or better)"
+  CHEM-310:
+    code: CHEM 310
+    title: Biochemistry I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Covers biomolecular structure and function, biological oxidation and reduction, metabolism, including respiration and photosynthesis, membrane transport, and biotransformation.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CHEM-211
+            minimumGrade: C-
+          - courseId: CHEM-312
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CHEM 211   or CHEM 312   with a C- or better)"
+  CHEM-310L:
+    code: CHEM 310L
+    title: Biochemistry Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Optional lab course for CHEM 310   . Lab course fee may be charged. (Crosslisted with BIO 310L   )
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-310
+            minimumGrade: C-
+          - courseId: CHEM-310
+            minimumGrade: C-
+          - courseId: BIO-310
+            minimumGrade: C-
+          - courseId: CHEM-310
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BIO 310   or CHEM 310   with a C- or better) or (Coreq: BIO 310   or CHEM 310   )]"
+  CHEM-312:
+    code: CHEM 312
+    title: Organic Chemistry II
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Synthesis, reactions, and analysis of organic compounds, with applications to biology, biogeochemistry, and environmental science.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CHEM-211
+            minimumGrade: C-
+          - courseId: CHEM-211L
+            minimumGrade: C-
+          - courseId: CHEM-312L
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: CHEM 211   and CHEM 211L   with a C- or better) AND (Pre-req or Co-req: CHEM 312L   with a C- or better)]"
+  CHEM-312L:
+    code: CHEM 312L
+    title: Organic Chemistry Lab II
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Required lab course for CHEM 312 Organic Chemistry II. Develops the technical skills and use of specialized equipment to synthesize, carry out reactions, and analyze organic molecules with applications to biology, biogeochemistry and environmental science.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CHEM-211
+            minimumGrade: C-
+          - courseId: CHEM-211L
+            minimumGrade: C-
+          - courseId: CHEM-312
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: CHEM 211   and CHEM 211L   with a C- or better) AND (Coreq OR Prereq: CHEM 312   with a C- or better)]"
+  CHEM-320:
+    code: CHEM 320
+    title: Environmental Chemistry
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course studies the chemistry of air, water, and toxic organic compounds as well as how anthropogenic activities affect this chemistry on Earth. It examine the sources, reactions, transport, effects, and fates of chemical species found in air, soil, and water.
+    offered:
+      availability: periodic
+    prerequisites:
+      - allOf:
+          - courseId: CHEM-111
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BIO-211
+                minimumGrade: C-
+              - courseId: CHEM-211
+                minimumGrade: C-
+              - courseId: PHYS-220
+                minimumGrade: C-
+              - courseId: STAT-250
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CHEM 111 and (BIO 211 or CHEM 211 or PHYS 220 or STAT 250 ) with a C- or better)"
+  CHEM-320L:
+    code: CHEM 320L
+    title: Environmental Chemistry Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Laboratory course with topics and techniques selected from atmospheric, terrestrial, marine, and aquatic sciences. Emphasis will be placed on both laboratory methods and quantitative analysis of results.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: CHEM-111
+            minimumGrade: C-
+          - courseId: CHEM-111L
+            minimumGrade: C-
+          - courseId: STAT-250
+            minimumGrade: C-
+          - courseId: CHEM-320
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( CHEM 111   and CHEM 111L   and STAT 250   with a C- or better) or (Prereq or Coreq: CHEM 320   with a C- or better)]"
+  CHEM-330:
+    code: CHEM 330
+    title: Physical Chemistry
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course delves into topics like quantum mechanics and thermodynamics, essential not just for understanding biological systems but also for grasping environmental phenomena like climate change. Students will explore the foundations of atomic and molecular behavior; learn how thermodynamic principles are essential in biochemistry and physiology; examine rate laws and reaction mechanisms.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CHEM-111
+            minimumGrade: C-
+          - courseId: CHEM-111L
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CHEM 111   and CHEM 111L   with a C- or better)"
+  CHEM-330L:
+    code: CHEM 330L
+    title: Physical Chemistry Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This computational laboratory course complements the one-semester Physical Chemistry lecture by introducing students to molecular modeling, quantum chemistry, and chemical data analysis using the Wolfram Language and research grade simulation software such as Gaussian and Amsterdam Modeling Suite. Students will gain hands-on experience in simulating chemical systems, analyzing spectroscopic properties, and modeling thermodynamic behavior. Emphasis is placed on computational methods as a modern laboratory skill, scientific communication through interactive reports, and development of reproducible workflows. No wet-lab experiments are conducted.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CHEM-211
+          - courseId: CHEM-330
+    prerequisiteNotes:
+      - "[(Prereq: CHEM 211   or Instructor Consent) or (Coreq: CHEM 330   )]"
+  CHEM-350:
+    code: CHEM 350
+    title: Analytical & Instrumental Chemistry
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Lecture and laboratory course develops skill and understanding of analytical chemistry and instrumental analysis. Covers a range of spectrophotometry, chromatography, spectrometry, and titrimetry methods. Students are billed a materials fee.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: CHEM-111
+            minimumGrade: C-
+          - courseId: CHEM-111L
+            minimumGrade: C-
+          - courseId: CHEM-210
+            minimumGrade: C-
+          - courseId: CHEM-210L
+            minimumGrade: C-
+          - courseId: CHEM-211
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: ( CHEM 111   and CHEM 111L   ) and [( CHEM 210   and CHEM 210L   ) or ( CHEM 211   ) with a C- or better]"
+  CHEM-394:
+    code: CHEM 394
+    title: Chemistry Internship
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 4
+    description: Students obtain practical experience in a chemistry-related (paid or unpaid) internship. Students must document academic learning through journals, annotated bibliography, and/or reports appropriate to the internship. May be repeated for credit for a total of six (6) units. (Graded Available)
+    offered:
+      terms:
+        - fall
+        - spring
+  CHEM-395:
+    code: CHEM 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Chemistry. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  CHEM-397:
+    code: CHEM 397
+    title: Independent Research
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      terms:
+        - fall
+        - spring
+  CHEM-410:
+    code: CHEM 410
+    title: Biochemistry II
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Covers metabolism and regulation of a variety of biomolecules and transport and signaling pathways.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: CHEM-310
+            minimumGrade: C-
+          - courseId: BIO-310
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CHEM 310   or BIO 310   with a C- or better)"
+  CHEM-420:
+    code: CHEM 420
+    title: Bioorganic Chemistry Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Survey of selected topics from the current chemical literature in bioorganic chemistry. May be repeated for credit as topics change for a total of six (6) units.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: CHEM-310
+            minimumGrade: C-
+          - courseId: BIO-310
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CHEM 310   or BIO 310   with a C- or better)"
+  CHEM-430:
+    code: CHEM 430
+    title: Environmental and Agricultural Chemistry Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Selected topics from the current literature in environmental, analytical, and agricultural chemistry. May be repeated for credit for a total of six (6) units.
+    offered:
+      availability: periodic
+    prerequisites:
+      - allOf:
+          - courseId: CHEM-350
+            minimumGrade: C-
+          - anyOf:
+              - courseId: CHEM-210
+                minimumGrade: C-
+              - courseId: CHEM-211
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( CHEM 350   ) and ( CHEM 210   or CHEM 211   ) with a C- or better]"
+  CHEM-432:
+    code: CHEM 432
+    title: Aqueous Chemistry
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Chemistry of molecules and materials in aqueous solutions relevant to marine, aquatic, and biological contexts. Topics may include pH and pOH, buffering, alkalinity, ionic strength, solvation and solubility, volume and mass fraction, osmolality and tonicity, and water activity.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: CHEM-310
+            minimumGrade: C-
+          - courseId: CHEM-320
+            minimumGrade: C-
+          - courseId: CHEM-350
+            minimumGrade: C-
+          - courseId: BIO-310
+            minimumGrade: C-
+          - courseId: BIO-320
+            minimumGrade: C-
+          - courseId: MSCI-331
+            minimumGrade: C-
+          - courseId: AGPS-315
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CHEM 310   or CHEM 320   or CHEM 350   or BIO 310   or BIO 320   or MSCI 331   or AGPS 315   with a C- or better)"
+  CHEM-440:
+    code: CHEM 440
+    title: Forensic Chemistry Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Selected topics from the current literature in forensic chemistry. May be repeated for a total of six (6) units.
+    offered:
+      availability: periodic
+    prerequisites:
+      - allOf:
+          - courseId: CHEM-350
+            minimumGrade: C-
+          - anyOf:
+              - courseId: CHEM-210
+                minimumGrade: C-
+              - courseId: CHEM-211
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( CHEM 350   ) and ( CHEM 210   or CHEM 211   ) with a C- or better]"
+  CHEM-450:
+    code: CHEM 450
+    title: Special Problems in Chemistry Laboratory
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Covers theory and practical application of instrumental methods of analysis, culminating in a faculty guided lab research project. Students submit a written report summarizing the research findings. May be repeated for a total of four (4) units. Depending on research topic, students must complete either CHEM 350   or BIO 310L   and or CHEM 312   .
+    offered:
+      availability: periodic
+  CHEM-495:
+    code: CHEM 495
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Chemistry. May be repeated for credit when topics vary. (Letter Grade Available)
+    offered:
+      availability: periodic
+  CHEM-497:
+    code: CHEM 497
+    title: Independent Research
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      terms:
+        - fall
+        - spring

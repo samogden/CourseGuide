@@ -1,0 +1,818 @@
+schemaVersion: 1
+prefix: MATH
+courses:
+  MATH-10:
+    code: MATH 10
+    title: Support Course for MATH 100
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This co-requisite course contains topics which directly support the content in MATH 100   . It contains support for mathematical skills and knowledge used in MATH 100   , supplemental instruction on MATH 100   content, and study skill development.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: MATH 100   )"
+  MATH-15:
+    code: MATH 15
+    title: Support Course for MATH 115
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This co-requisite course contains topics which directly support the content in MATH 115   . It contains support for mathematical skills and knowledge used in MATH 115   , supplemental instruction on MATH 115   content, and study skill development.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: MATH 115   )"
+  MATH-30:
+    code: MATH 30
+    title: Support Course for MATH 130
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This co-requisite course contains topics which directly support the content in MATH 130   . It contains support for mathematical skills and knowledge used in MATH 130   , supplemental instruction on MATH 130   content, and study skill development.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: MATH 130   )"
+  MATH-99:
+    code: MATH 99
+    title: Mathematics Review II
+    teachingStatus: active
+    credits:
+      minimum: 6
+      maximum: 6
+    description: A continuation of Math 98 for those students who have not yet satisfied the ELM requirement. Not for baccalaureate credit; however, the course grade (A-F) will show on student transcripts.
+    offered:
+      terms:
+        - spring
+  MATH-100:
+    code: MATH 100
+    title: Quantitative Literacy
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: The course uses quantitative methods to model and solve real world problems. It covers basic number theory, linear, quadratic, exponential and logarithmic functions; systems of equations and inequalities; probability theory; frequency distributions, measures of central tendency and dispersion, bivariate data, and correlation. The course uses technology as a tool to acquire, visualize, and analyze data.
+    offered:
+      terms:
+        - fall
+        - spring
+  MATH-115:
+    code: MATH 115
+    title: Finite Mathematics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "Mathematical modeling and data analysis applicable to the social sciences and business such as the following: linear functions, systems of linear equations, matrices, linear programming including the simplex method and the mathematics of finance."
+    offered:
+      terms:
+        - fall
+        - spring
+  MATH-130:
+    code: MATH 130
+    title: Precalculus
+    teachingStatus: active
+    credits:
+      minimum: 5
+      maximum: 5
+    description: Studies the functions that will be used in calculus. Topics include quadratic, exponential, logarithmic, polynomial, rational, piecewise, and trigonometric functions. Students will study the properties of these functions as well as their applications including projectile motion, compound interest, population growth, decay, and cyclic phenomenon.
+    offered:
+      terms:
+        - fall
+        - spring
+  MATH-150:
+    code: MATH 150
+    title: Calculus I
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Includes limits, continuity, derivatives including trigonometric functions, chain rule, curve sketching, extremum problems, implicit differentiation, related rates, Mean Value Theorem, logarithmic and trigonometric functions, introduction to integration, fundamental theorem of calculus, substitution, and applications.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-130
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 130   with a C- or better)"
+  MATH-151:
+    code: MATH 151
+    title: Calculus II
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Includes the calculus of exponential and logarithmic functions, trigonometric and inverse trigonometric functions, techniques of integration, separable differential equations, Taylor polynomials, L’Hôpital’s rule, improper integrals, series, and introduction to partial derivatives.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-150
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 150   with a C- or better)"
+  MATH-170:
+    code: MATH 170
+    title: Discrete Mathematics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces set theory, deductive logic, elements of mathematical proofs focusing on direct proofs and indirect proofs by contraposition and contradiction. Introduces sequences, the summation notation, and proofs by mathematical induction. Develops understanding of bijective functions, relations, and equivalence relations. Introduces the counting principles, discrete probability, and graph theory. Applies these topics to solve problems in mathematics and branches of science, particularly computer science.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-130
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 130   with a C- or better)"
+  MATH-195:
+    code: MATH 195
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    offered:
+      availability: periodic
+  MATH-197:
+    code: MATH 197
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      terms:
+        - fall
+        - spring
+  MATH-230:
+    code: MATH 230
+    title: Elementary Linear Algebra
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: A computational introduction to linear algebra. Topics include vectors in Euclidean space, matrices, matrix operations, determinants, bases, linear transformations, subspaces, and eigenvalues/eigenvectors. An emphasis on applying linear algebra to other areas of mathematics and statistics and to real-world problems.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-150
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 150 with a C- or better)"
+  MATH-240:
+    code: MATH 240
+    title: Elementary Differential Equations
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Studies introductory theory of ordinary differential equations with analytical solution methods, elementary numerical methods, and modeling and applications. Topics include first-order linear equations, separable equations, second-order linear equations, nonhomogeneous equations, systems of first-order linear equations, Laplace Transforms, and introduction to systems of nonlinear equations.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-151
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 151 with a C- or better)"
+  MATH-250:
+    code: MATH 250
+    title: Multivariate Calculus
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Vectors in three dimensions, solid analytic geometry, partial differentiation, multiple integration, differentiation under the integral sign, vector field theory.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-151
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 151   with a C- or better)"
+  MATH-265:
+    code: MATH 265
+    title: Differential Equations and Linear Algebra
+    teachingStatus: active
+    credits:
+      minimum: 5
+      maximum: 5
+    description: First order ordinary differential equations including direction fields, separation of variables, first order linear equations, growth and decay, nonlinear models. Linear algebra including systems of linear equations, matrix inverses, determinants, vector spaces and subspaces, basis and dimension.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-151
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 151   with a C- or better)"
+  MATH-270:
+    code: MATH 270
+    title: Mathematics for Computing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Studies basic linear algebra, continuous and discrete probability, and computing theory emphasizing theoretical and applicable methods. Topics include systems of linear equations, matrices, vectors, vector transformations, determinants, eigenvalues, numerical integration, probability distributions and densities, expected value, functions of random variables, random number generation, automata, and regular expressions. An appropriate programming language such as Python is incorporated as needed.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-150
+            minimumGrade: C-
+          - courseId: MATH-170
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 150   and MATH 170   with a C- or better)"
+  MATH-294:
+    code: MATH 294
+    title: Mathematics Introductory Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Students work with practicing professionals in a volunteer or paid internship that requires application of introductory knowledge and skills in mathematics. Academic credit is awarded for documented learning that takes place during the internship and that meets individualized and core internship outcomes.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Instructor Consent Required)
+  MATH-295:
+    code: MATH 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    offered:
+      availability: periodic
+  MATH-297:
+    code: MATH 297
+    title: Independent Research
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      terms:
+        - fall
+        - spring
+  MATH-300:
+    code: MATH 300
+    title: Major Proseminar
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students develop scholarly reading, writing, research, and collaboration skills needed for effective communication in mathematics and statistics. Students develop a career plan that integrates their major and their personal and professional goals. Students also explore ethical considerations as it relates to the practice of mathematics and statistics.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-151
+            minimumGrade: C-
+          - courseId: MATH-170
+            minimumGrade: C-
+          - courseId: MATH-322
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( GE   Area 1A and 1B and 1C) and ( MATH 151   ) with a C- or better and (Prereq or Coreq: MATH 170   or MATH 322   with a C- or better)]"
+  MATH-308:
+    code: MATH 308
+    title: Elementary Mathematics from an Advanced Perspective A
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: The first of a two-course sequence intended for future elementary teachers. Students develop an in-depth understanding of key concepts in K-8 mathematics and of students’ learning of K-8 mathematics concepts.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-100
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: MATH 100   and ( GE   Area 1A and 1B and 1C and 2) with a C- or better)]"
+  MATH-309:
+    code: MATH 309
+    title: Elementary Math - Adv Viewpt B
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Second in a sequence of courses intended for future elementary and middle school teachers. Students in this course will develop an in-depth understanding of additional key concepts in K-8 mathematics and further develop their understanding of children’s learning processes in mathematics in general.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-308
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 308   with a C- or better)"
+  MATH-320:
+    code: MATH 320
+    title: Applied Probability and Statistics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Provides the foundation for applied probability and statistics methods including basic probability theory, sampling and experimental design, descriptive statistics, estimation of parameters, hypothesis testing, correlation, regression analysis, and statistical computing.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-150
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 150   with a C- or better)"
+  MATH-322:
+    code: MATH 322
+    title: Foundations of Modern Math
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces elements of mathematical proof, focusing on the various forms and methods, including direct proof; indirect proof; existence and uniqueness proofs; mathematical induction; and strong induction. Proof methods are applied to mathematical statements taken from number theory, geometry, and calculus. Develops the tools, terminology, and symbols of advanced mathematics including deductive logic, sets, functions, equivalence relations, and number systems.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-151
+            minimumGrade: C-
+          - courseId: MATH-150
+            minimumGrade: C-
+          - courseId: MATH-170
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 151   or ( MATH 150   and MATH 170)   with a C- or better)"
+  MATH-325:
+    code: MATH 325
+    title: Number Theory
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces the properties of integers. Topics include the division and Euclidean algorithms, mathematical induction, congruences, fundamental theorem of arithmetic, perfect numbers, number theoretic functions, and prime number theorem.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-322
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 322   with a C- or better)"
+  MATH-326:
+    code: MATH 326
+    title: History of Mathematics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: The history of mathematics from ancient to modern times. Students learn to solve problems using only the tools of the past. Mathematics is developed in the context of its impact on the development of science and the interaction of mathematics with other fields of human endeavor such as philosophy, arts, and social values.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-151
+            minimumGrade: C-
+          - courseId: MATH-322
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: MATH 151   ) or (Prereq or Coreq: MATH 322   with C- or better)]"
+  MATH-329:
+    code: MATH 329
+    title: College Geometry
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: The Hilbert postulates and axiomatic systems, isometries in the Euclidean Plane, non-Euclidean geometries, finite geometries, and the construction of geometries from fields.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-151
+            minimumGrade: C-
+          - courseId: MATH-322
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 151   with a C- or better) and (Coreq: MATH 322   )"
+  MATH-330:
+    code: MATH 330
+    title: Advanced Linear Algebra
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Linear equations and matrices, vector spaces, dual spaces and inner product spaces, linear transformations, determinants, eigenvalues and eigenvectors, systems of linear differential equations, and applications.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: MATH-322
+            minimumGrade: C-
+          - anyOf:
+              - courseId: MATH-230
+                minimumGrade: C-
+              - courseId: MATH-265
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: ( MATH 230   or MATH 265)   and MATH 322   with a C- or better)"
+  MATH-340:
+    code: MATH 340
+    title: Ordinary Differential Equations
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Studies the qualitative theory of ordinary differential equations using analytical, geometric, and numerical methods. Topics include existence and uniqueness, dependence on initial conditions and parameters, linear systems, stability and asymptotic behavior, plane autonomous systems, series solutions at regular singular points. Modeling and applications will be emphasized.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-240
+            minimumGrade: C-
+          - courseId: MATH-265
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: MATH 240   or MATH 265   ) with a C- or better]"
+  MATH-350:
+    code: MATH 350
+    title: Complex Analysis
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Complex numbers; analytic functions, Cauchy-Riemann equations; linear fractional transformations; construction and geometry of the elementary functions; Green’s theorem, Cauchy’s theorem; Jordan curve theorem, Cauchy’s formula; Taylor’s theorem, Laurent expansion; analytic continuation; isolated singularities, Liouville’s theorem; Abel’s convergence theorem and the Poisson integral formula.The fundamental theorem of algebra.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-250
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 250   with a C- or better)"
+  MATH-361S:
+    code: MATH 361S
+    title: Mathematics Tutors
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Service learning placements in middle or high schools help students deepen their understanding of mathematical principles, techniques, and methodologies for effective instruction. Students also study how issues of social justice and equity affect mathematical literacy and why it is important for everyone to be mathematically literate.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-130
+    prerequisiteNotes:
+      - "[Prereq: (Junior or Senior Standing) and ( GE   Area 4B) and ( MATH 130   or equivalent)]"
+    minimumStanding: junior
+  MATH-362S:
+    code: MATH 362S
+    title: Service Learning for Mathematics and Statistics Consultants
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Service-learning placements in local non-profit organizations, school districts, and community organizations help students deepen their understanding of mathematical and statistical principles, techniques, and methodologies for effective consulting. Students will also study how the need for mathematical and statistical analysis can influence issues of social justice and equity within the local and global community.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-320
+            minimumGrade: C-
+          - courseId: STAT-100
+            minimumGrade: C-
+          - courseId: STAT-250
+            minimumGrade: C-
+          - courseId: BUS-204
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: (Junior or Senior Standing) and ( GE   Area 4B) and ( MATH 320   or STAT 100   or STAT 250   or BUS 204   with a C- or better)]"
+    minimumStanding: junior
+  MATH-370:
+    code: MATH 370
+    title: Logic and Computation
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: An advanced study of logic and discrete structures that have application in computer science. Includes logic, propositional and predicate calculus, proof structures, algorithms, and complexity. Emphasizes applications to core areas of computer science, such as computer architecture, programming languages, the theory of computation, artificial intelligence, software engineering, and relational databases.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-151
+            minimumGrade: C-
+          - courseId: MATH-170
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 151   or MATH 170   with a C- or better)"
+  MATH-374:
+    code: MATH 374
+    title: Mathematical Modeling
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: The construction of mathematical models to solve real world problems. Model types include continuous, discrete, deterministic and stochastic. The entire modeling process from construction of the model, fitting data to the model, analysis of the model including model selection, and verification of the model covered. Examples from a variety of disciplines including biology, physics, economics and finance.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-151
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 151   with a C- or better)"
+  MATH-375:
+    code: MATH 375
+    title: Numerical Analysis for Mathematics and Statistics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Methods of numerical approximation of the value of functions, polynomials, systems of equations and integrals using a programming language such as R, C++ or Mathematica. Topics may include accuracy of approximate calculations, root finding methods, interpolation, numerical differentiation and integration, numerical solutions to ordinary differential equations, regression, optimization and Monte Carlo methods.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-151
+            minimumGrade: C-
+          - courseId: CST-231
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 151   and CST 231   with a C- or better)"
+  MATH-376:
+    code: MATH 376
+    title: Partial Differential Equations
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Derivation of partial differential equations; separation of variables; equilibrium solutions and Laplace’s equation; Fourier series; method of characteristics for the one dimensional wave equation. Solutions of non-homogeneous equations.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-265
+            minimumGrade: C-
+          - courseId: MATH-230
+            minimumGrade: C-
+          - courseId: MATH-240
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 265   or ( MATH 230   and MATH 240   ) with a C- or better)"
+  MATH-385:
+    code: MATH 385
+    title: Enumerative Combinatorics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: An introduction to basic notions and techniques in Enumerative Combinatorics. Basic structures of enumeration including enumerative families like binomial coefficients, Catalan numbers, Fibonacci numbers, Eulerian numbers, Bell numbers, and Stirling numbers; compositions and partitions; recurrences; permutations and permutation statistics; generating functions; partially ordered sets; applications to Symmetric functions.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-170
+            minimumGrade: C-
+          - courseId: MATH-322
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 170   or MATH 322   with a C- or better)"
+  MATH-386:
+    code: MATH 386
+    title: Graph Theory and Its Applications
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introductory graph theory with applications. Graphs and digraphs. Eulerian and Hamiltonian graphs. The traveling salesman problem, connectivity, trees, planarity, colorings, scheduling, minimal cost networks and graph models.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-170
+            minimumGrade: C-
+          - courseId: MATH-151
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 170   or MATH 151   with a C- or better)"
+  MATH-394:
+    code: MATH 394
+    title: Mathematics Intermediate Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Students work with practicing professionals in a volunteer or paid internship that requires application of intermediate knowledge and skills in mathematics. Academic credit is awarded for documented learning that takes place during the internship and that meets individualized and core internship outcomes.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Instructor Consent Required)
+  MATH-395:
+    code: MATH 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Mathematics. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  MATH-397:
+    code: MATH 397
+    title: Independent Research
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      terms:
+        - fall
+        - spring
+  MATH-400:
+    code: MATH 400
+    title: Capstone Seminar
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Under the guidance of a faculty member, students complete a formal write up and present research in an area of their interest.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-300
+            minimumGrade: C-
+          - courseId: MATH-322
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 300   and MATH 322   with a C- or better)"
+  MATH-401:
+    code: MATH 401
+    title: Graduate and Professional Studies Preparation for the Sciences
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students planning to apply to graduate or professional/credential programs in the sciences after graduation will strengthen several professional skills, including teamwork, self-efficacy, goal-setting, organization, and communication skills. Students will prepare and revise professional documents, such as curriculum vitae and personal statements, for their applications for programs and funding and will enhance their communication skills in a variety of contexts, such as written correspondence and mock interview exercises. All assignments are built around the application development process for graduate or professional academic programs.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: Senior Standing)"
+  MATH-410:
+    code: MATH 410
+    title: Modern Algebra I
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Detailed study of the theory of basic algebraic systems, groups, and rings. Topics include subgroups, permutation groups, homomorphisms, and rings.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - allOf:
+          - courseId: MATH-322
+            minimumGrade: C-
+          - anyOf:
+              - courseId: MATH-265
+                minimumGrade: C-
+              - courseId: MATH-230
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: ( MATH 265   or MATH 230   ) and MATH 322   with a C- or better)"
+  MATH-411:
+    code: MATH 411
+    title: Modern Algebra II
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: A rigorous treatment of rings and fields. Examples from many branches of mathematics. Ideals and quotient rings, categorization of rings, Euclidean domains, polynomial rings and fields, unique factorization domains, extension fields, and Galois theory.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-410
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 410   with a C- or better)"
+  MATH-420:
+    code: MATH 420
+    title: Mathematical Analysis I
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: A rigorous introduction to the real number system studying the properties and structure of the real numbers and the completeness axiom. Develops a rigorous understanding of real sequences, open, closed, and compact sets of real numbers, the continuity, differentiability, and integration of real functions leading to the proofs of the Fundamental Theorems of Calculus. Includes an introduction to metric spaces as a generalization of the real number system.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-250
+            minimumGrade: C-
+          - courseId: MATH-322
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 250   and MATH 322   with a C- or better)"
+  MATH-421:
+    code: MATH 421
+    title: Mathematical Analysis II
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: A continuation of MATH 420   . A rigorous study of metric spaces, sequences, and complete metric spaces. Develops the understanding of the spaces of continuous functions, normed and inner product spaces. Introduces measure spaces, in particular, develops an understanding of Lebesgue measure and Lebesgue integrable functions.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-420
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 420   with a C- or better)"
+  MATH-494:
+    code: MATH 494
+    title: Mathematics Advanced Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Students work with practicing professionals in a volunteer or paid internship that requires application of advanced knowledge and skills in mathematics. Academic credit is awarded for documented learning that takes place during the internship and that meets individualized and core internship outcomes.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Instructor Consent Required)
+  MATH-497:
+    code: MATH 497
+    title: Independent Research
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      terms:
+        - fall
+        - spring
+  MATH-597:
+    code: MATH 597
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic

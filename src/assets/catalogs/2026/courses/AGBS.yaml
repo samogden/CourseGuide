@@ -1,0 +1,332 @@
+schemaVersion: 1
+prefix: AGBS
+courses:
+  AGBS-305:
+    code: AGBS 305
+    title: Agribusiness Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course introduces students to economic and managerial concepts in farm and agribusiness, focusing on production processes, cost analysis, and the management of inputs. Students will explore unique challenges in U.S. agriculture, emphasizing sustainability and decision-making frameworks. Through critical thinking and economic logic, they will develop strategies for managing agribusiness operations and analyzing market complexities.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 2 with a C- or better) and (Junior or Senior Standing Required)]"
+    minimumStanding: junior
+  AGBS-306:
+    code: AGBS 306
+    title: Agribusiness Marketing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course explores the agribusiness food marketing system, including cash marketing, commodity futures, branded products, and the impact of government and international trade. Students will gain an understanding of market structures, price risk management, ethical and legal aspects of marketing, and corporate social responsibility. Emphasizing critical thinking, the course provides analytical tools for evaluating current marketing issues and making informed economic decisions in agribusiness.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 2 with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  AGBS-309:
+    code: AGBS 309
+    title: Principles of Operations Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces principles of Operations Management. Emphasis is on applied analytical and quantitative skills using spreadsheets for optimal allocation of resources for an organization in a manufacturing or service industry. Major topics are operations strategies, project mgmt., linear programming/optimization, supply chain, facility location/layout, workforce and capacity planning, forecasting, inventory mgmt., enterprise resource planning, quality control, system reliability, and decision tools.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-299
+          - courseId: BUS-301
+          - courseId: BUS-204
+          - courseId: STAT-100
+    prerequisiteNotes:
+      - "[(Prereq: ( BUS 299   or BUS 301   or equivalent) and ( BUS 204   or STAT 100   or equivalent))]"
+  AGBS-370:
+    code: AGBS 370
+    title: Production and Price Analysis in Agriculture
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Principles of price analysis will provide students an introduction to the application of statistical tools needed to conduct empirical work on market behavior. Students will learn how to empirically estimate demand/supply functions and the impact of pricing decisions. This application will then be extended to forecasting demand and supply conditions, and impacts on pricing decisions as a final project.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - allOf:
+          - courseId: BUS-201
+            minimumGrade: C-
+          - courseId: BUS-202
+            minimumGrade: C-
+          - courseId: BUS-299
+            minimumGrade: C-
+          - courseId: BUS-301
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BUS-204
+                minimumGrade: C-
+              - courseId: STAT-100
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: BUS 201   and BUS 202   and ( BUS 204   or STAT 100   ) and ( BUS 299   or BUS 301   or equivalent) with a C- or better)]"
+  AGBS-375:
+    code: AGBS 375
+    title: Agribusiness Trading and Risk Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces the fundamentals of risk management and trading, pricing, purchasing and procurement in the agricultural sector. Structure of financial commodity and produce markets and commonly used strategies such as hedging, and futures & options strategies, to manage risk are presented. Application of such strategies to manage financial risk and commodity/produce trading are simulated in the classroom environment.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-204
+            minimumGrade: C-
+          - courseId: STAT-100
+            minimumGrade: C-
+          - courseId: BUS-202
+            minimumGrade: C-
+          - courseId: BUS-299
+            minimumGrade: C-
+          - courseId: BUS-301
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: BUS 204   or STAT 100   ) and BUS 202   with a C- or better) and ( BUS 299   or BUS 301   or equivalent) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  AGBS-434:
+    code: AGBS 434
+    title: Policy & Regulation in Environmental Agribusiness
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Examines the complex agribusiness policy and regulatory environment. Students survey governmental policies and regulations, and analyze their effect on local agribusiness. Explores the process by which policies and regulations are made and enforced. Students address specific ethical and stakeholder issues such as water and land use, pesticides, food and worker safety.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  AGBS-435:
+    code: AGBS 435
+    title: Supply Chain Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Provides an introduction to principles of supply chain management, risks & uncertainties associated with various stages of the supply chain, inventory management, forecasting, material resource planning, cost-price & value analysis, purchasing & procurement with ethical & social responsibility. Emphasis on using contemporary tools in spatial mapping, data visualization and data analytics such as Microsoft Excel, Geographical Information Systems (GIS), SAS, and SAP etc.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - allOf:
+          - courseId: BUS-202
+            minimumGrade: C-
+          - courseId: BUS-299
+            minimumGrade: C-
+          - courseId: BUS-301
+            minimumGrade: C-
+          - courseId: BUS-309
+            minimumGrade: C-
+          - courseId: AGBS-309
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BUS-204
+                minimumGrade: C-
+              - courseId: STAT-100
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: (( BUS 204   or STAT 100   ) and ( BUS 202   ) and ( BUS 299   or BUS 301   with a C- or better) and (Prereq or Coreq: BUS 309   or AGBS 309   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  AGBS-437:
+    code: AGBS 437
+    title: Applied Logistics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Provides an introduction to the concepts of intermodal transportation of commodities and produce. Discussion includes modes of transportation, incoterms, transaction risks, warehousing, and distribution as applied to transportation and logistics. Application of shipping and logistics to perishable commodities and cold chains is emphasized using contemporary tools in spatial mapping, data visualization, and data analytics (Microsoft Excel, Geographical Information Systems (GIS), SAS, SAP, etc.).
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: BUS-202
+            minimumGrade: C-
+          - courseId: BUS-299
+            minimumGrade: C-
+          - courseId: BUS-301
+            minimumGrade: C-
+          - courseId: BUS-309
+            minimumGrade: C-
+          - courseId: AGBS-309
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BUS-204
+                minimumGrade: C-
+              - courseId: STAT-100
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( BUS 204   or STAT 100   ) and BUS 202   and ( BUS 299   or BUS 301   ) with a C- or better) and (Prereq or Coreq: BUS 309   or AGBS 309   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  AGBS-440:
+    code: AGBS 440
+    title: Enterprise Resource Planning
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduction to integrated information systems that help firms improve business processes; and provide managers with accurate, consistent, and current data for making informed strategic decisions. Application of Operations Management, Purchasing/Procurement, Logistics, Sales, and Marketing strategies in a cross-functional environment using hands-on practice using an ERP platform such as SAP, or ERPsim Games or @risk by Palisade.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: BUS-202
+            minimumGrade: C-
+          - courseId: BUS-299
+            minimumGrade: C-
+          - courseId: BUS-301
+            minimumGrade: C-
+          - courseId: BUS-309
+            minimumGrade: C-
+          - courseId: AGBS-309
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BUS-204
+                minimumGrade: C-
+              - courseId: STAT-100
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: BUS 202   and ( BUS 204   or STAT 100   ) and ( BUS 299   or BUS 301   ) with a C- or better) and (Prereq or Coreq: BUS 309   or AGBS 309   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  AGBS-441:
+    code: AGBS 441
+    title: Project Management
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Focuses on techniques for managing technical projects using design, planning, and manufacturing or services projects using hands-on practice in Microsoft Project, Microsoft Excel, and simulations (e.g., @risk by Palisade). Students learn to manage resources, and critical activities for timely completion of projects while recognizing the trade-offs.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - allOf:
+          - courseId: BUS-202
+            minimumGrade: C-
+          - courseId: BUS-299
+            minimumGrade: C-
+          - courseId: BUS-301
+            minimumGrade: C-
+          - courseId: BUS-309
+            minimumGrade: C-
+          - courseId: AGBS-309
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BUS-204
+                minimumGrade: C-
+              - courseId: STAT-100
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: BUS 202   and ( BUS 204   or STAT 100   ) and ( BUS 299   or BUS 301   ) with a C- or better) and (Prereq or Coreq: BUS 309   or AGBS 309   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  AGBS-442:
+    code: AGBS 442
+    title: Purchasing and Procurement
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Principles of procurement management in supply chain management and logistics. Topics include evaluating suppliers on standardized metrics, cost-price analysis, negotiation, risk management, strategic decisions, and developments in the project procurement and supply chain fields, global sourcing, and contract management. Emphasis on the application using Microsoft Excel and Enterprise Resource Planning platforms such as SAP, ERPSim, @risk by Palisade.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: BUS-202
+            minimumGrade: C-
+          - courseId: BUS-299
+            minimumGrade: C-
+          - courseId: BUS-301
+            minimumGrade: C-
+          - courseId: BUS-309
+            minimumGrade: C-
+          - courseId: AGBS-309
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BUS-204
+                minimumGrade: C-
+              - courseId: STAT-100
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: BUS 202   and ( BUS 204   or STAT 100   ) and ( BUS 299   or BUS 301   ) with a C- or better) and (Prereq or Coreq: BUS 309   or AGBS 309   with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  AGBS-454:
+    code: AGBS 454
+    title: Advanced Agribusiness Credit & Finance
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Analyzes the economics of agribusiness operations, and identifies all the potential sources of financing. Performs financial analysis of agricultural projects, using the same methodology as top agricultural leaders in the region. Evaluates various credit and capital market alternatives in terms of their likely financial impacts on borrowers. Interact directly with providers of financing.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: BUS-204
+            minimumGrade: C-
+          - courseId: BUS-307
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: (( BUS 204   or equivalent) and ( BUS 307   ) with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  AGBS-495:
+    code: AGBS 495
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in the major. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  AGBS-499:
+    code: AGBS 499
+    title: Agribusiness Supply Chain Management-Senior Capstone
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This capstone course integrates core concepts within an Agribusiness strategic management framework, focusing on supply chain management, operations, and logistics/transportation, marketing, price analysis and agri-finance. Through experiential learning, students analyze strategic business issues and apply cross-functional business principles to solve real-world problems, providing actionable solutions to client organizations in the agribusiness sector. The course can be substituted to incorporate an internship for academic credit on a case-by-case basis.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: AGBS-305
+            minimumGrade: C-
+          - courseId: AGBS-306
+            minimumGrade: C-
+          - courseId: BUS-307
+            minimumGrade: C-
+          - courseId: BUS-308
+            minimumGrade: C-
+          - courseId: AGBS-309
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: AGBS 305   and AGBS 306   and BUS 307   and BUS 308   and AGBS 309   with a C- or better) and (Senior Standing)]"

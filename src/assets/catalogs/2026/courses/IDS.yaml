@@ -1,0 +1,83 @@
+schemaVersion: 1
+prefix: IDS
+courses:
+  IDS-295:
+    code: IDS 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in Interdiscplinary Studies. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Department Consent Required)
+  IDS-300:
+    code: IDS 300
+    title: Major Proseminar
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This online proseminar will introduce students to the interdisciplinary approach of examining complex issues by integrating knowledge and methods from various academic disciplines. Students will examine how different disciplines frame and solve problems, as well as identify the value and limitations of various disciplinary lenses. The course emphasizes critical thinking, problem-solving, and effective communication to prepare students for real-world challenges.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[(Prereq: GE   Areas 1A and 1B and 1C and 2) and (IDS majors only)]"
+  IDS-313S:
+    code: IDS 313S
+    title: Interdisciplinary Studies Service Learning
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This online course integrates academic learning with in-person community service, enabling students to apply their knowledge and skills in real-world situations while positively impacting the community. Through partnerships with local organizations, students address community needs and reflect on their experiences to enhance their understanding of course concepts. Community collaboration, ethical engagement, and the practical use of interdisciplinary knowledge for driving social change are emphasized.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[(Prereq: GE   Areas 1A and 1B and 1C and 2) and (IDS Majors Only)]"
+  IDS-395:
+    code: IDS 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in Interdiscplinary Studies. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Department Consent Required)
+  IDS-397:
+    code: IDS 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Working with a faculty advisor, a student selects topic of study and number of credits appropriate to the student’s learning plan. An independent study proposal must be submitted and approved before registration.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Department Consent Required)
+  IDS-400:
+    code: IDS 400
+    title: Senior Capstone
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students engage in focused inquiry into an interdisciplinary issue in this online course. Requires demonstration of ability to synthesize and integrate knowledge from multiple disciplines, articulate an understanding of the issue, and advocate an ethical response. Involves intensive research, writing, oral communication, and collaboration, with opportunities for analysis, action, and reflection. Culminating activity is an oral and/or written summation of the capstone project.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: IDS-300
+    prerequisiteNotes:
+      - "[(Prereq: GE   Areas 1A and 1B and 1C and 2) and ( IDS 300   ) and (IDS majors only)]"

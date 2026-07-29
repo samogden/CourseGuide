@@ -1,0 +1,297 @@
+schemaVersion: 1
+prefix: ACCT
+courses:
+  ACCT-311:
+    code: ACCT 311
+    title: Financial Accounting and Reporting I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will record, classify, and report asset transactions in accordance with generally accepted accounting principles, including sufficiently informative related disclosures. Students will also research relevant accounting standards and apply their findings to specific facts and settings.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: BUS-203
+      - courseId: ACCT-312
+    prerequisiteNotes:
+      - "[(Prereq: BUS 203   ) and (Coreq: ACCT 312   )]"
+  ACCT-312:
+    code: ACCT 312
+    title: Financial Accounting and Reporting II
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will record, classify, and report liability transactions in accordance with generally accepted accounting principles, including sufficiently informative related disclosures. Students will also research relevant accounting standards and apply their findings to specific facts and settings.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: BUS-203
+      - courseId: ACCT-311
+    prerequisiteNotes:
+      - "[(Prereq: BUS 203   ) and (Coreq: ACCT 311   )]"
+  ACCT-313:
+    code: ACCT 313
+    title: Financial Accounting and Reporting III
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will record, classify, and report equity transactions in accordance with generally accepted accounting principles, including sufficiently informative related disclosures. Students will also research relevant accounting standards and apply their findings to specific facts and settings.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: ACCT-311
+      - courseId: ACCT-314
+    prerequisiteNotes:
+      - "[(Prereq: ACCT 311   ) and (Coreq: ACCT 314   )]"
+  ACCT-314:
+    code: ACCT 314
+    title: Financial Accounting and Reporting IV
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will record, classify, and report expense and revenue transactions in accordance with generally accepted accounting principles, including sufficiently informative related disclosures. Students will also research relevant accounting standards and apply their findings to specific facts and settings.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: ACCT-311
+      - courseId: ACCT-313
+    prerequisiteNotes:
+      - "[(Prereq: ACCT 311   ) and (Coreq: ACCT 313   )]"
+  ACCT-320:
+    code: ACCT 320
+    title: Accounting Systems
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will design, use, and evaluate accounting and internal control systems.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: BUS-203
+      - courseId: ACCT-330
+    prerequisiteNotes:
+      - "[(Prereq: BUS 203   ) and (Coreq: ACCT 330   )]"
+  ACCT-330:
+    code: ACCT 330
+    title: Accounting Analytics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will extract, transform, and analyze financial information to make it useful for decision-making and to explain an entity’s results or to identify and detect discrepancies. Analyses performed will include determination of needed attribute structures, formats, and sources of data.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: BUS-203
+      - courseId: ACCT-320
+    prerequisiteNotes:
+      - "[(Prereq: BUS 203   ) and (Coreq: ACCT 320   )]"
+  ACCT-350:
+    code: ACCT 350
+    title: Financial Statement Analysis
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will analyze financial statements, variance reports, balanced scorecards, and environmental, social and governance reports to draw conclusions about the profitability, liquidity, solvency, capital structure, and effectiveness of an entity’s operations on multiple dimensions. Students will use budgeting, forecasting, and financial valuation decision models to compare investment alternatives.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  ACCT-410:
+    code: ACCT 410
+    title: Tax Regulations
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will determine tax implications of transactions completed by individuals and business entities within a framework of ethics and established standards for professional responsibility.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: ACCT-311
+      - courseId: ACCT-312
+      - courseId: ACCT-420
+    prerequisiteNotes:
+      - "[(Prereq: ACCT 311   and ACCT 312   ) and (Coreq: ACCT 420   )]"
+  ACCT-420:
+    code: ACCT 420
+    title: Tax Compliance and Planning
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will determine how to comply with tax filing requirements for individuals, businesses, and other entities, and how to plan business and investment activities to minimize overall tax costs within a framework of ethics and established standards for professional responsibility. Students will also research relevant tax laws, administrative rulings, and court cases and apply their findings to specific facts and settings.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: ACCT-311
+      - courseId: ACCT-312
+      - courseId: ACCT-410
+    prerequisiteNotes:
+      - "[(Prereq: ACCT 311   and ACCT 312   ) and (Coreq: ACCT 410   )]"
+  ACCT-450:
+    code: ACCT 450
+    title: Audit and Assurance Services
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will assess risks of business and audit failures, specify evidence-gathering procedures, and plan audit and assurance activities within a framework of ethics, legal requirements, established standards for professional responsibility, and generally accepted audit and assurance standards.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: ACCT-311
+      - courseId: ACCT-312
+      - courseId: ACCT-460
+    prerequisiteNotes:
+      - "[(Prereq: ACCT 311   and ACCT 312   ) and (Coreq: ACCT 460   )]"
+  ACCT-460:
+    code: ACCT 460
+    title: Audit and Assurance Reporting
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will form conclusions about the existence of material misstatements in accounting records and financial statements, and report audit and other assurance service results within a framework of ethics, legal requirements, established standards for professional responsibility, and generally accepted audit and assurance standards.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: ACCT-311
+      - courseId: ACCT-312
+      - courseId: ACCT-450
+    prerequisiteNotes:
+      - "[(Prereq: ACCT 311   and ACCT 312   ) and (Coreq: ACCT 450   )]"
+  ACCT-495:
+    code: ACCT 495
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in the major. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  ACCT-498:
+    code: ACCT 498
+    title: Accounting Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Provides a structured work experience in accounting. Course faculty must approve objectives, sites, and internship agreements. Students work with course faculty throughout the internship. According to CBA policy, only paid internships are accepted. Students must work a minimum of 200 hours during the term. Course faculty approval is required. Must secure an internship position before the course starts.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[(Junior or Senior Standing Required) and (Instructor Consent Required)]"
+    minimumStanding: junior
+  ACCT-499:
+    code: ACCT 499
+    title: Accounting Capstone
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In consultation with the instructor, each student will develop and conduct a research project on an accounting, auditing, tax, systems, or analytics topic relevant to their career plans. The research project will culminate in a written report and oral presentation.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: ACCT-311
+      - courseId: ACCT-312
+      - courseId: ACCT-320
+      - courseId: ACCT-330
+      - courseId: ACCT-350
+    prerequisiteNotes:
+      - "(Prereq: ACCT 311   and ACCT 312   and ACCT 320   and ACCT 330   and ACCT 350   )"
+  ACCT-631:
+    code: ACCT 631
+    title: Accounting Data Management
+    teachingStatus: active
+    credits:
+      minimum: 6
+      maximum: 6
+    description: Database theory used in accounting systems including data modeling and database design. Use of database management software and data manipulation tools for structured and unstructured data. Data extraction and transformation from transaction records and external sources.
+    offered:
+      terms:
+        - fall
+  ACCT-632:
+    code: ACCT 632
+    title: Statistics for Accounting Analytics
+    teachingStatus: active
+    credits:
+      minimum: 6
+      maximum: 6
+    description: Accounting applications of inferential statistics, multivariate statistics, interactive data visualization tools, optimization methods, machine learning, predictive analysis, text analytics, and process mining.
+    offered:
+      terms:
+        - fall
+  ACCT-633:
+    code: ACCT 633
+    title: Systems Audit and Control
+    teachingStatus: active
+    credits:
+      minimum: 6
+      maximum: 6
+    description: Design of accounting systems to facilitate audit and internal control. Develop understanding of transaction cycles, information systems auditing, cybersecurity, blockchain, and authoritative professional standards for internal control and audit.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: ACCT-631
+    prerequisiteNotes:
+      - "(Prereq: ACCT 631   )"
+  ACCT-641:
+    code: ACCT 641
+    title: Accounting Ethics
+    teachingStatus: active
+    credits:
+      minimum: 6
+      maximum: 6
+    description: How ethical reasoning and values are integrated into professional accounting practice a responsible business framework. Ethical and legal issues that arise when using data analytics tools, including privacy and protection of data.
+    offered:
+      terms:
+        - spring
+  ACCT-642:
+    code: ACCT 642
+    title: Accounting Analytics Applications
+    teachingStatus: active
+    credits:
+      minimum: 6
+      maximum: 6
+    description: Applications of data analytics to infer, predict and assure in the context of accounting, auditing, and managerial decision making. Use software tools and applications mastered in previous courses.
+    prerequisites:
+      - courseId: ACCT-631
+      - courseId: ACCT-632
+    prerequisiteNotes:
+      - "(Prereq: ACCT 631   and ACCT 632   )"

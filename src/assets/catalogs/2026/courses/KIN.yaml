@@ -1,0 +1,1081 @@
+schemaVersion: 1
+prefix: KIN
+courses:
+  KIN-102:
+    code: KIN 102
+    title: Monterey Bay Adventure Sports
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course will focus on the many outdoor recreational opportunities surrounding CSUMB and the Monterey Peninsula. Students will have an opportunity to participate in hiking, trail running, mountain biking, kayaking, surfing and canyoneering, with an emphasis on safety and training. Requires off-campus trips, equipment rental fees and a final exam.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-109:
+    code: KIN 109
+    title: "Swimming: Beginning"
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Teaches the very basic techniques, skills, and concepts of swimming to those with little or limited swimming experience. Develop a sense of confidence in swimming through 12 steps to practice and the common combination of drills. Credit/no credit.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-110:
+    code: KIN 110
+    title: Strength Training
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students learn about and engage in resistance training as a means of improving and maintaining muscular fitness. Includes basic instruction in exercise technique, spotting, safety and basic resistance training program design.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-111:
+    code: KIN 111
+    title: Swimming for Fitness
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students engage in swimming and learn about the use of swimming as a means of improving aerobic fitness. Also targets improvements in stroke efficiency. Credit/no credit.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-113:
+    code: KIN 113
+    title: Wake-Up Workouts
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students learn about, develop, and execute a personal fitness program; emphasizing improvements in muscular and aerobic fitness through a wide variety of activities. Credit/no credit.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-114:
+    code: KIN 114
+    title: Walking
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students learn about and engage in fitness walking as a means of improving health and well-being. A variety of walking venues are used along with special small or large group activities. Credit/ no credit.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-115:
+    code: KIN 115
+    title: Introduction to Exercise is Medicine
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces physical activity as a key mechanism for prevention and management of life-style related and chronic diseases. Introduces the American College of Sports Medicine’s Exercise is Medicine on Campus initiative, which educates and encourages students to continue involvement in lifelong physical activity.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-118:
+    code: KIN 118
+    title: Water Aerobics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Using flotation devices, students follow the instructor through a wide variety of movements using the water as resistance with the goal of improving muscular and aerobic fitness. No experience in swimming necessary. Credit/ no credit.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-120:
+    code: KIN 120
+    title: CPR/First Aid
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Covers instruction and practice in the immediate and temporary care of injuries and sudden illness. Includes emergency response, rescue breathing, cardiopulmonary resuscitation (CPR), and first aid for adults only. Conforms to American Red Cross standards. Optional written and practical certification exam offered at end of course.
+    offered:
+      availability: periodic
+  KIN-123:
+    code: KIN 123
+    title: Step Aerobics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: An introduction to step aerobic exercise. Additional cardiovascular training methods such as dance may also be included. The course also will teach students to monitor their progress throughout the semester. Credit/no credit.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-125:
+    code: KIN 125
+    title: High Intensity Interval Training
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students engage in high intensity interval training (HIIT) focusing on cardio and body weight strength movements.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-131:
+    code: KIN 131
+    title: Beginning Tai Chi Chi Kung
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Short Sun Style form of qigong exercises to improve mobility and flexibility and develop better balance. The second form emphasizes power, a simple Yang style Tai Chi/Chi Kung form that teaches the principles of body mechanics through the alignment of the bone structure with the force of gravity. Explains theory and provides training for effective practice of any form of Tai Chi. Credit/no credit.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-134:
+    code: KIN 134
+    title: Self-Defense
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: "A hands-on class that incorporates the four components of self-defense: awareness, avoidance, and verbal and physical techniques. Teaches verbal and physical self-defense skills from a standing position and from the ground. This class focuses on rape-prevention and aims to reduce fear and empower students with skills to defend themselves against physical, verbal and sexual attacks. Credit/no credit."
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-139:
+    code: KIN 139
+    title: Yoga
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students will practice yoga poses and sequences, with a focus on students learning to move in alignment with their level of fitness. Classes include mindfulness and breath practice to enhance well being. Practice of postures builds from basic poses to more challenging poses, builds strength, endurance and flexibility through ongoing practice.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-140:
+    code: KIN 140
+    title: Yoga II
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Class will build from basic poses and sequences to more challenging practices, adapted to the students’ level of interest and ability. Previous yoga experience is recommended but not required.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-141:
+    code: KIN 141
+    title: Disc Golf
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students learn the skills, beginner through advanced, needed to master the game of disc golf. Credit/No Credit
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-143:
+    code: KIN 143
+    title: Volleyball
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Introduces students to indoor court volleyball. Students develop passing, blocking, and hitting skills. Students learn the rules, scoring, and team strategies and tactics. Credit/No Credit
+    offered:
+      availability: periodic
+  KIN-144:
+    code: KIN 144
+    title: Basketball
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Facilitates the development of fundamental skill in basketball. While skill enhancement is the desired outcome, also covers the rules and regulations of the game, and the history and growth of basketball. Credit/ no credit.
+    offered:
+      availability: periodic
+  KIN-145:
+    code: KIN 145
+    title: Softball
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students develop throwing, catching, fielding, hitting, and base-running skills while learning rules, scoring, and team strategies for offensive and defensive fast-pitch and slow-pitch softball. Credit/ No Credit
+    offered:
+      availability: periodic
+  KIN-148:
+    code: KIN 148
+    title: Running
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students learn and practice the training methods and techniques needed to develop cardiovascular fitness. Students develop a personal running training program. Credit/No Credit
+    offered:
+      availability: periodic
+  KIN-149:
+    code: KIN 149
+    title: Surfing
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Covers surfing for beginners and first timers. Opportunities for advanced surfers to act as aids to the head instructor. Covers etiquette, right of way rules, equipment, and safety. Must be able to pass a swimming safety test. Includes extensive in-the-water experience. Requires some equipment. Surf boards will be supplied. Course fee required. Credit/ no credit.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-159:
+    code: KIN 159
+    title: The Science of Being Well
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "This course will cover the science behind health and well-being topics as they relate to individual life experiences and the ensuing ability to impact others. Students will quantitatively analyze their own personal well being through the use of standardized assessments and identify areas for growth within each dimension of wellness: physical, emotional, intellectual, social, environmental, financial, occupational and spiritual. Students will analyze quantitative self assessments and determine how to apply knowledge to others at the individual and population level."
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-161:
+    code: KIN 161
+    title: Health and Well Being
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "This course will cover health and well being topics focusing on the health effects of stress, stress management skills, applied nutrition and core concepts in exercise and weight management. In addition to these core topics, the course will address the six dimensions of wellness: physical, emotional, intellectual, social, environmental and spiritual."
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-163:
+    code: KIN 163
+    title: Principles of Stress Management
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is designed to offer students a broad survey of the issues and facts surrounding stress and coping in U.S. culture. Stress will be examined from historical, sociocultural, and global perspectives. Students will explore the physiology of stress responses as well as the health consequences, values, and professional ethics. Further, students will have the opportunity to explore and expand their own repertoire of coping skills. Students will also be introduced to the methods of inquiry in Kinesiology as they relate to stress management.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-180:
+    code: KIN 180
+    title: Backpacking & Hiking
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Provides students with the knowledge and skills to safely backpack and hike in a variety of conditions. Focuses on equipment, menu planning, navigation and leave-no-trace camping.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: KIN 180L   )"
+  KIN-180L:
+    code: KIN 180L
+    title: Backpacking & Hiking Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Required lab course for KIN 180   . Includes a three-day backpacking trip over a weekend and several day hikes on Fort Ord recreation lands. Requires course fee. Credit/ no credit.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: KIN 180   )"
+  KIN-195:
+    code: KIN 195
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Kinesiology. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  KIN-200:
+    code: KIN 200
+    title: Intercollegiate Athletics
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Student-athletes will participate in all aspects of intercollegiate athletics specific to their sport, including strength and conditioning, practice, tactical preparation, competition, recovery, and community service. Focus will be on student-athlete success, on and off the field.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-201:
+    code: KIN 201
+    title: Medical Terminology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is an introduction to the principles of medical word building to develop the necessary medical vocabulary used in health care settings.
+    offered:
+      availability: periodic
+  KIN-202:
+    code: KIN 202
+    title: Women and Gender in Sports
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is a must for sports enthusiasts. It explores how gender identities and norms shape sports through history and current issues, using interactive activities and real-life examples. Key topics include the history of women in sports, media influence on gender perceptions, intersectionality with race and sexuality, and the challenges faced by transgender and non-binary athletes. You will gain fresh insights into the impact of gender on athletics and athlete experiences.
+    offered:
+      terms:
+        - spring
+  KIN-254:
+    code: KIN 254
+    title: Kayaking
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Introduces skills for intermediate level sea kayaking. Covers equipment, paddling techniques, navigation, weather, surf zone dynamics and rescues. Earn a certificate from the American Canoe Association upon completion. Credit/No Credit
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Coreq: KIN 254L   )"
+  KIN-254L:
+    code: KIN 254L
+    title: Kayaking Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Required lab course for KIN 254   . Requires field trips and course fee. Credit/no credit.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Coreq: KIN 254   )"
+  KIN-263:
+    code: KIN 263
+    title: Introduction to Human Sexuality
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Addresses the core concepts of human sexuality and the interrelationship that exists between it and mental, physical, social, emotional and spiritual well-being. Assists students in understanding the nature of their own sexuality, the importance of sexuality in their lives and the responsibility and pleasure it brings to individuals and their partners. Emphasis will be placed on the variations of expressions by culture, age, and orientation and their relationship with well-being.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-281:
+    code: KIN 281
+    title: Rock Climbing
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Focuses on top-roped rock climbing and bouldering. Covers equipment, techniques, and training. Includes knots, anchor systems, belaying, rappelling, and risk assessment. Held outdoors and requires one weekend trip. Requires course fee. Credit/no credit.
+    offered:
+      terms:
+        - fall
+  KIN-300:
+    code: KIN 300
+    title: Major Pro-Seminar
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Overview of kinesiology as a discipline and profession, including its subfields, integrative nature, and role of physical activity and other health behaviors in daily life. Emphasizes career pathways, professional qualifications, academic skill development, and individualized academic and career planning.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-301:
+    code: KIN 301
+    title: Research Methodologies
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is an introduction to the design and interpretation of research. The course will familiarize students with testing, evaluation, and measurement techniques required of all Kinesiology disciplines. Emphasis is placed on developing an understanding of the foundations and practice of quantitative and qualitative approaches.
+    offered:
+      availability: periodic
+  KIN-303:
+    code: KIN 303
+    title: Fundamental Athletic Injury Management
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: An introductory course covering the basic concepts of administering management for common athletic injuries as they pertain to athletic participation at all levels. The class will cover topics such as necessary medical terminology, pertinent anatomy, bloodborne pathogens, emergency response plans, basic injury prevention, mechanisms, recognition and treatment, including some elementary taping techniques. Emphasis will be made on the role of the Certified Athletic Trainer.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-305:
+    code: KIN 305
+    title: Technique in Strength & Conditioning
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students learn appropriate technique in strength and conditioning as it relates to basic performance, assessment, and program development. Focus includes content necessary for nationally recognized certification exams administered by organizations such as the National Strength and Conditioning Association (NSCA) and the American College of Sports Medicine (ACSM).
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-310:
+    code: KIN 310
+    title: Athletic Strength & Condition
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Presents practical application of physiological and biomechanical theory for development of and implementation of sports conditioning prescriptions. Helps athletes achieve optimal physical performance without incurring injury. Includes content necessary for nationally recognized certification exams administered by organizations such as the National Strength and Conditioning Association.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-320:
+    code: KIN 320
+    title: Sports Nutrition
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: The course will use a current evidence based approach to relevant topics in Sports Nutrition. The student will become proficient in the anatomy and physiology of digestion, absorption and current nutritional guidelines. Additionally, the student will utilize current recommendations to evaluate and determine the appropriate nutritional strategies for a comprehensive array of recreational and competitive sports with the goal of improving performance and health.
+  KIN-330:
+    code: KIN 330
+    title: Physical Activity and Health
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides students an integrated view of the relationship between physical activity or sedentarism and health outcomes; also, it provides a conceptual framework to help the students relate results from single studies or collections of studies to the overall paradigm linking physical activity and physical fitness to health. The class will focus on the prevention of diseases and the enhancement of quality of life and well-being.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-331:
+    code: KIN 331
+    title: Lifespan Physical Activity
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is a study of physical activity throughout the lifespan. Topics include current research, theory, and practice pertaining to physical activity in varying age groups, from childhood through older adulthood.
+    offered:
+      terms:
+        - spring
+  KIN-335:
+    code: KIN 335
+    title: Fundamentals of Coaching
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores coaching from a literary and a personal perspective. Builds appreciation for the depth of the coaching profession through literature, studying different authors’ views on topics that every coach in every sport must face. After establishing a solid base with literature, explores the topic in a hands-on environment through group discussions and projects. Provides an opportunity to explore the culture of coaching, highlighting several key points.
+    offered:
+      terms:
+        - fall
+  KIN-340:
+    code: KIN 340
+    title: Personal Training
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides a theoretical overview of the scientific and practical knowledge, skills, and abilities necessary to be a competent personal trainer. Includes content necessary for nationally recognized certification exams administered by organizations such as the National Strength and Conditioning Association and the American College of Sports Medicine.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-345:
+    code: KIN 345
+    title: Sports Ethics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Looks at issues in youth sport, intercollegiate sport, and professional sport. Discusses ethical questions, arguments, theories, and workable solutions for returning amateur sport to its proper place in society. Discusses the power of sport, the value of sport, and the place of sport in society.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-346:
+    code: KIN 346
+    title: Psychology of Sport and Physical Activity
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is devoted to understanding the psychological aspects of sport and physical activity. The course will include aspects of the core psychological research, application of psychological principles to sport and exercise settings, and social influences on psychological processes. Emphasis is placed on the comprehension and application of theoretical concepts addressing the interaction of individual characteristics and environmental factors in sport and physical activity.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-350:
+    code: KIN 350
+    title: Worksite Health Promotion
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores health promotion in the worksite including supporting theories and critical issues such as management support, economic benefits, and worksite health promotion professional standards; focus is on implementing worksite health promotion programs. Implementation phases include needs assessment/evaluation, effective interventions, program marketing and organizational development.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-355:
+    code: KIN 355
+    title: Ethics in Physical Activity and Health
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores ethical issues related to physical activity and allied health professions. Examines the practical application of principles and methods to evaluate ethical dilemmas in promotion of health. Topics include historical health-related & medical cases, development of current practices of informed consent, health policy and laws. The sub-fields of bioethics, sport ethics and contemporary issues in health will also be explored.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-360:
+    code: KIN 360
+    title: Nutritional Science
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores scientific concepts of nutrition related to nutrient chemistry, nutritional needs, practices, and problems throughout the life cycle. Examines where nutrition information is generated and how it is used in policy and populations. Emphasizes evidence-based, scientific nutritional information, education of individuals and groups toward health promotion and disease prevention. Finally, global nutrition issues are addressed with an emphasis on solutions.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  KIN-360L:
+    code: KIN 360L
+    title: Nutritional Science Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Focuses on application of scientific concepts of nutrition related to nutrient chemistry, nutritional needs, practices, and problems throughout the life cycle. Examines where nutrition information is generated and how it is used in policy and populations. Emphasizes evidence-based, scientific nutritional information, education of individuals and groups toward health promotion and disease prevention. Finally, global nutrition issues are addressed with an emphasis on solutions.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: KIN-360
+            minimumGrade: C-
+          - courseId: KIN-360
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[[Prereq: ( KIN 360   with a C- or better) or (Coreq: KIN 360   )]"
+  KIN-363:
+    code: KIN 363
+    title: Human Sexuality
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Addresses the physical, social, cultural, and emotional factors of human sexuality. Students will explore concepts and evidence so they can address their own sexuality, the decisions they make, the importance of sexuality in their lives, the responsibility it involves, and the compassion that is necessary for the well-being of all people. The lab, taken in conjunction with Human Sexuality, supports and expands the concepts from lecture and consists of fieldwork, short papers, and interviews.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  KIN-366:
+    code: KIN 366
+    title: Health Behavior and Promotion
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will learn, understand, and apply concepts in health promotion, health education and behavior change. Students will also learn, understand, apply, and analyze health promotion theories and models at the individual, interpersonal, and community levels. Students will gain an understanding of how and why health behavior change occurs.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-370:
+    code: KIN 370
+    title: Anatomy & Physiology I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Content covers the structure and function of the human body. Concepts related to anatomical terminology, cells, tissues, integument, skeletal, muscular, nervous, and endocrine systems are covered. Interrelationships of organ systems and system pathologies are also emphasized. Additionally, principles of anatomy and physiology will be used to illustrate the scientific way of knowing. Finally, the process of peer-review and evidenced based evaluation of claims related to anatomy and physiology, health and pathology will also be incorporated. (First semester of two semester course).
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: KIN-370L
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Prereq or Coreq: KIN 370L   )]"
+  KIN-370L:
+    code: KIN 370L
+    title: Anatomy & Physiology I Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Detailed examination of the structure and function of the human body. Concepts related to anatomical/physiological structures/functions of human body systems (chemistry, cells, tissues, axial and appendicular skeleton, muscular, nervous and endocrine) are covered. Additionally, students will become proficient in cadaver dissection through use of the Anatomage Virtual Dissection Table.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: KIN-370
+    prerequisiteNotes:
+      - "(Prereq or Coreq: KIN 370   )"
+  KIN-371:
+    code: KIN 371
+    title: Anatomy & Physiology II
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Content covers the structure and function of the human body. Concepts related to circulatory-, lymphatic-, respiratory-, digestive-, urinary systems; immunity, metabolism, reproduction, development, genetics. An introduction to evolutionary medicine will be explored. Interrelationships of organ systems are emphasized. Anatomy and physiology principles will be used to illustrate the scientific way of knowing. Peer-review and evidenced based evaluation of claims related to anatomy and physiology, health and pathology will also be incorporated. (Second semester of two semester course).
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: KIN-371L
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Prereq or Coreq: KIN 371L   )"
+  KIN-371L:
+    code: KIN 371L
+    title: Anatomy & Physiology II Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Detailed examination of the structure and function of the human body. Concepts related to anatomical/physiological structures/functions of human body systems (immunity, circulatory, lymphatic, respiratory, digestive, urinary, reproduction, development and genetics) are covered. Additionally, students will become proficient in cadaver dissection through use of the Anatomage Virtual Dissection Table.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: KIN-371
+    prerequisiteNotes:
+      - "(Prereq orCoreq: KIN 371   )"
+  KIN-373:
+    code: KIN 373
+    title: Health and Physical Education
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Focuses on foundations of movement for children preschool to 8th grade from a growth and development perspective. Emphasis is placed on health and physical activity and programmatic organization in the gymnasium and on the playground as it relates to problem solving and academic success; multicultural approaches to movement, moral development and self image; and movement exploration, body spatial awareness and other non-loco motor skills.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: KIN 373L   )"
+  KIN-373L:
+    code: KIN 373L
+    title: Health and Physical Education Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Supervised activity for KIN 373   . Focuses on foundations of movement for children preschool to 8th grade from a growth and development perspective.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: KIN 373   )"
+  KIN-375:
+    code: KIN 375
+    title: Motor Behavior
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides first experience with the body of knowledge known as motor behavior. Includes theories of motor control and motor learning, biological perspectives including the central nervous system, and motor neurons. Also offers learning perspectives related to motor learning and motor control including sensory systems, vision, memory, and multidimensional learning and social perspectives including practice and group dynamics.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-382:
+    code: KIN 382
+    title: Wilderness Leadership
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Focuses on the theoretical and practical aspects of backcountry management. Readings on historical and modern examples of leadership are a core element. Includes leadership styles, group facilitation, risk management, and minimum impact camping techniques.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Coreq: KIN 382L   )"
+  KIN-382L:
+    code: KIN 382L
+    title: Wilderness Leadership Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Required lab for KIN 382   and includes a weeklong intensive backpacking and mountaineering expedition. Requires course fee. Credit/no credit.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Coreq: KIN 382   )"
+  KIN-383:
+    code: KIN 383
+    title: Fdn of Adventure Education
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Surveys the rise of experiential education programs and the theoretical models guiding these activities. Practices methods of teambuilding and personal development in hands-on situations.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Coreq: KIN 383L   )"
+  KIN-383L:
+    code: KIN 383L
+    title: Fdn of Adventure Education Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Required lab course for KIN 383   and includes five days of field activities. Requires course fee. Credit/no credit.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Coreq: KIN 383   )"
+  KIN-384:
+    code: KIN 384
+    title: Wilderness Experience
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Focuses on historical and modern concepts of wilderness. Examines adventure, exploration, and the development of modern environmental ethics. Surveys current uses and environmental issues in wilderness areas. Requires a weeklong intensive field expedition to the San Rafael Wilderness during Spring Break.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: KIN 384L   )"
+  KIN-384L:
+    code: KIN 384L
+    title: Wilderness Experience Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Required lab course for KIN 384   , including a weeklong intensive field expedition to the San Rafael Wilderness during Spring Break. Requires course fee. Credit/no credit.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: KIN 384   )"
+  KIN-385:
+    code: KIN 385
+    title: Outdoor Edu/Rec Program Admin
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Covers the design, logistics, and business aspects of outdoor education and recreation program administration in the nonprofit and commercial sectors. Practical exercises focus on budgets, logistics, risk management and course curriculum while preparing students for employment in the Outdoor Recreation Field.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: KIN 385L   )"
+  KIN-385L:
+    code: KIN 385L
+    title: Outdoor Ed/Rec Prog Admin Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Required lab course for KIN 385   and includes an intensive field expedition to a wilderness area in California during Spring Break. Credit/no credit.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: KIN 385   )"
+  KIN-390:
+    code: KIN 390
+    title: Exercise Physiology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Presents an overview of selected topics in exercise physiology with emphasis on practical applications in health, disease, and athletic performance. Provides students with a fundamental understanding of the physiological responses and adaptations to acute and chronic exercise.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: KIN-370
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better) and ( KIN 370   )]"
+  KIN-395:
+    code: KIN 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 4
+    description: Studies a particular topic in Kinesiology. Student(s) and faculty select topic and number of units.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-397:
+    code: KIN 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 5
+    description: Studies a particular topic related to Kinesiology. Student and faculty member select topic of study and number of credits.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-415:
+    code: KIN 415
+    title: Exercise is Medicine on Campus
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides an in-depth examination of physical activity as a key mechanism for prevention and management of life-style related and chronic diseases. Students will work closely with the American College of Sports Medicine’s Exercise is Medicine on Campus initiative to plan, implement and evaluate physical activity programming on campus and in the community.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-421:
+    code: KIN 421
+    title: Exercise Science Laboratory Skills
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides the laboratory skills component of Exercise Physiology where students gain experience in the competencies and skills necessary for health and fitness assessment of diseased, healthy, and athletic populations. Focus includes content necessary for nationally recognized certification exams administered by organizations such as the National Strength and Conditioning Association and the American College of Sports Medicine.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-430:
+    code: KIN 430
+    title: Phys & Biomech Aerobic Exer
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides an in-depth, integrated understanding of the physiological responses and adaptations to, and the biomechanics of, aerobic activity, exercise, and sport. Emphasizes the concept that the physiology of aerobic energy production and the biomechanics of aerobic energy use are linked in physical activity, exercise, and sport.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: KIN-390
+    prerequisiteNotes:
+      - "(Prereq: KIN 390   )"
+  KIN-440:
+    code: KIN 440
+    title: Phys & Biomech Anaerobic Exer
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides an in-depth, integrated understanding of the physiological responses and adaptations to, and the biomechanics of, anaerobic activity, exercise, and sport. Emphasizes the concept that the physiology of anaerobic energy production and the biomechanics of anaerobic energy use are linked in physical activity, exercise, and sport.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: KIN-390
+    prerequisiteNotes:
+      - "(Prereq: KIN 390   )"
+  KIN-450:
+    code: KIN 450
+    title: Exer Prescript for Special Pop
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Focuses on the scientific and practical knowledge, skills, and abilities necessary to design an individualized exercise prescription for those confronted with disease and special needs.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-452:
+    code: KIN 452
+    title: Physiology of Aging
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examination of structural, physiological, psychological, and functional changes occurring in the older adult and implications for the planning, implementation, and evaluation of physical activity programs for the older adult population.
+    offered:
+      availability: periodic
+  KIN-454:
+    code: KIN 454
+    title: Physical Activity Epidemiology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides students with an understanding of the benefits of physical activity on chronic disease prevention and health promotion throughout the life span, from clinical and public health perspectives. Discussion and application of real-life physical activity assessment, research, guidelines, and promotion in population levels. Students will examine the literature relative to the physiological impact of regular physical activity on chronic diseases.
+    offered:
+      availability: periodic
+  KIN-461:
+    code: KIN 461
+    title: Stress Management
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will understand stress and its effect on the body and mind. Students will identify and apply techniques to manage intrapersonal, interpersonal and community stressors at the level of the individual and community. The course focuses on understanding how stress is conceptualized and managed in diverse populations, settings, and at various periods of the lifespan.
+    offered:
+      terms:
+        - spring
+  KIN-469:
+    code: KIN 469
+    title: Kinesiology Internship
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students complete fieldwork in an agency and/or facility approved by the Kinesiology faculty. Approval is based on the opportunities available for students to work on issues of importance in Kinesiology and the agency’s or facility’s ability to provide mentoring and organizational support for the student intern.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-471S:
+    code: KIN 471S
+    title: Kinesiology Service Learning
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will examine their personal and professional identities in areas of civic engagement, social justice and multicultural communities. Students will select a site relevant to the Kinesiology field and complete at least 30 hours of service to an underserved population. Students will develop an understanding of health disparities, the context that surrounds them, and actions professionals and institutions take to foster equity and inequity in communities.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  KIN-490:
+    code: KIN 490
+    title: Evolutionary Medicine
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: The principles of evolutionary theory will be used to examine problems of medicine and public health. One theme will be the difference between proximate or direct cases of disease and the ultimate or evolutionary causes. The course will emphasize conditions of health and illness that require both proximate and ultimate explanations. Additionally, the course is designed to illustrate how an appreciation of the ultimate causes for disease may lead to new strategies for prevention and treatment.
+    offered:
+      terms:
+        - spring
+  KIN-492:
+    code: KIN 492
+    title: Healthy Skepticism
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: The course will emphasize principles of skeptical inquiry, scientific reasoning, and scientific evidence to prepare students to critically analyze promotional claims made in the health marketplace for products, services, and practices. The course is designed to help students distinguish health-related fact from fiction and to spot health-related schemes, scams, superstitions, sensationalism, fads, fallacies, frauds, bunk, and bunco.
+    offered:
+      terms:
+        - fall
+  KIN-494:
+    code: KIN 494
+    title: Honors Seminar
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 3
+    description: Students pursue advanced study on specialized topics in Kinesiology. Students must have a GPA > 3.0 and/or Instructor Consent.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: KIN-300
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: KIN 300   with a C- or better)"
+  KIN-499:
+    code: KIN 499
+    title: Senior Capstone
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Students prepare for and ultimately pass an approved professional certification exam related to the knowledge, skills, and abilities of the Kinesiology profession.
+    offered:
+      terms:
+        - fall
+        - spring
+  KIN-595:
+    code: KIN 595
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Enables graduate students to enrich Kinesiology 300 or 400 level courses to satisfy graduate level requirements. Prior to enrolling, students must seek instructor permission, provide a description of the course content, and submit a proposal to explain how additional and enriched graduate level assignments will be implemented. The course needs to be approved by the faculty advisor, course instructor, dean, and program director.
+    offered:
+      availability: periodic
+  KIN-596:
+    code: KIN 596
+    title: "Sp Top Intern: Sport Mktg/Mgmt"
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Enables graduate students to enrich Kinesiology 300 or 400 level courses to satisfy graduate level requirements. Prior to enrolling in the course, students must seek instructor permission, provide a description of the course content, and submit a proposal to explain how additional and enriched graduate level assignments will be implemented. Needs to be approved by the faculty advisor, course instructor, dean, and program director.
+    offered:
+      availability: periodic
+  KIN-597:
+    code: KIN 597
+    title: Sport Facility Design & Mgmt
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Enables graduate students to enrich Kinesiology 300 or 400 level courses to satisfy graduate level requirements. Prior to enrolling in the course, students must seek instructor permission, provide a description of the course content, and submit a proposal to explain how additional and enriched graduate level assignments will be implemented. Needs to be approved by the faculty advisor, course instructor, dean, and program director.
+    offered:
+      availability: periodic

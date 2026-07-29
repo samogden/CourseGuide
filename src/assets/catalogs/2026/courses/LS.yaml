@@ -1,0 +1,286 @@
+schemaVersion: 1
+prefix: LS
+courses:
+  LS-120:
+    code: LS 120
+    title: Reading and Writing in a Digital World
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Reading and Writing in a Digital World introduces the ethical use of digital tools for college and professional purposes. Students use cultural, intellectual, and linguistic assets to build metacognitive, critical digital literacy skills, exploring the meaning of words/images in diverse social and cultural contexts. Writing develops through reflection, drafting, and collaborative revisions, with attention to analyzing assumptions, justifying claims, and synthesizing using APA source attribution.
+    offered:
+      terms:
+        - fall
+        - spring
+  LS-230A:
+    code: LS 230A
+    title: "Leadership: Mini-Corps"
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: This course is designed to advance students’ tutoring skills in the classroom. It is aimed at helping the tutors to adequately manage small and large groups of students, to learn about the migrant lifestyle, and to build a strong rapport with migrant students and staff. Students must be admitted to the Mini-Corps program prior to enrollment. The class may be repeated for credit.
+    offered:
+      terms:
+        - fall
+  LS-230B:
+    code: LS 230B
+    title: "Leadership: Mini-Corps"
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: The course provides leadership and mentoring opportunities and develops related leadership skills for California Mini-Corps students as they work in the classrooms and in the homes of migrant students in K-12. Student must be admitted to the Mini-Corps program. This class may be repeated for credit.
+    offered:
+      terms:
+        - spring
+  LS-230C:
+    code: LS 230C
+    title: "Leadership: Mini-Corps"
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: The course introduces tutors to essential reading, writing, and math instructional strategies aimed at helping students to develop their teaching skills. As students tutoring migrant students, they will be expected to apply these newly acquired strategies in the classroom. Student must be admitted to the Mini-Corps program prior to enrollment. This class may be repeated for credit.
+    offered:
+      terms:
+        - fall
+  LS-230D:
+    code: LS 230D
+    title: "Leadership: Mini-Corps"
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: This course assists Mini-Corp students as they provide formal and informal lessons to migrant students in the classroom. The supervising teacher and coordinator will provide feedback as the student implements lessons, conducts home visitations, and tutors on a consistent basis. Student must be admitted to the Mini-Corps program prior to enrollment. This class may be repeated for credit.
+    offered:
+      terms:
+        - spring
+  LS-233:
+    code: LS 233
+    title: Arts in the School and Community
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces the arts and art education in public school and community contexts. Emphasizes investigating art, art criticism, and the aesthetics of various artists across dance, music, theater, and visual arts. Addresses the selection of materials, techniques, tools, art concepts, and strategies appropriate for teaching art to multiple “communities” of students, as well as how to sensitively learn about the art(s) of a community. Designed to develop the ability to make curricular judgments by developing art-based lesson plans and designing art experiences “across the curriculum.”
+    offered:
+      terms:
+        - fall
+        - spring
+  LS-242S:
+    code: LS 242S
+    title: Service Learning in Public Schools
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is a lower-division, service learning course that explores the important role of the service learner in K-8 settings in public schools under the supervision of a credentialed teacher. Students actively participate in classroom learning activities, reflect upon the diversity in California public schools and the implications for educational equity. Student service learners critically analyze schooling practices that reflect the social and political powers in educational institutions, and other salient topics that emerge from their experiences at their service learning site and in course meetings. (This course does not meet the Lower Division Area D Civics-Service Learning requirement).
+    offered:
+      terms:
+        - fall
+        - spring
+  LS-295:
+    code: LS 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Special Topics courses study a particular topic in the liberal studies major for lower division students. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  LS-300:
+    code: LS 300
+    title: Advanced Reading and Writing in Education
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this Graduate Writing Assessment Requirement (GWAR) course, students explore educational theories, perspectives, and concepts as they develop and demonstrate effective oral and written communication skills, as well as critical thinking and research skills. Students also acquire and practice listening, oral and written communication skills in the relevant disciplines that are essential for ethical and socially responsible deliberation, problem solving, and community building in educational contexts.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  LS-311:
+    code: LS 311
+    title: Educational Issues and the Latino Community
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: An analysis of the key political, legal and sociocultural issues in the K-16 education of Latino students, the largest and fastest growing (majority-minority) population in the U.S. The course examines the historical and contemporary ways that Latino students are socially constructed along race, gender, language, and immigration status within the public schools. The Latino K-16 experience is tied to family and community involvement and examines how educational equity is a critical aspiration. (Crosslisted/Equivalent with ES 311)
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  LS-350:
+    code: LS 350
+    title: Teaching and Learning with Technology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides opportunities to examine the teaching and learning applications of a variety of technology tools and resources, situating this examination in the context of both contemporary and historical issues related to technology use, access, and the broader purposes of schooling. Explores what it means for teachers and learners to have a digital presence by developing an understanding of oneself as a professional, and exploring and experimenting with digital technologies and engaging in critical reflection.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  LS-363:
+    code: LS 363
+    title: Immigrants & Equity Issues in Education
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Focus on multicultural concepts of culturally diverse groups. Students examine differing perspectives and experiences of immigrants, including 5 Southeast Asian groups in U.S., including their historical struggles and how power determines social, economic and political stratification associated with race, gender, sexual orientation and abilities. Consideration of how these factors impact equity, access, schools/schooling, and teaching and learning. (Crosslisted/Equivalent with ES 363   )
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  LS-380:
+    code: LS 380
+    title: Teaching for Social Change
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In Teaching for Social Change, students learn the skills and theories of how to be agents of change, as educational professionals, in their communities. Students gain knowledge in integrating social action into K-8 school curriculum. Students engage in a social justice project relevant to a local issue or community.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  LS-383:
+    code: LS 383
+    title: Innov Approaches to Schooling
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Innovative Approaches to Schooling expands students’ understanding of alternative education models and philosophies (e.g., Montessori, Waldorf, etc.). Students also explore the social environment in classrooms, and current trends and obstacles in teaching and learning.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  LS-384:
+    code: LS 384
+    title: Issues in Comparative and International Education
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course introduces students to issues in comparative and international education in the context of a changing and interrelated global society. Topics include historical events and processes that have impacted international education and the views of U.S. educators on issues like national security, development education, globalism, colonialism, and ethno-nationalism. Education in Europe, Latin America, Asia, and Africa are also studied.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  LS-386S:
+    code: LS 386S
+    title: Service Learning for Social Change in Education
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course is designed to enhance student learning and professional development, by using service learning experiences to establish partnerships with multicultural communities. These community partnerships afford civic engagement opportunities that involve the identification and pursuit of paths for social change, by collaborating with stakeholders to advocate for access, equity, and justice in public schools.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: LS-242S
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and ( LS 242S   or equivalent) and (LS majors only)]"
+  LS-390:
+    code: LS 390
+    title: Culturally Sustaining Literature for Elementary and Middle Grades
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course provides a variety of analytical and critical lenses for exploring culturally sustaining literature for children in grades preK-8. The course explores theoretical and pedagogical issues surrounding the use of literature in the multicultural classroom. Explicit and implicit sociocultural patterns, symbols, and structural features of various literary genres are examined across a variety of texts (e.g., wordless books, picture books, chapter books, young adult novels, graphic novels, and poetry) that relate to the complex lives of individuals across diverse socio-cultural groups.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  LS-395:
+    code: LS 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 8
+    description: Special Topics courses study a particular topic in the liberal studies major. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  LS-397:
+    code: LS 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 8
+    description: Allows upper-division students to pursue courses on special topics. May involve such activities as readings and reaction papers, term papers, reports on life experiences, and action research.
+    offered:
+      availability: periodic
+  LS-397S:
+    code: LS 397S
+    title: Ind Study in Service Learning
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 8
+    description: Allows upper-division students to complete independent service learning experiences in the major. Students follow LS guidelines and requirements for service learning reflections, portfolio development, and assessment.
+    offered:
+      availability: periodic
+  LS-398:
+    code: LS 398
+    title: Social Foundations of Multicultural Education
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examines issues, problems, and solutions to equitable schooling in a pluralistic society. Viewing schools as social institutions that transform the cultural and political dynamics of society. The course focuses on history, politics, and theories of education for culturally and linguistically diverse populations.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  LS-400:
+    code: LS 400
+    title: Senior Capstone
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students engage in focused inquiry into an issue in education. Requires demonstration of ability to synthesize and utilize acquired knowledge and skills, as students articulate an understanding of the issue and advocate an ethical response. Involves intensive research, reading, writing, oral communication, and collaboration, with opportunities for analysis, action, and reflection. Culminating activity is an oral and/or written summation of project.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: LS-300
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: LS 300   with a C- or better) and (Senior Standing)]"

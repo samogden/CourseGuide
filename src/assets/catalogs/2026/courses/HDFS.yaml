@@ -1,0 +1,655 @@
+schemaVersion: 1
+prefix: HDFS
+courses:
+  HDFS-110:
+    code: HDFS 110
+    title: Identity, Relationships, and Family
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students explore how identity is formed through self-exploration, peer and family relationships, and culture. Students learn research-based and evidence-based ways of exploring and consolidating identity. In addition, students learn evidence-based ways of maintaining family relationships and establishing and maintaining healthy romantic relationships across the lifespan.
+    offered:
+      terms:
+        - fall
+        - spring
+  HDFS-200:
+    code: HDFS 200
+    title: Introduction to Child Development
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students examine theories of child development and milestones of physical, socio-emotional, and cognitive development from the prenatal period through adolescence. Students identify characteristics of play and their impact on development; describe social development of children and adolescents; understand effects of a wide range of influences on development; and identify sources of possible abuse and neglect and describe their impact on development.
+    offered:
+      terms:
+        - fall
+        - spring
+  HDFS-222:
+    code: HDFS 222
+    title: Peer Education for Young Adults
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: In this course, students train to become Peer Educators for the campus community. Students learn listening and intervention skills, develop skills in health promotion and harm reduction, make presentations, and evaluate health promotion programs for fellow students. Students will enhance leadership skills, develop public speaking, and further program planning skills. Students must apply for admission into the Peer Educator program to enroll in the course.
+    offered:
+      terms:
+        - fall
+        - spring
+  HDFS-225:
+    code: HDFS 225
+    title: Peer Education for Young Adults Practicum
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: In this course, students assist fellow students in making healthy life choices by creating, coordinating, and implementing health promotion activities that address physical, emotional, social, and spiritual issues faced by students. Students serve as role models for peers through responsible decision making and demonstrating ways of healthful living. Students must have completed Peer Educator training to enroll.
+    offered:
+      terms:
+        - fall
+        - spring
+  HDFS-270:
+    code: HDFS 270
+    title: Child, Family, and Community
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students examine theories of child development and milestones of physical, socio-emotional, and cognitive development from the prenatal period through adolescence. Students identify characteristics of play and their impact on development; describe social development of children and adolescents; understand effects of a wide range of influences on development; and identify sources of possible abuse and neglect and describe their impact on development.
+    offered:
+      availability: periodic
+  HDFS-301:
+    code: HDFS 301
+    title: Advanced Reading and Writing in HDFS
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students explore scholarly literature in Human Development and Family Science to critically examine the purposes and processes of reading and writing within the discipline. Students develop skills for identifying appropriate credible sources, and for critically reading, understanding, and evaluating scholarly literature. Students examine their own reading and writing process and practice strategies to enhance their comprehension and communication of HDFS knowledge for professional and community audiences.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better and (HDFS Majors Only)]"
+  HDFS-302:
+    code: HDFS 302
+    title: Research Methods in HDFS
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students explore research methods in human development and family studies in social, cultural, and historical contexts. Topics include research design, measurement, validity, data collection methods, and strategies for and issues in the study of developmental change. Through reading and reviewing scholarly papers, students examine the research process and develop research skills such as instrument design, coding and data entry.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (HDFS Majors only)]"
+  HDFS-303:
+    code: HDFS 303
+    title: Professional Development in HDFS
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students will explore career pathways in Human Development and Family Science. Students will develop professional competencies related to oral and written communication, conflict resolution, ethical decision making, and social responsibility in HDFS professions.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (HDFS Majors Only)]"
+  HDFS-307:
+    code: HDFS 307
+    title: Family Theories and Interactions
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students examine theoretical perspectives within family science to analyze interpersonal processes and patterns of interaction within families across the lifespan. Using family theory and research, focus is given to understanding how interactions vary and influence family relationships across generations, and within diverse contexts, including parent-child, sibling, step, in-law, grandparent, and extended family relationships. Students learn effective assessment, therapeutic, and intervention/prevention strategies that promote positive family development.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  HDFS-310:
+    code: HDFS 310
+    title: Parenting Across the Lifespan
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students examine the significant impact of parents with regard to children’s development and life potential. Students explore parenting as an evolving process that changes and reflects the developing individual’s and adult’s current life-stage. Grandparenting and parenting of adult children are also included. Diversity in parenting, theories, and programs will be analyzed in the context of discovering and building on parenting strengths.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: HDFS-200
+            minimumGrade: C-
+          - courseId: HDFS-350
+            minimumGrade: C-
+          - courseId: HDFS-360
+            minimumGrade: C-
+          - courseId: PSY-100
+            minimumGrade: C-
+          - courseId: PSY-340
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+  HDFS-315:
+    code: HDFS 315
+    title: Risk and Resiliency in Families
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students investigate the challenges, stressors, and crises experienced by individuals and families across the lifespan. Focus is given to protective factors and resilience, coping strategies, and prevention and intervention.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: HDFS-200
+            minimumGrade: C-
+          - courseId: HDFS-350
+            minimumGrade: C-
+          - courseId: HDFS-360
+            minimumGrade: C-
+          - courseId: PSY-100
+            minimumGrade: C-
+          - courseId: PSY-340
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+  HDFS-321:
+    code: HDFS 321
+    title: Diverse Families
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students examine the research on diverse families in the U.S., focusing on Latino, Asian American, African American, Native American, multicultural/multiracial, gay and lesbian, special needs families among other diverse families issues and intersectionality. Students explore how cultural and diverse values and attitudes affect aspects of lifespan development such as parenting, schooling, risk behaviors, dating and relationships, and elder care. Students create culturally competent and responsive approaches to supporting the strengths of diverse families and to overcoming systemic obstacles for optimal growth of individuals and families.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  HDFS-322:
+    code: HDFS 322
+    title: Immigrant Families Across the Lifespan
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students critically examine the interdisciplinary research literature on diverse immigrant families in the US within a global context and explore contemporary and historical immigration issues that affect families and children’s development. In addition, students apply their learning in these areas toward maximizing strengths and functioning of immigrant families across the lifespan. (Crosslisted/Equivalent with ES 322   )
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  HDFS-340:
+    code: HDFS 340
+    title: Close Relationships and Family Development
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students learn about the formation of romantic relationships, mate selection, dating, gay and lesbian relationships, theories of love, and marriage. In addition, students study the formation of families, family development across the lifespan, parenting, and diversity in families. Special emphasis is given to contextual influences on families.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: HDFS-200
+            minimumGrade: C-
+          - courseId: HDFS-350
+            minimumGrade: C-
+          - courseId: HDFS-360
+            minimumGrade: C-
+          - courseId: PSY-100
+            minimumGrade: C-
+          - courseId: PSY-340
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+  HDFS-341:
+    code: HDFS 341
+    title: "Family Violence: Identification, Prevention, and Intervention"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students examine the research on the nature and impact of violence and abuse in families, schools, and communities on human development and relationships across the lifespan. Students learn how to identify various forms of violence and abuse and the roles and responsibilities of professionals who work with children, youth, the elderly, and families. Focus is given to protective factors, resilience, prevention, and intervention.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: HDFS-200
+            minimumGrade: C-
+          - courseId: HDFS-350
+            minimumGrade: C-
+          - courseId: HDFS-360
+            minimumGrade: C-
+          - courseId: PSY-100
+            minimumGrade: C-
+          - courseId: PSY-340
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+  HDFS-342:
+    code: HDFS 342
+    title: Human Development, Technology and the Media
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students explore how different forms of technology and media mediate human development, families, and close relationships. Students evaluate how technology and media are integrated into everyday contexts and activities, linked to specific issues of development across the lifespan, and generate research debates regarding their use and misuse.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: HDFS-200
+            minimumGrade: C-
+          - courseId: HDFS-350
+            minimumGrade: C-
+          - courseId: HDFS-360
+            minimumGrade: C-
+          - courseId: PSY-100
+            minimumGrade: C-
+          - courseId: PSY-340
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+  HDFS-344:
+    code: HDFS 344
+    title: Death and Dying
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students examine the physical, social, and psychological aspects of death and dying within cultural traditions. Students examine perspectives on the acceptance of death depending upon age and circumstance, i.e., a natural or expected death, accidental death, deliberate death (e.g., suicide, removal of life support), and cultural expectations concerning grief and the meaning of death as well as available social and cultural services.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: HDFS-200
+            minimumGrade: C-
+          - courseId: HDFS-350
+            minimumGrade: C-
+          - courseId: HDFS-360
+            minimumGrade: C-
+          - courseId: PSY-100
+            minimumGrade: C-
+          - courseId: PSY-340
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+  HDFS-345:
+    code: HDFS 345
+    title: Addiction and Recovery in Families
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students learn about pathways towards addiction, addictive behaviors, intervention strategies, and recovery methods. Contexts of addictive processes, cross-cultural perspectives, and strengths-based approaches and family systems are emphasized.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: HDFS-200
+                minimumGrade: C-
+              - courseId: HDFS-350
+                minimumGrade: C-
+              - courseId: HDFS-360
+                minimumGrade: C-
+              - courseId: PSY-100
+                minimumGrade: C-
+              - courseId: PSY-340
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: GE   Areas 1A and 1B and 1C with a C- or better) and ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   )]"
+  HDFS-350:
+    code: HDFS 350
+    title: "Lifespan Development: Transition and Change"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students survey theoretical perspectives of human growth and development across the life span and draw from current social science research in examining the complex array of social, psychological, and cultural forces that combine to determine each individual’s life course. Students apply content to real world settings and explore strategies to promote successful passage through the life course.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  HDFS-353:
+    code: HDFS 353
+    title: Cross-Cultural Human Development
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students examine how human development is influenced by, and influences, cultural norms and practices, and how culture plays a role in physical, cognitive, and socio-emotional development across the lifespan. Student explore topics such as family, socialization, language, gender, schooling, and health, and life events such as birth, rites of passage, marriage, and death in the cultural contexts within the U.S. and internationally.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  HDFS-355:
+    code: HDFS 355
+    title: Behavioral and Emotional Disorders of Childhood and Adolescence
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students explore common behavioral and emotional disorders which occur during childhood and adolescence such as attention deficit disorder, autism, depression, eating disorders, and conduct disorders. Physiological and environmental origins of the disorders are examined as well as prevention, intervention, and treatment. Multidisciplinary and multicultural perspectives are included.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: HDFS-200
+            minimumGrade: C-
+          - courseId: HDFS-350
+            minimumGrade: C-
+          - courseId: HDFS-360
+            minimumGrade: C-
+          - courseId: PSY-100
+            minimumGrade: C-
+          - courseId: PSY-340
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+  HDFS-356:
+    code: HDFS 356
+    title: Infancy and Early Childhood
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students examine developmental, behavioral, and other psychological theories and the various biological, social, and cultural factors known to contribute to human growth and development during the initial phases of life (prenatal through preschool). Readings emphasize research and application in family and social settings.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: HDFS-200
+            minimumGrade: C-
+          - courseId: HDFS-350
+            minimumGrade: C-
+          - courseId: HDFS-360
+            minimumGrade: C-
+          - courseId: PSY-100
+            minimumGrade: C-
+          - courseId: PSY-340
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+  HDFS-358:
+    code: HDFS 358
+    title: Middle Childhood
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students examine physical, cognitive, and socio-emotional development during the school age years (ages 6-11) with an emphasis on the various contexts in which children develop, such as cultural community, family, peer groups, and school. Students critically examine developmental theories and research, and explore the application of research in different social settings.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: HDFS-200
+            minimumGrade: C-
+          - courseId: HDFS-350
+            minimumGrade: C-
+          - courseId: HDFS-360
+            minimumGrade: C-
+          - courseId: PSY-100
+            minimumGrade: C-
+          - courseId: PSY-340
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+  HDFS-360:
+    code: HDFS 360
+    title: Child Development
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Child Development provides a rigorous overview of theories and research concerning child growth and development. Focuses on children’s social, cognitive, and psychological development with emphasis on multicultural and social policy issues. Addresses the current conditions of children in the local community and globally, emphasizing the need for diverse and culturally competent policies and practices.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  HDFS-360S:
+    code: HDFS 360S
+    title: Child Development/Service Learning
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Child Development provides a rigorous overview of theories and research concerning child growth and development. Focuses on children’s social, cognitive, and psychological development with emphasis on multicultural and social policy issues. Addresses the current conditions of children in the local community and globally, emphasizing the need for diverse and culturally competent policies and practices. Service learning in the community is required and will inform students’ learning.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Areas 1A and 1B and 1C and 2A with a C- or better)"
+  HDFS-365:
+    code: HDFS 365
+    title: Adolescence
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students examine the psychological, biological cognitive, and other developmental theories relevant to adolescent development. Student analyze the impact of culture and context on identity development and on successful transition to adulthood.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: HDFS-200
+            minimumGrade: C-
+          - courseId: HDFS-350
+            minimumGrade: C-
+          - courseId: HDFS-360
+            minimumGrade: C-
+          - courseId: PSY-100
+            minimumGrade: C-
+          - courseId: PSY-340
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+  HDFS-371:
+    code: HDFS 371
+    title: Adulthood & Aging
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students examine theories and concepts of early adulthood, middle adulthood, and late adulthood. Students explore topics such as the consolidation of personal identity, the primary factors of adulthood, and healthy and successful aging drawing on readings from diverse sources, including psychological and sociological research and media.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: HDFS-200
+            minimumGrade: C-
+          - courseId: HDFS-350
+            minimumGrade: C-
+          - courseId: HDFS-360
+            minimumGrade: C-
+          - courseId: PSY-100
+            minimumGrade: C-
+          - courseId: PSY-340
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+  HDFS-377:
+    code: HDFS 377
+    title: Geriatrics & Gerontology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students examine the key issues, complexities, and challenges around changing health and service systems in the aging process. Students explore topics such as the etiology of life altering events, quality of life for the elderly, and end of life choices from multicultural and international perspectives.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: HDFS-200
+            minimumGrade: C-
+          - courseId: HDFS-350
+            minimumGrade: C-
+          - courseId: HDFS-360
+            minimumGrade: C-
+          - courseId: PSY-100
+            minimumGrade: C-
+          - courseId: PSY-340
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( HDFS 200   or HDFS 350   or HDFS 360   or PSY 100   or PSY 340   or equivalent) and ( GE   Area 1A and 1B and 1C with a C- or better)]"
+  HDFS-380S:
+    code: HDFS 380S
+    title: Service Learning Human Dev
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: "Service Learning in Human Development: In this course, students will apply and evaluate HDEV theory to service learning experiences, reflect on their SL experience and site as it applies to their professional development, develop skills in reflective, ethical, strengths- based practices for human development, and strengthen their interpersonal and intrapersonal abilities in their SL experience and area of study."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: HDFS-302
+            minimumGrade: C-
+          - courseId: HDFS-303
+            minimumGrade: C-
+          - courseId: HDFS-400A
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[((Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better) and ( HDFS 302   and HDFS 303   ) and (HDFS majors only)) and (Coreq: HDFS 400A   )]"
+  HDFS-382:
+    code: HDFS 382
+    title: Program Development and Evaluation in HDFS
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course, students learn about theory and practice of program evaluation and proposal writing in the HDFS field, focusing on needs assessment and proposal writing to aid programs in meeting their goals. Students will learn to assess and apply evaluation methods from various perspectives, such as scientific, ethical, multicultural, and social justice perspectives.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: HDFS-302
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: HDFS 302   and ( GE   Area 1A and 1B and 1C with a C- or better) and (HDFS Majors only)]"
+  HDFS-395:
+    code: HDFS 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 6
+    description: In a Special Topics course, students study a particular topic in Human Development on an experimental or time-limited basis. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HDFS-397:
+    code: HDFS 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 8
+    description: Allows upper-division students to pursue courses on special topics. May involve such activities as readings and reactions to papers, term papers, reports on life experiences, and action research.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HDFS-397S:
+    code: HDFS 397S
+    title: Independent Study SL
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 8
+    description: Allows upper-division students to pursue courses on special topics. Requires completion of a service learning field placement and project. May involve such activities as readings and reactions to papers, term papers, reports on life experiences, and action research.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  HDFS-400A:
+    code: HDFS 400A
+    title: Pre-Capstone
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: In this course, students reflect upon their service learning experience or other experiences and generate a project for Capstone. Students develop an introduction, a literature-based need statement, learning outcomes, and timetable for engaging in a Capstone project.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: HDFS-302
+            minimumGrade: C-
+          - courseId: HDFS-303
+            minimumGrade: C-
+          - courseId: HDFS-380S
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and ( HDFS 302   and HDFS 303   ) and (HDFS Majors only) and (Coreq: HDFS 380S   )]"
+  HDFS-400B:
+    code: HDFS 400B
+    title: Capstone Seminar
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course revolves around an educational research project in HDFS. Students build upon an identified research literature-based need, connect a theory, explore diversity of their audience and content, deliver curriculum, and evaluate how well the participants achieved the anticipated learning outcomes. Students write about and present their findings.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: HDFS-400A
+            minimumGrade: C-
+          - courseId: HDFS-380S
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereqs: ( GE   Area 1A and 1B and 1C with a C- or better) and ( HDFS 400A   ) and ( HDFS 380S)   and (HDFS majors only)]"

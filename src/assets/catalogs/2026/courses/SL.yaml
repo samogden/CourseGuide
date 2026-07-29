@@ -1,0 +1,193 @@
+schemaVersion: 1
+prefix: SL
+courses:
+  SL-210S:
+    code: SL 210S
+    title: The Promise and Reality of the American Dream
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course gives students the opportunity to become personally involved in a community issue, while more deeply understanding their individual rights and responsibilities, along with the civic and political structures that govern collective and individual action in our society. Students will examine the evolution of the founding civic documents of this country and state (US Constitution, Bill of Rights, California Constitution, etc.), and will gain a deeper understanding of their civil and human rights and critically examine the meaning, and limits and possibilities of liberty and justice for all as conceived in the U.S. and California Constitutions. Students will complete a minimum of 25 hours of service as part of the service learning component of the course.
+    offered:
+      terms:
+        - fall
+        - spring
+  SL-295:
+    code: SL 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in Service Learning. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  SL-300S:
+    code: SL 300S
+    title: Social Justice and Service Learning Pedagogy
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course introduces students to social justice and service learning pedagogy. Students will explore experiential education and community-based learning with a social justice orientation; and examine learning theories linked to critical pedagogy, social justice, and critical service learning. Students are required to complete a minimum of 30 hours of service as part of this course.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  SL-305:
+    code: SL 305
+    title: Leadership for Social Change
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Develops students’ leadership capacities as multicultural community builders by deepening their understanding of themselves, the surrounding community, and social change theories and practice. Students will work on leadership projects on campus and /or in the community.
+    offered:
+      terms:
+        - fall
+  SL-320:
+    code: SL 320
+    title: Preparation for International Service Experience
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 4
+    description: This course provides preparation for students who will be involved in international service experiences. Students study about cultural, economic, political, and historical issues relevant to the region where they will be serving. Students examine issues underlying international service, including neo-colonialism, cultural imperialism and models of charity versus social change.
+    offered:
+      availability: periodic
+  SL-391S:
+    code: SL 391S
+    title: Service Learning Leadership Support
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Students develop their capacities as effective service learning practitioners and leaders, developing skills in critical reflection; service learning coordination and management; and social justice learning. Required course for participation in the Service Learning Institute’s student leadership program.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  SL-392S:
+    code: SL 392S
+    title: Transformative Leadership in Community
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Students develop as transformative community leaders through listening, relationship-building, and reflection. The course explores restorative dialogue, indigenous and needs-based knowledge systems, and the role of land in community life. Through readings, reflection, and 25+ hours of service, students gain leadership and communication skills to build reciprocal partnerships that address inequity and strengthen community well-being. This course is designed for students who are currently serving as College Corps Fellows.
+    offered:
+      terms:
+        - fall
+  SL-394S:
+    code: SL 394S
+    title: Service and Social Justice
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students are introduced to theories of social justice, and explore social movements in service and social justice to understand the linkages between these two avenues for community development and activism. Through their own service experiences, students analyze systemic elements that perpetuate oppression and injustice, and develop their own capacities as catalysts for change by engaging in meaningful and respectful community work.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  SL-395S:
+    code: SL 395S
+    title: Special Topics in Service Learning and Social Change
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 4
+    description: Addresses emerging issues in service learning, community and social change. Requires a minimum of 30 hours of community service in addition to class time.
+    offered:
+      availability: periodic
+  SL-490:
+    code: SL 490
+    title: Community, Research and Social Action
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course takes a cross-disciplinary and community-based approach to exploring Participatory Action Research (PAR), a collaborative process of inquiry that enables communities to identify and address the issues they consider important through research and action. Prioritizing the voices and experiences of those most affected by the topics we explore, students will examine key themes of power, knowledge, representation, and social change. Through hands-on engagement in the PAR process and service-learning projects, students will deepen their understanding of PAR tools, frameworks, and ethical considerations, fostering meaningful connections between research and social action.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  SL-491S:
+    code: SL 491S
+    title: Topics in Civic Engage
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students examine issues of justice, diversity, compassion, and social responsibility in the context of community service. Addresses current community and civic concerns, relevant to the local region. Requires 30 hours of service in the community.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior
+  SL-492S:
+    code: SL 492S
+    title: Participatory Action Research Practicum
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Students work on Participatory Action Research (PAR) projects that are designed with and responsive to community concerns; and that build on community knowledge. Requires 30 hours of service work local community organizations.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: SL-490
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[[Prereq: ( GE   Area 1A and 1B and 1C and 2 with C- or better) and (Coreq: SL 490   )]"
+  SL-493S:
+    code: SL 493S
+    title: Advanced Participatory Action Research Practicum
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will engage as co-researchers in a Participatory Action Research (PAR) project with a community partner identified by the student. Guided by community knowledge of a social issue, the students, working with a community partner will design and implement a self-and community partner-directed PAR project. We will further consider texts that provide both informative enactments of PAR and those that offer a critical engagement with the method.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with C- or better"
+  SL-495S:
+    code: SL 495S
+    title: Special Topics in Service Learning
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in Service Learning.
+    offered:
+      availability: periodic
+  SL-497S:
+    code: SL 497S
+    title: Independent Study Service Learning
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 4
+    description: Student develops independent service learning experience working closely with a community organization; completes a portfolio demonstrating achievement of Upper Divison SL Learning Outcomes; requires a minimum of 30 hours of community service.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Junior or Senior Standing)"
+    minimumStanding: junior

@@ -1,0 +1,316 @@
+schemaVersion: 1
+prefix: IST
+courses:
+  IST-401:
+    code: IST 401
+    title: Tech Skills Development
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: This is a recommended lab course for the students who are enrolled in the MIST program. It emphasizes on technology skill development on multimedia design and evaluation tools.
+    offered:
+      availability: periodic
+  IST-411:
+    code: IST 411
+    title: Writing Skills Development
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: This is a recommended lab course for the students who are enrolled in the MIST program. It focuses on writing skill development and writing in appropriate style.
+    offered:
+      availability: periodic
+  IST-495:
+    code: IST 495
+    title: Special Topic
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 6
+    description: Studies a particular topic in IST. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  IST-497:
+    code: IST 497
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic
+  IST-501:
+    code: IST 501
+    title: Technology Workshop
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Provides individualized workshops and tutoring to incoming graduate students in preparation for technology-intensive graduate studies. Covering information, technology and communication tools such as learning management systems, information search engines, online storages, basic media design, basic web design, and presentation tools. Designed to be taken with or before other graduate-level courses.
+    offered:
+      terms:
+        - fall
+  IST-511:
+    code: IST 511
+    title: Writing Workshop
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 4
+    description: Provides individualized workshops and tutoring to incoming graduate students in preparation for writing-intensive graduate studies. Covering writing strategies, academic writing skills, APA style and technologies used in writing. Designed to be taken with, or before, other graduate-level courses.
+    offered:
+      terms:
+        - fall
+  IST-520:
+    code: IST 520
+    title: Theories of Learning and Instruction
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Learning Theories: Introduce learning theory as the foundation for the design and implementation of instruction and training. Students learn to evaluate and select appropriate applied learning theories, apply behavioral, cognitive and constructivist learning theories. Discuss how to select appropriate pedagogy according to a specific delivery model and learner. Explore cultural sensitivities in teaching and learning in a highly connected world."
+    offered:
+      terms:
+        - spring
+  IST-522:
+    code: IST 522
+    title: Instructional Design
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students engage in front-end analysis in order to identify and define an existing problem in an instructional or training environment resulting in an instructional design document. Involves problem identification and definition, content organization and development, implementation strategy and evaluation framework.
+    offered:
+      terms:
+        - fall
+  IST-524:
+    code: IST 524
+    title: Instructional Technology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Provides an introduction to the field and profession of Instructional Science Technology. This course provides students a sense of history, current issues, future trends, and an overview of core models and theories, and how the components of the field fit together.
+    offered:
+      terms:
+        - fall
+  IST-526:
+    code: IST 526
+    title: Interactive Multimedia for Instruction
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students explore professional authoring tools for multimedia creation and learn to apply evidence-based multimedia learning principles to instructional design. Students will select and use appropriate tools to develop engaging, pedagogically sound multimedia learning solutions.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: IST-522
+      - courseId: IST-524
+    prerequisiteNotes:
+      - "(Prereq: IST 522   and IST 524   )"
+  IST-530:
+    code: IST 530
+    title: Intro to Project Management
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: "Intro to Project Management: Covers fundamental project frameworks such as scope, time, cost, quality, human resources, communications, risk, and procurement. Discusses management skills required to lead a team to successful completion of projects. Students will select and apply project management processes throughout the project life cycle to deliver successful projects, particularly: strategic alignment, project appraisal and planning, human resource management, budgeting and control, quality and risk management, contract management and the management of change. Level: Graduate (Elective)"
+    offered:
+      availability: periodic
+  IST-531:
+    code: IST 531
+    title: "Multimedia Tools I: Audio and Video"
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Students develop the knowledge and hands-on skills needed to design and produce high-quality instructional audio and video content for interactive multimedia projects. The course emphasizes practical techniques for planning, recording, and editing media, with a focus on creating engaging resources for both classroom instruction and corporate training environments.
+    offered:
+      terms:
+        - spring
+  IST-540:
+    code: IST 540
+    title: AI Tools for Teaching & Learning
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course introduces students to the emerging role of artificial intelligence in teaching and learning. Learners will explore foundational knowledge and practical strategies for integrating AI tools into instructional and educational contexts, with emphasis on ethical use, detection of AI-generated content, and the development of policies that support responsible practice. Students will build both theoretical understanding and hands-on skills, and will gain access to curated resources to stay current with evolving AI trends in education.
+  IST-541:
+    code: IST 541
+    title: "Multimedia Tools II: Interactive Media"
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Teaches the theory and practice of interactive media through the use of new technologies. Students will gain an understanding of the production process by completing short exercises culminating in a final project.
+    offered:
+      terms:
+        - fall
+  IST-550:
+    code: IST 550
+    title: Change Management
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Study how change occurs in people and organizations. As interventions take place, individuals, teams, and their organizations develop the potential to apply new knowledge and practices to improve performance. The actual application of new knowledge and performance improvement requires that change occur. Often, change is resisted. Professionals can enhance knowledge application and performance if they develop strategies to reduce resistance to change.
+    offered:
+      availability: periodic
+  IST-594:
+    code: IST 594
+    title: Graduate Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Students work with practicing professionals in a volunteer or paid internship that requires specialized instructional design skills.
+    offered:
+      availability: periodic
+  IST-595:
+    code: IST 595
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: "Special Topics: Specialized study of a particular topic within the School of Information Technology and Communications Design. May be repeated for additional credit when topics vary and as subjects permit. Level: Graduate (Elective)"
+    offered:
+      availability: periodic
+  IST-597:
+    code: IST 597
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic
+  IST-622:
+    code: IST 622
+    title: Assessment & Evaluation
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduce the theoretical framework of assessment as it applies to learner performance, effectiveness of curriculum design, and effectiveness of instructional delivery. Explore and develop real-world methods of assessment through the use of psychometric techniques. Students develop techniques for judging the performance of instructional delivery and conduct appropriate usability, reliability, and efficiency tests of instructional and learning management systems.
+    prerequisites:
+      - courseId: IST-524
+    prerequisiteNotes:
+      - "(Prereq: IST 524   )"
+  IST-624:
+    code: IST 624
+    title: Research Design & Methods
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Survey, analyze and apply qualitative and quantitative research methods; study the difference between them. Learn to read, analyze and critic research papers; select appropriate techniques to design research in an educational and training context. Level: Graduate (Elective)"
+    offered:
+      availability: periodic
+  IST-626:
+    code: IST 626
+    title: Advanced Instructional Design
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students work on authentic instructional design projects individually or in small groups. Students engage in real-world projects and integrate knowledge and skills from previous courses, including instructional design process, principles, multimedia for instruction, learning theories, and assessment and evaluation. Working on a real-world design experience involves dealing with and balancing numerous additional variables, including project management, effective communication with clients, time management, application of professional knowledge and skills, and producing professional-level products. Students are equally responsible for technology use, design decisions, and client requirements, and are also required to produce original work for all aspects of each project.
+    prerequisites:
+      - courseId: IST-522
+      - courseId: IST-526
+    prerequisiteNotes:
+      - "(Prereq: IST 522   and IST 526   )"
+  IST-630:
+    code: IST 630
+    title: Project Mgmt Practicum
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: "Project Management Practicum: Provides hands-on practice with industry-level PM software and covers several case studies. Students take a real world project and apply the knowledge and skills as the project manager of the project. Level: Graduate (Elective)"
+    offered:
+      terms:
+        - fall
+  IST-660:
+    code: IST 660
+    title: Leadership for Knowledge Org
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Leadership for Knowledge Centered Organizations: Covers the theories, philosophies, and concepts of leadership through the examination of the difference between management and leadership, organizational culture, and the leader-follower relationship. Emphasize on multicultural, diverse and knowledge centered organizations such as high-tech corporations or higher-ed institutions. Level: Graduate (Elective)"
+    offered:
+      availability: periodic
+  IST-665:
+    code: IST 665
+    title: Tech for Language Learning
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Technology for Language Learning : Investigate technology used for language teaching and learning. Experiment and evaluate different types of authoring, delivery, practice and assessment tools in language acquisition. Hands-on projects and case studies are included. Level: Graduate (Elective)"
+    offered:
+      availability: periodic
+  IST-675:
+    code: IST 675
+    title: Design & Teach E-Learning
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Design and Teach E-learning Courses: Covers design and delivery online and hybrid instruction. Discuss teaching strategy for online environment and how it differs from traditional methods. Survey, apply, and evaluate advanced communication tools used in e-learning, such as learning management system, online collaboration tools, and media authoring tools. Level: Graduate (Elective)"
+    offered:
+      availability: periodic
+  IST-695:
+    code: IST 695
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: "Specialized study of a particular advanced topic, usually beyond master degree level, within the School of Information Technology and Communications Design. May be repeated for additional credit when topics vary and as subjects permit. Level: Graduate (Elective)"
+    offered:
+      availability: periodic
+  IST-696:
+    code: IST 696
+    title: Directed Research Development
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: "Directed Research and Development: Provide a framework for a substantial research and development effort beyond a typical capstone project: ideation, proposal writing, project management, presentation, documentation and/or evaluation. IST 696 provides one-on-one guidance on students’ research and development effort within the School of Information Technology and Communications Design disciplines. Level: Graduate (Elective)"
+    offered:
+      availability: periodic
+  IST-697:
+    code: IST 697
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: "Student and faculty member select advanced topic of study and number of credits. Level: Graduate (Elective)"
+    offered:
+      availability: periodic
+  IST-699:
+    code: IST 699
+    title: Graduate Capstone
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course serves as the culminating experience of the program, providing students the opportunity to integrate and apply the knowledge, skills, and strategies developed throughout their coursework. Students showcase their professional competencies through a real-world learning solution or applied research. This course prepares graduates to enter the field as reflective, ethical, and evidence-based practitioners who can adapt to emerging trends in learning and technology.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: IST-622
+      - courseId: IST-626
+    prerequisiteNotes:
+      - "(Prereq: IST 622   and IST 626   )"

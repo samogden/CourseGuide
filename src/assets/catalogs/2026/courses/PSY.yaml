@@ -1,0 +1,998 @@
+schemaVersion: 1
+prefix: PSY
+courses:
+  PSY-100:
+    code: PSY 100
+    title: Introduction to Psychology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "Psychology is the scientific study of mental processes and behavior. This course spans the breadth of psychology’s sub-disciplines, such as neuroscience, cognitive, developmental, clinical, and social psychology. Topics covered may integrate across sub-disciplines and include: history of the field, learning, perception, personality, intelligence, and emotion. Exploration includes core concepts, research methods, historically significant studies, larger theoretical debates such as, nature versus nurture, and the application of research findings to address contemporary social issues."
+    offered:
+      terms:
+        - fall
+        - spring
+  PSY-100L:
+    code: PSY 100L
+    title: Intro to Psychology Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Various laboratory exercises and training in psychology. Concurrent enrollment in PSY 100   is required. The lab component of the course provides students with opportunities to experience psychological research first hand by participating in psychological studies on campus.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: PSY 100   )"
+  PSY-200:
+    code: PSY 200
+    title: Introduction to Research Methods
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduction to the design, analysis, and critique of different experimentation methods in psychology. Students will demonstrate the ability to assess published research and express arguments orally and in writing according to the professional standards, such as the APA Publication Manual. Students will demonstrate the ability to conduct hypothesis testing using the scientific process and appropriate statistical data analyses.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: PSY-100
+      - courseId: STAT-100
+      - courseId: PSY-200L
+    prerequisiteNotes:
+      - "[(Prereq: PSY 100   and STAT 100   ) and (Coreq: PSY 200L   )]"
+  PSY-200L:
+    code: PSY 200L
+    title: Intro Methods Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Computer laboratory to accompany PSY 200. Various research laboratory exercises and training in statistics and computer data analyses.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: PSY-100
+      - courseId: STAT-100
+      - courseId: PSY-200
+    prerequisiteNotes:
+      - "[(Prereq: PSY 100   and STAT 100   ) and (Coreq: PSY 200   )]"
+  PSY-295:
+    code: PSY 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Psychology. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Freshman and Sophomore Standing)"
+  PSY-300:
+    code: PSY 300
+    title: Career Preparation for Psychology Majors
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will learn about career paths for psychology majors at the bachelor’s, master’s, and doctoral levels of training. They will reflect on their life and career goals to plan curricular and extracurricular educational goals. They will draft professional documents such as a resume, cover letter, curriculum vitae, and personal statement, practice oral communication in a mock interview, and will start to develop ideas for a Senior Capstone Project that fits their educational goals.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: PSY-100
+      - courseId: PSY-200
+      - courseId: PSY-200L
+    prerequisiteNotes:
+      - "(Prereq: PSY 100   and PSY 200   and PSY 200L   )"
+  PSY-301:
+    code: PSY 301
+    title: Advanced Psychological Statistics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students learn strategies to evaluate experimental designs and methodology. Emphasis is on using computer application of statistical models that use multi-group paradigms and linear analyses including the t-test, Analysis of Variance, and regression. Nonparametric statistics and evaluation of quasi-experimental designs are also included.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-301L
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 301L   )]"
+  PSY-301L:
+    code: PSY 301L
+    title: Advanced Psychological Statistics Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Computer laboratory to accompany PSY 301   . Various advanced research laboratory exercises and training in statistics and computer data analyses.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-301
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 301   )]"
+  PSY-302:
+    code: PSY 302
+    title: Advanced Research Methods
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is designed to extend training in the areas of psychology research methods, research design, data analysis and interpretation, and the reading and writing of research reports. Students are required to write an American Psychological Association (APA) style research paper(s).
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+            minimumGrade: C-
+          - courseId: STAT-100
+            minimumGrade: C-
+          - courseId: PSY-200
+            minimumGrade: C-
+          - courseId: PSY-200L
+            minimumGrade: C-
+          - courseId: PSY-300
+            minimumGrade: C-
+          - courseId: PSY-302L
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) and (Coreq: PSY 302L   )]"
+  PSY-302L:
+    code: PSY 302L
+    title: Advanced Research Methods Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Computer laboratory to accompany PSY 302   . Various advanced research laboratory exercises and training in statistics and computer data analyses.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-302
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 302   )]"
+  PSY-305:
+    code: PSY 305
+    title: Psychometrics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students learn the process of test and questionnaire construction. Students learn traditional laboratory experimental designs and methodology and critical thinking skills in evaluation and interpretation of construct validity in intelligence and ability tests, personality and adjustment questionnaires, ratings and behavioral observation techniques.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-305L
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 305L   )]"
+  PSY-305L:
+    code: PSY 305L
+    title: Psychometrics Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Computer laboratory to accompany PSY 305   . Various advanced research laboratory exercises and training in statistics and computer data analyses.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-305
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 305   )]"
+  PSY-310:
+    code: PSY 310
+    title: Biological Psychology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "The study of the biological bases of behavior and psychological processes. Topics include: biological theories and scientific principles related to the understanding of brain-behavior relationships; general neuroanatomy, neurophysiology, neurotransmission and brain function; invasive and non-invasive research techniques and ethical standards for human and animal research."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-310L
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 310L   )]"
+  PSY-310L:
+    code: PSY 310L
+    title: Biological Psychology Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This is a laboratory course to accompany PSY 310   that involves supplemental activities in biological psychology, including basic neuroanatomy and laboratory skill training exercises.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-310
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 310   )]"
+  PSY-315:
+    code: PSY 315
+    title: Psychopharmacology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "The study of the drug development and testing, drug action, and drug use and abuse on human behavior. General topics include: principles of pharmacology and drug action, “new” drug development, general theories of psychopharmacology, theories of emotion/motivation/reward, drugs and the nervous system, biochemical hypotheses of antipsychotic action, biochemical hypotheses of mood stabilizers, pharmacotherapy for mental disorders, and geriatric psychopharmacology."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   ))]"
+  PSY-320:
+    code: PSY 320
+    title: Psychopathology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course critically examines mental illness in adults from various theoretical and empirical perspectives (e.g., biological, psychodynamic, cognitive-behavioral) and provides an overview of the predominant psychological disorders. The emphasis will be on the etiology, symptom/diagnostic criteria, and treatment approaches of psychological disorders. Advanced research findings in this area will be emphasized.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-320L
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 320L   )]"
+  PSY-320L:
+    code: PSY 320L
+    title: Psychopathology Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Laboratory course to accompany PSY 320   (Psychopathology). This course will consist of supplemental activities that will enhance understanding of research methods in Clinical Science. Empirical article review and research writing are required.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-320
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 320   )]"
+  PSY-321:
+    code: PSY 321
+    title: Clinical and Counseling Psychology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides an introduciton to the fields of Clinical and Counseling Psychology, including assessment, diagnosis, and treatment of psychological disorders. This advanced course will review education and training, theoretical frameworks for psychotherapy, ethical principles, professional issues, and careers. Students will also learn about evidence-based therapies amd cultural considerations when working with diverse populations.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-321L
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND Coreq: PSY 321L   )]]"
+  PSY-321L:
+    code: PSY 321L
+    title: Clinical and Counseling Psychology Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Laboratory to accompany PSY 321   . Students will be required to complete supplemental activities and exercises in Clinical Science and practical application of helping skills.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-321
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND Coreq: PSY 321   )]"
+  PSY-329:
+    code: PSY 329
+    title: Health Psychology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Health Psychology (also referred to as Behavioral Medicine) examines the complex interplay of biological, interpersonal, social and environment factors that contribute to health and disease. This advanced course emphasizes the biopsychosocial model for disease prevention and management of chronic illnesses. Interventions focus on behavioral lifestyle changes, stress management, coping skills and adjustment to illness. This course emphasizes current research & evidenced based interventions.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-329L
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 329L   )]"
+  PSY-329L:
+    code: PSY 329L
+    title: Health Psychology Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Laboratory course to accompany Health Psychology ( PSY 329   ). This course will consist of supplemental activities that will enhance understanding of research methods in Health Psychology. Empirical article review and research writing are required.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-329
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 329   )]"
+  PSY-330:
+    code: PSY 330
+    title: Cognitive Psychology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduction to the study of human information processing and higher mental processes. Cognitive psychology includes topics such as perception, memory, language and thinking, and information processing. Various theories and selected experiments are described, analyzed and interpreted.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-330L
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 330L   )]"
+  PSY-330L:
+    code: PSY 330L
+    title: Cognitive Psychology Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Laboratory to accompany PSY 330   . Various advanced research laboratory exercises, computer demonstrations of research experiments, discussion and/or oral presentation of cognitive material.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-330
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 330   )]"
+  PSY-331:
+    code: PSY 331
+    title: Human Memory
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Principles of human memory. Examines basic theories, models, methods, and research findings in human memory. Topics include forgetting and retrieval of memory, eyewitness testimony, amnesia, and memory and aging. It covers cognitive processes involved in remembering.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-331L
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 331L   )]"
+  PSY-331L:
+    code: PSY 331L
+    title: Human Memory Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Laboratory to accompany PSY 331   . Various advanced research laboratory exercises, computer demonstrations of research experiments, discussion and/or oral presentation of memory material.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-331
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 331   )]"
+  PSY-333:
+    code: PSY 333
+    title: Cognitive Neuroscience
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: An examination of the neurological mechanisms of psychological processes, including perception, motor control, language, executive functions, memory and learning. Principles of nervous system organization are discussed at each level.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-333L
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 333L   )]"
+  PSY-333L:
+    code: PSY 333L
+    title: Cognitive Neuroscience Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Laboratory to accompany PSY 333   . Various advanced research laboratory exercises, computer demonstrations of research experiments, discussion and/or oral presentation of cognitive neuroscience material.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-333
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 333   )]"
+  PSY-334:
+    code: PSY 334
+    title: Sensation & Perception
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examination of how information about the outside world is sensed and how that information is organized and interpreted to form perceptions. Empirical and theoretical approaches to the psychology of perception with an emphasis on vision. Topics include psychophysical methods, basic physiology and function of sensory systems, perception of color and form, motion, distance, auditory patterns, body and limb position, temperature, pain, perceptual constancies, adaptation, and perceptual development.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-334L
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 334L   )]"
+  PSY-334L:
+    code: PSY 334L
+    title: Sensation & Perception Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Laboratory to accompany PSY 334   . Various advanced research laboratory exercises, computer demonstrations of research experiments, discussion and/or oral presentation of sensation and perception material.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-334
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 334   )]"
+  PSY-335:
+    code: PSY 335
+    title: Bilingual Cognition
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students will examine language, thought, and bilingualism from a cognitive psychology perspective. Students will focus on theory, design, and methods of bilingual research. Students will strengthen their understanding of language, thought, language acquisition, second language acquisition, consequences of being bilingual, how being bilingual changes our cognition, developmental aspects of bilingualism, as well as the social cognitive implications of being bilingual.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   ))"
+  PSY-336:
+    code: PSY 336
+    title: Human Factors Psychology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course will explore how humans interact with the environments, systems, and devices we use every day. Students will use theory and research from cognitive science, human-centered design, human-systems engineering, ergonomics, human-computer interaction, user experience (UX) design, and industrial/organizational psychology to understand how humans interact with tools, technology, and the built world. Through the understanding of human perceptual, cognitive, and physical processes, students will learn how we design systems and devices that are safer, more intuitive, and more effective for people meant to use them. The course emphasizes current work in applied domains such as health and medicine, education, transportation design, building construction, and the design of technological devices.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-336L
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 336L   )]"
+  PSY-336L:
+    code: PSY 336L
+    title: Human Factors Psychology Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Laboratory to accompany PSY 336. This laboratory course will consist of supplemental activities and exercises that will enhance understanding of human factors psychology through discussions and examinations of research findings and methods from a variety of fields, such as cognitive science, human-centered design, human-systems engineering, ergonomics, human-computer interaction, user experience (UX) design, and industrial/organizational psychology.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-336
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 336   )]"
+  PSY-340:
+    code: PSY 340
+    title: Developmental Psychology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "This class examines physical, socio-cultural, intellectual and emotional aspects of growth and development from conception to death. Students are introduced to theories, methods, concepts, and issues relevant to the scientific study of development across the lifespan. Topics covered include: the major theoretical and methodological issues in developmental psychology, social, cognitive, and physical development in infancy, childhood, adolescence, and adulthood."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-340L
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 340L   )]"
+  PSY-340L:
+    code: PSY 340L
+    title: Developmental Psychology Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Application laboratory to accompany PSY 340   . Various advanced research laboratory exercises and training in experimentation and data analyses.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-340
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   )) AND (Coreq: PSY 340   )]"
+  PSY-346:
+    code: PSY 346
+    title: Cognitive Development
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "Cognition in children from infancy through adolescence. Basic and current research on children’s understanding of the social and physical world. Focus on major theoretical perspectives: Piaget’s constructivist approach, information processing approach, and sociocultural approach."
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   ))]"
+  PSY-347:
+    code: PSY 347
+    title: Social & Emotional Development
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: An examination of contemporary theory and research on social and emotional psychological development from infancy through childhood.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   ))]"
+  PSY-348:
+    code: PSY 348
+    title: How to Love
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "How to Love is an interdisciplinary course on the art and science of love. Examine relevant scholarship on love and intimacy from psychology, feminism, philosophy, and human development. Learn evidence-informed practices to cultivate healthy development and love, including how to: identify feelings, communicate respectfully, set boundaries, and foster self-love. Though this class may be therapeutic, it is not therapy. This course is simply one avenue to enrich students’ ongoing self-development."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   AND STAT 100   AND PSY 200   AND PSY 200L   ) OR ( PSY 300   ))]"
+  PSY-350:
+    code: PSY 350
+    title: Social Psychology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "Social psychology is a scientific area in the discipline of psychology that seeks an understanding of how people feel, think, and behave in social situations. Students are introduced to the theories, research methods, and seminal findings of social psychology. Topics covered include: attitudes, perceptions of others, social influence, social identity and the self, attraction, aggression, and intergroup dynamics."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-350L
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   and STAT 100   and PSY 200   and PSY 200L   ) OR ( PSY 300   )) and (Coreq: PSY 350L   )]"
+  PSY-350L:
+    code: PSY 350L
+    title: Social Psychology Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: "Social Psychology Lab: This is a laboratory course to accompany PSY 350   that involves supplemental activities in social psychology, including writing, research and laboratory skill training exercises."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+          - courseId: PSY-350
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   and STAT 100   and PSY 200   and PSY 200L   ) OR ( PSY 300   )) and (Coreq: PSY 350   )]"
+  PSY-352:
+    code: PSY 352
+    title: Theories of Personality
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Survey of the major contemporary theories of personality. Theoretical positions are compared and critically examined along various significant dimensions, including their relationships to the total field of psychology. Methods of personality assessment as related in theory construction.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   and STAT 100   and PSY 200   and PSY 200L   ) OR ( PSY 300   ))]"
+  PSY-353:
+    code: PSY 353
+    title: Social Psychology of Gender
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores the ways in which social psychological processes are influenced by societal norms around notions of gender. In doing so, students will be introduced to how culture, social class, and sexuality shape people’s experiences of what it means to be a woman or man in contemporary U.S. society. The course also includes discussions of how power dynamics influence people’s understanding of gender from a social psychological perspective.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   and STAT 100   and PSY 200   and PSY 200L   ) OR ( PSY 300   ))]"
+  PSY-355:
+    code: PSY 355
+    title: Social Psychology and Social Justice
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "This course explores the relationship between social psychology as an academic discipline and struggles towards social justice. We address questions such as: How can social psychology be used to improve the material lives of disadvantaged groups? How does academic scholarship relate to the lives of those not present in academic settings? Discussions will include implications for social policy."
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+    prerequisiteNotes:
+      - "[(Prereq: ( PSY 100   and STAT 100   and PSY 200   and PSY 200L   ) OR ( PSY 300   ))]"
+  PSY-357:
+    code: PSY 357
+    title: Psychology of Liberation and Healing
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Grounded in liberation psychology, the readings and class discussions explore practices to heal oneself and our communities amidst historical and contemporary oppression. Emphasis will be placed on how Communities of Color have resisted oppression and worked to heal disconnections. The course creates an opportunity for hands-on research experience and an opportunity to catalyze social change by planting “seeds” in order to sow liberation. (Crosslisted/Equivalent with ES 357   )
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and ( PSY 100   )]"
+  PSY-374:
+    code: PSY 374
+    title: Psychology Leadership Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Students complete an internship experience within the Psychology major.
+    offered:
+      availability: periodic
+  PSY-391S:
+    code: PSY 391S
+    title: Psychology in the Community
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Psychology theories and research will be used to critically examine issues of justice, diversity, ethics, empathy, and social responsibility in the context of community service. Reflection through seminar discussions will enhance exploration of mental health stigma, multicultural identities, and professional growth. The course will be enhanced by instructor expertise and community partnerships for the semester. Requires 3-5 hours of community service each week, for a total of at least 30 hours.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: PSY-100
+          - courseId: STAT-100
+          - courseId: PSY-200
+          - courseId: PSY-200L
+          - courseId: PSY-300
+    prerequisiteNotes:
+      - "[(Prereq: (PSY 100   and STAT 100   and PSY 200   and PSY 200L   ) or ( PSY 300   ))]"
+  PSY-395:
+    code: PSY 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Psychology. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  PSY-397:
+    code: PSY 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and total number of credit hours.
+    offered:
+      terms:
+        - fall
+        - spring
+  PSY-400:
+    code: PSY 400
+    title: Psychology Capstone
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Each student produces an evidence-based capstone project by analyzing collected data, archival data or primary scholarly sources to examine an issue. In so doing, students demonstrate their learning across the five learning outcomes in the major.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: PSY-300
+      - courseId: PSY-302
+      - courseId: PSY-302L
+    prerequisiteNotes:
+      - "[(Prereq: PSY 300   and PSY 302   and PSY 302L   ) and (Senior Standing)]"
+  PSY-451:
+    code: PSY 451
+    title: Professional Development in Preparation for Graduate School in Psychology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students planning to apply to graduate programs after graduation will strengthen several professional skills, including project management, teamwork, self-efficacy, self-regulation, and oral communication skills. They will revise professional documents such as curriculum vitae and personal statements and will enhance their oral communication skills with a variety of presentations and mock interview exercises.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: PSY-300
+    prerequisiteNotes:
+      - "(Prereq: PSY 300   ) and (Senior Standing)"
+  PSY-452:
+    code: PSY 452
+    title: Professional Development in Preparation for Psychology Careers
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students planning to start their careers after graduation will strengthen several professional skills, including project management, teamwork, self-efficacy, self-regulation, and oral communication skills. They will revise professional documents such as resumes and cover letters and will enhance their oral communication skills with a variety of presentations and mock interview exercises.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: PSY-300
+    prerequisiteNotes:
+      - "(Prereq: PSY 300   ) (Senior Standing Required)"
+  PSY-497:
+    code: PSY 497
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Student and faculty member select topic of study and total number of credit hours.
+    offered:
+      availability: periodic

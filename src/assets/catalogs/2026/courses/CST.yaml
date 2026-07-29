@@ -1,0 +1,1743 @@
+schemaVersion: 1
+prefix: CST
+courses:
+  CST-195:
+    code: CST 195
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Specialized study of a particular topic within the School of Information Technology and Communication Design. May be repeated for additional credit when topics vary and as subjects permit.
+    offered:
+      availability: periodic
+  CST-196:
+    code: CST 196
+    title: Field Studies
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Students work with faculty to collect data and user feedback by going to the site of the user and unobtrusively observing the user function in their own environment. This course is usually conducted as part of a large research project.
+    offered:
+      availability: periodic
+  CST-197:
+    code: CST 197
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Working with a faculty advisor, a student selects topic of study and number of credits appropriate to the student’s learning plan. An independent study proposal must be submitted and approved before registration.
+    offered:
+      availability: periodic
+  CST-201:
+    code: CST 201
+    title: Media Tools I
+    teachingStatus: inactive
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores computer-based tools used in the design and creation of electronic media. Includes designing, creating, and editing electronic images, sounds, videos, text, and motion.
+    offered:
+      terms:
+        - fall
+        - spring
+  CST-202:
+    code: CST 202
+    title: Drawing for Digital Media
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course covers concepts and drawing skills related to the use of drawing and visualization in both the studio and digital environment. The course integrates studio drawing and illustration with digital technology, covering hand rendering, scanning, auto-tracing, photo conversion, vector art and bitmap drawing using digital visualization and illustration hardware and software. Included topics are 2D and 3D design, drawing, storyboarding and illustration (traditional and digital).
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: CST 202L   )"
+  CST-202L:
+    code: CST 202L
+    title: Drawing for Digital Media Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: "Drawing for Digital Media Lab: This lab is offered as a co-requisite with the CST 202   lecture section. Students will use studio and digital tools to complete projects that relate directly to the lecture content. Students are expected to be comfortable with studio drawing tools as well as digital image software and have an ability to functionally adapt to new software. Students must take the lab during the same semester as the lecture. Students are expected to supply their own studio drawing materials, such as pencils, tablets of drawing paper, etc."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: CST 202)"
+  CST-203:
+    code: CST 203
+    title: Digital Color
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: "Digital Color: This course introduces students to the nomenclature, technical components, theories and principles, and cultural associations of color relevant to professional communication designers. Students will demonstrate understanding of key concepts by completing design projects using Illustrator, InDesign, Photoshop and Dreamweaver."
+    offered:
+      availability: periodic
+  CST-203L:
+    code: CST 203L
+    title: Digital Color Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: "Digital Color Lab: This course introduces students to the nomenclature, technical components, theories and principles, and cultural associations of color relevant to professional communication designers. Students will demonstrate understanding of key concepts by completing design projects using Illustrator, InDesign, Photoshop and Dreamweaver."
+    offered:
+      availability: periodic
+  CST-204:
+    code: CST 204
+    title: Introduction to Typography
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces the history of type, type fonts, principles of letterform design, professional typesetting skills, layout for screen and print delivery. Subjects include the history and construction of letter forms, typographic composition and typesetting principles and techniques.
+    offered:
+      terms:
+        - fall
+  CST-205:
+    code: CST 205
+    title: Multimedia Design and Programming
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces design, creation, and manipulation of interactive applications and electronic media for communication purpose. Focuses on creating media, understanding media concepts, and manipulating the created media using basic programming concepts of control flow, functions, expressions and data types in the Python language. Students acquire a basic understanding for digital media formats, how to design, create such media using basic programming skills.
+    offered:
+      terms:
+        - fall
+        - spring
+  CST-226:
+    code: CST 226
+    title: Digital Photography
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Teaches use of digitally based image acquisition and manipulation tools to capture and modify photographic images for use in print and screen-based media. Has two major instructional components. The initial instruction sets are based around conventional photographic principles such as lighting, composition, subject matter, and how digital capture processes affect these. The second component deals with image adjustment and delivery. Deals with aesthetic aspects of photography.
+    offered:
+      terms:
+        - fall
+        - spring
+  CST-227:
+    code: CST 227
+    title: Design Fundamentals
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This project-based course combines the study of visual design and aesthetic principles while developing skills to produce digital graphic media. Students study historic design trends, typography, color theory, and production for cross-media production. Students apply the steps of the Design Process to create original vector and bitmapped imagery to solve visual communication design problems.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-201
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 201   with a C- or better)"
+  CST-230:
+    code: CST 230
+    title: Media Tools II
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Integrates audio, video, and animation authoring software to design, manage, and create a multimedia project. Includes planning, sketching, and storyboarding a video project. Introduces tools and techniques to create audio and visual digital effects. Covers essential design principles and video composition.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-201
+    prerequisiteNotes:
+      - "(Prereq: CST 201   or equivalent)"
+  CST-231:
+    code: CST 231
+    title: Problem Solving/Programming
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This is an introductory programming course to develop problem-solving techniques for numerical and non-numerical problems. Students will design the solution to each problem and implement it in a programming language. Coverage includes introduction to computer systems, programming language basics, flow control, functions, I/O, arrays, strings, and classes.
+    offered:
+      terms:
+        - fall
+        - spring
+  CST-234:
+    code: CST 234
+    title: Intro to Operating Systems
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces modern operating systems such as Unix and topics such as process management (creation, synchronization, and communication); processor scheduling; deadlock prevention, avoidance, and recovery; main-memory management; virtual memory management (swapping, paging, segmentation and page-replacement algorithms); control of disks and other input/output devices; file-system structure and implementation; and protection and security.
+    offered:
+      availability: periodic
+  CST-236:
+    code: CST 236
+    title: Computing for Designers
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduction to the use of computers for digital media creations, this course covers the fundamentals of how computers work in the creation of digital media for commercial entertainment and fine art purposes; including hardware components, operating principles, software basics, memory management, storage, programming basics for vector and bitmap functions, compression schemes and basic scripting.
+    offered:
+      terms:
+        - spring
+  CST-237:
+    code: CST 237
+    title: Intro to Computer Architecture
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Provides students with the fundamental knowledge of computer architectures, hardware and software components of computer systems, interrelationship among different components. Coverage includes introduction to data representation, CPU, assembly programming, memory systems, input/output devices, pipelining, multi-processing systems, operating systems and network architecture.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-231
+            minimumGrade: C-
+          - courseId: MATH-170
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 231   and MATH 170   with a C- or better)"
+  CST-238:
+    code: CST 238
+    title: Introduction to Data Structures
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This is an intermediate-level programming course with an emphasis on data structures. Coverage includes object-oriented programming, lists, stacks, queues, recursion, trees, sorting, searching, and basic concepts of algorithm analysis.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: CST-231
+            minimumGrade: C-
+          - anyOf:
+              - courseId: MATH-130
+                minimumGrade: C-
+              - courseId: MATH-150
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: CST 231)   and (Coreq or Prereq: MATH 130   or MATH 150   ) with a C- or better]"
+  CST-251:
+    code: CST 251
+    title: Web Tools
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces students to the tools and methods of web design and production. Students will learn basic HTML, web design tools, Cascading Style Sheets (CSS) and browser compatibility while applying the design principles of information architecture, color, layout, and type.
+    offered:
+      terms:
+        - fall
+        - spring
+  CST-252:
+    code: CST 252
+    title: Scripting for Multimedia
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students learn HTML5 and related technologies including HTML, CSS3, Canvas, JavaScript and jQuery to create dynamic multimedia content. Students learn the fundamental concepts of web programming plus designing, coding, testing, debugging, and documenting of computer programs. Using JavaScript, students apply those concepts to create programs utilizing digital media, including images, animation, audio, video and text. This is a laboratory class using Windows or Macintosh computers.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-251
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 251   with a C- or better)"
+  CST-263:
+    code: CST 263
+    title: Intro to Database Systems
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 4
+    description: This course is an introduction to Relational Database Management Systems. Topics covered will include relational database theory and the logical and physical design, implementation, and management of databases. Additional topics will include Entity-Relationship Diagrams, Normalization and an introduction to SQL (Structured Query Language).
+    offered:
+      availability: periodic
+  CST-271:
+    code: CST 271
+    title: Digital Culture
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Focuses on the philosophical roots (as evidenced in literature) of contemporary digital culture. From Armageddon to the Matrix; from Frankenstein to Lawnmower man; from the library at Alexandria to the archives of the Internet; the world of the digital intelligentsia owes its vision and mythology to the resonant themes found in literature and philosophy. Explores the essence of humanity that defines the natural world and strives to remake it in a more perfect fashion.
+    offered:
+      terms:
+        - fall
+        - spring
+  CST-273:
+    code: CST 273
+    title: Cyberdemocracy
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores the implications of new communication technologies with regard to democracy, social activism, cultural identity, and social equity in the United States. Democracy cannot be separated from the issue of social identity since throughout our history many groups were excluded from political participation. Explores whether new media like the Internet will increasingly make identity irrelevant, or will create greater fragmentation.
+    offered:
+      terms:
+        - fall
+        - spring
+  CST-274:
+    code: CST 274
+    title: History of Communication Technologies and Politics in America
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examines the history of communication technologies and how they shaped and have been shaped by politics throughout American history. The story begins in pre-revolutionary America, when newspapers united the colonies, and moves through the telegraph, the telephone, motion pictures, radio, broadcasting, network and cable television, personal computers, the Internet, mobile phones, and social media. Students leverage their understanding of communication history to address some of constitutive choices facing our nation, including foreign interference in elections, net neutrality, and data privacy.
+    offered:
+      terms:
+        - fall
+        - spring
+  CST-286:
+    code: CST 286
+    title: Physics of Computing
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Catalog details are still being added.
+    offered:
+      terms:
+        - fall
+    placeholder: true
+  CST-300:
+    code: CST 300
+    title: Graduation Writing Assessment for Computing and Design
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course develops critical reading and writing skills for Computing, Design, and Technology fields. Students will learn to adapt their writing for different audiences and purposes, adhering to disciplinary conventions. The curriculum covers expository and academic writing, professional communication, source selection, and effective communication with diverse audiences.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  CST-302:
+    code: CST 302
+    title: History of Communication Design
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Surveys the development of communication design in modern history, viewed in the context of contemporary political, scientific, and cultural influences. Communication design includes disciplines such as graphic design, web design, advertising, instructional design, digital media, animation, digital illustration, interactive design and motion graphics.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Junior or Senior Standing)]"
+    minimumStanding: junior
+  CST-304:
+    code: CST 304
+    title: Typography
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Typography is the art of designing letterforms, alphabets and creating compositions with letters and words. This course explains typographic practices to develop an eye for type and how to use it effectively.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-227
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 227   with a C- or better)"
+  CST-311:
+    code: CST 311
+    title: Introduction to Computer Networks
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Survey of Telecomm and Data Comm Technology Fundamentals, Local Area Network, Wide Area Network, Internet and internetworking protocols including TCP/IP, network security and performance, emerging industry trends such as voice over the network and high speed networking. Designed as a foundation for students who wish to pursue more advanced network studies including certificate programs. Includes hands-on networking labs that incorporate Cisco CCNA lab components.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-238
+            minimumGrade: C-
+          - courseId: MATH-130
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 238   and MATH 130   with a C- or better)"
+  CST-312:
+    code: CST 312
+    title: Network Security
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Focuses on the theory, practice and technologies for securing computers on the web and the Internet. Students will learn cryptographic tools and how they are used by standard network security protocols like SSL/TLS, IPSEC, Kerberos, PGP, S/MIME, and wireless. Students will also learn about ethical hacking and policies and procedures to protect against such hacking.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: CST-311
+            minimumGrade: C-
+          - courseId: MATH-170
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 311   and MATH 170   with a C- or better)"
+  CST-315:
+    code: CST 315
+    title: Introduction to Cybersecurity
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course provides a comprehensive introduction to cybersecurity fundamentals and the core technologies protecting digital assets. Students will explore key areas including cryptography, access control mechanisms, malware analysis, and social engineering tactics. By integrating technical concepts with human factors in security, the course equips participants with essential skills to navigate and address contemporary cybersecurity challenges.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-238
+            minimumGrade: C-
+          - courseId: MATH-130
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 238   and MATH 130   with a C- or better)"
+  CST-316:
+    code: CST 316
+    title: Computing for Designers
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course encompasses the fundamental principles of computer operations relevant to the creation of digital media. The curriculum covers essential topics including hardware components, operating principles, basic software functionalities, memory management, data storage, programming fundamentals, compression techniques, and advanced technologies that enhance the efficiency and effectiveness of the design process. Additionally, the course introduces students to artificial intelligence concepts and the practical application in production.
+    offered:
+      terms:
+        - spring
+  CST-319:
+    code: CST 319
+    title: Computing Across the Disciplines
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will develop basic programming skills by writing Python programs. Besides learning programming concepts such as data types, functions, expressions and control flow, students will work with real-world data to practice their problem-solving techniques. The programs students write will also strengthen programming skills using concepts in probability, linear algebra, and modeling.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  CST-320:
+    code: CST 320
+    title: Intro to Digital Games
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Focuses on the fundamental issues in the development of digital games. Discusses components of modern digital games and their relationships, historical development of contemporary video and computer gaming, team member roles and tasks within the production process. Covers relationships of the conceptual creative and technical production to overall game development and analyzes the business, marketing and industry components of game development.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-238
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 238   with a C- or better)"
+  CST-321:
+    code: CST 321
+    title: Game Design and Interactive Media I
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Presents the principles of game and related interactive media design. Students design and create games and interactives using analog and digitally-based authoring tools. Includes project management, production, and asset management of images, text, sound, animation, and computer code.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-227
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 227   with a C- or better)"
+  CST-322:
+    code: CST 322
+    title: Environment Modeling
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: The course equips students with the fundamental skills needed for the development of games. After first developing with basic 3D modelling skills, student learn how to model, texture and light complex objects and scenes using industry standard tools.
+    offered:
+      terms:
+        - fall
+  CST-323:
+    code: CST 323
+    title: Character Design
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: The course equips students with the fundamental skills needed for the design of 3D character models. Students learn how to apply industry best-practice and tools to character designing and modeling process. Drawing skills are recommended, but not required to succeed in the class.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: CST-202
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 202   with a C- or better)"
+  CST-325:
+    code: CST 325
+    title: Graphics Programming
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course teaches the students the fundamentals of game programming and skills needed for game development, including GPU programming, matrix and quaternion algebra for physics calculation, animation, lighting and basics of implementing 3D models into a framework.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-238
+            minimumGrade: C-
+          - courseId: MATH-130
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 238   and MATH 130   with a C- or better)"
+  CST-326:
+    code: CST 326
+    title: Game Development
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course provides students with fundamental and transferable game programming skills. Students will learn how to develop games using a game engine and a toolset of object-oriented programming techniques, design patterns and software engineering paradigms. Additionaly, the course discusses ethical considerations in game development, develops interpersonal and oral communication skills, and game design document writing.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-238
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 238   with a C- or better)"
+  CST-327:
+    code: CST 327
+    title: Experimental Typography
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores an advanced study of typography across various domains of design. Solves complex problems with conceptual and experimental approaches that challenge typographic conventions through the production of innovative and dynamic communication designs.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-304
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 304   with a C- or better)"
+  CST-328:
+    code: CST 328
+    title: Digital Art and Design
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: A survey course that combines the study of technology, design and aesthetic principles as they apply to twenty-first century visual media. Students learn how fundamental concepts of art and design apply to a broad range of commercial, expressive and entertainment forms. Students also study the democratization of the creative process through digital media, using current technology to produce sophisticated and expressive examples of personal digital creativity.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  CST-329:
+    code: CST 329
+    title: Reasoning with Logic
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In this course students learn to develop skill in using logic to describe and assess arguments. Students will learn to write formulas in propositional and first-order logic, and more importantly, to write and check proofs. Students will also learn to write formulas in three-valued and modal logic, know how to choose an appropriate logic, and understand the limitations of logic in capturing human reasoning.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-170
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( GE   Area 1A and 1B and 1C and 2) and ( MATH 170   ) with a C- or better)]"
+  CST-330:
+    code: CST 330
+    title: Media Tools II
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Integrates audio, video, and animation authoring software to design, manage, and create a multimedia project. Includes planning, sketching, and storyboarding a video project. Introduces tools and techniques to create audio and visual digital effects. Covers essential design principles and video composition.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-201
+    prerequisiteNotes:
+      - "(Prereq: CST 201   or equivalent)"
+  CST-333:
+    code: CST 333
+    title: Topics In Object-Oriented Prog
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: CST-231
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 231   with a C- or better)"
+  CST-334:
+    code: CST 334
+    title: Operating Systems
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students in this course will learn about the use and design of modern operating systems, focusing on Linux. On the “use” side, students will learn the Linux command line, to write shell scripts, and to build programs with GNU utilities like awk, sed, and make. On the “design” side, students will develop a deep understanding of process management, memory management, file systems, and concurrency, and how they apply to modern technologies like virtualization and cloud computing.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-237
+            minimumGrade: C-
+          - courseId: CST-238
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 237   and CST 238   with a C- or better)"
+  CST-336:
+    code: CST 336
+    title: Internet Programming
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Provides students with dynamic web application development skills, focusing on the integration of server-side programming, database connectivity, and client-side scripting. Coverage includes the Internet architecture, responsive design, RESTful web services, and Web APIs.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-238
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 238   with a C- or better)"
+  CST-337:
+    code: CST 337
+    title: Computer Architecture
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Provides students with the fundamental knowledge of computer architectures, hardware and software components of computer systems, interrelationship among different components. Coverage includes introduction to data representation, CPU, assembly programming, memory systems, input/output devices, pipelining, multi-processing systems, operating systems and network architecture.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-231
+            minimumGrade: C-
+          - courseId: MATH-170
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 231   and MATH 170   with a C- or better)"
+  CST-338:
+    code: CST 338
+    title: Software Design
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This is an intermediate-level programming course covering techniques for developing large-scale software systems using object-oriented programming. Coverage includes software development life cycle models, requirements analysis, and graphical user interface development.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: CST-238
+            minimumGrade: C-
+          - anyOf:
+              - courseId: MATH-130
+                minimumGrade: C-
+              - courseId: MATH-150
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 238   and ( MATH 130   or MATH 150   ) with a C- or better)"
+  CST-341:
+    code: CST 341
+    title: Intro Instructional Design
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces instructional design to create training and educational materials in business and education. Includes the principles of design for job aids, videos, programming, and computer-based training.
+    offered:
+      availability: periodic
+  CST-345:
+    code: CST 345
+    title: Visual Thinking
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students use the design process to strengthen their visual intelligence and vocabulary for communicating ideas. Course emphasizes ideation, systems thinking, and translating complex ideas using various tools and strategies.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-227
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 227   with a C- or better)"
+  CST-346:
+    code: CST 346
+    title: Human-Computer Interaction
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores the fundamental concepts and design processes of the interdisciplinary field of human-computer interaction (HCI) that integrates theories and methodologies across multiple domains, such as cognitive psychology, human factors, and systems design. Through readings and hands-on exercises, students gain an understanding of the components involved in designing for universal audiences, social and emotional user experiences, usable products, emerging technologies and the impact on society.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Junior OR Senior Standing)"
+    minimumStanding: junior
+  CST-348:
+    code: CST 348
+    title: Communication Design Proseminar
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: The course offers a comprehensive overview of the Communication Design major and its requirements. Students are guided in identifying and articulating personal, professional, and social objectives while formulating a plan to achieve their learning goals. Additionally, students engage in the analysis, prediction, and articulation of industry trends as they begin to establish their professional creative portfolios.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - (Junior Standing Required)
+    minimumStanding: junior
+  CST-349:
+    code: CST 349
+    title: Computer Science Proseminar
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: The Proseminar course helps students prepare for ‘life after college’ by connecting their major to their broader personal and professional goals. In this course, students will critically analyze information from diverse sources, including academic and business literature and conversations with industry mentors. They will also develop crucial problem-solving, communication, and teamwork skills throughout the course. This analysis and skill development will guide them in crafting their personal value proposition and a plan for developing a professional portfolio.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Junior Standing Required)
+    minimumStanding: junior
+  CST-350:
+    code: CST 350
+    title: Web Scripting
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students learn the fundamental concepts of web programming plus designing, coding, testing, debugging, and documenting of computer programs. Using JavaScript, students apply those concepts to create interactive programs including incorporating images, animation, audio, video, and text.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-251
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 251   with a C- or better)"
+  CST-351:
+    code: CST 351
+    title: Web Design
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Covers web design aesthetics, layout, structure and universal design. Applies the design process and systems design principles using web templates and web content management systems.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: CST-201
+            minimumGrade: C-
+          - courseId: CST-251
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 201   and CST 251   with a C- or better)"
+  CST-352:
+    code: CST 352
+    title: Web Scripting
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces technical skills required to create dynamic websites using scripting languages and database integration. Covers frontend and backend web technologies that allow users to retrieve, add, delete, and update records from a website.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: CST-252
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 252   with a C- or better)"
+  CST-362S:
+    code: CST 362S
+    title: Technology & Communities SL
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    offered:
+      availability: periodic
+  CST-363:
+    code: CST 363
+    title: Introduction to Database Systems
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course provides balanced coverage of database use and design,focusing on relational databases. Students will learn to design relational schemas, write SQL queries, access a DB programmatically,and perform database administration. Students will gain a working knowledge of the algorithms and data structures used in query evaluation and transaction processing. Students will also learn to apply newer database technologies such as XML, NoSQL, and Hadoop.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-238
+            minimumGrade: C-
+          - courseId: MATH-130
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 238   and MATH 130   with a C- or better)"
+  CST-370:
+    code: CST 370
+    title: Design and Analysis of Algorithms
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students learn important data structures in computer science and acquire fundamental algorithm design techniques to get the efficient solutions to several computing problems from various disciplines. Topics include the analysis of algorithm efficiency, hash, heap, graph, tree, sorting and searching, brute force, divide-and-conquer, decrease-and-conquer, transform-and-conquer, dynamic programming, and greedy programming.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-238
+            minimumGrade: C-
+          - courseId: MATH-170
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 238   and MATH 170   with a C- or better)"
+  CST-373:
+    code: CST 373
+    title: Ethics in Comm & Tech
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Investigates through an ethical perspective how communication technology affects our lives. Discusses individual and institutional values represented through technological choices. Using case studies and current events, explores such issues as intellectual property rights, information access and privacy, and the digital divide.
+    offered:
+      availability: periodic
+  CST-375:
+    code: CST 375
+    title: Brand Strategies for Designers
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Covers the essential components and elements that make up successful brands and how to map out a brand strategy employing current brand development tools and processes. Through readings, lectures and hands-on projects, students explore how brands go beyond logos and visual identity systems to include all aspects of a business that connect consumer needs, emotions and the competitive market environment.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-227
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 227   with a C- or better or (Instructor Consent)"
+  CST-377:
+    code: CST 377
+    title: Business of Design
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces design industry best practices and prepares students for a design career. Identifies the roles and responsibilities of employers, clients and designers. Topics include the recent legal and technological developments that affect the design profession. It addresses the different design trade customs, rates, salaries, copyrights, contracts, pricing and state and federal taxes.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: CST-348
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 348   with a C- or better)"
+  CST-380:
+    code: CST 380
+    title: Mobile and Ubiquitous Computing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course focuses on mobile-oriented development and the specific challenges and considerations that must be made. Students will learn how to develop applications for mobile and ubiquitous devices, as well as important topics related to the deployment of mobile-oriented applications. Topics include distributed data management, user interaction design, energy management, and programming languages.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-238
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 238   with a C- or better)"
+  CST-381:
+    code: CST 381
+    title: Foundations of Data Science for AI
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course introduces the core ideas and tools of data science for students from any discipline. You will learn how to explore, visualize, analyze data, and apply basic machine learning methods to real-world datasets. By the end of the course, you will be able to make sense of data and communicate insights clearly.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-319
+          - courseId: BIO-380
+    prerequisiteNotes:
+      - "(Prereq: CST 319   or BIO 380   )"
+  CST-383:
+    code: CST 383
+    title: Introduction to Data Science
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: In data science, data analysis and machine learning techniques are applied to visualize data, understand trends, and make predictions. In this course students will learn how to obtain data, preprocess it, apply machine learning methods, and visualize the results. A student who completes the course will have enough theoretical knowledge, and enough skill with modern statistical programming languages and their libraries, to define and perform complete data science projects.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-238
+            minimumGrade: C-
+          - courseId: BIO-380
+            minimumGrade: C-
+          - allOf:
+              - courseId: CST-319
+                minimumGrade: C-
+              - anyOf:
+                  - courseId: STAT-100
+                    minimumGrade: C-
+                  - courseId: STAT-250
+                    minimumGrade: C-
+                  - courseId: MATH-320
+                    minimumGrade: C-
+                  - courseId: BUS-204
+                    minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( CST 238   or BIO 380   or ( CST 319   and ( STAT 100   or STAT 250   or MATH 320   or BUS 204   )) with a C- or better]"
+  CST-390:
+    code: CST 390
+    title: Portfolio Development
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 3
+    description: Covers planning, production and presentation of a Communication Design portfolio. May be repeated.
+    offered:
+      availability: periodic
+  CST-394:
+    code: CST 394
+    title: Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Students work with practicing professionals in the community in a volunteer or paid internship that requires critical thinking and specialized telecommunication, multimedia, or applied computing skills. The amount of academic work done, not total hours of internship commitment, determines the amount of academic credit.
+    offered:
+      terms:
+        - fall
+        - spring
+  CST-395:
+    code: CST 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Specialized study of a particular topic within the School of Information Technology and Communications Design. May be repeated for additional credit when topics vary and as subjects permit.
+    offered:
+      terms:
+        - fall
+        - spring
+  CST-396:
+    code: CST 396
+    title: Field Studies
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Individualizes student placement for field study as related to Information Technology and Communications Design.
+    offered:
+      availability: periodic
+  CST-397:
+    code: CST 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      terms:
+        - fall
+        - spring
+  CST-400:
+    code: CST 400
+    title: Senior Capstone Project Planning
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Students create a detailed proposal of and produce a prototype of a substantial, professional level project with an approval of the student’s capstone advisor. Students learn and practice project management, collaboration and presentation skills required in the industry.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: CST-404
+            minimumGrade: C-
+          - courseId: CST-421
+            minimumGrade: C-
+          - courseId: CST-451
+            minimumGrade: C-
+          - courseId: CST-496
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: CST 404   or CST 421   or CST 451   with a C- or better or Instructor Consent) and (Coreq: CST 496   )]"
+  CST-401:
+    code: CST 401
+    title: Capstone Lab
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Laboratory course supports students during the creation of their Capstone projects and assessment for Capstone outcomes.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-400
+            minimumGrade: C-
+          - courseId: CST-496
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: CST 400   with a C- or better and (Exclude Freshman and Sophomore and Junior) and (Coreq: CST 496   )]"
+  CST-404:
+    code: CST 404
+    title: Publication Design
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This project-based course uses the steps of the design process to create publications for print and screen delivery. Principles of page layout design, information architecture, and digital production skills are emphasized. A laptop and knowledge of InDesign and Illustrator are required.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-304
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 304   with a C- or better)"
+  CST-406:
+    code: CST 406
+    title: Graphic Identity
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students experience the design process for creating a Graphic Identity system for a real-world client. Includes Graphic Standards Guides and client communication.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: CST-304
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 304   with a C- or better)"
+  CST-412:
+    code: CST 412
+    title: Network Administration
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces management tools, skills, and information to design, implement, and manage telecommunications and data communications networks. Includes network design, monitoring, and security.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: CST-311
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 311   with a C- or better)"
+  CST-415:
+    code: CST 415
+    title: Advanced Cybersecurity
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course explores concepts in network security, web application defense, and other emerging cyber threats. Building on basic cybersecurity knowledge, this course examines advanced attack methods and protection techniques across different digital systems. Students will develop offensive and defensive skills, learning to identify vulnerabilities and implement robust security measures. Through hands-on labs and practical activities, students will apply these techniques in realistic scenarios, enhancing their ability to secure and test digital systems effectively.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: CST-311
+            minimumGrade: C-
+          - courseId: CST-315
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 311   and CST 315   with a C- or better)"
+  CST-421:
+    code: CST 421
+    title: Game Design & Interactive Media II
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Continues the development of game and interactive design and production through collaborative projects with clients. Emphasizes game and interactive design and production skills. Addresses project critique and the proper application of basic principles of game and interactive design and development.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: CST-321
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 321   with a C- or better)"
+  CST-422:
+    code: CST 422
+    title: Level Design
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: "This advanced course provides students with the theory and practice of game level design. The course builds upon the students 3D modeling skills. The major learning outcomes include: using pre-existing assets in a creation of a playable game level, applying adequate theories to directing player’s movement and locus of attention during gameplay."
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-322
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 322   with a C- or better)"
+  CST-423:
+    code: CST 423
+    title: Character Animation
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This advanced course provides students with the theory and practice of 3D character animation, including development, reference, and acting. It applies advanced rigging principles to animation of characters for computer games, including facial and body dynamics, facial animation capture and motion capture, and animation re-targetting.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-323
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 323   with a C- or better)"
+  CST-426:
+    code: CST 426
+    title: Advanced Game Development
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course provides students with advanced game development skills. Students will learn how to develop procedural content generation techniques for various platforms, and advanced game input techniques . Students will also learn how to apply gamification technique to serious games development. Additionaly, the course discusses ethical considerations in game development, develops interpersonal and oral communication skills, and game design document writing.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: CST-325
+            minimumGrade: C-
+          - courseId: CST-326
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 325   and CST 326   with a C- or better)"
+  CST-438:
+    code: CST 438
+    title: Software Engineering
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Prepares students for large-scale software development using software engineering principles and techniques. Coverage includes software process, requirements analysis and specification, software design, implementation, testing, and project management. Students are expected to work in teams to carry out a realistic software project.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-338
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 338   with a C- or better)"
+  CST-446:
+    code: CST 446
+    title: User Research and Experience Design
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Covers in-depth user research methodologies used at various stages of product design and development, from conception to product launch. Through hands-on projects, students apply user experience design processes, methods and industry best practices that include design research, interaction design, information architecture, scenario development, user flows, prototyping, user testing and high fidelity visual design specifications.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-346
+            minimumGrade: C-
+          - courseId: CST-348
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 346   and CST 348   with a C- or better)"
+  CST-451:
+    code: CST 451
+    title: Web Production
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Web-based design and project management continuing the development of skills and techniques introduced in CST 351   . Includes integration of current web technologies and techniques to produce a fully functional website for a client. Topics include Content Management Systems, Project Management, and Usability and Testing.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: CST-351
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 351   with a C- or better)"
+  CST-461S:
+    code: CST 461S
+    title: Communication Design Service Learning
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "A project-driven Service Learning course in which advanced Communication Design students analyze and solve a design or technical problem for their community partners and their constituents. Students address social injustice issues and combine design and technical skills with professional knowledge to solve the problem. Requirement: concurrent enrollment in a 400-level Communication Design course."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-451
+          - courseId: CST-421
+          - courseId: CST-404
+    prerequisiteNotes:
+      - "[Prereq: (Junior or Senior Standing) and (Coreq: CST 451   or CST 421   or CST 404   )]"
+    minimumStanding: junior
+  CST-462S:
+    code: CST 462S
+    title: Race, Gender, Class in the Digital World
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides students with key knowledge of race, gender, class and social justice especially in relation to technology in today’s digital world. Students challenge the barriers of expertise, gender, race, class, and location that restrict wider access to and understanding of the production and usage of new technologies. Students will engage in a practical experience in the community via their service placements, which will provide depth and context for considering questions of justice, equality, social responsibilities and the complexities of technology and its societal impact. The course uses scenario based approach combining presentations, discussions, and reflections to allow students explore the relationship between critical reflection and action on the topics mentioned above.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  CST-463:
+    code: CST 463
+    title: Advanced Machine Learning
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: In this course students learn to use advanced machine learning methods. The advanced machine learning methods include support vector machines, dimensionality reduction, ensemble methods, methods for machine learning with time series data, and especially neural networks.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: CST-383
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 383   with a C- or better)"
+  CST-481:
+    code: CST 481
+    title: Introduction to Deep Learning
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course provides an accessible introduction to modern AI methods that power today’s intelligent systems. You will learn how deep learning models are built and trained, explore various deep learning architectures, and gain a practical understanding of how large language models are created. Special attention is given to both the possibilities and the limitations of deep learning, including ethical considerations.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: CST-381
+    prerequisiteNotes:
+      - "(Prereq: CST 381   or equivalent)"
+  CST-482:
+    code: CST 482
+    title: AI in Practice
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course focuses on building practical applications with modern AI tools and techniques. You will explore how AI can support productivity, creativity, and problem-solving across domains, with special attention to large language models as a current leading technology. You will learn strategies for interacting effectively with AI systems, including prompt design, and practice integrating models into simple applications using APIs and frameworks. A final project lets you design and present an AI-powered prototype relevant to your field of study.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-381
+          - courseId: CST-481
+    prerequisiteNotes:
+      - "[(Prereq: CST 381   ) and (Prereq or Coreq: CST 481   )]"
+  CST-489:
+    code: CST 489
+    title: Capstone Project Planning
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students create a detailed proposal of a substantial, professional level project with an approval of the student’s capstone advisor. Students learn and practice project planning, collaboration and writing skills required in the industry.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: CST-349
+    prerequisiteNotes:
+      - "(Prereq: CST 349)"
+  CST-495:
+    code: CST 495
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Specialized study of a particular topic within the School of Information Technology and Communications Design. May be repeated for additional credit when topics vary and as subjects permit.
+    offered:
+      terms:
+        - fall
+        - spring
+  CST-495L:
+    code: CST 495L
+    title: Special Topics Laboratory
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    offered:
+      availability: periodic
+  CST-496:
+    code: CST 496
+    title: Directed Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: "Provides a framework for a substantial research and development effort: ideation, proposal writing, project management, presentation, documentation, and/or evaluation. Provides one-on-one guidance on students’ research and development effort within the School of Information Technology and Communications Design disciplines. All students, including non-majors, working on their Capstone projects with faculty members in ITCD must register for CST 496."
+    offered:
+      availability: periodic
+  CST-497:
+    code: CST 497
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Working closely with faculty advisor(s), students finish their capstone project independent of the regular CST 400   / CST 401   sequence. The Capstone Independent Study is offered when there is a compelling reason the student can not participate the CST 400   / CST 401   class.
+    offered:
+      terms:
+        - fall
+        - spring
+  CST-498:
+    code: CST 498
+    title: Communication Design Capstone
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: The course offers students a culminating experience by integrating the knowledge and skills acquired throughout their academic program into a comprehensive communication design project. Students are guided through established design methodologies to produce a prototype of a significant and professionally-oriented project. The course includes user evaluation and the development of detailed documentation reports. Concurrently, students will acquire and refine essential project management, collaboration, and presentation skills that are critical for their future professional careers.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CST-346
+            minimumGrade: C-
+          - courseId: CST-348
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: CST 346   and CST 348   with a C- or better)"
+  CST-499:
+    code: CST 499
+    title: Computer Science Capstone
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: The course offers students a culminating experience by integrating the knowledge and skills acquired throughout their academic program into a comprehensive project. Students often work on a large group real-world project, exploring the problem space, developing requirement specifications, and proposing a solution followed by design and development of the solution. Concurrently, students will acquire and refine essential project management, collaboration, and presentation skills that are critical for their future professional careers.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: CST-349
+          - anyOf:
+              - courseId: CST-334
+              - courseId: CST-370
+    prerequisiteNotes:
+      - "(Prereq: CST 349   and ( CST 334   or CST 370   ))"
+  CST-500:
+    code: CST 500
+    title: Graduate Proseminar
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course introduces key skills and topics for success in a master’s program in Computer Science. Students will develop competencies in advanced technical communication, research methodologies, and professional ethics. Additional topics include analyzing research papers, formulating research questions, and presenting technical content. Collaborative projects and discussions will prepare students for academic research, professional practice, and career development.
+    offered:
+      terms:
+        - fall
+  CST-501:
+    code: CST 501
+    title: Tech Tools for Faculty & Staff
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 8
+    offered:
+      availability: periodic
+  CST-511:
+    code: CST 511
+    title: Computer Networks
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course covers fundamental networking concepts, including Local Area Networks (LANs), Wide Area Networks (WANs), and key internet protocols such as TCP/IP. Emphasis is placed on practical applications, network design, and the latest trends in modern networking technologies. Through hands-on activities and case studies, students will explore real-world networking scenarios and emerging developments in the field.
+    offered:
+      terms:
+        - spring
+  CST-515:
+    code: CST 515
+    title: Computer Security
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course covers key concepts in computer security, including cryptography, access control, operating systems security, network security, software security, and blockchain technology. Students will also explore malware analysis, social engineering, and strategies to address modern cybersecurity challenges by understanding both technical and human factors in security.
+    offered:
+      terms:
+        - fall
+  CST-521:
+    code: CST 521
+    title: Principles of Programming Languages
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course provides a focused study of the fundamental principles behind programming language design and implementation. Key topics include syntax, semantics, and type systems, with an introduction to control structures. Students will explore major programming paradigms, such as procedural and functional programming, gaining an understanding of their practical applications and trade-offs.
+    offered:
+      terms:
+        - spring
+  CST-523:
+    code: CST 523
+    title: Compiler Construction
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course covers the principles of compiler design, focusing on front-end components such as lexical analysis, syntax analysis, parsing, semantic analysis, and code optimization. Emphasis is placed on translating high-level programming languages into intermediate representations. Students will gain practical experience in constructing front-end components of simple compilers through hands-on projects.
+    offered:
+      terms:
+        - spring
+  CST-534:
+    code: CST 534
+    title: Distributed Systems and Cloud Computing
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course begins with an overview of computer architectures and operating systems as an introduction to modern computer systems. It then delves into distributed systems, focusing on the principles, design, and implementation of scalable, fault-tolerant, and high-performance systems. Topics include distributed algorithms, consensus mechanisms, consistency models, and fault tolerance, as well as computer systems concepts such as resource management, process scheduling, and memory architecture. The course also covers cloud computing architectures, including virtualization and containerization technologies. Students will analyze and develop distributed applications using cloud platforms, with an emphasis on data-intensive systems, resource management, and security.
+    offered:
+      terms:
+        - spring
+  CST-538:
+    code: CST 538
+    title: Advanced Software Engineering
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Students work in teams to build modern, concurrent, systems following industry best practices such as: Cl/CD pipelines, test driven development, containerization, and version control. Students will develop a pitch for a project and create a fully functioning demonstration including documentation and a testing suite."
+    offered:
+      terms:
+        - fall
+  CST-539:
+    code: CST 539
+    title: Software Testing
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course provides an overview of key software testing techniques and methodologies, focusing on practical applications. Students will learn to design test cases, implement automated scripts, and perform regression and integration testing. Emphasis is placed on adapting testing strategies to agile and DevOps environments using industry-standard tools. Through hands-on exercises, students will gain foundational skills to ensure software quality and reliability.
+    offered:
+      terms:
+        - fall
+  CST-542:
+    code: CST 542
+    title: Computational Thinking
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: An investigation of computing pedagogy through the lens of object-oriented programming. Students will explore computer science curriculum by designing and completing assignments, selecting appropriate content, and evaluating teaching efficacy.
+    offered:
+      terms:
+        - fall
+  CST-545:
+    code: CST 545
+    title: Embedded Development
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course introduces embedded systems development, focusing on programming directly on hardware and handling low-level 1/0 interfacing. Key topics include memory-mapped 1/0, interfacing with General Purpose lnpuUOutput (GPIO), and working with development boards. The course also covers considerations for power consumption in embedded systems. Through hands-on projects, students will gain practical experience designing and implementing programs that interact directly with hardware components.
+    offered:
+      terms:
+        - fall
+  CST-546:
+    code: CST 546
+    title: Very Large-Scale Integration Design
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course introduces students to the principles of Very Large-Scale Integration (VLSI) design, focusing on the design and development of digital systems from the transistor level up. Key topics include transistor-level design, logic gates, and the use of Field-Programmable Gate Arrays (FPGAs) for prototyping and development. Students will gain practical experience in designing and simulating VLSI circuits, with an emphasis on the real-world applications of VLSI in computer hardware design.
+    offered:
+      terms:
+        - spring
+  CST-557:
+    code: CST 557
+    title: Quantum Computing
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course introduces concepts of quantum computing through theoretical exploration and hands-on experimentation. Students will learn about qubits, superposition, and entanglement, and will implement quantum circuits and algorithms using open-source software tools for quantum simulation. Key topics include quantum gates, entanglement, Shor’s and Grover’s algorithms, and quantum error correction. By the end of the course, students will have a practical understanding of quantum computing principles and the ability to experiment with quantum circuits.
+    offered:
+      terms:
+        - spring
+  CST-563:
+    code: CST 563
+    title: Advanced Machine Learning
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: In this course, students learn to use advanced machine learning methods. The advanced machine learning methods include support vector machines, dimensionality reduction, ensemble methods, methods for machine learning with time series data, and especially neural networks.
+    offered:
+      terms:
+        - fall
+  CST-570:
+    code: CST 570
+    title: Design and Analysis of Algorithms
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course provides an in-depth exploration of advanced data structures and algorithmic techniques, designed for graduate students who have a foundational understanding of data structures and algorithms. The course emphasizes both theoretical analysis and practical implementation of efficient solutions to complex problems. Topics include balanced trees, segment trees, amortized analysis, graph algorithms, network flows, dynamic programming, backtracking, complexity theory (P, NP, NP-completeness), and approximation algorithms. Students will engage in advanced topics and current research in the field.
+    offered:
+      terms:
+        - fall
+  CST-575:
+    code: CST 575
+    title: Theory of Computation
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course introduces the fundamental theoretical foundations of computer science, with a focus on formal languages, automata theory, and computability. Students will explore regular languages, context-free languages, and Turing machines, along with the concepts of decidability and undecidability.
+    offered:
+      terms:
+        - spring
+  CST-583:
+    code: CST 583
+    title: Advanced Data Science
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course covers key topics in data science, including data preparation, exploratory data analysis, statistics, machine learning, and data visualization. Students will learn how to manage, preprocess, analyze, and visualize data, as well as apply machine learning methods to uncover patterns and make predictions.
+    offered:
+      terms:
+        - spring
+  CST-594:
+    code: CST 594
+    title: Graduate Internship/Practicum
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Students work with practicing professionals in the community in a volunteer or paid internship that requires critical thinking and applied computing skills.
+    offered:
+      availability: periodic
+  CST-597:
+    code: CST 597
+    title: Graduate Independent Study in Computer Science
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Research and/or project work under the supervision of a program faculty.
+    offered:
+      availability: periodic
+  CST-695:
+    code: CST 695
+    title: Graduate Special Topics in Computer Science
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: This course covers selected advanced topics in computer science, varying by semester and based on current trends or faculty expertise.
+    offered:
+      availability: periodic
+  CST-696:
+    code: CST 696
+    title: Graduate Directed Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: This course offers students the opportunity for independent study or research under the supervision of a faculty member. A formal study plan, including objectives and deliverables, is developed in collaboration with the supervising faculty.
+    offered:
+      availability: periodic
+  CST-697:
+    code: CST 697
+    title: Thesis Planning
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course prepares students for the development and completion of a graduate thesis by guiding them through the process of selecting a research topic, formulating research questions, and developing a thesis proposal. Working closely with a faculty advisor, students will engage in literature review, refine their research methodologies, and establish a clear research plan. By the end of the course, students will have an approved thesis proposal and be ready to proceed with their research in the Graduate Thesis course.
+    offered:
+      terms:
+        - fall
+        - spring
+  CST-698:
+    code: CST 698
+    title: Graduate Thesis
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course is the culmination of the thesis research process. Under the supervision of a faculty advisor, students will conduct their approved research, analyze their findings, and produce a formal written thesis. Emphasis is placed on rigorous research methodologies, critical analysis, and effective presentation of results. Students will be required to defend their thesis through both written and oral presentations to a faculty committee. Successful completion of the course requires the approval of the thesis committee.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: CST-697
+    prerequisiteNotes:
+      - "(Prereq: CST 697)"
+  CST-699:
+    code: CST 699
+    title: Graduate Capstone
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course serves as the culminating experience for the MS in Computer Science, focused on the completion of a project-based capstone. Students will apply advanced concepts, technical skills, and methodologies acquired throughout the program to design, implement, and present a comprehensive project that addresses a real-world problem or provides an innovative solution in computer science. The course emphasizes project planning, development, testing, documentation, and effective communication of results. Under the guidance of a faculty or project advisor, students will produce a professional-quality project report and deliver a formal presentation that demonstrates their technical expertise and readiness for the professional field.
+    offered:
+      terms:
+        - fall
+        - spring

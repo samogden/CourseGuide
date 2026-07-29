@@ -1,0 +1,703 @@
+schemaVersion: 1
+prefix: JAPN
+courses:
+  JAPN-101:
+    code: JAPN 101
+    title: Beginning Japanese I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This is a beginning Japanese course for students with no prior Japanese. Students will learn and use basic Japanese interpersonally and interpretively to communicate and present on familiar topics. Students will learn reading and writing systems including hiragana, katakana and basic kanji. Students will gain appreciation of Japanese customs, practices, products, and perspectives, and be able to compare them with their own culture.
+    offered:
+      terms:
+        - fall
+        - spring
+  JAPN-102:
+    code: JAPN 102
+    title: Beginning Japanese II
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This is a continuation of JAPN 101   . Students will continue to learn to use Japanese interpersonally and interpretively to communicate and present on familiar topics in daily situations. Students will learn basic communication strategies and demonstrate an increased appreciation of Japanese customs, practices, products, and perspectives, and are able to compare them with their own.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: JAPN-101
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: JAPN 101   or equivalent with a C- or better)"
+  JAPN-185:
+    code: JAPN 185
+    title: Beg interpersonal and interpretive communication I
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: This course focuses on interpersonal and interpretive communication in daily situations at beginning level and is a companion course for JAPN 101   and JAPN 102   .
+    offered:
+      terms:
+        - fall
+  JAPN-186:
+    code: JAPN 186
+    title: Beg interpersonal and interpretive communication II
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: This course focuses on interpersonal and interpretive communication in daily situations at beginning level and is a companion course for JAPN 101   and JAPN 102   .
+    offered:
+      terms:
+        - spring
+  JAPN-195:
+    code: JAPN 195
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic relative to the Japanese language or culture. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  JAPN-197:
+    code: JAPN 197
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Allows lower-division students to independently study a particular aspect of Japanese culture and language. A written proposal for the study/research must be approved in advance by the sponsoring faculty member and the program chair. Number of credits depends on the nature of the student’s academic goals and the consent of the faculty advisor.
+    offered:
+      availability: periodic
+  JAPN-201:
+    code: JAPN 201
+    title: Intermediate Japanese I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This is a continuation of JAPN 102   . Students will continue to develop proficiency at an intermediate level of Japanese. Students will use the language to investigate, explain, and reflect on the relationships between the practices, products and perspectives of Japanese culture and compare them with their own.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: JAPN-102
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: JAPN 102   or equivalent with a C- or better)"
+  JAPN-211:
+    code: JAPN 211
+    title: Modern Japanese History
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course offers a survey of Japanese social, political, economic, and cultural developments from the nineteenth century through the present. We will examine such topics as the establishment of the modern Japanese state and emperor system, debates regarding modernization, the changing role of women in society, the rise of Japanese imperialism, the Asia-Pacific War, the American Occupation, and protest movements. Our emphasis will be on a diversity of historical experiences and struggles shaping Japanese society.
+    offered:
+      availability: periodic
+  JAPN-212:
+    code: JAPN 212
+    title: Samurai Spirit
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course explores the four periods of the samurai tradition to survey changing roles and philosophy behind its existence. The survey will analyze contemporary images/stereotypes of the samurai. The course employs ancient war tales, historical documents and paintings, maps, articles, literary works, different genres of samurai films, and videos to fully examine one of the most popular Japanese cultural icons. Taught in English.
+    offered:
+      terms:
+        - spring
+  JAPN-213:
+    code: JAPN 213
+    title: Manga, Anime & Modern Japan
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course uses Japanese manga (comics) and anime (animated films) as mirrors that reflect the Japanese experience of rapid economic and social transformation over the past 150 years. Starting with the examination of ancient Japanese style of visual expression, we will trace how manga and anime sketch out a parallel world that is linked both historically and culturally to the imagined community of the Japanese nation-state. Taught in English.
+    offered:
+      terms:
+        - fall
+        - spring
+  JAPN-215:
+    code: JAPN 215
+    title: Cool Japan Today
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course examines contemporary media culture and products as a conceptual lens to focus on Japanese pop culture and soft power in the 21st Century. Manga, Anime, Cinema, literature, performance art, music, and fine arts will all be surveyed with an eye to understanding what exactly is cool and different about Japanese creative work and whether these kinds of cultural exports could become the foundation of a new post-industrial Japanese economy. Taught in English.
+    offered:
+      terms:
+        - fall
+  JAPN-285:
+    code: JAPN 285
+    title: Intermediate Interpersonal and Interpretive Communication III
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: This course focuses on interpersonal and interpretive communication in daily situations at intermediate level and is a companion course for JAPN 201   and JAPN 300   .
+    offered:
+      terms:
+        - fall
+  JAPN-286:
+    code: JAPN 286
+    title: Intermediate Interpersonal and Interpretive Communication IV
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: This course focuses on interpersonal and interpretive communication in daily situations at intermediate level and is a companion course for JAPN 201   and JAPN 300   .
+    offered:
+      terms:
+        - spring
+  JAPN-295:
+    code: JAPN 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in Japanese. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  JAPN-297:
+    code: JAPN 297
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic
+  JAPN-300:
+    code: JAPN 300
+    title: Introduction to Advanced Communication
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This is a bridge course from intermediate to advanced Japanese language. Students expand their cultural knowledge and language by investigating and comparing a broader range of topics in Japanese. Taught in Japanese.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: JAPN-201
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: JAPN 201   or equivalent with a C- or better)"
+  JAPN-301:
+    code: JAPN 301
+    title: Advanced Japanese Culture, Language and Communication
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course continues to develop advanced level Japanese competency through further acquisition of Japanese cultural knowledge on a variety of fields and disciplines in content-based instruction. Taught in Japanese.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: JAPN-201
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: JAPN 201   or equivalent with a C- or better)"
+  JAPN-302:
+    code: JAPN 302
+    title: History of Japan
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course further develops advanced level Japanese through building and expanding knowledge of Japanese history as a dynamic, interrelated system and employs a variety of processes to identify, analyze and evaluate cultural themes, values and ideas. Students will demonstrate ability to accurately comprehend ideas across a range of historical content. Taught in Japanese.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: JAPN-201
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: JAPN 201   or equivalent with a C- or better)"
+  JAPN-303:
+    code: JAPN 303
+    title: Business Japanese
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course develops functional use of Japanese language for various types of situations and events that occur in the daily business environment. The types of situations include formal introductions, basic business rules, business etiquette, honorifics, and how to write business documents and email. It also presents and expands on cultural perspectives and concepts as they impact the business world. Taught in Japanese.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: JAPN-201
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: JAPN 201   or equivalent with C- or better)"
+  JAPN-304:
+    code: JAPN 304
+    title: Introduction to Translation & Interpretation
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course is an introduction to translating and interpreting that provides an overview of the knowledge necessary for the fields of translation and interpretation. Students will study general issues involved in translating and interpreting and building the foundation of knowledge and techniques including rapid reading, analyzing, summarizing and paraphrasing, listening comprehension and shadowing. Taught in Japanese.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: JAPN-300
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: JAPN 300   or equivalent with a C- or better)"
+  JAPN-305:
+    code: JAPN 305
+    title: Introduction to Japanese Culture & Civilization
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course introduces various aspects of Japanese culture, including history, geography, religion, government, politics, customs and traditions. After a broad historical overview beginning in prehistory, this course focuses on the Tokugawa period as the bedrock for understanding modern Japanese society as a mass society. Taught in English.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  JAPN-306:
+    code: JAPN 306
+    title: The Japanese Mind
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This project-based course looks behind the Japanese social mask to understand Japanese people’s thoughts, behaviors, aesthetics and ideology. It covers modes of thinking, making friends and influencing others, decision making, ethical systems and hierarchical relationships. Taught in English.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  JAPN-307:
+    code: JAPN 307
+    title: Japan-American Experience
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course focuses on Japanese-American experience from the 1860s to the present as an ongoing study in ethnographic assimilation, including early immigration and response; immigration and labor laws; property rights; and WWII internment. Students identify and evaluate the issues of the ethics of assimilation, racial and ethnic discrimination, educational opportunity, social justice, and cultural identity. Taught in English. (Crosslisted/Equivalent with ES 307   )
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  JAPN-308:
+    code: JAPN 308
+    title: Japanese Pop-Culture
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course explores post WWII Japanese music, literature, artistic media, and hi-tech products. Investigates social themes ranging from post-holocaust Japanese hedonism to childhood fantasies by looking at Manga comic books, Animation, and popular music, as well as fashion and style, popular technology, consumerism, and environmental issues. Explores the evolution of pop culture and its impact on society. Taught in English.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  JAPN-309:
+    code: JAPN 309
+    title: Masterpieces in Japanese Literature
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course explores early Japanese prose and poetry to detect native motifs that continue into modern literature. Dramatic scripts, I-Novels, surrealistic fiction, and contemporary authors including Yoshimoto Banana and Murakami Haruki will be read and written about in a student-created literary online diary. Taught in English.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  JAPN-310:
+    code: JAPN 310
+    title: Japanese Cinema
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course provides an introductory scrutiny of major Japanese directors and genres with attention to film composition, choices of subject and character, and the relationship of cinema to Japanese culture and society. Students will analyze and discuss cinematographic elements and cultural codes among a variety of film genres, production of their historical and socio-cultural context, as well as issues dealing with popular culture and equity. Taught in English.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  JAPN-311:
+    code: JAPN 311
+    title: Social Issues In Japan
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: In the course, we’ll learn about the ways that people in Japan have engaged with the vast cultural, economic, and political changes since 1945. Among other topics, we’ll read about the fights over environmental concerns, anti-war protests (including anti-U.S. military base protests), economic and gender inequalities, and the ongoing struggle for life-work balance. This course is infused with a strong focus on social movements and fights for justice, in its many forms. Taught in English.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  JAPN-312:
+    code: JAPN 312
+    title: Advanced Japanese for Careers
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course is designed to develop a functional use of Japanese and cultural perspectives and concepts for professional occupations such as education, business, technology, and hospitality. Students will learn how to interact and collaborate in a variety of situations that focus on business etiquette and effective communication as members of the business community. Taught in Japanese.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: JAPN-300
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: JAPN 300   or equivalent with a C- or better)"
+  JAPN-314:
+    code: JAPN 314
+    title: Japanese Visual Culture and Media
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: An analysis of historical and modern Japanese society through works of art and media including photography, film, maps, and other visual materials. Students learn to extract information from images as part of a visual analysis, while dealing with socio-geographical methods for understanding urban flows, economic disparities, transportation, and built environments. Students compare what they understand about Japanese culture with their own familiar environments. Taught in English.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  JAPN-315:
+    code: JAPN 315
+    title: Japanese Business Culture
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course examines a variety of business practices and norms in present-day Japan while introducing the historical development of Japanese corporate systems. Students will analyze the socio-cultural concepts that underlie Japanese business structure and new development and trends in Japanese business. It offers an understanding of how to communicate efficiently, build credibility, and form viable business relationships. Taught in English.
+    offered:
+      availability: periodic
+  JAPN-316:
+    code: JAPN 316
+    title: Japanese Myth and Folktales
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course examines the native belief systems and the supernatural as reflected in a rich tradition of folktales, myths, songs, and proverbs in Japan. Students analyze the ways in which social practice and cultural norms/codes have been linked to folklore in Japan. The course also employs a variety of media such as woodblock prints, animation, and films to study the various manifestations of the supernatural in Japanese culture. Taught in English.
+    offered:
+      terms:
+        - spring
+  JAPN-317:
+    code: JAPN 317
+    title: Pacific Food Empires
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course examines the historical processes that have informed the food on our plates. In particular, we will look at food as a medium through which to understand the processes of migration, invention, colonialism, imperialism, and capitalism that have shaped much of the Asia-Pacific world, including Japan and the United States. Students will have a clear understanding of the processes of colonialism and globalization that informed the spread and invention of different food cultures and cuisines. (Crosslisted/Equivalent with ES 317   )
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  JAPN-320S:
+    code: JAPN 320S
+    title: Japanese for the Global Community
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students will have the opportunity to engage with community projects of import and relevance, while examining issues of justice, compassion, diversity and social responsibility. Students will have the opportunity to deepen their knowledge of Japanese language and culture through their community service to promote global citizens and develop communication skills through discussions, reflection essays and presentations.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: JAPN-300
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: JAPN 300   or equivalent with a C- or better)"
+  JAPN-340:
+    code: JAPN 340
+    title: "Language for Professions: Japanese"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is designed to develop a functional use of Japanese for the professions. Students will learn how to respond to a variety of situations that focus on professional matters such as customer service, telephone conversations, and effective communication as a member of the professional community. It also presents and expands on cultural practices with perspectives and concepts. Taught in Japanese.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: JAPN-102
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and ( JAPN 102   or equivalent) with C- or better]"
+  JAPN-350:
+    code: JAPN 350
+    title: "World Culture and Language: Japanese"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course focuses on language use related to the cultures of the Japanese speaking community. It addresses culture-specific practices and concepts that cannot be translated into English. Students will also learn the use of Japanese to communicate at basic levels in culturally appropriate ways. Taught in English and Japanese.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  JAPN-374:
+    code: JAPN 374
+    title: Japanese Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Students complete an internship experience within the Japanese major.
+    offered:
+      availability: periodic
+  JAPN-380:
+    code: JAPN 380
+    title: "Japan: Land and People"
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course introduces the language and culture of Japan through a thematic approach. Selected topics include geography, climate, population, and industry. This course is designed to develop advanced Japanese language competency and to introduce various aspects of related Japanese culture using technology and web-based materials. Taught in Japanese.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: JAPN-300
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: JAPN 300   or equivalent with a C- or better)"
+  JAPN-395:
+    code: JAPN 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 0
+      maximum: 12
+    description: Studies a particular topic relative to the Japanese language or cultures. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  JAPN-396:
+    code: JAPN 396
+    title: Field Studies
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Individualizes student placement for field study as related to Japanese.
+    offered:
+      availability: periodic
+  JAPN-397:
+    code: JAPN 397
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Individual study of a particular aspect of Japanese language, culture, or civilization. A written proposal for the study/research must be approved in advance by the sponsoring faculty member and the program coordinator. Number of credits depends on the nature of the student’s academic goals and the consent of the faculty advisor.
+    offered:
+      availability: periodic
+  JAPN-401:
+    code: JAPN 401
+    title: Structure of Japanese Language
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course aims to develop basic understanding of structural features of Japanese language. Students will be introduced to basic phonetic, phonological, morphological, syntactic, and discourse levels of Japanese. Taught in Japanese.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: JAPN-300
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: JAPN 300   or equivalent with a C- or better)"
+  JAPN-402:
+    code: JAPN 402
+    title: Japanese Literature
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course aims to develop an advanced level of communication by interpreting and analyzing various aspects of modern Japanese literature, including short stories and significant works by authors of the modern period. Taught in Japanese.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: JAPN-300
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: JAPN 300   or equivalent with a C- or better)"
+  JAPN-403:
+    code: JAPN 403
+    title: Pre-Capstone
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course aims to develop an advanced level of academic communication through the formulation of research questions on linguistic and cultural topics, using appropriate research methods and critical thinking skills. Students utilize a variety of information sources to investigate, organize, and analyze the information. Taught in Japanese.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: JAPN-300
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: JAPN 300   or equivalent with a C- or better)"
+  JAPN-404:
+    code: JAPN 404
+    title: Advanced Japanese for Presentational Communication
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course aims to develop an advanced level of academic communication to finalize research projects using appropriate research methods. Students analyze and synthesize their research findings to orally present and to write academic papers using APA style. This course is a companion course for WLC 400   (Major Capstone). Taught in Japanese.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: JAPN-300
+            minimumGrade: C-
+          - courseId: WLC-400
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: JAPN 300   or equivalent with a C- or better) and (Coreq: WLC 400   )]"
+  JAPN-405:
+    code: JAPN 405
+    title: Cultural Landscape of Japan
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course examines a variety of Japanese socio-cultural contexts while introducing the significant aspects of diverse geographic regions, as well as ways of landscape use. Through the exploration of Japanese landscapes, students learn to analyze the unique senses of space, the concepts of nature and culture, the roles of tourism, and the growing tensions between urban and rural centers in Japan. Taught in English.
+    offered:
+      availability: periodic
+  JAPN-407:
+    code: JAPN 407
+    title: The Making of Modern East Asia
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "The class traces the flows of ideas, people, and capital in East Asia over the last two centuries. While focusing on Japan, Korea, and China, our lectures will be organized around three social science-related themes: Human Geography, Gender and Labor Theme; State, Economies of Scale, and Nationalism Theme; Technology and the Everyday Theme. We will learn about each of these countries within their own contexts with an eye towards understanding the deep historical interconnectedness of East Asian societies. Central to our study is the understanding that none of the countries exist in isolation. Though Japan and its history and society are frequently taught and understood to exist as separate or distinct from the Asian continent (and other parts of the world), our focus is on the overlapping experiences and histories of modern East Asia."
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  JAPN-410:
+    code: JAPN 410
+    title: "Quakes and Nukes: (Un)Natural Japanese Environments"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Japan is richly diverse, from the tundra-like north to the subtropical south. Its islands are shaped by earthquakes, volcanoes, and man-made ecologies. We study the Japanese archipelago from multiple scientific and humanistic perspectives, including material from scientific journals, films, history, anthropology, and Japanese comics. We cover the basics of Japanese geology, Pacific seismology (the ¿Ring of Fire¿), the causes and effects of nuclear radiation, and the changes to the land.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  JAPN-420:
+    code: JAPN 420
+    title: Maximizing Study Abroad Experiences
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Your study abroad experience is potentially a rich opportunity for you to enhance your language skills and deepen your understanding of other cultures, people and their practices. This course provides the resources to help you prepare to maximize your study abroad experiences. This course is taught in English.
+    offered:
+      terms:
+        - spring
+  JAPN-495:
+    code: JAPN 495
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic relative to the Japanese language or cultures. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  JAPN-496:
+    code: JAPN 496
+    title: Field Studies
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Individualizes student placement for field study as related to Japanese.
+    offered:
+      availability: periodic
+  JAPN-497:
+    code: JAPN 497
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Individual study of a particular aspect of Japanese language, culture, or civilization. A written proposal for the study/research must be approved in advance by the sponsoring faculty member. Number of credits depends on the nature of the student’s academic goals and the consent of the faculty advisor.
+    offered:
+      availability: periodic
+  JAPN-595:
+    code: JAPN 595
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic relative to the Japanese language or cultures. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  JAPN-596:
+    code: JAPN 596
+    title: Field Studies
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Individualizes student placement for field study as related to Japanese.
+    offered:
+      availability: periodic
+  JAPN-597:
+    code: JAPN 597
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Individual study of a particular aspect of Japanese language, culture, or civilization. A written proposal for the study/research must be approved in advance by the sponsoring faculty member. Number of credits depends on the nature of the student’s academic goals and the consent of the faculty advisor.
+    offered:
+      availability: periodic

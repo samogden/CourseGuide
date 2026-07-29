@@ -1,0 +1,34 @@
+schemaVersion: 1
+prefix: CAD
+courses:
+  CAD-101A:
+    code: CAD 101A
+    title: Reading and Writing 1
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: We read and write all the time, both in our personal and academic lives. But scientists read differently from historians, who read differently from business people. And they write differently too. That’s what we’ll explore in this class, and you’ll develop your own theory to explain it. In the process, you will practice what you study, taking two semesters not just to improve your skills but to understand when and how to apply those skills. Only completion of both CAD 101A and CAD 101B   will meet the A2 requirement. CAD 101A is a pre-requisite for CAD 101B   .
+    offered:
+      terms:
+        - fall
+        - spring
+  CAD-101B:
+    code: CAD 101B
+    title: Reading and Writing 2
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: We read and write all the time, both in our personal and academic lives. But scientists read differently from historians, who read differently from business people. And they write differently too. That’s what we’ll explore in this class, and you’ll develop your own theory to explain it. In the process, you will practice what you study, taking two semesters not just to improve your skills but to understand when and how to apply those skills. Only completion of both CAD 101A   &nbsp;& 101B will meet the A2 requirement.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CAD-101A
+          - courseId: CAD-100A
+          - courseId: ESCAD-100A
+    prerequisiteNotes:
+      - "(Prereq: CAD 101A   or CAD 100A or ESCAD 100A)"

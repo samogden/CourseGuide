@@ -1,0 +1,543 @@
+schemaVersion: 1
+prefix: AGPS
+courses:
+  AGPS-108:
+    code: AGPS 108
+    title: Tractor Operations
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Design principles, selection, maintenance, adjustment, and safe operation of wheel and track type tractors used in agriculture. Equivalent to CSU C-ID AG-MA 108L
+    offered:
+      availability: periodic
+  AGPS-128:
+    code: AGPS 128
+    title: Introduction to Soil Science
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students examine the physical, chemical and biological properties of soil. Students learn soil classification, derivation, use, function, and management including erosion, moisture retention, structure, cultivation, organic matter, and microbiology. Laboratory topics include soil type, classification, soil reaction, soil fertility, and physical properties of soil.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - (Department Consent Required)
+  AGPS-181:
+    code: AGPS 181
+    title: Plant Materials and Usage - Spring
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Identification, growth habits, culture and ornamental use of native and introduced plants suited for landscaping, particularly drought-tolerant and xeriscaping, in California. Covers those plants best observed and studied in the spring. Plant materials adapted to Central California will be emphasized. Equivalent to CSU C-ID AG-EH 108L
+    offered:
+      availability: periodic
+  AGPS-182:
+    code: AGPS 182
+    title: Plant Materials and Usage - Fall
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Identification, growth habits, culture and ornamental use of native and introduced plants suited for landscaping, particularly drought-tolerant and xeriscaping, in California Covers those plants best observed and studied in the fall. Plant materials adapted to Central California will be emphasized. Equivalent to CSU C-ID AG-EH 112L
+    offered:
+      availability: periodic
+  AGPS-191:
+    code: AGPS 191
+    title: Small Fruit Production
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: The botany, taxonomy, and plant development of small fruit crops in California including variety selection, climatic requirements and culture, production practices including site selection, establishment, fertilization, pollination, irrigation, harvest, storage, processing, marketing, pest management, and pruning.
+    offered:
+      availability: periodic
+  AGPS-192:
+    code: AGPS 192
+    title: Vegetable Crop Production
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: The study of vegetable production covering the botany, cultural aspects, harvesting, processing, growth characteristics, fertility, pests, and marketing of the major vegetable crops of the Central Coast and throughout California.
+    offered:
+      availability: periodic
+  AGPS-195:
+    code: AGPS 195
+    title: Special Topics In Agriculture
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 3
+    description: Studies a particular topic in agriculture. May be repeated once for credit when topics vary.
+    offered:
+      availability: periodic
+  AGPS-205:
+    code: AGPS 205
+    title: Principles of Organic Crop Production
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Origins, application, regulation and technology of organic crop production. Topics include the history of the organic movement; current regulation and certification; field management practices and technologies; and practical issues affecting organic crop production from a cross-disciplinary perspective.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: AGPS-128
+          - courseId: BIO-106
+    prerequisiteNotes:
+      - "[(Prereq or Coreq: AGPS 128   ) and (Prereq: BIO 106   )]"
+  AGPS-209:
+    code: AGPS 209
+    title: Agriculture and the Environment
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Provides an understanding of causes and effects of the enviroment on agriculture. Focuses on the impacts of how the environment impacts fundamental plant function and how changes in biotic and abiotic stressors such as environmental conditions impact plant performance. Mitigation of impacts of the environment on plants and agricultural systems are approached with real life examples and latest research findings that addresses plant responses and performance to a changing environment.
+    offered:
+      terms:
+        - spring
+  AGPS-213:
+    code: AGPS 213
+    title: Principles of Viticulture
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Principles of viticulture that encompasses understanding of grapevine identification for different production purposes (wine, table grape and raisins), varieties, rootstocks as well as grapevine biology, anatomy, and physiology. Vineyard management practices such as trellising, pruning, canopy and irrigation management for different production purposes such as regulated deficit irrigation. Berry development and physiology, sampling for maturity and harvest.
+    offered:
+      terms:
+        - spring
+  AGPS-216:
+    code: AGPS 216
+    title: Plant Propagation and Production
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Plant propagation and production practices and principles, with emphasis on nursery operations including planting, transplanting, seeds, grafting, and tissue culture. Use and maintenance of common planting media, tools, and equipment. Regulations pertaining to plant production.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-106
+    prerequisiteNotes:
+      - "(Prereq or Coreq: BIO 106   )"
+  AGPS-294:
+    code: AGPS 294
+    title: Agriculture Professional Experience
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Students work with practicing professionals in a volunteer or paid internship that requires application of introductory knowledge and skills in agricultural science. Academic credit is awarded for documented learning that takes place during the internship and that meets individualized and core internship outcomes.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Instructor Consent Required)"
+  AGPS-295:
+    code: AGPS 295
+    title: Special Topics in Agriculture II
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 3
+    description: Studies a particular topic in agriculture.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-106
+          - courseId: AGPS-128
+          - courseId: AGPS-195
+    prerequisiteNotes:
+      - "(Prereq: BIO 106   or AGPS 128   or AGPS 195   )"
+  AGPS-297:
+    code: AGPS 297
+    title: Independent Research in Agriculture
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Sophomore-level independent research in agriculture. Student and faculty member select a topic for a research project.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Instructor Consent)"
+  AGPS-301:
+    code: AGPS 301
+    title: Technical Writing for Agriculture
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Develops skills in written communication of scientific information to different audiences in the agricultural industry, regulatory agencies, peer reviewed journals, and the public. Emphasizes synthesis and analysis of data and information as well as bibliographic research and preparation of technical communications.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: AGPS-390
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better) and (Coreq: AGPS 390   )]"
+  AGPS-302:
+    code: AGPS 302
+    title: Careers in Agriculture
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: "This course explores career opportunities in agriculture and related fields. It highlights diverse career paths, including: agricultural production, government agencies, research, academia, and beyond. Students will gain valuable insights into the skills, qualifications, and experiences required to succeed in these fields and build professional networks with local professionals. The course offers useful insights into internships and job opportunities, guiding students as they navigate their professional paths in agriculture."
+    offered:
+      terms:
+        - fall
+  AGPS-303:
+    code: AGPS 303
+    title: Agricultural Academic and Personal Growth
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This course is designed to set students up for success in agriculture, food, and natural resources-related degrees and careers. By fostering a sense of belonging and promoting a growth mindset, students will develop essential study skills and enhance their majors readiness. Emphasizing both academic and early professional development, the course connects students to key campus resources and support services, ensuring they are equipped to thrive academically, personally, and professionally throughout their college journey.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - (Junior or Senior Standing Required)
+    minimumStanding: junior
+  AGPS-304:
+    code: AGPS 304
+    title: Agricultural Professional Development
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This course is designed to build confidence and foster self-efficacy through a strengths-based approach to professional development. Students will refine their resumes, create targeted cover letters, practice interview techniques, and build a strong professional presence, all while preparing for internship applications. The course focuses on networking strategies, developing a personal brand, and mastering interview success, preparing students to navigate career opportunities with confidence.
+    offered:
+      terms:
+        - spring
+  AGPS-315:
+    code: AGPS 315
+    title: Soil Resource Management
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Lecture/Lab course applies and evaluates field, laboratory, and technical methods to manage soils for multiple uses, and to maintain both environmental quality and sustained yields.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: AGPS-128
+                minimumGrade: C-
+              - courseId: CHEM-110L
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2) and ( AGPS 128   or CHEM 110L   ) with a C- or better]"
+  AGPS-350:
+    code: AGPS 350
+    title: Research Methods in Crop and Soil Science
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Statistical theory and design of experimental methods for agricultural research.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-106
+            minimumGrade: C-
+          - courseId: AGPS-128
+            minimumGrade: C-
+          - courseId: STAT-100
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: BIO 106   and AGPS 128   and STAT 100   with a C- or better)"
+  AGPS-371:
+    code: AGPS 371
+    title: Weed Science and Technology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Management and physiological principles involved in control of weedy and invasive plant species in agricultural and natural ecosystems. Emphasis on cultural, biological, mechanical, and chemical control methods.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-106
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: ENVS-240
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: BIO 106   or BIO 211   or ENVS 240   with C- or better)"
+  AGPS-372:
+    code: AGPS 372
+    title: Agricultural Entomology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students develop knowledge and skills related to the biology, ecology, behavior, and management of economically important insects and mites of agricultural crops, including pests and vectors of plant pathogens, as well as beneficial insects such as pollinators and edible insects. Includes recognition, classification, and distribution of major insect groups, challenges in pest management programs and economic importance and conservation of beneficial insects.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-106
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: ENVS-240
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: BIO 106   or BIO 211   or ENVS 240   with C- or better)"
+  AGPS-389S:
+    code: AGPS 389S
+    title: Agricultural Service Learning
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examines sociocultural dynamics and multicultural histories of agriculture in California. Students develop strategies that work toward creating equity in the community through community-based reciprocal service in a career-relevant setting.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with C- or better)"
+  AGPS-390:
+    code: AGPS 390
+    title: Crop Management
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides an in-depth understanding of production cropping systems of California’s Central Coast. Emphasizes decision-making related to crop rotations, tillage operations, and management of pests, water, and nutrients to maximize yields and ensure food safety.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: AGPS-128
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BIO-106
+                minimumGrade: C-
+              - courseId: BIO-211
+                minimumGrade: C-
+              - courseId: ENVS-240
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BIO 106   or BIO 211   or ENVS 240)   and ( AGPS 128)   with C- or better]"
+  AGPS-394:
+    code: AGPS 394
+    title: Agriculture Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students work with practicing professionals in a volunteer or paid internship that requires the application of knowledge and skills in agricultural science. Academic credit is awarded for documented learning that takes place during the internship and that meets individualized and core internship outcomes.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Instructor Consent Required)"
+  AGPS-395:
+    code: AGPS 395
+    title: Special Topics in Agriculture
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 3
+    description: Studies a particular topic in agriculture. May be repeated if topics vary.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Instructor Consent)"
+  AGPS-397:
+    code: AGPS 397
+    title: Independent Research in Agriculture
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Junior-level independent research in agriculture. Student and faculty member select a topic for a research project.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Instructor Consent Required)"
+  AGPS-403:
+    code: AGPS 403
+    title: Agricultural Career Readiness
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This course prepares students to enter the agricultural workforce by exploring career paths, internships, and job market trends. Students will gain essential employability skills, with a focus on leadership, communication, teamwork, and problem-solving. Using a strengths-based approach, students will develop practical skills in job searching, writing personal statements, and navigating graduate applications. The course emphasizes key industry competencies, certifications, and cultural assets, building adaptability and communication skills to ensure students are well-prepared for successful careers in agriculture.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - (Junior or Senior Standing Required)
+    minimumStanding: junior
+  AGPS-404:
+    code: AGPS 404
+    title: Agricultural Leadership
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This course cultivates essential leadership skills for success in the agricultural industry. Through hands-on activities, case studies, and collaborative projects, students will explore leadership styles and learn to inspire teams, focusing on ethical decision-making, strategic thinking, and professional communication. The course prepares students to take on leadership roles, drive innovation, and foster collaboration. Students will also develop mentorship relationships, build social capital, and refine interview techniques to excel in leadership positions and expand their professional networks.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - (Junior or Senior Standing Required)
+    minimumStanding: junior
+  AGPS-415:
+    code: AGPS 415
+    title: Advanced Irrigation and Nutrient Management
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores soil-plant-water relations, irrigation schedules, and irrigation efficiency as they relate to nutrient management, the California water supply, and water rights.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: AGPS-128
+            minimumGrade: C-
+          - courseId: AGPS-390
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: AGPS 128   and AGPS 390   with C- or better)"
+  AGPS-416:
+    code: AGPS 416
+    title: Seed Production and Technology
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: This course provides an overview of the principles, practices, and technologies involved in modern seed production systems. Students will gain knowledge of seed physiology, seed health, quality assurance, and seed testing methodologies. Emphasis will be placed on seed certification, phytosanitary regulations, and the role of seed health in global trade. Students will explore current practices in seed treatment, distribution, and compliance, with guest lectures from industry and regulatory experts.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: BIO-322
+      - courseId: BIO-332
+    prerequisiteNotes:
+      - "(Prereq: BIO 322   and BIO 332   )"
+  AGPS-470:
+    code: AGPS 470
+    title: Integrated Pest Management
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students apply principles and concepts of integrated pest management, including physical, ecological, chemical and biological control practices for insects, plant pathogens, weeds, nematodes, and vertebrate economic pests. Covers sampling techniques and population dynamics of host/prey interactions and includes methods appropriate for organic agriculture and ensuring long-term productivity.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: BIO-322
+            minimumGrade: C-
+          - anyOf:
+              - courseId: AGPS-371
+                minimumGrade: C-
+              - courseId: AGPS-372
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: BIO 322   and ( AGPS 371   or AGPS 372   ) with C- or better]"
+  AGPS-490:
+    code: AGPS 490
+    title: Projects in Crop Management
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Project-based course integrates prior learning about integrated management of crops grown on the Central Coast of California with information about laws and regulations governing food safety, environmental impacts, and marketing. Field trips required. Students complete a crop management research or field production project and submit a written report and oral presentation on that project.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: AGPS-315
+    prerequisiteNotes:
+      - "(Prereq or Coreq:: AGPS 315)"
+  AGPS-491:
+    code: AGPS 491
+    title: Agricultural Plant and Soil Sciences Honors Capstone
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Assists students in completing an honors-level research capstone in Agricultural Plant & Soil Science. Projects are independent and must be approved by the AGPS 491 instructor and a research mentor prior to enrollment. Mentored work may occur on campus, through a Summer REU at another institution, or with an associated agricultural research agency, industry partner, or nonprofit. Students produce a professional-quality written report and at least one public-facing product (poster and/or oral presentation).
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "[(Prereq: GWAR   with a C- or better) and (Instructor Consent Required)]"
+  AGPS-494:
+    code: AGPS 494
+    title: Senior Internship in Agriculture
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Students work with practicing professionals in a volunteer or paid internship that requires the application of advanced knowledge and skills in agricultural science and/or prior internship experience. Academic credit is awarded for documented learning that takes place during the internship and that meets individualized and core internship outcomes.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Instructor Consent Required)"
+  AGPS-495:
+    code: AGPS 495
+    title: Advanced Topics in Agriculture
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 3
+    description: Studies a particular topic in agriculture at an advanced level. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: Instructor Consent Required)"
+  AGPS-497:
+    code: AGPS 497
+    title: Independent Research in Agriculture
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Senior-level independent research in agriculture. Student and faculty member select a topic for a research project.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Instructor Consent Required)"

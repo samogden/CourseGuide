@@ -1,0 +1,438 @@
+schemaVersion: 1
+prefix: STAT
+courses:
+  STAT-10:
+    code: STAT 10
+    title: Support Course for STAT 100
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This co-requisite course contains topics which directly support the content in STAT 100   . It contains support for mathematical skills and knowledge used in STAT 100   , supplemental instruction on STAT 100   content, and study skill development.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: STAT 100   )"
+  STAT-100:
+    code: STAT 100
+    title: Introduction to Statistics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Includes organization and classification of data, graphic representation, measures of central tendency and variability, percentiles, normal curves, standard scores, correlation and regression, introduction to statistical inference, and the use of computers for statistical calculations.
+    offered:
+      terms:
+        - fall
+        - spring
+  STAT-195:
+    code: STAT 195
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Statistics.
+    offered:
+      availability: periodic
+  STAT-210:
+    code: STAT 210
+    title: Statistical Computing with R
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Provides foundations to statistics and data science using R statistical computing software for reproducible importing, managing, cleaning, and visualizing data from a variety of sources. Recommended as a co- or prerequisite for statistics courses that use R.
+    offered:
+      terms:
+        - spring
+  STAT-211:
+    code: STAT 211
+    title: Statistical Computing with SAS
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Weekly activities to learn and apply SAS statistical computing software for data management and analysis. Recommended as a co- or pre-requisite for statistics courses that use SAS.
+    offered:
+      terms:
+        - fall
+  STAT-250:
+    code: STAT 250
+    title: Applied Stat:Sci Tech
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Provides the models and methods used in a career in technology, engineering, and natural and biological sciences. Emphasizes the use of tables, graphs, and elementary descriptive statistical applications. Introduces statistical inferences through parameter estimation and regression modeling. Introduces students to the basic skills for using computers in statistical analyses.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-150
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 150   with a C- or better)"
+  STAT-250D:
+    code: STAT 250D
+    title: Support Course for STAT 250
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This co-requisite course contains topics which directly support the content in STAT 250. It contains support for mathematical skills and knowledge used in STAT 250, supplemental instruction on STAT 250 content, and study skill development.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: STAT 250   )"
+  STAT-294:
+    code: STAT 294
+    title: Statistics and Data Science Introductory Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Students work with practicing professionals in a volunteer or paid internship that requires application of introductory knowledge and skills in statistics and data science. Academic credit is awarded for documented learning that takes place during the internship and that meets individualized and core internship outcomes.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Instructor Consent Required)
+  STAT-295:
+    code: STAT 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Statistics.
+    offered:
+      availability: periodic
+  STAT-297:
+    code: STAT 297
+    title: Independent Research
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Instructor Consent Required)
+  STAT-310:
+    code: STAT 310
+    title: Data Visualization
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Studies the value of visualization, historical and modern, and evaluation and critique of visualizations in literature and media. Develops methods, procedures, and application tools and software used to summarize and visualize data for both explanatory and exploratory purposes. Requires the creation of visualizations, including information visualizations and scientific visualizations, and the assessment of when and how to best leverage data visualization methods in a variety of contexts.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: MATH-320
+                minimumGrade: C-
+              - courseId: STAT-250
+                minimumGrade: C-
+              - courseId: STAT-100
+                minimumGrade: C-
+              - courseId: BUS-204
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2) and ( MATH 320   or STAT 250   or STAT 100   or BUS 204   ) with a C- or better]"
+  STAT-320:
+    code: STAT 320
+    title: Nonparametric Statistics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Studies nonparametric and distribution-free statistical procedures and techniques. Alternative procedures for one- and two-sample procedures, multiple comparisons, ANOVA, regression models, correlation, and analysis of categorical variables, including ordinal variables, will be examined via rank-based (e.g., Wilcoxon/Mann-Whitney, Kruskal-Wallis) and randomization-based methods (e.g., permutations, bootstrapping). Emphasis will be on analysis using statistical computing and programming software and the intuitive nature of nonparametric statistics.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: STAT-100
+            minimumGrade: C-
+          - courseId: STAT-250
+            minimumGrade: C-
+          - courseId: MATH-320
+            minimumGrade: C-
+          - courseId: BUS-204
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: STAT 100   or STAT 250   or MATH 320   or BUS 204   with a C- or better)"
+  STAT-325:
+    code: STAT 325
+    title: Experimental Design and Analysis
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Studies the design, analysis, and follow-up procedures of experiments across disciplines. Includes one-way and two-way analysis of variance, completely randomized designs, factorial designs, Latin Squares, nested and split-plot design, repeated measures, block designs, analysis of covariance, multiple comparison procedures, and incomplete designs.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-320
+            minimumGrade: C-
+          - courseId: STAT-250
+            minimumGrade: C-
+          - courseId: STAT-100
+            minimumGrade: C-
+          - courseId: BUS-204
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 320   or STAT 250   or STAT 100   or BUS 204   with a C- or better)"
+  STAT-330:
+    code: STAT 330
+    title: Sampling Design and Analysis
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Studies the design and analysis of sampling finite populations. Includes survey design, probability (random, stratified, cluster, systematic) and non-probability sampling designs, and analysis of numerical and categorical data collected through surveys and sampling. Emphasis on sample size calculations, estimation of standard errors and parameters from various probability sampling designs, using statistical computing and programming software, and considerations for sampling and non-sampling error.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-320
+            minimumGrade: C-
+          - courseId: STAT-250
+            minimumGrade: C-
+          - courseId: STAT-100
+            minimumGrade: C-
+          - courseId: BUS-204
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 320   or STAT 250   or STAT 100   or BUS 204   with a C- or better)"
+  STAT-335:
+    code: STAT 335
+    title: Data Simulation and Analysis
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Uses Monte Carlo simulations to understand operating characteristics of a statistical method. Approximates bias and variance for point estimation, coverage probability for interval estimation, and Type I error rate and statistical power for hypothesis testing. Studies the impact of model misspecification and the importance of adjusting confounding variables in observational studies. Introduces how to build (parameterize) a statistical model to address a research question of interest.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-320
+            minimumGrade: C-
+          - courseId: STAT-250
+            minimumGrade: C-
+          - courseId: STAT-100
+            minimumGrade: C-
+          - courseId: BUS-204
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: MATH 320   or STAT 250   or STAT 100   or BUS 204   with a C- or better)"
+  STAT-394:
+    code: STAT 394
+    title: Statistics and Data Science Intermediate Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Students work with practicing professionals in a volunteer or paid internship that requires application of intermediate knowledge and skills in statistics and data science. Academic credit is awarded for documented learning that takes place during the internship and that meets individualized and core internship outcomes.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Instructor Consent Required)
+  STAT-395:
+    code: STAT 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Statistics.
+    offered:
+      availability: periodic
+  STAT-397:
+    code: STAT 397
+    title: Independent Research
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Instructor Consent Required)
+  STAT-400:
+    code: STAT 400
+    title: Statistics and Data Science Capstone Seminar
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students conduct statistical research independently under guidance. The process includes specification of research objectives, literature review, data collection, data curation, and statistical modeling and analysis. Students write a paper and present a poster to highlight their findings.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-300
+            minimumGrade: C-
+          - courseId: STAT-410
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( MATH 300   with a C- or better) and (Senior Standing)) and (Prereq or Coreq: STAT 410   with a C- or better)]"
+  STAT-410:
+    code: STAT 410
+    title: Generalized Linear Models
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Studies the use of explanatory, confirmatory, and predictive linear models in data-driven decision making. Includes supervised learning methods (simple linear regression, multiple linear regression, logistic regression, Poisson regression, and random forests), model selection methods (information criteria, cross-validation), and unsupervised learning methods (principal component analysis) using statistical computing packages.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: STAT-250
+            minimumGrade: C-
+          - courseId: MATH-320
+            minimumGrade: C-
+          - courseId: STAT-310
+            minimumGrade: C-
+          - courseId: STAT-320
+            minimumGrade: C-
+          - courseId: STAT-325
+            minimumGrade: C-
+          - courseId: STAT-330
+            minimumGrade: C-
+          - courseId: STAT-335
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: STAT 250   or MATH 320   or STAT 310   or STAT 320   or STAT 325   or STAT 330   or STAT 335   with a C- or better)"
+  STAT-420:
+    code: STAT 420
+    title: Statistical Theory I
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Theory focused probability tools for statistics: basic probability rules, description of discrete and continuous distributions, expected values, moments, moment generating functions, transformation of random variables, bivariate distributions, marginal and conditional distributions, independence, multivariate distributions, concept of random sample, and Central Limit Theorem."
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - allOf:
+          - courseId: MATH-170
+            minimumGrade: C-
+          - courseId: MATH-322
+            minimumGrade: C-
+          - courseId: MATH-250
+            minimumGrade: C-
+          - anyOf:
+              - courseId: MATH-320
+                minimumGrade: C-
+              - courseId: STAT-250
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( MATH 320   or STAT 250   ) and ( MATH 170   or MATH 322   ) and MATH 250   ) with a C- or better]"
+  STAT-421:
+    code: STAT 421
+    title: Statistical Theory II
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Theory focused framework for statistical inference: evaluation of point estimators (bias, variance, mean square error, relative efficiency, consistency), methods of point estimation (method of moments, maximum likelihood estimation), sufficiency (Fisher-Neyman Factorization Theorem), uniform minimum variance unbiased estimators, interval estimation (confidence intervals from normal samples and large samples), and theory underlying hypothesis testing."
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: STAT-420
+            minimumGrade: C-
+          - anyOf:
+              - courseId: MATH-265
+                minimumGrade: C-
+              - courseId: MATH-230
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: STAT 420   and ( MATH 265   or MATH 230   ) with a C- or better)"
+  STAT-440:
+    code: STAT 440
+    title: Bayesian Inference
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Studies the Bayesian approach to data analysis. Includes Bayes theorem, basic concept of Bayesian statistics, prior and posterior distributions, conjugacy, credible intervals, generalized linear models, statistical inference (with comparison to frequentist approach), prior elicitation, computational methods and applications to real world problems.
+    offered:
+      availability: periodic
+    prerequisites:
+      - allOf:
+          - courseId: MATH-151
+            minimumGrade: C-
+          - anyOf:
+              - courseId: MATH-320
+                minimumGrade: C-
+              - courseId: STAT-250
+                minimumGrade: C-
+              - courseId: STAT-100
+                minimumGrade: C-
+              - courseId: BUS-204
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( MATH 151   ) and ( MATH 320   or STAT 250   or STAT 100   or BUS 204   ) with a C- or better)]"
+  STAT-494:
+    code: STAT 494
+    title: Statistics and Data Science Advanced Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Students work with practicing professionals in a volunteer or paid internship that requires application of advanced knowledge and skills in statistics and data science. Academic credit is awarded for documented learning that takes place during the internship and that meets individualized and core internship outcomes.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Instructor Consent Required)
+  STAT-495:
+    code: STAT 495
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Statistics.
+    offered:
+      availability: periodic
+  STAT-497:
+    code: STAT 497
+    title: Independent Research
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Instructor Consent Required)

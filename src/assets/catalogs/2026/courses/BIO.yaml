@@ -1,0 +1,1268 @@
+schemaVersion: 1
+prefix: BIO
+courses:
+  BIO-106:
+    code: BIO 106
+    title: Introduction to Plant Science
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduction to plant science including structure, growth processes, propagation, physiology, growth media, biological competitors, and post-harvest factors of food, fiber, and ornamental plants. Includes lecture and laboratory components.
+    offered:
+      terms:
+        - spring
+  BIO-115:
+    code: BIO 115
+    title: Survey of Physiology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduction to living organisms; covering levels of organization from molecules to ecosystems. Survey of the functions of tissues, organs and organ systems in organisms such as plants and animals with an emphasis on the mechanisms involved. Topics include cellular structure and function; development; reproduction; and physiology of representative plants and animals.
+    offered:
+      terms:
+        - fall
+        - spring
+  BIO-131:
+    code: BIO 131
+    title: Bioethics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course equips students to interpret and critically assess the basic problems, methods, and approaches to the field of bioethics, and familiarizes the students with the main ethical theories of bioethics. Through a combination of readings, videos, other media and classroom exercises students learn to identify and comprehend the philosophical components of the public discussion on bioethical issues and appreciate the importance of ethical dialogue across different cultures and traditions. Through the use of interpersonal and small group discussions and presentations, students will understand the legal and public policy implications of bioethics and become able to understand the interplay of morality and law both at a general level and in relation to specific bioethical issues.
+    offered:
+      terms:
+        - fall
+        - spring
+  BIO-148:
+    code: BIO 148
+    title: Introduction to Animal Training
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores the field of animal training from a psychological and a technical perspective. Provides a theoretical background in relevant animal behavior and psychological principles related to the practical goal of modifying captive animal behavior. Topics include the history and ethics of animal use and training, and practical animal training techniques.
+    offered:
+      availability: periodic
+  BIO-195:
+    code: BIO 195
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Biology. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  BIO-196:
+    code: BIO 196
+    title: Biology Introductory Research Practicum
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This course engages students in locally-relevant research and introduces them to the research process. Through hands-on lab and/or field work, students develop proficiency in sampling, surveying, and analysis techniques, and gain understanding of the foundations and conventions of biological research. Students will also learn the importance of and explore opportunities for academic and career development in the sciences. This course may require field trips on weekends and dates when classes are not normally in session.
+    offered:
+      terms:
+        - spring
+  BIO-204:
+    code: BIO 204
+    title: Introduction to Life Science
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: An introduction to biomolecules, the structure and function of living cells, cell cycle, reproduction, evolution, and the diversity of organisms. Designed for Liberal Studies majors and science majors who need additional biology background to succeed in majors-level biology courses.
+    offered:
+      terms:
+        - fall
+        - spring
+  BIO-210:
+    code: BIO 210
+    title: Molecular and Cell Biology and Animal Physiology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: First semester of a two-semester core biology series. Examines cell structure and function; cellular respiration and photosynthesis; cell signaling and reproduction; transmission and molecular genetics, transcription and translation; control of gene expression; biotechnology; comparative animal form and function; animal development.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: CHEM-110
+            minimumGrade: C-
+          - courseId: CHEM-110L
+            minimumGrade: C-
+          - courseId: BIO-210L
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( CHEM 110 and CHEM 110L with a C- or better) and (Coreq: BIO 210L )]"
+  BIO-210D:
+    code: BIO 210D
+    title: BIO 210 Workshop
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Optional supplemental problem-solving workshop for BIO 210   in an active-learning setting.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: BIO 210   )"
+  BIO-210L:
+    code: BIO 210L
+    title: Molecular and Cell Biology and Animal Physiology Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: The goals for this laboratory course are to develop a sound understanding and practice of laboratory safety and laboratory science, to expose students to the major techniques used in molecular biology laboratories, and to gain hands-on experience exploring the form and function of major animal organ systems. This course may have a lab fee.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-210
+    prerequisiteNotes:
+      - "(Prereq or Coreq: BIO 210   )"
+  BIO-211:
+    code: BIO 211
+    title: Ecology, Evolution, Biodiversity and Plants
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This is the second semester of the two-semester core biology sequence. Examines the diversity of life, the evolutionary processes that unites all life, the form and function of higher plants, and the ecological processes that govern the interactions of living and non-living components of the earth. These concepts will be grounded in an exploration of local biology and global climate change.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: MATH-130
+            minimumGrade: C-
+          - courseId: MATH-150
+            minimumGrade: C-
+          - courseId: BIO-211L
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: MATH 130   or MATH 150   ) with a C- or better) and (Coreq: BIO 211L   )]"
+  BIO-211D:
+    code: BIO 211D
+    title: Workshop for BIO 211
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Optional supplemental problem-solving workshop for BIO 211   in an active-learning setting.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: BIO 211   )"
+  BIO-211L:
+    code: BIO 211L
+    title: Ecology, Evolution, Biodiversity and Plants Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Required lab course for BIO 211   . Focuses on biodiversity, evolution, plant biology and doing scientific research in ecology and plant physiology. Lab course fee may be charged.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: BIO 211   )"
+  BIO-292:
+    code: BIO 292
+    title: Professional Development for Scientists
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: This course is intended for students who will seek or are participating in undergraduate science internships. Students will explore opportunities for career development, create standard documents for applying to professional experiences, and develop their professional communication and networking skills. Students will also be introduced to campus services that support career development, including the Science Internship Program and the Career Development Center.
+    offered:
+      terms:
+        - fall
+        - spring
+  BIO-295:
+    code: BIO 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Biology. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  BIO-297:
+    code: BIO 297
+    title: Independent Research
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Student and faculty member select topic for research project.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Instructor consent required)
+  BIO-301:
+    code: BIO 301
+    title: Research and Technical Writing in Biology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Intended for biology majors, this course will develop skills in the written communication of biological information to the scientific community, emerging scientists, policy makers and to the general public. This course provides an introduction to bibliographic research, design/interpretation of experiments, visual presentation of results, and preparation of technical communications in biology. It is designed to enhance the skills of biology majors by focusing on those elements of research, interpretation, and written presentation that typically require considerable practice.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-320
+            minimumGrade: C-
+          - courseId: BIO-341L
+            minimumGrade: C-
+          - courseId: BIO-340
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better) AND (Coreq: BIO 320   or BIO 341L   or BIO 340   )]"
+  BIO-306:
+    code: BIO 306
+    title: Biotechnology for Agriculture
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students explore biotechnology concepts and applications used in modern agricultural production to control or modify plants and plant-associated organisms, and subsequently improve crop health, productivity, and nutrition, to enhance food security and environmental sustainability. Recommend prior completion of a plant science or other biology course.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with C- or better) and ( GE   Area 5B)]"
+  BIO-306L:
+    code: BIO 306L
+    title: Biotechnology for Agriculture Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students gain hands-on experience with basic molecular biology techniques, including genetic and genomic approaches, and explore host breeding and microbiome-based approaches and solutions to enhance crop management and sustainability.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-106
+            minimumGrade: C-
+          - courseId: BIO-230
+            minimumGrade: C-
+          - courseId: BIO-306
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: BIO 106   or BIO 230   with a C- or better) and (Coreq: BIO 306   )]"
+  BIO-310:
+    code: BIO 310
+    title: Biochemistry I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Covers biomolecular structure and function, biological oxidation and reduction, metabolism, including respiration and photosynthesis, membrane transport, and biotransformation.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: BIO-210
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+          - anyOf:
+              - courseId: CHEM-211
+                minimumGrade: C-
+              - courseId: CHEM-312
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BIO 210   and BIO 211   ) and ( CHEM 211   or CHEM 312   ) with a C- or better]"
+  BIO-310L:
+    code: BIO 310L
+    title: Biochemistry Lab
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Optional lab course for BIO 310   . Lab course fee may be charged.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-310
+            minimumGrade: C-
+          - courseId: CHEM-310
+            minimumGrade: C-
+          - courseId: BIO-310
+            minimumGrade: C-
+          - courseId: CHEM-310
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: BIO 310   or CHEM 310   with a C- or better) or (Coreq: BIO 310   or CHEM 310   )]"
+  BIO-311:
+    code: BIO 311
+    title: Genetics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This upper division course provides an in-depth, background in all areas of classic Mendelian genetics, population and evolutionary genetics, and molecular genetics. Students who successfully complete this course should be able to discuss and understand all of the above areas of genetics and have sufficient basic knowledge to successfully move on and master advanced topics in genetics. These outcomes will be achieved by learning how geneticists solve problems and make new discoveries.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-210
+            minimumGrade: C-
+          - courseId: BIO-210L
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: BIO-211L
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 with a C- or better) and ( BIO 210   and BIO 210L   ) and ( BIO 211   and BIO 211L   )]"
+  BIO-312:
+    code: BIO 312
+    title: Concepts in Genomics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: A survey to core concepts, contemporary topics, technologies, and application in the field of genomics. Students will gain a broad understanding of the field of genomics through lecture, discussion, and practical examples.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Instructor Consent Required)
+  BIO-320:
+    code: BIO 320
+    title: Microbiology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces the biology of microorganisms (bacteria, viruses, protozoa, algae, fungi), their significance as model systems for understanding fundamental cellular processes, and their role in human affairs. Also introduces the biological properties of bacterial and animal viruses, replication, methods of detection, interactions with host cells and multicellular hosts.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-210
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: BIO 210   and BIO 211   with a C- or better)"
+  BIO-322:
+    code: BIO 322
+    title: Plant Pathology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores the biology and control of plant pathogens including fungi, bacteria, viruses, and nematodes. Topics covered will include differences in pathogen morphology, the phylogenetics of plant pathogens, host plant resistance, and the epidemiology of plant pathogens. Course fee may be required.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-210
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: BIO-106
+            minimumGrade: C-
+          - courseId: ENVS-240
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: ( BIO 210   and BIO 211   ) or BIO 106   or ENVS 240   with C- or better]"
+  BIO-330:
+    code: BIO 330
+    title: Vertebrate Physiology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Structure and function of major animal organ systems, with an emphasis on mammalian physiology.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: BIO-210
+            minimumGrade: C-
+          - courseId: BIO-210L
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: BIO-211L
+            minimumGrade: C-
+          - anyOf:
+              - courseId: PHYS-150
+                minimumGrade: C-
+              - courseId: PHYS-220
+                minimumGrade: C-
+              - courseId: PHYS-221
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BIO 210   and BIO 210L   ) and ( BIO 211   and BIO 211L   ) and ( PHYS 150   or PHYS 220   or PHYS 221   ) with a C- or better]"
+  BIO-332:
+    code: BIO 332
+    title: Plant Physiology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Plant Physiology focuses on the structure and function of plants throughout their development from seeds through reproduction. Covers special plant adaptations, plant symbiotic relationships, hormones, nutrition, and biotic and abiotic plant stressors. Discussions and exercises will cover from the biochemical level through the organismal level with many practical examples in agricultural and ecological settings.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-210
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: BIO-106
+            minimumGrade: C-
+          - courseId: BIO-306
+            minimumGrade: C-
+          - courseId: BIO-306L
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: [( BIO 210   and BIO 211)]   or [( BIO 106   )) and (Prereq or Coreq: BIO 306   and BIO 306L   )] with C- or better]"
+  BIO-340:
+    code: BIO 340
+    title: Ecology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Introduces ecological concepts and theory by exploring the marine and terrestrial ecosystems of Monterey Bay. A systems approach teaches how organisms interact with one another and with the natural world around them. Emphasizes population, community, and ecosystem level ecology.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: MATH-150
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BIO-230
+                minimumGrade: C-
+              - courseId: ENVS-240
+                minimumGrade: C-
+              - courseId: BIO-211
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BIO 230   or ENVS 240   or BIO 211   ) and ( MATH 150   ) and ( GE   Area 1A and 1B and 1C and 2) with a C- or better]"
+  BIO-341:
+    code: BIO 341
+    title: Evolution Bio & Pop Genetics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Overview and explanation of evolutionary processes, ranging from microevolutionary changes in allelic frequency due to mutation, genetic drift, gene flow and natural selection to macroevolutionary processes such as speciation, extinction and the evolution of biodiversity.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-210
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: BIO 210   and BIO 211   with a C- or better)"
+  BIO-341L:
+    code: BIO 341L
+    title: Evolution and Population Genetics Laboratory
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Students will participate in laboratory activities, in silico and in vitro, that demonstrate evolutionary processes in action such as mutation, genetic drift, gene flow, and natural selection. Students will conduct an open-ended research project using an in silico instance of evolution. These activities will support learning in the lecture portion of BIO 341   .
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-210
+            minimumGrade: C-
+          - courseId: BIO-210L
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: BIO-211L
+            minimumGrade: C-
+          - courseId: BIO-341
+            minimumGrade: C-
+          - courseId: BIO-311
+            minimumGrade: C-
+          - courseId: MSCI-341
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: BIO 210   and BIO 210L   and BIO 211   and BIO 211L   with a C- or better) and (Coreq: BIO 341   or BIO 311   or MSCI 341   )]"
+  BIO-342:
+    code: BIO 342
+    title: Plant Communities of CA
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Surveys terrestrial ecosystems across California emphasizing the role of climate, soils, water, and human impacts on plant distribution. Includes learning dominant and special status species to prepare students for roles in conservation and resource management. Field trips focus on ecosystems of the Central Coast region and may include one or more weekend field trips. Cross-listed with ENVS 342   . .
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: BIO-230
+            minimumGrade: C-
+          - courseId: ENVS-240
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: BIO 211   or BIO 230   or ENVS 240   with a C- or better)"
+  BIO-344L:
+    code: BIO 344L
+    title: Environmental Biotechnology Lab
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Laboratory course covering techniques for prokaryotic and eukaryotic DNA purification, amplification, subcloning, and sequence analysis, used in the context of providing earth systems information. Additional knowledge and skills acquired include microbial cell culture, primer design, proposal writing. Lab course fee may be charged.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-210
+            minimumGrade: C-
+          - courseId: BIO-210L
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: BIO-211L
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BIO 210   and BIO 210L   ) and ( BIO 211   and BIO 211L   ) with a C- or better]"
+  BIO-347:
+    code: BIO 347
+    title: Working with Marine Mammals
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explores current topics and careers working with marine mammals. Topics include practical knowledge of captive marine mammal husbandry (care and maintenance), training, basic physiology, an overview of common research topics and techniques, as well as public display, education, and current issues in marine mammalogy.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  BIO-356:
+    code: BIO 356
+    title: Zoology Specimen Preparation
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Preparation and care of animal specimens for museums/education. Students learn species identification, relaxation and wet preservation of marine invertebrates, pinning and mounting of insects, and preparation and preservation of salvaged mammals and birds for study skins.
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: BIO-211L
+            minimumGrade: C-
+          - courseId: BIO-230
+            minimumGrade: C-
+          - courseId: ENVS-240
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BIO 211   and BIO 211L   ) or (BIO 230 or ENVS 240   with a C- or better]"
+  BIO-360:
+    code: BIO 360
+    title: Natural History of California Wildlife
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students learn about the ecology, evolution, and protection status of common or otherwise noteworthy mammals, birds, reptiles, amphibians, and fish of central California. Lab/field components provide students with experience conducting wildlife surveys/research and aid development of field observation and identification skills used in wildlife and environmental consulting professions.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - allOf:
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: BIO-211L
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BIO-230
+                minimumGrade: C-
+              - courseId: ENVS-240
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BIO 211   and BIO 211L   ) or ( BIO 230   or ENVS 240   ) with a C- or better]"
+  BIO-362:
+    code: BIO 362
+    title: Field Ornithology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Field Ornithology introduces students to bird identification and field research techniques, and exposes them to broad concepts in avian biology. Lecture components of the course will cover avian diversity, evolutionary history, physiology, behavior, and ecology. Field and laboratory components of the course will train students in the practical application of standardized field methods, including census techniques, behavioral observations, and habitat measurements.
+    prerequisites:
+      - allOf:
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: BIO-211L
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BIO-230
+                minimumGrade: C-
+              - courseId: ENVS-240
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BIO 211   and BIO 211L   ) or (BIO 230 or ENVS 240   ) with a C- or better]"
+  BIO-364:
+    code: BIO 364
+    title: Mammalogy
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Concepts and skills related to the study of mammals. Lecture components will cover the origin, evolution, adaptation, biogeography, physiology, ecology, and behavior of mammals. Lab/field components will focus on the identification and classification of mammals and provide students with experience using standard field techniques to survey terrestrial mammals native to central California.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: BIO-211L
+            minimumGrade: C-
+          - courseId: BIO-230
+            minimumGrade: C-
+          - courseId: ENVS-240
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BIO 211   and BIO 211L   ) or BIO 230   or ENVS 240   with a C- or better]"
+  BIO-366:
+    code: BIO 366
+    title: The Biology of Birds
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course covers topics such as bird anatomy and physiology, feathers, flight and adaptations, senses and vocalizations, annual cycles (moulting, migration, navigation), social behavior and breeding systems, parental care, feeding and foraging, and conservation.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-210
+          - courseId: BIO-211
+          - courseId: ENVS-240
+    prerequisiteNotes:
+      - "(Prereq: ( BIO 210   AND BIO 211   ) or ENVS 240   )"
+  BIO-370:
+    code: BIO 370
+    title: Developmental Biology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides students with an in-depth understanding of the cellular mechanisms and processes involved in the growth and development of model organisms and humans. This course will cover embryonic development, stem cell regulation, organ development, developmental gene regulation, the interrelationship of developmental mechanisms perturbed in human diseases, and experimental paradigms used to study developmental processes.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-210
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: BIO 210   and BIO 211   with a C- or better)"
+  BIO-378S:
+    code: BIO 378S
+    title: Health Sciences Service Learning
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Through active work directly with people in medically underserved communities, students discover how class, ethnicity, language, and immigration status affect access to health care in the Monterey County. Through service, journaling, readings, and data analysis students will explore medical access issues and the factors that lead to social injustice and inequity.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-210
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BIO 210   and BIO 211   ) with a C- or better]"
+  BIO-379S:
+    code: BIO 379S
+    title: Biology Service Learning
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Addresses strategies for supporting equitable formal and informal educational opportunities and access to healthy natural environments for all, regardless of their cultural, linguistic, or economic background. Service learning placements in schools and other agencies help students deepen their understanding of basic biology principles and methodologies for facilitating learning by diverse students and community members.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-210
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: BIO-106
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BIO 210   and BIO 211   ) or ( BIO 106   ) with a C- or better]"
+  BIO-380:
+    code: BIO 380
+    title: Practical Computing for Scientists
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course will focus on developing a base data science tool set for implementing professional-level computing in scientific experimental design and analysis. Content of the course is geared toward novice students (i.e. those with little or no previous programming experience) who will learn practical computational approaches to modern research problems by applying programming concepts and approaches to real data sets. Areas of study will focus on skills related to data manipulation, management, and analysis.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: STAT-250
+            minimumGrade: C-
+          - courseId: BIO-211
+            minimumGrade: C-
+          - courseId: BIO-211L
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BIO-230
+                minimumGrade: C-
+              - courseId: ENVS-240
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: STAT 250   and [( BIO 211   and BIO 211L   ) or (BIO 230 or ENVS 240   )] with a C- or better]"
+  BIO-392:
+    code: BIO 392
+    title: Biology Seminar Series
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Upper division seminar course based on lectures from visiting faculty and biology professionals from Research 1 institutions, biotechnology, and other biology-related careers. Includes reading and critical analysis of peer reviewed literature, seminar and journal club discussion, and attendance in seminar series. May be repeated for credit up to three times.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-211
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: BIO 211   with a C- or better)"
+  BIO-394:
+    code: BIO 394
+    title: Biology Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Students work with practicing professionals in the community in a volunteer or paid internship that requires biology skills. Academic credit is awarded for documented learning that takes place during the internship and that meets individualized and core internship outcomes.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-211
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: BIO 211   with a C- or better and Instructor Consent)"
+  BIO-395:
+    code: BIO 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Biology. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  BIO-397:
+    code: BIO 397
+    title: Independent Research
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Student and faculty member select topic for research project.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Instructor permission required)
+  BIO-410:
+    code: BIO 410
+    title: Bioinformatics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course explores the theory and application of modern data analysis methods to “Big Data” biological research questions. Students will gain a deeper understanding of topics such as molecular biology, evolution, probability, and computational biology by investigating applied and basic research in genomics and using advanced contemporary analytical approaches on genome-scale research projects.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: BIO-311
+                minimumGrade: C-
+              - courseId: BIO-341
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: GWAR   and ( BIO 311   or BIO 341   ) with a C- or better)"
+  BIO-412:
+    code: BIO 412
+    title: Comparative Genomics
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course will explore the areas of genomics and comparative biology and their relationships to both basic and applied areas of research. Students will learn about the applications and contributions of a “genomic” perspective to topics such as evolutionary biology, functional genetics, genetic structure, and systems biology.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-311
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: (GWAR and BIO 311   ) with a C- or better]"
+  BIO-413:
+    code: BIO 413
+    title: Molecular Genetics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: A comprehensive molecular genetics course for majors covering DNA replication, repair and mutation, regulation of transcription and translation, and analysis and manipulation of genes at the molecular level.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-311
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: (GWAR and BIO 311   ) with a C- or better]"
+  BIO-414:
+    code: BIO 414
+    title: Molecular Cell Biology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Cell structure, membrane transport, cell division, molecular genetics, recombinant DNA, mechanisms of evolution, and the basis of classification. Applies fundamental principles and experimental approaches in four areas of cell biology: cell cycle regulation, signal transduction, intracellular protein transport, and structure and function of cytoskeleton, including cell-cell and cell-substrate interactions. Explores recent advances in the fields of molecular and cell biology."
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-311
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: (GWAR and BIO 311   ) with a C- or better]"
+  BIO-416:
+    code: BIO 416
+    title: Immunology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course introduces the molecular and cellular foundations of immunology. Students will explore the innate and adaptive immune systems, antigen recognition, immune system development, immune responses to infections, autoimmune diseases, immunotherapy, and immunodeficiencies.
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-311
+          - courseId: BIO-320
+          - courseId: CHEM-310
+    prerequisiteNotes:
+      - "(Prereq: BIO 311   or BIO 320   or CHEM 310   )"
+  BIO-420:
+    code: BIO 420
+    title: Marine Invertebrate Zoology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Advanced survey of the biology of invertebrates, stressing comparative functional morphology, evolution, phylogeny, systematics, natural history, behavior, and aspects of physiology and development. Emphasizes the living animal and its habitat.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: MSCI-345
+            minimumGrade: C-
+          - courseId: BIO-330
+            minimumGrade: C-
+          - courseId: BIO-341
+            minimumGrade: C-
+          - courseId: BIO-370
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: MSCI 345   or BIO 330   or BIO 341   or BIO 370   with a C- or better]"
+  BIO-421:
+    code: BIO 421
+    title: Advanced Microbiology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: An in-depth, advanced exploration of the microbial world, covering fundamental principles and their application to modern topics. The course emphasizes critical analysis of scientific literature, discussion of complex microbial processes, and the impacts of microorganisms on humans and the environment.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-320
+            minimumGrade: C-
+          - courseId: BIO-322
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: BIO 320   or BIO 322   with a C- or better]"
+  BIO-430:
+    code: BIO 430
+    title: Marine Experimental Physiology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course uses a group project approach to address a real-world marine environmental physiology problem. This course will increase knowledge retention and integration of concepts in marine science, physiology and biology, and teach students what it is like to work in a research laboratory setting. Includes group capstone project option.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: STAT-250
+            minimumGrade: C-
+          - anyOf:
+              - courseId: MSCI-331
+                minimumGrade: C-
+              - courseId: BIO-310
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: STAT 250   and ( MSCI 331   or BIO 310   ) and GWAR) with a C- or better]"
+  BIO-441:
+    code: BIO 441
+    title: Biology of Fishes
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: An integrative course that explores the biology and diversity of fishes from multiple perspectives, including their evolution, ecology, behavior, biogeography and physiology. The required lab provides an opportunity for students to learn about fish anatomy, aspects of their physiological systems and roles in ecosystems, as well as develop skills in field study, taxonomic identification and specimen preparation.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-340
+          - courseId: BIO-341
+          - courseId: BIO-330
+          - courseId: MSCI-331
+          - courseId: MSCI-340
+          - courseId: MSCI-345
+    prerequisiteNotes:
+      - "(Prereq or Coreq: BIO 340   or BIO 341   or BIO 330   or MSCI 331   or MSCI 340   or MSCI 345   )"
+  BIO-444:
+    code: BIO 444
+    title: Molecular Ecology & Evolution
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students will learn to apply molecular laboratory and analytical methods to questions in the fields of ecology and evolution and use these methods to execute and present a research project.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - allOf:
+          - anyOf:
+              - courseId: BIO-311
+                minimumGrade: C-
+              - courseId: BIO-341
+                minimumGrade: C-
+              - courseId: MSCI-341
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: GWAR and ( BIO 311   or BIO 341   or MSCI 341   ) with a C- or better]"
+  BIO-448:
+    code: BIO 448
+    title: Freshwater Ecology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: In-depth exploration of freshwater and estuarine ecosystems, including aquatic organisms and their taxonomy; the ecology of freshwater ecosystems; and the influences of biogeochemistry, water quality, hydrology, and geomorphology on biota. The course focuses on applying ecological and chemical knowledge to assessing and managing freshwater ecosystems. Will include weekend or odd-hour field trips with concurrent field/laboratory section.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - allOf:
+          - courseId: BIO-340
+            minimumGrade: C-
+          - anyOf:
+              - courseId: ENVS-350
+                minimumGrade: C-
+              - courseId: ENVS-332
+                minimumGrade: C-
+              - courseId: MSCI-350
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: BIO 340   and GWAR and ( ENVS 350   or ENVS 332   or MSCI 350   ) with a C- or better]"
+  BIO-449:
+    code: BIO 449
+    title: Community Ecology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course will provide students with an in-depth exploration of concepts examining how species interactions shape the structure and composition of plant and animal communities. Lecture covers topics on species interactions such as competition, predation, herbivory, and mutualism, as well as principle theories explaining coexistence and species diversity. Discussion explores classic and modern literature representative of research in the field, with an emphasis on communities in California.
+    offered:
+      availability: periodic
+    prerequisites:
+      - allOf:
+          - courseId: STAT-250
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BIO-340
+                minimumGrade: C-
+              - courseId: MSCI-340
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: ( BIO 340   or MSCI 340   ) AND STAT 250   with a C- or better]"
+  BIO-461:
+    code: BIO 461
+    title: Eukaryotic Molecular Biology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Advanced project-based lab and lecture course develops skills and understanding of current techniques in eukaryotic genetics and molecular biology. Six hours lab and two hours lecture per week.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-311
+            minimumGrade: C-
+          - courseId: BIO-311
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: BIO 311   with a C- or better) or (Coreq: BIO 311   )]"
+  BIO-491:
+    code: BIO 491
+    title: Biology Honors Capstone
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Assists students in completing their biology research capstone project. These projects are independent in nature, and should be approved by the capstone course instructor and your research mentor prior to enrollment. The student’s research mentor may have been on the CSUMB campus, or as a Summer REU on another campus, or research at an associated research agency or institution.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GWAR with a C- or better and Instructor Consent)"
+  BIO-492:
+    code: BIO 492
+    title: Course-Based Capstone
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Assists students enrolled in a capstone project course in preparing their final written report, poster, and/or oral presentation for their Senior Capstone Project. Students must have completed an approved Biology Capstone Project Course prior to enrolling in BIO 492.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: BIO-420
+            minimumGrade: C-
+          - courseId: BIO-421
+            minimumGrade: C-
+          - courseId: BIO-425
+            minimumGrade: C-
+          - courseId: BIO-430
+            minimumGrade: C-
+          - courseId: BIO-444
+            minimumGrade: C-
+          - courseId: BIO-448
+            minimumGrade: C-
+          - courseId: BIO-449
+            minimumGrade: C-
+          - courseId: BIO-461
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "[(Prereq: GWAR with a C- or better) and (Prereq or Coreq: BIO 420   or BIO 421   or BIO 425   or BIO 430   or BIO 444   or BIO 448   or BIO 449   or BIO 461   )]"
+  BIO-493:
+    code: BIO 493
+    title: Biology Education Capstone
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 1
+    description: Provides a culminating Biology Education experience, which may include curriculum development, enhancement, and/or assessment that is publicly presented as part of the Capstone Festival. Course should be taken concurrently with a biology education research experience or following an education-related service learning experience or internship.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - allOf:
+          - courseId: BIO-311
+            minimumGrade: C-
+          - anyOf:
+              - courseId: BIO-341
+                minimumGrade: C-
+              - courseId: BIO-330
+                minimumGrade: C-
+    prerequisiteNotes:
+      - "[Prereq: GWAR and BIO 311   and ( BIO 341   or BIO 330   ) with a C- or better]"
+  BIO-494:
+    code: BIO 494
+    title: Advanced Biology Internship
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Students work with practicing professionals in the community in a volunteer or paid internship that requires advanced biology knowledge and skills, and synthesis of biology with other disciplines. Academic credit is awarded for documented learning that takes place during the internship and that meets individualized and core internship outcomes.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Instructor Consent Required)
+  BIO-495:
+    code: BIO 495
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Biology. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  BIO-497:
+    code: BIO 497
+    title: Independent Research
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Student and faculty member select topic for research project.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: Senior Standing) (Instructor Consent Required)"
+  BIO-510:
+    code: BIO 510
+    title: Bioinformatics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course emphasizes the integration of modern biological methods and research questions with the computationally intensive approaches necessary for analyzing the associated ¿Big Data.¿ Students will gain a deeper understanding of topics such as molecular biology, evolution, probability, and computational tools by implementing genomic approaches to both applied and basic research fields in order to conduct bioinformatic analysis using data from genomic-scale research projects.
+    offered:
+      terms:
+        - spring
+  BIO-544:
+    code: BIO 544
+    title: Molecular Ecology and Evolution
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Students will learn to apply molecular laboratory and analytical methods to questions in the fields of ecology and evolution and use these methods to execute and present a research project.
+    offered:
+      terms:
+        - fall
+  BIO-549:
+    code: BIO 549
+    title: Community Ecology
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: This course will provide students with an in-depth exploration of concepts examining how species interactions shape the structure and composition of plant and animal communities. Lecture covers topics on species interactions such as competition, predation, herbivory, and mutualism, as well as principle theories explaining coexistence and species diversity. Discussion explores classic and modern literature representative of research in the field, with an emphasis on communities in California.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: ENVS-550
+          - courseId: ENVS-550
+    prerequisiteNotes:
+      - "[(Prereq: ENVS 550   ) or (Coreq: ENVS 550   )]"
+  BIO-595:
+    code: BIO 595
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Biology. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  BIO-597:
+    code: BIO 597
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 2
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Instructor Consent Required)

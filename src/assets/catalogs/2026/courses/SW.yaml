@@ -1,0 +1,733 @@
+schemaVersion: 1
+prefix: SW
+courses:
+  SW-205:
+    code: SW 205
+    title: Introduction to Social Work
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course examines the historical development, values, orientation, and professional standards of social work. It focuses on the terminology and broader systems of social welfare. Emphasis is placed on the various fields of practice including those agencies whose primary function is financial assistance, corrections, mental health, and protective services. Upon completion, students will be able to demonstrate an understanding of the knowledge, values, and skills of the social work professional.
+    offered:
+      terms:
+        - fall
+        - spring
+  SW-310:
+    code: SW 310
+    title: Principles of Social Work
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides students with knowledge of the history, mission, values and ethics, practice settings, and foundational knowledge of the social work profession. Emphasizes social work practice skills with diverse individuals, families, and populations at risk.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1C with a C- or better)"
+  SW-405:
+    code: SW 405
+    title: Social Work Case Management
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course presents an ecological, strength-based perspective to the problem-solving process. It is designed to equip students already versed in the fundamentals of the social work field with generalist practice knowledge and skills in engagement, assessment, interviewing, and evaluation with diverse populations.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SW-205
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and ( GWAR   ) and ( SW 205   ) with a C- or better)"
+  SW-406:
+    code: SW 406
+    title: Social Work with Groups
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course will cover stages of group development, group leadership, task groups, self-help groups, educational groups, treatment groups, diversity within groups, inter-group conflict, and working with organizations and communities.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SW-205
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and ( GWAR   ) and ( SW 205   ) with a C- or better)"
+  SW-415:
+    code: SW 415
+    title: Social Work with Children, Youth and Families
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This undergraduate elective is an overview of early childhood disorders, child maltreatment, and the public child welfare system, case management, treatment planning, and case monitoring. It will also cover family systems and supports, and common settings for social workers specializing in practice with children, youth, and families. It emphasizes the skills of engagement, assessment, and intervention using a strengths perspective.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - anyOf:
+          - courseId: SW-205
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and ( GWAR   ) and ( SW 205   ) with a C- or better)"
+  SW-425:
+    code: SW 425
+    title: Social Welfare Policy
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces undergraduate students to social policy development in the United States and to policy analysis. It is specifically designed to strengthen students’ recognition of social, political, and economic forces that shape social welfare policy, how policy affects people’s lives, and ways to influence it. The course covers basic concepts, theories, and critiques social welfare policies relevant to generalist social work practice.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: SW-205
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and ( GWAR   ) and ( SW 205   ) with a C- or better)"
+  SW-435:
+    code: SW 435
+    title: Introduction to Substance Use Disorders
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is designed to introduce the field of substance use disorders to social workers. It will provide specific information recommended by the Substance Abuse and Mental Health Services Administration (SAMHSA) including moderation and non 12-Step interventions. This course will also include an overview of the policy and practice issues related to working with substance users and evidence-based interventions to assist families. A strengths-based recovery perspective is emphasized.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SW-205
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and ( GWAR   ) and ( SW 205   ) with a C- or better)"
+  SW-455:
+    code: SW 455
+    title: Social Work with Older Adults
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Overview of the impact of aging, using the biopsychosocial-spiritual, ecological, and strengths perspectives. Federal, state, and local programs, services, and social policies are reviewed. Generalist practice models are introduced for working with older adults and their families, with a focus on empowerment. The roles of bachelor-level social workers and career opportunities are examined.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SW-205
+            minimumGrade: C-
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and ( GWAR   ) and ( SW 205   ) with a C- or better)"
+  SW-495:
+    code: SW 495
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Explores a particular topic in social work. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic
+  SW-497:
+    code: SW 497
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      availability: periodic
+  SW-501:
+    code: SW 501
+    title: Diversity & Social Justice
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course will explore the historical context of diversity and oppression, models and process of group and intergroup relations, and cultural variables significant to ethnic, racial, and minority populations. It will also explore the role of social workers as border-crosser, cultural learner, and change agent. There will be opportunities for cross-cultural dialogue, critical reflection and skills development within an intersectionality and human rights framework .
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - (Restricted to MSW Students.)
+  SW-510:
+    code: SW 510
+    title: Foundations of Social Work
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Addresses the history, mission, values and service delivery system of the social work profession. It will provide a framework for generalist practice that emphasizes strengths and person-in-the-environment perspectives, an empowerment approach, and the NASW Code of Ethics. The course will also explore various fields of practice in the social work profession, emphasizing knowledge and skills for effective practice and the development of professional identity.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - (Restricted to MSW Students)
+  SW-520:
+    code: SW 520
+    title: "Generalist Practice: Individuals and Families"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This foundation generalist practice course prepares students for direct services work with individuals and families through an introduction to strengths-based assessments and effective, evidence-informed interventions using a cross-cultural perspective. The course emphasizes interviewing, assessment, case planning, and case management skills, and knowledge of theoretical frameworks as they apply to individuals and families.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "[(Coreq: SW 596   ) and (Restricted to MSW Students)]"
+  SW-530:
+    code: SW 530
+    title: "Generalist Practice: Groups"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This foundation generalist practice course prepares students for direct practice with groups through an introduction to strengths-based assessment and effective, evidence-informed intervention using a cross-cultural perspective. It prepares students to understand group dynamics and formation by learning and applying various theoretical frameworks to group work. It is highly experiential with opportunities to facilitate groups in class. May be offered as a classroom or hybrid-based course
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - anyOf:
+          - courseId: SW-598
+          - courseId: SW-540
+    prerequisiteNotes:
+      - "[(Coreq: SW 598   ) and (Prereq or Coreq: SW 540   ) and (Restricted to MSW Students)]"
+  SW-531:
+    code: SW 531
+    title: "Generalist Practice III: Community and Organizational Practice"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This foundation generalist practice course introduces students to tools and strategies for agency and community engagement, community organizing, and understanding social justice theory as it is practiced in the community and organizations in which social workers serve. It develops students capacities to critically engage in reflection in order to address oppression and utilize the concept of social justice to alleviate human suffering.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: SW-501
+    prerequisiteNotes:
+      - "[(Prereq: SW 501   ) and (Restricted to MSW Students)]"
+  SW-540:
+    code: SW 540
+    title: Cross-Cultural Human Behavior in the Social Environment
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This graduate foundation course emphasizes the development, resilience, behavioral assessment, and functioning of persons and families across the life span from a cross-cultural perspective utilizing eco-systems theory. Special topics of family acculturation, immigration, generational conflicts, gender, ability, poverty, and human sexuality will be explored using an anti-oppressive framework.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - (Restricted to MSW Students)
+  SW-550:
+    code: SW 550
+    title: Social Work Research
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This graduate course is an introduction to social work research, emphasizing the importance of using critical thinking skills in the research process. It will cover all of the steps, including planning, selecting a research design, reviewing the literature, and techniques for collecting, organizing, and interpreting data. Computer applications will be utilized to illustrate how to analyze data.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - (Restricted to MSW Students)
+  SW-551:
+    code: SW 551
+    title: Data Analysis
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Course content will cover techniques of quantitative and qualitative data analysis; interpreting and using statistics to improve social work practice; probability theory and hypothesis testing, descriptive and inferential statistical methods. Diversity-sensitive research and ethical issues will be imbedded and discussed in relation to social work research.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: SW-550
+    prerequisiteNotes:
+      - "(Prereq: SW 550   ) (Restricted to MSW Students)"
+  SW-560:
+    code: SW 560
+    title: Community Research Methods
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This graduate foundation research course utilizes scientific inquiry methods to conduct a community assessment. This course emphasizes the importance of cultural and diversity awareness in community collaboration. Community assessment tools include archival records searching, use of existing databases, Geographic Information Systems, focus groups, and survey methods. Service/program development and evaluation plans will be developed.
+    offered:
+      availability: periodic
+    prerequisites:
+      - courseId: SW-550
+    prerequisiteNotes:
+      - "(Prereq: SW 550   ) (Restricted to MSW Students)"
+  SW-562:
+    code: SW 562
+    title: Social Work in the Latino Community
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: The elective graduate course provides a comprehensive Latino practice model and reviews promising practices for working with Latino families across generational cultural values, psychosocial and health challenges. It emphasizes effective engagement, assessment, intervention, and evaluation for this diverse ethnic group.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: SW-540
+    prerequisiteNotes:
+      - "(Prereq: SW 540   ) (Restricted to MSW Students)"
+  SW-563:
+    code: SW 563
+    title: Social Work Conflict Resolution
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This graduate course focuses on the skills of conflict resolution, negotiation, mediation, and advocacy in interpersonal and inter-organizational settings. These skills are needed to provide collaborative leadership in promoting changes in the service delivery system and to improve quality of service.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: SW-540
+    prerequisiteNotes:
+      - "(Prereq: SW 540   ) (Restricted to MSW Students)"
+  SW-564:
+    code: SW 564
+    title: Trauma-Informed Practice
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This graduate elective course is designed to enhance practitioners’ empathic understanding of the nature of a traumatic experience from the child’s perspective, and how traumatic experiences and their aftermath may influence the person’s life. This focus on the impact of trauma on the child and family provides a foundation for assessment, crisis intervention, and intervention planning leading to the provision of effective, tailored services that reflect the client’s unique needs and strengths.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: SW-540
+    prerequisiteNotes:
+      - "(Prereq: SW 540   ) (Restricted to MSW Students)"
+  SW-565:
+    code: SW 565
+    title: School Social Work
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This elective graduate course focuses on an interdisciplinary approach to resolving school-related problems, and on social workers as facilitators and advocates in aiding students, families, schools, and communities to achieve educational goals. It focuses on the history, policies, theories and skills needed to provide services within the environment of the local educational agency. School is viewed as a social institution within its societal context. Required for PPS credential in Social Work.
+    offered:
+      availability: periodic
+    prerequisites:
+      - anyOf:
+          - courseId: SW-540
+          - courseId: SW-696
+          - courseId: SW-698
+    prerequisiteNotes:
+      - "[(Prereq: SW 540   ) and (Coreq: SW 696   or SW 698   )] (Restricted to MSW Students)"
+  SW-566:
+    code: SW 566
+    title: Crafting a Grant Proposal
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: "Provides an introduction to the process of securing grant funding for public and nonprofit organizations. Students will develop knowledge and skill in the areas of: qualifying prospective grantors and evaluation requests for proposals, developing letters of intent, and preparing key components of a successful funding application. Topics will also include fundraising as relationship building, using logic models, and creating program sustainability."
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: SW-540
+    prerequisiteNotes:
+      - "(Prereq: SW 540   ) (Restricted to MSW Students)"
+  SW-567:
+    code: SW 567
+    title: Forensic Social Work
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This class will examine the application of social work principles and practices to questions and issues relating to law and a variety legal systems and settings. In addition, we will examine such topics as ethical challenges, social worker-lawyer and social worker-judge dynamics (both formal and informal), interprofessional collaboration, and essential skills such as forensic interviewing, testifying, and report-writing.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Restricted to MSW Students)
+  SW-568:
+    code: SW 568
+    title: Social Work Study Abroad
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will learn social problems, indigenous resources, governmental attitudes and actions in an international setting. They will analyze the sociopolitical context of a welfare state, applying new perspectives on social service delivery, social policy, and its impact on the well-being of a society’s peoples. Students will develop integrative knowledge about self while studying in a culture different from their own.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[(Restricted to MSW Students) and (Department Consent Required)]"
+  SW-570:
+    code: SW 570
+    title: Social Policy and Analysis
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This graduate foundation course reviews the strengths and weaknesses of the social policy analytical models and frameworks, particularly in light of population diversity. Selected social welfare policy areas are examined to illustrate the policy formation process, the legislative process, the challenges of policy implementation, directions for new policies/programs, and advocacy/action plans.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - (Restricted to MSW Students)
+  SW-595:
+    code: SW 595
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in the major. May be repeated for credit when topics vary.
+    offered:
+      terms:
+        - fall
+        - spring
+  SW-596:
+    code: SW 596
+    title: Foundation Practicum I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This graduate foundation field course emphasizes the development of professional identity and conduct, professional values and ethics, and the skills of client engagement. In addition to classroom sessions, students will participate in an internship at an agency site approved by the MSW program.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Coreq: SW 520   or SW 530   ) (Restricted to MSW Students)"
+  SW-597:
+    code: SW 597
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Student and faculty member select topic of study and number of credits.
+    offered:
+      terms:
+        - fall
+        - spring
+  SW-598:
+    code: SW 598
+    title: Foundation Practicum II
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This graduate foundation field course emphasizes cultural competence, advocacy, and practice evaluation skills with individuals, families, groups, organizations, and communities.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: SW-596
+      - courseId: SW-530
+    prerequisiteNotes:
+      - "[(Prereq: SW 596   ) AND (Coreq: SW 530   ) AND (Restricted to MSW Students)]"
+  SW-600:
+    code: SW 600
+    title: Applied Social Work Research Project
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course guides students through the process of conducting a scientific review of a topic relevant to social work practice. Students will identify a topic of interest, conduct a review of the literature, organize and synthesize their findings and write a final research report.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: SW-550
+      - courseId: SW-696
+    prerequisiteNotes:
+      - "[((Prereq: SW 550   ) AND (Restricted to MSW Students)) AND (Coreq: SW 696   )]"
+  SW-610:
+    code: SW 610
+    title: Social Work Practice in Behavioral Health
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This advanced elective course introduces content about client populations, social policy, and practice in the area of Behavioral Health. This course will emphasize the policies, programs, and services related to behavioral health as well as evidence-informed interventions and skills for effective practice. Special topics include the etiology of mental illness, dual diagnosis clients, consumer participation, and culturally relevant services.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: SW-520
+      - courseId: SW-540
+    prerequisiteNotes:
+      - "[(Prereq: SW 520   and SW 540   ) and (Restricted to MSW Students)]"
+  SW-611:
+    code: SW 611
+    title: Social Work with Children Youth & Families
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This advanced elective course introduces content about client populations, social policy, and practice in the area of children, youth, and families. This course will emphasize the policies, programs, and services related to child welfare as well as evidence-informed interventions and skills for effective practice. Special topics include child development, parenting practices, legal and ethical mandated reporting, and culturally relevant services.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: SW-540
+    prerequisiteNotes:
+      - "[(Prereq: SW 540   ) and (Restricted to MSW Students)]"
+  SW-612:
+    code: SW 612
+    title: Gerontological Social Work
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This advanced elective course provides students with an overview of gerontological social work with emphasis on principle of practice, application of research and assessment, and the formulation of policies as they relate to older adults. It defines the role of the social worker from a gerontological perspective. Students will be introduced to special populations that are most vulnerable as they age, including women and people of color, the disabled, and sexual minorities.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: SW-540
+    prerequisiteNotes:
+      - "[(Prereq: SW 540   ) and (Restricted to MSW Students)]"
+  SW-620:
+    code: SW 620
+    title: "Advanced Generalist Practice: Engagement and Assessment"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This advanced practice course focuses on culturally sensitive clinical assessment, risk assessment, and diagnosis; case planning with the goals of motivational engagement; and working with diverse, non-voluntary clients.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "[(Coreq: SW 696   )) and (Restricted to MSW students)]"
+  SW-621:
+    code: SW 621
+    title: DSM Analysis & Application
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course focuses on culturally sensitive diagnostic assessment, formulation and treatment planning. It builds on academic and practice foundations of Generalist and Advanced Generalist Practice and Field courses to help students identify key symptoms and diagnostic criteria for frequently diagnosed mental disorders in children and adults, including differential diagnoses and comorbid conditions.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[(Coreq: SW 596 OR SW 598 OR SW 696 OR SW 698) and (MSW students only)]"
+  SW-630:
+    code: SW 630
+    title: "Advanced Generalist Practice: Intervention and Evaluation"
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This advanced practice course builds on the theory and techniques of SW 620 with emphases on application and evaluation of effective intervention strategies with diverse clients in a wide range of settings. Case scenarios will be used intensively.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "[(Coreq: SW 698   ) and (Restricted to MSW Students)]"
+  SW-660:
+    code: SW 660
+    title: Substance Use Interventions
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This elective graduate course provides students with social work practice skills related to the area of substance abuse such as use, abuse, and dependency issues and their impacts on the individual, family and community systems. Students will learn effective engagement, assessment, intervention, and evaluation strategies for addressing the consequences of substance abuse.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - (Restricted to MSW Students)
+  SW-661:
+    code: SW 661
+    title: Leadership and Administration
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course addresses administrative, management, leadership, and supervisory skills necessary for leadership practice. Included are staff hiring, supervision, evaluation, and termination; working with boards and volunteers, leadership styles, strategic planning, and current best practices in administration. This course of leadership challenges and strategies will include theoretical and practice models that will incorporate selected exemplars on diversity, equity and inclusion.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Coreq: SW 630   )"
+  SW-662:
+    code: SW 662
+    title: Advanced Family System Theories and Interventions
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This graduate elective course focuses on advancing student’s knowledge and skills in working with families. This course utilizes a family systems perspective, integrating concepts of family stress and resilience, family life cycle theory, engagement, assessment, and interventions. Classic schools of family therapy will also be discussed and critiqued, with an emphasis on those substantiated by evidence-based research. Specific issues commonly faced by families, such as poverty, violence, race/ethnicity, gender, and oppression will be examined. Diversity in families and family functioning will be addressed in addition to population-based family interventions.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "[(Coreq: SW 620   or SW 630   ) AND (Restricted to MSW Students)]"
+  SW-663:
+    code: SW 663
+    title: Crisis Intervention
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: The elective graduate course covers theoretical and practical approaches to crisis intervention. It will advance student’s knowledge of culturally competence practices and current evidence-based models on crisis intervention. Resiliency in survivors is presented as basis for interventions.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: SW-540
+    prerequisiteNotes:
+      - "[(Prereq: SW 540   ) AND (Restricted to MSW Students)]"
+  SW-664:
+    code: SW 664
+    title: Advanced Models of Clinical Practice
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This elective graduate course surveys a range of treatment models supportive in behavioral health settings. Students explore and contrast treatment models and methods, examine assumptions in different theories, and strategies for managing resistances. Various approaches such as psychodynamic, cognitive-behavioral, and solution-oriented therapies will be covered. Client empowerment across the lifespan is highlighted.
+    prerequisites:
+      - courseId: SW-520
+      - courseId: SW-540
+      - courseId: SW-530
+    prerequisiteNotes:
+      - "[(Prereq: SW 520   and SW 540   ) AND (Coreq: SW 530   ) AND (Restricted to MSW Students)]"
+  SW-666:
+    code: SW 666
+    title: Integrated Health Care
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This graduate elective course introduces students to the direct practice of integrated health in primary care. Students will become knowledgeable of the roles of behavioral health providers working in primary care settings, theories and models of care, and cross-cultural issues. They will develop skills in engagement, assessment, intervention, and practice evaluation. Students will develop competencies in engaging and supporting patients across a range of health conditions.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: SW-540
+    prerequisiteNotes:
+      - "[(Prereq: SW 540   ) AND (Restricted to MSW Students)]"
+  SW-669:
+    code: SW 669
+    title: Veterans & Military Families
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This advanced elective course surveys the many facets of working with veterans and military families including Military Culture and Language, Title 38, the structure and history of the Department of Veteran Affairs, Veteran Health and Mental Health Issues, generational differences among veterans, VA Benefits and Eligibility, etc. Students will gain basic knowledge and skills essential for working with veterans and their families.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisites:
+      - courseId: SW-540
+    prerequisiteNotes:
+      - "[(Prereq: SW 540   ) AND (Restricted to MSW Students)]"
+  SW-670:
+    code: SW 670
+    title: Social Policy & Advocacy
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Building on the foundation content of SW 570, this advanced course focuses on policy practice and advocacy. The effects of social policies on marginalized and vulnerable populations will be analyzed via goal versus policy outcomes. Students will learn the nature of the legislative policy-making process, coalition and interest groups, politics, lobbying, and advocacy skills and strategies.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: SW-570
+    prerequisiteNotes:
+      - "[(Prereq: SW 570   ) AND (Restricted to MSW Students)]"
+  SW-695:
+    code: SW 695
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    description: Studies a particular topic in the major. May be repeated for credit when topics vary.
+    offered:
+      terms:
+        - spring
+  SW-696:
+    code: SW 696
+    title: Advanced Practicum I
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This advanced field seminar introduces students to social work practice with selected populations. It facilitates the integration of cross-cultural knowledge and skills in a selected area of practice. The seminar emphasizes prevention and intervention strategies to enhance client capacities as well as advancing skills in crisis intervention.
+    offered:
+      terms:
+        - fall
+    prerequisites:
+      - courseId: SW-596
+      - courseId: SW-598
+      - courseId: SW-620
+    prerequisiteNotes:
+      - "[(Prereq: SW 596   AND SW 598   ) AND (Coreq: SW 620   ) AND (Restricted to MSW Students)]"
+  SW-697:
+    code: SW 697
+    title: Independent Study
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 6
+    offered:
+      terms:
+        - fall
+        - spring
+  SW-698:
+    code: SW 698
+    title: Advanced Practicum II
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This advanced field seminar continues to facilitate the integration of cross-cultural knowledge and practice in a specialized area. The seminar emphasizes continued skill building in intervention and intervention strategies to enhance client capacities as well as advancing practitioner skills in crisis intervention.
+    offered:
+      terms:
+        - spring
+    prerequisites:
+      - courseId: SW-596
+      - courseId: SW-598
+      - courseId: SW-696
+      - courseId: SW-630
+    prerequisiteNotes:
+      - "[(Prereq: SW 596   AND SW 598   AND SW 696   ) AND (Coreq: SW 630   ) AND (Restricted to MSW Students)]"

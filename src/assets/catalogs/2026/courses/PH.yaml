@@ -1,0 +1,167 @@
+schemaVersion: 1
+prefix: PH
+courses:
+  PH-207:
+    code: PH 207
+    title: Introduction to Public Health
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: The course introduces the principles and practices of community health including multicultural definitions of health and illness, health education and health promotion, demography, epidemiology, environmental health, and the health of diverse populations throughout the lifespan. Emphasizes methods of assessing the health status of populations and developing community health programs.
+    offered:
+      terms:
+        - fall
+        - spring
+  PH-320:
+    code: PH 320
+    title: Principles of Public Health
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Covers the principles and practices of community health including multicultural definitions of health and illness, health education and health promotion, demography, epidemiology, environmental health, nutrition, and the health of diverse populations throughout the lifespan. Emphasizes methods of assessing the health status of populations and developing community health programs.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1C with a C- or better)"
+  PH-407:
+    code: PH 407
+    title: Multicultural Health Education
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides students with an opportunity to develop an understanding of current health education theory and intervention models for promoting personal and community health and preventing disease in diverse population groups. Improves students’ knowledge, understanding, skills, and effectiveness in planning both personal and community health promotion and disease prevention programs.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and GWAR with a C- or better)"
+  PH-408:
+    code: PH 408
+    title: Principles of Epidemiology
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Students will learn and apply epidemiological concepts across various public health domains, including health risk assessment, exploration of health inequities and disparities, health policy, and human services. Through lectures and problem-solving exercises, students will study the causes, risks, and spread of diseases in human populations. By employing critical thinking and quantitative methods, students will engage in problem-solving activities that utilize epidemiological techniques to characterize, assess, and promote population health. They will also learn to apply an evidence-based, population health approach to address health issues and reduce disparities. Active and collaborative learning will be emphasized through team activities, individual projects, case studies, and group discussions.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Areas 1A and 1B and 1C and 2 with a C- or better)"
+  PH-417:
+    code: PH 417
+    title: Global Women’s Health and Social Issues
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: The purpose of this course is to introduce students to the social, cultural, political and economic factors that affect women’s health and social status across cultures, countries, and regions of the world. The concepts of public health as social justice and policy making and advocacy will be discussed as mechanisms to improve women’s health through social and political action to change the underlying conditions that contribute to global women’s health status.
+    offered:
+      terms:
+        - fall
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 with a C- or better)"
+  PH-427:
+    code: PH 427
+    title: Topics in Health Education
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This seminar will provide students with opportunities to explore and study current issues in health education planning and development. Topics will include innovative approaches to addressing major challenges in health education and promotion in the U.S. and selected comparative countries.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and GWAR with a C- or better)"
+  PH-437:
+    code: PH 437
+    title: Topics in Health Policy
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This seminar will provide students with opportunities to explore and study current issues and innovations in health policy analysis and development. Topics will include cutting-edge policy approaches addressing major challenges in public health and medical systems in the U.S. and selected comparative countries.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and GWAR   with a C- or better)"
+  PH-447:
+    code: PH 447
+    title: Food Policy, Culture & Health
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces students to the historical, cultural, economic and political influences on and interrelationships between food policy, nutrition and health. We will explore the factors that influence our efforts to improve nutrition and ensure food security and sustainability through community food production/choices, global food markets, industrial food production, and commercial and public health influences on food choices.
+    offered:
+      terms:
+        - spring
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C with a C- or better)"
+  PH-457:
+    code: PH 457
+    title: Health Systems & Policy
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Introduces students to the public health policy issues facing the United States and other nations. We will explore the population’s health status and determinants of health as they relate to organization of the health care systems, rising costs, accessibility of services, ethical use of technology, effectiveness of medical care, utilization of Western medical and alternative forms of care and the role of public health professionals and the importance of prevention.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "[Prereq: ( GE   Area 1A and 1B and 1C and 2 and GWAR with a C- or better)"
+  PH-467:
+    code: PH 467
+    title: Social Entrepreneurship of Change
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This seminar will provide students with opportunities to develop an understanding and application of the advocacy and promotion roles of social entrepreneurship in service to the goal of “health in all policies” within fields of public health, medical, and social care systems. Students will develop skills in mapping community health and social needs, developing innovative interventions across sectors to improve population health outcomes and advocating for change.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and GWAR with a C- or better)"
+  PH-477:
+    code: PH 477
+    title: Diseases of Poverty & Wealth
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This seminar will provide students with opportunities to understand and apply the concept of public health as social justice and explore how politics, economics, ideology, and inequity contribute to the unequal distribution of disease in the U.S. With the implementation of national health care reform, provider payments and resource distribution will increasingly be based on improvements in health outcomes for individual patients. This seminar examines classic and current studies on poverty and public health from historical and interdisciplinary perspectives.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and GWAR with a C- or better)"
+  PH-487:
+    code: PH 487
+    title: Sexual Health Education and Training
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: This course is designed to provide students with the opportunity to develop the knowledge, skills, attitudes and resources necessary to provide age-appropriate sexuality education and training in a variety of settings and with diverse populations. It will do this by introducing students to sexuality education content and methodology, developing learning activities and strategies, and preparing evaluation materials that reflect learning and behavior change.
+    offered:
+      terms:
+        - fall
+    prerequisiteNotes:
+      - "(Prereq: GE   Area 1A and 1B and 1C and 2 and GWAR with a C- or better)"
+  PH-495:
+    code: PH 495
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Explores a particular topic in public health. May be repeated for credit when topics vary.
+    offered:
+      availability: periodic

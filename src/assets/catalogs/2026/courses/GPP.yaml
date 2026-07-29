@@ -1,0 +1,25 @@
+schemaVersion: 1
+prefix: GPP
+courses:
+  GPP-650:
+    code: GPP 650
+    title: Money, Media & Policy Making
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Examines the role of money and media in the congressional policy process; the impact of money and media on elections; the state of campaign finance laws and reforms; the influence of television and newspaper journalists on policymakers; and the impact of money and media trends on democracy. Case studies and personal experience will be used to illustrate main lessons.
+    offered:
+      availability: periodic
+  GPP-651:
+    code: GPP 651
+    title: Budget Policy
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Provides an inside view of federal, state, and local budget processes, divided into three modules, with policy experts addressing the political and economic issues important to each level of budget policymaking. Examines Constitutional powers; legislative and executive roles; key budget committees and agencies; special interest groups; federalism; bargaining strategies and consensus building; revenue sources; budget reforms; distribution and equity issues; and other topics.
+    offered:
+      availability: periodic
+    prerequisiteNotes:
+      - (Restricted to MPP Majors)

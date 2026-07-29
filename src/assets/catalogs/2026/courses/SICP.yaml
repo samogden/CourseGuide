@@ -1,0 +1,147 @@
+schemaVersion: 1
+prefix: SICP
+courses:
+  SICP-195:
+    code: SICP 195
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Science Illustration. May be repeated for credit when topics vary.
+  SICP-295:
+    code: SICP 295
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Science Illustration. May be repeated for credit when topics vary.
+  SICP-301:
+    code: SICP 301
+    title: Field Sketching Techniques
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Sketch the sweeping vistas of Big Sur, tide pools of Pacific Grove, streams meandering through giant coastal redwoods, as well as historic Cannery Row. Focus will be on learning to use quick observation & field sketching techniques while experiencing the rich ecosystems of California’s central coast. (Graphite, ink, colored pencil, watercolor).
+  SICP-302:
+    code: SICP 302
+    title: Marine Science Illustration
+    teachingStatus: active
+    credits:
+      minimum: 3
+      maximum: 3
+    description: Explore techniques necessary for illustrating marine subjects and their environments. Starting with a field trip to the Monterey Bay Aquarium, we will draw inspiration from one of the richest marine environments in the earth’s oceans. Current science illustration styles and conventions will be covered, with a focus on watercolor and graphite.
+  SICP-395:
+    code: SICP 395
+    title: Special Topics
+    teachingStatus: active
+    credits:
+      minimum: 1
+      maximum: 4
+    description: Studies a particular topic in Science Illustration. May be repeated for credit when topics vary.
+  SICP-501:
+    code: SICP 501
+    title: Introduction to Science Illustration
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Instruction in black and white techniques, including graphite, pen and ink, and digital media. Attention to the tools and skills essential for creating accurate and effective scientific illustrations.
+  SICP-502:
+    code: SICP 502
+    title: Field Sketching
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Sharpens visual perception, drawing, and design skills through extensive sketching practice. Includes methods for observing, describing, investigating, and identifying natural organisms or phenomena. A broad range of media are explored, including graphite, ink, colored pencil, watercolor and mixed media. Field trips to forest, riparian, coastal and other environments provide varied subject matter from which to draw.
+  SICP-503:
+    code: SICP 503
+    title: Introduction to Digital Media
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Exploration of basic techniques in digital media. Covers basic skills in Adobe Illustrator & Photoshop, workflow and project organization.
+  SICP-504:
+    code: SICP 504
+    title: Science Illustration in Color
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Exploration of the principles of color illustration in both digital and traditional media. Instruction will touch on color theory, color mixing, working with limited palettes, and unique challenges of illustrating natural subjects in color.
+  SICP-505:
+    code: SICP 505
+    title: Applied Techniques in Science Illustration
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: "Builds on skills gained in previous courses to increase professionalism in all areas of science illustration. Topics include improving skills with digital media, work strategies and business practices, and the illustrator/art director relationship. Emphasis on visualization and conceptual/editorial types of illustration: representing abstract, multi-faceted, socially delicate, and/or un-photographable subject matter."
+  SICP-506:
+    code: SICP 506
+    title: Advanced Science Illustration Studio
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Builds on skills in previous classes to futher development of professional skills and personal art practice. Emphasis on development of student portfolio and internship term.
+  SICP-507:
+    code: SICP 507
+    title: Professional Practices for Science Illustrators
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Explores a variety of topics applicable to science illustration professionals such as presentation strategies for display and marketing, social media presence, networking, goal-setting, artist’s statements, and portfolio development.
+  SICP-508:
+    code: SICP 508
+    title: Designing Science Graphics
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Exploration of techniques for integrating text, information, and illustrations into well-organized science graphics. Topics include basic graphic design principles, accessible and inclusive design, and creating diagrams for interpretive media. Covers intermediate illustration techniques in Adobe Photoshop & Illustrator and introduces InDesign and After Effects.
+  SICP-509:
+    code: SICP 509
+    title: Botanical Illustration
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: With herbaria, live specimens, and field drawings as reference, students produce botanical images using a variety of media. Basic plant morphology, dissection studies, plant environments and human usages of plants are integrated into illustration assignments.
+  SICP-510:
+    code: SICP 510
+    title: Zoological Illustration
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Exploration of techniques and challenges specific to illustrating a variety of zoological subjects. Instruction will focus on animal anatomy and diversity and methods of working from various source types to make original zoological illustrations.
+  SICP-511:
+    code: SICP 511
+    title: Motion and 3D in Science Illustration
+    teachingStatus: active
+    credits:
+      minimum: 4
+      maximum: 4
+    description: Exploration of primarily digital techniques for creating animations, motion graphics and 3D renderings relevant to the practice of science illustrators. Emphasis on Adobe, Procreate and Blender programs, with discussion of analog alternatives.
+  SICP-512:
+    code: SICP 512
+    title: Science Illustration Seminar
+    teachingStatus: active
+    credits:
+      minimum: 2
+      maximum: 2
+    description: Seminar series including practical and topical studies on a variety of subjects such as proper handling of natural history specimens, safety and health awareness for illustrators, preparation for a science illustration internship, writing an effective cover letter, and current trends and issues in the field of science illustration.
+  SICP-513:
+    code: SICP 513
+    title: Internship
+    teachingStatus: active
+    credits:
+      minimum: 6
+      maximum: 6
+    description: After the completion of the academic course work, students gain practical, real-life experience in the field of science illustration by completing a minimum ten-week internship at a museum, research institution, aquarium, science magazine, nature center, or graphic arts studio. The internship provides the opportunity for students to hone their skills, meet agreed upon expectations, and network in a professional setting.
