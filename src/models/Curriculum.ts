@@ -1,9 +1,5 @@
 import { parse } from 'yaml'
 import { z } from 'zod'
-import catalogText from '../assets/courses.yaml?raw'
-import planText from '../assets/scd-curriculum.yaml?raw'
-import programsText from '../assets/programs.yaml?raw'
-import minorsText from '../assets/minors.yaml?raw'
 
 const categorySchema = z.enum(['cst', 'math', 'ge-lower', 'ge-upper', 'elective'])
 
@@ -18,7 +14,7 @@ const courseSchema = z.object({
   code: z.string(),
   title: z.string(),
   teachingStatus: z.enum(['active', 'inactive']),
-  credits: z.object({ minimum: z.number().positive(), maximum: z.number().positive() }).strict().refine(value => value.minimum <= value.maximum),
+  credits: z.object({ minimum: z.number().nonnegative(), maximum: z.number().nonnegative() }).strict().refine(value => value.minimum <= value.maximum),
   description: z.string().optional(),
   offered: z.union([
     z.object({ terms: z.array(z.enum(['fall', 'spring'])).min(1) }).strict(),
@@ -60,33 +56,61 @@ const requirementSchema = z.object({
   prerequisites: z.array(prerequisiteSchema).optional(),
 }).strict()
 
-const minorsSchema = z.object({
+const programSchema = z.object({
+  title: z.string(),
+  requirements: z.array(requirementSchema),
+  concentrations: z.record(z.string(), z.object({ title: z.string(), requirements: z.array(requirementSchema) }).strict()),
+}).strict()
+
+const roadmapSchema = z.object({
+  status: z.enum(['verified', 'derived']),
+  plan: planSchema,
+}).strict()
+
+const degreeFileSchema = programSchema.extend({
   schemaVersion: z.literal(1),
-  catalogVersions: z.record(z.string(), z.object({
-    minors: z.record(z.string(), z.object({
-      title: z.string(),
-      requiredCredits: z.number().positive(),
-      note: z.string().optional(),
-      requirements: z.array(requirementSchema),
-    }).strict()),
+  catalogYear: z.string(),
+  id: z.string(),
+  credential: z.string(),
+  college: z.object({ id: z.string(), title: z.string() }).strict(),
+  department: z.object({ id: z.string(), title: z.string() }).strict(),
+  coursePrefixes: z.array(z.string()).min(1),
+  roadmaps: z.record(z.string(), roadmapSchema).default({}),
+}).strict()
+
+const minorFileSchema = z.object({
+  schemaVersion: z.literal(1),
+  catalogYear: z.string(),
+  id: z.string(),
+  title: z.string(),
+  college: z.object({ id: z.string(), title: z.string() }).strict(),
+  department: z.object({ id: z.string(), title: z.string() }).strict(),
+  requiredCredits: z.number().positive(),
+  note: z.string().optional(),
+  requirements: z.array(requirementSchema),
+}).strict()
+
+const courseFileSchema = z.object({
+  schemaVersion: z.literal(1),
+  prefix: z.string(),
+  courses: z.record(z.string(), courseSchema),
+}).strict()
+
+const catalogFileSchema = z.object({
+  schemaVersion: z.literal(1),
+  catalogYear: z.string(),
+  title: z.string(),
+  colleges: z.array(z.object({
+    id: z.string(),
+    title: z.string(),
+    departments: z.array(z.object({ id: z.string(), title: z.string() }).strict()),
   }).strict()),
 }).strict()
 
 const programsSchema = z.object({
   schemaVersion: z.literal(2),
-  programs: z.record(z.string(), z.object({
-    title: z.string(),
-    requirements: z.array(requirementSchema),
-    concentrations: z.record(z.string(), z.object({ title: z.string(), requirements: z.array(requirementSchema) }).strict()),
-  }).strict()),
-  catalogVersions: z.record(z.string(), z.object({
-    title: z.string(),
-    programs: z.record(z.string(), z.object({
-      title: z.string(),
-      requirements: z.array(requirementSchema),
-      concentrations: z.record(z.string(), z.object({ title: z.string(), requirements: z.array(requirementSchema) }).strict()),
-    }).strict()),
-  }).strict()),
+  programs: z.record(z.string(), programSchema),
+  catalogVersions: z.record(z.string(), z.object({ title: z.string(), programs: z.record(z.string(), programSchema) }).strict()),
 }).strict()
 
 export type Category = z.infer<typeof categorySchema>
@@ -99,7 +123,10 @@ export type CatalogVersion = Programs['catalogVersions'][string]
 export type Requirement = z.infer<typeof requirementSchema>
 export type Program = Programs['programs'][string]
 export type Concentration = Program['concentrations'][string]
-export type Minor = z.infer<typeof minorsSchema>['catalogVersions'][string]['minors'][string]
+export type Minor = z.infer<typeof minorFileSchema>
+export type ProgramRoadmap = z.infer<typeof roadmapSchema>
+export type DegreeCatalogEntry = z.infer<typeof degreeFileSchema>
+export type CatalogMetadata = z.infer<typeof catalogFileSchema>
 
 export const defaultCatalogVersion = '2026'
 
@@ -131,11 +158,86 @@ export function canonicalCourseId(value: string): string {
   return match ? `${match[1]}-${match[2]}${match[3]}` : compact
 }
 
-const parsedCatalog = z.object({ schemaVersion: z.literal(1), courses: z.record(z.string(), courseSchema) }).strict().parse(parse(catalogText))
-export const curriculumPlan: CurriculumPlan = planSchema.parse(parse(planText))
-export const programs: Programs = programsSchema.parse(parse(programsText))
+const catalogAssetTexts = import.meta.glob('../assets/catalogs/**/*.yaml', {
+  eager: true,
+  query: '?raw',
+  import: 'default',
+}) as Record<string, string>
+
+const catalogAssets = Object.entries(catalogAssetTexts).map(([path, text]) => ({ path, value: parse(text) }))
+const catalogYearForPath = (path: string): string => {
+  const match = path.match(/\/catalogs\/([^/]+)\//)
+  if (!match) throw new Error(`Catalog asset is missing a catalog-year directory: ${path}`)
+  return match[1]
+}
+const catalogFiles = catalogAssets
+  .filter(asset => asset.path.endsWith('/catalog.yaml'))
+  .map(asset => catalogFileSchema.parse(asset.value))
+const courseFiles = catalogAssets
+  .filter(asset => asset.path.includes('/courses/'))
+  .map(asset => ({ catalogYear: catalogYearForPath(asset.path), file: courseFileSchema.parse(asset.value) }))
+const degreeFiles = catalogAssets
+  .filter(asset => asset.path.includes('/programs/'))
+  .map(asset => ({ catalogYear: catalogYearForPath(asset.path), file: degreeFileSchema.parse(asset.value) }))
+const minorFiles = catalogAssets
+  .filter(asset => asset.path.includes('/minors/'))
+  .map(asset => ({ catalogYear: catalogYearForPath(asset.path), file: minorFileSchema.parse(asset.value) }))
+
+if (catalogFiles.length === 0) throw new Error('No catalog metadata files were found.')
+
+const catalogMetadataByYear = new Map(catalogFiles.map(catalog => [catalog.catalogYear, catalog]))
+const coursesByCatalogYear = new Map<string, Record<string, z.infer<typeof courseSchema>>>()
+for (const { catalogYear, file: courseFile } of courseFiles) {
+  if (!catalogMetadataByYear.has(catalogYear)) throw new Error(`Course prefix ${courseFile.prefix} does not belong to a known catalog year.`)
+  const existing = coursesByCatalogYear.get(catalogYear) ?? {}
+  for (const [courseId, course] of Object.entries(courseFile.courses)) {
+    if (!courseId.startsWith(`${courseFile.prefix}-`)) throw new Error(`Course ${courseId} does not match ${courseFile.prefix}.yaml.`)
+    if (existing[courseId]) throw new Error(`Duplicate course ID in ${catalogYear}: ${courseId}`)
+    existing[courseId] = course
+  }
+  coursesByCatalogYear.set(catalogYear, existing)
+}
+
+const programRecordsByYear = new Map<string, Record<string, Program>>()
+const roadmapRecords = new Map<string, ProgramRoadmap>()
+const degreeRecords = new Map<string, DegreeCatalogEntry>()
+for (const { catalogYear: pathCatalogYear, file: degree } of degreeFiles) {
+  if (degree.catalogYear !== pathCatalogYear) throw new Error(`Program ${degree.id} is in ${pathCatalogYear} but declares ${degree.catalogYear}.`)
+  if (!catalogMetadataByYear.has(degree.catalogYear)) throw new Error(`Program ${degree.id} references unknown catalog year ${degree.catalogYear}.`)
+  const records = programRecordsByYear.get(degree.catalogYear) ?? {}
+  if (records[degree.id]) throw new Error(`Duplicate program ID in ${degree.catalogYear}: ${degree.id}`)
+  records[degree.id] = { title: degree.title, requirements: degree.requirements, concentrations: degree.concentrations }
+  programRecordsByYear.set(degree.catalogYear, records)
+  degreeRecords.set(`${degree.catalogYear}/${degree.id}`, degree)
+  for (const [degreeType, roadmap] of Object.entries(degree.roadmaps)) roadmapRecords.set(`${degree.catalogYear}/${degree.id}/${degreeType}`, roadmap)
+}
+
+const minorRecordsByYear = new Map<string, Record<string, Minor>>()
+for (const { catalogYear: pathCatalogYear, file: minor } of minorFiles) {
+  if (minor.catalogYear !== pathCatalogYear) throw new Error(`Minor ${minor.id} is in ${pathCatalogYear} but declares ${minor.catalogYear}.`)
+  if (!catalogMetadataByYear.has(minor.catalogYear)) throw new Error(`Minor ${minor.id} references unknown catalog year ${minor.catalogYear}.`)
+  const records = minorRecordsByYear.get(minor.catalogYear) ?? {}
+  if (records[minor.id]) throw new Error(`Duplicate minor ID in ${minor.catalogYear}: ${minor.id}`)
+  records[minor.id] = minor
+  minorRecordsByYear.set(minor.catalogYear, records)
+}
+
+const programCatalogSource = {
+  schemaVersion: 2 as const,
+  programs: programRecordsByYear.get(defaultCatalogVersion) ?? {},
+  catalogVersions: Object.fromEntries(catalogFiles.map(catalog => [catalog.catalogYear, {
+    title: catalog.title,
+    programs: programRecordsByYear.get(catalog.catalogYear) ?? {},
+  }])),
+}
+export const programs: Programs = programsSchema.parse(programCatalogSource)
 export const catalogVersions = programs.catalogVersions
-export const minors = minorsSchema.parse(parse(minorsText))
+export const catalogMetadata = Object.fromEntries(catalogFiles.map(catalog => [catalog.catalogYear, catalog])) as Record<string, CatalogMetadata>
+export const minors = { catalogVersions: Object.fromEntries(catalogFiles.map(catalog => [catalog.catalogYear, {
+  minors: minorRecordsByYear.get(catalog.catalogYear) ?? {},
+}])) }
+const parsedCatalog = { schemaVersion: 1 as const, courses: coursesByCatalogYear.get(defaultCatalogVersion) ?? {} }
+export const curriculumPlan: CurriculumPlan = roadmapRecords.get(`${defaultCatalogVersion}/bs-computer-science/bs`)?.plan ?? { schemaVersion: 1, years: [] }
 
 /** Courses AS-T students ordinarily completed before entering the upper division. */
 export const transferAssumedCourseIds = new Set(
@@ -159,11 +261,21 @@ export const transferReadinessCourseIds = [
   'MATH-270',
 ] as const
 
-export function planForDegreeType(degreeType: DegreeType): CurriculumPlan {
-  if (degreeType === 'bs') return curriculumPlan
+export function roadmapForProgram(programId: string, degreeType: DegreeType, catalogVersion: string = defaultCatalogVersion): ProgramRoadmap | undefined {
+  const storedRoadmap = roadmapRecords.get(`${catalogVersion}/${programId}/${degreeType}`) ?? roadmapRecords.get(`${catalogVersion}/${programId}/bs`)
+  if (storedRoadmap) return storedRoadmap
+  return getProgram(programId, catalogVersion) ? { status: 'derived', plan: deriveRoadmap(programId, catalogVersion) } : undefined
+}
+
+export function planForDegreeType(degreeType: DegreeType, programId: string = 'bs-computer-science', catalogVersion: string = defaultCatalogVersion): CurriculumPlan {
+  const exactRoadmap = roadmapRecords.get(`${catalogVersion}/${programId}/${degreeType}`)
+  const roadmap = exactRoadmap ?? roadmapForProgram(programId, degreeType, catalogVersion) ?? roadmapForProgram(programId, 'bs', catalogVersion)
+  if (!roadmap) return { schemaVersion: 1, years: [] }
+  if (degreeType === 'bs') return roadmap.plan
+  if (exactRoadmap && exactRoadmap.plan.years.every(year => year.year === 'junior' || year.year === 'senior')) return exactRoadmap.plan
   return {
-    ...curriculumPlan,
-    years: curriculumPlan.years.filter(year => year.year === 'junior' || year.year === 'senior'),
+    ...roadmap.plan,
+    years: roadmap.plan.years.filter(year => year.year === 'junior' || year.year === 'senior'),
   }
 }
 
@@ -192,6 +304,101 @@ const catalogEntries: Course[] = Object.entries(parsedCatalog.courses).map(([id,
 
 export const coursesById = new Map(catalogEntries.map(course => [course.id, course]))
 
+function derivedCategory(courseId: string): Category {
+  if (courseId.startsWith('MATH-')) return 'math'
+  if (courseId.startsWith('FYS-')) return 'ge-lower'
+  if (courseId.startsWith('CST-')) return 'cst'
+  return 'elective'
+}
+
+/**
+ * Produces an explicitly draft roadmap for catalog programs that have requirements but no
+ * staff-verified sequence. It only orders courses against prerequisites that are also in
+ * the program requirements; outside preparation is left for advisor review.
+ */
+function deriveRoadmap(programId: string, catalogVersion: string): CurriculumPlan {
+  const program = getProgram(programId, catalogVersion)
+  if (!program) return { schemaVersion: 1, years: [] }
+
+  const requiredCourseIds = new Set(program.requirements
+    .filter(requirement => requirement.completion.kind === 'all')
+    .flatMap(requirementCourseIds))
+  const deferredCourseIds = [...requiredCourseIds].filter(courseId => getCourse(courseId)?.code.endsWith('499'))
+  deferredCourseIds.forEach(courseId => requiredCourseIds.delete(courseId))
+  const scheduled = new Set<string>()
+  const terms: { term: AcademicTerm; slots: PlanSlot[] }[] = []
+  const yearNames: CurriculumPlan['years'][number]['year'][] = ['freshman', 'sophomore', 'junior', 'senior']
+
+  for (let termIndex = 0; requiredCourseIds.size > 0 && termIndex < 8; termIndex += 1) {
+    const term: AcademicTerm = termIndex % 2 === 0 ? 'fall' : 'spring'
+    let credits = 0
+    const slots: PlanSlot[] = []
+    const candidates = [...requiredCourseIds].sort((left, right) => Number(left.startsWith('FYS-')) * -1 || left.localeCompare(right))
+    for (const courseId of candidates) {
+      const course = getCourse(courseId)
+      if (!course || !isCourseOffered(courseId, term) || credits + course.units > 15) continue
+      if (course.minimumStanding === 'junior' && termIndex < 4) continue
+      const requiredEarlier = [...prerequisiteCourseIds(course.prerequisites)].filter(prerequisiteId => requiredCourseIds.has(prerequisiteId) || scheduled.has(prerequisiteId))
+      if (!requiredEarlier.every(prerequisiteId => scheduled.has(prerequisiteId))) continue
+      slots.push({ type: 'course', courseId, credits: course.units, category: derivedCategory(courseId) })
+      credits += course.units
+      requiredCourseIds.delete(courseId)
+    }
+    terms.push({ term, slots })
+  }
+
+  if (deferredCourseIds.length > 0) {
+    const finalTerm = terms.at(-1) ?? { term: 'spring' as const, slots: [] }
+    for (const courseId of deferredCourseIds) {
+      const course = getCourse(courseId)
+      if (course) finalTerm.slots.push({ type: 'course', courseId, credits: course.units, category: derivedCategory(courseId) })
+    }
+    if (terms.length === 0) terms.push(finalTerm)
+  }
+
+  const optionSlots: PlanSlot[] = []
+  for (const requirement of program.requirements) {
+    if (requirement.completion.kind === 'choose') {
+      optionSlots.push({
+      type: 'choice' as const,
+      slotId: `derived-${requirement.id}`,
+      alternatives: requirementCourseIds(requirement),
+      credits: getCourse(requirement.courseIds[0])?.units ?? 4,
+      category: 'elective' as const,
+      guidance: `Choose ${requirement.completion.count} course${requirement.completion.count === 1 ? '' : 's'} that satisfies this requirement.`,
+      })
+    }
+    if (requirement.completion.kind === 'minimumCredits') {
+      for (let index = 0; index < Math.ceil(requirement.completion.credits / 4); index += 1) {
+        optionSlots.push({
+          type: 'requirement',
+          slotId: `derived-${requirement.id}-${index + 1}`,
+          label: 'Program elective',
+          credits: 4,
+          category: 'elective',
+          guidance: 'Choose coursework that satisfies this program requirement.',
+        })
+      }
+    }
+  }
+  for (const slot of optionSlots) {
+    const lastTerm = terms.at(-1) ?? { term: 'fall' as const, slots: [] }
+    if (!terms.includes(lastTerm)) terms.push(lastTerm)
+    lastTerm.slots.push(slot)
+  }
+
+  return {
+    schemaVersion: 1,
+    years: terms.slice(0, 8).reduce<CurriculumPlan['years']>((years, term, index) => {
+      const year = yearNames[Math.floor(index / 2)]
+      const current = years.at(-1)
+      if (current?.year === year) current.terms.push(term)
+      else years.push({ year, terms: [term] })
+      return years
+    }, []),
+  }
+}
+
 const programCourseIds = Object.values(programs.programs).flatMap(program => [
   ...program.requirements.flatMap(requirement => requirement.courseIds),
   ...Object.values(program.concentrations).flatMap(concentration => concentration.requirements.flatMap(requirement => requirement.courseIds)),
@@ -207,6 +414,14 @@ for (const courseId of [...programCourseIds, ...minorCourseIds]) {
 
 export function getCatalogVersion(catalogVersion: string = defaultCatalogVersion): CatalogVersion | undefined {
   return catalogVersions[catalogVersion]
+}
+
+export function getCatalogMetadata(catalogVersion: string = defaultCatalogVersion): CatalogMetadata | undefined {
+  return catalogMetadata[catalogVersion]
+}
+
+export function getDegreeCatalogEntry(programId: string, catalogVersion: string = defaultCatalogVersion): DegreeCatalogEntry | undefined {
+  return degreeRecords.get(`${catalogVersion}/${programId}`)
 }
 
 export function getProgram(programId: string, catalogVersion: string = defaultCatalogVersion): Program | undefined {

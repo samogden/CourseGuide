@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { canonicalCourseId, catalogVersions, coursesById, curriculumPlan, defaultCatalogVersion, degreeYearLabel, getCourse, getMinor, minorsForCatalog, planForDegreeType, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, prerequisiteText, programs, remainingPlanCredits, slotLabel, summarizePlanCredits, transferAssumedCourseIds, type CurriculumPlan } from './Curriculum'
+import { canonicalCourseId, catalogVersions, coursesById, curriculumPlan, defaultCatalogVersion, degreeYearLabel, getCatalogMetadata, getCourse, getDegreeCatalogEntry, getMinor, minorsForCatalog, planForDegreeType, prerequisiteCount, prerequisiteCourseIds, prerequisitesMet, prerequisiteText, programs, remainingPlanCredits, roadmapForProgram, slotLabel, summarizePlanCredits, transferAssumedCourseIds, type CurriculumPlan } from './Curriculum'
 
 describe('curriculum data', () => {
   it('normalizes alternate course code spacing', () => {
@@ -132,6 +132,21 @@ describe('curriculum data', () => {
     expect(defaultCatalogVersion).toBe('2026')
     expect(catalogVersions['2026']?.title).toBe('2026 Catalog')
     expect(catalogVersions['2026']?.programs['bs-computer-science'].concentrations['data-science']).toBeDefined()
+  })
+
+  it('loads the versioned catalog tree with degree metadata and a verified roadmap', () => {
+    const catalog = getCatalogMetadata('2026')
+    const degree = getDegreeCatalogEntry('bs-computer-science', '2026')
+    const roadmap = roadmapForProgram('bs-computer-science', 'bs', '2026')
+
+    expect(catalog?.colleges).toContainEqual(expect.objectContaining({ id: 'college-of-science' }))
+    expect(degree).toMatchObject({
+      credential: 'B.S.',
+      college: { id: 'college-of-science' },
+      department: { id: 'computing-and-design' },
+      coursePrefixes: expect.arrayContaining(['CST', 'MATH']),
+    })
+    expect(roadmap?.status).toBe('verified')
   })
 
   it('models the 2026 Computer Science minor as reusable catalog data', () => {

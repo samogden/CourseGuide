@@ -5,7 +5,7 @@ import { CourseCell, CourseModal } from './components/CourseBox'
 import { ReadinessAssessment } from './components/ReadinessAssessment'
 import { TransferReadiness } from './components/TransferReadiness'
 import { getAssessmentPack } from './models/Assessments'
-import { catalogVersions, defaultCatalogVersion, degreeYearLabel, getCourse, getMinor, minorsForCatalog, planForDegreeType, prerequisitesMet, progressKey, remainingPlanCredits, summarizePlanCredits, transferAssumedCourseIds, type AcademicTerm, type DegreeType, type PlanSlot } from './models/Curriculum'
+import { catalogVersions, defaultCatalogVersion, degreeYearLabel, getCourse, getMinor, minorsForCatalog, planForDegreeType, prerequisitesMet, progressKey, remainingPlanCredits, roadmapForProgram, summarizePlanCredits, transferAssumedCourseIds, type AcademicTerm, type DegreeType, type PlanSlot } from './models/Curriculum'
 import { buildCompactedSchedule, buildRegistrationPlan, buildSuggestedSchedule, sortSlotsForPresentation } from './models/Scheduling'
 import { buildPreparationTerms, preparationCredits } from './models/TransferPreparation'
 
@@ -17,11 +17,11 @@ const degreeTypeStorageKey = 'courseguide-degree-type-v1'
 const transferPreparationStorageKey = 'courseguide-transfer-preparation-v1'
 const additionalCoursesStorageKey = 'courseguide-additional-courses-v1'
 const minorStorageKey = 'courseguide-minor-v1'
-const activeProgramId = 'bs-computer-science'
+const programStorageKey = 'courseguide-program-v1'
 const RegistrationPlanner = lazy(() => import('./components/RegistrationPlanner').then(module => ({ default: module.RegistrationPlanner })))
 
-function targetCourseKey(catalogVersion: string, degreeType: DegreeType, scope: string, slotKey: string): string {
-  return `${catalogVersion}/${degreeType}/${scope}:${slotKey}`
+function targetCourseKey(catalogVersion: string, programId: string, degreeType: DegreeType, scope: string, slotKey: string): string {
+  return `${catalogVersion}/${programId}/${degreeType}/${scope}:${slotKey}`
 }
 
 function targetScopeForSlot(slot: PlanSlot, concentrationId: string | null, minorId: string | null): string | null {
@@ -73,7 +73,13 @@ function readTargetCourses(): Map<string, string> {
     if (!value || typeof value !== 'object' || Array.isArray(value)) return new Map()
     return new Map(Object.entries(value)
       .filter((entry): entry is [string, string] => typeof entry[0] === 'string' && typeof entry[1] === 'string')
-      .map(([key, courseId]) => [key.includes('/bs/') || key.includes('/ast-to-bs/') ? key : key.replace(/^([^/]+)\//, '$1/bs/'), courseId]))
+      .map(([key, courseId]) => {
+        const legacyProgramlessKey = key.match(/^([^/]+)\/(bs|ast-to-bs)\/(.+)$/)
+        const normalizedKey = legacyProgramlessKey
+          ? `${legacyProgramlessKey[1]}/bs-computer-science/${legacyProgramlessKey[2]}/${legacyProgramlessKey[3]}`
+          : key.includes('/bs/') || key.includes('/ast-to-bs/') ? key : key.replace(/^([^/]+)\//, '$1/bs-computer-science/bs/')
+        return [normalizedKey, courseId]
+      }))
   } catch {
     return new Map()
   }
@@ -97,13 +103,25 @@ function readMinor(): string | null {
   }
 }
 
+function readProgram(): string {
+  try {
+    const value: unknown = JSON.parse(localStorage.getItem(programStorageKey) ?? '"bs-computer-science"')
+    return typeof value === 'string' ? value : 'bs-computer-science'
+  } catch {
+    return 'bs-computer-science'
+  }
+}
+
 function readTransferPreparation(): Map<string, string[]> {
   try {
     const value: unknown = JSON.parse(localStorage.getItem(transferPreparationStorageKey) ?? '{}')
     if (!value || typeof value !== 'object' || Array.isArray(value)) return new Map()
     const entries: [string, string[]][] = []
     for (const [key, courseIds] of Object.entries(value)) {
-      if (Array.isArray(courseIds)) entries.push([key, courseIds.filter((courseId): courseId is string => typeof courseId === 'string')])
+      if (Array.isArray(courseIds)) {
+        const normalizedKey = key.match(/^([^/]+)\/ast-to-bs$/) ? key.replace(/^([^/]+)\//, '$1/bs-computer-science/') : key
+        entries.push([normalizedKey, courseIds.filter((courseId): courseId is string => typeof courseId === 'string')])
+      }
     }
     return new Map(entries)
   } catch {
@@ -123,7 +141,10 @@ function readAdditionalCourses(): Map<string, AdditionalCourse[]> {
         if (typeof id !== 'string' || typeof code !== 'string' || typeof credits !== 'number' || !Number.isFinite(credits) || credits <= 0 || credits > 18) return []
         return [{ id, code, credits, ...(typeof name === 'string' ? { name } : {}) }]
       })
-      return [[termKey, validCourses] as [string, AdditionalCourse[]]]
+      const normalizedKey = termKey.match(/^([^/]+)\/(bs|ast-to-bs)\/(.+)$/)
+        ? termKey.replace(/^([^/]+)\//, '$1/bs-computer-science/')
+        : termKey
+      return [[normalizedKey, validCourses] as [string, AdditionalCourse[]]]
     }))
   } catch {
     return new Map()
@@ -137,6 +158,7 @@ function App() {
   const [selectedConcentration, setSelectedConcentration] = useState<string | null>(() => readConcentration())
   const [selectedCatalogVersion, setSelectedCatalogVersion] = useState<string>(() => readCatalogVersion())
   const [degreeType, setDegreeType] = useState<DegreeType>(() => readDegreeType())
+  const [selectedProgramId, setSelectedProgramId] = useState<string>(() => readProgram())
   const [selectedMinor, setSelectedMinor] = useState<string | null>(() => readMinor())
   const [targetCourses, setTargetCourses] = useState<Map<string, string>>(() => readTargetCourses())
   const [transferPreparation, setTransferPreparation] = useState<Map<string, string[]>>(() => readTransferPreparation())
@@ -172,6 +194,10 @@ function App() {
   }, [selectedMinor])
 
   useEffect(() => {
+    localStorage.setItem(programStorageKey, JSON.stringify(selectedProgramId))
+  }, [selectedProgramId])
+
+  useEffect(() => {
     localStorage.setItem(transferPreparationStorageKey, JSON.stringify(Object.fromEntries(transferPreparation)))
   }, [transferPreparation])
 
@@ -205,6 +231,7 @@ function App() {
     setSelectedCatalogVersion(defaultCatalogVersion)
     setDegreeType('bs')
     setSelectedMinor(null)
+    setSelectedProgramId('bs-computer-science')
     setActiveView('roadmap')
     setRegistrationTerm('fall')
     setCompactedCreditLimit(15)
@@ -258,12 +285,12 @@ function App() {
     if (!targetScope) return
     setTargetCourses(current => {
       const next = new Map(current)
-      next.set(targetCourseKey(selectedCatalogVersion, degreeType, targetScope, progressKey(slot)), courseId)
+      next.set(targetCourseKey(selectedCatalogVersion, activeProgramId, degreeType, targetScope, progressKey(slot)), courseId)
       if (slot.type === 'choice') {
         const pairedCourseId = slot.alternatives.find(alternative => alternative !== courseId)
         if (pairedCourseId) {
           for (const pairedSlot of linkedChoiceSlots(activePlan, slot)) {
-            next.set(targetCourseKey(selectedCatalogVersion, degreeType, targetScope, progressKey(pairedSlot)), pairedCourseId)
+            next.set(targetCourseKey(selectedCatalogVersion, activeProgramId, degreeType, targetScope, progressKey(pairedSlot)), pairedCourseId)
           }
         }
       }
@@ -276,10 +303,10 @@ function App() {
     if (!targetScope) return
     setTargetCourses(current => {
       const next = new Map(current)
-      next.delete(targetCourseKey(selectedCatalogVersion, degreeType, targetScope, progressKey(slot)))
+      next.delete(targetCourseKey(selectedCatalogVersion, activeProgramId, degreeType, targetScope, progressKey(slot)))
       if (slot.type === 'choice') {
         for (const pairedSlot of linkedChoiceSlots(activePlan, slot)) {
-          next.delete(targetCourseKey(selectedCatalogVersion, degreeType, targetScope, progressKey(pairedSlot)))
+          next.delete(targetCourseKey(selectedCatalogVersion, activeProgramId, degreeType, targetScope, progressKey(pairedSlot)))
         }
       }
       return next
@@ -288,8 +315,10 @@ function App() {
   }
 
   const activeCatalog = catalogVersions[selectedCatalogVersion] ?? catalogVersions[defaultCatalogVersion]
+  const activeProgramId = activeCatalog.programs[selectedProgramId] ? selectedProgramId : Object.keys(activeCatalog.programs)[0] ?? 'bs-computer-science'
   const activeProgram = activeCatalog.programs[activeProgramId]
-  const activePlan = planForDegreeType(degreeType)
+  const activePlan = planForDegreeType(degreeType, activeProgramId, selectedCatalogVersion)
+  const activeRoadmap = roadmapForProgram(activeProgramId, degreeType, selectedCatalogVersion)
   const planCredits = summarizePlanCredits(activePlan)
   const activeConcentrationId = selectedConcentration && activeProgram.concentrations[selectedConcentration] ? selectedConcentration : null
   const availableMinors = minorsForCatalog(selectedCatalogVersion)
@@ -302,7 +331,7 @@ function App() {
   )
   const activeTargetCourses = new Map(
     [...targetCourses]
-      .filter(([key]) => [...activeTargetScopes].some(scope => key.startsWith(`${selectedCatalogVersion}/${degreeType}/${scope}:`)))
+      .filter(([key]) => [...activeTargetScopes].some(scope => key.startsWith(`${selectedCatalogVersion}/${activeProgramId}/${degreeType}/${scope}:`)))
       .map(([key, courseId]) => [key.slice(key.indexOf(':') + 1), courseId]),
   )
   const suggestedSchedule = buildSuggestedSchedule(activePlan, completed, {
@@ -342,7 +371,7 @@ function App() {
   const selectedCourseOptions = selectedSlot ? suggestedSchedule.courseOptions.get(progressKey(selectedSlot)) : undefined
   const resolvedCourseId = selectedSuggestion?.courseId ?? selectedAssignedCourseId ?? (selectedSlot?.type === 'course' ? selectedSlot.courseId : null)
   const selectedPrerequisitesMet = resolvedCourseId ? prerequisitesMet(getCourse(resolvedCourseId)?.prerequisites ?? [], completedCourseIds) : selectedSlot ? suggestedSchedule.isCourseReady(selectedSlot) : undefined
-  const preparationKey = `${selectedCatalogVersion}/ast-to-bs`
+  const preparationKey = `${selectedCatalogVersion}/${activeProgramId}/ast-to-bs`
   const preparationCourseIds = new Set(transferPreparation.get(preparationKey) ?? [])
   const preparationTerms = degreeType === 'ast-to-bs' ? buildPreparationTerms(preparationCourseIds) : []
   const preparationRemainingCredits = degreeType === 'ast-to-bs' ? preparationCredits(preparationCourseIds, completed) : 0
@@ -350,9 +379,9 @@ function App() {
   const semestersAtFifteen = Math.ceil(remainingCredits / 15)
   const semestersAtEighteen = Math.ceil(remainingCredits / 18)
   const additionalCourseView = activeView === 'compacted' ? 'compacted' : 'roadmap'
-  const additionalCourseScope = `${selectedCatalogVersion}/${degreeType}/${additionalCourseView}`
+  const additionalCourseScope = `${selectedCatalogVersion}/${activeProgramId}/${degreeType}/${additionalCourseView}`
   const additionalCredits = [...additionalCourses]
-    .filter(([key]) => key.startsWith(`${selectedCatalogVersion}/${degreeType}/`))
+    .filter(([key]) => key.startsWith(`${selectedCatalogVersion}/${activeProgramId}/${degreeType}/`))
     .flatMap(([, courses]) => courses)
     .reduce((total, course) => total + course.credits, 0)
   const transferCredits = degreeType === 'ast-to-bs' ? 60 : 0
@@ -377,7 +406,7 @@ function App() {
   return (
     <main className="planner">
       <header className="planner-header">
-        <div><p className="eyebrow">Computer Science</p><h1>Curriculum planner</h1><p>Explore the suggested course sequence and mark completed coursework.</p></div>
+        <div><p className="eyebrow">{activeProgram.title}</p><h1>Curriculum planner</h1><p>Explore the suggested course sequence and mark completed coursework.</p></div>
         <div className="header-actions">
           <button className="reset-button" type="button" onClick={resetPlanner}>Reset planner</button>
         </div>
@@ -411,8 +440,10 @@ function App() {
       </section>
       <section className="program-picker" aria-label="Major and minor">
         <label className="catalog-picker">Major
-          <select value={activeProgramId} disabled aria-label="Major">
-            <option value={activeProgramId}>{activeProgram.title}</option>
+          <select value={activeProgramId} aria-label="Major" onChange={event => setSelectedProgramId(event.target.value)}>
+            {Object.entries(activeCatalog.programs)
+              .sort(([, left], [, right]) => left.title.localeCompare(right.title))
+              .map(([programId, program]) => <option key={programId} value={programId}>{program.title}</option>)}
           </select>
         </label>
         <label className="catalog-picker">Minor
@@ -446,6 +477,7 @@ function App() {
       </section>
       {activeView === 'registration' && <Suspense fallback={<p className="planner-loading">Loading registration planner…</p>}><RegistrationPlanner plan={registrationPlan} currentTerm={registrationTerm} onCurrentTermChange={setRegistrationTerm} onCourseSelect={setSelectedSlot} /></Suspense>}
       {activeView === 'roadmap' && suggestedSchedule.suggestions.size > 0 && <section className="next-term" aria-live="polite"><strong>Suggested schedule:</strong> {suggestedSchedule.credits} credits. <strong>{remainingCredits} planned credits remain</strong> — about {semestersAtFifteen} semesters at 15 credits per term, or {semestersAtEighteen} at 18.</section>}
+      {activeRoadmap?.status === 'derived' && <section className="derived-roadmap-notice" aria-label="Derived roadmap notice"><strong>Planning estimate:</strong> This roadmap was generated from catalog requirements. Verify course sequencing with an advisor before registering.</section>}
       {activeView === 'compacted' && <section className="compacted-controls" aria-label="Compacted schedule settings">
         <label htmlFor="compacted-credit-limit">Maximum credits per term <strong>{compactedCreditLimit}</strong></label>
         <input id="compacted-credit-limit" type="range" min="12" max="18" value={compactedCreditLimit} onChange={event => setCompactedCreditLimit(Number(event.target.value))} />

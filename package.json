@@ -9,7 +9,7 @@
     "lint": "oxlint",
     "test": "bun run validate && vitest run",
     "prepare-assessments": "bun scripts/generate-assessment-packs.ts",
-    "validate": "bun run prepare-assessments && bun scripts/validate-assessments.ts",
+    "validate": "bun run prepare-assessments && bun scripts/validate-assessments.ts && bun scripts/validate-catalog.ts",
     "preview": "vite preview"
   },
   "dependencies": {
