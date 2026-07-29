@@ -6,6 +6,7 @@ import {
   courseCorequisiteIds,
   directRequirementCourseIds,
   getCourse,
+  getMinor,
   isCourseOffered,
   prerequisiteCount,
   prerequisiteCourseIds,
@@ -17,7 +18,6 @@ import {
   type DegreeType,
   type PlanSlot,
   type Requirement,
-  minorRequirements,
 } from './Curriculum'
 
 export type SuggestionKind = 'standard' | 'stretch'
@@ -168,6 +168,7 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
     selection?.targetCourses,
     selection?.reservedCourseIds,
     new Set(programRequirements.map(requirement => requirement.id)),
+    getMinor(selection?.minorId, selection?.catalogVersion ?? defaultCatalogVersion)?.title,
   )
   const suggestions = new Map<string, ScheduledSuggestion>()
   const selectedEntries: SelectedEntry[] = []
@@ -520,9 +521,10 @@ function buildPathAssignments(
   targetCourses?: ReadonlyMap<string, string>,
   reservedCourseIds?: ReadonlyMap<string, readonly string[]>,
   creditSelectableRequirementIds: ReadonlySet<string> = new Set(),
+  minorLabel?: string,
 ): { assignments: Map<string, string>; courseOptions: Map<string, PathSlotOptions>; selectedTargetKeys: Set<string> } {
   const assignments = new Map<string, string>()
-  const courseOptions = buildChoiceOptions(plan)
+  const courseOptions = buildChoiceOptions(plan, minorLabel)
   const selectedTargetKeys = new Set<string>()
 
   if (pathRequirements.length > 0) {
@@ -602,13 +604,17 @@ function buildPathAssignments(
   return { assignments, courseOptions, selectedTargetKeys }
 }
 
-function buildChoiceOptions(plan: CurriculumPlan): Map<string, PathSlotOptions> {
+function buildChoiceOptions(plan: CurriculumPlan, minorLabel?: string): Map<string, PathSlotOptions> {
   const options = new Map<string, PathSlotOptions>()
   for (const year of plan.years) {
     for (const term of year.terms) {
       for (const slot of term.slots) {
         if (slot.type !== 'choice' || !slot.alternatives.every(courseId => getCourse(courseId))) continue
-        options.set(progressKey(slot), { label: courseOptionLabel(slot.alternatives, 'Course choice'), courseIds: slot.alternatives })
+        options.set(progressKey(slot), {
+          label: slot.source === 'minor' ? `${minorLabel ?? 'Minor'} minor course option` : courseOptionLabel(slot.alternatives, 'Course choice'),
+          courseIds: slot.alternatives,
+          ...(slot.source === 'minor' ? { required: true } : {}),
+        })
       }
     }
   }
@@ -692,7 +698,6 @@ function resolvePathRequirements(selection?: ScheduleSelection): Requirement[] {
   const catalogVersion = selection.catalogVersion ?? defaultCatalogVersion
   return [
     ...concentrationRequirements(selection.programId ?? defaultProgramId, selection.concentrationId, catalogVersion),
-    ...minorRequirements(selection.minorId, catalogVersion),
   ]
 }
 

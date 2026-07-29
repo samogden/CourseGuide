@@ -19,7 +19,8 @@ requirements:
       - SSCI-335
   - id: complete-two-of-the-following-courses
     completion:
-      kind: all
+      kind: choose
+      count: 2
     optionLabel: "Complete two  of the following courses:"
     courseIds:
       - SSCI-325

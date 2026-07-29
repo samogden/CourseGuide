@@ -217,7 +217,7 @@ describe('suggested scheduling', () => {
     expect(verifiedComputerScienceSlots.map(progressKey)).not.toContain('slot:ge-1-lower-division')
   })
 
-  it('reserves elective choices for a selected minor before flexible major electives', () => {
+  it('keeps minor choices out of major elective assignment slots', () => {
     const schedule = buildSuggestedSchedule(curriculumPlan, new Set(), {
       programId: 'bs-computer-science',
       concentrationId: 'general',
@@ -227,9 +227,7 @@ describe('suggested scheduling', () => {
     const minorOptions = [...schedule.courseOptions.values()]
       .filter(options => options.label === 'Computer Science minor course option')
 
-    expect(minorOptions).toHaveLength(2)
-    expect(minorOptions.every(options => options.required)).toBe(true)
-    expect(minorOptions.every(options => options.courseIds.includes('CST-311'))).toBe(true)
+    expect(minorOptions).toHaveLength(0)
   })
 
   it('places a concentration prerequisite in an earlier term than the course it unlocks', () => {

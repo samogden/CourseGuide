@@ -28,9 +28,9 @@ const courseSchema = z.object({
 }).strict()
 
 const planSlotSchema = z.discriminatedUnion('type', [
-  z.object({ type: z.literal('course'), courseId: z.string(), credits: z.number().positive(), category: categorySchema }),
-  z.object({ type: z.literal('requirement'), slotId: z.string(), label: z.string(), credits: z.number().positive(), category: categorySchema, guidance: z.string() }),
-  z.object({ type: z.literal('choice'), slotId: z.string(), alternatives: z.array(z.string()).min(2), credits: z.number().positive(), category: categorySchema, guidance: z.string() }),
+  z.object({ type: z.literal('course'), courseId: z.string(), credits: z.number().positive(), category: categorySchema, source: z.enum(['major', 'minor', 'other']).optional() }),
+  z.object({ type: z.literal('requirement'), slotId: z.string(), label: z.string(), credits: z.number().positive(), category: categorySchema, guidance: z.string(), source: z.enum(['major', 'minor', 'other']).optional() }),
+  z.object({ type: z.literal('choice'), slotId: z.string(), alternatives: z.array(z.string()).min(2), credits: z.number().positive(), category: categorySchema, guidance: z.string(), source: z.enum(['major', 'minor', 'other']).optional() }),
 ])
 
 const planSchema = z.object({
@@ -285,6 +285,42 @@ export function planForDegreeType(degreeType: DegreeType, programId: string = 'b
     ...roadmap.plan,
     years: roadmap.plan.years.filter(year => year.year === 'junior' || year.year === 'senior'),
   }
+}
+
+/** Adds a selected minor as planned coursework without consuming the major's elective slots. */
+export function appendMinorToPlan(plan: CurriculumPlan, minor: Minor | undefined): CurriculumPlan {
+  if (!minor) return plan
+  const years = plan.years.map(year => ({ ...year, terms: year.terms.map(term => ({ ...term, slots: [...term.slots] })) }))
+  const terms = years.flatMap(year => year.terms)
+  const plannedCourseIds = new Set(plan.years.flatMap(year => year.terms.flatMap(term => term.slots.flatMap(slot => slot.type === 'course' ? [slot.courseId] : []))))
+  const appendSlot = (slot: PlanSlot) => {
+    const target = terms.find(term => term.slots.reduce((total, current) => total + current.credits, 0) + slot.credits <= 18) ?? terms.at(-1)
+    if (target) target.slots.push(slot)
+  }
+  for (const requirement of minor.requirements) {
+    if (requirement.completion.kind === 'all') {
+      for (const courseId of requirementCourseIds(requirement)) {
+        const course = getCourse(courseId)
+        if (plannedCourseIds.has(courseId)) continue
+        if (course) appendSlot({ type: 'course', courseId, credits: course.units, category: 'elective', source: 'minor' })
+      }
+    } else if (requirement.completion.kind === 'choose') {
+      const alternatives = requirementCourseIds(requirement).filter(courseId => !plannedCourseIds.has(courseId))
+      if (alternatives.length < 2) continue
+      for (let index = 0; index < requirement.completion.count; index += 1) {
+        appendSlot({
+          type: 'choice',
+          slotId: `minor-${minor.id}-${requirement.id}-${index + 1}`,
+          alternatives,
+          credits: getCourse(alternatives[0])?.units ?? 4,
+          category: 'elective',
+          source: 'minor',
+          guidance: requirement.optionLabel ?? 'Choose a course for this minor requirement.',
+        })
+      }
+    }
+  }
+  return { ...plan, years }
 }
 
 export function degreeYearLabel(degreeType: DegreeType, year: CurriculumPlan['years'][number]['year']): string {

@@ -5,7 +5,7 @@ import { CourseCell, CourseModal, type RequirementCourseSelection } from './comp
 import { ReadinessAssessment } from './components/ReadinessAssessment'
 import { TransferReadiness } from './components/TransferReadiness'
 import { getAssessmentPack } from './models/Assessments'
-import { catalogVersions, defaultCatalogVersion, degreeYearLabel, getCourse, getMinor, minorsForCatalog, planForDegreeType, prerequisitesMet, progressKey, remainingPlanCredits, roadmapForProgram, summarizePlanCredits, transferAssumedCourseIds, type AcademicTerm, type DegreeType, type PlanSlot } from './models/Curriculum'
+import { appendMinorToPlan, catalogVersions, defaultCatalogVersion, degreeYearLabel, getCourse, getMinor, minorsForCatalog, planForDegreeType, prerequisitesMet, progressKey, remainingPlanCredits, roadmapForProgram, summarizePlanCredits, transferAssumedCourseIds, type AcademicTerm, type DegreeType, type PlanSlot } from './models/Curriculum'
 import { buildCompactedSchedule, buildRegistrationPlan, buildSuggestedSchedule, sortSlotsForPresentation } from './models/Scheduling'
 import { buildPreparationTerms, preparationCredits } from './models/TransferPreparation'
 
@@ -344,13 +344,13 @@ function App() {
   const activeCatalog = catalogVersions[selectedCatalogVersion] ?? catalogVersions[defaultCatalogVersion]
   const activeProgramId = activeCatalog.programs[selectedProgramId] ? selectedProgramId : Object.keys(activeCatalog.programs)[0] ?? 'bs-computer-science'
   const activeProgram = activeCatalog.programs[activeProgramId]
-  const activePlan = planForDegreeType(degreeType, activeProgramId, selectedCatalogVersion)
   const activeRoadmap = roadmapForProgram(activeProgramId, degreeType, selectedCatalogVersion)
-  const planCredits = summarizePlanCredits(activePlan)
   const activeConcentrationId = selectedConcentration && activeProgram.concentrations[selectedConcentration] ? selectedConcentration : null
   const availableMinors = minorsForCatalog(selectedCatalogVersion)
   const activeMinorId = selectedMinor && availableMinors[selectedMinor] ? selectedMinor : null
   const activeMinor = getMinor(activeMinorId, selectedCatalogVersion)
+  const activePlan = appendMinorToPlan(planForDegreeType(degreeType, activeProgramId, selectedCatalogVersion), activeMinor)
+  const planCredits = summarizePlanCredits(activePlan)
   const activeTargetScopes = new Set(
     ['general', activeConcentrationId]
       .filter((scope): scope is string => Boolean(scope))
