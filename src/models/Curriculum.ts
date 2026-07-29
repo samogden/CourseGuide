@@ -325,17 +325,12 @@ interface DerivedOptionSlot {
  */
 function generalEducationSlots(): DerivedOptionSlot[] {
   const lowerDivision = [
-    ['ge-1a-english-composition', 'GE Area 1A: English Composition'],
-    ['ge-1b-critical-thinking', 'GE Area 1B: Critical Thinking'],
-    ['ge-1c-oral-communication', 'GE Area 1C: Oral Communication'],
-    ['ge-2-mathematics', 'GE Area 2: Mathematical Concepts & Quantitative Reasoning'],
-    ['ge-3a-arts', 'GE Area 3A: Arts'],
-    ['ge-3b-humanities', 'GE Area 3B: Humanities'],
-    ['ge-4a-social-behavioral-sciences', 'GE Area 4A: Social & Behavioral Sciences'],
-    ['ge-4b-civics', 'GE Area 4B: Civics'],
-    ['ge-5a-physical-science', 'GE Area 5A: Physical Science'],
-    ['ge-5b-biological-science', 'GE Area 5B: Biological Science'],
-    ['ge-6-ethnic-studies', 'GE Area 6: Ethnic Studies'],
+    ['ge-1-lower-division', 'GE Area 1: English Communication'],
+    ['ge-2-lower-division', 'GE Area 2: Mathematical Concepts & Quantitative Reasoning'],
+    ['ge-3-lower-division', 'GE Area 3: Arts & Humanities'],
+    ['ge-4-lower-division', 'GE Area 4: Social & Behavioral Sciences'],
+    ['ge-5-lower-division', 'GE Area 5: Physical & Biological Sciences'],
+    ['ge-6-lower-division', 'GE Area 6: Ethnic Studies'],
   ] as const
   const lowerSlots = lowerDivision.map(([slotId, label]): DerivedOptionSlot => ({
     courseIds: [],
@@ -348,17 +343,6 @@ function generalEducationSlots(): DerivedOptionSlot[] {
       guidance: `Complete a lower-division ${label.replace('GE ', '')} course.`,
     },
   }))
-  lowerSlots.splice(10, 0, {
-    courseIds: [],
-    slot: {
-      type: 'requirement',
-      slotId: 'ge-5c-laboratory',
-      label: 'GE Area 5C: Laboratory',
-      credits: 1,
-      category: 'ge-lower',
-      guidance: 'Complete a lower-division GE Area 5 laboratory course.',
-    },
-  })
   return [
     ...lowerSlots,
     ...[

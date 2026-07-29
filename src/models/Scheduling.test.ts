@@ -163,9 +163,9 @@ describe('suggested scheduling', () => {
     const cinematicSlots = cinematicPlan.years.flatMap(year => year.terms.flatMap(term => term.slots))
     const verifiedComputerScienceSlots = curriculumPlan.years.flatMap(year => year.terms.flatMap(term => term.slots))
 
-    expect(cinematicSlots.map(progressKey)).toContain('slot:ge-1a-english-composition')
+    expect(cinematicSlots.map(progressKey)).toContain('slot:ge-1-lower-division')
     expect(cinematicSlots.map(progressKey)).toContain('slot:ge-upper-4')
-    expect(verifiedComputerScienceSlots.map(progressKey)).not.toContain('slot:ge-1a-english-composition')
+    expect(verifiedComputerScienceSlots.map(progressKey)).not.toContain('slot:ge-1-lower-division')
   })
 
   it('reserves elective choices for a selected minor before flexible major electives', () => {
