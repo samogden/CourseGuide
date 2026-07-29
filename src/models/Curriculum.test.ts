@@ -160,6 +160,21 @@ describe('curriculum data', () => {
     ]))
   })
 
+  it('derives distinct roadmaps for each Agribusiness concentration', () => {
+    const programId = 'bs-agribusiness-supply-chain-management'
+    const riskManagement = planForDegreeType('bs', programId, '2026', 'risk-and-marketing-management')
+    const supplyChain = planForDegreeType('bs', programId, '2026', 'supply-chain-management-and-operations')
+    const courseIdsFor = (plan: CurriculumPlan) => new Set(plan.years.flatMap(year => year.terms.flatMap(term => term.slots.flatMap(slot => slot.type === 'course' ? [slot.courseId] : []))))
+
+    expect([...courseIdsFor(riskManagement)]).toEqual(expect.arrayContaining(['AGBS-370', 'AGBS-434']))
+    expect(courseIdsFor(riskManagement)).not.toContain('AGBS-435')
+    expect(courseIdsFor(supplyChain)).toContain('AGBS-435')
+    expect(courseIdsFor(supplyChain)).not.toContain('AGBS-370')
+    expect(riskManagement.years.flatMap(year => year.terms.flatMap(term => term.slots.map(progressKey)))).not.toEqual(
+      supplyChain.years.flatMap(year => year.terms.flatMap(term => term.slots.map(progressKey))),
+    )
+  })
+
   it('adds Biology minor requirements after the major roadmap without exceeding 18 credits', () => {
     const plan = appendMinorToPlan(planForDegreeType('bs', 'bs-computer-science', '2026'), getMinor('biology', '2026'))
     const terms = plan.years.flatMap(year => year.terms)

@@ -382,15 +382,15 @@ export const transferReadinessCourseIds = [
   'MATH-270',
 ] as const
 
-export function roadmapForProgram(programId: string, degreeType: DegreeType, catalogVersion: string = defaultCatalogVersion): ProgramRoadmap | undefined {
+export function roadmapForProgram(programId: string, degreeType: DegreeType, catalogVersion: string = defaultCatalogVersion, concentrationId?: string | null): ProgramRoadmap | undefined {
   const storedRoadmap = roadmapRecords.get(`${catalogVersion}/${programId}/${degreeType}`) ?? roadmapRecords.get(`${catalogVersion}/${programId}/bs`)
   if (storedRoadmap) return storedRoadmap
-  return getProgram(programId, catalogVersion) ? { status: 'derived', plan: deriveRoadmap(programId, catalogVersion) } : undefined
+  return getProgram(programId, catalogVersion) ? { status: 'derived', plan: deriveRoadmap(programId, catalogVersion, concentrationId) } : undefined
 }
 
-export function planForDegreeType(degreeType: DegreeType, programId: string = 'bs-computer-science', catalogVersion: string = defaultCatalogVersion): CurriculumPlan {
+export function planForDegreeType(degreeType: DegreeType, programId: string = 'bs-computer-science', catalogVersion: string = defaultCatalogVersion, concentrationId?: string | null): CurriculumPlan {
   const exactRoadmap = roadmapRecords.get(`${catalogVersion}/${programId}/${degreeType}`)
-  const roadmap = exactRoadmap ?? roadmapForProgram(programId, degreeType, catalogVersion) ?? roadmapForProgram(programId, 'bs', catalogVersion)
+  const roadmap = exactRoadmap ?? roadmapForProgram(programId, degreeType, catalogVersion, concentrationId) ?? roadmapForProgram(programId, 'bs', catalogVersion, concentrationId)
   if (!roadmap) return { schemaVersion: 1, years: [] }
   if (degreeType === 'bs') return roadmap.plan
   if (exactRoadmap && exactRoadmap.plan.years.every(year => year.year === 'junior' || year.year === 'senior')) return exactRoadmap.plan
@@ -640,11 +640,13 @@ function generalEducationSlots(): DerivedOptionSlot[] {
  * staff-verified sequence. It orders catalog courses against program-course chains and
  * catalog GE-area prerequisites; other outside preparation is left for advisor review.
  */
-function deriveRoadmap(programId: string, catalogVersion: string): CurriculumPlan {
+function deriveRoadmap(programId: string, catalogVersion: string, concentrationId?: string | null): CurriculumPlan {
   const program = getProgram(programId, catalogVersion)
   if (!program) return { schemaVersion: 1, years: [] }
+  const concentrationRequirements = getConcentration(programId, concentrationId, catalogVersion)?.requirements ?? []
+  const roadmapRequirements = [...program.requirements, ...concentrationRequirements]
 
-  const requiredCourseIds = new Set(program.requirements
+  const requiredCourseIds = new Set(roadmapRequirements
     .filter(requirement => requirement.completion.kind === 'all')
     .flatMap(requirementCourseIds))
   const plannedRequiredCourseIds = new Set(requiredCourseIds)
@@ -732,7 +734,7 @@ function deriveRoadmap(programId: string, catalogVersion: string): CurriculumPla
   while (terms.length < 8) terms.push({ term: terms.length % 2 === 0 ? 'fall' : 'spring', slots: [] })
 
   const optionSlots: DerivedOptionSlot[] = []
-  for (const requirement of program.requirements) {
+  for (const requirement of roadmapRequirements) {
     if (requirement.completion.kind === 'choose') {
       optionSlots.push({
         courseIds: requirementCourseIds(requirement),

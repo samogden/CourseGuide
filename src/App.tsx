@@ -355,13 +355,13 @@ function App() {
   const activeCatalog = catalogVersions[selectedCatalogVersion] ?? catalogVersions[defaultCatalogVersion]
   const activeProgramId = activeCatalog.programs[selectedProgramId] ? selectedProgramId : Object.keys(activeCatalog.programs)[0] ?? 'bs-computer-science'
   const activeProgram = activeCatalog.programs[activeProgramId]
-  const activeRoadmap = roadmapForProgram(activeProgramId, degreeType, selectedCatalogVersion)
-  const isAlphaRoadmap = activeRoadmap?.status === 'derived'
   const activeConcentrationId = selectedConcentration && activeProgram.concentrations[selectedConcentration] ? selectedConcentration : null
+  const activeRoadmap = roadmapForProgram(activeProgramId, degreeType, selectedCatalogVersion, activeConcentrationId)
+  const isAlphaRoadmap = activeRoadmap?.status === 'derived'
   const availableMinors = minorsForCatalog(selectedCatalogVersion)
   const activeMinorId = selectedMinor && availableMinors[selectedMinor] ? selectedMinor : null
   const activeMinor = getMinor(activeMinorId, selectedCatalogVersion)
-  const activePlan = appendMinorToPlan(planForDegreeType(degreeType, activeProgramId, selectedCatalogVersion), activeMinor)
+  const activePlan = appendMinorToPlan(planForDegreeType(degreeType, activeProgramId, selectedCatalogVersion, activeConcentrationId), activeMinor)
   const planCredits = summarizePlanCredits(activePlan)
   const activeTargetScopes = new Set(
     ['general', activeConcentrationId]
