@@ -313,6 +313,73 @@ function derivedCategory(courseId: string): Category {
   return 'elective'
 }
 
+interface DerivedOptionSlot {
+  slot: PlanSlot
+  courseIds: string[]
+  minimumTermIndex?: number
+}
+
+/**
+ * CSUMB's catalog-wide GE pattern. Staff-verified roadmaps keep their own
+ * placement; this is applied only while generating a draft roadmap.
+ */
+function generalEducationSlots(): DerivedOptionSlot[] {
+  const lowerDivision = [
+    ['ge-1a-english-composition', 'GE Area 1A: English Composition'],
+    ['ge-1b-critical-thinking', 'GE Area 1B: Critical Thinking'],
+    ['ge-1c-oral-communication', 'GE Area 1C: Oral Communication'],
+    ['ge-2-mathematics', 'GE Area 2: Mathematical Concepts & Quantitative Reasoning'],
+    ['ge-3a-arts', 'GE Area 3A: Arts'],
+    ['ge-3b-humanities', 'GE Area 3B: Humanities'],
+    ['ge-4a-social-behavioral-sciences', 'GE Area 4A: Social & Behavioral Sciences'],
+    ['ge-4b-civics', 'GE Area 4B: Civics'],
+    ['ge-5a-physical-science', 'GE Area 5A: Physical Science'],
+    ['ge-5b-biological-science', 'GE Area 5B: Biological Science'],
+    ['ge-6-ethnic-studies', 'GE Area 6: Ethnic Studies'],
+  ] as const
+  const lowerSlots = lowerDivision.map(([slotId, label]): DerivedOptionSlot => ({
+    courseIds: [],
+    slot: {
+      type: 'requirement',
+      slotId,
+      label,
+      credits: 3,
+      category: 'ge-lower',
+      guidance: `Complete a lower-division ${label.replace('GE ', '')} course.`,
+    },
+  }))
+  lowerSlots.splice(10, 0, {
+    courseIds: [],
+    slot: {
+      type: 'requirement',
+      slotId: 'ge-5c-laboratory',
+      label: 'GE Area 5C: Laboratory',
+      credits: 1,
+      category: 'ge-lower',
+      guidance: 'Complete a lower-division GE Area 5 laboratory course.',
+    },
+  })
+  return [
+    ...lowerSlots,
+    ...[
+      ['ge-upper-2-or-5', 'Upper-Division GE Area 2 or Area 5'],
+      ['ge-upper-3', 'Upper-Division GE Area 3'],
+      ['ge-upper-4', 'Upper-Division GE Area 4'],
+    ].map(([slotId, label]): DerivedOptionSlot => ({
+      courseIds: [],
+      minimumTermIndex: 4,
+      slot: {
+        type: 'requirement',
+        slotId,
+        label,
+        credits: 3,
+        category: 'ge-upper',
+        guidance: `Complete an ${label.toLowerCase()} course.`,
+      },
+    })),
+  ]
+}
+
 /**
  * Produces an explicitly draft roadmap for catalog programs that have requirements but no
  * staff-verified sequence. It only orders courses against prerequisites that are also in
@@ -358,7 +425,9 @@ function deriveRoadmap(programId: string, catalogVersion: string): CurriculumPla
     if (terms.length === 0) terms.push(finalTerm)
   }
 
-  const optionSlots: { slot: PlanSlot; courseIds: string[] }[] = []
+  while (terms.length < 8) terms.push({ term: terms.length % 2 === 0 ? 'fall' : 'spring', slots: [] })
+
+  const optionSlots: DerivedOptionSlot[] = []
   for (const requirement of program.requirements) {
     if (requirement.completion.kind === 'choose') {
       optionSlots.push({
@@ -389,10 +458,13 @@ function deriveRoadmap(programId: string, catalogVersion: string): CurriculumPla
       }
     }
   }
-  for (const { slot, courseIds } of optionSlots) {
+  optionSlots.push(...generalEducationSlots())
+  for (const { slot, courseIds, minimumTermIndex } of optionSlots) {
     const targetTerm = terms.find((candidateTerm, termIndex) => {
+      if (termIndex < (minimumTermIndex ?? 0)) return false
       const credits = candidateTerm.slots.reduce((total, candidate) => total + candidate.credits, 0)
       if (credits + slot.credits > 15) return false
+      if (courseIds.length === 0) return true
       const completedBeforeTerm = new Set(terms
         .slice(0, termIndex)
         .flatMap(term => term.slots)

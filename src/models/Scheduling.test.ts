@@ -158,6 +158,16 @@ describe('suggested scheduling', () => {
     )).toBe(true)
   })
 
+  it('adds catalog-wide GE blocks only to derived roadmaps', () => {
+    const cinematicPlan = planForDegreeType('bs', 'ba-cinematic-arts-and-technology', '2026')
+    const cinematicSlots = cinematicPlan.years.flatMap(year => year.terms.flatMap(term => term.slots))
+    const verifiedComputerScienceSlots = curriculumPlan.years.flatMap(year => year.terms.flatMap(term => term.slots))
+
+    expect(cinematicSlots.map(progressKey)).toContain('slot:ge-1a-english-composition')
+    expect(cinematicSlots.map(progressKey)).toContain('slot:ge-upper-4')
+    expect(verifiedComputerScienceSlots.map(progressKey)).not.toContain('slot:ge-1a-english-composition')
+  })
+
   it('reserves elective choices for a selected minor before flexible major electives', () => {
     const schedule = buildSuggestedSchedule(curriculumPlan, new Set(), {
       programId: 'bs-computer-science',
