@@ -270,12 +270,14 @@ roadmaps:
                   courseId: CST-338
                   credits: 4
                   category: cst
-                - type: course
-                  courseId: CST-349
-                  credits: 2
-                  category: cst
                 - type: requirement
                   slotId: junior-fall-elective-prerequisite
+                  label: Elective
+                  credits: 4
+                  category: elective
+                  guidance: Complete an upper-division elective or concentration requirement.
+                - type: requirement
+                  slotId: junior-spring-elective-prerequisite
                   label: Elective
                   credits: 4
                   category: elective
@@ -294,12 +296,10 @@ roadmaps:
                   courseId: CST-300
                   credits: 3
                   category: cst
-                - type: requirement
-                  slotId: junior-spring-elective-prerequisite
-                  label: Elective
-                  credits: 4
-                  category: elective
-                  guidance: Complete an upper-division elective or concentration requirement.
+                - type: course
+                  courseId: CST-349
+                  credits: 2
+                  category: cst
                 - type: requirement
                   slotId: junior-spring-elective
                   label: Elective
