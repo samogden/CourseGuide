@@ -183,10 +183,6 @@ roadmaps:
             - term: fall
               slots:
                 - type: course
-                  courseId: CST-231
-                  credits: 4
-                  category: cst
-                - type: course
                   courseId: FYS-145
                   credits: 3
                   category: ge-lower
@@ -201,15 +197,11 @@ roadmaps:
             - term: spring
               slots:
                 - type: course
-                  courseId: CST-238
+                  courseId: CST-231
                   credits: 4
                   category: cst
                 - type: course
                   courseId: MATH-150
-                  credits: 4
-                  category: math
-                - type: course
-                  courseId: MATH-170
                   credits: 4
                   category: math
                 - type: course
@@ -221,17 +213,13 @@ roadmaps:
             - term: fall
               slots:
                 - type: course
-                  courseId: CST-237
+                  courseId: CST-238
                   credits: 4
                   category: cst
-                - type: choice
-                  slotId: math-foundation-choice
-                  alternatives:
-                    - MATH-151
-                    - MATH-270
+                - type: course
+                  courseId: MATH-170
                   credits: 4
                   category: math
-                  guidance: Choose one mathematics foundation course.
                 - type: requirement
                   slotId: ge-4-lower-division
                   label: GE Area 4 Lower Division
@@ -246,6 +234,18 @@ roadmaps:
                   guidance: Complete a lower-division GE Area 6 course.
             - term: spring
               slots:
+                - type: course
+                  courseId: CST-237
+                  credits: 4
+                  category: cst
+                - type: choice
+                  slotId: math-foundation-choice
+                  alternatives:
+                    - MATH-151
+                    - MATH-270
+                  credits: 4
+                  category: math
+                  guidance: Choose one mathematics foundation course.
                 - type: choice
                   slotId: world-culture-or-language
                   alternatives:
