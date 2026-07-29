@@ -293,8 +293,45 @@ export function appendMinorToPlan(plan: CurriculumPlan, minor: Minor | undefined
   const years = plan.years.map(year => ({ ...year, terms: year.terms.map(term => ({ ...term, slots: [...term.slots] })) }))
   const terms = years.flatMap(year => year.terms)
   const plannedCourseIds = new Set(plan.years.flatMap(year => year.terms.flatMap(term => term.slots.flatMap(slot => slot.type === 'course' ? [slot.courseId] : []))))
-  const appendSlot = (slot: PlanSlot) => {
-    const target = terms.find(term => term.slots.reduce((total, current) => total + current.credits, 0) + slot.credits <= 18) ?? terms.at(-1)
+  const completedBefore = (termIndex: number) => new Set(
+    terms.slice(0, termIndex).flatMap(term => term.slots.flatMap(slot => slot.type === 'course' ? [slot.courseId] : [])),
+  )
+  const prerequisitesMetForPlan = (prerequisites: unknown[], completed: ReadonlySet<string>): boolean => {
+    const met = (prerequisite: unknown): boolean => {
+      if (!prerequisite || typeof prerequisite !== 'object') return false
+      const value = prerequisite as { courseId?: string; allOf?: unknown[]; anyOf?: unknown[] }
+      if (value.courseId) {
+        const id = canonicalCourseId(value.courseId)
+        // Courses outside this plan are assumed to have been completed by the
+        // student before entering the program; planned courses must be earlier.
+        return !plannedCourseIds.has(id) || completed.has(id)
+      }
+      if (value.allOf) return value.allOf.every(met)
+      if (value.anyOf) return value.anyOf.some(met)
+      return false
+    }
+    return prerequisites.every(met)
+  }
+  const canTake = (courseId: string, term: AcademicTerm, termIndex: number) => {
+    const course = getCourse(courseId)
+    if (!course || !isCourseOffered(courseId, term)) return false
+    const courseNumber = Number(course.code.match(/\d{3}/)?.[0] ?? 0)
+    // Catalog data does not always carry an explicit standing restriction;
+    // upper-division (300/400-level) coursework nevertheless belongs after
+    // the first two years in the generated plan.
+    if ((course.minimumStanding === 'junior' || courseNumber >= 300) && termIndex < 4) return false
+    return prerequisitesMetForPlan(course.prerequisites, completedBefore(termIndex))
+  }
+  const appendSlot = (slot: PlanSlot, courseIds: readonly string[]) => {
+    const eligible = (limit: number) => terms.findIndex((term, termIndex) =>
+      term.slots.reduce((total, current) => total + current.credits, 0) + slot.credits <= limit &&
+      (courseIds.length === 0 || courseIds.some(courseId => canTake(courseId, term.term, termIndex))),
+    )
+    // Minor coursework is additive: never use the major planner's 16–18
+    // credit stretch capacity when there is a later term with room at the
+    // normal 15-credit target.
+    const targetIndex = eligible(15)
+    const target = terms[targetIndex >= 0 ? targetIndex : terms.length - 1]
     if (target) target.slots.push(slot)
   }
   for (const requirement of minor.requirements) {
@@ -302,7 +339,7 @@ export function appendMinorToPlan(plan: CurriculumPlan, minor: Minor | undefined
       for (const courseId of requirementCourseIds(requirement)) {
         const course = getCourse(courseId)
         if (plannedCourseIds.has(courseId)) continue
-        if (course) appendSlot({ type: 'course', courseId, credits: course.units, category: 'elective', source: 'minor' })
+        if (course) appendSlot({ type: 'course', courseId, credits: course.units, category: 'elective', source: 'minor' }, [courseId])
       }
     } else if (requirement.completion.kind === 'choose') {
       const alternatives = requirementCourseIds(requirement).filter(courseId => !plannedCourseIds.has(courseId))
@@ -316,7 +353,7 @@ export function appendMinorToPlan(plan: CurriculumPlan, minor: Minor | undefined
           category: 'elective',
           source: 'minor',
           guidance: requirement.optionLabel ?? 'Choose a course for this minor requirement.',
-        })
+        }, alternatives)
       }
     }
   }
