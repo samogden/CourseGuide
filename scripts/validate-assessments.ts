@@ -48,12 +48,15 @@ async function readManifest(): Promise<Record<string, AssessmentPack>> {
       errors.push(`${courseId}: missing questionSlots in the assessment manifest`)
       continue
     }
+    // Variation counts are discovered from public/assessments, just as they
+    // are for the generated runtime pack. Metadata only declares slot IDs and
+    // skills, so deleting old variation files does not leave a stale count.
     const questionSlots = value.questionSlots.flatMap(slot => {
-      if (!isRecord(slot) || typeof slot.id !== 'string' || !Number.isInteger(slot.variations) || slot.variations <= 0) {
-        errors.push(`${courseId}: every question slot needs an id and a positive integer variations count`)
+      if (!isRecord(slot) || typeof slot.id !== 'string') {
+        errors.push(`${courseId}: every question slot needs an id`)
         return []
       }
-      return [{ id: slot.id, variations: slot.variations }]
+      return [{ id: slot.id, variations: 0 }]
     })
     packs[courseId] = { questionSlots }
   }
@@ -70,7 +73,6 @@ async function discoverAssessmentDirectories(packs: Record<string, AssessmentPac
   }
 
   for (const entry of entries.filter(entry => entry.isDirectory())) {
-    if (packs[entry.name]) continue
     const courseRoot = resolve(root, entry.name)
     const slotEntries = await readdir(courseRoot, { withFileTypes: true })
     const questionSlots = await Promise.all(slotEntries
@@ -80,6 +82,7 @@ async function discoverAssessmentDirectories(packs: Record<string, AssessmentPac
         variations: (await readdir(resolve(courseRoot, slot.name), { withFileTypes: true }))
           .filter(file => file.isFile() && /^v\d{3}\.yaml$/.test(file.name)).length,
       })))
+    // Filesystem discovery is authoritative for both runtime and validation.
     packs[entry.name] = { questionSlots }
   }
 }

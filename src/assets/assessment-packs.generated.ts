@@ -8,52 +8,52 @@ export const discoveredAssessmentPacks = {
       {
         "id": "q01",
         "skill": "Function evaluation",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q02",
         "skill": "Quadratic vertex form",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q03",
         "skill": "Polynomial zeros",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q04",
         "skill": "Rational-function domains",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q05",
         "skill": "Exponential functions",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q06",
         "skill": "Logarithms",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q07",
         "skill": "Trigonometric values",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q08",
         "skill": "Trigonometric equations",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q09",
         "skill": "Linear models",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q10",
         "skill": "Descriptive statistics",
-        "variations": 200
+        "variations": 9
       }
     ]
   },
@@ -64,52 +64,52 @@ export const discoveredAssessmentPacks = {
       {
         "id": "q01",
         "skill": "Question 1",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q02",
         "skill": "Question 2",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q03",
         "skill": "Question 3",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q04",
         "skill": "Question 4",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q05",
         "skill": "Question 5",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q06",
         "skill": "Question 6",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q07",
         "skill": "Question 7",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q08",
         "skill": "Question 8",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q09",
         "skill": "Question 9",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q10",
         "skill": "Question 10",
-        "variations": 200
+        "variations": 9
       }
     ]
   },
@@ -120,52 +120,52 @@ export const discoveredAssessmentPacks = {
       {
         "id": "q01",
         "skill": "Question 1",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q02",
         "skill": "Question 2",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q03",
         "skill": "Question 3",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q04",
         "skill": "Question 4",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q05",
         "skill": "Question 5",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q06",
         "skill": "Question 6",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q07",
         "skill": "Question 7",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q08",
         "skill": "Question 8",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q09",
         "skill": "Question 9",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q10",
         "skill": "Question 10",
-        "variations": 200
+        "variations": 9
       }
     ]
   },
@@ -176,52 +176,52 @@ export const discoveredAssessmentPacks = {
       {
         "id": "q01",
         "skill": "Question 1",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q02",
         "skill": "Question 2",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q03",
         "skill": "Question 3",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q04",
         "skill": "Question 4",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q05",
         "skill": "Question 5",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q06",
         "skill": "Question 6",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q07",
         "skill": "Question 7",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q08",
         "skill": "Question 8",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q09",
         "skill": "Question 9",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q10",
         "skill": "Question 10",
-        "variations": 200
+        "variations": 9
       }
     ]
   },
@@ -232,52 +232,52 @@ export const discoveredAssessmentPacks = {
       {
         "id": "q01",
         "skill": "Question 1",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q02",
         "skill": "Question 2",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q03",
         "skill": "Question 3",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q04",
         "skill": "Question 4",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q05",
         "skill": "Question 5",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q06",
         "skill": "Question 6",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q07",
         "skill": "Question 7",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q08",
         "skill": "Question 8",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q09",
         "skill": "Question 9",
-        "variations": 200
+        "variations": 9
       },
       {
         "id": "q10",
         "skill": "Question 10",
-        "variations": 200
+        "variations": 9
       }
     ]
   }
