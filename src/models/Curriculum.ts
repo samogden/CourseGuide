@@ -332,6 +332,10 @@ export function appendMinorToPlan(plan: CurriculumPlan, minor: Minor | undefined
       // A one-unit practicum alone cannot fill a four-unit requirement slot.
       .filter(course => course.maximumUnits >= credits)
       .map(course => Number(course.code.match(/\d{3}/)?.[0] ?? 100))
+      // Special-topics/independent-study numbers (x95–x99, such as BIO
+      // 196) are not reliable indicators of when the regular curriculum is
+      // taken. Exclude them before deriving the placement preference.
+      .filter(courseNumber => courseNumber % 100 < 95)
     const level = Math.min(...levels)
     if (!Number.isFinite(level)) return 0
     return level >= 400 ? 6 : level >= 300 ? 4 : level >= 200 ? 2 : 0

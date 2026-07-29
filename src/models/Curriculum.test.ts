@@ -175,6 +175,27 @@ describe('curriculum data', () => {
     expect(termIndexByMinorSlot.get('slot:minor-biology-complete-one-of-the-following-upper-division-biology-lab-course-course-combinations-1')).toBeGreaterThanOrEqual(4)
   })
 
+  it('does not use x95–x99 courses to infer minor placement level', () => {
+    const plan = {
+      schemaVersion: 1,
+      years: [
+        { year: 'freshman', terms: [{ term: 'fall', slots: [{ type: 'requirement', slotId: 'blocked-1', label: 'Blocked', credits: 18, category: 'elective', guidance: '' }] }, { term: 'spring', slots: [{ type: 'requirement', slotId: 'blocked-2', label: 'Blocked', credits: 18, category: 'elective', guidance: '' }] }] },
+        { year: 'sophomore', terms: [{ term: 'fall', slots: [{ type: 'requirement', slotId: 'blocked-3', label: 'Blocked', credits: 18, category: 'elective', guidance: '' }] }, { term: 'spring', slots: [{ type: 'requirement', slotId: 'blocked-4', label: 'Blocked', credits: 18, category: 'elective', guidance: '' }] }] },
+        { year: 'junior', terms: [{ term: 'fall', slots: [] }, { term: 'spring', slots: [] }] },
+        { year: 'senior', terms: [{ term: 'fall', slots: [] }, { term: 'spring', slots: [] }] },
+      ],
+    } as CurriculumPlan
+    const minorPlan = appendMinorToPlan(plan, getMinor('biology', '2026'))
+    const terms = minorPlan.years.flatMap(year => year.terms)
+    const additionalBiologySlot = terms.flatMap(term => term.slots)
+      .find(slot => slot.type === 'requirement' && slot.slotId.startsWith('minor-biology-complete-additional-biology-courses'))
+
+    // BIO 196 is excluded; the earliest usable option is BIO 311, so this
+    // 12-credit selection block starts in junior year rather than freshman.
+    expect(additionalBiologySlot).toBeDefined()
+    expect(terms.findIndex(term => term.slots.includes(additionalBiologySlot!))).toBeGreaterThanOrEqual(4)
+  })
+
   it('calculates remaining credits from completed plan slots', () => {
     const firstCourse = curriculumPlan.years[0].terms[0].slots[0]
 

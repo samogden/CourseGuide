@@ -438,8 +438,12 @@ export function sortSlotsForPresentation(slots: readonly PlanSlot[], assignments
       index,
       category: presentationCategory(slot, assignments.get(progressKey(slot)), courseOptions.get(progressKey(slot))),
       completed: completed ? isSlotCompleted(slot, completed, assignments) : false,
+      // Minor coursework is additive to the major roadmap, so display it at
+      // the end of each term rather than allowing its category to interleave
+      // it with core, concentration, or GE slots.
+      minor: slot.source === 'minor',
     }))
-    .sort((left, right) => Number(right.completed) - Number(left.completed) || presentationCategoryRank(left.category) - presentationCategoryRank(right.category) || left.index - right.index)
+    .sort((left, right) => Number(right.completed) - Number(left.completed) || Number(left.minor) - Number(right.minor) || presentationCategoryRank(left.category) - presentationCategoryRank(right.category) || left.index - right.index)
     .map(entry => entry.slot)
 }
 

@@ -103,6 +103,15 @@ describe('suggested scheduling', () => {
     ])
   })
 
+  it('presents minor coursework to the right of the major roadmap', () => {
+    const plan = appendMinorToPlan(curriculumPlan, getMinor('biology', '2026'))
+    const sophomoreSpring = plan.years[1].terms[1].slots
+    const ordered = sortSlotsForPresentation(sophomoreSpring)
+
+    expect(ordered.filter(slot => slot.source === 'minor')).toHaveLength(1)
+    expect(ordered.at(-1)?.source).toBe('minor')
+  })
+
   it('presents completed work before every other course in a term', () => {
     const freshmanFall = curriculumPlan.years[0].terms[0].slots
     const orderedKeys = sortSlotsForPresentation(freshmanFall, new Map(), new Map(), new Set(['course:MATH-130'])).map(progressKey)
