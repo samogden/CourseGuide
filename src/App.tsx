@@ -1,4 +1,5 @@
-import { lazy, Suspense, useEffect, useState } from 'react'
+import { lazy, Suspense, useEffect, useRef, useState } from 'react'
+import { parse, stringify } from 'yaml'
 import './App.css'
 import { AdditionalCourseAdd, AdditionalCourseCell, AdditionalCourseModal, AdditionalCoursePlaceholder, type AdditionalCourse } from './components/AdditionalCourse'
 import { CourseCell, CourseModal, type RequirementCourseSelection } from './components/CourseBox'
@@ -30,6 +31,21 @@ function programSortTitle(title: string): string {
 function displayProgramTitle(title: string): string {
   const match = title.match(/^B\.([AS])\.?(?:\s+)(.+)$/i)
   return match ? `${match[2]}, B.${match[1].toUpperCase()}.` : title
+}
+
+interface PortablePlannerState {
+  schemaVersion: 1
+  exportedAt: string
+  catalogVersion: string
+  programId: string
+  degreeType: DegreeType
+  concentrationId: string | null
+  minorId: string | null
+  completed: string[]
+  targetCourses: Record<string, string>
+  requirementCourses: Record<string, RequirementCourseSelection[]>
+  transferPreparation: Record<string, string[]>
+  additionalCourses: Record<string, AdditionalCourse[]>
 }
 
 function targetCourseKey(catalogVersion: string, programId: string, degreeType: DegreeType, scope: string, slotKey: string): string {
@@ -81,6 +97,41 @@ function linkedChoiceSlots(plan: CurriculumPlan, slot: PlanSlot): PlanSlot[] {
       candidate.type === 'choice' &&
       progressKey(candidate) !== progressKey(slot) &&
       [...candidate.alternatives].sort().join('|') === alternativesKey)
+}
+
+function portablePlannerState(value: unknown): PortablePlannerState | null {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return null
+  const record = value as Record<string, unknown>
+  const stringRecord = (candidate: unknown): Record<string, string> | null => {
+    if (!candidate || typeof candidate !== 'object' || Array.isArray(candidate)) return null
+    const entries = Object.entries(candidate)
+    return entries.every(([key, item]) => typeof key === 'string' && typeof item === 'string') ? Object.fromEntries(entries) : null
+  }
+  const stringArrayRecord = (candidate: unknown): Record<string, string[]> | null => {
+    if (!candidate || typeof candidate !== 'object' || Array.isArray(candidate)) return null
+    const entries = Object.entries(candidate)
+    return entries.every(([, item]) => Array.isArray(item) && item.every(entry => typeof entry === 'string'))
+      ? Object.fromEntries(entries as [string, string[]][]) : null
+  }
+  if (record.schemaVersion !== 1 || typeof record.exportedAt !== 'string' || typeof record.catalogVersion !== 'string' || typeof record.programId !== 'string' || (record.degreeType !== 'bs' && record.degreeType !== 'ast-to-bs') || (record.concentrationId !== null && typeof record.concentrationId !== 'string') || (record.minorId !== null && typeof record.minorId !== 'string') || !Array.isArray(record.completed) || !record.completed.every(item => typeof item === 'string')) return null
+  const targetCourses = stringRecord(record.targetCourses)
+  const transferPreparation = stringArrayRecord(record.transferPreparation)
+  if (!targetCourses || !transferPreparation || !record.requirementCourses || typeof record.requirementCourses !== 'object' || Array.isArray(record.requirementCourses) || !record.additionalCourses || typeof record.additionalCourses !== 'object' || Array.isArray(record.additionalCourses)) return null
+  const requirementCourses = Object.fromEntries(Object.entries(record.requirementCourses).flatMap(([key, selections]) => {
+    if (!Array.isArray(selections) || !selections.every(selection => selection && typeof selection === 'object' && typeof (selection as RequirementCourseSelection).courseId === 'string' && typeof (selection as RequirementCourseSelection).credits === 'number')) return []
+    return [[key, selections as RequirementCourseSelection[]]]
+  }))
+  const additionalCourses = Object.fromEntries(Object.entries(record.additionalCourses).flatMap(([key, courses]) => {
+    if (!Array.isArray(courses) || !courses.every(course => course && typeof course === 'object' && typeof (course as AdditionalCourse).id === 'string' && typeof (course as AdditionalCourse).code === 'string' && typeof (course as AdditionalCourse).credits === 'number')) return []
+    return [[key, courses as AdditionalCourse[]]]
+  }))
+  if (Object.keys(requirementCourses).length !== Object.keys(record.requirementCourses).length || Object.keys(additionalCourses).length !== Object.keys(record.additionalCourses).length) return null
+  return { schemaVersion: 1, exportedAt: record.exportedAt, catalogVersion: record.catalogVersion, programId: record.programId, degreeType: record.degreeType, concentrationId: record.concentrationId, minorId: record.minorId, completed: record.completed, targetCourses, requirementCourses, transferPreparation, additionalCourses }
+}
+
+function yamlFromImportFile(source: string): string {
+  const embedded = source.match(/<script\s+[^>]*id=["']courseguide-progress["'][^>]*>([\s\S]*?)<\/script>/i)
+  return embedded ? embedded[1].replace(/<\\\//g, '</') : source
 }
 
 function readCompleted(): Set<string> {
@@ -230,6 +281,7 @@ function App() {
   const [activeView, setActiveView] = useState<'roadmap' | 'registration' | 'compacted'>('roadmap')
   const [registrationTerm, setRegistrationTerm] = useState<AcademicTerm>('fall')
   const [compactedCreditLimit, setCompactedCreditLimit] = useState(15)
+  const importInput = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     localStorage.setItem(progressStorageKey, JSON.stringify([...completed]))
@@ -306,6 +358,52 @@ function App() {
     setAssessmentCourseId(null)
     setTransferReadinessOpen(false)
     setAdditionalCourseTerm(null)
+  }
+
+  const exportProgress = () => {
+    const state: PortablePlannerState = {
+      schemaVersion: 1,
+      exportedAt: new Date().toISOString(),
+      catalogVersion: selectedCatalogVersion,
+      programId: selectedProgramId,
+      degreeType,
+      concentrationId: selectedConcentration,
+      minorId: selectedMinor,
+      completed: [...completed].sort(),
+      targetCourses: Object.fromEntries(targetCourses),
+      requirementCourses: Object.fromEntries(requirementCourses),
+      transferPreparation: Object.fromEntries(transferPreparation),
+      additionalCourses: Object.fromEntries(additionalCourses),
+    }
+    const yaml = stringify(state)
+    const title = displayProgramTitle((catalogVersions[state.catalogVersion]?.programs[state.programId]?.title ?? 'CourseGuide progress'))
+    const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${title} progress</title><style>body{color:#172033;font:16px/1.5 system-ui,sans-serif;margin:2rem;max-width:48rem}h1{margin-bottom:0}.note{color:#475569}.yaml{background:#f8fafc;border:1px solid #cbd5e1;padding:1rem;white-space:pre-wrap}</style></head><body><h1>${title} progress</h1><p class="note">Exported ${new Date(state.exportedAt).toLocaleString()}. Keep this file to restore your CourseGuide progress later.</p><h2>Completed items</h2><p>${state.completed.length ? state.completed.join(', ') : 'None recorded yet.'}</p><h2>Portable progress data</h2><pre class="yaml">${yaml.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</pre><script id="courseguide-progress" type="text/yaml">${yaml.replace(/<\//g, '<\\/')}</script></body></html>`
+    const link = document.createElement('a')
+    link.href = URL.createObjectURL(new Blob([html], { type: 'text/html' }))
+    link.download = `courseguide-progress-${state.exportedAt.slice(0, 10)}.html`
+    link.click()
+    URL.revokeObjectURL(link.href)
+  }
+
+  const importProgress = async (file: File) => {
+    try {
+      const state = portablePlannerState(parse(yamlFromImportFile(await file.text())))
+      if (!state) throw new Error('invalid progress document')
+      setCompleted(new Set(state.completed))
+      setTargetCourses(new Map(Object.entries(state.targetCourses)))
+      setRequirementCourses(new Map(Object.entries(state.requirementCourses)))
+      setTransferPreparation(new Map(Object.entries(state.transferPreparation)))
+      setAdditionalCourses(new Map(Object.entries(state.additionalCourses)))
+      setSelectedCatalogVersion(catalogVersions[state.catalogVersion] ? state.catalogVersion : defaultCatalogVersion)
+      setSelectedProgramId(state.programId)
+      setDegreeType(state.degreeType)
+      setSelectedConcentration(state.concentrationId)
+      setSelectedMinor(state.minorId)
+      setSelectedSlot(null)
+      setActiveView('roadmap')
+    } catch {
+      window.alert('This file is not a valid CourseGuide progress export.')
+    }
   }
 
   const updateTransferPreparation = (courseId: string, included: boolean) => {
@@ -551,6 +649,13 @@ function App() {
       <header className="planner-header">
         <div><p className="eyebrow">{displayProgramTitle(activeProgram.title)}{isAlphaRoadmap ? ' · Alpha' : ''}</p><h1>Curriculum planner</h1><p>Explore the suggested course sequence and mark completed coursework.</p></div>
         <div className="header-actions">
+          <button className="reset-button" type="button" onClick={exportProgress}>Export progress</button>
+          <button className="reset-button" type="button" onClick={() => importInput.current?.click()}>Import progress</button>
+          <input ref={importInput} className="progress-import-input" type="file" aria-label="Progress import file" accept=".html,.yaml,.yml,text/html,text/yaml" onChange={event => {
+            const file = event.target.files?.[0]
+            if (file) void importProgress(file)
+            event.currentTarget.value = ''
+          }} />
           <button className="reset-button" type="button" onClick={resetPlanner}>Reset planner</button>
         </div>
       </header>

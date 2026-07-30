@@ -1,4 +1,4 @@
-import { cleanup, fireEvent, render, screen } from '@testing-library/react'
+import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import App from './App'
 
@@ -34,6 +34,30 @@ describe('planner', () => {
     render(<App />)
     const fys145 = screen.getByRole('button', { name: /FYS 145/i })
     expect(fys145).toHaveClass('is-suggested', 'is-standard')
+  })
+
+  it('imports portable YAML progress and restores the student plan', async () => {
+    render(<App />)
+    const yaml = `schemaVersion: 1
+exportedAt: "2026-07-29T00:00:00.000Z"
+catalogVersion: "2026"
+programId: bs-biology
+degreeType: bs
+concentrationId: null
+minorId: biology
+completed:
+  - course:BIO-210
+targetCourses: {}
+requirementCourses: {}
+transferPreparation: {}
+additionalCourses: {}
+`
+    const file = new File([yaml], 'courseguide-progress.yaml', { type: 'text/yaml' })
+    fireEvent.change(screen.getByLabelText('Progress import file'), { target: { files: [file] } })
+
+    expect(await screen.findByLabelText('Major')).toHaveDisplayValue('Biology, B.S. (Alpha)')
+    expect(screen.getByLabelText('Minor')).toHaveValue('biology')
+    await waitFor(() => expect(localStorage.getItem('courseguide-completed-v1')).toContain('course:BIO-210'))
   })
 
   it('uses MATH 150 direct placement to remove the freshman-spring MATH 150 block', () => {

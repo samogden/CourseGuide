@@ -6,6 +6,7 @@
 .planner-header { align-items: end; display: flex; gap: 2rem; justify-content: space-between; margin-bottom: 1rem; }
 .planner-header p { margin: 0; }
 .header-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: flex-end; }
+.progress-import-input { display: none; }
 .eyebrow { color: #1d4ed8; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
 .planner h1 { margin: 0.25rem 0; }
 .reset-button { background: #fff; border: 1px solid #64748b; border-radius: 0.35rem; color: #172033; cursor: pointer; font: inherit; padding: 0.55rem 0.8rem; white-space: nowrap; }
