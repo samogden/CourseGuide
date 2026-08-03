@@ -29,6 +29,8 @@ export type SuggestionKind = 'standard' | 'stretch'
 export interface ScheduledSuggestion {
   kind: SuggestionKind
   courseId?: string
+  /** Number of later roadmap courses this course helps unlock. */
+  downstreamCount?: number
 }
 
 export interface PathSlotOptions {
@@ -160,6 +162,16 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
     if (slot.type === 'choice') return slot.alternatives
     return []
   }))))
+  // Keep a simple reverse prerequisite index for priority presentation. This
+  // is intentionally based on the concrete roadmap, so gateway courses such
+  // as MATH 130 receive priority even when their dependents are not part of a
+  // selected concentration.
+  const plannedPostrequisiteCounts = new Map<string, number>()
+  for (const courseId of explicitPlannedCourseIds) {
+    for (const prerequisiteId of prerequisiteCourseIds(getCourse(courseId)?.prerequisites ?? [])) {
+      plannedPostrequisiteCounts.set(prerequisiteId, (plannedPostrequisiteCounts.get(prerequisiteId) ?? 0) + 1)
+    }
+  }
   const programRequirements = selection?.includeProgramRequirements
     ? activeProgramRequirements(selection.programId ?? defaultProgramId, null, selection.catalogVersion ?? defaultCatalogVersion)
     : []
@@ -287,6 +299,7 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
             suggestions.set(member.key, {
               kind: suggestionKind,
               ...(member.courseId ? { courseId: member.courseId } : {}),
+              ...(member.courseId ? { downstreamCount: downstreamReachCount(member.courseId, generalDownstreamGraph) } : {}),
             })
             selectedEntries.push({ key: member.key, slot: member.slot, courseId: member.courseId, termIndex: planTermIndex })
             selectedInTerm.add(member.key)
@@ -309,8 +322,21 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
       const firstSuggestionTermIndex = selectedEntries.length > 0
         ? Math.min(...selectedEntries.map(entry => entry.termIndex))
         : -1
-      return selectedEntries
-        .filter(entry => entry.termIndex === firstSuggestionTermIndex && entry.slot.type === 'course' && suggestions.get(entry.key)?.kind !== 'stretch')
+      const firstTermCourses = selectedEntries
+        .filter(entry => entry.termIndex === firstSuggestionTermIndex && Boolean(entry.courseId) && suggestions.get(entry.key)?.kind !== 'stretch')
+        .sort((left, right) => {
+          const leftCourseId = left.courseId ?? ''
+          const rightCourseId = right.courseId ?? ''
+          return (plannedPostrequisiteCounts.get(rightCourseId) ?? 0) - (plannedPostrequisiteCounts.get(leftCourseId) ?? 0) ||
+            downstreamReachCount(rightCourseId, generalDownstreamGraph) - downstreamReachCount(leftCourseId, generalDownstreamGraph) ||
+            prerequisiteCount(getCourse(rightCourseId)?.prerequisites ?? []) - prerequisiteCount(getCourse(leftCourseId)?.prerequisites ?? []) ||
+            left.key.localeCompare(right.key)
+        })
+      const gatewayCourses = firstTermCourses.filter(entry => {
+        const courseId = entry.courseId ?? ''
+        return (plannedPostrequisiteCounts.get(courseId) ?? 0) > 0 || downstreamReachCount(courseId, generalDownstreamGraph) > 0
+      })
+      return (gatewayCourses.length > 0 ? gatewayCourses : firstTermCourses).slice(0, 4)
     })()
       .slice(0, 4)
       .map(entry => entry.key),
@@ -318,7 +344,7 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
   const isHighPriority = (slot: PlanSlot) => {
     const suggestion = suggestions.get(progressKey(slot))
     if (suggestion?.kind === 'stretch') return false
-    if (slot.type === 'course') return highPriorityKeys.has(progressKey(slot))
+    if (suggestion?.courseId) return highPriorityKeys.has(progressKey(slot)) || (suggestion.downstreamCount ?? 0) > 0
     return false
   }
 
