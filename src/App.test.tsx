@@ -5,6 +5,7 @@ import App from './App'
 afterEach(() => {
   cleanup()
   localStorage.clear()
+  vi.unstubAllGlobals()
   vi.restoreAllMocks()
 })
 
@@ -16,6 +17,34 @@ describe('planner', () => {
     fireEvent.click(screen.getByRole('button', { name: /mark as taken/i }))
     expect(localStorage.getItem('courseguide-completed-v1')).toContain('course:CST-231')
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
+  })
+
+  it('exports a printable roadmap snapshot with embedded portable YAML', async () => {
+    let exportedBlob: Blob | undefined
+    class ExportUrl extends URL {
+      static createObjectURL = vi.fn((blob: Blob) => {
+        exportedBlob = blob
+        return 'blob:courseguide-progress'
+      })
+
+      static revokeObjectURL = vi.fn()
+    }
+    vi.stubGlobal('URL', ExportUrl)
+    vi.spyOn(HTMLAnchorElement.prototype, 'click').mockImplementation(() => undefined)
+
+    render(<App />)
+    fireEvent.click(screen.getAllByRole('button', { name: /CST 231/i })[0])
+    fireEvent.click(screen.getByRole('button', { name: /mark as taken/i }))
+    fireEvent.click(screen.getByRole('button', { name: /export progress/i }))
+
+    expect(exportedBlob).toBeDefined()
+    const html = await exportedBlob!.text()
+    expect(html).toContain('CourseGuide progress snapshot')
+    expect(html).toContain('freshman')
+    expect(html).toContain('is-completed')
+    expect(html).toContain('Completed')
+    expect(html).toContain('courseguide-progress')
+    expect(html).toContain('schemaVersion: 1')
   })
 
   it('resets all saved planner state after confirmation', () => {

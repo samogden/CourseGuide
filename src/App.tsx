@@ -6,8 +6,8 @@ import { CourseCell, CourseModal, type RequirementCourseSelection } from './comp
 import { ReadinessAssessment } from './components/ReadinessAssessment'
 import { TransferReadiness } from './components/TransferReadiness'
 import { getAssessmentPack } from './models/Assessments'
-import { appendMinorToPlan, availableGeneralEducationAreas, catalogVersions, defaultCatalogVersion, degreeYearLabel, getCourse, getMinor, minorsForCatalog, planForDegreeType, prerequisitesMet, progressKey, remainingPlanCredits, roadmapForProgram, summarizePlanCredits, transferAssumedCourseIds, type AcademicTerm, type CurriculumPlan, type DegreeType, type PlanSlot } from './models/Curriculum'
-import { buildCompactedSchedule, buildRegistrationPlan, buildSuggestedSchedule, sortSlotsForPresentation } from './models/Scheduling'
+import { appendMinorToPlan, availableGeneralEducationAreas, catalogVersions, defaultCatalogVersion, degreeYearLabel, getCourse, getMinor, minorsForCatalog, planForDegreeType, prerequisitesMet, progressKey, remainingPlanCredits, roadmapForProgram, slotLabel, summarizePlanCredits, transferAssumedCourseIds, type AcademicTerm, type CurriculumPlan, type DegreeType, type PlanSlot } from './models/Curriculum'
+import { buildCompactedSchedule, buildRegistrationPlan, buildSuggestedSchedule, presentationCategory, sortSlotsForPresentation, type PathSlotOptions } from './models/Scheduling'
 import { buildPreparationTerms, preparationCredits } from './models/TransferPreparation'
 
 const progressStorageKey = 'courseguide-completed-v1'
@@ -46,6 +46,91 @@ interface PortablePlannerState {
   requirementCourses: Record<string, RequirementCourseSelection[]>
   transferPreparation: Record<string, string[]>
   additionalCourses: Record<string, AdditionalCourse[]>
+}
+
+function escapeHtml(value: string): string {
+  return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;')
+}
+
+function staticCourseLabel(slot: PlanSlot, assignments: ReadonlyMap<string, string>, courseOptions: ReadonlyMap<string, PathSlotOptions>, requirementSelections: ReadonlyMap<string, readonly RequirementCourseSelection[]>): { label: string; category: string; completedKey: string } {
+  const key = progressKey(slot)
+  const assignedCourseId = assignments.get(key)
+  const courseId = assignedCourseId ?? (slot.type === 'course' ? slot.courseId : undefined)
+  const selectedCourseLabel = requirementSelections.get(key)?.map(selection => getCourse(selection.courseId)?.code ?? selection.courseId).join(' + ')
+  const label = selectedCourseLabel ?? (courseId
+    ? `${getCourse(courseId)?.code ?? courseId}${slot.type === 'course' ? '' : ' (selected)'}`
+    : courseOptions.get(key)?.label ?? slotLabel(slot))
+  return {
+    label,
+    category: presentationCategory(slot, assignedCourseId, courseOptions.get(key)),
+    completedKey: courseId ? `course:${courseId}` : key,
+  }
+}
+
+function buildProgressExportHtml({
+  state,
+  title,
+  pathTitle,
+  minorTitle,
+  plan,
+  assignments,
+  courseOptions,
+  requirementSelections,
+}: {
+  state: PortablePlannerState
+  title: string
+  pathTitle?: string
+  minorTitle?: string
+  plan: CurriculumPlan
+  assignments: ReadonlyMap<string, string>
+  courseOptions: ReadonlyMap<string, PathSlotOptions>
+  requirementSelections: ReadonlyMap<string, readonly RequirementCourseSelection[]>
+}): string {
+  const yaml = stringify(state)
+  const exportedAt = new Date(state.exportedAt).toLocaleString()
+  const roadmap = plan.years.map(year => {
+    const terms = year.terms.map(term => {
+      const courses = sortSlotsForPresentation(term.slots, assignments, courseOptions, new Set(state.completed)).map(slot => {
+        const course = staticCourseLabel(slot, assignments, courseOptions, requirementSelections)
+        const completed = state.completed.includes(progressKey(slot)) || state.completed.includes(course.completedKey)
+        return `<li class="course category-${course.category}${completed ? ' is-completed' : ''}"><strong>${escapeHtml(course.label)}</strong><span>${slot.credits} credits</span>${completed ? '<em>Completed</em>' : ''}</li>`
+      })
+      const extraCourses = Object.entries(state.additionalCourses)
+        .filter(([key]) => key.endsWith(`/roadmap/${year.year}-${term.term}`))
+        .flatMap(([, courses]) => courses)
+        .map(course => `<li class="course category-extra"><strong>${escapeHtml(course.code)}${course.name ? ` — ${escapeHtml(course.name)}` : ''}</strong><span>${course.credits} credits</span><em>Extra coursework</em></li>`)
+      const courseMarkup = [...courses, ...extraCourses].join('')
+      const credits = term.slots.reduce((total, slot) => total + slot.credits, 0)
+      return `<section class="term"><h3>${escapeHtml(term.term)} <span>${credits} planned credits</span></h3><ul>${courseMarkup}</ul></section>`
+    }).join('')
+    return `<section class="year"><h2>${escapeHtml(degreeYearLabel(state.degreeType, year.year))}</h2>${terms}</section>`
+  }).join('')
+  const context = [state.catalogVersion + ' Catalog', `${state.degreeType === 'ast-to-bs' ? 'AS-T to B.S.' : 'B.S.'} pathway`, pathTitle, minorTitle ? `${minorTitle} minor` : undefined]
+    .filter((item): item is string => Boolean(item))
+    .map(escapeHtml)
+    .join(' · ')
+
+  return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${escapeHtml(title)} progress</title>
+  <style>
+    :root{color:#172033;font:16px/1.4 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    body{margin:2rem auto;max-width:72rem;padding:0 1rem}.eyebrow{color:#475569;font-size:.85rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}.note{color:#475569}.summary{border-block:1px solid #cbd5e1;display:flex;flex-wrap:wrap;gap:.4rem 1rem;margin:1.25rem 0;padding:.75rem 0}.roadmap{display:grid;gap:1rem}.year{border:1px solid #94a3b8;break-inside:avoid;padding:1rem}.year h2{margin:.1rem 0 .75rem}.term + .term{border-top:1px solid #cbd5e1;margin-top:1rem;padding-top:1rem}.term h3{margin:0 0 .5rem;text-transform:capitalize}.term h3 span{color:#475569;font-size:.85rem;font-weight:400}.term ul{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:0;padding:0}.course{background:#fff;border:1px solid #64748b;display:flex;flex:1 1 10rem;flex-direction:column;min-height:4.5rem;padding:.55rem;position:relative}.course span{color:#475569;font-size:.85rem}.course em{color:#334155;font-size:.78rem;font-style:normal;font-weight:700;margin-top:auto;text-transform:uppercase}.category-cst{background:#dbead4}.category-math{background:#fff3c9}.category-ge-lower,.category-ge-upper{background:#fbe2c3}.category-concentration-required{background:#d8e9f7}.category-elective{background:#ead3df}.category-extra{background:#dbe4ea}.is-completed{background:#a5b4c8;color:#172033}.is-completed::before,.is-completed::after{background:#111827;content:"";height:3px;left:-3%;position:absolute;top:50%;transform:rotate(24deg);width:106%}.is-completed::after{transform:rotate(-24deg)}details{margin-top:1.5rem}.yaml{background:#f8fafc;border:1px solid #cbd5e1;overflow-wrap:anywhere;padding:1rem;white-space:pre-wrap}@media print{body{margin:0;max-width:none;padding:0}.year{break-inside:avoid}.course{print-color-adjust:exact;-webkit-print-color-adjust:exact}details{display:none}}
+  </style>
+</head>
+<body>
+  <p class="eyebrow">CourseGuide progress snapshot</p>
+  <h1>${escapeHtml(title)}</h1>
+  <p class="note">Exported ${escapeHtml(exportedAt)}. This printable roadmap is a snapshot; import this file back into CourseGuide to continue updating it.</p>
+  <div class="summary">${context}</div>
+  <main class="roadmap">${roadmap}</main>
+  <details><summary>Portable progress data</summary><pre class="yaml">${escapeHtml(yaml)}</pre></details>
+  <script id="courseguide-progress" type="text/yaml">${yaml.replace(/<\//g, '<\\/')}</script>
+</body>
+</html>`
 }
 
 function targetCourseKey(catalogVersion: string, programId: string, degreeType: DegreeType, scope: string, slotKey: string): string {
@@ -375,9 +460,17 @@ function App() {
       transferPreparation: Object.fromEntries(transferPreparation),
       additionalCourses: Object.fromEntries(additionalCourses),
     }
-    const yaml = stringify(state)
     const title = displayProgramTitle((catalogVersions[state.catalogVersion]?.programs[state.programId]?.title ?? 'CourseGuide progress'))
-    const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${title} progress</title><style>body{color:#172033;font:16px/1.5 system-ui,sans-serif;margin:2rem;max-width:48rem}h1{margin-bottom:0}.note{color:#475569}.yaml{background:#f8fafc;border:1px solid #cbd5e1;padding:1rem;white-space:pre-wrap}</style></head><body><h1>${title} progress</h1><p class="note">Exported ${new Date(state.exportedAt).toLocaleString()}. Keep this file to restore your CourseGuide progress later.</p><h2>Completed items</h2><p>${state.completed.length ? state.completed.join(', ') : 'None recorded yet.'}</p><h2>Portable progress data</h2><pre class="yaml">${yaml.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</pre><script id="courseguide-progress" type="text/yaml">${yaml.replace(/<\//g, '<\\/')}</script></body></html>`
+    const html = buildProgressExportHtml({
+      state,
+      title,
+      pathTitle: activeConcentrationId ? activeProgram.concentrations[activeConcentrationId]?.title : undefined,
+      minorTitle: activeMinor?.title,
+      plan: activePlan,
+      assignments: suggestedSchedule.assignments,
+      courseOptions: suggestedSchedule.courseOptions,
+      requirementSelections: activeRequirementCoursesBySlot,
+    })
     const link = document.createElement('a')
     link.href = URL.createObjectURL(new Blob([html], { type: 'text/html' }))
     link.download = `courseguide-progress-${state.exportedAt.slice(0, 10)}.html`
