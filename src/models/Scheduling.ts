@@ -148,10 +148,7 @@ interface TermBundleCandidate {
 const defaultProgramId = 'bs-computer-science'
 
 export function buildSuggestedSchedule(plan: CurriculumPlan, completed: ReadonlySet<string>, selection?: ScheduleSelection): SuggestedSchedule {
-  const completedCourseIds = new Set([...completed]
-    .filter(key => key.startsWith('course:'))
-    .map(key => key.slice('course:'.length)))
-  for (const courseId of selection?.assumedCompletedCourseIds ?? []) completedCourseIds.add(courseId)
+  const completedCourseIds = completedCourseIdsFor(selection, completed)
   const availableCompletedGeAreas = availableGeneralEducationAreas(plan, completed)
   const isCourseReady = (slot: PlanSlot) => slot.type !== 'course' || (
     prerequisitesMet(getCourse(slot.courseId)?.prerequisites ?? [], completedCourseIds) &&
@@ -162,16 +159,7 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
     if (slot.type === 'choice') return slot.alternatives
     return []
   }))))
-  // Keep a simple reverse prerequisite index for priority presentation. This
-  // is intentionally based on the concrete roadmap, so gateway courses such
-  // as MATH 130 receive priority even when their dependents are not part of a
-  // selected concentration.
-  const plannedPostrequisiteCounts = new Map<string, number>()
-  for (const courseId of explicitPlannedCourseIds) {
-    for (const prerequisiteId of prerequisiteCourseIds(getCourse(courseId)?.prerequisites ?? [])) {
-      plannedPostrequisiteCounts.set(prerequisiteId, (plannedPostrequisiteCounts.get(prerequisiteId) ?? 0) + 1)
-    }
-  }
+  const plannedPostrequisiteCounts = buildPlannedPostrequisiteCounts(explicitPlannedCourseIds)
   const programRequirements = selection?.includeProgramRequirements
     ? activeProgramRequirements(selection.programId ?? defaultProgramId, null, selection.catalogVersion ?? defaultCatalogVersion)
     : []
@@ -224,11 +212,8 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
   const suggestions = new Map<string, ScheduledSuggestion>()
   const selectedEntries: SelectedEntry[] = []
   const avoidCoSuggestedPairs = plan.avoidCoSuggestedCoursePairs ?? []
-  const isAvoidedPair = (left: string, right: string) => avoidCoSuggestedPairs.some(([first, second]) =>
-    (first === left && second === right) || (first === right && second === left),
-  )
   const conflictsWithSuggestedCourse = (courseId: string) => selectedEntries.some(entry =>
-    entry.courseId ? isAvoidedPair(courseId, entry.courseId) : false,
+    entry.courseId ? hasCoSuggestedPair(avoidCoSuggestedPairs, courseId, entry.courseId) : false,
   )
   let credits = 0
   let suggestedTerm: 'fall' | 'spring' | undefined = selection?.currentTerm
@@ -317,30 +302,7 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
     }
   }
 
-  const highPriorityKeys = new Set(
-    (() => {
-      const firstSuggestionTermIndex = selectedEntries.length > 0
-        ? Math.min(...selectedEntries.map(entry => entry.termIndex))
-        : -1
-      const firstTermCourses = selectedEntries
-        .filter(entry => entry.termIndex === firstSuggestionTermIndex && Boolean(entry.courseId) && suggestions.get(entry.key)?.kind !== 'stretch')
-        .sort((left, right) => {
-          const leftCourseId = left.courseId ?? ''
-          const rightCourseId = right.courseId ?? ''
-          return (plannedPostrequisiteCounts.get(rightCourseId) ?? 0) - (plannedPostrequisiteCounts.get(leftCourseId) ?? 0) ||
-            downstreamReachCount(rightCourseId, generalDownstreamGraph) - downstreamReachCount(leftCourseId, generalDownstreamGraph) ||
-            prerequisiteCount(getCourse(rightCourseId)?.prerequisites ?? []) - prerequisiteCount(getCourse(leftCourseId)?.prerequisites ?? []) ||
-            left.key.localeCompare(right.key)
-        })
-      const gatewayCourses = firstTermCourses.filter(entry => {
-        const courseId = entry.courseId ?? ''
-        return (plannedPostrequisiteCounts.get(courseId) ?? 0) > 0 || downstreamReachCount(courseId, generalDownstreamGraph) > 0
-      })
-      return (gatewayCourses.length > 0 ? gatewayCourses : firstTermCourses).slice(0, 4)
-    })()
-      .slice(0, 4)
-      .map(entry => entry.key),
-  )
+  const highPriorityKeys = selectHighPriorityKeys(selectedEntries, suggestions, plannedPostrequisiteCounts, generalDownstreamGraph)
   const isHighPriority = (slot: PlanSlot) => {
     const suggestion = suggestions.get(progressKey(slot))
     if (suggestion?.kind === 'stretch') return false
@@ -353,10 +315,7 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
 
 export function buildRegistrationPlan(plan: CurriculumPlan, completed: ReadonlySet<string>, selection?: ScheduleSelection): RegistrationPlan {
   const schedule = buildSuggestedSchedule(plan, completed, selection)
-  const completedCourseIds = new Set([...completed]
-    .filter(key => key.startsWith('course:'))
-    .map(key => key.slice('course:'.length)))
-  for (const courseId of selection?.assumedCompletedCourseIds ?? []) completedCourseIds.add(courseId)
+  const completedCourseIds = completedCourseIdsFor(selection, completed)
   const availableCompletedGeAreas = availableGeneralEducationAreas(plan, completed)
   const slots = plan.years.flatMap(year => year.terms.flatMap(term => term.slots))
   const courses = slots.flatMap(slot => {
@@ -595,6 +554,54 @@ function completedCourseIdsFor(selection: ScheduleSelection | undefined, complet
     .map(key => key.slice('course:'.length)))
   for (const courseId of selection?.assumedCompletedCourseIds ?? []) courseIds.add(courseId)
   return courseIds
+}
+
+/** Counts direct roadmap dependents for each course, independent of path selection. */
+function buildPlannedPostrequisiteCounts(courseIds: ReadonlySet<string>): Map<string, number> {
+  const counts = new Map<string, number>()
+  for (const courseId of courseIds) {
+    for (const prerequisiteId of prerequisiteCourseIds(getCourse(courseId)?.prerequisites ?? [])) {
+      counts.set(prerequisiteId, (counts.get(prerequisiteId) ?? 0) + 1)
+    }
+  }
+  return counts
+}
+
+function hasCoSuggestedPair(pairs: readonly [string, string][], left: string, right: string): boolean {
+  return pairs.some(([first, second]) =>
+    (first === left && second === right) || (first === right && second === left),
+  )
+}
+
+/**
+ * High-priority labels are intentionally presentation-only: they describe
+ * gateway courses in the earliest term with actionable suggestions and never
+ * alter which courses are eligible or selected.
+ */
+function selectHighPriorityKeys(
+  selectedEntries: readonly SelectedEntry[],
+  suggestions: ReadonlyMap<string, ScheduledSuggestion>,
+  plannedPostrequisiteCounts: ReadonlyMap<string, number>,
+  downstreamGraph: ReadonlyMap<string, ReadonlySet<string>>,
+): Set<string> {
+  const firstSuggestionTermIndex = selectedEntries.length > 0
+    ? Math.min(...selectedEntries.map(entry => entry.termIndex))
+    : -1
+  const firstTermCourses = selectedEntries
+    .filter(entry => entry.termIndex === firstSuggestionTermIndex && Boolean(entry.courseId) && suggestions.get(entry.key)?.kind !== 'stretch')
+    .sort((left, right) => {
+      const leftCourseId = left.courseId ?? ''
+      const rightCourseId = right.courseId ?? ''
+      return (plannedPostrequisiteCounts.get(rightCourseId) ?? 0) - (plannedPostrequisiteCounts.get(leftCourseId) ?? 0) ||
+        downstreamReachCount(rightCourseId, downstreamGraph) - downstreamReachCount(leftCourseId, downstreamGraph) ||
+        prerequisiteCount(getCourse(rightCourseId)?.prerequisites ?? []) - prerequisiteCount(getCourse(leftCourseId)?.prerequisites ?? []) ||
+        left.key.localeCompare(right.key)
+    })
+  const gatewayCourses = firstTermCourses.filter(entry => {
+    const courseId = entry.courseId ?? ''
+    return (plannedPostrequisiteCounts.get(courseId) ?? 0) > 0 || downstreamReachCount(courseId, downstreamGraph) > 0
+  })
+  return new Set((gatewayCourses.length > 0 ? gatewayCourses : firstTermCourses).slice(0, 4).map(entry => entry.key))
 }
 
 function isSlotCompleted(slot: PlanSlot, completed: ReadonlySet<string>, assignments: ReadonlyMap<string, string>): boolean {

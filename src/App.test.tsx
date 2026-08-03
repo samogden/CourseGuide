@@ -78,18 +78,18 @@ additionalCourses: {}
     fireEvent.change(screen.getByLabelText('Minor'), { target: { value: 'biology' } })
     fireEvent.click(screen.getByRole('button', { name: /MATH 130 or MATH 150/i }))
     fireEvent.click(screen.getByRole('button', { name: 'Select' }))
-    fireEvent.click(screen.getByRole('button', { name: 'Compacted' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Credit-load plan' }))
 
-    expect(screen.getByLabelText('Compacted schedule settings')).toBeInTheDocument()
+    expect(screen.getByLabelText('Credit-load plan settings')).toBeInTheDocument()
   })
 
   it('keeps the compacted plan available when a completed MATH 150 implies direct placement with a minor', () => {
     localStorage.setItem('courseguide-completed-v1', '["course:MATH-150"]')
     render(<App />)
     fireEvent.change(screen.getByLabelText('Minor'), { target: { value: 'biology' } })
-    fireEvent.click(screen.getByRole('button', { name: 'Compacted' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Credit-load plan' }))
 
-    expect(screen.getByLabelText('Compacted schedule settings')).toBeInTheDocument()
+    expect(screen.getByLabelText('Credit-load plan settings')).toBeInTheDocument()
   })
 
   it('offers the MATH 130 readiness self-evaluation from the math-placement choice', () => {
@@ -207,9 +207,9 @@ additionalCourses: {}
 
   it('switches to the registration planner view', async () => {
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /registration planner/i }))
+    fireEvent.click(screen.getByRole('button', { name: /prerequisite focus/i }))
 
-    expect(await screen.findByLabelText('Registration planner')).toBeInTheDocument()
+    expect(await screen.findByLabelText('Prerequisite focus planning')).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: /classes to sign up for/i })).toBeInTheDocument()
     fireEvent.click(screen.getByLabelText('Open CST 231'))
     expect(screen.getByRole('dialog')).toHaveTextContent('Problem Solving/Programming')
@@ -217,9 +217,9 @@ additionalCourses: {}
 
   it('shows compacted scheduling controls and sequential year labels', () => {
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: 'Compacted' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Credit-load plan' }))
 
-    expect(screen.getByLabelText('Compacted schedule settings')).toBeInTheDocument()
+    expect(screen.getByLabelText('Credit-load plan settings')).toBeInTheDocument()
     expect(screen.getByLabelText(/maximum credits per term/i)).toHaveValue('15')
     expect(screen.getByRole('rowheader', { name: '1st year' })).toBeInTheDocument()
     fireEvent.change(screen.getByLabelText(/maximum credits per term/i), { target: { value: '12' } })

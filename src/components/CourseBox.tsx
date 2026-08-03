@@ -28,8 +28,7 @@ export function CourseCell({ slot, assignedCourseId, courseOptions, requirementS
       onClick={onSelect}
       type="button"
     >
-      {highPriority && <span className="course-status priority-status">High priority{suggestion?.downstreamCount ? ` · unlocks ${suggestion.downstreamCount}` : ''}</span>}
-      {!highPriority && suggestion?.downstreamCount ? <span className="course-status chain-status">Unlocks {suggestion.downstreamCount} later course{suggestion.downstreamCount === 1 ? '' : 's'}</span> : null}
+      {highPriority && <span className="course-status priority-status">High priority</span>}
       {suggestion && <span className="course-status">{suggestion.kind === 'stretch' ? '16+ credits' : 'Suggested next'}</span>}
       {slot.source === 'minor' && <span className="course-status path-status">Minor course</span>}
       {assignedCourseId && !suggestion && <span className="course-status path-status">{selectedTarget ? 'Selected course' : 'Path course'}</span>}
