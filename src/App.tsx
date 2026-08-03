@@ -670,15 +670,18 @@ function App() {
         <span>{planCredits.lowerDivisionGeneralEducation} lower-division GE</span>
         <span>{planCredits.upperDivisionGeneralEducation} upper-division GE</span>
       </section>
-      <section className="catalog-controls" aria-label="Catalog and planner view">
+      <section className="planner-view-controls" aria-label="Planner view mode">
+        <span className="legend-title">Planner view mode</span>
+        <nav className="view-picker" aria-label="Planner view mode options">
+          <button className={`path-button${activeView === 'roadmap' ? ' is-selected' : ''}`} type="button" onClick={() => setActiveView('roadmap')}>Roadmap</button>
+          <button className={`path-button${activeView === 'registration' ? ' is-selected' : ''}`} type="button" onClick={() => setActiveView('registration')}>Prerequisite focus</button>
+          <button className={`path-button${activeView === 'compacted' ? ' is-selected' : ''}`} type="button" onClick={() => setActiveView('compacted')}>Credit-load plan</button>
+        </nav>
+      </section>
+      <section className="catalog-controls" aria-label="Catalog version">
         <label className="catalog-picker">Catalog version
           <select value={selectedCatalogVersion} onChange={event => setSelectedCatalogVersion(event.target.value)}>{Object.entries(catalogVersions).map(([catalogVersion, catalog]) => <option key={catalogVersion} value={catalogVersion}>{catalog.title}</option>)}</select>
         </label>
-        <nav className="view-picker" aria-label="Planner view">
-          <button className={`path-button${activeView === 'registration' ? ' is-selected' : ''}`} type="button" onClick={() => setActiveView('registration')}>Registration planner</button>
-          <button className={`path-button${activeView === 'roadmap' ? ' is-selected' : ''}`} type="button" onClick={() => setActiveView('roadmap')}>Roadmap</button>
-          <button className={`path-button${activeView === 'compacted' ? ' is-selected' : ''}`} type="button" onClick={() => setActiveView('compacted')}>Compacted</button>
-        </nav>
       </section>
       <section className="degree-picker" aria-label="Degree type">
         <span className="legend-title">Degree</span>
@@ -732,10 +735,10 @@ function App() {
           </button>
         ))}
       </section>
-      {activeView === 'registration' && <Suspense fallback={<p className="planner-loading">Loading registration planner…</p>}><RegistrationPlanner plan={registrationPlan} currentTerm={registrationTerm} onCurrentTermChange={setRegistrationTerm} onCourseSelect={setSelectedSlot} /></Suspense>}
+      {activeView === 'registration' && <Suspense fallback={<p className="planner-loading">Loading prerequisite focus planning…</p>}><RegistrationPlanner plan={registrationPlan} currentTerm={registrationTerm} onCurrentTermChange={setRegistrationTerm} onCourseSelect={setSelectedSlot} /></Suspense>}
       {activeView === 'roadmap' && suggestedSchedule.suggestions.size > 0 && <section className="next-term" aria-live="polite"><strong>Suggested schedule:</strong> {suggestedSchedule.credits} credits. <strong>{remainingCredits} planned credits remain</strong> — about {semestersAtFifteen} semesters at 15 credits per term, or {semestersAtEighteen} at 18.</section>}
       {isAlphaRoadmap && <section className="derived-roadmap-notice" aria-label="Derived roadmap notice"><strong>Alpha planning estimate — not department-verified:</strong> This roadmap was generated from catalog requirements, prerequisite chains, and course-level placement rules. Verify course sequencing with an advisor before registering.</section>}
-      {activeView === 'compacted' && <section className="compacted-controls" aria-label="Compacted schedule settings">
+      {activeView === 'compacted' && <section className="compacted-controls" aria-label="Credit-load plan settings">
         <label htmlFor="compacted-credit-limit">Maximum credits per term <strong>{compactedCreditLimit}</strong></label>
         <input id="compacted-credit-limit" type="range" min="12" max="18" value={compactedCreditLimit} onChange={event => setCompactedCreditLimit(Number(event.target.value))} />
         <p>Courses are placed in the earliest fall or spring term that meets their prerequisites, offering pattern, and standing requirements.</p>
@@ -790,7 +793,7 @@ function App() {
       </>}
       {activeView === 'compacted' && <><p className="scroll-hint">Scroll horizontally to see the complete 18-credit grid on smaller screens.</p>
       <div className="curriculum-scroll">
-        <div className="curriculum-grid" role="table" aria-label="Compacted curriculum plan">
+        <div className="curriculum-grid" role="table" aria-label="Credit-load curriculum plan">
           <div className="grid-header" role="row">
             <span>Year</span><span>Term</span>
             <div className="credit-heading"><strong>Planned credits</strong><div className="credit-numbers" aria-label="Credit positions">{Array.from({ length: 18 }, (_, index) => <span key={index}>{index + 1}</span>)}</div></div>

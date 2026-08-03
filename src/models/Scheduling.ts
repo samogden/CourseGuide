@@ -124,9 +124,13 @@ interface SelectedEntry {
   key: string
   slot: PlanSlot
   courseId?: string
+  termIndex: number
 }
 
-interface TermBundleMember extends SelectedEntry {
+interface TermBundleMember {
+  key: string
+  slot: PlanSlot
+  courseId?: string
   slotIndex: number
 }
 
@@ -134,6 +138,7 @@ interface TermBundleCandidate {
   members: TermBundleMember[]
   credits: number
   priority: number
+  coSuggestionConflict: boolean
   firstSlotIndex: number
   firstKey: string
 }
@@ -206,8 +211,16 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
   const projectedGeAreas = new Set(availableCompletedGeAreas)
   const suggestions = new Map<string, ScheduledSuggestion>()
   const selectedEntries: SelectedEntry[] = []
+  const avoidCoSuggestedPairs = plan.avoidCoSuggestedCoursePairs ?? []
+  const isAvoidedPair = (left: string, right: string) => avoidCoSuggestedPairs.some(([first, second]) =>
+    (first === left && second === right) || (first === right && second === left),
+  )
+  const conflictsWithSuggestedCourse = (courseId: string) => selectedEntries.some(entry =>
+    entry.courseId ? isAvoidedPair(courseId, entry.courseId) : false,
+  )
   let credits = 0
   let suggestedTerm: 'fall' | 'spring' | undefined = selection?.currentTerm
+  let planTermIndex = 0
 
   for (const year of plan.years) {
     for (const term of year.terms) {
@@ -241,9 +254,13 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
               ) !== undefined
             })
             if (!eligible) return []
+            const coSuggestionConflict = members.some(member =>
+              member.courseId ? conflictsWithSuggestedCourse(member.courseId) : false,
+            )
             return [{
               members,
               credits: members.reduce((total, member) => total + member.slot.credits, 0),
+              coSuggestionConflict,
               priority: Math.min(...members.map(member => getCandidatePriority(
                 member.slot,
                 member.courseId,
@@ -258,19 +275,20 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
             } satisfies TermBundleCandidate]
           })
           .sort((left, right) =>
+            Number(left.coSuggestionConflict) - Number(right.coSuggestionConflict) ||
             left.priority - right.priority ||
             left.firstSlotIndex - right.firstSlotIndex ||
             left.firstKey.localeCompare(right.firstKey))
 
         for (const candidate of termCandidates) {
           if (credits + candidate.credits > 18) continue
-          const suggestionKind: SuggestionKind = credits + candidate.credits >= 16 ? 'stretch' : 'standard'
+          const suggestionKind: SuggestionKind = credits + candidate.credits >= 16 || candidate.coSuggestionConflict ? 'stretch' : 'standard'
           for (const member of candidate.members) {
             suggestions.set(member.key, {
               kind: suggestionKind,
               ...(member.courseId ? { courseId: member.courseId } : {}),
             })
-            selectedEntries.push({ key: member.key, slot: member.slot, courseId: member.courseId })
+            selectedEntries.push({ key: member.key, slot: member.slot, courseId: member.courseId, termIndex: planTermIndex })
             selectedInTerm.add(member.key)
           }
           credits += candidate.credits
@@ -279,20 +297,21 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
           break
         }
       }
-      // Courses placed in this plan term are projected as complete when
-      // evaluating suggestions for later terms.
-      for (const slot of term.slots) {
-        const courseId = assignments.get(progressKey(slot)) ?? (slot.type === 'course' ? slot.courseId : undefined)
-        if (courseId) projectedCourseIds.add(courseId)
-        const generalEducationArea = generalEducationAreaForSlot(slot)
-        if (generalEducationArea) projectedGeAreas.add(generalEducationArea)
-      }
+      // Planned-but-not-completed courses do not satisfy prerequisites for
+      // this recommendation pass. Students must mark the prerequisite taken
+      // before the dependent course becomes a normal suggestion.
+      planTermIndex += 1
     }
   }
 
   const highPriorityKeys = new Set(
-    selectedEntries
-      .filter(entry => entry.slot.type === 'course')
+    (() => {
+      const firstSuggestionTermIndex = selectedEntries.length > 0
+        ? Math.min(...selectedEntries.map(entry => entry.termIndex))
+        : -1
+      return selectedEntries
+        .filter(entry => entry.termIndex === firstSuggestionTermIndex && entry.slot.type === 'course' && suggestions.get(entry.key)?.kind !== 'stretch')
+    })()
       .slice(0, 4)
       .map(entry => entry.key),
   )

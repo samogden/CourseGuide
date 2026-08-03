@@ -69,10 +69,10 @@ export function RegistrationPlanner({ plan, currentTerm, onCurrentTermChange, on
   const futureSlotByNodeId = new Map(plan.edges.map(edge => [`future:${edge.targetCourseId}`, edge.targetSlot]))
 
   return (
-    <section className="registration-planner" aria-label="Registration planner">
+    <section className="registration-planner" aria-label="Prerequisite focus planning">
       <div className="registration-header">
         <div>
-          <p className="eyebrow">Registration planner</p>
+          <p className="eyebrow">Prerequisite focus planning</p>
           <h2>Classes to sign up for</h2>
           <p>{plan.credits} suggested credits for the upcoming term. Mark a class taken to refresh this plan.</p>
         </div>

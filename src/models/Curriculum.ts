@@ -35,6 +35,9 @@ const planSlotSchema = z.discriminatedUnion('type', [
 
 const planSchema = z.object({
   schemaVersion: z.literal(1),
+  // Courses in these pairs may still be suggested together, but the latter
+  // suggestion is presented as an optional stretch rather than a normal plan.
+  avoidCoSuggestedCoursePairs: z.array(z.tuple([z.string(), z.string()])).optional(),
   years: z.array(z.object({
     year: z.enum(['freshman', 'sophomore', 'junior', 'senior']),
     terms: z.array(z.object({ term: z.enum(['fall', 'spring']), slots: z.array(planSlotSchema) })),

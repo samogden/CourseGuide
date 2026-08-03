@@ -16,6 +16,7 @@
 .degree-picker { align-items: center; display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; }
 .program-picker { align-items: center; display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; margin-bottom: 0.75rem; }
 .minor-note { color: #475569; flex-basis: 100%; font-size: 0.85rem; }
+.planner-view-controls { align-items: center; display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; }
 .catalog-controls { align-items: center; display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.75rem; }.catalog-picker { align-items: center; display: flex; font-weight: 700; gap: 0.4rem; }.catalog-picker select { background: #fff; border: 1px solid #64748b; border-radius: 0.35rem; font: inherit; padding: 0.25rem 0.4rem; }
 .view-picker { display: flex; gap: 0.5rem; }
 .planner-loading { color: #475569; padding: 1rem 0; }

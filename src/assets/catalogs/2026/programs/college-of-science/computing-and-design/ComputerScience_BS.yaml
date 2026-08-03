@@ -177,6 +177,9 @@ roadmaps:
     status: verified
     plan:
       schemaVersion: 1
+      avoidCoSuggestedCoursePairs:
+        - [MATH-130, CST-231]
+        - [CST-334, CST-370]
       years:
         - year: freshman
           terms:
@@ -362,6 +365,9 @@ roadmaps:
     status: verified
     plan:
       schemaVersion: 1
+      avoidCoSuggestedCoursePairs:
+        - [MATH-130, CST-231]
+        - [CST-334, CST-370]
       years:
         - year: freshman
           terms:
