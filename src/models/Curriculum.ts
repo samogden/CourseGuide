@@ -110,6 +110,17 @@ const catalogFileSchema = z.object({
   }).strict()),
 }).strict()
 
+/** Official catalog lists for GE requirement blocks that do not name a course. */
+const generalEducationFileSchema = z.object({
+  schemaVersion: z.literal(1),
+  catalogYear: z.string(),
+  upperDivisionOptions: z.object({
+    area2Or5: z.array(z.string()).min(1),
+    area3: z.array(z.string()).min(1),
+    area4: z.array(z.string()).min(1),
+  }).strict(),
+}).strict()
+
 const programsSchema = z.object({
   schemaVersion: z.literal(2),
   programs: z.record(z.string(), programSchema),
@@ -306,6 +317,9 @@ const degreeFiles = catalogAssets
 const minorFiles = catalogAssets
   .filter(asset => asset.path.includes('/minors/'))
   .map(asset => ({ catalogYear: catalogYearForPath(asset.path), file: minorFileSchema.parse(asset.value) }))
+const generalEducationFiles = catalogAssets
+  .filter(asset => asset.path.endsWith('/general-education.yaml'))
+  .map(asset => ({ catalogYear: catalogYearForPath(asset.path), file: generalEducationFileSchema.parse(asset.value) }))
 
 if (catalogFiles.length === 0) throw new Error('No catalog metadata files were found.')
 
@@ -320,6 +334,18 @@ for (const { catalogYear, file: courseFile } of courseFiles) {
     existing[courseId] = course
   }
   coursesByCatalogYear.set(catalogYear, existing)
+}
+
+const generalEducationOptionsByYear = new Map<string, z.infer<typeof generalEducationFileSchema>['upperDivisionOptions']>()
+for (const { catalogYear: pathCatalogYear, file } of generalEducationFiles) {
+  if (file.catalogYear !== pathCatalogYear) throw new Error(`General education options are in ${pathCatalogYear} but declare ${file.catalogYear}.`)
+  if (!catalogMetadataByYear.has(file.catalogYear)) throw new Error(`General education options reference unknown catalog year ${file.catalogYear}.`)
+  if (generalEducationOptionsByYear.has(file.catalogYear)) throw new Error(`Duplicate general education options for ${file.catalogYear}.`)
+  const catalogCourses = coursesByCatalogYear.get(file.catalogYear) ?? {}
+  for (const courseId of Object.values(file.upperDivisionOptions).flat()) {
+    if (!catalogCourses[courseId]) throw new Error(`General education option ${courseId} is not present in the ${file.catalogYear} course catalog.`)
+  }
+  generalEducationOptionsByYear.set(file.catalogYear, file.upperDivisionOptions)
 }
 
 const programRecordsByYear = new Map<string, Record<string, Program>>()
@@ -385,22 +411,65 @@ export const transferReadinessCourseIds = [
   'MATH-270',
 ] as const
 
+function upperDivisionGeOptionIds(slot: PlanSlot, catalogVersion: string): string[] | undefined {
+  if (slot.type === 'course' || slot.category !== 'ge-upper' || (slot.type === 'requirement' && (slot.courseIds?.length ?? 0) > 0)) return undefined
+  const options = generalEducationOptionsByYear.get(catalogVersion)
+  if (!options) return undefined
+  const identifier = `${slot.slotId} ${slot.type === 'requirement' ? slot.label : ''}`.toLowerCase()
+  if ((identifier.includes('area 2') && identifier.includes('area 5')) || identifier.includes('ge-2-or-ge-5')) return options.area2Or5
+  if (identifier.includes('area 3')) return options.area3
+  if (identifier.includes('area 4')) return options.area4
+  return undefined
+}
+
+/** Adds the catalog's official choices to generic upper-division GE blocks. */
+function withGeneralEducationOptions(plan: CurriculumPlan, catalogVersion: string): CurriculumPlan {
+  return {
+    ...plan,
+    years: plan.years.map(year => ({
+      ...year,
+      terms: year.terms.map(term => ({
+        ...term,
+        slots: term.slots.map(slot => {
+          const courseIds = upperDivisionGeOptionIds(slot, catalogVersion)
+          if (!courseIds) return slot
+          // Older verified roadmaps represented Area 2-or-5 as an abstract
+          // choice between labels. Normalize it to the same selectable
+          // requirement shape as every other generic GE block.
+          if (slot.type === 'choice') return {
+            type: 'requirement' as const,
+            slotId: slot.slotId,
+            label: 'GE Area 2 or GE Area 5',
+            credits: slot.credits,
+            category: slot.category,
+            guidance: slot.guidance,
+            courseIds,
+            source: slot.source,
+          }
+          return { ...slot, courseIds }
+        }),
+      })),
+    })),
+  }
+}
+
 export function roadmapForProgram(programId: string, degreeType: DegreeType, catalogVersion: string = defaultCatalogVersion, concentrationId?: string | null): ProgramRoadmap | undefined {
   const storedRoadmap = roadmapRecords.get(`${catalogVersion}/${programId}/${degreeType}`) ?? roadmapRecords.get(`${catalogVersion}/${programId}/bs`)
-  if (storedRoadmap) return storedRoadmap
-  return getProgram(programId, catalogVersion) ? { status: 'derived', plan: deriveRoadmap(programId, catalogVersion, concentrationId) } : undefined
+  if (storedRoadmap) return { ...storedRoadmap, plan: withGeneralEducationOptions(storedRoadmap.plan, catalogVersion) }
+  const plan = getProgram(programId, catalogVersion) ? deriveRoadmap(programId, catalogVersion, concentrationId) : undefined
+  return plan ? { status: 'derived', plan: withGeneralEducationOptions(plan, catalogVersion) } : undefined
 }
 
 export function planForDegreeType(degreeType: DegreeType, programId: string = 'bs-computer-science', catalogVersion: string = defaultCatalogVersion, concentrationId?: string | null): CurriculumPlan {
   const exactRoadmap = roadmapRecords.get(`${catalogVersion}/${programId}/${degreeType}`)
   const roadmap = exactRoadmap ?? roadmapForProgram(programId, degreeType, catalogVersion, concentrationId) ?? roadmapForProgram(programId, 'bs', catalogVersion, concentrationId)
   if (!roadmap) return { schemaVersion: 1, years: [] }
-  if (degreeType === 'bs') return roadmap.plan
-  if (exactRoadmap && exactRoadmap.plan.years.every(year => year.year === 'junior' || year.year === 'senior')) return exactRoadmap.plan
-  return {
+  if (degreeType === 'bs') return withGeneralEducationOptions(roadmap.plan, catalogVersion)
+  if (exactRoadmap && exactRoadmap.plan.years.every(year => year.year === 'junior' || year.year === 'senior')) return withGeneralEducationOptions(exactRoadmap.plan, catalogVersion)
+  return withGeneralEducationOptions({
     ...roadmap.plan,
     years: roadmap.plan.years.filter(year => year.year === 'junior' || year.year === 'senior'),
-  }
+  }, catalogVersion)
 }
 
 /** Adds a selected minor as planned coursework without consuming the major's elective slots. */

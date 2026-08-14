@@ -517,6 +517,7 @@ function compactedCorequisiteBundle(slot: PlanSlot, remaining: readonly PlanSlot
 
 /** Category used consistently for course colors and left-to-right presentation. */
 export function presentationCategory(slot: PlanSlot, assignedCourseId?: string, courseOptions?: PathSlotOptions): PresentationCategory {
+  if (slot.category === 'ge-lower' || slot.category === 'ge-upper') return slot.category
   if (assignedCourseId || courseOptions?.required) return 'concentration-required'
   return slot.category
 }
@@ -778,6 +779,13 @@ function buildChoiceOptions(plan: CurriculumPlan, minorLabel?: string): Map<stri
         continue
       }
       for (const slot of term.slots) {
+        if (slot.type === 'requirement' && slot.category.startsWith('ge-') && slot.courseIds?.every(courseId => getCourse(courseId))) {
+          options.set(progressKey(slot), {
+            label: slot.label,
+            courseIds: slot.courseIds,
+          })
+          continue
+        }
         if (slot.type !== 'requirement' || slot.source !== 'minor' || !slot.courseIds?.every(courseId => getCourse(courseId))) continue
         options.set(progressKey(slot), {
           label: slot.label,

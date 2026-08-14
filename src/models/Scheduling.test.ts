@@ -283,6 +283,24 @@ describe('suggested scheduling', () => {
     expect(verifiedComputerScienceSlots.map(progressKey)).not.toContain('slot:ge-1-lower-division')
   })
 
+  it('offers official catalog courses for generic upper-division GE requirements', () => {
+    const plan = planForDegreeType('bs', 'bs-computer-science', '2026', 'general')
+    const schedule = buildSuggestedSchedule(plan, new Set(), {
+      programId: 'bs-computer-science',
+      catalogVersion: '2026',
+      concentrationId: 'general',
+    })
+    const slots = plan.years.flatMap(year => year.terms.flatMap(term => term.slots))
+    const area2Or5 = slots.find(slot => slot.type === 'requirement' && slot.slotId === 'ge-2-or-ge-5-upper-division')
+    const area3 = slots.find(slot => slot.type === 'requirement' && slot.slotId === 'ge-3-upper-division')
+    const area4 = slots.find(slot => slot.type === 'requirement' && slot.slotId === 'ge-4-upper-division')
+
+    expect(area2Or5?.type === 'requirement' && area2Or5.courseIds).toContain('CST-319')
+    expect(area3?.type === 'requirement' && area3.courseIds).toContain('JAPN-350')
+    expect(area4?.type === 'requirement' && area4.courseIds).toContain('CST-462S')
+    expect(area3 && schedule.courseOptions.get(progressKey(area3))?.courseIds).toContain('SPAN-350')
+  })
+
   it('keeps minor choices out of major elective assignment slots', () => {
     const schedule = buildSuggestedSchedule(curriculumPlan, new Set(), {
       programId: 'bs-computer-science',
