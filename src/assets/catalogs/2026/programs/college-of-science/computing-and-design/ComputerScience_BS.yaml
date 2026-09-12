@@ -197,6 +197,12 @@ roadmaps:
                   courseId: CST-286
                   credits: 3
                   category: ge-lower
+                - type: requirement
+                  slotId: ge-1a-lower-division
+                  label: GE Area 1a Lower Division
+                  credits: 3
+                  category: ge-lower
+                  guidance: Complete a lower-division GE Area 1a course.  Examples are HCOM 125 or HCOM 120 or CAD101B or ENTSTU 120 or LS 120 or SSCI 110.
             - term: spring
               slots:
                 - type: course
@@ -211,6 +217,12 @@ roadmaps:
                   courseId: CST-271
                   credits: 3
                   category: ge-lower
+                - type: requirement
+                  slotId: ge-1b-lower-division
+                  label: GE Area 1b Lower Division
+                  credits: 3
+                  category: ge-lower
+                  guidance: Complete a lower-division GE Area 1b course.  Examples are HCOM 200 or 202 or ENTSU 130.
         - year: sophomore
           terms:
             - term: fall
