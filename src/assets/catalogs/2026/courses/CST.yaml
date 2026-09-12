@@ -320,11 +320,12 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: Catalog details are still being added.
+    description: Introduces the basic principles of physical science and the application of these principles to electronics and computing. Students will learn fundamental concepts of physics in the first half of the course and build on it with topics that are relevant to the function of electronic devices and computers. Computational Physics tools and procedures will also be covered through assignments and project.
     offered:
       terms:
         - fall
-    placeholder: true
+    prerequisiteNotes:
+      - "[(Prereq: MATH 130 with a C- or better) or (Coreq: MATH 130)]"
   CST-300:
     code: CST 300
     title: Graduation Writing Assessment for Computing and Design
