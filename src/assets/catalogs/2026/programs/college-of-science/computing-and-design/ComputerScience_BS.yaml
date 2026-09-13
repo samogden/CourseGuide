@@ -243,12 +243,6 @@ roadmaps:
                   category: ge-lower
                   guidance: Complete a lower-division GE Area 4B Civics and lower-division service-learning course. Examples are SL 210S, ED 212S, HCOM 260S, or SSCI 212S.
                 - type: requirement
-                  slotId: GenEd-ld-6
-                  label: "GE Area 6: Ethnic Studies"
-                  credits: 3
-                  category: ge-lower
-                  guidance: Complete a lower-division GE Area 6 Ethnic Studies course.
-                - type: requirement
                   slotId: GenEd-ld-1c
                   label: "GE Area 1C: Oral Communication"
                   credits: 3
@@ -304,6 +298,12 @@ roadmaps:
                   courseId: CST-349
                   credits: 2
                   category: cst
+                - type: requirement
+                  slotId: GenEd-ld-6
+                  label: "GE Area 6: Ethnic Studies"
+                  credits: 3
+                  category: ge-lower
+                  guidance: Complete a lower-division GE Area 6 Ethnic Studies course.
             - term: spring
               slots:
                 - type: choice
@@ -325,11 +325,11 @@ roadmaps:
                   category: elective
                   guidance: Complete an elective appropriate to your future concentration.
                 - type: requirement
-                  slotId: junior-spring-elective-prerequisite
-                  label: Elective
-                  credits: 4
-                  category: elective
-                  guidance: Complete an upper-division elective or concentration requirement.
+                  slotId: GenEd-ud-3
+                  label: "Upper-Division GE Area 3"
+                  credits: 3
+                  category: ge-upper
+                  guidance: Complete an upper-division GE Area 3 course.
         - year: senior
           terms:
             - term: fall
@@ -351,11 +351,11 @@ roadmaps:
                   category: elective
                   guidance: Complete an upper-division elective.
                 - type: requirement
-                  slotId: GenEd-ud-3
-                  label: "Upper-Division GE Area 3"
-                  credits: 3
-                  category: ge-upper
-                  guidance: Complete an upper-division GE Area 3 course.
+                  slotId: senior-fall-elective-3
+                  label: Elective
+                  credits: 4
+                  category: elective
+                  guidance: Complete an upper-division elective or concentration requirement.
             - term: spring
               slots:
                 - type: course
