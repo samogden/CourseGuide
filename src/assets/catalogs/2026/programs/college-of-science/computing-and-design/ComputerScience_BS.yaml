@@ -195,14 +195,13 @@ roadmaps:
                   category: math
                 - type: course
                   courseId: CST-286
-                  credits: 3
                   category: ge-lower
                 - type: requirement
-                  slotId: ge-1a-lower-division
-                  label: GE Area 1a Lower Division
+                  slotId: GenEd-ld-1a
+                  label: "GE Area 1A: English Composition"
                   credits: 3
                   category: ge-lower
-                  guidance: Complete a lower-division GE Area 1a course.  Examples are HCOM 125 or HCOM 120 or CAD101B or ENTSTU 120 or LS 120 or SSCI 110.
+                  guidance: Complete a lower-division GE Area 1A English Composition course.  Examples are HCOM 125 or HCOM 120 or CAD101B or ENTSTU 120 or LS 120 or SSCI 110.
             - term: spring
               slots:
                 - type: course
@@ -213,16 +212,18 @@ roadmaps:
                   courseId: MATH-150
                   credits: 4
                   category: math
-                - type: course
-                  courseId: CST-271
-                  credits: 3
-                  category: ge-lower
                 - type: requirement
-                  slotId: ge-1b-lower-division
-                  label: GE Area 1b Lower Division
+                  slotId: GenEd-ld-3a
+                  label: "GE Area 3A: Arts"
                   credits: 3
                   category: ge-lower
-                  guidance: Complete a lower-division GE Area 1b course.  Examples are HCOM 200 or 202 or ENTSU 130.
+                  guidance: Complete a lower-division GE Area 3A Arts course.
+                - type: requirement
+                  slotId: GenEd-ld-1b
+                  label: "GE Area 1B: Critical Thinking"
+                  credits: 3
+                  category: ge-lower
+                  guidance: Complete a lower-division GE Area 1B Critical Thinking course.  Examples are HCOM 200 or 202 or ENTSU 130.
         - year: sophomore
           terms:
             - term: fall
@@ -236,17 +237,23 @@ roadmaps:
                   credits: 4
                   category: math
                 - type: requirement
-                  slotId: ge-4-lower-division
-                  label: GE Area 4 Lower Division
+                  slotId: GenEd-ld-4b
+                  label: "GE Area 4B: Civics"
                   credits: 3
                   category: ge-lower
-                  guidance: Complete a lower-division GE Area 4 course.
+                  guidance: Complete a lower-division GE Area 4B Civics and lower-division service-learning course. Examples are SL 210S, ED 212S, HCOM 260S, or SSCI 212S.
                 - type: requirement
-                  slotId: ge-6-lower-division
-                  label: GE Area 6 Lower Division
+                  slotId: GenEd-ld-6
+                  label: "GE Area 6: Ethnic Studies"
                   credits: 3
                   category: ge-lower
-                  guidance: Complete a lower-division GE Area 6 course.
+                  guidance: Complete a lower-division GE Area 6 Ethnic Studies course.
+                - type: requirement
+                  slotId: GenEd-ld-1c
+                  label: "GE Area 1C: Oral Communication"
+                  credits: 3
+                  category: ge-lower
+                  guidance: Complete the GE Area 1C Oral Communication requirement. Examples are HCOM 110 or ENSTU 111.
             - term: spring
               slots:
                 - type: course
@@ -261,14 +268,16 @@ roadmaps:
                   credits: 4
                   category: math
                   guidance: Choose one mathematics foundation course.
-                - type: choice
-                  slotId: world-culture-or-language
-                  alternatives:
-                    - JAPN-350
-                    - SPAN-350
+                - type: requirement
+                  slotId: GenEd-ld-5b
+                  label: "GE Area 5B: Biological Science"
                   credits: 3
                   category: ge-lower
-                  guidance: Choose either the Japanese or Spanish World Culture and Language course.
+                  guidance: Complete the GE Area 5B Biological Science requirement. Examples are BIO 204, ENVS 201, or KIN 159.
+                - type: course
+                  courseId: CST-274
+                  credits: 3
+                  category: ge-lower
         - year: junior
           terms:
             - term: fall
@@ -281,22 +290,20 @@ roadmaps:
                   credits: 4
                   category: cst
                   guidance: Choose either CST 334 or CST 370; complete the other course in the following term.
-                - type: course
-                  courseId: CST-338
-                  credits: 4
-                  category: cst
                 - type: requirement
                   slotId: junior-fall-elective-prerequisite
                   label: Elective
                   credits: 4
                   category: elective
                   guidance: Complete an upper-division elective or concentration requirement.
-                - type: requirement
-                  slotId: junior-spring-elective-prerequisite
-                  label: Elective
-                  credits: 4
-                  category: elective
-                  guidance: Complete an upper-division elective or concentration requirement.
+                - type: course
+                  courseId: CST-300
+                  credits: 3
+                  category: cst
+                - type: course
+                  courseId: CST-349
+                  credits: 2
+                  category: cst
             - term: spring
               slots:
                 - type: choice
@@ -308,12 +315,8 @@ roadmaps:
                   category: cst
                   guidance: Complete the CST 334 or CST 370 course not taken in junior fall.
                 - type: course
-                  courseId: CST-300
-                  credits: 3
-                  category: cst
-                - type: course
-                  courseId: CST-349
-                  credits: 2
+                  courseId: CST-338
+                  credits: 4
                   category: cst
                 - type: requirement
                   slotId: junior-spring-elective
@@ -321,6 +324,12 @@ roadmaps:
                   credits: 4
                   category: elective
                   guidance: Complete an elective appropriate to your future concentration.
+                - type: requirement
+                  slotId: junior-spring-elective-prerequisite
+                  label: Elective
+                  credits: 4
+                  category: elective
+                  guidance: Complete an upper-division elective or concentration requirement.
         - year: senior
           terms:
             - term: fall
@@ -342,8 +351,8 @@ roadmaps:
                   category: elective
                   guidance: Complete an upper-division elective.
                 - type: requirement
-                  slotId: ge-3-upper-division
-                  label: GE Area 3 Upper Division
+                  slotId: GenEd-ud-3
+                  label: "Upper-Division GE Area 3"
                   credits: 3
                   category: ge-upper
                   guidance: Complete an upper-division GE Area 3 course.
@@ -359,17 +368,15 @@ roadmaps:
                   credits: 4
                   category: elective
                   guidance: Complete an upper-division elective.
-                - type: choice
-                  slotId: ge-2-or-ge-5-upper-division
-                  alternatives:
-                    - GE Area 2
-                    - GE Area 5
+                - type: requirement
+                  slotId: GenEd-ud-2-or-5
+                  label: "Upper-Division GE Area 2 or Area 5"
                   credits: 3
                   category: ge-upper
-                  guidance: Choose an upper-division course in GE Area 2 or GE Area 5.
+                  guidance: Complete an upper-division GE Area 2 or Area 5 course.
                 - type: requirement
-                  slotId: ge-4-upper-division
-                  label: GE Area 4 Upper Division
+                  slotId: GenEd-ud-4
+                  label: "Upper-Division GE Area 4"
                   credits: 3
                   category: ge-upper
                   guidance: Complete an upper-division GE Area 4 course.
@@ -399,7 +406,6 @@ roadmaps:
                   category: math
                 - type: course
                   courseId: CST-286
-                  credits: 3
                   category: ge-lower
             - term: spring
               slots:
@@ -436,27 +442,31 @@ roadmaps:
                   category: math
                   guidance: Choose one mathematics foundation course.
                 - type: requirement
-                  slotId: ge-4-lower-division
-                  label: GE Area 4 Lower Division
+                  slotId: GenEd-ld-4b
+                  label: "GE Area 4B: Civics"
                   credits: 3
                   category: ge-lower
-                  guidance: Complete a lower-division GE Area 4 course.
+                  guidance: Complete a lower-division GE Area 4B Civics and lower-division service-learning course. Examples are SL 210S, ED 212S, HCOM 260S, or SSCI 212S.
                 - type: requirement
-                  slotId: ge-6-lower-division
-                  label: GE Area 6 Lower Division
+                  slotId: GenEd-ld-6
+                  label: "GE Area 6: Ethnic Studies"
                   credits: 3
                   category: ge-lower
-                  guidance: Complete a lower-division GE Area 6 course.
+                  guidance: Complete a lower-division GE Area 6 Ethnic Studies course.
+                - type: requirement
+                  slotId: GenEd-ld-1c
+                  label: "GE Area 1C: Oral Communication"
+                  credits: 3
+                  category: ge-lower
+                  guidance: Complete the GE Area 1C Oral Communication requirement. Examples are HCOM 110 or ENSTU 111.
             - term: spring
               slots:
-                - type: choice
-                  slotId: world-culture-or-language
-                  alternatives:
-                    - JAPN-350
-                    - SPAN-350
+                - type: requirement
+                  slotId: GenEd-ld-5b
+                  label: "GE Area 5B: Biological Science"
                   credits: 3
                   category: ge-lower
-                  guidance: Choose either the Japanese or Spanish World Culture and Language course.
+                  guidance: Complete the GE Area 5B Biological Science requirement. Examples are BIO 204, ENVS 201, or KIN 159.
         - year: junior
           terms:
             - term: fall
@@ -530,8 +540,8 @@ roadmaps:
                   category: elective
                   guidance: Complete an upper-division elective.
                 - type: requirement
-                  slotId: ge-3-upper-division
-                  label: GE Area 3 Upper Division
+                  slotId: GenEd-ud-3
+                  label: "Upper-Division GE Area 3"
                   credits: 3
                   category: ge-upper
                   guidance: Complete an upper-division GE Area 3 course.
@@ -547,17 +557,15 @@ roadmaps:
                   credits: 4
                   category: elective
                   guidance: Complete an upper-division elective.
-                - type: choice
-                  slotId: ge-2-or-ge-5-upper-division
-                  alternatives:
-                    - GE Area 2
-                    - GE Area 5
+                - type: requirement
+                  slotId: GenEd-ud-2-or-5
+                  label: "Upper-Division GE Area 2 or Area 5"
                   credits: 3
                   category: ge-upper
-                  guidance: Choose an upper-division course in GE Area 2 or GE Area 5.
+                  guidance: Complete an upper-division GE Area 2 or Area 5 course.
                 - type: requirement
-                  slotId: ge-4-upper-division
-                  label: GE Area 4 Upper Division
+                  slotId: GenEd-ud-4
+                  label: "Upper-Division GE Area 4"
                   credits: 3
                   category: ge-upper
                   guidance: Complete an upper-division GE Area 4 course.

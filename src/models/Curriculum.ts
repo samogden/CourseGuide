@@ -28,7 +28,7 @@ const courseSchema = z.object({
 }).strict()
 
 const planSlotSchema = z.discriminatedUnion('type', [
-  z.object({ type: z.literal('course'), courseId: z.string(), credits: z.number().positive(), category: categorySchema, source: z.enum(['major', 'minor', 'other']).optional() }),
+  z.object({ type: z.literal('course'), courseId: z.string(), credits: z.number().positive().optional().default(0), category: categorySchema, source: z.enum(['major', 'minor', 'other']).optional() }),
   z.object({ type: z.literal('requirement'), slotId: z.string(), label: z.string(), credits: z.number().positive(), category: categorySchema, guidance: z.string(), courseIds: z.array(z.string()).optional(), source: z.enum(['major', 'minor', 'other']).optional() }),
   z.object({ type: z.literal('choice'), slotId: z.string(), alternatives: z.array(z.string()).min(2), credits: z.number().positive(), category: categorySchema, guidance: z.string(), source: z.enum(['major', 'minor', 'other']).optional() }),
 ])
@@ -111,9 +111,18 @@ const catalogFileSchema = z.object({
 }).strict()
 
 /** Official catalog lists for GE requirement blocks that do not name a course. */
+const generalEducationRequirementSchema = z.object({
+  id: z.string(),
+  label: z.string(),
+  credits: z.number().positive(),
+  division: z.enum(['lower', 'upper']),
+  courseIds: z.array(z.string()).min(1).optional(),
+}).strict()
+
 const generalEducationFileSchema = z.object({
   schemaVersion: z.literal(1),
   catalogYear: z.string(),
+  requirements: z.array(generalEducationRequirementSchema).min(1),
   upperDivisionOptions: z.object({
     area2Or5: z.array(z.string()).min(1),
     area3: z.array(z.string()).min(1),
@@ -140,6 +149,7 @@ export type Concentration = Program['concentrations'][string]
 export type Minor = z.infer<typeof minorFileSchema>
 export type ProgramRoadmap = z.infer<typeof roadmapSchema>
 export type DegreeCatalogEntry = z.infer<typeof degreeFileSchema>
+export type GeneralEducationRequirement = z.infer<typeof generalEducationRequirementSchema>
 export type CatalogMetadata = z.infer<typeof catalogFileSchema>
 
 export const defaultCatalogVersion = '2026'
@@ -159,14 +169,18 @@ const generalEducationAreaLabels: Record<GeneralEducationArea, string> = {
 }
 
 const generalEducationAreaBySlotId: Record<string, GeneralEducationArea> = {
-  'ge-1a-lower-division': '1a',
-  'ge-1b-lower-division': '1b',
-  'ge-1c-lower-division': '1c',
-  'ge-2-lower-division': '2',
-  'ge-3-lower-division': '3',
-  'ge-4-lower-division': '4',
-  'ge-5-lower-division': '5',
-  'ge-6-lower-division': '6',
+  'GenEd-ld-1a': '1a',
+  'GenEd-ld-1b': '1b',
+  'GenEd-ld-1c': '1c',
+  'GenEd-ld-2': '2',
+  'GenEd-ld-3a': '3',
+  'GenEd-ld-3b': '3',
+  'GenEd-ld-4a': '4',
+  'GenEd-ld-4b': '4',
+  'GenEd-ld-5a': '5',
+  'GenEd-ld-5b': '5',
+  'GenEd-ld-5c': '5',
+  'GenEd-ld-6': '6',
 }
 
 export interface Course {
@@ -193,7 +207,23 @@ export function generalEducationAreaLabel(area: GeneralEducationArea): string {
 }
 
 export function generalEducationAreaForSlot(slot: PlanSlot): GeneralEducationArea | undefined {
-  return slot.type === 'requirement' ? generalEducationAreaBySlotId[slot.slotId] : undefined
+  if (slot.type === 'requirement') return generalEducationAreaBySlotId[slot.slotId]
+  // Verified roadmaps can name a course that fulfills GE directly instead of
+  // duplicating its credits with a separate GE placeholder.
+  if (slot.type === 'course') {
+    return {
+      'MATH-100': '2',
+      'MATH-115': '2',
+      'MATH-130': '2',
+      'MATH-150': '2',
+      'STAT-100': '2',
+      'FYS-145': '3',
+      'CST-271': '3',
+      'CST-274': '4',
+      'CST-286': '5',
+    }[slot.courseId] as GeneralEducationArea | undefined
+  }
+  return undefined
 }
 
 export function completedGeneralEducationAreas(plan: CurriculumPlan, completed: ReadonlySet<string>): Set<GeneralEducationArea> {
@@ -337,15 +367,20 @@ for (const { catalogYear, file: courseFile } of courseFiles) {
 }
 
 const generalEducationOptionsByYear = new Map<string, z.infer<typeof generalEducationFileSchema>['upperDivisionOptions']>()
+const generalEducationRequirementsByYear = new Map<string, GeneralEducationRequirement[]>()
 for (const { catalogYear: pathCatalogYear, file } of generalEducationFiles) {
   if (file.catalogYear !== pathCatalogYear) throw new Error(`General education options are in ${pathCatalogYear} but declare ${file.catalogYear}.`)
   if (!catalogMetadataByYear.has(file.catalogYear)) throw new Error(`General education options reference unknown catalog year ${file.catalogYear}.`)
   if (generalEducationOptionsByYear.has(file.catalogYear)) throw new Error(`Duplicate general education options for ${file.catalogYear}.`)
   const catalogCourses = coursesByCatalogYear.get(file.catalogYear) ?? {}
-  for (const courseId of Object.values(file.upperDivisionOptions).flat()) {
+  for (const courseId of [
+    ...Object.values(file.upperDivisionOptions).flat(),
+    ...file.requirements.flatMap(requirement => requirement.courseIds ?? []),
+  ]) {
     if (!catalogCourses[courseId]) throw new Error(`General education option ${courseId} is not present in the ${file.catalogYear} course catalog.`)
   }
   generalEducationOptionsByYear.set(file.catalogYear, file.upperDivisionOptions)
+  generalEducationRequirementsByYear.set(file.catalogYear, file.requirements)
 }
 
 const programRecordsByYear = new Map<string, Record<string, Program>>()
@@ -411,14 +446,24 @@ export const transferReadinessCourseIds = [
   'MATH-270',
 ] as const
 
+export function generalEducationRequirements(catalogVersion = defaultCatalogVersion): GeneralEducationRequirement[] {
+  return generalEducationRequirementsByYear.get(catalogVersion) ?? []
+}
+
+function catalogGeneralEducationOptionIds(slot: PlanSlot, catalogVersion: string): string[] | undefined {
+  if (slot.type !== 'requirement' || (slot.courseIds?.length ?? 0) > 0) return undefined
+  const requirement = generalEducationRequirementsByYear.get(catalogVersion)?.find(item => item.id === slot.slotId)
+  return requirement?.courseIds
+}
+
 function upperDivisionGeOptionIds(slot: PlanSlot, catalogVersion: string): string[] | undefined {
   if (slot.type === 'course' || slot.category !== 'ge-upper' || (slot.type === 'requirement' && (slot.courseIds?.length ?? 0) > 0)) return undefined
   const options = generalEducationOptionsByYear.get(catalogVersion)
   if (!options) return undefined
   const identifier = `${slot.slotId} ${slot.type === 'requirement' ? slot.label : ''}`.toLowerCase()
-  if ((identifier.includes('area 2') && identifier.includes('area 5')) || identifier.includes('ge-2-or-ge-5')) return options.area2Or5
-  if (identifier.includes('area 3')) return options.area3
-  if (identifier.includes('area 4')) return options.area4
+  if ((identifier.includes('area 2') && identifier.includes('area 5')) || identifier.includes('gened-ud-2-or-5')) return options.area2Or5
+  if (identifier.includes('area 3') || identifier.includes('gened-ud-3')) return options.area3
+  if (identifier.includes('area 4') || identifier.includes('gened-ud-4')) return options.area4
   return undefined
 }
 
@@ -431,22 +476,27 @@ function withGeneralEducationOptions(plan: CurriculumPlan, catalogVersion: strin
       terms: year.terms.map(term => ({
         ...term,
         slots: term.slots.map(slot => {
-          const courseIds = upperDivisionGeOptionIds(slot, catalogVersion)
-          if (!courseIds) return slot
+          // Course credits belong to the course catalog. Roadmaps may retain a
+          // legacy value, but it is never allowed to override that source.
+          const normalizedSlot = slot.type === 'course'
+            ? { ...slot, credits: getCourse(slot.courseId)?.units ?? slot.credits }
+            : slot
+          const courseIds = catalogGeneralEducationOptionIds(normalizedSlot, catalogVersion) ?? upperDivisionGeOptionIds(normalizedSlot, catalogVersion)
+          if (!courseIds) return normalizedSlot
           // Older verified roadmaps represented Area 2-or-5 as an abstract
           // choice between labels. Normalize it to the same selectable
           // requirement shape as every other generic GE block.
-          if (slot.type === 'choice') return {
+          if (normalizedSlot.type === 'choice') return {
             type: 'requirement' as const,
-            slotId: slot.slotId,
+            slotId: normalizedSlot.slotId,
             label: 'GE Area 2 or GE Area 5',
-            credits: slot.credits,
-            category: slot.category,
-            guidance: slot.guidance,
+            credits: normalizedSlot.credits,
+            category: normalizedSlot.category,
+            guidance: normalizedSlot.guidance,
             courseIds,
-            source: slot.source,
+            source: normalizedSlot.source,
           }
-          return { ...slot, courseIds }
+          return { ...normalizedSlot, courseIds }
         }),
       })),
     })),
@@ -663,50 +713,20 @@ function minimumTermIndexForCourseLevel(courseId: string): number {
  * CSUMB's catalog-wide GE pattern. Staff-verified roadmaps keep their own
  * placement; this is applied only while generating a draft roadmap.
  */
-function generalEducationSlots(): DerivedOptionSlot[] {
-  // Catalog course prerequisites name the three English-communication
-  // components individually (1A, 1B, 1C), so the plan must track them
-  // separately rather than using one combined Area 1 placeholder.
-  const lowerDivision = [
-    ['ge-1a-lower-division', generalEducationAreaLabel('1a')],
-    ['ge-1b-lower-division', generalEducationAreaLabel('1b')],
-    ['ge-1c-lower-division', generalEducationAreaLabel('1c')],
-    ['ge-2-lower-division', generalEducationAreaLabel('2')],
-    ['ge-3-lower-division', generalEducationAreaLabel('3')],
-    ['ge-4-lower-division', generalEducationAreaLabel('4')],
-    ['ge-5-lower-division', generalEducationAreaLabel('5')],
-    ['ge-6-lower-division', generalEducationAreaLabel('6')],
-  ] as const
-  const lowerSlots = lowerDivision.map(([slotId, label]): DerivedOptionSlot => ({
+function generalEducationSlots(catalogVersion: string): DerivedOptionSlot[] {
+  const requirements = generalEducationRequirementsByYear.get(catalogVersion) ?? []
+  return requirements.map(requirement => ({
     courseIds: [],
+    minimumTermIndex: requirement.division === 'upper' ? 4 : undefined,
     slot: {
       type: 'requirement',
-      slotId,
-      label,
-      credits: 3,
-      category: 'ge-lower',
-      guidance: `Complete a lower-division ${label.replace('GE ', '')} course.`,
+      slotId: requirement.id,
+      label: requirement.label,
+      credits: requirement.credits,
+      category: requirement.division === 'upper' ? 'ge-upper' : 'ge-lower',
+      guidance: `Complete ${requirement.label}.`,
     },
   }))
-  return [
-    ...lowerSlots,
-    ...[
-      ['ge-upper-2-or-5', 'Upper-Division GE Area 2 or Area 5'],
-      ['ge-upper-3', 'Upper-Division GE Area 3'],
-      ['ge-upper-4', 'Upper-Division GE Area 4'],
-    ].map(([slotId, label]): DerivedOptionSlot => ({
-      courseIds: [],
-      minimumTermIndex: 4,
-      slot: {
-        type: 'requirement',
-        slotId,
-        label,
-        credits: 3,
-        category: 'ge-upper',
-        guidance: `Complete an ${label.toLowerCase()} course.`,
-      },
-    })),
-  ]
 }
 
 /**
@@ -730,7 +750,7 @@ function deriveRoadmap(programId: string, catalogVersion: string, concentrationI
   const scheduledGeAreas = new Set<GeneralEducationArea>()
   const prioritizedGeAreas = new Set([...requiredCourseIds]
     .flatMap(courseId => getCourse(courseId)?.generalEducationPrerequisites ?? []))
-  const prioritizedGeSlots = generalEducationSlots()
+  const prioritizedGeSlots = generalEducationSlots(catalogVersion)
     .filter(({ slot }) => {
       const area = generalEducationAreaForSlot(slot)
       return area && prioritizedGeAreas.has(area)
@@ -838,7 +858,7 @@ function deriveRoadmap(programId: string, catalogVersion: string, concentrationI
       }
     }
   }
-  optionSlots.push(...generalEducationSlots().filter(({ slot }) => !preplacedGeSlotIds.has(progressKey(slot))))
+  optionSlots.push(...generalEducationSlots(catalogVersion).filter(({ slot }) => !preplacedGeSlotIds.has(progressKey(slot))))
   for (const { slot, courseIds, minimumTermIndex } of optionSlots) {
     const targetTerm = terms.find((candidateTerm, termIndex) => {
       if (termIndex < (minimumTermIndex ?? 0)) return false

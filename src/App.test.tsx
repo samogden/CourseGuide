@@ -173,7 +173,7 @@ additionalCourses: {}
     fireEvent.click(screen.getByRole('button', { name: 'Data Science' }))
 
     expect(screen.getByRole('button', { name: /CST 463/i })).toHaveClass('is-limited-offering')
-    expect(screen.getByText('Limited-term offering')).toBeInTheDocument()
+    expect(screen.getByText('Term-limited offering')).toBeInTheDocument()
   })
 
   it('selects a target course and removes it from other elective choices', () => {

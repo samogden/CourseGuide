@@ -1,5 +1,232 @@
 schemaVersion: 1
 catalogYear: "2026"
+# Canonical GE components. Every listed component is required; Area headings
+# are groupings, not alternatives to their subareas.
+requirements:
+  - id: GenEd-ld-1a
+    courseIds:
+      - BUS-121
+      - CAD-101B
+      - ENSTU-120
+      - HCOM-120
+      - HCOM-125
+      - LS-120
+      - SSCI-110
+    label: "GE Area 1A: English Composition"
+    credits: 3
+    division: lower
+  - id: GenEd-ld-1b
+    courseIds:
+      - BIO-131
+      - ENSTU-130
+      - FYS-131
+      - HCOM-200
+      - HCOM-202
+      - SOC-120
+    label: "GE Area 1B: Critical Thinking"
+    credits: 3
+    division: lower
+  - id: GenEd-ld-1c
+    courseIds:
+      - BUS-232
+      - ENSTU-111
+      - FYS-111
+      - HCOM-110
+    label: "GE Area 1C: Oral Communication"
+    credits: 3
+    division: lower
+  - id: GenEd-ld-2
+    courseIds:
+      - MATH-100
+      - MATH-115
+      - MATH-130
+      - MATH-150
+      - STAT-100
+    label: "GE Area 2: Mathematical Concepts and Quantitative Reasoning"
+    credits: 3
+    division: lower
+  - id: GenEd-ld-3a
+    courseIds:
+      - CART-211
+      - CART-220
+      - CART-228
+      - CART-230
+      - CART-231
+      - CART-233
+      - CART-275
+      - CST-226
+      - CST-227
+      - GS-225
+      - HCOM-230
+      - HCOM-231
+      - JAPN-213
+      - JAPN-215
+      - LS-233
+      - MPA-100
+      - MPA-220
+      - MPA-233
+      - MPA-239
+      - MPA-241
+      - VPA-205
+    label: "GE Area 3A: Arts"
+    credits: 3
+    division: lower
+  - id: GenEd-ld-3b
+    courseIds:
+      - ASL-101
+      - ASL-102
+      - ASL-201
+      - CART-212
+      - CHHS-210
+      - CST-271
+      - FYS-143
+      - FYS-145
+      - FYS-147
+      - FYS-148
+      - GS-214
+      - HCOM-225
+      - ITAL-101
+      - ITAL-102
+      - ITAL-201
+      - JAPN-101
+      - JAPN-102
+      - JAPN-201
+      - JAPN-212
+      - SSCI-114
+      - SPAN-101
+      - SPAN-102
+      - SPAN-201
+      - SPAN-202
+      - SPAN-212
+      - WLC-212
+    label: "GE Area 3B: Humanities"
+    credits: 3
+    division: lower
+  - id: GenEd-ld-4a
+    courseIds:
+      - BUS-201
+      - BUS-202
+      - CHHS-204
+      - CHHS-215
+      - CHHS-225
+      - CHHS-230
+      - CST-274
+      - ENSTU-280
+      - FYS-156
+      - FYS-179
+      - GS-206
+      - GS-215
+      - GS-251
+      - HCOM-170
+      - HCOM-242
+      - HCOM-251
+      - HCOM-265
+      - HDFS-110
+      - HDFS-200
+      - JAPN-211
+      - KIN-163
+      - KIN-202
+      - PANM-202
+      - PH-207
+      - PSY-100
+      - SOC-100
+      - SSCI-101
+      - SSCI-102
+      - SSCI-111
+      - SSCI-252
+      - SW-205
+    label: "GE Area 4A: Social and Behavioral Sciences"
+    credits: 3
+    division: lower
+  - id: GenEd-ld-4b
+    courseIds:
+      - ED-212S
+      - HCOM-260S
+      - SL-210S
+      - SSCI-212S
+    label: "GE Area 4B: Civics"
+    credits: 3
+    division: lower
+  - id: GenEd-ld-5a
+    courseIds:
+      - AGPS-128
+      - CHEM-109
+      - CHEM-110
+      - CST-286
+      - ENVS-282
+      - GEOL-110
+      - GEOL-210
+      - PHYS-121
+    label: "GE Area 5A: Physical Science"
+    credits: 3
+    division: lower
+  - id: GenEd-ld-5b
+    courseIds:
+      - BIO-106
+      - BIO-204
+      - BIO-210
+      - ENVS-201
+      - ENVS-240
+      - FYS-124
+      - KIN-159
+      - SSCI-100
+    label: "GE Area 5B: Biological Science"
+    credits: 3
+    division: lower
+  - id: GenEd-ld-5c
+    courseIds:
+      - AGPS-128
+      - BIO-106
+      - BIO-210L
+      - CHEM-109L
+      - CHEM-110L
+      - CST-286
+      - ENVS-201
+      - ENVS-240
+      - FYS-124
+      - PHYS-121L
+    label: "GE Area 5C: Laboratory"
+    credits: 1
+    division: lower
+  - id: GenEd-ld-6
+    courseIds:
+      - CHHS-462
+      - ED-314
+      - FYS-191
+      - GS-236
+      - HCOM-220
+      - HCOM-224
+      - HCOM-229
+      - HCOM-243
+      - HCOM-246
+      - HCOM-247
+      - HCOM-391
+      - HDFS-322
+      - HOSP-221
+      - JAPN-307
+      - JAPN-317
+      - LS-311
+      - LS-363
+      - PSY-357
+      - SSCI-249
+      - SPAN-260
+      - SPAN-370
+    label: "GE Area 6: Ethnic Studies"
+    credits: 3
+    division: lower
+  - id: GenEd-ud-2-or-5
+    label: "Upper-Division GE Area 2 or Area 5"
+    credits: 3
+    division: upper
+  - id: GenEd-ud-3
+    label: "Upper-Division GE Area 3"
+    credits: 3
+    division: upper
+  - id: GenEd-ud-4
+    label: "Upper-Division GE Area 4"
+    credits: 3
+    division: upper
+
 # Official 2026 catalog options for generic upper-division GE blocks.
 upperDivisionOptions:
   area2Or5:

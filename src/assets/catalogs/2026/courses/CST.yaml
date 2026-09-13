@@ -308,7 +308,7 @@ courses:
     credits:
       minimum: 3
       maximum: 3
-    description: Examines the history of communication technologies and how they shaped and have been shaped by politics throughout American history. The story begins in pre-revolutionary America, when newspapers united the colonies, and moves through the telegraph, the telephone, motion pictures, radio, broadcasting, network and cable television, personal computers, the Internet, mobile phones, and social media. Students leverage their understanding of communication history to address some of constitutive choices facing our nation, including foreign interference in elections, net neutrality, and data privacy.
+    description: 'Examines the history of communication technologies and how they shaped and have been shaped by politics throughout American history. The story begins in pre-revolutionary America, when newspapers united the colonies, and moves through the telegraph, the telephone, motion pictures, radio, broadcasting, network and cable television, personal computers, the Internet, mobile phones, and social media. Students leverage their understanding of communication history to address some of constitutive choices facing our nation, including foreign interference in elections, net neutrality, and data privacy. Fulfills GE Area 4A: Social and Behavioral Sciences and the US1 American Institutions requirement.'
     offered:
       terms:
         - fall
@@ -318,9 +318,9 @@ courses:
     title: Physics of Computing
     teachingStatus: active
     credits:
-      minimum: 3
-      maximum: 3
-    description: Introduces the basic principles of physical science and the application of these principles to electronics and computing. Students will learn fundamental concepts of physics in the first half of the course and build on it with topics that are relevant to the function of electronic devices and computers. Computational Physics tools and procedures will also be covered through assignments and project.
+      minimum: 4
+      maximum: 4
+    description: 'Introduces the basic principles of physical science and the application of these principles to electronics and computing. Students will learn fundamental concepts of physics in the first half of the course and build on it with topics that are relevant to the function of electronic devices and computers. Computational Physics tools and procedures will also be covered through assignments and project. Fulfills GE Area 5A: Physical Science and GE Area 5C: Laboratory.'
     offered:
       terms:
         - fall
