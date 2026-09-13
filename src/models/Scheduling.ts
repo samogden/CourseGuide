@@ -6,6 +6,7 @@ import {
   availableGeneralEducationAreas,
   courseCorequisiteIds,
   directRequirementCourseIds,
+  generalEducationAreaForCourse,
   generalEducationAreaForSlot,
   generalEducationPrerequisitesMet,
   getCourse,
@@ -147,9 +148,18 @@ interface TermBundleCandidate {
 
 const defaultProgramId = 'bs-computer-science'
 
+function availableGeneralEducationAreasForSchedule(plan: CurriculumPlan, completed: ReadonlySet<string>, selection?: ScheduleSelection): Set<GeneralEducationArea> {
+  return new Set([
+    ...availableGeneralEducationAreas(plan, completed),
+    ...Array.from(selection?.assumedCompletedCourseIds ?? [])
+      .map(generalEducationAreaForCourse)
+      .filter((area): area is GeneralEducationArea => Boolean(area)),
+  ])
+}
+
 export function buildSuggestedSchedule(plan: CurriculumPlan, completed: ReadonlySet<string>, selection?: ScheduleSelection): SuggestedSchedule {
   const completedCourseIds = completedCourseIdsFor(selection, completed)
-  const availableCompletedGeAreas = availableGeneralEducationAreas(plan, completed)
+  const availableCompletedGeAreas = availableGeneralEducationAreasForSchedule(plan, completed, selection)
   const isCourseReady = (slot: PlanSlot) => slot.type !== 'course' || (
     prerequisitesMet(getCourse(slot.courseId)?.prerequisites ?? [], completedCourseIds) &&
     generalEducationPrerequisitesMet(getCourse(slot.courseId), availableCompletedGeAreas)
@@ -316,7 +326,7 @@ export function buildSuggestedSchedule(plan: CurriculumPlan, completed: Readonly
 export function buildRegistrationPlan(plan: CurriculumPlan, completed: ReadonlySet<string>, selection?: ScheduleSelection): RegistrationPlan {
   const schedule = buildSuggestedSchedule(plan, completed, selection)
   const completedCourseIds = completedCourseIdsFor(selection, completed)
-  const availableCompletedGeAreas = availableGeneralEducationAreas(plan, completed)
+  const availableCompletedGeAreas = availableGeneralEducationAreasForSchedule(plan, completed, selection)
   const slots = plan.years.flatMap(year => year.terms.flatMap(term => term.slots))
   const courses = slots.flatMap(slot => {
     const suggestion = schedule.suggestions.get(progressKey(slot))
@@ -385,7 +395,7 @@ export function buildCompactedSchedule(
   const baseSchedule = buildSuggestedSchedule(plan, completed, selection)
   const completedCourseIds = completedCourseIdsFor(selection, completed)
   const orderedSlots = plan.years.flatMap(year => year.terms.flatMap(term => term.slots))
-  const availableCompletedGeAreas = availableGeneralEducationAreas(plan, completed)
+  const availableCompletedGeAreas = availableGeneralEducationAreasForSchedule(plan, completed, selection)
   const plannedConcreteCourseIds = new Set([
     ...orderedSlots.flatMap(slot => slot.type === 'course' ? [slot.courseId] : []),
     ...baseSchedule.assignments.values(),

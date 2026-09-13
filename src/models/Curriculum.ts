@@ -206,24 +206,28 @@ export function generalEducationAreaLabel(area: GeneralEducationArea): string {
   return generalEducationAreaLabels[area]
 }
 
+const generalEducationAreaByCourseId: Record<string, GeneralEducationArea> = {
+  'MATH-100': '2',
+  'MATH-115': '2',
+  'MATH-130': '2',
+  'MATH-150': '2',
+  'STAT-100': '2',
+  'FYS-145': '3',
+  'CST-271': '3',
+  'CST-274': '4',
+  'CST-286': '5',
+}
+
+/** Returns the GE area satisfied by a concrete course in a verified roadmap. */
+export function generalEducationAreaForCourse(courseId: string): GeneralEducationArea | undefined {
+  return generalEducationAreaByCourseId[courseId]
+}
+
 export function generalEducationAreaForSlot(slot: PlanSlot): GeneralEducationArea | undefined {
   if (slot.type === 'requirement') return generalEducationAreaBySlotId[slot.slotId]
   // Verified roadmaps can name a course that fulfills GE directly instead of
   // duplicating its credits with a separate GE placeholder.
-  if (slot.type === 'course') {
-    return {
-      'MATH-100': '2',
-      'MATH-115': '2',
-      'MATH-130': '2',
-      'MATH-150': '2',
-      'STAT-100': '2',
-      'FYS-145': '3',
-      'CST-271': '3',
-      'CST-274': '4',
-      'CST-286': '5',
-    }[slot.courseId] as GeneralEducationArea | undefined
-  }
-  return undefined
+  return slot.type === 'course' ? generalEducationAreaForCourse(slot.courseId) : undefined
 }
 
 export function completedGeneralEducationAreas(plan: CurriculumPlan, completed: ReadonlySet<string>): Set<GeneralEducationArea> {
